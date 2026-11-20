@@ -65,5 +65,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [Cainam-git](https://github.com/Cainam-git) | 91 | 8361 |
 | [slucid](https://github.com/slucid) | 161 | 7328 |
 | [Bagszy](https://github.com/Bagszy) | 329 | 7244 |
+| [Ceplargo](https://github.com/Ceplargo) | 39 | 7219 |
 
 The rest of the code was matched by the project's own tooling.
