@@ -38,5 +38,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [xwcg](https://github.com/xwcg) | 78 | 50780 |
 | [CurtisJ123](https://github.com/CurtisJ123) | 122 | 49420 |
 | [hami0101](https://github.com/hami0101) | 72 | 47628 |
+| [Unquieterpig](https://github.com/Unquieterpig) | 214 | 47118 |
 
 The rest of the code was matched by the project's own tooling.
