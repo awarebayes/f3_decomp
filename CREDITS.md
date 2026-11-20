@@ -85,5 +85,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [ZacharyAParker](https://github.com/ZacharyAParker) | 3 | 2028 |
 | [tin0-lin0](https://github.com/tin0-lin0) | 3 | 1944 |
 | [N8Moon](https://github.com/N8Moon) | 1 | 1705 |
+| [BioFighter](https://github.com/BioFighter) | 54 | 1515 |
 
 The rest of the code was matched by the project's own tooling.
