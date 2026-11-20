@@ -102,5 +102,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [V0id-array](https://github.com/V0id-array) | 3 | 595 |
 | [neonsynthosc](https://github.com/neonsynthosc) | 1 | 512 |
 | [mrppp](https://github.com/mrppp) | 1 | 435 |
+| [Raptus1519](https://github.com/Raptus1519) | 2 | 426 |
 
 The rest of the code was matched by the project's own tooling.
