@@ -46,5 +46,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [CurtCh](https://github.com/CurtCh) | 261 | 35039 |
 | [APeachyPurplePlatypus](https://github.com/APeachyPurplePlatypus) | 23 | 31431 |
 | [WozzySalmon](https://github.com/WozzySalmon) | 247 | 31158 |
+| [ndrew222](https://github.com/ndrew222) | 55 | 30304 |
 
 The rest of the code was matched by the project's own tooling.
