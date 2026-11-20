@@ -14,5 +14,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [asdfmonster261](https://github.com/asdfmonster261) | 264 | 372934 |
 | [connorx2000](https://github.com/connorx2000) | 108 | 330691 |
 | [loganfechner](https://github.com/loganfechner) | 4490 | 328320 |
+| [ashedoescoding](https://github.com/ashedoescoding) | 5021 | 328046 |
 
 The rest of the code was matched by the project's own tooling.
