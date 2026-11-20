@@ -40,5 +40,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [hami0101](https://github.com/hami0101) | 72 | 47628 |
 | [Unquieterpig](https://github.com/Unquieterpig) | 214 | 47118 |
 | [8wkkhn4ymj-tech](https://github.com/8wkkhn4ymj-tech) | 34 | 46114 |
+| [fortniop](https://github.com/fortniop) | 152 | 44201 |
 
 The rest of the code was matched by the project's own tooling.
