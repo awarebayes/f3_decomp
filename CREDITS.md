@@ -70,5 +70,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [dinkleberg5342](https://github.com/dinkleberg5342) | 27 | 5442 |
 | [smallspud68](https://github.com/smallspud68) | 78 | 5170 |
 | [0ctxvius](https://github.com/0ctxvius) | 24 | 4974 |
+| [SataStrike](https://github.com/SataStrike) | 7 | 4947 |
 
 The rest of the code was matched by the project's own tooling.
