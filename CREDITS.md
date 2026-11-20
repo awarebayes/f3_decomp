@@ -61,5 +61,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [V1K1NG316](https://github.com/V1K1NG316) | 33 | 10978 |
 | [jakeee786](https://github.com/jakeee786) | 53 | 9031 |
 | [cultleaderdave-sys](https://github.com/cultleaderdave-sys) | 16 | 8948 |
+| [k0shir0](https://github.com/k0shir0) | 99 | 8455 |
 
 The rest of the code was matched by the project's own tooling.
