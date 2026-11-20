@@ -79,5 +79,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [h0lylag](https://github.com/h0lylag) | 62 | 3885 |
 | [skygrime35](https://github.com/skygrime35) | 111 | 3857 |
 | [ModifyMe](https://github.com/ModifyMe) | 2 | 3502 |
+| [mastro11](https://github.com/mastro11) | 5 | 2997 |
 
 The rest of the code was matched by the project's own tooling.
