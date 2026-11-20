@@ -53,5 +53,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [Naebun](https://github.com/Naebun) | 23 | 23162 |
 | [manny2000-404](https://github.com/manny2000-404) | 326 | 21535 |
 | [NoahBPeterson](https://github.com/NoahBPeterson) | 31 | 16559 |
+| [BrunoCFBrito](https://github.com/BrunoCFBrito) | 79 | 14057 |
 
 The rest of the code was matched by the project's own tooling.
