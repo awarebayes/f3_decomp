@@ -59,5 +59,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [lds1998](https://github.com/lds1998) | 167 | 11123 |
 | [XXDARK96](https://github.com/XXDARK96) | 347 | 10992 |
 | [V1K1NG316](https://github.com/V1K1NG316) | 33 | 10978 |
+| [jakeee786](https://github.com/jakeee786) | 53 | 9031 |
 
 The rest of the code was matched by the project's own tooling.
