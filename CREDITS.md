@@ -11,5 +11,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [allisonworks](https://github.com/allisonworks) | 2503 | 753532 |
 | [chaosen3](https://github.com/chaosen3) | 280 | 474805 |
 | [h-x3n](https://github.com/h-x3n) | 2422 | 416411 |
+| [asdfmonster261](https://github.com/asdfmonster261) | 264 | 372934 |
 
 The rest of the code was matched by the project's own tooling.
