@@ -73,5 +73,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [SataStrike](https://github.com/SataStrike) | 7 | 4947 |
 | [krabokiller](https://github.com/krabokiller) | 9 | 4890 |
 | [glenneaux](https://github.com/glenneaux) | 20 | 4880 |
+| [HellboundGlory](https://github.com/HellboundGlory) | 17 | 4600 |
 
 The rest of the code was matched by the project's own tooling.
