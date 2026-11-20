@@ -32,5 +32,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [rookandlantern](https://github.com/rookandlantern) | 852 | 92692 |
 | [MattNelGerva](https://github.com/MattNelGerva) | 330 | 89707 |
 | [Rave00](https://github.com/Rave00) | 1015 | 87752 |
+| [TimTru57](https://github.com/TimTru57) | 515 | 86700 |
 
 The rest of the code was matched by the project's own tooling.
