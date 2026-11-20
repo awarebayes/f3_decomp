@@ -42,5 +42,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [8wkkhn4ymj-tech](https://github.com/8wkkhn4ymj-tech) | 34 | 46114 |
 | [fortniop](https://github.com/fortniop) | 152 | 44201 |
 | [evilgenius79](https://github.com/evilgenius79) | 329 | 37988 |
+| [Skijearz](https://github.com/Skijearz) | 300 | 35888 |
 
 The rest of the code was matched by the project's own tooling.
