@@ -35,5 +35,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [TimTru57](https://github.com/TimTru57) | 515 | 86700 |
 | [luki446](https://github.com/luki446) | 1049 | 79853 |
 | [keleanfernandez2002-tech](https://github.com/keleanfernandez2002-tech) | 1108 | 76224 |
+| [xwcg](https://github.com/xwcg) | 78 | 50780 |
 
 The rest of the code was matched by the project's own tooling.
