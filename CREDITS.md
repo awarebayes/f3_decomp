@@ -68,5 +68,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [Ceplargo](https://github.com/Ceplargo) | 39 | 7219 |
 | [alexanderhoward141623-byte](https://github.com/alexanderhoward141623-byte) | 87 | 6804 |
 | [dinkleberg5342](https://github.com/dinkleberg5342) | 27 | 5442 |
+| [smallspud68](https://github.com/smallspud68) | 78 | 5170 |
 
 The rest of the code was matched by the project's own tooling.
