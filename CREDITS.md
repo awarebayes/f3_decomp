@@ -7,5 +7,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 
 | Contributor | Functions | Bytes |
 |---|---:|---:|
+| [mathisto](https://github.com/mathisto) | 712 | 889846 |
 
 The rest of the code was matched by the project's own tooling.
