@@ -1,0 +1,4 @@
+{
+ "note": "Names that only unwinding code calls and no unit in build/units.json binds (destructors of helper types), with the address the game calls there, as tools/build_and_match.py infers them from the game; only addresses where build/units.json lists a function. tools/compare_builds.py resolves unwinding code through these after the recipe. Updated by the owner from full builds.",
+ "names": {}
+}

@@ -1,0 +1,205 @@
+{
+ "release": "Fallout 3 PC 1.7.0.3",
+ "note": "The game is Fallout 3 PC 1.7.0.3. Two copies pass the check: GOG's 1.7.0.3 and the Steam executable (1.7.0.4 as installed) downgraded to 1.7.0.3 with the Fallout Anniversary Patcher. They differ only at patcher_sites, the patcher's own code, which is not part of the decompilation (its index entries, gog_differs, are out of scope). The SHA-256 values identify each file whole; the probes are SHA-256 fingerprints of a few functions both copies share.",
+ "probes": [
+  [
+   "0x0042fda0",
+   142,
+   "378d55732d989d847b10a54d64a409ccca9976391006988a064f36710cdae68b"
+  ],
+  [
+   "0x004c08a0",
+   109,
+   "e77cfad8b2eb4c06efed9c2d34a51fbd4c26c602922c318c75a9cd210af2c85b"
+  ],
+  [
+   "0x005306c0",
+   114,
+   "f97ef36efa608ad9cbaa654b3b500bc316150d8888734e549f50d36be799ba33"
+  ],
+  [
+   "0x005c4190",
+   58,
+   "c381379a342279d5a7b7f519b7fcda134d04340a2dc1c35a705e97da492cea95"
+  ],
+  [
+   "0x00680960",
+   76,
+   "980f812baa472fdfc4d61f21130718bbd5c278ba966658143c9fef5504980d75"
+  ],
+  [
+   "0x00727a10",
+   99,
+   "a30781bc59c02d27885f4a09f7ceba0846d5ec7a3ad108a155273a63b612e9dd"
+  ],
+  [
+   "0x007f0bb0",
+   181,
+   "ac1331782b8205b1c181de0700111e5f022866934f8de92c99b2feb4f6225d64"
+  ],
+  [
+   "0x0086daf0",
+   146,
+   "da37c7a197c70016615c9763c317647105a66e709c7bd69b0d3ef41b3472620b"
+  ],
+  [
+   "0x008d0910",
+   95,
+   "01c525404030bb3ad2c533e25696c77be0e4006d71f0cc362c9bf9da20411d80"
+  ],
+  [
+   "0x009464c0",
+   110,
+   "e08a0fcf4dc71508202b00fba4e591ce5b38fa21d40192c363912971cb7f1ab9"
+  ],
+  [
+   "0x009ecfb0",
+   62,
+   "c74c293d4648a0ab047630d789604596f601b98596d289b679006a2786783765"
+  ],
+  [
+   "0x00abbcc0",
+   127,
+   "8906626a8d50e9627a4a6a98cf5eadc1a9d3120bb731ba84c570fb479d80553b"
+  ],
+  [
+   "0x00b62d40",
+   105,
+   "8a226c756db2ddf7723bc4d77bc0dc19b727ad78f390a23f7f1c4a903a2b86d9"
+  ],
+  [
+   "0x00c17a36",
+   210,
+   "df26bb894e0fb9bc90eb5a568f7cb93bde8b8aaf335d80c151dc0df398dd7b4a"
+  ],
+  [
+   "0x00cb26c0",
+   92,
+   "31b6aa087c72c88efb99c0dc70cc204bd7b582eefa9bf148f6d620dbb763d6d8"
+  ],
+  [
+   "0x00cd4360",
+   92,
+   "01ebe742c5458d90cfbe2a7163c8c207025928c2813248c0709b206942064c8f"
+  ]
+ ],
+ "editions": {
+  "gog_1703_sha256": "df9f0e1ec2c5413a9cef2db2dde6d926b99707d528049af4eb15538587d55f99",
+  "steam_1703_downgraded_sha256": "03cf5ada02fcf789fcf4639e05127d545ff3f69363b926709b8f0c3f8ad29107",
+  "steam_1704_sha256_not_usable": "c3f97c2255fa041a851c17cf372d69aaadd8694e2dc4230ba556001bbfbd2f3e"
+ },
+ "patcher_sites": [
+  {
+   "address": "0x00681fc6",
+   "size": 2,
+   "functions": [
+    "0x00681d60"
+   ]
+  },
+  {
+   "address": "0x0068b850",
+   "size": 120,
+   "functions": [
+    "0x0068b850",
+    "0x0068b860"
+   ]
+  },
+  {
+   "address": "0x006e227d",
+   "size": 2,
+   "functions": [
+    "0x006e21f0"
+   ]
+  },
+  {
+   "address": "0x007f374c",
+   "size": 89,
+   "functions": [
+    "0x007f374c",
+    "0x007f3752",
+    "0x007f3758",
+    "0x007f375e",
+    "0x007f3764",
+    "0x007f376a",
+    "0x007f3770",
+    "0x007f3776",
+    "0x007f377c",
+    "0x007f3782",
+    "0x007f3788",
+    "0x007f378e",
+    "0x007f3794",
+    "0x007f379a",
+    "0x007f37a0"
+   ]
+  },
+  {
+   "address": "0x00ad5d2f",
+   "size": 5,
+   "functions": [
+    "0x00ad5ba0"
+   ]
+  },
+  {
+   "address": "0x00c07ace",
+   "size": 1,
+   "functions": [
+    "0x00c07abf"
+   ]
+  },
+  {
+   "address": "0x00c21ce6",
+   "size": 77,
+   "functions": [
+    "0x00c21ce6",
+    "0x00c21cec",
+    "0x00c21cf2",
+    "0x00c21cf8",
+    "0x00c21cfe",
+    "0x00c21d04",
+    "0x00c21d0a",
+    "0x00c21d10",
+    "0x00c21d16",
+    "0x00c21d1c",
+    "0x00c21d22",
+    "0x00c21d28",
+    "0x00c21d2e"
+   ]
+  }
+ ],
+ "gog_differs": [
+  "0x00681d60",
+  "0x0068b850",
+  "0x0068b860",
+  "0x006e21f0",
+  "0x007f374c",
+  "0x007f3752",
+  "0x007f3758",
+  "0x007f375e",
+  "0x007f3764",
+  "0x007f376a",
+  "0x007f3770",
+  "0x007f3776",
+  "0x007f377c",
+  "0x007f3782",
+  "0x007f3788",
+  "0x007f378e",
+  "0x007f3794",
+  "0x007f379a",
+  "0x007f37a0",
+  "0x00ad5ba0",
+  "0x00c07abf",
+  "0x00c21ce6",
+  "0x00c21cec",
+  "0x00c21cf2",
+  "0x00c21cf8",
+  "0x00c21cfe",
+  "0x00c21d04",
+  "0x00c21d0a",
+  "0x00c21d10",
+  "0x00c21d16",
+  "0x00c21d1c",
+  "0x00c21d22",
+  "0x00c21d28",
+  "0x00c21d2e"
+ ]
+}
