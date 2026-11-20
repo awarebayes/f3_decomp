@@ -103,5 +103,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [neonsynthosc](https://github.com/neonsynthosc) | 1 | 512 |
 | [mrppp](https://github.com/mrppp) | 1 | 435 |
 | [Raptus1519](https://github.com/Raptus1519) | 2 | 426 |
+| [turtnip](https://github.com/turtnip) | 1 | 183 |
 
 The rest of the code was matched by the project's own tooling.
