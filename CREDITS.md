@@ -101,5 +101,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [NovaAetas](https://github.com/NovaAetas) | 6 | 600 |
 | [V0id-array](https://github.com/V0id-array) | 3 | 595 |
 | [neonsynthosc](https://github.com/neonsynthosc) | 1 | 512 |
+| [mrppp](https://github.com/mrppp) | 1 | 435 |
 
 The rest of the code was matched by the project's own tooling.
