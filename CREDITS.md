@@ -18,5 +18,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [RedWatchWanderer](https://github.com/RedWatchWanderer) | 850 | 315167 |
 | [19masseycc](https://github.com/19masseycc) | 1996 | 286562 |
 | [J3vb](https://github.com/J3vb) | 955 | 258101 |
+| [dysnasia](https://github.com/dysnasia) | 1275 | 224437 |
 
 The rest of the code was matched by the project's own tooling.
