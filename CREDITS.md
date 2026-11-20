@@ -75,5 +75,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [glenneaux](https://github.com/glenneaux) | 20 | 4880 |
 | [HellboundGlory](https://github.com/HellboundGlory) | 17 | 4600 |
 | [Nailima-AI](https://github.com/Nailima-AI) | 63 | 4464 |
+| [cipher-droid](https://github.com/cipher-droid) | 60 | 4343 |
 
 The rest of the code was matched by the project's own tooling.
