@@ -77,5 +77,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [Nailima-AI](https://github.com/Nailima-AI) | 63 | 4464 |
 | [cipher-droid](https://github.com/cipher-droid) | 60 | 4343 |
 | [h0lylag](https://github.com/h0lylag) | 62 | 3885 |
+| [skygrime35](https://github.com/skygrime35) | 111 | 3857 |
 
 The rest of the code was matched by the project's own tooling.
