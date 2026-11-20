@@ -29,5 +29,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [ryfraley](https://github.com/ryfraley) | 495 | 104415 |
 | [Zalthor](https://github.com/Zalthor) | 242 | 99841 |
 | [ImSoHM02](https://github.com/ImSoHM02) | 324 | 96122 |
+| [rookandlantern](https://github.com/rookandlantern) | 852 | 92692 |
 
 The rest of the code was matched by the project's own tooling.
