@@ -17,5 +17,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [ashedoescoding](https://github.com/ashedoescoding) | 5021 | 328046 |
 | [RedWatchWanderer](https://github.com/RedWatchWanderer) | 850 | 315167 |
 | [19masseycc](https://github.com/19masseycc) | 1996 | 286562 |
+| [J3vb](https://github.com/J3vb) | 955 | 258101 |
 
 The rest of the code was matched by the project's own tooling.
