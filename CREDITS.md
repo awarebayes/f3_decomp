@@ -97,5 +97,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [MightyMarfanPowerRanger](https://github.com/MightyMarfanPowerRanger) | 4 | 883 |
 | [PatrickJnr](https://github.com/PatrickJnr) | 5 | 849 |
 | [suttonwilliamd](https://github.com/suttonwilliamd) | 2 | 657 |
+| [Karasu-0x00](https://github.com/Karasu-0x00) | 1 | 630 |
 
 The rest of the code was matched by the project's own tooling.
