@@ -82,5 +82,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [mastro11](https://github.com/mastro11) | 5 | 2997 |
 | [Lostcai](https://github.com/Lostcai) | 60 | 2662 |
 | [denistischtennis](https://github.com/denistischtennis) | 108 | 2239 |
+| [ZacharyAParker](https://github.com/ZacharyAParker) | 3 | 2028 |
 
 The rest of the code was matched by the project's own tooling.
