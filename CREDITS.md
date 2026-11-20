@@ -48,5 +48,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [WozzySalmon](https://github.com/WozzySalmon) | 247 | 31158 |
 | [ndrew222](https://github.com/ndrew222) | 55 | 30304 |
 | [konqiDAM](https://github.com/konqiDAM) | 480 | 29157 |
+| [lukad](https://github.com/lukad) | 14 | 28277 |
 
 The rest of the code was matched by the project's own tooling.
