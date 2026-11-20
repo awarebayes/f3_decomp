@@ -50,5 +50,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [konqiDAM](https://github.com/konqiDAM) | 480 | 29157 |
 | [lukad](https://github.com/lukad) | 14 | 28277 |
 | [ElMikosch](https://github.com/ElMikosch) | 54 | 23965 |
+| [Naebun](https://github.com/Naebun) | 23 | 23162 |
 
 The rest of the code was matched by the project's own tooling.
