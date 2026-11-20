@@ -94,5 +94,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [lord-roachington](https://github.com/lord-roachington) | 7 | 1138 |
 | [LiberatorCR](https://github.com/LiberatorCR) | 2 | 984 |
 | [lettucegoblin](https://github.com/lettucegoblin) | 1 | 980 |
+| [MightyMarfanPowerRanger](https://github.com/MightyMarfanPowerRanger) | 4 | 883 |
 
 The rest of the code was matched by the project's own tooling.
