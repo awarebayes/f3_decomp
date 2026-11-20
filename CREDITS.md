@@ -10,5 +10,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [mathisto](https://github.com/mathisto) | 712 | 889846 |
 | [allisonworks](https://github.com/allisonworks) | 2503 | 753532 |
 | [chaosen3](https://github.com/chaosen3) | 280 | 474805 |
+| [h-x3n](https://github.com/h-x3n) | 2422 | 416411 |
 
 The rest of the code was matched by the project's own tooling.
