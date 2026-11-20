@@ -91,5 +91,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [RayPals](https://github.com/RayPals) | 18 | 1222 |
 | [Bhmorgan](https://github.com/Bhmorgan) | 2 | 1221 |
 | [pauliusmed](https://github.com/pauliusmed) | 2 | 1209 |
+| [lord-roachington](https://github.com/lord-roachington) | 7 | 1138 |
 
 The rest of the code was matched by the project's own tooling.
