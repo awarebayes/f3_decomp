@@ -25,5 +25,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [MatiasIsGood](https://github.com/MatiasIsGood) | 2114 | 170828 |
 | [andgju](https://github.com/andgju) | 206 | 140390 |
 | [nicholaicascio](https://github.com/nicholaicascio) | 4060 | 135901 |
+| [RedMatterGG](https://github.com/RedMatterGG) | 711 | 106031 |
 
 The rest of the code was matched by the project's own tooling.
