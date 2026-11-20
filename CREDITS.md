@@ -23,5 +23,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [momentom861](https://github.com/momentom861) | 232 | 191021 |
 | [SamG-Coder](https://github.com/SamG-Coder) | 658 | 179414 |
 | [MatiasIsGood](https://github.com/MatiasIsGood) | 2114 | 170828 |
+| [andgju](https://github.com/andgju) | 206 | 140390 |
 
 The rest of the code was matched by the project's own tooling.
