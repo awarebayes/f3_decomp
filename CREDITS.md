@@ -57,5 +57,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [DeathbaseTURBO](https://github.com/DeathbaseTURBO) | 22 | 13745 |
 | [Devix71](https://github.com/Devix71) | 35 | 11224 |
 | [lds1998](https://github.com/lds1998) | 167 | 11123 |
+| [XXDARK96](https://github.com/XXDARK96) | 347 | 10992 |
 
 The rest of the code was matched by the project's own tooling.
