@@ -87,5 +87,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [N8Moon](https://github.com/N8Moon) | 1 | 1705 |
 | [BioFighter](https://github.com/BioFighter) | 54 | 1515 |
 | [jmaxtedhero-sys](https://github.com/jmaxtedhero-sys) | 4 | 1436 |
+| [GrewsomeC](https://github.com/GrewsomeC) | 5 | 1227 |
 
 The rest of the code was matched by the project's own tooling.
