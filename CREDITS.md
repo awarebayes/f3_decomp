@@ -34,5 +34,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [Rave00](https://github.com/Rave00) | 1015 | 87752 |
 | [TimTru57](https://github.com/TimTru57) | 515 | 86700 |
 | [luki446](https://github.com/luki446) | 1049 | 79853 |
+| [keleanfernandez2002-tech](https://github.com/keleanfernandez2002-tech) | 1108 | 76224 |
 
 The rest of the code was matched by the project's own tooling.
