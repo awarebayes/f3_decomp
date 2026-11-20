@@ -66,5 +66,6 @@ the first matcher and the reworker. 18 further contributors took part anonymousl
 | [slucid](https://github.com/slucid) | 161 | 7328 |
 | [Bagszy](https://github.com/Bagszy) | 329 | 7244 |
 | [Ceplargo](https://github.com/Ceplargo) | 39 | 7219 |
+| [alexanderhoward141623-byte](https://github.com/alexanderhoward141623-byte) | 87 | 6804 |
 
 The rest of the code was matched by the project's own tooling.
