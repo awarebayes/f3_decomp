@@ -16,7 +16,6 @@ struct FUN_00a7b300_shell
 {
     void FUN_00a7b300();
 };
-void __cdecl operator delete(void*, size_t);
 struct NiSCMExtraData
 {
     char _pad[36];

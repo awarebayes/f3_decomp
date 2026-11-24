@@ -89,7 +89,6 @@ template <class T> class SettingT : public SettingT_GameSettingCollection_
 };
 extern SettingT<GameSettingCollection> originalRuntimeFloatSetting76;
 extern NiColor DAT_011a9b7c;
-void* operator new(size_t);
 class Sky
 {
   public:

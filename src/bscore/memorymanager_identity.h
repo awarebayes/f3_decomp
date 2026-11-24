@@ -24,7 +24,6 @@ class Actor
     SEX GetSex();
 };
 
-void operator delete(void* pointer) throw();
 void FNV_DeleteBuffer(void* pointer);
 
 class TESFile

@@ -1817,7 +1817,7 @@ struct TextureManager {
     void FUN_00af0de0(BSRenderedTexture*);
 };
 struct SceneObject : RefObject {
-    unsigned char objectState[0x30 - sizeof(RefObject)];
+    unsigned char objectState[((0x30) > sizeof(RefObject)) ? ((0x30) - sizeof(RefObject)) : 1];
     unsigned int flags;
     bool GetAppCulled() const { return (flags & 1) != 0; }
     void SetAppCulled(bool culled) {
@@ -1826,11 +1826,11 @@ struct SceneObject : RefObject {
     }
 };
 struct SceneNode : SceneObject {
-    unsigned char transformAndBounds[0xa0 - sizeof(SceneObject)];
+    unsigned char transformAndBounds[((0xa0) > sizeof(SceneObject)) ? ((0xa0) - sizeof(SceneObject)) : 1];
     SceneObject** children;
 };
 struct ShadowScene : SceneNode {
-    unsigned char sceneState[0x130 - sizeof(SceneNode)];
+    unsigned char sceneState[((0x130) > sizeof(SceneNode)) ? ((0x130) - sizeof(SceneNode)) : 1];
     bool disableLightUpdate;
 };
 struct TreeManager {
@@ -1843,7 +1843,7 @@ struct FrameState {
     unsigned GetFrameState() const { return frameState; }
 };
 struct Accumulator : RefObject {
-    unsigned char renderState[0x86 - sizeof(RefObject)];
+    unsigned char renderState[((0x86) > sizeof(RefObject)) ? ((0x86) - sizeof(RefObject)) : 1];
     bool renderNoShader;
     unsigned char passState[0x194 - 0x87];
     ShadowScene* activeScene;

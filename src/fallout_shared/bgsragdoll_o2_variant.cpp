@@ -20,7 +20,6 @@ class TESFormInitFlag
     static TESForm* GetFormByID(unsigned int formID);
 };
 int __cdecl Warning(const char*, ...);
-void __cdecl operator delete(void*);
 class BGSBodyPartData : public TESForm
 {
 };

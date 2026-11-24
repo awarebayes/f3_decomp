@@ -47,7 +47,6 @@ struct BSLookIKNote
     float m_f0c;
     float m_f10;
     void* m_p14;
-    void* operator new(size_t size);
     BSLookIKNote();
     void FUN_00a43fa0();
 };

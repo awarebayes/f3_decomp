@@ -3,7 +3,6 @@
 #define IMAGESPACEEFFECTHDR_DECLS_H
 #include "f3_common.h"
 #include <stddef.h>
-void operator delete(void*);
 class ImageSpaceEffect;
 class ImageSpaceEffectParam;
 class ImageSpaceManager;

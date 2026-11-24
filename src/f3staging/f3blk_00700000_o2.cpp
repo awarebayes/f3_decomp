@@ -36985,7 +36985,6 @@ struct Equip {
     Weapon* form;
     __forceinline Weapon* GetForm() { return form; }
     ~Equip();
-    void operator delete(void* p);
 };
 struct MagicItem {
     int unk00;

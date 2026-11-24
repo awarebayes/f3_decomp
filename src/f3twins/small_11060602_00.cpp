@@ -148,7 +148,6 @@ O_00854090* C_00854090::FUN_00854090(int arg)
 
 // ---- family f203
 
-void* __cdecl operator new(size_t);
 struct B_0085df10 { B_0085df10() throw(); virtual void v0(); int u1, u2; void FUN_00845a50(B_0085df10*, int); };
 struct D_0085df10 : B_0085df10 { float a, b, c, d; D_0085df10() { d = 0.0f; c = 0.0f; b = 0.0f; a = 0.0f; } D_0085df10* FUN_0085df10(int); };
 
@@ -180,7 +179,6 @@ O_00863b80* C_00863b80::FUN_00863b80(int arg)
 
 // ---- family f209
 
-void* __cdecl operator new(size_t);
 struct V4_00864dc0 { float a, b, c, d; V4_00864dc0() : a(0.0f), b(0.0f), c(0.0f), d(0.0f) {} };
 extern V4_00864dc0 DAT_00f73210;
 struct B_00864dc0 { B_00864dc0() throw(); virtual void v0(); int u1, u2; };

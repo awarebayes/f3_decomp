@@ -606,7 +606,6 @@ bool Owner24::FUN_0088ba60(Object24* object, void* unused1, void* unused2) {
 // @f3 0x0089aae0 (community match, verified in this file)
 void __cdecl FUN_0089ec10(void*, unsigned int);
 void __cdecl FUN_0089e890(void*);
-void __cdecl operator delete(void*, size_t);
 extern int DAT_00e2be70;
 extern void* DAT_00e2be98;
 extern void* DAT_00e2be78;

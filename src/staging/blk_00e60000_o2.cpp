@@ -28,7 +28,6 @@ unsigned char FUN_00e7cdf0_shell::FUN_00e7cdf0()
 
 void __cdecl FUN_00e7d1b0();
 
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00e7d230_cls
 {

@@ -5,7 +5,6 @@
 #include "MemoryManager.h"
 
 extern MemoryManager g_memoryManager;
-void __cdecl operator delete(void*);
 class NiGeometry;
 class ShadowSceneLight;
 

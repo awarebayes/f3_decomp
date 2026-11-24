@@ -194,7 +194,6 @@ void* FUN_00a3ddf0_shell::FUN_00a3ddf0(void* pData, int aiIndexA, int aiIndexB, 
 }
 
 void __cdecl FUN_00a3dd40();
-void __cdecl operator delete(void*, size_t);
 
 struct FUN_00a3e980_shell
 {

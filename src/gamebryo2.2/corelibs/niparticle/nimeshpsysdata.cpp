@@ -23,7 +23,6 @@ struct NiMeshPSysData : NiPSysData
     void* __thiscall FUN_00c30bd0(unsigned int);
 };
 
-void __cdecl operator delete(void* p, size_t size);
 
 // Calls FUN_00c309d0, then deletes this with size 0x98 when bit 0 of flags is set, and returns this.
 // @fnv 0x00c30bd0

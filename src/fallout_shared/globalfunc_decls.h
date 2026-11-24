@@ -2,8 +2,6 @@
 #ifndef FNV_GLOBALFUNC_DECLS_H
 #define FNV_GLOBALFUNC_DECLS_H
 #include "f3_common.h"
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 // Canonical folded binding for NiFixedString string-handle conversion.
 class BSFadeNode
 {

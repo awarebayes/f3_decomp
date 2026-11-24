@@ -43,7 +43,6 @@ struct NiExtraDataHelper
 };
 struct BSFadeNode
 {
-    void* operator new(size_t);
 };
 extern "C" int EmptyFS;
 extern "C" void* DAT_0109d39c;

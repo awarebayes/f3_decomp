@@ -30,7 +30,6 @@ struct SomeClass
     void* FUN_00ee90b0(unsigned int);
 };
 void __cdecl FUN_00ee9a60();
-void __cdecl operator delete(void*, size_t);
 struct FUN_00ee9ca0_shell
 {
     void* __thiscall FUN_00ee9ca0(unsigned int flags);

@@ -72,7 +72,6 @@ struct NiPoint3
 };
 struct BSFadeNode
 {
-    void* __cdecl operator new(size_t);
 };
 struct CtorHelper
 {

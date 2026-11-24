@@ -171,7 +171,6 @@ class FUN_00a5d3d0
   public:
     ~FUN_00a5d3d0();
 };
-void __cdecl operator delete(void* pv, int iSize);
 void __cdecl FUN_00aa1490(void* pv, unsigned int uiSize);
 struct Elem_c25 : FUN_00a5d3d0
 {

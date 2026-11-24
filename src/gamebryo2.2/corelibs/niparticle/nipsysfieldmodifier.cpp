@@ -10,7 +10,6 @@ char const* const* __cdecl FUN_00c320f0()
     return &g_01202688_arg1;
 }
 
-extern "C" void __cdecl operator delete(void*, size_t);
 
 struct NiPSysFieldModifier
 {

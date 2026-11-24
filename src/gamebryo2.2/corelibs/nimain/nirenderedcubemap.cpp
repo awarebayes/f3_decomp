@@ -34,8 +34,6 @@ void* __cdecl FUN_00ee82a0()
     return &DAT_012708e4;
 }
 
-void __cdecl operator delete(void* p, size_t size);
-void* __cdecl operator new(size_t);
 struct NiRenderedCubeMap
 {
     virtual ~NiRenderedCubeMap();

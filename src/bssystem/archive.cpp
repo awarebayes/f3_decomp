@@ -6884,7 +6884,6 @@ inline void AppendPath(char* dest, unsigned int size, const char* src)
 {
     strcat_s(dest, size, src);
 }
-void* __cdecl operator new(size_t);
 struct PathNode
 {
     const char* path;

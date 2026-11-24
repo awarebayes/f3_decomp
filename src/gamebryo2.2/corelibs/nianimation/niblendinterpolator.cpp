@@ -1562,7 +1562,6 @@ void SBObject::FUN_00a37ec0(SBStream& arStream)
 // The engine replaces the global deallocation function with a sized variant;
 // this is the routine the original's deleting destructor calls with the size
 // of the object it is releasing.
-void __cdecl operator delete(void* p, size_t n);
 
 // Stand-in for NiBlendInterpolator (48 bytes, virtual destructor in vftable
 // slot 0).  The real class is the engine's blend interpolator: it owns an

@@ -249,7 +249,6 @@ void FUN_00a964a0_Class::FUN_00a964a0(void* apValue) {
 
 namespace fnv_00a982d0 {
 struct BSFadeNode {
-    void* operator new(size_t);
     void* __thiscall FUN_00a981d0();
 };
 
@@ -837,7 +836,6 @@ struct FUN_00a5a390_shell {
     void DestroyFogProperty();
     FUN_00a5a390_shell* FUN_00a950f0(bool bDel);
 };
-void __cdecl operator delete(void* p, size_t);
 // Calls DestroyFogProperty, then deletes this with size 0x1c if bDel is set, and returns this.
 // @fnv 0x00a950f0
 FUN_00a5a390_shell* FUN_00a5a390_shell::FUN_00a950f0(bool bDel)

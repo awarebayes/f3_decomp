@@ -66,7 +66,7 @@ FUN_00c23cf0_shell* __thiscall FUN_00c23cf0_shell::FUN_00c23cf0(int param)
 struct FUN_00c23b70_shell : NiObject
 {
     bool __thiscall IsEqual(NiObject*) const;
-    char pad[0x18 - sizeof(NiObject)];
+    char pad[((0x18) > sizeof(NiObject)) ? ((0x18) - sizeof(NiObject)) : 1];
     unsigned short m_usSpawnGenerationCount;
     float m_fSpawnPercentage;
     unsigned short m_usMinimumParticlesToSpawn;

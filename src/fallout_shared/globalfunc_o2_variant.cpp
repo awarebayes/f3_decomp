@@ -1983,8 +1983,6 @@ class FUN_00c87010_cls : public FUN_00c86800_Class
 };
 
 // @f3 0x008f8e70 (community match, verified in this file)
-void* operator new(size_t);
-void operator delete(void*);
 void* __cdecl FUN_0089eb90(unsigned int);
 #include <windows.h>
 extern CRITICAL_SECTION DAT_010f3194;

@@ -11547,7 +11547,6 @@ public:
 extern MemoryManagerAA2 g_kMemoryManagerAA2;
 
 void* operator new(size_t size) { return g_kMemoryManagerAA2.RawAllocate(size); }
-void operator delete(void* p);
 
 struct SubObj4d35f0 {
     void* FUN_0040bbe0();

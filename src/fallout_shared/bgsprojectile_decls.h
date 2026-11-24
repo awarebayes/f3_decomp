@@ -24,7 +24,6 @@ class TESDataHandler
     BSSimpleList<TESRace*>* GetTESRaceList();
 };
 class BGSProjectile;
-void* operator new(size_t size);
 
 class BGSProjectileFloatNode
 {

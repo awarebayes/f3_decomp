@@ -5337,8 +5337,6 @@ FUN_006100c0::FUN_006100c0(int source,int contextValue) : path() {
 
 // @f3 0x00604bd0 (community match, verified in this file)
 namespace f3m_00604bd0 {
-void* __cdecl operator new(size_t, void*);
-void __cdecl operator delete(void*, void*);
 namespace Task0547 {
 struct FUN_00610020 {
     int unk00;

@@ -6419,7 +6419,6 @@ void Dummy::FUN_0057bd60(MobileObject* apMobileObject)
 }
 }  // namespace fnv_0057bd60
 
-void* __cdecl operator new(size_t);
 extern float const DAT_01015f5c;
 float __fastcall FUN_005471e0(void*);
 void* __fastcall FUN_0057c2a0(void*);
@@ -7019,7 +7018,7 @@ struct ActorValueOwnerVtbl
 
 struct DummyActor : public TESObjectREFR
 {
-    char pad[0xa8 - sizeof(TESObjectREFR)];
+    char pad[((0xa8) > sizeof(TESObjectREFR)) ? ((0xa8) - sizeof(TESObjectREFR)) : 1];
     ActorValueOwnerVtbl* vfptr_avo;
 };
 
@@ -20049,7 +20048,6 @@ class SpawnedNode
   public:
     SpawnedNode();
     void Configure(unsigned int a, unsigned int b);
-    void* operator new(size_t size);
     static void operator delete(void*, size_t);
     unsigned char pad[0x80];
 };
@@ -28229,8 +28227,6 @@ int FUN_00ec7750(const char*, const char*);
 void FUN_00406d30(char*, unsigned int, const char*);
 char* FUN_0040ab30(char*, int);
 void __cdecl FUN_005b5e40(const char*, ...);
-void* operator new(size_t);
-void operator delete(void*);
 // @fnv 0x005659f0
 void Actor79::FUN_005659f0()
 {
@@ -29910,7 +29906,6 @@ struct NiUpdateData
 struct TargetNode : public TargetObj
 {
     TargetNode(unsigned short = 0);
-    void* operator new(size_t);
     static void operator delete(void*, size_t);
     void SetName(const NiFixedString&);
     void RemoveAllChildren();
@@ -33719,8 +33714,6 @@ void __cdecl FUN_00573800(MoveRef* ref, MoveCell* apDestCell, MoveWorld* world)
 }  // namespace fnv_00573800
 
 namespace fnv_00574b30 {
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct RefOps;
 struct ExtraOps;
 struct EntryOps;
@@ -37354,13 +37347,13 @@ struct SubObj
 
 struct MagicItem : public TESForm
 {
-    char pad[0xc - sizeof(TESForm)];
+    char pad[((0xc) > sizeof(TESForm)) ? ((0xc) - sizeof(TESForm)) : 1];
     SubObj sub;
 };
 
 struct AlchemyItem : public TESForm
 {
-    char pad[0x3c - sizeof(TESForm)];
+    char pad[((0x3c) > sizeof(TESForm)) ? ((0x3c) - sizeof(TESForm)) : 1];
     SubObj sub;
 };
 
@@ -48217,7 +48210,6 @@ class FUN_0055a2f0 : public TESObjectREFR
   public:
     unsigned int unk40, unk44, unk48, unk4C, unk50, unk54, unk58, unk5C, unk60, unk64;
     FUN_0055a2f0();
-    void* operator new(size_t);
 };
 class MobileObject : public TESObjectREFR
 {
@@ -48225,7 +48217,6 @@ class MobileObject : public TESObjectREFR
     unsigned int unk40, unk44, unk48, unk4C, unk50, unk54, unk58, unk5C, unk60, unk64, unk68, unk6C, unk70, unk74,
         unk78, unk7C, unk80, unk84;
     MobileObject();
-    void* operator new(size_t);
 };
 class Character : public TESObjectREFR
 {
@@ -48238,7 +48229,6 @@ class Character : public TESObjectREFR
         unk168, unk16C, unk170, unk174, unk178, unk17C, unk180, unk184, unk188, unk18C, unk190, unk194, unk198, unk19C,
         unk1A0, unk1A4, unk1A8, unk1AC, unk1B0, unk1B4, unk1B8, unk1BC, unk1C0, unk1C4;
     Character(bool);
-    void* operator new(size_t);
 };
 class FUN_008d4500 : public TESObjectREFR
 {
@@ -48251,7 +48241,6 @@ class FUN_008d4500 : public TESObjectREFR
         unk168, unk16C, unk170, unk174, unk178, unk17C, unk180, unk184, unk188, unk18C, unk190, unk194, unk198, unk19C,
         unk1A0, unk1A4, unk1A8, unk1AC, unk1B0, unk1B4, unk1B8, unk1BC;
     FUN_008d4500(bool);
-    void* operator new(size_t);
 };
 class FUN_009b7a50 : public TESObjectREFR
 {
@@ -48262,7 +48251,6 @@ class FUN_009b7a50 : public TESObjectREFR
         unkF8, unkFC, unk100, unk104, unk108, unk10C, unk110, unk114, unk118, unk11C, unk120, unk124, unk128, unk12C,
         unk130, unk134, unk138, unk13C, unk140, unk144, unk148, unk14C, unk150, unk154, unk158, unk15C;
     FUN_009b7a50(bool);
-    void* operator new(size_t);
 };
 class FUN_009b3fa0 : public TESObjectREFR
 {
@@ -48273,7 +48261,6 @@ class FUN_009b3fa0 : public TESObjectREFR
         unkF8, unkFC, unk100, unk104, unk108, unk10C, unk110, unk114, unk118, unk11C, unk120, unk124, unk128, unk12C,
         unk130, unk134, unk138, unk13C, unk140, unk144, unk148, unk14C, unk150;
     FUN_009b3fa0(bool);
-    void* operator new(size_t);
 };
 class FUN_00978fd0 : public TESObjectREFR
 {
@@ -48284,7 +48271,6 @@ class FUN_00978fd0 : public TESObjectREFR
         unkF8, unkFC, unk100, unk104, unk108, unk10C, unk110, unk114, unk118, unk11C, unk120, unk124, unk128, unk12C,
         unk130, unk134, unk138, unk13C, unk140, unk144, unk148, unk14C, unk150;
     FUN_00978fd0(bool);
-    void* operator new(size_t);
 };
 class FUN_009b3160 : public TESObjectREFR
 {
@@ -48295,7 +48281,6 @@ class FUN_009b3160 : public TESObjectREFR
         unkF8, unkFC, unk100, unk104, unk108, unk10C, unk110, unk114, unk118, unk11C, unk120, unk124, unk128, unk12C,
         unk130, unk134, unk138, unk13C, unk140, unk144, unk148, unk14C, unk150, unk154;
     FUN_009b3160(bool);
-    void* operator new(size_t);
 };
 class FUN_009aaff0 : public TESObjectREFR
 {
@@ -48306,7 +48291,6 @@ class FUN_009aaff0 : public TESObjectREFR
         unkF8, unkFC, unk100, unk104, unk108, unk10C, unk110, unk114, unk118, unk11C, unk120, unk124, unk128, unk12C,
         unk130, unk134, unk138, unk13C, unk140, unk144, unk148, unk14C, unk150, unk154;
     FUN_009aaff0(bool);
-    void* operator new(size_t);
 };
 // Allocates a new TESObjectREFR subclass based on ucType and returns the pointer, or null if the type is unknown.
 // @fnv 0x00564480

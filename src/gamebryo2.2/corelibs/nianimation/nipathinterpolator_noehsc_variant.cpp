@@ -47,7 +47,6 @@ struct FUN_00a3ddf0_shell
 };
 extern void* DAT_011f3ca8[];
 void __cdecl FUN_00a3dd40();
-void __cdecl operator delete(void*, size_t);
 struct FUN_00a3e980_shell
 {
     void* __thiscall Destroy(unsigned int flags);

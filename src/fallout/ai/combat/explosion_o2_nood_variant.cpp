@@ -445,7 +445,6 @@ struct FUN_009ae0f0
     void __thiscall FUN_00537bb0();
     FUN_009ae0f0();
 };
-void* __cdecl operator new(size_t);
 struct BGSLoadFormBuffer
 {
     virtual unsigned char GetVersion();

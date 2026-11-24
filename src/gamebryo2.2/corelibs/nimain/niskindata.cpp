@@ -71,7 +71,6 @@ struct _Call_a5d3a0
 };
 struct BSFadeNode : _Call_a5d3a0
 {
-    void* operator new(size_t size);
 };
 extern int DAT_0109e574;
 // @fnv 0x00a84d30

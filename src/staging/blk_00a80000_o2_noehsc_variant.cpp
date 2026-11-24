@@ -406,7 +406,6 @@ struct FUN_00a5a390_shell
     void DestroyFogProperty();
     FUN_00a5a390_shell* FUN_00a950f0(bool bDel);
 };
-void __cdecl operator delete(void* p, size_t);
 void __cdecl FUN_00a9b8b0();
 void __cdecl FUN_00a9b9b0();
 void __cdecl FUN_00a9ba80();

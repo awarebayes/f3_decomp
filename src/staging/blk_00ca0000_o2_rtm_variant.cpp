@@ -56,7 +56,6 @@ struct FUN_00cb0a80_class
 char ToUpperAscii(char acChar);
 char ToLowerAscii(char acChar);
 void __cdecl FUN_00cc9640();
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00cb9b60_class
 {
     FUN_00cb9b60_class* DestroyIfFlagged(int flag);
@@ -9889,7 +9888,6 @@ struct NTCVt
     int unk64;
     int unk68;
     int unk6c;
-    void* operator new(size_t size) throw();
     void operator delete(void*)
     {}
     NTCVt();

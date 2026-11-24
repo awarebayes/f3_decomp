@@ -1485,7 +1485,6 @@ struct Node {
 
  void FUN_00414660(int,int,int);
  void* operator new(size_t n) { return ((Heap*)&DAT_01090a78)->FUN_0086b930(n); }
- void operator delete(void*);
 };
 struct List {
  void* head; void* tail;

@@ -118,7 +118,6 @@ struct FUN_00a99a50_shell
     int d;
     void __thiscall FUN_00a7b300();
     FUN_00a99a50_shell* __thiscall FUN_00a99a50(int);
-    void __cdecl operator delete(void* p, size_t);
 };
 // @fnv 0x00a99a50
 FUN_00a99a50_shell* __thiscall FUN_00a99a50_shell::FUN_00a99a50(int flag)

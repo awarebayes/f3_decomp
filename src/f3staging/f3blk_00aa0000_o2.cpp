@@ -23484,7 +23484,6 @@ void State00aaa260::FUN_00aaa260(Stream00aaa260* stream) {
 }   // namespace f3m_00aaa260
 
 // @f3 0x00aaa330 (community match, verified in this file)
-void __cdecl operator delete(void* object, size_t size);
 
 struct BaseInitView_aaa120 {
     void FUN_00aaa120();
@@ -23618,7 +23617,6 @@ bool Owner_aad2e0::FUN_00aad2e0()
 
 // @f3 0x00ab7a00 (community match, verified in this file)
 namespace f3m_00ab7a00 {
-void __cdecl operator delete(void*, size_t);
 struct State00ab7a00 {
     void FUN_00ab7600();
     State00ab7a00* FUN_00ab7a00(unsigned int flags);
@@ -24445,7 +24443,6 @@ void __cdecl FUN_00aa5dc0(void* param_1)
 // @f3 0x00ab5db0 (community match, verified in this file)
 extern char DAT_00e8b28c;
 namespace f3m_00ab5db0 {
-void __cdecl operator delete(void*, size_t);
 struct State00ab5db0 {
     void* table;
     void FUN_0082e4f0();
@@ -25071,7 +25068,6 @@ int __cdecl FUN_00aa5e20(const char* suffix)
 // @f3 0x00ab51d0 (community match, verified in this file)
 namespace f3m_00ab51d0 {
 extern char DAT_00e8b034;
-void __cdecl operator delete(void*, size_t);
 struct State00ab51d0 {
     void* table;
     unsigned int unk4;
@@ -25765,7 +25761,6 @@ void naa5a60::Task::FUN_00aa5a60(long newState, RefObj* p)
 // @f3 0x00aae960 (community match, verified in this file)
 namespace f3m_00aae960 {
 
-void operator delete(void* memory, size_t size);
 
 struct FUN_00aae960_shell {
     unsigned int unk00;

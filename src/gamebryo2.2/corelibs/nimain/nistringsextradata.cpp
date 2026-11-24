@@ -62,7 +62,6 @@ void __thiscall NiStringsExtraData::FreeStrings()
 
 namespace fnv_00a94970 {
 void* __cdecl FreeStrings();
-void __cdecl operator delete(void*, size_t);
 struct NiStringsExtraData : NiExtraData
 {
     ~NiStringsExtraData();

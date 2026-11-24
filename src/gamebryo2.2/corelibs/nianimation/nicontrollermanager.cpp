@@ -640,7 +640,6 @@ void* FUN_00a2e510_Stub::DestroyNiTMapBase(unsigned int auiFlags)
 
 struct BSFadeNode
 {
-    void* operator new(size_t);
     void* FUN_00a2eed0();
 };
 // @fnv 0x00a2f6c0

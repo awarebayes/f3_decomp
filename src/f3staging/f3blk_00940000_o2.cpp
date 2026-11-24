@@ -4762,7 +4762,6 @@ struct Item {
     Item();
     ~Item();
     void* operator new[](size_t size) { return DAT_01090a78.FUN_0086b930(size); }
-    void operator delete[](void* p);
     void Load(Reader* r);
 };
 struct Owner {
@@ -15108,7 +15107,6 @@ struct QRefObj {
         o->memSize = (unsigned short)size;
         return o;
     }
-    void operator delete(void*, size_t);
     void removeReference() {
         if (memSize != 0) {
             if (--refCount == 0) delete this;

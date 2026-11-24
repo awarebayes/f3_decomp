@@ -162,7 +162,6 @@ void* __thiscall FUN_009fbb30_class::FUN_009fbb30(int aiFlags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 void InitVTableAndInvokeCallback();
 struct FUN_009fbca0
 {
@@ -4097,8 +4096,6 @@ long __stdcall DsBasePin::FUN_009fc190(DsUnknown* pConnector, const void* pmt)
     return hr;
 }
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 
 inline void* __cdecl operator new(size_t, size_t size)
 {
@@ -4268,7 +4265,6 @@ long __stdcall FUN_009fc780::FUN_009fc7e0(FUN_009fc780** ppEnumMediaTypes)
 }  // namespace fnv_009fc7e0
 
 extern "C" void* __cdecl FUN_00ec44d0(void*, const void*, unsigned int);
-void* __cdecl operator new(size_t);
 int __stdcall FUN_009fd080(const wchar_t*);
 
 struct FUN_009fcee0
@@ -5598,7 +5594,6 @@ FUN_009fe870::~FUN_009fe870()
 }
 }  // namespace fnv_009fe870
 
-void* __cdecl operator new(size_t);
 
 struct Stream_9fe960
 {

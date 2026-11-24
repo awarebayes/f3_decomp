@@ -34,7 +34,6 @@ __forceinline void* __cdecl operator new(size_t size, AllocationManager& allocat
     storage[-1] = adjustment;
     return storage;
 }
-void __cdecl operator delete(void* memory, AllocationManager& allocator);
 struct FUN_00c8f5a0_Class
 {
     void* virtualFunctions;
@@ -59,7 +58,6 @@ __forceinline void* __cdecl operator new(size_t size, RigidBodyInfoAllocator& al
     storage[-1] = adjustment;
     return storage;
 }
-void __cdecl operator delete(void* memory, RigidBodyInfoAllocator& allocator);
 
 namespace task1800 { struct OwnerCallView { void FUN_008fe7a0(FUN_00c8f510*); }; }
 

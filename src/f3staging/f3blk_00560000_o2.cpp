@@ -12114,7 +12114,7 @@ struct Head56c630
 struct Cls56c630
 {
     Head56c630 m_head;
-    char m_pad[0x220 - sizeof(Head56c630)];
+    char m_pad[((0x220) > sizeof(Head56c630)) ? ((0x220) - sizeof(Head56c630)) : 1];
     NiPointer<Ref56c630> m_220;
     ~Cls56c630();
 };

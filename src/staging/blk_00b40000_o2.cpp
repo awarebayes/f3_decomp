@@ -109,7 +109,6 @@ void* __thiscall FUN_00b58400_class::FUN_00b58400(int flag)
     return this;
 }
 
-extern "C" void __cdecl operator delete(void*, size_t);
 
 void __cdecl FUN_00b581c0(void);
 
@@ -184,7 +183,6 @@ void FUN_00b5a9d0_class::SetTripleInts(int aiFirst, int aiSecond, int aiThird)
     *(int*)((char*)this + 0x108) = aiThird;
 }
 
-extern "C" void __cdecl operator delete(void*, size_t);
 
 void __cdecl FUN_00b5e5a0();
 

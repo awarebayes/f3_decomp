@@ -53,7 +53,6 @@ struct FUN_00e891f0_Class
 {
     void __thiscall FUN_00e891f0();
 };
-extern "C" void __cdecl operator delete(void* p, size_t size);
 extern int DAT_010efc34;
 void __cdecl FUN_00e68830();
 struct FUN_00e8aa40_Class
@@ -220,7 +219,6 @@ struct FUN_00e941d0_This
     FUN_00e941d0_Node* head;
 };
 FUN_00e941d0_Node* __fastcall RemoveFirstNodeAtLeast(FUN_00e941d0_This* self, int, unsigned int value);
-extern "C" void __cdecl operator delete(void* p, size_t size);
 struct FUN_00e98610_Node
 {
     void* m_next;
@@ -372,7 +370,6 @@ struct FUN_00e8ce70_Class : NiTMapBaseStub
 
     void* __thiscall FUN_00e8ce70(int flag);
 };
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00e8ceb0_Class
 {
     void __thiscall FUN_00e8ceb0();
@@ -552,7 +549,6 @@ struct FUN_00e96c90_Class
     void __thiscall FUN_00e89970();
     void __thiscall FUN_00e96c90();
 };
-extern "C" void __cdecl operator delete(void* p, size_t size);
 void __cdecl FUN_00e989c0();
 extern int DAT_010f1550;
 struct FUN_00e97870_Class
@@ -8631,7 +8627,6 @@ struct FUN_00e940a0_Class
     void* m_00;
     void __thiscall ReleaseGlobalSlot();
 };
-extern "C" void __cdecl operator delete(void* p, size_t size);
 struct FUN_00e94150_Node
 {
     int m_00;

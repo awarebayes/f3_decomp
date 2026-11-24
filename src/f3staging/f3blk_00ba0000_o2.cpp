@@ -4007,7 +4007,6 @@ namespace task1386 {
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00c01e8b();
 namespace std {
 class bad_alloc
@@ -18470,7 +18469,6 @@ void Self::FUN_00ba1720()
 
 // @f3 0x00bb3f10 (community match, verified in this file)
 namespace f3m_00bb3f10 {
-void __cdecl operator delete(void*);
 namespace T2107 {
 struct Vec3
 {

@@ -2578,7 +2578,6 @@ inline void* __cdecl operator new(size_t size)
 {
     return FUN_00aa13e0(size);
 }
-void __cdecl operator delete(void*);
 struct TLSData
 {
     int unk000;

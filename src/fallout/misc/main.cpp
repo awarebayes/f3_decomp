@@ -968,7 +968,6 @@ void __cdecl FUN_00706320(int);
 
 // If the byte at offset 0x4cc is set, calls FUN_00706320(0) and clears that byte.
 // @f3 0x00bb6d80 (community match, verified in this file)
-void operator delete(void* p);
 
 struct Obj
 {
@@ -6279,7 +6278,6 @@ struct Message86
     int x;
     int y;
 };
-void* __cdecl operator new(size_t);
 extern Receiver86* g_dataHandler;
 extern Receiver86* g_TESSaveLoadGame;
 extern Receiver86* g_BGSSaveLoadGame;

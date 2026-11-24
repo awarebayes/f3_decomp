@@ -8330,7 +8330,6 @@ struct hkMonitorStreamFrameInfo;
 struct FUN_00a8d060
 {
 	__forceinline void* operator new(size_t nbytes)	{ return hkThreadMemory::getInstance().allocateChunkConstSize(static_cast<int>(nbytes),HK_MEMORY_CLASS_MONITOR); }
-	void operator delete(void* p);
 
 	enum NodeType
 	{

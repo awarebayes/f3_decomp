@@ -2588,8 +2588,6 @@ extern float DAT_01016970;
 extern double DAT_01072310, DAT_010356b0, DAT_01021928;
 void* FUN_00403d30(void*, int, unsigned int);
 int FUN_00406d50(char*, unsigned int, const char*);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct TrimMenu
 {
     int unk00;

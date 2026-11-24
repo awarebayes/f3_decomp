@@ -1991,7 +1991,6 @@ public:
         b->m_memSizeAndFlags = static_cast<unsigned short>(nbytes);
         return b;
     }
-    void operator delete(void* p);
 };
 
 class hkpCollisionAgent : public hkReferencedObject {

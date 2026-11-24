@@ -100,7 +100,6 @@ void* __thiscall FUN_00e95780_shell::FUN_00e95780(unsigned int auiFlags)
 }
 
 void __cdecl FUN_00e95880();
-void __cdecl operator delete(void*, size_t);
 struct FUN_00e95b40_shell
 {
     virtual ~FUN_00e95b40_shell();

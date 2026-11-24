@@ -72,7 +72,6 @@ int C_00899150::f()
 
 // ---- family s055
 
-void* __cdecl operator new(size_t);
 struct B_008d1f60 { int a[4]; B_008d1f60(); virtual void vf(); };
 struct D_008d1f60 : B_008d1f60 { D_008d1f60() {} virtual void vf(); };
 

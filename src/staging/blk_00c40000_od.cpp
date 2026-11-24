@@ -1411,7 +1411,6 @@ void* __thiscall FUN_00c51640_Class::FUN_00c51640()
 struct FUN_00878690_shell {
     void __thiscall FUN_00c51df0();
 };
-void __cdecl operator delete(void* ptr, size_t size);
 struct FUN_00c52830_class {
     void* __thiscall FUN_00c52830(unsigned int flags);
 };
@@ -1469,7 +1468,6 @@ void __thiscall FUN_00c54ec0_class::FUN_00c54ec0(NiStream& stream)
 struct FUN_00a7b300_shell { void __thiscall FUN_00a7b300(); };
 struct FUN_00c55330_class {
     void* __thiscall FUN_00c55330(unsigned int flags);
-    void operator delete(void* p, size_t size);
 };
 // @fnv 0x00c55330
 void* __thiscall FUN_00c55330_class::FUN_00c55330(unsigned int flags)
@@ -1481,7 +1479,6 @@ void* __thiscall FUN_00c55330_class::FUN_00c55330(unsigned int flags)
 }
 
 namespace fnv_00c5bae0 {
-extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00c5ac00_class {
     void __thiscall FUN_00c5ac00();
@@ -1568,7 +1565,6 @@ char FUN_00c1be60_StandIn::FUN_00c5cd20(void* other)
 }
 
 namespace fnv_00c5ce10 {
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00c5ce10_Class {
     void __thiscall Constructor();
     void* __thiscall FUN_00c5ce10(unsigned int a);
@@ -1693,7 +1689,6 @@ void __thiscall FUN_00c5e560_class::FUN_00c5e560(NiNode* pNode, void* b)
 struct FUN_00c5db90_Class {
     void __thiscall FUN_00c5db90();
 };
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c5eb20_Class {
     void* __thiscall FUN_00c5eb20(unsigned int flags);
 };
@@ -1730,7 +1725,6 @@ int* __thiscall FUN_00c5eca0_Class::FUN_00c5eca0(int aiFlags)
 }
 }  // namespace fnv_00c5eca0
 
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00c5ed60_Class {
     void __thiscall FUN_00c5ed60();
@@ -1770,7 +1764,6 @@ void __thiscall FUN_00c5f500_class::FUN_00c5f500(FUN_00c5f500_class* other)
 
 struct FUN_00c5fc20_class {
     void* __thiscall FUN_00c5fc20(unsigned int flags);
-    void __cdecl operator delete(void* p, size_t size);
     void __thiscall FUN_00c5faa0();
 };
 // Calls FUN_00c5faa0, then frees this with operator delete when flags has bit 0 set, and returns this.
@@ -2087,7 +2080,6 @@ FUN_00c450d0::FUN_00c450d0()
 }
 
 struct FUN_00c465a0_class {
-    void* operator new(size_t);
     FUN_00c465a0_class();
     char pad[0x1c];
 };

@@ -57,7 +57,6 @@ NiExtraData* FUN_00a99cd0()
     return 0;
 }
 
-void __cdecl operator delete(void*, size_t);
 struct FUN_00a99d00_shell
 {
     void* __thiscall Destroy(unsigned int);

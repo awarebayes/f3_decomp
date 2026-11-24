@@ -1358,7 +1358,6 @@ struct S00cb0820_Ref
         b->m_usAllocationSize = (unsigned short)size;
         return b;
     }
-    void operator delete(void* p, size_t size);
     void FUN_00c905b0();
 };
 
@@ -1553,7 +1552,6 @@ struct MyRef
         b->m_usAllocationSize = (unsigned short)size;
         return b;
     }
-    void operator delete(void* p, size_t size);
     void Release()
     {
         if (m_usAllocationSize != 0) {

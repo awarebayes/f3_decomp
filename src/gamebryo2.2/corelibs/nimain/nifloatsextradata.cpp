@@ -92,7 +92,6 @@ struct FUN_00a7b300_shell
     void __thiscall _FUN_00a7b300();
 };
 extern int DAT_0109ec0c;
-void __cdecl operator delete(void*, size_t);
 struct FUN_00a891d0_shell
 {
     void* __thiscall DestroyNiFloatsExtraData(unsigned int);

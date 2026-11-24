@@ -41,7 +41,6 @@ void __thiscall FUN_00bb0d30_shell::FUN_00bb0d30(int value)
 }
 
 void* __cdecl FUN_00bb0550();
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00bb0a50_shell
 {
     void* __thiscall DestroyIfFlagged(int flags);

@@ -30,7 +30,6 @@ class FUN_00403100
     int unk08;
 };
 
-void operator delete(void* p);
 
 extern FUN_00403100* DAT_01073410;
 extern FUN_00403100* DAT_01073414;

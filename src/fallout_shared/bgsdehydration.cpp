@@ -12,7 +12,6 @@ class SpellItem : public TESForm
 void FUN_004016a0(BGSDehydrationStage* stage);
 extern "C" unsigned int DAT_011c3180;
 extern "C" BGSDehydrationStage** DAT_011c3184;
-void __cdecl operator delete(void* pointer);
 
 class StageLoadVirtuals
 {

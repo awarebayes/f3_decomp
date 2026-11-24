@@ -3881,7 +3881,6 @@ class Obj6cda90 {
 public:
     Obj6cda90(int a1, int a2, int a3);
     void* operator new(size_t size) { return Heap6cda90::DAT_01090a78.FUN_0086b930(size); }
-    void operator delete(void* p);
     char pad[0x110];
 };
 Obj6cda90* __cdecl FUN_006cda90(int a1, int a2, int a3)

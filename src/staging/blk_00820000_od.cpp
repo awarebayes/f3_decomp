@@ -756,7 +756,6 @@ void S_00836470::UpdateSoundItems(int)
     }
 }
 
-void* __cdecl operator new(size_t);
 struct TESTopic : TESForm
 {
     virtual ~TESTopic();

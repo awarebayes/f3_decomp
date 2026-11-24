@@ -162,7 +162,7 @@ struct FUN_00724090_shell
 };
 struct FUN_007533b0 : Menu_007a8b10
 {
-    char pad[0x58 - sizeof(void*)];
+    char pad[((0x58) > sizeof(void*)) ? ((0x58) - sizeof(void*)) : 1];
     FUN_00724090_shell m;
     ~FUN_007533b0();
 };

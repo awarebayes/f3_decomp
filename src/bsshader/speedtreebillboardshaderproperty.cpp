@@ -4,7 +4,6 @@
 
 extern int DAT_010b8330;
 void __fastcall FUN_00b67380(void*);
-void __cdecl operator delete(void*, size_t);
 
 struct FUN_00ba8690
 {
@@ -152,7 +151,6 @@ int BA86C0Owner::FUN_00ba86c0(A5A040Cls* pArg, int arg2, int arg3)
 
 extern int DAT_010b8330;
 void* __cdecl FUN_00aa13e0(unsigned int size);
-void __cdecl operator delete(void*, size_t);
 
 struct SpawnedBase
 {

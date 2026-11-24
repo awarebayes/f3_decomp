@@ -396,7 +396,6 @@ struct GlobalObject_00869f00
 {
 };
 void __fastcall FUN_009a3410(GlobalObject_00869f00*);
-void __cdecl operator delete(void*);
 struct FUN_009a3850_Class : public GlobalObject_00869f00
 {
     void* __thiscall FUN_009a3850(unsigned int flags);
@@ -2242,8 +2241,6 @@ int FUN_009a3910_cls::FUN_009a3910()
     return (this->m_0c > 0x400) ? (int)(this->m_0c + 0x400) : (int)(this->m_0c << 1);
 }
 
-void* __cdecl operator new(size_t count, void* place);
-void __cdecl operator delete(void* ptr, void* place);
 struct FUN_009a3d90
 {
     int timestamp;
@@ -4690,8 +4687,6 @@ bool __thiscall FUN_009bec50_Class::FUN_009bec50(float value)
     return false;
 }
 
-void* __cdecl operator new(size_t uiSize, void* pvMem);
-void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct E9A3A80Entry
 {
@@ -5257,7 +5252,7 @@ struct Form_009a5530
 
 struct Item_009a5530 : public FUN_009a4690_shell
 {
-    char pad[0x30 - sizeof(FUN_009a4690_shell)];
+    char pad[((0x30) > sizeof(FUN_009a4690_shell)) ? ((0x30) - sizeof(FUN_009a4690_shell)) : 1];
     Item_009a5530(int a1, float a2, float a3, float a4, float a5);
     void FUN_004534f0(unsigned int);
 };
@@ -5887,7 +5882,6 @@ TargetQueue* __stdcall FUN_004537b0(TargetRef*);
 bool __cdecl FUN_008c7aa0();
 extern TargetRef* DAT_011dea3c;
 void __cdecl FUN_005e58f0(int, TargetRef*, ...);
-void* __cdecl operator new(size_t);
 
 // Creates a new projectile reference from a form, source and parent, scales it, attaches extra data, links it to the parent and updates or queues it.
 // @fnv 0x009ac9c0

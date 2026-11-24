@@ -11526,7 +11526,7 @@ bool Owner54bd::FUN_0054bdf0(){int type=unk10;if(type==0xaa || (type>0xb2 && typ
 namespace f3m_00551040 {
 class TESEyes : public TESForm {
 public:
-    char pad[0x30 - sizeof(TESForm)];
+    char pad[((0x30) > sizeof(TESForm)) ? ((0x30) - sizeof(TESForm)) : 1];
     unsigned char eyeFlags; // +0x30
     void SetEyeFlag(unsigned char mask, bool on) {
         if (on) {

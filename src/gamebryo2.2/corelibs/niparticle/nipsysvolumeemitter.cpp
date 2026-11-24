@@ -160,7 +160,6 @@ char const* const* __cdecl FUN_00c31bc0()
 
 void __cdecl FUN_00c31750(void);
 
-extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00c31c70_shell
 {

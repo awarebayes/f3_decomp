@@ -31,7 +31,6 @@ GlobalObjectO2_00a7b618* __cdecl FUN_00c201c0()
 extern int DAT_010bda2c;
 struct BSFadeNode
 {
-    void* operator new(size_t);
     void FUN_00c31af0();
 };
 // Allocates a 100-byte BSFadeNode, runs its constructor, zeroes the floats at offsets 0x58-0x60, sets its vtable, and returns it (or null).

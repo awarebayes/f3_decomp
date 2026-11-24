@@ -5125,7 +5125,6 @@ struct WorldSupport
             return allocator->worldSupportPool.Take(first);
         return allocator->FUN_008f6800(3, 13);
     }
-    void operator delete(void*);
 };
 
 struct WorldDebug
@@ -5143,7 +5142,6 @@ struct WorldDebug
         }
         return allocator->FUN_008f6800(12, 13);
     }
-    void operator delete(void*);
 };
 
 struct WorldConfig;

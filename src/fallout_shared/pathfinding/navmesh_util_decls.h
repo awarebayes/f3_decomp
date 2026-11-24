@@ -2,8 +2,6 @@
 #ifndef NAVMESH_UTIL_DECLS_H
 #define NAVMESH_UTIL_DECLS_H
 #include "f3_common.h"
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 namespace std {
 float abs(float);
 }
