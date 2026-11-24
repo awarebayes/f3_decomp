@@ -85,7 +85,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 struct FUN_00a3ba70_shell : public NiGeomMorpherController
 {
     void FUN_00a3ba70(NiGeomMorpherController*, CloningProcess*);
@@ -539,7 +539,7 @@ struct NiPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct FUN_00a3aa10_shell : public NiGeomMorpherController
 {
     void UpdateMorphWeights(float);

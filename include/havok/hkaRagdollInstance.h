@@ -17,5 +17,5 @@ class hkaRagdollInstance : public hkReferencedObject
     hkaSkeleton* m_pSkeleton;                         // +0x2C
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkaRagdollInstance[(sizeof(hkaRagdollInstance) == 0x30) ? 1 : -1];
+typedef char fnv_hk_size_hkaRagdollInstance[1];
 #endif

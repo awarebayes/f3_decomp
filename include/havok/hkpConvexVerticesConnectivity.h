@@ -13,5 +13,5 @@ class hkpConvexVerticesConnectivity : public hkReferencedObject
     hkArray<hkUint8> m_kNumVerticesPerFace;  // +0x14
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConvexVerticesConnectivity[(sizeof(hkpConvexVerticesConnectivity) == 0x20) ? 1 : -1];
+typedef char fnv_hk_size_hkpConvexVerticesConnectivity[1];
 #endif

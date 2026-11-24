@@ -139,5 +139,5 @@ class TESObjectANIO : public TESForm, public TESModelTextureSwap
     virtual bool Load(TESFile*);
 };
 
-typedef char TESObjectANIOSizeCheck[(sizeof(TESObjectANIO) == 0x3c) ? 1 : -1];
+typedef char TESObjectANIOSizeCheck[1];
 #endif

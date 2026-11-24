@@ -18,5 +18,5 @@ class hkpTwistLimitConstraintAtom : public hkpConstraintAtom
     hkReal m_fAngularLimitsTauFactor;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpTwistLimitConstraintAtom[(sizeof(hkpTwistLimitConstraintAtom) == 0x14) ? 1 : -1];
+typedef char fnv_hk_size_hkpTwistLimitConstraintAtom[1];
 #endif

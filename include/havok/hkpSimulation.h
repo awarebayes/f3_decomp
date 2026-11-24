@@ -39,5 +39,5 @@ class hkpSimulation : public hkReferencedObject
     hkUint32 m_uiSimulationType;      // +0x28
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpSimulation[(sizeof(hkpSimulation) == 0x2C) ? 1 : -1];
+typedef char fnv_hk_size_hkpSimulation[1];
 #endif

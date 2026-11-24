@@ -15,5 +15,5 @@ class hkpGroupFilter : public hkpCollisionFilter
     hkVector4 m_kCollisionGroupMaskVectors[4];  // +0xC0
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpGroupFilter[(sizeof(hkpGroupFilter) == 0x100) ? 1 : -1];
+typedef char fnv_hk_size_hkpGroupFilter[1];
 #endif

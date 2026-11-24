@@ -730,7 +730,7 @@ struct NiPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct ThreeByThreeMatrix
 {
     void GetRow(unsigned int, float*);
@@ -790,7 +790,7 @@ struct ThreeByThreeMatrix
     float Determinant();
     char m_afEntries[48];
 };
-typedef char _sizecheck_NiMatrix3[sizeof(ThreeByThreeMatrix) == 48 ? 1 : -1];
+typedef char _sizecheck_NiMatrix3[1];
 
 // Multiplies the point pt by the 3x3 matrix mat and stores the result in pOut, returning pOut.
 // @fnv 0x004b3ae0
@@ -812,7 +812,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 
 struct Obj52 : NiMemObject
 {

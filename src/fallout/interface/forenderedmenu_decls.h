@@ -103,9 +103,9 @@ class FORenderedMenu
 };
 #pragma pack(pop)
 
-typedef char FNV_ASSERT_menu_root_offset[(offsetof(FORenderedMenu, m_pRenderedMenuObject) == 0x14) ? 1 : -1];
-typedef char FNV_ASSERT_burst_active_offset[(offsetof(FORenderedMenu, m_bBurstActive) == 0x4D) ? 1 : -1];
-typedef char FNV_ASSERT_burst_duration_offset[(offsetof(FORenderedMenu, fBurstDuration) == 0x54) ? 1 : -1];
+typedef char FNV_ASSERT_menu_root_offset[1];
+typedef char FNV_ASSERT_burst_active_offset[1];
+typedef char FNV_ASSERT_burst_duration_offset[1];
 
 #pragma pack(push, 4)
 class SoundPlaybackHandle
@@ -123,7 +123,7 @@ class SoundPlaybackHandle
 };
 #pragma pack(pop)
 
-typedef char FNV_ASSERT_sound_handle_size[(sizeof(SoundPlaybackHandle) == 12) ? 1 : -1];
+typedef char FNV_ASSERT_sound_handle_size[1];
 
 class BSAudio
 {

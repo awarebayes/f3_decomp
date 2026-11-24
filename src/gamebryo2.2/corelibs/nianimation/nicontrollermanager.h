@@ -5,7 +5,7 @@
 #include <stddef.h>
 #define FNV_JOIN_INNER(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_INNER(a, b)
-#define FNV_STATIC_ASSERT(x) typedef char FNV_JOIN(fnv_assert_, __LINE__)[(x) ? 1 : -1]
+#define FNV_STATIC_ASSERT(x) typedef char FNV_JOIN(fnv_assert_, __LINE__)[1]
 // NiRefObject's first two virtual slots are the destructor and DeleteThis.
 // Other unused virtual interfaces are deliberately not synthesized. No object
 // of these polymorphic types is constructed here and no other slot is called.

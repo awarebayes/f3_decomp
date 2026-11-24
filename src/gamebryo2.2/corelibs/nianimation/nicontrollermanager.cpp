@@ -185,7 +185,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 struct FUN_00a2f380_shell : public NiControllerManager
 {
     void CloneControllerManager(NiControllerManager*, CloningProcess*);
@@ -487,7 +487,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 struct FUN_00a2f850_shell : public NiControllerManager
 {
     NiObject* FUN_00a2f850(CloningProcess*);

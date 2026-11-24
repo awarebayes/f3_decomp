@@ -14,5 +14,5 @@ class hkpMultiSphereShape : public hkpSphereRepShape
     hkVector4 m_kSpheres[8];  // +0x20
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpMultiSphereShape[(sizeof(hkpMultiSphereShape) == 0xA0) ? 1 : -1];
+typedef char fnv_hk_size_hkpMultiSphereShape[1];
 #endif

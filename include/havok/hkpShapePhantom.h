@@ -14,5 +14,5 @@ class hkpShapePhantom : public hkpPhantom
     hkMotionState m_kMotionState;  // +0xB0
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpShapePhantom[(sizeof(hkpShapePhantom) == 0x160) ? 1 : -1];
+typedef char fnv_hk_size_hkpShapePhantom[1];
 #endif

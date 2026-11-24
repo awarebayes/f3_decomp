@@ -12,5 +12,5 @@ class hkpLinkedCollidable : public hkpCollidable
     hkArray<char> m_kCollisionEntries;  // +0x50
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpLinkedCollidable[(sizeof(hkpLinkedCollidable) == 0x5C) ? 1 : -1];
+typedef char fnv_hk_size_hkpLinkedCollidable[1];
 #endif

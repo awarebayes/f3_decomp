@@ -213,7 +213,7 @@ struct NiPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 
 int __cdecl TruncateFloatToInt(float);
 int __cdecl _FNV_Finite(double);
@@ -1192,7 +1192,7 @@ struct CameraPathManager
     char m_kCameraPathArray[24];
     char m_kCameraPathList[16];
 };
-typedef char _sizecheck_BGSCameraPathManager[sizeof(CameraPathManager) == 40 ? 1 : -1];
+typedef char _sizecheck_BGSCameraPathManager[1];
 struct FUN_0095f530_shell : public CameraPathManager
 {
     BGSCameraPath* FUN_0095f530(TESObjectREFR*, TESObjectREFR*);

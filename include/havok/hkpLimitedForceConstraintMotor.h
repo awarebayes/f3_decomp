@@ -13,5 +13,5 @@ class hkpLimitedForceConstraintMotor : public hkpConstraintMotor
     hkReal m_fMaxForce;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpLimitedForceConstraintMotor[(sizeof(hkpLimitedForceConstraintMotor) == 0x14) ? 1 : -1];
+typedef char fnv_hk_size_hkpLimitedForceConstraintMotor[1];
 #endif

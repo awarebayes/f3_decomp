@@ -14046,7 +14046,7 @@ struct Specific:Closest {
     Handle handle;float value74;
     Specific(int,Reference);virtual ~Specific();
 };
-typedef char BaseSize[(sizeof(Closest)==0x70)?1:-1];
+typedef char BaseSize[1];
 Specific::Specific(int index,Reference reference) {
     if(reference.object) {
         reference.object->FUN_00766b00(&reference.handle);

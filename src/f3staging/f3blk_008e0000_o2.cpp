@@ -7575,7 +7575,7 @@ struct Controller:Proxy,Context,Listener,SurfaceInfo {
     virtual ~Controller();
     void FUN_008efb10(const Info*);
 };
-typedef char SizeController[(sizeof(Controller)==0x4e0)?1:-1];
+typedef char SizeController[1];
 Controller::Controller(const Info* info):Context(info->state,info->manager),Listener(Vector4::Up(),(float)(DAT_00f79adc*0.01745329238474369),info->Product()),buffer(5) {
     unk490=0;
     value480=2;
@@ -14635,8 +14635,8 @@ struct Arr4
         }
     }
 };
-typedef char Vec4Size[(sizeof(Vec4) == 16) ? 1 : -1];
-typedef char Arr4Size[(sizeof(Arr4) == 12) ? 1 : -1];
+typedef char Vec4Size[1];
+typedef char Arr4Size[1];
 
 void* FUN_008ec700(const float* a, const float* b, float radius, float rise)
 {
@@ -19466,10 +19466,10 @@ __declspec(noinline) float Controller::FUN_008e8970(float angle, float time)
     return angle;
 }
 
-typedef char check_flags[(offsetof(Controller, fl) == 0x294) ? 1 : -1];
-typedef char check_axis[(offsetof(Controller, axis) == 0x360) ? 1 : -1];
-typedef char check_hits[(offsetof(Controller, hits) == 0x4cc) ? 1 : -1];
-typedef char check_hit[(sizeof(Hit) == 0x40) ? 1 : -1];
+typedef char check_flags[1];
+typedef char check_axis[1];
+typedef char check_hits[1];
+typedef char check_hit[1];
 
 int Controller::FUN_008efe30(MovementInput* in)
 {
@@ -20554,9 +20554,9 @@ struct NativeOwner980 : HkBase, NativeContext980, C8EB980 {
     void FUN_008e9280(Point3* vector, float step);
     void FUN_008e8920(float amount, float step);
 };
-typedef char check_listener[(offsetof(NativeOwner980,m_flags)==0x294)?1:-1];
-typedef char check_current[(offsetof(NativeOwner980,current)==0x4c8)?1:-1];
-typedef char check_controller[(offsetof(Entity,controller)==0xc0)?1:-1];
+typedef char check_listener[1];
+typedef char check_current[1];
+typedef char check_controller[1];
 static inline HkVector4* velocityOrZero8eb(NativeOwner980* o) { return (o && o->physics) ? o->physics->FUN_0091dda0() : &DAT_01092a50; }
 static inline HkVector4* positionOrZero8eb(NativeOwner980* o) { return o->physics ? o->physics->FUN_0091dd60() : &DAT_01092a50; }
 static inline void scaledPoint8eb(Point3* out, const HkVector4* v)

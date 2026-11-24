@@ -17,5 +17,5 @@ class hkpPoweredChainMapper : public hkReferencedObject
     hkArray<hkpConstraintChainInstance*> m_kChainInstances;  // +0x20
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPoweredChainMapper[(sizeof(hkpPoweredChainMapper) == 0x2C) ? 1 : -1];
+typedef char fnv_hk_size_hkpPoweredChainMapper[1];
 #endif

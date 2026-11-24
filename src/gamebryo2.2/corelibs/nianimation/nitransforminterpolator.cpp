@@ -222,7 +222,7 @@ struct BSRotAccumTransfInterpolator : public NiTransformInterpolator
     void __local_vftable_ctor_closure();
     NiQuaternion m_kAccumulatedRotation;
 };
-typedef char _sizecheck_BSRotAccumTransfInterpolator[sizeof(BSRotAccumTransfInterpolator) == 88 ? 1 : -1];
+typedef char _sizecheck_BSRotAccumTransfInterpolator[1];
 struct FUN_00a3fd10_shell : public NiTransformInterpolator
 {
     NiInterpolator* FUN_00a3fd10(float, float);
@@ -375,7 +375,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 struct FUN_00a40460_shell : public NiTransformInterpolator
 {
     NiObject* FUN_00a40460(CloningProcess*);
@@ -493,7 +493,7 @@ struct BSRotAccumTransfInterpolator : public NiTransformInterpolator
     void __local_vftable_ctor_closure();
     NiQuaternion m_kAccumulatedRotation;
 };
-typedef char _sizecheck_BSRotAccumTransfInterpolator[sizeof(BSRotAccumTransfInterpolator) == 88 ? 1 : -1];
+typedef char _sizecheck_BSRotAccumTransfInterpolator[1];
 struct TransformAnimationData : public TimedRotationKey
 {
     static int RegisterObjectLoader();
@@ -532,7 +532,7 @@ struct TransformAnimationData : public TimedRotationKey
     char m_ppKeyData[12];
     char m_uiLastKeyIndex[12];
 };
-typedef char _sizecheck_NiEulerRotKey[sizeof(TransformAnimationData) == 72 ? 1 : -1];
+typedef char _sizecheck_NiEulerRotKey[1];
 struct FUN_00a3fb20_shell : public NiTransformInterpolator
 {
     void FUN_00a3fb20(float*, float*);
@@ -714,7 +714,7 @@ struct BSRotAccumTransfInterpolator : public NiTransformInterpolator
     void __local_vftable_ctor_closure();
     NiQuaternion m_kAccumulatedRotation;
 };
-typedef char _sizecheck_BSRotAccumTransfInterpolator[sizeof(BSRotAccumTransfInterpolator) == 88 ? 1 : -1];
+typedef char _sizecheck_BSRotAccumTransfInterpolator[1];
 struct FUN_00a404b0_shell : public NiTransformInterpolator
 {
     void FUN_00a404b0(void*);

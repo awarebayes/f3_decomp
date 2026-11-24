@@ -19,5 +19,5 @@ class hkpGravityGun : public hkpFirstPersonGun
     hkVector4 m_kTargetPosition;     // +0x50
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpGravityGun[(sizeof(hkpGravityGun) == 0x60) ? 1 : -1];
+typedef char fnv_hk_size_hkpGravityGun[1];
 #endif

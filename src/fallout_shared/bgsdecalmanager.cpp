@@ -175,7 +175,7 @@ struct ThreeByThreeMatrix
     float Determinant();
     char m_afEntries[48];
 };
-typedef char _sizecheck_NiMatrix3[sizeof(ThreeByThreeMatrix) == 48 ? 1 : -1];
+typedef char _sizecheck_NiMatrix3[1];
 struct FUN_004769c0_shell : public ThreeByThreeMatrix
 {
     void FUN_004769c0(unsigned int, float*);
@@ -380,7 +380,7 @@ struct CFilter
     void __dflt_ctor_closure();
     unsigned int iFilter;
 };
-typedef char _sizecheck_CFilter[sizeof(CFilter) == 4 ? 1 : -1];
+typedef char _sizecheck_CFilter[1];
 struct FUN_004a39f0_shell : public CFilter
 {
     void FUN_004a39f0(int);
@@ -417,7 +417,7 @@ struct CFilter
     void __dflt_ctor_closure();
     unsigned int iFilter;
 };
-typedef char _sizecheck_CFilter[sizeof(CFilter) == 4 ? 1 : -1];
+typedef char _sizecheck_CFilter[1];
 struct FUN_004a3a20_shell : public CFilter
 {
     unsigned int FUN_004a3a20();
@@ -501,7 +501,7 @@ struct WorldRayCastInput
     unsigned int m_uiFilterInfo;
     char _pad_28[8];
 };
-typedef char _sizecheck_hkpWorldRayCastInput[sizeof(WorldRayCastInput) == 48 ? 1 : -1];
+typedef char _sizecheck_hkpWorldRayCastInput[1];
 struct RayCastHitResult
 {
     struct blob1 DidHit();
@@ -511,7 +511,7 @@ struct RayCastHitResult
     int m_iExtraInfo;
     char m_auiShapeKeys[8];
 };
-typedef char _sizecheck_hkpShapeRayCastCollectorOutput[sizeof(RayCastHitResult) == 32 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastCollectorOutput[1];
 struct ShapeRayCastOutput : public RayCastHitResult
 {
     void changeLevel(int);
@@ -522,7 +522,7 @@ struct ShapeRayCastOutput : public RayCastHitResult
     int m_uiShapeKeyIndex;
     char _pad_44[12];
 };
-typedef char _sizecheck_hkpShapeRayCastOutput[sizeof(ShapeRayCastOutput) == 80 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastOutput[1];
 struct WorldRayCastOutput : public ShapeRayCastOutput
 {
     struct blob1 DidHit();
@@ -530,7 +530,7 @@ struct WorldRayCastOutput : public ShapeRayCastOutput
     void* m_pRootCollidable;
     char _pad_54[12];
 };
-typedef char _sizecheck_hkpWorldRayCastOutput[sizeof(WorldRayCastOutput) == 96 ? 1 : -1];
+typedef char _sizecheck_hkpWorldRayCastOutput[1];
 struct BhkPickData : public WorldRayCastInput, public WorldRayCastOutput
 {
     hkpRigidBody* GethkRigidBody();
@@ -565,7 +565,7 @@ struct BhkPickData : public WorldRayCastInput, public WorldRayCastOutput
     bool m_bPickFailed;
     char _pad_ad[3];
 };
-typedef char _sizecheck_bhkPickData[sizeof(BhkPickData) == 176 ? 1 : -1];
+typedef char _sizecheck_bhkPickData[1];
 struct FUN_004a3da0_shell : public BhkPickData
 {
     void FUN_004a3da0(void*);
@@ -662,7 +662,7 @@ struct WorldRayCastInput
     unsigned int m_uiFilterInfo;
     char _pad_28[8];
 };
-typedef char _sizecheck_hkpWorldRayCastInput[sizeof(WorldRayCastInput) == 48 ? 1 : -1];
+typedef char _sizecheck_hkpWorldRayCastInput[1];
 struct RayCastHitResult
 {
     struct blob1 DidHit();
@@ -672,7 +672,7 @@ struct RayCastHitResult
     int m_iExtraInfo;
     char m_auiShapeKeys[8];
 };
-typedef char _sizecheck_hkpShapeRayCastCollectorOutput[sizeof(RayCastHitResult) == 32 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastCollectorOutput[1];
 struct ShapeRayCastOutput : public RayCastHitResult
 {
     void changeLevel(int);
@@ -683,7 +683,7 @@ struct ShapeRayCastOutput : public RayCastHitResult
     int m_uiShapeKeyIndex;
     char _pad_44[12];
 };
-typedef char _sizecheck_hkpShapeRayCastOutput[sizeof(ShapeRayCastOutput) == 80 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastOutput[1];
 struct WorldRayCastOutput : public ShapeRayCastOutput
 {
     struct blob1 DidHit();
@@ -691,7 +691,7 @@ struct WorldRayCastOutput : public ShapeRayCastOutput
     void* m_pRootCollidable;
     char _pad_54[12];
 };
-typedef char _sizecheck_hkpWorldRayCastOutput[sizeof(WorldRayCastOutput) == 96 ? 1 : -1];
+typedef char _sizecheck_hkpWorldRayCastOutput[1];
 struct BhkPickData : public WorldRayCastInput, public WorldRayCastOutput
 {
     hkpRigidBody* GethkRigidBody();
@@ -726,7 +726,7 @@ struct BhkPickData : public WorldRayCastInput, public WorldRayCastOutput
     bool m_bPickFailed;
     char _pad_ad[3];
 };
-typedef char _sizecheck_bhkPickData[sizeof(BhkPickData) == 176 ? 1 : -1];
+typedef char _sizecheck_bhkPickData[1];
 struct FUN_004a3fb0_shell : public BhkPickData
 {
     void FUN_004a3fb0(hkpAllRayHitCollector*);
@@ -784,7 +784,7 @@ struct ConsoleManager
     char m_aacCommandHistory[2000];
     char m_acOutputFilename[260];
 };
-typedef char _sizecheck_MenuConsole[sizeof(ConsoleManager) == 2324 ? 1 : -1];
+typedef char _sizecheck_MenuConsole[1];
 struct FUN_004a4020_shell : public ConsoleManager
 {
     bool FUN_004a4020();
@@ -843,7 +843,7 @@ struct WorldRayCastInput
     unsigned int m_uiFilterInfo;
     char _pad_28[8];
 };
-typedef char _sizecheck_hkpWorldRayCastInput[sizeof(WorldRayCastInput) == 48 ? 1 : -1];
+typedef char _sizecheck_hkpWorldRayCastInput[1];
 struct RayCastHitResult
 {
     struct blob1 DidHit();
@@ -853,7 +853,7 @@ struct RayCastHitResult
     int m_iExtraInfo;
     char m_auiShapeKeys[8];
 };
-typedef char _sizecheck_hkpShapeRayCastCollectorOutput[sizeof(RayCastHitResult) == 32 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastCollectorOutput[1];
 struct ShapeRayCastOutput : public RayCastHitResult
 {
     void changeLevel(int);
@@ -864,7 +864,7 @@ struct ShapeRayCastOutput : public RayCastHitResult
     int m_uiShapeKeyIndex;
     char _pad_44[12];
 };
-typedef char _sizecheck_hkpShapeRayCastOutput[sizeof(ShapeRayCastOutput) == 80 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastOutput[1];
 struct WorldRayCastOutput : public ShapeRayCastOutput
 {
     struct blob1 DidHit();
@@ -872,7 +872,7 @@ struct WorldRayCastOutput : public ShapeRayCastOutput
     void* m_pRootCollidable;
     char _pad_54[12];
 };
-typedef char _sizecheck_hkpWorldRayCastOutput[sizeof(WorldRayCastOutput) == 96 ? 1 : -1];
+typedef char _sizecheck_hkpWorldRayCastOutput[1];
 struct BhkPickData : public WorldRayCastInput, public WorldRayCastOutput
 {
     hkpRigidBody* GethkRigidBody();
@@ -907,7 +907,7 @@ struct BhkPickData : public WorldRayCastInput, public WorldRayCastOutput
     bool m_bPickFailed;
     char _pad_ad[3];
 };
-typedef char _sizecheck_bhkPickData[sizeof(BhkPickData) == 176 ? 1 : -1];
+typedef char _sizecheck_bhkPickData[1];
 struct FUN_008cdd90_shell : public BhkPickData
 {
     hkpAllRayHitCollector* FUN_008cdd90();

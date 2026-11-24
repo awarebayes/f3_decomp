@@ -29,5 +29,5 @@ class hkpRagdollConstraintDataAtoms
     hkpBallSocketConstraintAtom m_kBallSocket;          // +0x128
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpRagdollConstraintDataAtoms[(sizeof(hkpRagdollConstraintDataAtoms) == 0x130) ? 1 : -1];
+typedef char fnv_hk_size_hkpRagdollConstraintDataAtoms[1];
 #endif

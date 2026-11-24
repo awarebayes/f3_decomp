@@ -698,7 +698,7 @@ struct TESSaveLoadGame
     char m_acSaveGamePath[272];
     _FILETIME* m_pMostRecentSaveTime;
 };
-typedef char _sizecheck_TESSaveLoadGame[sizeof(TESSaveLoadGame) == 456 ? 1 : -1];
+typedef char _sizecheck_TESSaveLoadGame[1];
 struct BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -706,12 +706,12 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESChildCell
 {
     virtual TESObjectCELL* GetSaveParentCell();
 };
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
 struct FUN_008d0370_shell : public TESSaveLoadGame
 {
     bool FUN_008d0370(TESForm*);

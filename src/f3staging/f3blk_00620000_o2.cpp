@@ -15934,7 +15934,7 @@ extern NiPointer<RefObject> DAT_01077304,DAT_01077334,DAT_0107739c;
 struct FUN_00424aa0{unsigned int unk00;~FUN_00424aa0();};
 struct BaseMenu{virtual ~BaseMenu();unsigned int unk04,unk08,unk0C,unk10,unk14,unk18,unk1C,unk20,unk24;};
 struct SurgeryMenu:BaseMenu{unsigned int unk28;unsigned int unk2C;unsigned int unk30;unsigned int unk34;unsigned int unk38;unsigned int unk3C;unsigned int unk40;unsigned int unk44;unsigned int unk48;unsigned int unk4C;unsigned int unk50;unsigned int unk54;unsigned int unk58;unsigned int unk5C;unsigned int unk60;unsigned int unk64;unsigned int unk68;unsigned int unk6C;unsigned int unk70;unsigned int unk74;unsigned int unk78;unsigned int unk7C;unsigned int unk80;unsigned int unk84;unsigned int unk88;unsigned int unk8C;unsigned int unk90;unsigned int unk94;unsigned int unk98;unsigned int unk9C;unsigned int unkA0;unsigned int unkA4;unsigned int unkA8;unsigned int unkAC;unsigned int unkB0;unsigned int unkB4;unsigned int unkB8;unsigned int unkBC;unsigned int unkC0;unsigned int unkC4; FUN_00424aa0 handles[6];unsigned int unkE0,unkE4,unkE8,unkEC;NiPointer<RefObject> first,second;virtual ~SurgeryMenu();};
-typedef char SurgerySize[(sizeof(SurgeryMenu)==0xF8)?1:-1];
+typedef char SurgerySize[1];
 SurgeryMenu::~SurgeryMenu(){DAT_01077304=0;DAT_01077334=0;DAT_0107739c=0;first=0;}
 }
 

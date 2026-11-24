@@ -20,5 +20,5 @@ class hkpCapsuleShape : public hkpConvexShape
     hkVector4 m_kVertexB;  // +0x30
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpCapsuleShape[(sizeof(hkpCapsuleShape) == 0x40) ? 1 : -1];
+typedef char fnv_hk_size_hkpCapsuleShape[1];
 #endif

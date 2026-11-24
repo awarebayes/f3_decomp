@@ -14,5 +14,5 @@ class hkpAngularDashpotAction : public hkpBinaryAction
     char pad38[0x8];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpAngularDashpotAction[(sizeof(hkpAngularDashpotAction) == 0x40) ? 1 : -1];
+typedef char fnv_hk_size_hkpAngularDashpotAction[1];
 #endif

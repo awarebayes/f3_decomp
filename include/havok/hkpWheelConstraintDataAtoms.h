@@ -17,5 +17,5 @@ class hkpWheelConstraintDataAtoms
     char pad0[0x130];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpWheelConstraintDataAtoms[(sizeof(hkpWheelConstraintDataAtoms) == 0x130) ? 1 : -1];
+typedef char fnv_hk_size_hkpWheelConstraintDataAtoms[1];
 #endif

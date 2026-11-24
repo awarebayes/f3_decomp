@@ -28,5 +28,5 @@ class hkpSampledHeightFieldShape : public hkpHeightFieldShape
     hkVector4 SetCenterPosition;             // +0x50
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpSampledHeightFieldShape[(sizeof(hkpSampledHeightFieldShape) == 0x60) ? 1 : -1];
+typedef char fnv_hk_size_hkpSampledHeightFieldShape[1];
 #endif

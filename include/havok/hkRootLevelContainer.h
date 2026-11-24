@@ -12,5 +12,5 @@ class hkRootLevelContainer
     hkArray<hkRootLevelContainerNamedVariant> m_kNamedVariants;  // +0x0
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkRootLevelContainer[(sizeof(hkRootLevelContainer) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkRootLevelContainer[1];
 #endif

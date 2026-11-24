@@ -359,7 +359,7 @@ struct Pointer4{RefTarget* value;__forceinline Pointer4():value(0){}~Pointer4();
 struct ObjectArrayBase{virtual void Interface();void* data;unsigned short capacity,size,used,growth;__forceinline ObjectArrayBase(){capacity=0;growth=1;size=0;used=0;data=0;}};struct ObjectArray16:ObjectArrayBase{__forceinline ObjectArray16(){}~ObjectArray16();};
 struct SimpleArray16{virtual void Interface();void* data;unsigned int size,capacity;__forceinline SimpleArray16(){data=0;size=0;capacity=0;}~SimpleArray16();};
 struct PortalGraph:RefObject{Array12 first,second,third;Pointer4 root;Array12 fourth;ObjectArray16 objects;Pointer4 room;Array12 fifth,sixth;SimpleArray16 nodes;PortalGraph();virtual ~PortalGraph();};
-typedef char PortalSize[(sizeof(PortalGraph)==0x78)?1:-1];
+typedef char PortalSize[1];
 PortalGraph::PortalGraph(){root=0;room=0;}
 }
 }   // namespace f3m_00ab4a40

@@ -36,5 +36,5 @@ class hkxVertexDescription
     hkArray<hkxVertexDescriptionElementDecl> m_kElementDeclarations;  // +0x0
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkxVertexDescription[(sizeof(hkxVertexDescription) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkxVertexDescription[1];
 #endif

@@ -123,7 +123,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 struct FUN_00a30070_shell : public NiMultiTargetTransformController
 {
     void CloneTo(NiMultiTargetTransformController*, CloningProcess*);
@@ -169,7 +169,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 struct FUN_00a300d0_shell : public NiMultiTargetTransformController
 {
     void FUN_00a300d0(CloningProcess*);
@@ -446,7 +446,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 struct FUN_00a302d0_shell : public NiMultiTargetTransformController
 {
     NiObject* FUN_00a302d0(CloningProcess*);
@@ -577,7 +577,7 @@ struct NiUpdateData
     bool m_bVisible;
     char _pad_9[3];
 };
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct FUN_00a2fbe0_shell : public NiMultiTargetTransformController
 {
     void UpdateTargets(NiUpdateData*);

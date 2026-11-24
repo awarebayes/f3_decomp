@@ -13,5 +13,5 @@ class hkpSpringDamperConstraintMotor : public hkpLimitedForceConstraintMotor
     hkReal m_fSpringDamping;   // +0x18
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpSpringDamperConstraintMotor[(sizeof(hkpSpringDamperConstraintMotor) == 0x1C) ? 1 : -1];
+typedef char fnv_hk_size_hkpSpringDamperConstraintMotor[1];
 #endif

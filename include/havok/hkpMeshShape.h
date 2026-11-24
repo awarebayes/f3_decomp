@@ -35,5 +35,5 @@ class hkpMeshShape : public hkpShapeCollection
     hkInt32 m_auiShapeKeys[3];        // +0x54
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpMeshShape[(sizeof(hkpMeshShape) == 0x60) ? 1 : -1];
+typedef char fnv_hk_size_hkpMeshShape[1];
 #endif

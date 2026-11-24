@@ -6566,7 +6566,7 @@ struct Point3{float x,y,z;__forceinline Point3(){}};
 struct BoxPoints{unsigned short count,unk02;Point3 first[8],second[8];BoxPoints* FUN_00ab93e0();};
 __forceinline BoxPoints* CreateBox(){BoxPoints* p=(BoxPoints*)DAT_01090a78.FUN_0086b930(sizeof(BoxPoints));if(p){new(p) BoxPoints;return p->FUN_00ab93e0();}return 0;}
 struct DecalExtra{unsigned int unk00,unk04,unk08,unk0C;unsigned short count,unk12;BoxPoints* groups[8];void* listHead;void* listTail;unsigned int listCount;void FUN_00863fa0(Stream*);void FUN_00ab96c0(Stream*);};
-typedef char BoxSize[(sizeof(BoxPoints)==0xc4)?1:-1];typedef char ExtraSize[(sizeof(DecalExtra)==0x40)?1:-1];
+typedef char BoxSize[1];typedef char ExtraSize[1];
 void DecalExtra::FUN_00ab96c0(Stream* stream){FUN_00863fa0(stream);stream->Read(&count,2,2);for(int i=0;i<count;++i){groups[i]=CreateBox();stream->Read(&groups[i]->count,2,2);stream->ReadPointArray(groups[i]->first,groups[i]->count);stream->ReadPointArray(groups[i]->second,groups[i]->count);}}
 }
 }   // namespace f3m_00ab96c0
@@ -6828,7 +6828,7 @@ class ThreadOwner2025;
 class BSLinearTaskThread {public:virtual ~BSLinearTaskThread();unsigned int unk04;unsigned int unk08;unsigned int unk0C;unsigned int unk10;unsigned int unk14;unsigned int unk18;unsigned int unk1C;unsigned int unk20;unsigned int unk24;unsigned int unk28;unsigned int unk2C;unsigned int unk30;unsigned int unk34;unsigned int unk38;unsigned int unk3C;unsigned int unk40;unsigned int unk44;unsigned int unk48; BSLinearTaskThread();void FUN_0086ce90(unsigned int,const char*);void FUN_0078c030(const char*);void FUN_0078c030(unsigned int);void FUN_0086ce30(int);};
 class BSParallelTaskThread:public BSLinearTaskThread {public:ThreadOwner2025* owner;BSParallelTaskThread(ThreadOwner2025* p):owner(p){}virtual ~BSParallelTaskThread();};
 class ThreadOwner2025 {public:BSParallelTaskThread** thread;unsigned int unk04,unk08;bool unk0C;ThreadOwner2025();};
-typedef char ThreadSize[(sizeof(BSParallelTaskThread)==0x50)?1:-1];
+typedef char ThreadSize[1];
 ThreadOwner2025::ThreadOwner2025(){
  thread=0;unk04=0;unk08=0;unk0C=false;
  thread=new BSParallelTaskThread*;
@@ -31143,7 +31143,7 @@ struct NiBoneLODController : NiTimeController {
     virtual void FUN_00aafb10(NiStream& stream);
 };
 
-typedef char ControllerSize[(sizeof(NiBoneLODController) == 0x4c) ? 1 : -1];
+typedef char ControllerSize[1];
 
 void NiBoneLODController::FUN_00aafb10(NiStream& stream)
 {

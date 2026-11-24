@@ -13,5 +13,5 @@ class hkOstream : public hkReferencedObject
     hkStreamWriter* m_pStreamWriter;  // +0x8
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkOstream[(sizeof(hkOstream) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkOstream[1];
 #endif

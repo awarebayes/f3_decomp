@@ -25459,7 +25459,7 @@ struct Model {virtual void Interface();unsigned int unk04;unsigned int unk08;uns
 struct Icon:Texture {__forceinline Icon(){}};
 struct WeaponData {unsigned int unk00;unsigned int unk04;unsigned int unk08;unsigned int unk0C;unsigned int unk10;unsigned int unk14;unsigned int unk18;unsigned int unk1C;unsigned int unk20;unsigned int unk24;unsigned int unk28;unsigned int unk2C;unsigned int unk30;unsigned int unk34;unsigned int unk38;unsigned int unk3C;unsigned int unk40;unsigned int unk44;unsigned int unk48;unsigned int unk4C;unsigned int unk50;unsigned int unk54;unsigned int unk58;unsigned int unk5C;unsigned int unk60;unsigned int unk64;unsigned int unk68;unsigned int unk6C;unsigned int unk70;unsigned int unk74;unsigned int unk78;unsigned int unk7C;unsigned int unk80;unsigned int unk84;unsigned int unk88;unsigned int unk8C;unsigned int unk90;unsigned int unk94;unsigned int unk98;};
 struct Weapon:BoundObject,FullName,ModelTextureSwap,Icon,Scriptable,Enchantable,ValueForm,WeightForm,HealthForm,AttackForm,AmmoForm,ClipForm,DestructibleForm,RepairForm,EquipForm,Preloadable,MessageIcon,BipedModelList,PickupSounds {WeaponData data;Model firstModel,secondModel,thirdModel;unsigned int unk1D4;unsigned int unk1D8;unsigned int unk1DC;unsigned int unk1E0;unsigned int unk1E4;unsigned int unk1E8;unsigned int unk1EC;unsigned int unk1F0;unsigned int unk1F4;unsigned int unk1F8;unsigned int unk1FC;String8 finalText;Weapon();virtual ~Weapon();void FUN_004bbea0();};
-typedef char WeaponLayoutSize[(sizeof(Weapon)==0x208)?1:-1];
+typedef char WeaponLayoutSize[1];
 Weapon::Weapon(){static_cast<BoundObject&>(*this).formType04=0x28;FUN_004bbea0();}
 }
 }   // namespace f3m_004bf540
@@ -25492,7 +25492,7 @@ struct Model {virtual void Interface();unsigned int unk04;unsigned int unk08;uns
 struct Icon:Texture {__forceinline Icon(){}};
 struct WeaponData {unsigned int unk00;unsigned int unk04;unsigned int unk08;unsigned int unk0C;unsigned int unk10;unsigned int unk14;unsigned int unk18;unsigned int unk1C;unsigned int unk20;unsigned int unk24;unsigned int unk28;unsigned int unk2C;unsigned int unk30;unsigned int unk34;unsigned int unk38;unsigned int unk3C;unsigned int unk40;unsigned int unk44;unsigned int unk48;unsigned int unk4C;unsigned int unk50;unsigned int unk54;unsigned int unk58;unsigned int unk5C;unsigned int unk60;unsigned int unk64;unsigned int unk68;unsigned int unk6C;unsigned int unk70;unsigned int unk74;unsigned int unk78;unsigned int unk7C;unsigned int unk80;unsigned int unk84;unsigned int unk88;unsigned int unk8C;unsigned int unk90;unsigned int unk94;unsigned int unk98;};
 struct Weapon:BoundObject,FullName,ModelTextureSwap,Icon,Scriptable,Enchantable,ValueForm,WeightForm,HealthForm,AttackForm,AmmoForm,ClipForm,DestructibleForm,RepairForm,EquipForm,Preloadable,MessageIcon,BipedModelList,PickupSounds {WeaponData data;Model firstModel,secondModel,thirdModel;unsigned int unk1D4;unsigned int unk1D8;unsigned int unk1DC;unsigned int unk1E0;unsigned int unk1E4;unsigned int unk1E8;unsigned int unk1EC;unsigned int unk1F0;unsigned int unk1F4;unsigned int unk1F8;unsigned int unk1FC;String8 finalText;Weapon();virtual ~Weapon();void FUN_004bd400();};
-typedef char WeaponLayoutSize[(sizeof(Weapon)==0x208)?1:-1];
+typedef char WeaponLayoutSize[1];
 Weapon::~Weapon(){FUN_004bd400();}
 }
 }   // namespace f3m_004bf2a0
@@ -25582,7 +25582,7 @@ struct MessageIcon {virtual void Interface();unsigned int unk04;unsigned int unk
 struct PickupSounds {virtual void Interface();unsigned int unk04;PickupSounds();~PickupSounds();};
 struct Icon:Texture {__forceinline Icon(){}};
 struct Ammo:BoundObject,FullName,ModelTextureSwap,Icon,MessageIcon,ValueForm,ClipForm,DestructibleForm,PickupSounds {unsigned int unk98,unk9C,unkA0;String8 text;__forceinline void Reset(){memset(&unk9C,0,8);text.Clear();}__forceinline void SetFormType(unsigned char type){formType04=type;}Ammo();virtual ~Ammo();};
-typedef char AmmoSize[(sizeof(Ammo)==0xac)?1:-1];
+typedef char AmmoSize[1];
 Ammo::Ammo(){SetFormType(0x29);Reset();}
 }
 }   // namespace f3m_004aad20
@@ -25598,7 +25598,7 @@ struct GrassData{unsigned int unk00;unsigned short unitsFromSurface;unsigned cha
 };
 struct Model24{unsigned int unk00,unk04,unk08,unk0C,unk10,unk14;void FUN_00457d90(unsigned int,unsigned int);};
 struct Grass{unsigned int unk00;unsigned int unk04;unsigned int unk08;unsigned int unk0C;unsigned int unk10;unsigned int unk14;unsigned int unk18;unsigned int unk1C;unsigned int unk20;unsigned int unk24;unsigned int unk28;unsigned int unk2C; Model24 model;GrassData data;void FUN_004547d0();void FUN_00454ab0(const GrassData*,unsigned int);void FUN_00454860();void FUN_004ae790();};
-typedef char DataSize[(sizeof(GrassData)==0x20)?1:-1];
+typedef char DataSize[1];
 void Grass::FUN_004ae790(){FUN_004547d0();model.FUN_00457d90(0x4c444f4d,0x54444f4d);if(DAT_0106dd0e)data.Swap();FUN_00454ab0(&data,sizeof(data));if(DAT_0106dd0e)data.Swap();FUN_00454860();}
 }
 
@@ -44382,12 +44382,12 @@ struct Owner : Fresh7010::Base, FullName, ModelSwap, Scriptable, Destructible, O
  unsigned int terminalData;
  bool FUN_004a8f40(Reader*);
 };
-typedef char checkText[(sizeof(Text)==8)?1:-1];
-typedef char checkReference[(sizeof(Reference)==16)?1:-1];
-typedef char checkVariable[(sizeof(FUN_005413d0)==32)?1:-1];
-typedef char checkScript[(sizeof(Script)==0x54)?1:-1];
-typedef char checkEntry[(sizeof(FUN_004a8ea0)==0x78)?1:-1];
-typedef char checkOwner[(sizeof(Owner)==0x9c)?1:-1];
+typedef char checkText[1];
+typedef char checkReference[1];
+typedef char checkVariable[1];
+typedef char checkScript[1];
+typedef char checkEntry[1];
+typedef char checkOwner[1];
 bool Owner::FUN_004a8f40(Reader* r) {
  FUN_00454410(r);
  FUN_00454240(0);

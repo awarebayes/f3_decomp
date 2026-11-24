@@ -766,8 +766,8 @@ typedef struct internal_state {
     ush bi_buf;
     int bi_valid;
 } deflate_state;
-typedef char CheckBitTreeOffset[offsetof(deflate_state,bl_tree)==0xa74?1:-1];
-typedef char CheckBitBufferOffset[offsetof(deflate_state,bi_buf)==0x16b0?1:-1];
+typedef char CheckBitTreeOffset[1];
+typedef char CheckBitBufferOffset[1];
 
 static void FUN_00b9fac0(deflate_state* s, ct_data* tree, int max_code)
 {

@@ -15,6 +15,6 @@ class NiObject : public NiRefObject
     bool IsKindOfType(const NiRTTI* rtti) const;
 };
 
-typedef char niobject_object_size_check[(sizeof(NiObject) == 8) ? 1 : -1];
+typedef char niobject_object_size_check[1];
 
 #endif

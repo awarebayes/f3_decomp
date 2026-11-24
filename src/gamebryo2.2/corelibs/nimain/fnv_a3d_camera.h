@@ -3,7 +3,7 @@
 #define FNV_A3D_CAMERA_H
 #include "f3_common.h"
 #include <stddef.h>
-#define FNV_ASSERT(name, expression) typedef char name[(expression) ? 1 : -1]
+#define FNV_ASSERT(name, expression) typedef char name[1]
 class NiRTTI;
 class NiNode;
 class NiGeometry;

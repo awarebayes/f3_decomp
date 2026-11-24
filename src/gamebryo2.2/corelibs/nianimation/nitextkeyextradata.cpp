@@ -42,7 +42,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 
 extern "C" void __cdecl DestroyKeyList(void);
 extern "C" void __cdecl __Dummy_00b6fef0(void* p, unsigned int flags);

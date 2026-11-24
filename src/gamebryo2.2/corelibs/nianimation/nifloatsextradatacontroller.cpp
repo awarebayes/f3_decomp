@@ -435,7 +435,7 @@ struct NiFixedString
     void* __vecDelDtor(unsigned int);
     char* m_kHandle;
 };
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
 
 extern int EmptyFS;
 

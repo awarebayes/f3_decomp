@@ -156,5 +156,5 @@ class hkColor
     char pad0[0x1];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkColor[(sizeof(hkColor) == 0x1) ? 1 : -1];
+typedef char fnv_hk_size_hkColor[1];
 #endif

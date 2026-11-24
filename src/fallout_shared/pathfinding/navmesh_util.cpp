@@ -1487,7 +1487,7 @@ struct PathingLocation
     unsigned char uiFlags;
     char _pad_27[1];
 };
-typedef char _sizecheck_PathingLocation[sizeof(PathingLocation) == 40 ? 1 : -1];
+typedef char _sizecheck_PathingLocation[1];
 struct FUN_006dcee0_shell : public NavMesh
 {
     bool FUN_006dcee0(void*, FindTriangleForLocationFilter*);

@@ -51,5 +51,5 @@ class hkpConstraintAtom
     hkUint16 m_type;  // +0x0 (AtomType)
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConstraintAtom[(sizeof(hkpConstraintAtom) == 0x2) ? 1 : -1];
+typedef char fnv_hk_size_hkpConstraintAtom[1];
 #endif

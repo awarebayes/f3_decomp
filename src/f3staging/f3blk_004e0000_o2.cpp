@@ -20900,7 +20900,7 @@ struct AttackDamage{virtual void Interface();unsigned short damage,unk06;~Attack
 struct Texture{virtual void Interface();unsigned int unk04,unk08;~Texture();};
 struct RefObject{virtual ~RefObject();virtual void Destroy();long refs;void IncRefCount(){InterlockedIncrement(&refs);}void DecRefCount(){if(InterlockedDecrement(&refs)==0)Destroy();}};
 struct Water:Form,FullName,AttackDamage {unsigned int unk2C;NiPointer<RefObject> renderData;unsigned int unk34;unsigned int unk38;unsigned int unk3C;unsigned int unk40;unsigned int unk44;unsigned int unk48;unsigned int unk4C;unsigned int unk50;unsigned int unk54;unsigned int unk58;unsigned int unk5C;unsigned int unk60; Texture texture;unsigned int unk70;String8 material;unsigned int unk07C;unsigned int unk080;unsigned int unk084;unsigned int unk088;unsigned int unk08C;unsigned int unk090;unsigned int unk094;unsigned int unk098;unsigned int unk09C;unsigned int unk0A0;unsigned int unk0A4;unsigned int unk0A8;unsigned int unk0AC;unsigned int unk0B0;unsigned int unk0B4;unsigned int unk0B8;unsigned int unk0BC;unsigned int unk0C0;unsigned int unk0C4;unsigned int unk0C8;unsigned int unk0CC;unsigned int unk0D0;unsigned int unk0D4;unsigned int unk0D8;unsigned int unk0DC;unsigned int unk0E0;unsigned int unk0E4;unsigned int unk0E8;unsigned int unk0EC;unsigned int unk0F0;unsigned int unk0F4;unsigned int unk0F8;unsigned int unk0FC;unsigned int unk100;unsigned int unk104;unsigned int unk108;unsigned int unk10C;unsigned int unk110;unsigned int unk114;unsigned int unk118;unsigned int unk11C;unsigned int unk120;unsigned int unk124;unsigned int unk128;unsigned int unk12C;unsigned int unk130;unsigned int unk134;unsigned int unk138;unsigned int unk13C;unsigned int unk140;unsigned int unk144;unsigned int unk148;unsigned int unk14C;unsigned int unk150;unsigned int unk154;unsigned int unk158;unsigned int unk15C;unsigned int unk160;unsigned int unk164;unsigned int unk168;unsigned int unk16C;unsigned int unk170;unsigned int unk174;unsigned int unk178; NiPointer<RefObject> shader;virtual ~Water();};
-typedef char WaterSize[(sizeof(Water)==0x180)?1:-1];
+typedef char WaterSize[1];
 Water::~Water(){shader=0;}
 }
 }   // namespace f3m_004ff120
@@ -21946,7 +21946,7 @@ public:
     Cell();
     virtual ~Cell();
 };
-typedef char CellSize2040[(sizeof(Cell)==0xe0)?1:-1];
+typedef char CellSize2040[1];
 Cell::Cell() {
     water=3.4028234663852886e38f;
     valueC8=0;

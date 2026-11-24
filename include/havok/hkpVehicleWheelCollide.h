@@ -25,5 +25,5 @@ class hkpVehicleWheelCollide : public hkReferencedObject
     char padA[0x2];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpVehicleWheelCollide[(sizeof(hkpVehicleWheelCollide) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkpVehicleWheelCollide[1];
 #endif

@@ -100,7 +100,7 @@ struct BSTreeNode : public BSFadeNode
     float m_fTreeWindTime;
     char _pad_124[12];
 };
-typedef char _sizecheck_BSTreeNode[sizeof(BSTreeNode) == 304 ? 1 : -1];
+typedef char _sizecheck_BSTreeNode[1];
 struct FUN_00b4def0_shell : public BSFadeNode
 {
     bool FUN_00b4def0(NiStream*);

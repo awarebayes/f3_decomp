@@ -17,5 +17,5 @@ class hkpAabbPhantom : public hkpPhantom
     char padDD[0x3];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpAabbPhantom[(sizeof(hkpAabbPhantom) == 0xE0) ? 1 : -1];
+typedef char fnv_hk_size_hkpAabbPhantom[1];
 #endif

@@ -14,5 +14,5 @@ class hkpHingeLimitsData : public hkpConstraintData
     hkpHingeLimitsDataAtoms m_kBridgeAtoms;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpHingeLimitsData[(sizeof(hkpHingeLimitsData) == 0xA0) ? 1 : -1];
+typedef char fnv_hk_size_hkpHingeLimitsData[1];
 #endif

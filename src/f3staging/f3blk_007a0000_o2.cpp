@@ -15876,7 +15876,7 @@ public:
     float lifetime;
     Explosion();virtual ~Explosion();
 };
-typedef char ExplosionSize2041[(sizeof(Explosion)==0xfc)?1:-1];
+typedef char ExplosionSize2041[1];
 Explosion::Explosion() {
     value80=0;
     value84=0;

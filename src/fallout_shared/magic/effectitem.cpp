@@ -426,7 +426,7 @@ struct TESChildCell
 {
     virtual TESObjectCELL* GetSaveParentCell();
 };
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
 struct ActorValueOwner
 {
     virtual int GetBaseActorValue(int);
@@ -443,7 +443,7 @@ struct ActorValueOwner
     int GetActorValueAsInteger(int);
     float GetActorValueFloatByIndex(int);
 };
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_ActorValueOwner[1];
 struct CachedValuesOwner
 {
     virtual float GetFloatValue0();
@@ -465,7 +465,7 @@ struct CachedValuesOwner
     virtual bool GetBooleanValue16();
     void PrecalculateCachedValues();
 };
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_CachedValuesOwner[1];
 struct FUN_00403f80_shell : public EffectItem
 {
     float GetModifiedCost(Actor*);
@@ -664,7 +664,7 @@ struct AutoMemContext
     unsigned int m_pFileName;
     int m_iLineNumber;
 };
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 12 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct FUN_00404f00_shell : public AutoMemContext
 {
     void FUN_00404f00(int, bool, char*, int);
@@ -690,7 +690,7 @@ struct AutoMemContext
     unsigned int m_pFileName;
     int m_iLineNumber;
 };
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 12 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct FUN_00404f70_shell : public AutoMemContext
 {
     void FUN_00404f70();

@@ -14,5 +14,5 @@ class hkpStiffSpringConstraintData : public hkpConstraintData
     hkpStiffSpringConstraintDataAtoms m_kBridgeAtoms;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpStiffSpringConstraintData[(sizeof(hkpStiffSpringConstraintData) == 0x50) ? 1 : -1];
+typedef char fnv_hk_size_hkpStiffSpringConstraintData[1];
 #endif

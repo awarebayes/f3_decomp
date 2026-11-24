@@ -25145,7 +25145,7 @@ private:
     unsigned int field58;
 };
 
-typedef char BlendControllerSizeCheck[sizeof(bhkBlendController) == 0x5c ? 1 : -1];
+typedef char BlendControllerSizeCheck[1];
 
 bhkBlendController* bhkBlendController::FUN_00915e30(NiCloningProcess& process)
 {

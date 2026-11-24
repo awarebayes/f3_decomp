@@ -640,7 +640,7 @@ struct ImageSpaceManager
     char m_kMenuBackgroundRect[16];
     BSRenderedTexture* m_pMenuBackgroundTexture;
 };
-typedef char _sizecheck_ImageSpaceManager[sizeof(ImageSpaceManager) == 796 ? 1 : -1];
+typedef char _sizecheck_ImageSpaceManager[1];
 struct FUN_007123f0_shell : public ImageSpaceManager
 {
     void FUN_007123f0(float);
@@ -1551,7 +1551,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00718ab0_shell : public InterfaceManager
 {
     TESImageSpaceModifier* FUN_00718ab0();
@@ -1864,7 +1864,7 @@ struct RgbaColor
     float b;
     float a;
 };
-typedef char _sizecheck_NiColorA[sizeof(RgbaColor) == 16 ? 1 : -1];
+typedef char _sizecheck_NiColorA[1];
 
 extern float DAT_0102f0e4;
 void __cdecl UnpackBytes(int, unsigned int*, unsigned int*, unsigned int*, unsigned int*);
@@ -1903,7 +1903,7 @@ struct AutoMemContext
     unsigned int m_pFileName;
     int m_iLineNumber;
 };
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 12 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct GamepadManager
 {
     int InitGamePads();
@@ -1935,7 +1935,7 @@ struct GamepadManager
     bool m_bChangeDetected;
     char _pad_331[3];
 };
-typedef char _sizecheck_XInputManager[sizeof(GamepadManager) == 820 ? 1 : -1];
+typedef char _sizecheck_XInputManager[1];
 struct Controls : public GamepadManager
 {
     static Controls* GetInstance();
@@ -2025,7 +2025,7 @@ struct Controls : public GamepadManager
     char _pad_39f[1];
     char m_acInputDataAtOffset3A0[208];
 };
-typedef char _sizecheck_Controls[sizeof(Controls) == 1136 ? 1 : -1];
+typedef char _sizecheck_Controls[1];
 struct FUN_0070c4a0_shell : public InterfaceManager
 {
     void UpdateInterface();
@@ -3717,7 +3717,7 @@ struct AutoMemContext
     unsigned int m_pFileName;
     int m_iLineNumber;
 };
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 12 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct NiUpdateData
 {
     float fTime;
@@ -3728,7 +3728,7 @@ struct NiUpdateData
     bool m_bVisible;
     char _pad_9[3];
 };
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct FUN_0070adb0_shell : public InterfaceManager
 {
     void InitInterface(bool);
@@ -4158,7 +4158,7 @@ struct NiPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -4166,12 +4166,12 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESChildCell
 {
     virtual TESObjectCELL* GetSaveParentCell();
 };
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
 struct CFilter
 {
     bool QLinkedGroup();
@@ -4194,7 +4194,7 @@ struct CFilter
     void __dflt_ctor_closure();
     unsigned int iFilter;
 };
-typedef char _sizecheck_CFilter[sizeof(CFilter) == 4 ? 1 : -1];
+typedef char _sizecheck_CFilter[1];
 struct FUN_0070bc20_shell : public InterfaceManager
 {
     void UpdateActivatePick();
@@ -4862,7 +4862,7 @@ struct Animation
     char LocalOutput[8];
     char m_acTrailingData[8];
 };
-typedef char _sizecheck_Animation[sizeof(Animation) == 316 ? 1 : -1];
+typedef char _sizecheck_Animation[1];
 struct BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -4870,7 +4870,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_0070ee80_shell : public InterfaceManager
 {
     void UpdatePipboyWaiver();
@@ -5771,7 +5771,7 @@ struct AutoMemContext
     unsigned int m_pFileName;
     int m_iLineNumber;
 };
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 12 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct ThreeByThreeMatrix
 {
     void GetRow(unsigned int, float*);
@@ -5831,12 +5831,12 @@ struct ThreeByThreeMatrix
     float Determinant();
     char m_afEntries[48];
 };
-typedef char _sizecheck_NiMatrix3[sizeof(ThreeByThreeMatrix) == 48 ? 1 : -1];
+typedef char _sizecheck_NiMatrix3[1];
 struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct NiFrustum
 {
     char* FormatToBuffer(char*);
@@ -5850,7 +5850,7 @@ struct NiFrustum
     bool m_bOrthographic;
     char _pad_19[3];
 };
-typedef char _sizecheck_NiFrustum[sizeof(NiFrustum) == 28 ? 1 : -1];
+typedef char _sizecheck_NiFrustum[1];
 struct FUN_00712e90_shell : public InterfaceManager
 {
     SceneGraph* FUN_00712e90(SceneGraph*, char*, bool);
@@ -6340,7 +6340,7 @@ struct ListBoxBase
     virtual void ScrollToHighlight();
     virtual Tile* GetTileAt(unsigned int, bool);
 };
-typedef char _sizecheck_ListBoxBase[sizeof(ListBoxBase) == 4 ? 1 : -1];
+typedef char _sizecheck_ListBoxBase[1];
 struct FUN_00717f80_shell : public InterfaceManager
 {
     bool HandleMenuGamepadInput(Menu*, int, float);

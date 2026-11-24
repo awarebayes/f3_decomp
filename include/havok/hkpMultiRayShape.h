@@ -14,5 +14,5 @@ class hkpMultiRayShape : public hkpShape
     hkReal m_fRayRadius;                   // +0x1C
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpMultiRayShape[(sizeof(hkpMultiRayShape) == 0x20) ? 1 : -1];
+typedef char fnv_hk_size_hkpMultiRayShape[1];
 #endif

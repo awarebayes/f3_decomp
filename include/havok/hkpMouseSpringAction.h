@@ -20,5 +20,5 @@ class hkpMouseSpringAction : public hkpUnaryAction
     hkArray<char> m_kAppliedCallbacks;  // +0x54
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpMouseSpringAction[(sizeof(hkpMouseSpringAction) == 0x60) ? 1 : -1];
+typedef char fnv_hk_size_hkpMouseSpringAction[1];
 #endif

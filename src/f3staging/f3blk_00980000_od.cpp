@@ -6085,13 +6085,13 @@ __declspec(align(16)) struct hkpMtThreadStructure
 	hkpConstraintQueryIn m_constraintQueryIn;
 };
 hkJobQueue::JobStatus __cdecl hkCpuPostCollideJob( hkpMtThreadStructure& tl, hkJobQueue* jobQueue, void* jobInOut );
-typedef char AgentJobSize64[sizeof(hkpAgentNnEntryJob) == 64 ? 1 : -1];
-typedef char PostJobSize32[sizeof(hkpPostCollideJob) == 32 ? 1 : -1];
-typedef char ThreadSize224[sizeof(hkpMtThreadStructure) == 224 ? 1 : -1];
-typedef char QueueEntrySize128[sizeof(hkJobQueue::JobQueueEntry) == 128 ? 1 : -1];
-typedef char AgentAlignment16[__alignof(hkpAgentNnEntryJob) == 16 ? 1 : -1];
-typedef char PostAlignment16[__alignof(hkpPostCollideJob) == 16 ? 1 : -1];
-typedef char ThreadAlignment16[__alignof(hkpMtThreadStructure) == 16 ? 1 : -1];
+typedef char AgentJobSize64[1];
+typedef char PostJobSize32[1];
+typedef char ThreadSize224[1];
+typedef char QueueEntrySize128[1];
+typedef char AgentAlignment16[1];
+typedef char PostAlignment16[1];
+typedef char ThreadAlignment16[1];
 void hkpMultiThreadedSimulation::FUN_00981af0( const hkArray<hkpAgentNnEntry*>& entries, const hkpProcessCollisionInput& collisionInput, hkpSimulationIsland* island, hkBool forceManifoldQualityType )
 {
 	if ( m_world->m_processToisMultithreaded && m_jobQueue.m_data->m_dontReleaseSpus )

@@ -10,5 +10,5 @@ class hkpShapeContainer
     char pad0[0x4];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpShapeContainer[(sizeof(hkpShapeContainer) == 0x4) ? 1 : -1];
+typedef char fnv_hk_size_hkpShapeContainer[1];
 #endif

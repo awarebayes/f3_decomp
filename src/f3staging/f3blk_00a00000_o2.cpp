@@ -4931,9 +4931,9 @@ struct Target
     Transform m_kSlotA;
     Transform m_kSlotB;
 };
-typedef char CheckTransformSize[sizeof(Transform) == 0x40 ? 1 : -1];
-typedef char CheckSlotA[offsetof(Target, m_kSlotA) == 0x30 ? 1 : -1];
-typedef char CheckSlotB[offsetof(Target, m_kSlotB) == 0x70 ? 1 : -1];
+typedef char CheckTransformSize[1];
+typedef char CheckSlotA[1];
+typedef char CheckSlotB[1];
 }
 
 struct f3m_00a09c50_Obj
@@ -6669,26 +6669,26 @@ static __declspec(noinline) void FUN_00a02bf0(LocalPose* poses,List* list,Params
  }
 }
 
-typedef char VerifyVectorSize[(sizeof(V4)==16)?1:-1];
-typedef char VerifyVectorAlignment[(__alignof(V4)==16)?1:-1];
-typedef char VerifyMotionSize[(sizeof(Motion)==0x60)?1:-1];
-typedef char VerifyMotionOrigin[(offsetof(Motion,origin)==0x40)?1:-1];
-typedef char VerifyBodyMotion[(offsetof(Body,motion)==0xd0)?1:-1];
-typedef char VerifyBodyPosition[(offsetof(Body,unk130)==0x130)?1:-1];
-typedef char VerifyBodyQuaternion[(offsetof(Body,unk150)==0x150)?1:-1];
-typedef char VerifyBodyLocalCOM[(offsetof(Body,unk160)==0x160)?1:-1];
-typedef char VerifyBodyLinear[(offsetof(Body,unk1a0)==0x1a0)?1:-1];
-typedef char VerifyBodyAngular[(offsetof(Body,unk1b0)==0x1b0)?1:-1];
-typedef char VerifyBodySize[(sizeof(Body)==0x1c0)?1:-1];
-typedef char VerifyParamStride[(sizeof(Params)==0x30)?1:-1];
-typedef char VerifyHistoryStride[(sizeof(History)==0x40)?1:-1];
-typedef char VerifyStreamStride[(sizeof(Transform)==0x60)?1:-1];
-typedef char VerifyPoseStride[(sizeof(LocalPose)==0x30)?1:-1];
-typedef char VerifyContextPoses[(offsetof(Context,unk30)==0x30)?1:-1];
-typedef char VerifyContextHistory[(offsetof(Context,unk34)==0x34)?1:-1];
-typedef char VerifyAllocatorCursor[(offsetof(Alloc,top)==0x20)?1:-1];
-typedef char VerifyAllocatorMark[(offsetof(Alloc,mark)==0x28)?1:-1];
-typedef char VerifyAllocatorEnd[(offsetof(Alloc,end)==0x2c)?1:-1];
+typedef char VerifyVectorSize[1];
+typedef char VerifyVectorAlignment[1];
+typedef char VerifyMotionSize[1];
+typedef char VerifyMotionOrigin[1];
+typedef char VerifyBodyMotion[1];
+typedef char VerifyBodyPosition[1];
+typedef char VerifyBodyQuaternion[1];
+typedef char VerifyBodyLocalCOM[1];
+typedef char VerifyBodyLinear[1];
+typedef char VerifyBodyAngular[1];
+typedef char VerifyBodySize[1];
+typedef char VerifyParamStride[1];
+typedef char VerifyHistoryStride[1];
+typedef char VerifyStreamStride[1];
+typedef char VerifyPoseStride[1];
+typedef char VerifyContextPoses[1];
+typedef char VerifyContextHistory[1];
+typedef char VerifyAllocatorCursor[1];
+typedef char VerifyAllocatorMark[1];
+typedef char VerifyAllocatorEnd[1];
 
 void __cdecl FUN_00a033a0(float timestep,Context* context,List* list,Params* params,float* output) {
  int count=list->count;

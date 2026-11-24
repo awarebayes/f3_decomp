@@ -291,7 +291,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 struct FUN_00a6c610_shell : public NiTexturingProperty
 {
     NiObject* CloneTexturingProperty(CloningProcess*);

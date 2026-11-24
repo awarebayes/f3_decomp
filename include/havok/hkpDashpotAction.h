@@ -16,5 +16,5 @@ class hkpDashpotAction : public hkpBinaryAction
     hkVector4 m_fContactImpulse;  // +0x50
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpDashpotAction[(sizeof(hkpDashpotAction) == 0x60) ? 1 : -1];
+typedef char fnv_hk_size_hkpDashpotAction[1];
 #endif

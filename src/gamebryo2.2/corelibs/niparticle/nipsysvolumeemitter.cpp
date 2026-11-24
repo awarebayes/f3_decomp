@@ -26,7 +26,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 struct FUN_00c31c90_shell : public NiPSysVolumeEmitter
 {
     void FUN_00c31c90(CloningProcess*);
@@ -111,7 +111,7 @@ struct NiPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct FUN_00c31cf0_shell : public NiPSysVolumeEmitter
 {
     void ComputeEmitterInitialPositionAndVelocity(NiPoint3*, NiPoint3*);

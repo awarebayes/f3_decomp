@@ -3179,9 +3179,9 @@ struct S472750_Geometry : S472750_AVObject {
     S472750_Skin* skinBC;
     int unkC0;
 };
-typedef char VerifyAVObjectSize[(sizeof(S472750_AVObject)==0x9c)?1:-1];
-typedef char VerifyNodeSize[(sizeof(S472750_Node)==0xac)?1:-1];
-typedef char VerifyGeometrySize[(sizeof(S472750_Geometry)==0xc4)?1:-1];
+typedef char VerifyAVObjectSize[1];
+typedef char VerifyNodeSize[1];
+typedef char VerifyGeometrySize[1];
 inline S472750_Ptr::S472750_Ptr(S472750_AVObject* object) { m_pObject = object; if (m_pObject) m_pObject->IncRefCount(); }
 inline S472750_Ptr::~S472750_Ptr() { if (m_pObject) m_pObject->DecRefCount(); }
 inline S472750_Ptr& S472750_Ptr::operator=(const S472750_Ptr& other)

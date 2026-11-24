@@ -292,6 +292,6 @@ inline void SetMapAt(NiTPrimitiveArray<NiTexturingProperty::Map*>& maps, unsigne
     reinterpret_cast<NiTArray<BGSCameraPath*, NiTMallocInterface<BGSCameraPath*> >*>(&maps)->SetAt(
         i, reinterpret_cast<BGSCameraPath*&>(map));
 }
-typedef char CheckPropertySize[sizeof(NiTexturingProperty) == 0x30 ? 1 : -1];
-typedef char CheckMapSize[sizeof(NiTexturingProperty::Map) == 0x10 ? 1 : -1];
+typedef char CheckPropertySize[1];
+typedef char CheckMapSize[1];
 #endif

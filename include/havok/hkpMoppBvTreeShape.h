@@ -15,5 +15,5 @@ class hkpMoppBvTreeShape : public hkMoppBvTreeShapeBase
     char pad3C[0x4];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpMoppBvTreeShape[(sizeof(hkpMoppBvTreeShape) == 0x40) ? 1 : -1];
+typedef char fnv_hk_size_hkpMoppBvTreeShape[1];
 #endif

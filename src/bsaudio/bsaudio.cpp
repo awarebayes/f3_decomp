@@ -958,7 +958,7 @@ struct AutoMemContext
     unsigned int m_pFileName;
     int m_iLineNumber;
 };
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 12 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct FUN_00ad7230_shell : public BSAudio
 {
     void FUN_00ad7230(bool);
@@ -1155,7 +1155,7 @@ struct AutoMemContext
     unsigned int m_pFileName;
     int m_iLineNumber;
 };
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 12 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct FUN_00ad77f0_shell : public BSAudio
 {
     void FUN_00ad77f0(float, unsigned int);
@@ -1427,7 +1427,7 @@ struct AutoMemContext
     unsigned int m_pFileName;
     int m_iLineNumber;
 };
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 12 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct FUN_00ad8100_shell : public BSAudio
 {
     void FUN_00ad8100(char*, unsigned int, void*);

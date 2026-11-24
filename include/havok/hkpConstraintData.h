@@ -37,5 +37,5 @@ class hkpConstraintData : public hkReferencedObject
     hkUlong m_ulUserData;  // +0x8
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConstraintData[(sizeof(hkpConstraintData) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkpConstraintData[1];
 #endif

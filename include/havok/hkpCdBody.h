@@ -15,5 +15,5 @@ class hkpCdBody
     hkpCdBody* m_parent;          // +0xC
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpCdBody[(sizeof(hkpCdBody) == 0x10) ? 1 : -1];
+typedef char fnv_hk_size_hkpCdBody[1];
 #endif

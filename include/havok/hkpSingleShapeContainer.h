@@ -13,5 +13,5 @@ class hkpSingleShapeContainer : public hkpShapeContainer
     hkpShape* m_pContainedShape;  // +0x4
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpSingleShapeContainer[(sizeof(hkpSingleShapeContainer) == 0x8) ? 1 : -1];
+typedef char fnv_hk_size_hkpSingleShapeContainer[1];
 #endif

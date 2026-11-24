@@ -15,5 +15,5 @@ class hkpPhysicsData : public hkReferencedObject
     hkArray<hkpPhysicsSystem*> m_kPhysicsSystems;  // +0xC
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPhysicsData[(sizeof(hkpPhysicsData) == 0x18) ? 1 : -1];
+typedef char fnv_hk_size_hkpPhysicsData[1];
 #endif

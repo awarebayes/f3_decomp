@@ -14,5 +14,5 @@ class hkpLimitedHingeConstraintData : public hkpConstraintData
     hkpLimitedHingeConstraintDataAtoms m_kBridgeAtoms;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpLimitedHingeConstraintData[(sizeof(hkpLimitedHingeConstraintData) == 0xE0) ? 1 : -1];
+typedef char fnv_hk_size_hkpLimitedHingeConstraintData[1];
 #endif

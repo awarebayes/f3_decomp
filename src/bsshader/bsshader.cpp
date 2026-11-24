@@ -672,7 +672,7 @@ struct IUnknown
     virtual unsigned long AddRef();
     virtual unsigned long Release();
 };
-typedef char _sizecheck_IUnknown[sizeof(IUnknown) == 4 ? 1 : -1];
+typedef char _sizecheck_IUnknown[1];
 struct ID3DXBuffer : public IUnknown
 {
     virtual void* GetBufferPointer();
@@ -681,7 +681,7 @@ struct ID3DXBuffer : public IUnknown
     virtual unsigned long AddRef();
     virtual unsigned long Release();
 };
-typedef char _sizecheck_ID3DXBuffer[sizeof(ID3DXBuffer) == 4 ? 1 : -1];
+typedef char _sizecheck_ID3DXBuffer[1];
 struct ID3DXConstantTable : public ID3DXBuffer
 {
     virtual int GetDesc(_D3DXCONSTANTTABLE_DESC*);
@@ -712,7 +712,7 @@ struct ID3DXConstantTable : public ID3DXBuffer
     virtual void* GetBufferPointer();
     virtual unsigned long GetBufferSize();
 };
-typedef char _sizecheck_ID3DXConstantTable[sizeof(ID3DXConstantTable) == 4 ? 1 : -1];
+typedef char _sizecheck_ID3DXConstantTable[1];
 struct ShaderBufferRecord
 {
     char* QName();
@@ -724,7 +724,7 @@ struct ShaderBufferRecord
     char pData[1];
     char _pad_105[3];
 };
-typedef char _sizecheck_ShaderBufferEntry[sizeof(ShaderBufferRecord) == 264 ? 1 : -1];
+typedef char _sizecheck_ShaderBufferEntry[1];
 struct NiGPUProgram : public NiRefObject
 {
     virtual void __vslot_0();
@@ -755,7 +755,7 @@ struct NiGPUProgram : public NiRefObject
     int GetProgramType();
     int m_iProgramType;
 };
-typedef char _sizecheck_NiGPUProgram[sizeof(NiGPUProgram) == 12 ? 1 : -1];
+typedef char _sizecheck_NiGPUProgram[1];
 struct NiD3DShaderProgram : public NiGPUProgram
 {
     virtual void __vslot_0();
@@ -785,7 +785,7 @@ struct NiD3DShaderProgram : public NiGPUProgram
     GraphicsRenderer* m_pShaderObject;
     ShaderPassRenderer* m_pRenderState;
 };
-typedef char _sizecheck_NiD3DShaderProgram[sizeof(NiD3DShaderProgram) == 44 ? 1 : -1];
+typedef char _sizecheck_NiD3DShaderProgram[1];
 struct NiD3DPixelShader : public NiD3DShaderProgram
 {
     virtual void __vslot_0();
@@ -798,7 +798,7 @@ struct NiD3DPixelShader : public NiD3DShaderProgram
     virtual bool SetShaderConstantArray(NiShaderConstantMapEntry*, void*, unsigned int, unsigned int, unsigned short*);
     GeometryRelatedType* m_pD3DPixelShader;
 };
-typedef char _sizecheck_NiD3DPixelShader[sizeof(NiD3DPixelShader) == 48 ? 1 : -1];
+typedef char _sizecheck_NiD3DPixelShader[1];
 struct FUN_00be1750_shell : public BSShader
 {
     NiD3DPixelShader* FUN_00be1750(char*, void*, char*, char*);

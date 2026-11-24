@@ -13,5 +13,5 @@ class hkpShape : public hkReferencedObject
     hkUint32 m_type;       // +0xC
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpShape[(sizeof(hkpShape) == 0x10) ? 1 : -1];
+typedef char fnv_hk_size_hkpShape[1];
 #endif

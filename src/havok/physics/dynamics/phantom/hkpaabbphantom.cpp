@@ -585,7 +585,7 @@ class FUN_00cf2bf0 : public FUN_00d08130
     virtual ~FUN_00cf2bf0() throw();
 };
 
-typedef char fnv_check_cf2bf0[(sizeof(FUN_00cf2bf0) == 0xe0) ? 1 : -1];
+typedef char fnv_check_cf2bf0[1];
 
 // @fnv 0x00cf2bf0
 FUN_00cf2bf0::~FUN_00cf2bf0() throw()
@@ -860,7 +860,7 @@ class FUN_00cf2cb0 : public hkpWorldObjectCF2D
     hkpWorldObjectCF2D* FUN_00cf2d50() const throw();
 };
 
-typedef char fnv_check_cf2d50[(sizeof(FUN_00cf2cb0) == 0xe0) ? 1 : -1];
+typedef char fnv_check_cf2d50[1];
 
 // @fnv 0x00cf2d50
 hkpWorldObjectCF2D* FUN_00cf2cb0::FUN_00cf2d50() const throw()

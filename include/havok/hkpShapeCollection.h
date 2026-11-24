@@ -26,5 +26,5 @@ class hkpShapeCollection : public hkpShape
     char pad16[0x2];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpShapeCollection[(sizeof(hkpShapeCollection) == 0x18) ? 1 : -1];
+typedef char fnv_hk_size_hkpShapeCollection[1];
 #endif

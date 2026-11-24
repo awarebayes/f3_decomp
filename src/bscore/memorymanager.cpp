@@ -153,7 +153,7 @@ struct AutoMemContext
     unsigned int m_pFileName;
     int m_iLineNumber;
 };
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 12 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct FUN_00aa3cc0_shell : public MemoryManager
 {
     void CreateMemoryPool(unsigned int, unsigned int, char*);

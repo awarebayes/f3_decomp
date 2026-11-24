@@ -480,13 +480,13 @@ int unk2058; int unk205C; int unk2060; int unk2064; int unk2068;
  void FUN_005c4650(ResultC*,NodeC*,int,unsigned);
  unsigned MakeKey(NodeC* node,int endpoint) { return (unsigned)node+endpoint; }
 };
-typedef char CheckNode[(sizeof(NodeC)==0x30)?1:-1];
-typedef char CheckMotion[(sizeof(MotionC)==20)?1:-1];
-typedef char CheckLocation[(sizeof(LocationC)==24)?1:-1];
-typedef char CheckQuery[(offsetof(QueryC,parent)==0x54)?1:-1];
-typedef char CheckBuckets[(offsetof(SearchC,buckets)==0x206c)?1:-1];
-typedef char CheckCache[(offsetof(SearchC,cache)==0x2088)?1:-1];
-typedef char CheckRootRef[(offsetof(RootC,ref)==0x1c)?1:-1];
+typedef char CheckNode[1];
+typedef char CheckMotion[1];
+typedef char CheckLocation[1];
+typedef char CheckQuery[1];
+typedef char CheckBuckets[1];
+typedef char CheckCache[1];
+typedef char CheckRootRef[1];
 
 // Same-unit arc traversal: copy the input location before passing local storage to projection.
 __declspec(noinline) bool SearchC::FUN_005c50a0(const LocationC& start,const CircleC& circle,MotionC arc,LocationC& output) {

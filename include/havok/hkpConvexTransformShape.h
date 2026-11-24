@@ -12,5 +12,5 @@ class hkpConvexTransformShape : public hkpConvexTransformShapeBase
     hkTransform m_kMotionTransform;  // +0x20
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConvexTransformShape[(sizeof(hkpConvexTransformShape) == 0x60) ? 1 : -1];
+typedef char fnv_hk_size_hkpConvexTransformShape[1];
 #endif

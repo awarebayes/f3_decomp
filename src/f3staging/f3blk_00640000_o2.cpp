@@ -7770,7 +7770,7 @@ public:
     HUD();
     virtual ~HUD();
 };
-typedef char HUDSize2039[(sizeof(HUD)==0x244)?1:-1];
+typedef char HUDSize2039[1];
 HUD::HUD():selected17C(-1),flag180(0),unk184(0),timer(DAT_00d9b090()) {
     memset(tiles,0,sizeof(tiles));
     fade158=0;

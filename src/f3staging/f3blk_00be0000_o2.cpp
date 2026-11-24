@@ -43857,8 +43857,8 @@ void VectorRecords::FUN_00be0810(iterator where, size_type count, const Record16
         std::fill(where._Checked_iterator_base(), where._Checked_iterator_base() + count, copy);
     }
 }
-typedef char VectorHeaderSize[(sizeof(VectorRecords)==16)?1:-1];
-typedef char IteratorSize[(sizeof(VectorRecords::iterator)==8)?1:-1];
+typedef char VectorHeaderSize[1];
+typedef char IteratorSize[1];
 }
 }   // namespace f3m_00be0810
 

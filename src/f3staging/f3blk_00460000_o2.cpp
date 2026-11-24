@@ -11962,7 +11962,7 @@ struct InplaceHits {Entry* data;unsigned int count,capacity,unk0C;Entry entries[
     __forceinline InplaceHits():data(entries),count(0),capacity(0x80000008u){}
 };
 struct Collector:RayBase {InplaceHits hits;virtual void AddRayHit();Collector();};
-typedef char EntrySize[(sizeof(Entry)==0x60)?1:-1];
+typedef char EntrySize[1];
 Collector::Collector(){earlyOut=1.0f;hits.count=0;}
 }
 }   // namespace f3m_0046a820

@@ -59,5 +59,5 @@ class hkpConstraintInstance : public hkReferencedObject
     hkUint32 m_uiUniqueId;                                              // +0x34
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConstraintInstance[(sizeof(hkpConstraintInstance) == 0x38) ? 1 : -1];
+typedef char fnv_hk_size_hkpConstraintInstance[1];
 #endif

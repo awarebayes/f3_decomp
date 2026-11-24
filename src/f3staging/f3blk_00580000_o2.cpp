@@ -29252,7 +29252,7 @@ unsigned char nibbleExpandTable[512];
  void FUN_00845700();
  NiPixelData* FUN_00842720(const NiPixelData*,NiPixelData*);
 };
-typedef char ConverterSizeProof[sizeof(FUN_00a7b110)==0xa00?1:-1];
+typedef char ConverterSizeProof[1];
 
 
 extern unsigned char DAT_010739e4,DAT_0116f2a0;

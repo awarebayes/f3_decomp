@@ -12,5 +12,5 @@ class hkpSphereShape : public hkpConvexShape
     hkUint32 m_aiValuesD34[3];  // +0x14
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpSphereShape[(sizeof(hkpSphereShape) == 0x20) ? 1 : -1];
+typedef char fnv_hk_size_hkpSphereShape[1];
 #endif

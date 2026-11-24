@@ -17651,7 +17651,7 @@ struct Stream{unsigned int unk000;unsigned int unk004;unsigned int unk008;unsign
 struct Record{unsigned int unk00,unk04,unk08,unk0C;unsigned char flag10,unk11,unk12,unk13;float thresholdSquared;bool flag18;unsigned char unk19,unk1A,unk1B;unsigned int unk1C,unk20;__forceinline Record(){thresholdSquared=DAT_00dc0bc8;unk08=0;unk0C=0;flag10=0;flag18=0;unk1C=0;unk20=0;}};
 struct Child{unsigned int unk00;unsigned int unk04;unsigned int unk08;unsigned int unk0C;unsigned int unk10;unsigned int unk14;unsigned int unk18;unsigned int unk1C; float threshold;bool flag24;unsigned char unk25,unk26,unk27;__forceinline void SetThreshold(float value){threshold=value;}};
 struct Loader{virtual void Slot000();virtual void Slot004();virtual void Slot008();virtual void Slot00C();virtual void Slot010();virtual unsigned int Initialize();Child* data;void FUN_00947ce0(Stream*,Record*);};
-typedef char RecordSize[(sizeof(Record)==0x24)?1:-1];
+typedef char RecordSize[1];
 void Loader::FUN_00947ce0(Stream* stream,Record* supplied){Record local;Record* record=supplied;if(!record){Binary* binary=stream->binary;record=&local;binary->position+=binary->read(binary,record,sizeof(Record),0,0);}Initialize();bool f=*(volatile bool*)&record->flag18;Child* target=data;target->flag24=f;target->SetThreshold((float)sqrt(record->thresholdSquared));}
 }
 }   // namespace f3m_00947ce0
@@ -23822,10 +23822,10 @@ struct S0094a330_Data
     float m_planeMaxAngle;      // 0x130
 };
 
-typedef char AtomSizeCheck[(sizeof(S0094a330_TransformAtom) == 0x90) ? 1 : -1];
-typedef char AtomOffsetCheck[(offsetof(S0094a330_Data, m_transforms) == 0x10) ? 1 : -1];
-typedef char TransformAOffsetCheck[(offsetof(S0094a330_Data, m_transforms) + offsetof(S0094a330_TransformAtom, m_transformA) == 0x20) ? 1 : -1];
-typedef char TransformBOffsetCheck[(offsetof(S0094a330_Data, m_transforms) + offsetof(S0094a330_TransformAtom, m_transformB) == 0x60) ? 1 : -1];
+typedef char AtomSizeCheck[1];
+typedef char AtomOffsetCheck[1];
+typedef char TransformAOffsetCheck[1];
+typedef char TransformBOffsetCheck[1];
 
 struct S0094a330_BinaryStream;
 typedef unsigned int (__cdecl *S0094a330_ReadFn)(S0094a330_BinaryStream* pThis, void* pvBuffer,

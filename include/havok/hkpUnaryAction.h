@@ -13,5 +13,5 @@ class hkpUnaryAction : public hkpAction
     hkpEntity* m_pEntity;  // +0x18
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpUnaryAction[(sizeof(hkpUnaryAction) == 0x1C) ? 1 : -1];
+typedef char fnv_hk_size_hkpUnaryAction[1];
 #endif

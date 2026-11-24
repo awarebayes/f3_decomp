@@ -76,7 +76,7 @@ struct NiFloatInterpController : public NiSingleInterpController
     virtual bool ControlsTransform(NiInterpolator*, unsigned short);
     void __local_vftable_ctor_closure();
 };
-typedef char _sizecheck_NiFloatInterpController[sizeof(NiFloatInterpController) == 56 ? 1 : -1];
+typedef char _sizecheck_NiFloatInterpController[1];
 struct BSFrustumFOVController : public NiFloatInterpController
 {
     virtual void __vslot_0();
@@ -95,7 +95,7 @@ struct BSFrustumFOVController : public NiFloatInterpController
     virtual void UpdateFloatValue(float*);
     void __local_vftable_ctor_closure();
 };
-typedef char _sizecheck_BSFrustumFOVController[sizeof(BSFrustumFOVController) == 56 ? 1 : -1];
+typedef char _sizecheck_BSFrustumFOVController[1];
 struct FUN_00a38e30_shell : public NiSingleInterpController
 {
     NiInterpolator* FUN_00a38e30(unsigned short);

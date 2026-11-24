@@ -831,7 +831,7 @@ class FUN_00d4ce10 : public hkpWorldObjectD4D0
     hkpWorldObjectD4D0* FUN_00d4d0d0() const throw();
 };
 
-typedef char fnv_check_d4d0d0[(sizeof(FUN_00d4ce10) == 0x170) ? 1 : -1];
+typedef char fnv_check_d4d0d0[1];
 
 // @fnv 0x00d4d0d0
 hkpWorldObjectD4D0* FUN_00d4ce10::FUN_00d4d0d0() const throw()

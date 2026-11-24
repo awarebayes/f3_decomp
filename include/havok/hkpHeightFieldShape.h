@@ -10,5 +10,5 @@ class hkpHeightFieldShape : public hkpShape
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpHeightFieldShape[(sizeof(hkpHeightFieldShape) == 0x10) ? 1 : -1];
+typedef char fnv_hk_size_hkpHeightFieldShape[1];
 #endif

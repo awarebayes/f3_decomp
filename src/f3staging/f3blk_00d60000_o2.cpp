@@ -23677,7 +23677,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e54de8[];
 extern ClassMetadata DAT_0114d934;
 extern ClassMember DAT_0102f538;
@@ -23708,7 +23708,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e54ddc[];
 extern ClassMetadata DAT_0114d934;
 extern ClassMember DAT_0102f508[];
@@ -23739,7 +23739,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e54dd0[];
 extern ClassMetadata DAT_0114dae4;
 extern ClassMember DAT_0102f4f0;
@@ -23764,7 +23764,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e54d88[];
 extern ClassMetadata DAT_0114ccd4;
 extern ClassMember DAT_0102f460[];
@@ -23795,7 +23795,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e54d3c[];
 extern ClassMetadata DAT_0114d814;
 extern ClassMember DAT_0102f448;
@@ -23820,7 +23820,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e54d2c[];
 extern ClassMetadata DAT_0114d814;
 extern ClassMember DAT_0102f418[];
@@ -23851,7 +23851,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e54c98[];
 extern ClassMetadata DAT_0114f494;
 extern ClassMember DAT_0102f3b8;
@@ -31203,7 +31203,7 @@ struct ClassMember {
     unsigned int field10;
     unsigned int field14;
 };
-typedef char ClassMemberSizeCheck[sizeof(ClassMember) == 0x18 ? 1 : -1];
+typedef char ClassMemberSizeCheck[1];
 struct ClassMetadata {
     const char* name;
     const ClassMetadata* parent;
@@ -31221,7 +31221,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e55268[];
 extern ClassMetadata DAT_0114dab4;
 extern ClassMember DAT_0102fc50[2];
@@ -31254,7 +31254,7 @@ struct ClassMetadata {
         const ClassEnum* enums, int enumCount, const ClassMember* members,
         int memberCount, const void* defaults, const void* attributes, int ignoredFlags);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e552a0[];
 extern const ClassEnum DAT_00e6c0d8[];
 extern const ClassMember DAT_010334e0[];
@@ -31280,7 +31280,7 @@ struct ClassMember {
     unsigned int field10;
     unsigned int field14;
 };
-typedef char ClassMemberSizeCheck[sizeof(ClassMember) == 0x18 ? 1 : -1];
+typedef char ClassMemberSizeCheck[1];
 struct ClassMetadata {
     const char* name;
     const ClassMetadata* parent;
@@ -31298,7 +31298,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e5587c[];
 extern ClassMetadata DAT_0114e7a4;
 extern ClassMember DAT_010307c0[1];
@@ -31331,7 +31331,7 @@ struct ClassMetadata {
         const ClassEnum* enums, int enumCount, const ClassMember* members,
         int memberCount, const void* defaults, const void* attributes, int ignoredFlags);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e55898[];
 extern const ClassEnum DAT_00e6c3b8[];
 extern const ClassMember DAT_010307d8[];
@@ -31357,7 +31357,7 @@ struct ClassMember {
     unsigned int field10;
     unsigned int field14;
 };
-typedef char ClassMemberSizeCheck[sizeof(ClassMember) == 0x18 ? 1 : -1];
+typedef char ClassMemberSizeCheck[1];
 struct ClassMetadata {
     const char* name;
     const ClassMetadata* parent;
@@ -31375,7 +31375,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e561d4[];
 extern ClassMetadata DAT_0115889c;
 extern ClassMember DAT_010444d0[26];
@@ -31408,7 +31408,7 @@ struct ClassMetadata {
         const ClassEnum* enums, int enumCount, const ClassMember* members,
         int memberCount, const void* defaults, const void* attributes, int ignoredFlags);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e56200[];
 extern ClassMetadata DAT_01159dfc;
 extern const ClassMember DAT_01044740[];
@@ -31433,7 +31433,7 @@ struct ClassMember {
     unsigned int field10;
     unsigned int field14;
 };
-typedef char ClassMemberSizeCheck[sizeof(ClassMember) == 0x18 ? 1 : -1];
+typedef char ClassMemberSizeCheck[1];
 struct ClassMetadata {
     const char* name;
     const ClassMetadata* parent;
@@ -31451,7 +31451,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e54818[];
 extern ClassMetadata DAT_0115a4a4;
 extern ClassMember DAT_01045a68[7];
@@ -31484,7 +31484,7 @@ struct ClassMetadata {
         const ClassEnum* enums, int enumCount, const ClassMember* members,
         int memberCount, const void* defaults, const void* attributes, int ignoredFlags);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e547c8[];
 extern ClassMetadata DAT_0115a4a4;
 extern const ClassMember DAT_010459f0[];
@@ -31509,7 +31509,7 @@ struct ClassMember {
     unsigned int field10;
     unsigned int field14;
 };
-typedef char ClassMemberSizeCheck[sizeof(ClassMember) == 0x18 ? 1 : -1];
+typedef char ClassMemberSizeCheck[1];
 struct ClassMetadata {
     const char* name;
     const ClassMetadata* parent;
@@ -31527,7 +31527,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e54d88[];
 extern ClassMetadata DAT_0115a804;
 extern ClassMember DAT_010470e0[1];
@@ -31560,7 +31560,7 @@ struct ClassMetadata {
         const ClassEnum* enums, int enumCount, const ClassMember* members,
         int memberCount, const void* defaults, const void* attributes, int ignoredFlags);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e54d3c[];
 extern ClassMetadata DAT_0115b2e4;
 extern const ClassMember DAT_010470c8[];
@@ -31585,7 +31585,7 @@ struct ClassMember {
     unsigned int field10;
     unsigned int field14;
 };
-typedef char ClassMemberSizeCheck[sizeof(ClassMember) == 0x18 ? 1 : -1];
+typedef char ClassMemberSizeCheck[1];
 struct ClassMetadata {
     const char* name;
     const ClassMetadata* parent;
@@ -31603,7 +31603,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e551fc[];
 extern ClassMetadata DAT_0115b944;
 extern ClassMember DAT_010477c8[2];

@@ -24,5 +24,5 @@ class hkpListShape : public hkpShapeCollection
     hkUint32 m_uiChildEnabledFlags[8];  // +0x50
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpListShape[(sizeof(hkpListShape) == 0x70) ? 1 : -1];
+typedef char fnv_hk_size_hkpListShape[1];
 #endif

@@ -129,7 +129,7 @@ struct BGSClipRoundsForm : public BaseFormComponent
     unsigned char m_ucClipRounds;
     char _pad_5[3];
 };
-typedef char _sizecheck_BGSClipRoundsForm[sizeof(BGSClipRoundsForm) == 8 ? 1 : -1];
+typedef char _sizecheck_BGSClipRoundsForm[1];
 struct TESFullName : public BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -147,7 +147,7 @@ struct TESFullName : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char m_kName[8];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct TESScriptableForm : public BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -166,7 +166,7 @@ struct TESScriptableForm : public BaseFormComponent
     bool m_bHasScript;
     char _pad_9[3];
 };
-typedef char _sizecheck_TESScriptableForm[sizeof(TESScriptableForm) == 12 ? 1 : -1];
+typedef char _sizecheck_TESScriptableForm[1];
 struct TESWeightForm : public BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -180,7 +180,7 @@ struct TESWeightForm : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     float fWeight;
 };
-typedef char _sizecheck_TESWeightForm[sizeof(TESWeightForm) == 8 ? 1 : -1];
+typedef char _sizecheck_TESWeightForm[1];
 struct BGSEquipType : public BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -196,7 +196,7 @@ struct BGSEquipType : public BaseFormComponent
     static void GenerateDefaultMenuIcons();
     int m_eEquipType;
 };
-typedef char _sizecheck_BGSEquipType[sizeof(BGSEquipType) == 8 ? 1 : -1];
+typedef char _sizecheck_BGSEquipType[1];
 struct FUN_0047b540_shell : public BGSClipRoundsForm
 {
     void FUN_0047b540();

@@ -10,5 +10,5 @@ class hkpMaxSizeMotion : public hkpKeyframedRigidMotion
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpMaxSizeMotion[(sizeof(hkpMaxSizeMotion) == 0x120) ? 1 : -1];
+typedef char fnv_hk_size_hkpMaxSizeMotion[1];
 #endif

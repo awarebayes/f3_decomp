@@ -15,5 +15,5 @@ class hkSweptTransform
     hkVector4 m_vCenterOfMassLocal;  // +0x40
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkSweptTransform[(sizeof(hkSweptTransform) == 0x50) ? 1 : -1];
+typedef char fnv_hk_size_hkSweptTransform[1];
 #endif

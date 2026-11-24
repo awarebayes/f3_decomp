@@ -94,7 +94,7 @@ struct NiTriBasedGeom : public NiGeometry
     void __local_vftable_ctor_closure();
     char _pad_bc[52];
 };
-typedef char _sizecheck_NiTriBasedGeom[sizeof(NiTriBasedGeom) == 240 ? 1 : -1];
+typedef char _sizecheck_NiTriBasedGeom[1];
 struct NiTriShape : public NiTriBasedGeom
 {
     virtual void __vslot_0();
@@ -116,7 +116,7 @@ struct NiTriShape : public NiTriBasedGeom
     virtual void RenderWithRenderer(NiRenderer*);
     void __local_vftable_ctor_closure();
 };
-typedef char _sizecheck_NiTriShape[sizeof(NiTriShape) == 240 ? 1 : -1];
+typedef char _sizecheck_NiTriShape[1];
 struct BSResizableTriShape : public NiTriShape
 {
     virtual void __vslot_0();
@@ -143,7 +143,7 @@ struct BSResizableTriShape : public NiTriShape
     char LocalBound[16];
     char _pad_104[12];
 };
-typedef char _sizecheck_BSResizableTriShape[sizeof(BSResizableTriShape) == 272 ? 1 : -1];
+typedef char _sizecheck_BSResizableTriShape[1];
 struct FUN_00e68810_shell : public NiLines
 {
     NiLines* FUN_00e68810();

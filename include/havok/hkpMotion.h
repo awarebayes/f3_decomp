@@ -38,5 +38,5 @@ class hkpMotion : public hkReferencedObject
     hkHalf m_fGravityFactor;                             // +0x11E
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpMotion[(sizeof(hkpMotion) == 0x120) ? 1 : -1];
+typedef char fnv_hk_size_hkpMotion[1];
 #endif

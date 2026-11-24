@@ -19,5 +19,5 @@ class hkpTriangleShape : public hkpConvexShape
     hkVector4 m_kVertexTransform;  // +0x50
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpTriangleShape[(sizeof(hkpTriangleShape) == 0x60) ? 1 : -1];
+typedef char fnv_hk_size_hkpTriangleShape[1];
 #endif

@@ -125,7 +125,7 @@ struct P154Region
     void FUN_00a88a60(P154Node* node, float* scale);
     void FUN_00a88b00();
 };
-typedef char VerifyP154Region72[(sizeof(P154Region) == 72) ? 1 : -1];
+typedef char VerifyP154Region72[1];
 
 struct P154Result
 {

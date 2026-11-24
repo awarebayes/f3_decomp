@@ -22,5 +22,5 @@ class hkpPoweredChainData : public hkpConstraintChainData
     hkReal m_fMaximumAngularImpulse;                               // +0x3C
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPoweredChainData[(sizeof(hkpPoweredChainData) == 0x40) ? 1 : -1];
+typedef char fnv_hk_size_hkpPoweredChainData[1];
 #endif

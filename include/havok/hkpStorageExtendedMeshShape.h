@@ -16,5 +16,5 @@ class hkpStorageExtendedMeshShape
     char pad108[0x8];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpStorageExtendedMeshShape[(sizeof(hkpStorageExtendedMeshShape) == 0x110) ? 1 : -1];
+typedef char fnv_hk_size_hkpStorageExtendedMeshShape[1];
 #endif

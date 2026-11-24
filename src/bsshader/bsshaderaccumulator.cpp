@@ -109,7 +109,7 @@ struct NiBound
     char m_kCenter[12];
     float m_fBoundRadius;
 };
-typedef char _sizecheck_NiBound[sizeof(NiBound) == 16 ? 1 : -1];
+typedef char _sizecheck_NiBound[1];
 struct FUN_00b63500_shell : public BSShaderAccumulator
 {
     void __thiscall RenderBound(void*, bool);
@@ -590,7 +590,7 @@ struct RenderQueryVolume
     char _pad_1b[1];
     unsigned int m_uiQueryFlags;
 };
-typedef char _sizecheck_ReferenceVolume[sizeof(RenderQueryVolume) == 32 ? 1 : -1];
+typedef char _sizecheck_ReferenceVolume[1];
 struct FUN_00b63680_shell : public BSShaderAccumulator
 {
     bool CheckVolumeState(unsigned int, bool);

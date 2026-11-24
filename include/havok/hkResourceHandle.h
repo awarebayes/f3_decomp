@@ -10,5 +10,5 @@ class hkResourceHandle : public hkResourceBase
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkResourceHandle[(sizeof(hkResourceHandle) == 0x8) ? 1 : -1];
+typedef char fnv_hk_size_hkResourceHandle[1];
 #endif

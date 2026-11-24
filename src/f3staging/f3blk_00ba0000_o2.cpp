@@ -19744,7 +19744,7 @@ struct G10 {
     std::vector<CSpeedTreeRT*, NativeAllocator<CSpeedTreeRT*> > trees;
     static void* operator new(unsigned int sz) { return DAT_01090a78.Alloc(sz); }
 };
-typedef char NativeTreeVectorSize[(sizeof(G10) == 16) ? 1 : -1];
+typedef char NativeTreeVectorSize[1];
 
 
 struct CSpeedTreeRT {

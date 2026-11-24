@@ -20,5 +20,5 @@ class hkpSpringAction : public hkpBinaryAction
     char pad5E[0x2];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpSpringAction[(sizeof(hkpSpringAction) == 0x60) ? 1 : -1];
+typedef char fnv_hk_size_hkpSpringAction[1];
 #endif

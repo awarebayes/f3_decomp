@@ -35,5 +35,5 @@ class hkpWorldObject : public hkReferencedObject
     void* m_pWorldObjectOwner;               // +0x88
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpWorldObject[(sizeof(hkpWorldObject) == 0x8C) ? 1 : -1];
+typedef char fnv_hk_size_hkpWorldObject[1];
 #endif

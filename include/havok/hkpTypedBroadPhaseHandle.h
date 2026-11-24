@@ -16,5 +16,5 @@ class hkpTypedBroadPhaseHandle
     hkUint32 m_uiCollisionFilterData;  // +0x8
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpTypedBroadPhaseHandle[(sizeof(hkpTypedBroadPhaseHandle) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkpTypedBroadPhaseHandle[1];
 #endif

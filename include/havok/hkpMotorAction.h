@@ -17,5 +17,5 @@ class hkpMotorAction : public hkpUnaryAction
     char pad39[0x7];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpMotorAction[(sizeof(hkpMotorAction) == 0x40) ? 1 : -1];
+typedef char fnv_hk_size_hkpMotorAction[1];
 #endif

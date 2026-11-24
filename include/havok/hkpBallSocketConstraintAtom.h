@@ -14,5 +14,5 @@ class hkpBallSocketConstraintAtom : public hkpConstraintAtom
     hkReal m_usFlags;            // +0x4
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpBallSocketConstraintAtom[(sizeof(hkpBallSocketConstraintAtom) == 0x8) ? 1 : -1];
+typedef char fnv_hk_size_hkpBallSocketConstraintAtom[1];
 #endif

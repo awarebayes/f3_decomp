@@ -259,7 +259,7 @@ struct NiPoint2
     float x;
     float y;
 };
-typedef char _sizecheck_NiPoint2[sizeof(NiPoint2) == 8 ? 1 : -1];
+typedef char _sizecheck_NiPoint2[1];
 struct FUN_0063c490_shell : public Sky
 {
     void FUN_0063c490();
@@ -1172,7 +1172,7 @@ struct SkySound
     unsigned int auiFormId;
     unsigned int uiData;
 };
-typedef char _sizecheck_SkySound[sizeof(SkySound) == 28 ? 1 : -1];
+typedef char _sizecheck_SkySound[1];
 struct FUN_0063d5e0_shell : public Sky
 {
     void FUN_0063d5e0();

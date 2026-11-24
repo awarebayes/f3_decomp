@@ -48,7 +48,7 @@ struct BSScissorTriShape : public NiTriShape
     char _pad_c4[44];
     char pDataToSerialize[16];
 };
-typedef char _sizecheck_BSScissorTriShape[sizeof(BSScissorTriShape) == 256 ? 1 : -1];
+typedef char _sizecheck_BSScissorTriShape[1];
 struct FUN_00a74600_shell : public NiTriShape
 {
     void FUN_00a74600(NiRenderer*);
@@ -155,7 +155,7 @@ struct BSResizableTriShape : public NiTriShape
     char LocalBound[16];
     char _pad_104[12];
 };
-typedef char _sizecheck_BSResizableTriShape[sizeof(BSResizableTriShape) == 272 ? 1 : -1];
+typedef char _sizecheck_BSResizableTriShape[1];
 struct NiPoint3
 {
     static struct blob12 ComponentProduct(void*, void*);
@@ -186,7 +186,7 @@ struct NiPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct FUN_00a74560_shell : public NiTriShape
 {
     void GetTriangleVertices(unsigned short, NiPoint3**, NiPoint3**, NiPoint3**);

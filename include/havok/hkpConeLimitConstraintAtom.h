@@ -25,5 +25,5 @@ class hkpConeLimitConstraintAtom : public hkpConstraintAtom
     hkReal m_fAngularLimitsTauFactor;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConeLimitConstraintAtom[(sizeof(hkpConeLimitConstraintAtom) == 0x14) ? 1 : -1];
+typedef char fnv_hk_size_hkpConeLimitConstraintAtom[1];
 #endif

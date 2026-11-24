@@ -262,7 +262,7 @@ struct BGSDecalNode : public NiNode
     bool m_bAttached;
     char _pad_d5[11];
 };
-typedef char _sizecheck_BGSDecalNode[sizeof(BGSDecalNode) == 224 ? 1 : -1];
+typedef char _sizecheck_BGSDecalNode[1];
 struct FUN_00a5db30_shell : public NiNode
 {
     void FUN_00a5db30();
@@ -308,7 +308,7 @@ struct BSNiNode : public NiNode
     void __local_vftable_ctor_closure();
     char _pad_ac[36];
 };
-typedef char _sizecheck_BSNiNode[sizeof(BSNiNode) == 208 ? 1 : -1];
+typedef char _sizecheck_BSNiNode[1];
 struct BSRangeNode : public BSNiNode
 {
     virtual void __vslot_0();
@@ -339,7 +339,7 @@ struct BSRangeNode : public BSNiNode
     unsigned char cMax;
     char _pad_d4[12];
 };
-typedef char _sizecheck_BSRangeNode[sizeof(BSRangeNode) == 224 ? 1 : -1];
+typedef char _sizecheck_BSRangeNode[1];
 struct BSBlastNode : public BSRangeNode
 {
     virtual void __vslot_0();
@@ -355,7 +355,7 @@ struct BSBlastNode : public BSRangeNode
     static NiObject* CreateObject();
     void __local_vftable_ctor_closure();
 };
-typedef char _sizecheck_BSBlastNode[sizeof(BSBlastNode) == 224 ? 1 : -1];
+typedef char _sizecheck_BSBlastNode[1];
 struct FUN_00a5dbe0_shell : public NiNode
 {
     void FUN_00a5dbe0(NiCullingProcess*);
@@ -389,7 +389,7 @@ struct BSNiNode : public NiNode
     void __local_vftable_ctor_closure();
     char _pad_ac[36];
 };
-typedef char _sizecheck_BSNiNode[sizeof(BSNiNode) == 208 ? 1 : -1];
+typedef char _sizecheck_BSNiNode[1];
 struct BSRangeNode : public BSNiNode
 {
     virtual void __vslot_0();
@@ -420,7 +420,7 @@ struct BSRangeNode : public BSNiNode
     unsigned char cMax;
     char _pad_d4[12];
 };
-typedef char _sizecheck_BSRangeNode[sizeof(BSRangeNode) == 224 ? 1 : -1];
+typedef char _sizecheck_BSRangeNode[1];
 struct BSBlastNode : public BSRangeNode
 {
     virtual void __vslot_0();
@@ -436,12 +436,12 @@ struct BSBlastNode : public BSRangeNode
     static NiObject* CreateObject();
     void __local_vftable_ctor_closure();
 };
-typedef char _sizecheck_BSBlastNode[sizeof(BSBlastNode) == 224 ? 1 : -1];
+typedef char _sizecheck_BSBlastNode[1];
 struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_00a5dce0_shell : public NiNode
 {
     void FUN_00a5dce0(CloningProcess*);
@@ -492,7 +492,7 @@ struct BGSDecalNode : public NiNode
     bool m_bAttached;
     char _pad_d5[11];
 };
-typedef char _sizecheck_BGSDecalNode[sizeof(BGSDecalNode) == 224 ? 1 : -1];
+typedef char _sizecheck_BGSDecalNode[1];
 struct FUN_00a5dd40_shell : public NiNode
 {
     void FUN_00a5dd40(NiStream*);

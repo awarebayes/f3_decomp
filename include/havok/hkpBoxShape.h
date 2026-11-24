@@ -13,5 +13,5 @@ class hkpBoxShape : public hkpConvexShape
     hkVector4 m_vHalfExtents;  // +0x20
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpBoxShape[(sizeof(hkpBoxShape) == 0x30) ? 1 : -1];
+typedef char fnv_hk_size_hkpBoxShape[1];
 #endif

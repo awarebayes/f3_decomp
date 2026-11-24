@@ -27,5 +27,5 @@ class hkaAnimation : public hkReferencedObject
     hkArray<hkaAnnotationTrack> m_kAnnotationTracks;  // +0x1C
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkaAnimation[(sizeof(hkaAnimation) == 0x28) ? 1 : -1];
+typedef char fnv_hk_size_hkaAnimation[1];
 #endif

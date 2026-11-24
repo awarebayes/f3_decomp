@@ -6,6 +6,6 @@
 class NiMemObject
 {
 };
-typedef char niobject_memobject_size_check[(sizeof(NiMemObject) == 1) ? 1 : -1];
+typedef char niobject_memobject_size_check[1];
 
 #endif

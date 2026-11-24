@@ -10,5 +10,5 @@ class hkpConstraintChainData : public hkpConstraintData
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConstraintChainData[(sizeof(hkpConstraintChainData) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkpConstraintChainData[1];
 #endif

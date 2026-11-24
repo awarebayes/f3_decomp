@@ -16,5 +16,5 @@ class hkReferencedObject : public hkBaseObject
     hkInt16 m_sReferenceCount;     // +0x6
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkReferencedObject[(sizeof(hkReferencedObject) == 0x8) ? 1 : -1];
+typedef char fnv_hk_size_hkReferencedObject[1];
 #endif

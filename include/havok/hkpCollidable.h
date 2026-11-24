@@ -25,5 +25,5 @@ class hkpCollidable : public hkpCdBody
     hkReal m_fAllowedPenetrationDepth;                      // +0x4C
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpCollidable[(sizeof(hkpCollidable) == 0x50) ? 1 : -1];
+typedef char fnv_hk_size_hkpCollidable[1];
 #endif

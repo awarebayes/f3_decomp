@@ -13,5 +13,5 @@ class hkpLinConstraintAtom : public hkpConstraintAtom
     char pad3[0x1];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpLinConstraintAtom[(sizeof(hkpLinConstraintAtom) == 0x4) ? 1 : -1];
+typedef char fnv_hk_size_hkpLinConstraintAtom[1];
 #endif

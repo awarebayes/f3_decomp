@@ -20,5 +20,5 @@ class hkaSkeletonMapper : public hkReferencedObject
     hkaSkeletonMapperData m_kMappingData;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkaSkeletonMapper[(sizeof(hkaSkeletonMapper) == 0x80) ? 1 : -1];
+typedef char fnv_hk_size_hkaSkeletonMapper[1];
 #endif

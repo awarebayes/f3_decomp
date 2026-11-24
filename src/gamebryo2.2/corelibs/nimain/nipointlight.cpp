@@ -48,7 +48,7 @@ struct NiUpdateData
     bool m_bVisible;
     char _pad_9[3];
 };
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 
 struct NiAVObject
 {

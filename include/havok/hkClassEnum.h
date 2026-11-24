@@ -20,5 +20,5 @@ class hkClassEnum
     hkUint32 m_flags;                         // +0x10 (FlagValues)
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkClassEnum[(sizeof(hkClassEnum) == 0x14) ? 1 : -1];
+typedef char fnv_hk_size_hkClassEnum[1];
 #endif

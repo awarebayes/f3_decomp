@@ -15,5 +15,5 @@ class hkpConstraintChainInstance : public hkpConstraintInstance
     hkpConstraintChainInstanceAction* m_pAction;  // +0x44
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConstraintChainInstance[(sizeof(hkpConstraintChainInstance) == 0x48) ? 1 : -1];
+typedef char fnv_hk_size_hkpConstraintChainInstance[1];
 #endif

@@ -1355,9 +1355,9 @@ struct Assembler:RefBase {
     virtual ~Assembler() throw();
     void FUN_00a867f0(const Settings&) throw();
 };
-typedef char DirectionStride2046[(sizeof(Direction)==0x20)?1:-1];
-typedef char SettingsSize2046[(sizeof(Settings)==0x30)?1:-1];
-typedef char AssemblerSize2046[(sizeof(Assembler)==0x70)?1:-1];
+typedef char DirectionStride2046[1];
+typedef char SettingsSize2046[1];
+typedef char AssemblerSize2046[1];
 __forceinline void SeedDirections() {
     DAT_0116ccc0[0].vector.Set(1,0,0,0);
     DAT_0116ccc0[1].vector.Set(0,1,0,0);

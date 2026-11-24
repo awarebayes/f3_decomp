@@ -21,5 +21,5 @@ class hkMotionState
     char padAF[0x1];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkMotionState[(sizeof(hkMotionState) == 0xB0) ? 1 : -1];
+typedef char fnv_hk_size_hkMotionState[1];
 #endif

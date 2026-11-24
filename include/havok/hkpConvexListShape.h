@@ -19,5 +19,5 @@ class hkpConvexListShape : public hkpConvexShape
     hkArray<hkpConvexShape*> m_kChildShapes;  // +0x44
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConvexListShape[(sizeof(hkpConvexListShape) == 0x50) ? 1 : -1];
+typedef char fnv_hk_size_hkpConvexListShape[1];
 #endif

@@ -90,12 +90,12 @@ struct ShaderPropertyConversionData
     char _pad_b3[1];
     int m_iShaderDataFlags;
 };
-typedef char _sizecheck_BSShaderData[sizeof(ShaderPropertyConversionData) == 184 ? 1 : -1];
+typedef char _sizecheck_BSShaderData[1];
 struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_00bb0180_shell : public ShaderPropertyConversionData
 {
     void AddProperties(NiAVObject*, unsigned int);

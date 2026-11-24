@@ -13,5 +13,5 @@ class hkpAngConstraintAtom : public hkpConstraintAtom
     hkUint8 m_ucNumConstrainedAxes;    // +0x3
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpAngConstraintAtom[(sizeof(hkpAngConstraintAtom) == 0x4) ? 1 : -1];
+typedef char fnv_hk_size_hkpAngConstraintAtom[1];
 #endif

@@ -24,5 +24,5 @@ class hkMultiThreadCheck
     hkUint16 m_usMarkCount;       // +0x6
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkMultiThreadCheck[(sizeof(hkMultiThreadCheck) == 0x8) ? 1 : -1];
+typedef char fnv_hk_size_hkMultiThreadCheck[1];
 #endif

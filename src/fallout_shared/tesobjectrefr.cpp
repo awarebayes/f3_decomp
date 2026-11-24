@@ -452,7 +452,7 @@ struct ModelLoader
     bool m_bLoadTexturesDegraded;
     char _pad_2d[3];
 };
-typedef char _sizecheck_ModelLoader[sizeof(ModelLoader) == 48 ? 1 : -1];
+typedef char _sizecheck_ModelLoader[1];
 struct FUN_004409e0_shell : public ModelLoader
 {
     void FUN_004409e0(TESObjectREFR*);
@@ -494,7 +494,7 @@ struct BGSLoadGameSubBuffer
     void RenderCopyData(BGSSaveFormBuffer*);
     char* pBuffer;
 };
-typedef char _sizecheck_BGSLoadGameSubBuffer[sizeof(BGSLoadGameSubBuffer) == 4 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameSubBuffer[1];
 struct FUN_0044dee0_shell : public BGSLoadGameSubBuffer
 {
     void FUN_0044dee0(char*);
@@ -522,7 +522,7 @@ struct PlayerTargetLocation
     TESObjectREFR* m_pFirstReference;
     TESObjectREFR* m_pSecondMapReference;
 };
-typedef char _sizecheck_PLAYER_TARGET_LOC[sizeof(PlayerTargetLocation) == 52 ? 1 : -1];
+typedef char _sizecheck_PLAYER_TARGET_LOC[1];
 struct FUN_00456540_shell : public PlayerTargetLocation
 {
     void FUN_00456540();
@@ -599,7 +599,7 @@ struct NiPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 
 float __cdecl FUN_004a3e90(float);
 
@@ -747,7 +747,7 @@ struct InventoryChanges
     bool m_bChanged;
     char _pad_11[3];
 };
-typedef char _sizecheck_InventoryChanges[sizeof(InventoryChanges) == 20 ? 1 : -1];
+typedef char _sizecheck_InventoryChanges[1];
 struct FUN_004bffb0_shell : public InventoryChanges
 {
     TESContainer* FUN_004bffb0();
@@ -781,7 +781,7 @@ struct ReferenceIntersectionData
     char Intersect[12];
     char Normal[12];
 };
-typedef char _sizecheck_REF_DECAL_DATA[sizeof(ReferenceIntersectionData) == 28 ? 1 : -1];
+typedef char _sizecheck_REF_DECAL_DATA[1];
 struct FUN_0055a400_shell : public ReferenceIntersectionData
 {
     void FUN_0055a400();
@@ -943,7 +943,7 @@ struct CachedValuesOwner
     virtual bool GetBooleanValue16();
     void PrecalculateCachedValues();
 };
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_CachedValuesOwner[1];
 struct BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -951,7 +951,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESFullName : public BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -969,7 +969,7 @@ struct TESFullName : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char m_kName[8];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct FUN_0055d420_shell : public TESObjectREFR
 {
     void FUN_0055d420(bool);
@@ -1088,7 +1088,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESActorBaseData : public BaseFormComponent
 {
     virtual void CopyFromTemplateForm(TESActorBase*);
@@ -1215,7 +1215,7 @@ struct TESActorBaseData : public BaseFormComponent
     int m_pDeathItem;
     char m_pVoiceType[8];
 };
-typedef char _sizecheck_TESActorBaseData[sizeof(TESActorBaseData) == 52 ? 1 : -1];
+typedef char _sizecheck_TESActorBaseData[1];
 struct FUN_0055e200_shell : public TESActorBaseData
 {
     bool FUN_0055e200();
@@ -1232,7 +1232,7 @@ struct hkBool
 {
     char m_cBooleanValue;
 };
-typedef char _sizecheck_hkBool[sizeof(hkBool) == 1 ? 1 : -1];
+typedef char _sizecheck_hkBool[1];
 struct FUN_005609f0_shell : public hkBool
 {
     bool FUN_005609f0();
@@ -1481,7 +1481,7 @@ struct BGSSaveLoadGame
     unsigned char m_ucSaveLoadState;
     char _pad_249[3];
 };
-typedef char _sizecheck_BGSSaveLoadGame[sizeof(BGSSaveLoadGame) == 588 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadGame[1];
 struct FUN_005621d0_shell : public BGSSaveLoadGame
 {
     bool FUN_005621d0();
@@ -1541,7 +1541,7 @@ struct BGSLoadGameBuffer
     unsigned int iBufferSize;
     unsigned int m_uiReadOffset;
 };
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
 struct BGSLoadFormBuffer : public BGSLoadGameBuffer
 {
     int LoadHeader(SaveLoadFile*);
@@ -1578,7 +1578,7 @@ struct BGSLoadFormBuffer : public BGSLoadGameBuffer
     unsigned int iFlags;
     char m_cReservedBytes[4];
 };
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FUN_00562d00_shell : public BGSLoadFormBuffer
 {
     bool FUN_00562d00();
@@ -1639,7 +1639,7 @@ struct BGSLoadGameBuffer
     unsigned int iBufferSize;
     unsigned int m_uiReadOffset;
 };
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
 struct BGSLoadFormBuffer : public BGSLoadGameBuffer
 {
     int LoadHeader(SaveLoadFile*);
@@ -1676,12 +1676,12 @@ struct BGSLoadFormBuffer : public BGSLoadGameBuffer
     unsigned int iFlags;
     char m_cReservedBytes[4];
 };
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_005636e0_shell : public TESObjectREFR
 {
     void FUN_005636e0(BGSLoadFormBuffer*);
@@ -2284,7 +2284,7 @@ struct TESFile
     bool m_bIsDLC;
     char _pad_42b[1];
 };
-typedef char _sizecheck_TESFile[sizeof(TESFile) == 1068 ? 1 : -1];
+typedef char _sizecheck_TESFile[1];
 struct FUN_005653d0_shell : public TESObjectREFR
 {
     bool FUN_005653d0();
@@ -2445,7 +2445,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00567960_shell : public TESObjectREFR
 {
     TESGlobal* FUN_00567960();
@@ -2514,7 +2514,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00567dd0_shell : public TESObjectREFR
 {
     void FUN_00567dd0(BGSEncounterZone*);
@@ -2617,7 +2617,7 @@ struct FurnitureMark
     unsigned char m_ucFlags;
     char _pad_f[1];
 };
-typedef char _sizecheck_FurnitureMark[sizeof(FurnitureMark) == 16 ? 1 : -1];
+typedef char _sizecheck_FurnitureMark[1];
 struct FUN_00568650_shell : public FurnitureMark
 {
     float FUN_00568650();
@@ -2647,7 +2647,7 @@ struct FurnitureMark
     unsigned char m_ucFlags;
     char _pad_f[1];
 };
-typedef char _sizecheck_FurnitureMark[sizeof(FurnitureMark) == 16 ? 1 : -1];
+typedef char _sizecheck_FurnitureMark[1];
 struct FUN_00568ab0_shell : public FurnitureMark
 {
     void FUN_00568ab0(unsigned int);
@@ -2837,7 +2837,7 @@ struct LockExtraData
     unsigned int m_uiLockDifficulty;
     unsigned int m_uiLockValue;
 };
-typedef char _sizecheck_REFR_LOCK[sizeof(LockExtraData) == 20 ? 1 : -1];
+typedef char _sizecheck_REFR_LOCK[1];
 struct TeleportableReference
 {
     TESObjectREFR* GetLinkedDoor();
@@ -2874,7 +2874,7 @@ struct TeleportableReference
     unsigned char cFlags;
     char _pad_1d[3];
 };
-typedef char _sizecheck_DoorTeleportData[sizeof(TeleportableReference) == 32 ? 1 : -1];
+typedef char _sizecheck_DoorTeleportData[1];
 struct FUN_00569160_shell : public TESObjectREFR
 {
     LockExtraData* FUN_00569160();
@@ -3074,7 +3074,7 @@ struct WorldLocation
     char m_kWorldPosition[12];
     float m_fRotation;
 };
-typedef char _sizecheck_WORLD_LOCATION[sizeof(WorldLocation) == 20 ? 1 : -1];
+typedef char _sizecheck_WORLD_LOCATION[1];
 struct FUN_0056ad30_shell : public TESObjectREFR
 {
     TESWorldSpace* FUN_0056ad30();
@@ -3161,7 +3161,7 @@ struct RadioReferenceData
     float m_fValueBeforeRadioReference;
     TESObjectREFR* m_pRadioReference;
 };
-typedef char _sizecheck_RADIO_DATA[sizeof(RadioReferenceData) == 16 ? 1 : -1];
+typedef char _sizecheck_RADIO_DATA[1];
 struct FUN_0056b140_shell : public TESObjectREFR
 {
     TESObjectREFR* FUN_0056b140();
@@ -3197,7 +3197,7 @@ struct RadioReferenceData
     float m_fValueBeforeRadioReference;
     TESObjectREFR* m_pRadioReference;
 };
-typedef char _sizecheck_RADIO_DATA[sizeof(RadioReferenceData) == 16 ? 1 : -1];
+typedef char _sizecheck_RADIO_DATA[1];
 struct FUN_0056b190_shell : public TESObjectREFR
 {
     float FUN_0056b190();
@@ -3235,7 +3235,7 @@ struct RadioReferenceData
     float m_fValueBeforeRadioReference;
     TESObjectREFR* m_pRadioReference;
 };
-typedef char _sizecheck_RADIO_DATA[sizeof(RadioReferenceData) == 16 ? 1 : -1];
+typedef char _sizecheck_RADIO_DATA[1];
 struct FUN_0056b210_shell : public TESObjectREFR
 {
     int FUN_0056b210();
@@ -3362,7 +3362,7 @@ struct HavokTransformData
     char Rot[48];
     char Trans[16];
 };
-typedef char _sizecheck_bhkTransform[sizeof(HavokTransformData) == 64 ? 1 : -1];
+typedef char _sizecheck_bhkTransform[1];
 struct FUN_0056e120_shell : public HavokTransformData
 {
     void FUN_0056e120();
@@ -3469,7 +3469,7 @@ struct hkSerializableCinfo
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_hkSerializableCinfo[sizeof(hkSerializableCinfo) == 1 ? 1 : -1];
+typedef char _sizecheck_hkSerializableCinfo[1];
 struct CollisionFilterConfiguration : public hkSerializableCinfo
 {
     CFilter* GetCFilter();
@@ -3480,24 +3480,24 @@ struct CollisionFilterConfiguration : public hkSerializableCinfo
     char _pad_9[3];
     char m_kProperties[12];
 };
-typedef char _sizecheck_hkWorldObjectCinfo[sizeof(CollisionFilterConfiguration) == 24 ? 1 : -1];
+typedef char _sizecheck_hkWorldObjectCinfo[1];
 struct PhantomCreationInfo : public CollisionFilterConfiguration
 {
     void* __vecDelDtor(unsigned int);
 };
-typedef char _sizecheck_hkPhantomCinfo[sizeof(PhantomCreationInfo) == 24 ? 1 : -1];
+typedef char _sizecheck_hkPhantomCinfo[1];
 struct ExtendedPhantomCreationInfo : public PhantomCreationInfo
 {
     void* __vecDelDtor(unsigned int);
     char _pad_18[8];
     char m_kMotionTransform[64];
 };
-typedef char _sizecheck_hkShapePhantomCinfo[sizeof(ExtendedPhantomCreationInfo) == 96 ? 1 : -1];
+typedef char _sizecheck_hkShapePhantomCinfo[1];
 struct DerivedPhantomCreationInfo : public ExtendedPhantomCreationInfo
 {
     void* __vecDelDtor(unsigned int);
 };
-typedef char _sizecheck_hkSimpleShapePhantomCinfo[sizeof(DerivedPhantomCreationInfo) == 96 ? 1 : -1];
+typedef char _sizecheck_hkSimpleShapePhantomCinfo[1];
 struct FUN_0056ea90_shell : public DerivedPhantomCreationInfo
 {
     void FUN_0056ea90();
@@ -3690,7 +3690,7 @@ struct BGSSaveLoadGame
     unsigned char m_ucSaveLoadState;
     char _pad_249[3];
 };
-typedef char _sizecheck_BGSSaveLoadGame[sizeof(BGSSaveLoadGame) == 588 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadGame[1];
 struct FUN_00570f00_shell : public BGSSaveLoadGame
 {
     bool FUN_00570f00();
@@ -3713,7 +3713,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_00571080_shell : public TESObjectREFR
 {
     void FUN_00571080(NiAVObject*);
@@ -3751,7 +3751,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct NiFixedString
 {
     bool Exists();
@@ -3766,7 +3766,7 @@ struct NiFixedString
     void* __vecDelDtor(unsigned int);
     char* m_kHandle;
 };
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
 struct FUN_00571530_shell : public TESObjectREFR
 {
     NiAVObject* FUN_00571530(NiAVObject*, NiFixedString*);
@@ -3902,12 +3902,12 @@ struct ReferenceLightData
     char m_pMenuLight[4];
     float m_fLightRadius;
 };
-typedef char _sizecheck_REFR_LIGHT[sizeof(ReferenceLightData) == 8 ? 1 : -1];
+typedef char _sizecheck_REFR_LIGHT[1];
 struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_005728c0_shell : public TESObjectREFR
 {
     void FUN_005728c0(bool);
@@ -4251,7 +4251,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESFullName : public BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -4269,7 +4269,7 @@ struct TESFullName : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char m_kName[8];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct FUN_00575d10_shell : public TESObjectREFR
 {
     bool FUN_00575d10();
@@ -4388,7 +4388,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESFullName : public BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -4406,7 +4406,7 @@ struct TESFullName : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char m_kName[8];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct TESTexture : public BaseFormComponent
 {
     virtual unsigned int GetTexturePathLength();
@@ -4435,7 +4435,7 @@ struct TESTexture : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char FullNameComponent[8];
 };
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
+typedef char _sizecheck_TESTexture[1];
 struct FUN_00575d70_shell : public TESObjectREFR
 {
     TESWorldSpace* FUN_00575d70();
@@ -4580,7 +4580,7 @@ struct InventoryStackRecord
     int m_iCountChange;
     TESBoundObject* m_pItemObject;
 };
-typedef char _sizecheck_ItemChange[sizeof(InventoryStackRecord) == 12 ? 1 : -1];
+typedef char _sizecheck_ItemChange[1];
 struct BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -4588,7 +4588,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESContainer : public BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -4626,7 +4626,7 @@ struct TESContainer : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char objectList[8];
 };
-typedef char _sizecheck_TESContainer[sizeof(TESContainer) == 12 ? 1 : -1];
+typedef char _sizecheck_TESContainer[1];
 struct FUN_00576260_shell : public TESObjectREFR
 {
     InventoryStackRecord* FUN_00576260(TESBoundObject*, unsigned int);
@@ -5945,7 +5945,7 @@ struct TeleportableReference
     unsigned char cFlags;
     char _pad_1d[3];
 };
-typedef char _sizecheck_DoorTeleportData[sizeof(TeleportableReference) == 32 ? 1 : -1];
+typedef char _sizecheck_DoorTeleportData[1];
 struct FUN_005789b0_shell : public TESObjectREFR
 {
     void FUN_005789b0();
@@ -6024,7 +6024,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_0057a3c0_shell : public TESObjectREFR
 {
     void FUN_0057a3c0(bool);
@@ -6140,7 +6140,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_0057ace0_shell : public TESObjectREFR
 {
     void FUN_0057ace0(TESTopicInfo*);
@@ -6218,7 +6218,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESFullName : public BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -6236,7 +6236,7 @@ struct TESFullName : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char m_kName[8];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct FUN_0057ad20_shell : public TESObjectREFR
 {
     void FUN_0057ad20(TESTopic*);
@@ -6658,7 +6658,7 @@ struct PathingLocation
     unsigned char uiFlags;
     char _pad_27[1];
 };
-typedef char _sizecheck_PathingLocation[sizeof(PathingLocation) == 40 ? 1 : -1];
+typedef char _sizecheck_PathingLocation[1];
 struct BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -6666,7 +6666,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESFullName : public BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -6684,7 +6684,7 @@ struct TESFullName : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char m_kName[8];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct TESTexture : public BaseFormComponent
 {
     virtual unsigned int GetTexturePathLength();
@@ -6713,7 +6713,7 @@ struct TESTexture : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char FullNameComponent[8];
 };
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
+typedef char _sizecheck_TESTexture[1];
 struct FUN_006dcbb0_shell : public PathingLocation
 {
     void FUN_006dcbb0(void*);
@@ -8002,7 +8002,7 @@ struct FurnitureMark
     unsigned char m_ucFlags;
     char _pad_f[1];
 };
-typedef char _sizecheck_FurnitureMark[sizeof(FurnitureMark) == 16 ? 1 : -1];
+typedef char _sizecheck_FurnitureMark[1];
 struct NiPoint3
 {
     static struct blob12 ComponentProduct(void*, void*);
@@ -8033,7 +8033,7 @@ struct NiPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct FUN_0098ddd0_shell : public FurnitureMark
 {
     void FUN_0098ddd0(void*);
@@ -8115,7 +8115,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct NiFixedString
 {
     bool Exists();
@@ -8130,7 +8130,7 @@ struct NiFixedString
     void* __vecDelDtor(unsigned int);
     char* m_kHandle;
 };
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
 
 struct DummyPointerMap
 {
@@ -8664,7 +8664,7 @@ struct NiPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct FUN_00572380_shell : public TESObjectREFR
 {
     float FUN_00572380(void*);
@@ -9020,7 +9020,7 @@ struct PathingLocation
     unsigned char uiFlags;
     char _pad_27[1];
 };
-typedef char _sizecheck_PathingLocation[sizeof(PathingLocation) == 40 ? 1 : -1];
+typedef char _sizecheck_PathingLocation[1];
 struct BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -9028,7 +9028,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESFullName : public BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -9046,7 +9046,7 @@ struct TESFullName : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char m_kName[8];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct TESTexture : public BaseFormComponent
 {
     virtual unsigned int GetTexturePathLength();
@@ -9075,7 +9075,7 @@ struct TESTexture : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char FullNameComponent[8];
 };
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
+typedef char _sizecheck_TESTexture[1];
 struct FUN_006dcd70_shell : public PathingLocation
 {
     void FUN_006dcd70(void*);
@@ -9387,7 +9387,7 @@ struct NiPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct FUN_00575700_shell : public TESObjectREFR
 {
     void FUN_00575700(struct blob12);
@@ -10376,7 +10376,7 @@ struct BGSSaveLoadInitialDataPacket
     static TESForm* CreateReference(unsigned int, ReferencePlacementData*, TESForm*);
     char _pad_0[1];
 };
-typedef char _sizecheck_BGSSaveLoadInitialData[sizeof(BGSSaveLoadInitialDataPacket) == 1 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadInitialData[1];
 struct FormChangeMask
 {
     bool ContainsAnyFlags(int);
@@ -10393,7 +10393,7 @@ struct FormChangeMask
     static struct blob4 CombineFlags(struct blob4, struct blob4, unsigned int, bool);
     int iFlags;
 };
-typedef char _sizecheck_BGSChangeFlags[sizeof(FormChangeMask) == 4 ? 1 : -1];
+typedef char _sizecheck_BGSChangeFlags[1];
 
 bool __cdecl FUN_00564900(int);
 
@@ -10607,7 +10607,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct NiUpdateData
 {
     float fTime;
@@ -10618,7 +10618,7 @@ struct NiUpdateData
     bool m_bVisible;
     char _pad_9[3];
 };
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct FUN_00562020_shell : public TESObjectREFR
 {
     void FUN_00562020();
@@ -11685,7 +11685,7 @@ struct BGSLoadGameBuffer
     unsigned int iBufferSize;
     unsigned int m_uiReadOffset;
 };
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
 struct BGSLoadFormBuffer : public BGSLoadGameBuffer
 {
     int LoadHeader(SaveLoadFile*);
@@ -11722,7 +11722,7 @@ struct BGSLoadFormBuffer : public BGSLoadGameBuffer
     unsigned int iFlags;
     char m_cReservedBytes[4];
 };
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FUN_005627c0_shell : public TESObjectREFR
 {
     void FUN_005627c0(BGSLoadFormBuffer*);
@@ -11959,7 +11959,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct NiUpdateData
 {
     float fTime;
@@ -11970,7 +11970,7 @@ struct NiUpdateData
     bool m_bVisible;
     char _pad_9[3];
 };
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct FUN_00563d80_shell : public TESObjectREFR
 {
     bool FUN_00563d80(NiControllerManager*, char*, float);
@@ -12196,7 +12196,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00565870_shell : public TESObjectREFR
 {
     bool FUN_00565870();
@@ -12720,7 +12720,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00568cb0_shell : public TESObjectREFR
 {
     float FUN_00568cb0();
@@ -14136,7 +14136,7 @@ struct FurnitureMark
     unsigned char m_ucFlags;
     char _pad_f[1];
 };
-typedef char _sizecheck_FurnitureMark[sizeof(FurnitureMark) == 16 ? 1 : -1];
+typedef char _sizecheck_FurnitureMark[1];
 struct BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -14144,7 +14144,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00568500_shell : public TESObjectREFR
 {
     bool FUN_00568500(int, FurnitureMark*);

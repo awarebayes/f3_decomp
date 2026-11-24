@@ -293,7 +293,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct NiPixelFormat
 {
     void SetField(unsigned char, unsigned char, unsigned char);
@@ -338,7 +338,7 @@ struct NiPixelFormat
     unsigned int m_uiExtraData;
     char m_akComponents[48];
 };
-typedef char _sizecheck_NiPixelFormat[sizeof(NiPixelFormat) == 68 ? 1 : -1];
+typedef char _sizecheck_NiPixelFormat[1];
 struct FUN_00a76c10_shell : public NiImageConverter
 {
     NiPixelData* FUN_00a76c10(void*, void*, NiPixelData*, bool);

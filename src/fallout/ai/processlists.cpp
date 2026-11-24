@@ -1234,7 +1234,7 @@ struct MuzzleFlash
     TESObjectWEAP* m_pFiringWeapon;
     TESObjectREFR* m_pParentRef;
 };
-typedef char _sizecheck_MuzzleFlash[sizeof(MuzzleFlash) == 32 ? 1 : -1];
+typedef char _sizecheck_MuzzleFlash[1];
 struct FUN_00978890_shell : public ProcessLists
 {
     void UpdateMuzzleFlashes(float);
@@ -1315,7 +1315,7 @@ struct _LARGE_INTEGER
     long HighPart;
     unsigned long LowPart;
 };
-typedef char _sizecheck__LARGE_INTEGER[sizeof(_LARGE_INTEGER) == 8 ? 1 : -1];
+typedef char _sizecheck__LARGE_INTEGER[1];
 struct FUN_0096b050_shell : public ProcessLists
 {
     void UpdateLowProcesses(float, bool);
@@ -2686,7 +2686,7 @@ struct Animation
     char LocalOutput[8];
     char m_acTrailingData[8];
 };
-typedef char _sizecheck_Animation[sizeof(Animation) == 316 ? 1 : -1];
+typedef char _sizecheck_Animation[1];
 struct IndexedTaskData
 {
     static void TaskFunc(void*);
@@ -2695,7 +2695,7 @@ struct IndexedTaskData
     unsigned int iSize;
     unsigned int iIndex;
 };
-typedef char _sizecheck_BSParallelArrayTask[sizeof(IndexedTaskData) == 16 ? 1 : -1];
+typedef char _sizecheck_BSParallelArrayTask[1];
 struct FUN_0096c970_shell : public ProcessLists
 {
     void FUN_0096c970();

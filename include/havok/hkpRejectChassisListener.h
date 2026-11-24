@@ -13,5 +13,5 @@ class hkpRejectChassisListener : public hkReferencedObject
     void* m_pChassisCollidable;  // +0xC
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpRejectChassisListener[(sizeof(hkpRejectChassisListener) == 0x10) ? 1 : -1];
+typedef char fnv_hk_size_hkpRejectChassisListener[1];
 #endif

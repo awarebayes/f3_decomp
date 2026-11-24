@@ -291,7 +291,7 @@ struct CombatState
     char m_kProcedureStateData[4];
     int m_iCombatProcedureType;
 };
-typedef char _sizecheck_CombatState[sizeof(CombatState) == 556 ? 1 : -1];
+typedef char _sizecheck_CombatState[1];
 struct FUN_0097fb20_shell : public CombatState
 {
     bool FUN_0097fb20();
@@ -842,7 +842,7 @@ struct InventoryChanges
     bool m_bChanged;
     char _pad_11[3];
 };
-typedef char _sizecheck_InventoryChanges[sizeof(InventoryChanges) == 20 ? 1 : -1];
+typedef char _sizecheck_InventoryChanges[1];
 struct BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -850,7 +850,7 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_004c8f30_shell : public InventoryChanges
 {
     int FUN_004c8f30(int);

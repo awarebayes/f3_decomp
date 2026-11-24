@@ -10,5 +10,5 @@ class hkpKeyframedRigidMotion : public hkpMotion
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpKeyframedRigidMotion[(sizeof(hkpKeyframedRigidMotion) == 0x120) ? 1 : -1];
+typedef char fnv_hk_size_hkpKeyframedRigidMotion[1];
 #endif

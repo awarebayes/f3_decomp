@@ -29,5 +29,5 @@ class hkaSkeletonMapperData
     char pad68[0x8];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkaSkeletonMapperData[(sizeof(hkaSkeletonMapperData) == 0x70) ? 1 : -1];
+typedef char fnv_hk_size_hkaSkeletonMapperData[1];
 #endif

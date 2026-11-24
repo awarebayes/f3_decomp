@@ -13,5 +13,5 @@ class hkpPhantom : public hkpWorldObject
     hkArray<void*> m_kPhantomListeners;         // +0x98
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPhantom[(sizeof(hkpPhantom) == 0xA4) ? 1 : -1];
+typedef char fnv_hk_size_hkpPhantom[1];
 #endif

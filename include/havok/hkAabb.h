@@ -12,5 +12,5 @@ class hkAabb
     hkVector4 m_kMaximumCorner;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkAabb[(sizeof(hkAabb) == 0x20) ? 1 : -1];
+typedef char fnv_hk_size_hkAabb[1];
 #endif

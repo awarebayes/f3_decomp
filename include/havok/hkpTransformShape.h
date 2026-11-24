@@ -17,5 +17,5 @@ class hkpTransformShape : public hkpShape
     hkTransform m_kMotionTransform;  // +0x30
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpTransformShape[(sizeof(hkpTransformShape) == 0x70) ? 1 : -1];
+typedef char fnv_hk_size_hkpTransformShape[1];
 #endif

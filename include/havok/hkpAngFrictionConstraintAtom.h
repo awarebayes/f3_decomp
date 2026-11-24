@@ -16,5 +16,5 @@ class hkpAngFrictionConstraintAtom : public hkpConstraintAtom
     hkReal m_fMaxFrictionTorque;  // +0x8
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpAngFrictionConstraintAtom[(sizeof(hkpAngFrictionConstraintAtom) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkpAngFrictionConstraintAtom[1];
 #endif

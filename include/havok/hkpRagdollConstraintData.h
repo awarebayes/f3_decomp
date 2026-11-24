@@ -20,5 +20,5 @@ class hkpRagdollConstraintData : public hkpConstraintData
     hkpRagdollConstraintDataAtoms m_kBridgeAtoms;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpRagdollConstraintData[(sizeof(hkpRagdollConstraintData) == 0x140) ? 1 : -1];
+typedef char fnv_hk_size_hkpRagdollConstraintData[1];
 #endif

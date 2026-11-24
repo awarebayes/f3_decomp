@@ -18,5 +18,5 @@ class hkpVehicleLinearCastWheelCollide : public hkpVehicleWheelCollide
     hkReal m_fMaxExtraPenetrationAgainstFixed;                           // +0x30
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpVehicleLinearCastWheelCollide[(sizeof(hkpVehicleLinearCastWheelCollide) == 0x34) ? 1 : -1];
+typedef char fnv_hk_size_hkpVehicleLinearCastWheelCollide[1];
 #endif

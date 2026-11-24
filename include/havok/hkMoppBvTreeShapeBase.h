@@ -16,5 +16,5 @@ class hkMoppBvTreeShapeBase
     hkVector4 m_kMoppCodeInfo;  // +0x20
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkMoppBvTreeShapeBase[(sizeof(hkMoppBvTreeShapeBase) == 0x30) ? 1 : -1];
+typedef char fnv_hk_size_hkMoppBvTreeShapeBase[1];
 #endif

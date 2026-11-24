@@ -15,5 +15,5 @@ class hkpSetLocalRotationsConstraintAtom : public hkpConstraintAtom
 };
 #pragma pack(pop)
 typedef char
-    fnv_hk_size_hkpSetLocalRotationsConstraintAtom[(sizeof(hkpSetLocalRotationsConstraintAtom) == 0x70) ? 1 : -1];
+    fnv_hk_size_hkpSetLocalRotationsConstraintAtom[1];
 #endif

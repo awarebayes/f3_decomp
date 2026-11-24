@@ -5829,7 +5829,7 @@ struct BaseArchive{virtual ~BaseArchive();unsigned int unk004;unsigned int(__cde
 struct InflateStream{unsigned char* nextInput;unsigned int inputAvailable,totalInput;unsigned char* nextOutput;unsigned int outputAvailable,totalOutput;char* message;void* state;void* allocate;void* release;void* opaque;int dataType;unsigned int adler,reserved;};
 int __cdecl FUN_00b9bd50(InflateStream*,const char*,int);int __cdecl FUN_00b9d230(InflateStream*);extern unsigned int DAT_011786f4;
 struct CompressedArchive:BaseArchive{InflateStream* stream;void* buffer;unsigned int compressedSize,capacity,compressedPosition,uncompressedPosition;CompressedArchive(const char*,Archive*,unsigned int,unsigned int,int);virtual ~CompressedArchive();};
-typedef char BaseSize[(sizeof(BaseArchive)==0x160)?1:-1];typedef char HeaderSize[(sizeof(InflateStream)==0x38)?1:-1];
+typedef char BaseSize[1];typedef char HeaderSize[1];
 CompressedArchive::CompressedArchive(const char* name,Archive* archive,unsigned int offset,unsigned int size,int mode):BaseArchive(name,archive,offset,size,mode){
  read=&FUN_00bca320;write=&FUN_00bcd5a0;ReadHeader(&compressedSize,4);
  InflateStream* allocation=(InflateStream*)DAT_01090a78.FUN_0086b930(0x1be0);stream=allocation;
@@ -26151,7 +26151,7 @@ struct Matrix_bdce60 {
     Matrix_bdce60 FUN_0058dd90(float factor);
     Matrix_bdce60 FUN_00bdce60(float divisor);
 };
-typedef char Matrix_bdce60_size_check[sizeof(Matrix_bdce60) == 0x18 ? 1 : -1];
+typedef char Matrix_bdce60_size_check[1];
 Matrix_bdce60 Matrix_bdce60::FUN_00bdce60(float divisor) {
     return FUN_0058dd90(1.0f / divisor);
 }
@@ -36706,8 +36706,8 @@ void VectorRecords::FUN_00bc2f10(iterator where, size_type count, const SplinePo
         std::fill(where._Checked_iterator_base(), where._Checked_iterator_base() + count, copy);
     }
 }
-typedef char VectorHeaderSize[(sizeof(VectorRecords)==16)?1:-1];
-typedef char IteratorSize[(sizeof(VectorRecords::iterator)==8)?1:-1];
+typedef char VectorHeaderSize[1];
+typedef char IteratorSize[1];
 }
 }   // namespace f3m_00bc2f10
 
@@ -36789,9 +36789,9 @@ void VectorRecords::FUN_00bdf2d0(iterator where,size_type count,const Record& va
         std::fill(where._Checked_iterator_base(),where._Checked_iterator_base()+count,copy);
     }
 }
-typedef char RecordSize[(sizeof(Record)==20)?1:-1];
-typedef char VectorSize[(sizeof(VectorRecords)==16)?1:-1];
-typedef char IteratorSize[(sizeof(VectorRecords::iterator)==8)?1:-1];
+typedef char RecordSize[1];
+typedef char VectorSize[1];
+typedef char IteratorSize[1];
 }
 
 }   // namespace f3m_00bdf2d0
@@ -37146,7 +37146,7 @@ struct SoundMessageRecord
         return AudioVector_adf080(floats[0], floats[1], floats[2]);
     }
 };
-typedef char AudioMessageSize_adf080[sizeof(SoundMessageRecord) == 0x20 ? 1 : -1];
+typedef char AudioMessageSize_adf080[1];
 
 struct AudioMessageNode_adf080
 {

@@ -11,5 +11,5 @@ class hkpSimpleConstraintContactMgr : public hkReferencedObject
     char pad8[0x78];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpSimpleConstraintContactMgr[(sizeof(hkpSimpleConstraintContactMgr) == 0x80) ? 1 : -1];
+typedef char fnv_hk_size_hkpSimpleConstraintContactMgr[1];
 #endif

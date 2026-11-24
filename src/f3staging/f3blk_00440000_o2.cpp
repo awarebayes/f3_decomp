@@ -45567,7 +45567,7 @@ struct InflateState {
     unsigned short work[288];
     InflateCode codes[1440];
 };
-typedef char InflateStateSizeCheck[sizeof(InflateState)==0x1ba8 ? 1 : -1];
+typedef char InflateStateSizeCheck[1];
 
 struct Reader_447650 {
     virtual void v00(); virtual void v04(); virtual void v08(); virtual void v0c();

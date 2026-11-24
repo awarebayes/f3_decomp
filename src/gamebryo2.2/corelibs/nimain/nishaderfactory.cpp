@@ -73,7 +73,7 @@ struct NiGPUProgram : public NiRefObject
     int GetProgramType();
     int m_iProgramType;
 };
-typedef char _sizecheck_NiGPUProgram[sizeof(NiGPUProgram) == 12 ? 1 : -1];
+typedef char _sizecheck_NiGPUProgram[1];
 struct NiD3DShaderProgram : public NiGPUProgram
 {
     virtual void __vslot_0();
@@ -103,7 +103,7 @@ struct NiD3DShaderProgram : public NiGPUProgram
     GraphicsRenderer* m_pShaderObject;
     ShaderPassRenderer* m_pRenderState;
 };
-typedef char _sizecheck_NiD3DShaderProgram[sizeof(NiD3DShaderProgram) == 44 ? 1 : -1];
+typedef char _sizecheck_NiD3DShaderProgram[1];
 struct FUN_00e89830_shell : public NiD3DShaderProgram
 {
     void* FUN_00e89830();

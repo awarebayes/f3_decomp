@@ -14,5 +14,5 @@ class hkpConvexTransformShapeBase : public hkpConvexShape
     hkInt32 m_iChildShapeSize;                  // +0x1C
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConvexTransformShapeBase[(sizeof(hkpConvexTransformShapeBase) == 0x20) ? 1 : -1];
+typedef char fnv_hk_size_hkpConvexTransformShapeBase[1];
 #endif

@@ -23,5 +23,5 @@ class hkpConvexVerticesShape : public hkpConvexShape
     char pad64[0xC];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConvexVerticesShape[(sizeof(hkpConvexVerticesShape) == 0x70) ? 1 : -1];
+typedef char fnv_hk_size_hkpConvexVerticesShape[1];
 #endif

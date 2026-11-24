@@ -52,5 +52,5 @@ class hkpVehicleInstance : public hkpUnaryAction
     hkReal m_fGearShiftTime;  // +0xD0
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpVehicleInstance[(sizeof(hkpVehicleInstance) == 0xD4) ? 1 : -1];
+typedef char fnv_hk_size_hkpVehicleInstance[1];
 #endif

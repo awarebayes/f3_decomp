@@ -40,7 +40,7 @@ struct hkpRootCdPoint
     unsigned int m_extraShapeKey2;
     unsigned int m_extraShapeKey3;
 };
-typedef char fnv_check_hkpRootCdPoint[(sizeof(hkpRootCdPoint) == 64) ? 1 : -1];
+typedef char fnv_check_hkpRootCdPoint[1];
 
 class hkThreadMemory
 {

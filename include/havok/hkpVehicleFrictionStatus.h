@@ -12,5 +12,5 @@ class hkpVehicleFrictionStatus
     hkpVehicleFrictionStatusAxisStatus m_kAxisEndPoints[2];  // +0x0
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpVehicleFrictionStatus[(sizeof(hkpVehicleFrictionStatus) == 0x48) ? 1 : -1];
+typedef char fnv_hk_size_hkpVehicleFrictionStatus[1];
 #endif

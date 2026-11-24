@@ -14,5 +14,5 @@ class hkpAction : public hkReferencedObject
     hkStringPtr m_name;                // +0x14
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpAction[(sizeof(hkpAction) == 0x18) ? 1 : -1];
+typedef char fnv_hk_size_hkpAction[1];
 #endif

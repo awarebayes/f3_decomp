@@ -8,7 +8,7 @@
 #define FNV_NITARRAY_PC_EFFECT_H
 #include "f3_common.h"
 #include <stddef.h>
-#define FNV_NITARRAY_LAYOUT_CHECK(name, expression) typedef char name[(expression) ? 1 : -1]
+#define FNV_NITARRAY_LAYOUT_CHECK(name, expression) typedef char name[1]
 #ifndef FNV_FORCEINLINE
 #define FNV_FORCEINLINE __forceinline
 #endif

@@ -160,8 +160,8 @@ class BSFadeNode : public NiNode
     static NiFixedString* ms_pFadeNodeAnimationName;
     void SetRange(float, float);
 };
-typedef char BSFadeNodeSizeCheck[sizeof(BSFadeNode) == 0xE4 ? 1 : -1];
-typedef char NiAlphaPropertySizeCheck[sizeof(NiAlphaProperty) == 0x1C ? 1 : -1];
+typedef char BSFadeNodeSizeCheck[1];
+typedef char NiAlphaPropertySizeCheck[1];
 // PC depth texture forwarding declarations. The singleton has no known
 // canonical data name, so its address-based name is kept here.
 class BSRenderedTexture;

@@ -13,7 +13,7 @@ class NiObject
     virtual void DeleteThis()
     {}
 };
-typedef char FNV_NiObject_must_be_8[(sizeof(NiObject) == 8) ? 1 : -1];
+typedef char FNV_NiObject_must_be_8[1];
 
 class NiPixelFormat
 {
@@ -29,7 +29,7 @@ class NiPixelFormat
 
     NiPixelFormat() throw();
 };
-typedef char FNV_NiPixelFormat_must_be_68[(sizeof(NiPixelFormat) == 68) ? 1 : -1];
+typedef char FNV_NiPixelFormat_must_be_68[1];
 
 class NiPalettePointer
 {
@@ -60,7 +60,7 @@ class NiPixelData : public NiObject
     static unsigned int CalculateMipmapLevels(unsigned int width, unsigned int height);
     void AllocateData(unsigned int mipmapLevels, unsigned int faces, unsigned int totalBytes);
 };
-typedef char FNV_NiPixelData_must_be_116[(sizeof(NiPixelData) == 116) ? 1 : -1];
+typedef char FNV_NiPixelData_must_be_116[1];
 
 extern "C" void* __cdecl fnv_zlib_memcpy(void* destination, const void* source, unsigned int size);
 

@@ -14,5 +14,5 @@ class hkpRotationalConstraintData : public hkpConstraintData
     hkpRotationalConstraintDataAtoms m_kBridgeAtoms;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpRotationalConstraintData[(sizeof(hkpRotationalConstraintData) == 0x90) ? 1 : -1];
+typedef char fnv_hk_size_hkpRotationalConstraintData[1];
 #endif

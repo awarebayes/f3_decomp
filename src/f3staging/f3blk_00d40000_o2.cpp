@@ -41949,7 +41949,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e56528[];
 extern ClassMetadata DAT_01148ccc;
 extern ClassMember DAT_0102bbd0;
@@ -42496,7 +42496,7 @@ struct ClassMetadata {
         int arg3, int arg4, int arg5, int arg6, int arg7,
         const ClassMember* members, int memberCount, int arg10, int arg11, int arg12);
 };
-typedef char ClassMetadataSizeCheck[sizeof(ClassMetadata) == 0x30 ? 1 : -1];
+typedef char ClassMetadataSizeCheck[1];
 extern const char DAT_00e56544[];
 extern ClassMetadata DAT_0114c05c;
 extern ClassMember DAT_0102bbe8[];

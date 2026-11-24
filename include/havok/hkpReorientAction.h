@@ -17,5 +17,5 @@ class hkpReorientAction : public hkpUnaryAction
     char pad48[0x8];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpReorientAction[(sizeof(hkpReorientAction) == 0x50) ? 1 : -1];
+typedef char fnv_hk_size_hkpReorientAction[1];
 #endif

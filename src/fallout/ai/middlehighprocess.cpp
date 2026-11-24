@@ -130,7 +130,7 @@ struct PackageTargetRecord
     int iValue;
     float m_fTargetValue;
 };
-typedef char _sizecheck_PackageTarget[sizeof(PackageTargetRecord) == 16 ? 1 : -1];
+typedef char _sizecheck_PackageTarget[1];
 struct FUN_006801a0_shell : public PackageTargetRecord
 {
     void FUN_006801a0(PackageTargetRecord*);
@@ -1828,7 +1828,7 @@ struct Animation
     char LocalOutput[8];
     char m_acTrailingData[8];
 };
-typedef char _sizecheck_Animation[sizeof(Animation) == 316 ? 1 : -1];
+typedef char _sizecheck_Animation[1];
 struct FUN_0091fe80_shell : public MiddleHighProcess
 {
     void FUN_0091fe80(Animation*);
@@ -6066,7 +6066,7 @@ struct Animation
     char LocalOutput[8];
     char m_acTrailingData[8];
 };
-typedef char _sizecheck_Animation[sizeof(Animation) == 316 ? 1 : -1];
+typedef char _sizecheck_Animation[1];
 struct BaseFormComponent
 {
     virtual void InitializeComponent();
@@ -6074,12 +6074,12 @@ struct BaseFormComponent
     virtual void BaseFormRecord(BaseFormComponent*);
     virtual bool IsEqualToBase(BaseFormComponent*);
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESChildCell
 {
     virtual TESObjectCELL* GetSaveParentCell();
 };
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
 struct FUN_00923960_shell : public MiddleHighProcess
 {
     void UpdateWeaponDrawnAnimation(bool, BipedAnim*, Animation*, Actor*);

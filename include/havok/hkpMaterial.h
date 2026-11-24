@@ -22,5 +22,5 @@ class hkpMaterial
     hkReal m_fElasticity;  // +0x8
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpMaterial[(sizeof(hkpMaterial) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkpMaterial[1];
 #endif

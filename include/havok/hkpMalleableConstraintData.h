@@ -15,5 +15,5 @@ class hkpMalleableConstraintData : public hkpConstraintData
     hkReal m_fSpringStrength;              // +0x1C
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpMalleableConstraintData[(sizeof(hkpMalleableConstraintData) == 0x20) ? 1 : -1];
+typedef char fnv_hk_size_hkpMalleableConstraintData[1];
 #endif

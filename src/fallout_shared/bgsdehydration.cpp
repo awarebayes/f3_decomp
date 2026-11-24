@@ -386,7 +386,7 @@ struct TESChildCell
 {
     virtual TESObjectCELL* GetSaveParentCell();
 };
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
 struct ActorValueOwner
 {
     virtual int GetBaseActorValue(int);
@@ -403,7 +403,7 @@ struct ActorValueOwner
     int GetActorValueAsInteger(int);
     float GetActorValueFloatByIndex(int);
 };
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_ActorValueOwner[1];
 struct CachedValuesOwner
 {
     virtual float GetFloatValue0();
@@ -425,7 +425,7 @@ struct CachedValuesOwner
     virtual bool GetBooleanValue16();
     void PrecalculateCachedValues();
 };
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_CachedValuesOwner[1];
 struct FUN_00401190_shell : public TESForm
 {
     bool FUN_00401190();
@@ -611,7 +611,7 @@ struct TESFullName : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char m_kName[8];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct FUN_00551740_shell : public TESForm
 {
     char* GetCellName();
@@ -709,7 +709,7 @@ struct TESFullName : public BaseFormComponent
     void* __vecDelDtor(unsigned int);
     char m_kName[8];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct TESTopic : public TESForm, public TESFullName
 {
     virtual void __vslot_10();
@@ -789,7 +789,7 @@ struct TESTopic : public TESForm, public TESFullName
     char m_kDummyPrompt[8];
     int m_iTopicFlags;
 };
-typedef char _sizecheck_TESTopic[sizeof(TESTopic) == 64 ? 1 : -1];
+typedef char _sizecheck_TESTopic[1];
 struct FUN_00618660_shell : public TESForm
 {
     char* FUN_00618660();

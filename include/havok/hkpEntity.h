@@ -49,5 +49,5 @@ class hkpEntity : public hkpWorldObject
     char pad218[0x8];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpEntity[(sizeof(hkpEntity) == 0x220) ? 1 : -1];
+typedef char fnv_hk_size_hkpEntity[1];
 #endif

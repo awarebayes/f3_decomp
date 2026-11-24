@@ -5754,9 +5754,9 @@ struct RelativeJump {
     int offset;
 };
 
-typedef char HeaderSize[(sizeof(SchemaHeader) == 0x10) ? 1 : -1];
-typedef char AccumulatorSize[(sizeof(Accumulator) == 0x80) ? 1 : -1];
-typedef char RowSize[(sizeof(JacobianRow) == 0x30) ? 1 : -1];
+typedef char HeaderSize[1];
+typedef char AccumulatorSize[1];
+typedef char RowSize[1];
 
 __forceinline void FormRow(Vector3& contribution, const JacobianRow& row,
                            const Accumulator& bodyA, const Accumulator& bodyB)

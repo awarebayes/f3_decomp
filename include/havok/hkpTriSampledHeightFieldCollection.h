@@ -18,5 +18,5 @@ class hkpTriSampledHeightFieldCollection : public hkpShapeCollection
 };
 #pragma pack(pop)
 typedef char
-    fnv_hk_size_hkpTriSampledHeightFieldCollection[(sizeof(hkpTriSampledHeightFieldCollection) == 0x40) ? 1 : -1];
+    fnv_hk_size_hkpTriSampledHeightFieldCollection[1];
 #endif

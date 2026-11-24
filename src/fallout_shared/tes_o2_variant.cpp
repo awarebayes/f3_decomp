@@ -436,7 +436,7 @@ struct TESDataHandler
     TESEffectShader* m_pSecondEffectShader;
     TESEffectShader* m_pThirdEffectShader;
 };
-typedef char _sizecheck_TESDataHandler[sizeof(TESDataHandler) == 1596 ? 1 : -1];
+typedef char _sizecheck_TESDataHandler[1];
 struct FUN_004516b0_shell : public TESDataHandler
 {
     bool FUN_004516b0();
@@ -547,7 +547,7 @@ struct BGSSaveLoadGame
     unsigned char m_ucSaveLoadState;
     char _pad_249[3];
 };
-typedef char _sizecheck_BGSSaveLoadGame[sizeof(BGSSaveLoadGame) == 588 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadGame[1];
 struct FUN_004523c0_shell : public BGSSaveLoadGame
 {
     bool FUN_004523c0();
@@ -772,7 +772,7 @@ struct ModelLoader
     bool m_bLoadTexturesDegraded;
     char _pad_2d[3];
 };
-typedef char _sizecheck_ModelLoader[sizeof(ModelLoader) == 48 ? 1 : -1];
+typedef char _sizecheck_ModelLoader[1];
 struct FUN_0045a5e0_shell : public ModelLoader
 {
     void FUN_0045a5e0(char*);

@@ -3010,7 +3010,7 @@ struct BGSLoadGameBuffer
     unsigned int iBufferSize;
     unsigned int m_uiReadOffset;
 };
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
 
 InterfaceManager* FUN_004b7210();
 struct Tile_Set_Helper

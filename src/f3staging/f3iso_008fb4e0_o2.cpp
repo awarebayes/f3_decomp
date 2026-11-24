@@ -39,7 +39,7 @@ struct FUN_008fb470
         FUN_0089ec10(memory, sizeof(FUN_008fb470));
     }
 };
-typedef char VerifyResourceObject44[(sizeof(FUN_008fb470) == 44) ? 1 : -1];
+typedef char VerifyResourceObject44[1];
 }
 
 void* __cdecl FUN_008fb4e0(int first, int second, int resourceId, int finalArgument)

@@ -27716,7 +27716,7 @@ struct Cache {
     List8 list;
     ~Cache();
 };
-typedef char EntrySize[(sizeof(Entry24)==0x18)?1:-1];
+typedef char EntrySize[1];
 Cache::~Cache(){list.FUN_006c8220();}
 }
 

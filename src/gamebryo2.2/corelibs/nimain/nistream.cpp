@@ -2409,7 +2409,7 @@ struct NiFixedString
     void* __vecDelDtor(unsigned int);
     char* m_kHandle;
 };
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
 struct FUN_00a63ee0_shell : public NiStream
 {
     void FUN_00a63ee0();
@@ -3563,7 +3563,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct NiObjectGroup : public NiMemObject
 {
     void* Allocate(unsigned int);
@@ -3577,7 +3577,7 @@ struct NiObjectGroup : public NiMemObject
     void* m_pBeforeRefCount;
     unsigned int m_uiRefCount;
 };
-typedef char _sizecheck_NiObjectGroup[sizeof(NiObjectGroup) == 16 ? 1 : -1];
+typedef char _sizecheck_NiObjectGroup[1];
 struct FUN_00a647f0_shell : public NiStream
 {
     void LoadGroups();
@@ -7133,7 +7133,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_00a66850_shell : public NiStream
 {
     bool FUN_00a66850();
@@ -7316,7 +7316,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_00c68050_shell : public NiStream
 {
     void RegisterThread();

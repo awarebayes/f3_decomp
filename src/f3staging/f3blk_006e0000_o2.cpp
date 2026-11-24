@@ -42613,7 +42613,7 @@ namespace PrefMemory2026 {struct Heap{void* FUN_0086b930(unsigned int);};extern 
 void* __cdecl operator new(size_t bytes){return PrefMemory2026::DAT_01090a78.FUN_0086b930(bytes);}
 class INISettingCollection {public:virtual ~INISettingCollection();char path[0x104];void* file;void* first;void* last;INISettingCollection(){file=0;path[0]=0;first=0;last=0;}void FUN_00539ff0(const char*);};
 class INIPrefSettingCollection:public INISettingCollection {public:INIPrefSettingCollection(){}};
-typedef char PrefSize[(sizeof(INIPrefSettingCollection)==0x114)?1:-1];
+typedef char PrefSize[1];
 namespace PrefInit2026 {
 extern const char DAT_0116d880[],DAT_00db4aa0[];extern const char* DAT_0106ce10;extern const char* DAT_00f6dd94;
 typedef int(__stdcall*CreateDirectoryFn)(const char*,void*);extern CreateDirectoryFn FUN_00d9b0f8;

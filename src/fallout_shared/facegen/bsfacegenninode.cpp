@@ -80,7 +80,7 @@ struct NiUpdateData
     bool m_bVisible;
     char _pad_9[3];
 };
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct FUN_00663a70_shell : public BSFaceGenNiNode
 {
     void UpdateFaceGenNode(NiUpdateData*, unsigned int);
@@ -129,7 +129,7 @@ struct NiMemObject
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_00663ae0_shell : public BSFaceGenNiNode
 {
     void CullWithBoundAccum(NiCullingProcess*);

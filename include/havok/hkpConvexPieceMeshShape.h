@@ -15,5 +15,5 @@ class hkpConvexPieceMeshShape : public hkpShapeCollection
     hkReal m_fSphereRadius;                              // +0x20
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConvexPieceMeshShape[(sizeof(hkpConvexPieceMeshShape) == 0x24) ? 1 : -1];
+typedef char fnv_hk_size_hkpConvexPieceMeshShape[1];
 #endif

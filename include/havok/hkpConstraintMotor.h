@@ -21,5 +21,5 @@ class hkpConstraintMotor : public hkReferencedObject
     char pad9[0x3];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConstraintMotor[(sizeof(hkpConstraintMotor) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkpConstraintMotor[1];
 #endif

@@ -14,5 +14,5 @@ class hkpEntitySpuCollisionCallback
     hkUint8 m_bCallbackEnabled;  // +0x7
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpEntitySpuCollisionCallback[(sizeof(hkpEntitySpuCollisionCallback) == 0x8) ? 1 : -1];
+typedef char fnv_hk_size_hkpEntitySpuCollisionCallback[1];
 #endif

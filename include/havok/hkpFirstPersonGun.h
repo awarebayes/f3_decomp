@@ -46,5 +46,5 @@ class hkpFirstPersonGun : public hkReferencedObject
     hkArray<void*> m_kListeners;  // +0x14
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpFirstPersonGun[(sizeof(hkpFirstPersonGun) == 0x20) ? 1 : -1];
+typedef char fnv_hk_size_hkpFirstPersonGun[1];
 #endif

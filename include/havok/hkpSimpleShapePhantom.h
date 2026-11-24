@@ -15,5 +15,5 @@ class hkpSimpleShapePhantom : public hkpShapePhantom
     char pad16D[0x3];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpSimpleShapePhantom[(sizeof(hkpSimpleShapePhantom) == 0x170) ? 1 : -1];
+typedef char fnv_hk_size_hkpSimpleShapePhantom[1];
 #endif

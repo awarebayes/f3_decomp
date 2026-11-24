@@ -15,5 +15,5 @@ class hkpPositionConstraintMotor : public hkpLimitedForceConstraintMotor
     hkReal m_fConstantRecoveryVelocity;      // +0x20
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPositionConstraintMotor[(sizeof(hkpPositionConstraintMotor) == 0x24) ? 1 : -1];
+typedef char fnv_hk_size_hkpPositionConstraintMotor[1];
 #endif

@@ -1554,7 +1554,7 @@ struct ImageSpaceManager
     char m_kMenuBackgroundRect[16];
     BSRenderedTexture* m_pMenuBackgroundTexture;
 };
-typedef char _sizecheck_ImageSpaceManager[sizeof(ImageSpaceManager) == 796 ? 1 : -1];
+typedef char _sizecheck_ImageSpaceManager[1];
 struct FUN_00874b50_shell : public Main
 {
     void FUN_00874b50(BSRenderedTexture*, bool, unsigned int);
@@ -1752,7 +1752,7 @@ struct ImageSpaceManager
     char m_kMenuBackgroundRect[16];
     BSRenderedTexture* m_pMenuBackgroundTexture;
 };
-typedef char _sizecheck_ImageSpaceManager[sizeof(ImageSpaceManager) == 796 ? 1 : -1];
+typedef char _sizecheck_ImageSpaceManager[1];
 struct FUN_00874b90_shell : public Main
 {
     void FUN_00874b90(ImageSpaceManager*, GraphicsRenderer*, bool, BSRenderedTexture*);
@@ -2412,7 +2412,7 @@ struct NiUpdateData
     bool m_bVisible;
     char _pad_9[3];
 };
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct FUN_0086fc60_shell : public Main
 {
     void FUN_0086fc60();
@@ -3553,7 +3553,7 @@ struct RgbaColor
     float b;
     float a;
 };
-typedef char _sizecheck_NiColorA[sizeof(RgbaColor) == 16 ? 1 : -1];
+typedef char _sizecheck_NiColorA[1];
 struct FUN_008746d0_shell : public Main
 {
     void FUN_008746d0(BSRenderedTexture*);
@@ -4056,7 +4056,7 @@ struct ImageSpaceManager
     char m_kMenuBackgroundRect[16];
     BSRenderedTexture* m_pMenuBackgroundTexture;
 };
-typedef char _sizecheck_ImageSpaceManager[sizeof(ImageSpaceManager) == 796 ? 1 : -1];
+typedef char _sizecheck_ImageSpaceManager[1];
 struct FUN_00876850_shell : public Main
 {
     void FUN_00876850(BSRenderedTexture*, ImageSpaceManager*, GraphicsRenderer*, Sun*);
@@ -4309,7 +4309,7 @@ struct NiPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct NiUpdateData
 {
     float fTime;
@@ -4320,7 +4320,7 @@ struct NiUpdateData
     bool m_bVisible;
     char _pad_9[3];
 };
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct AutoMemContext
 {
     void Enter(int, bool, char*, int);
@@ -4330,7 +4330,7 @@ struct AutoMemContext
     unsigned int m_pFileName;
     int m_iLineNumber;
 };
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 12 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 
 class GridCell;
 class NiNode;

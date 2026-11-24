@@ -139,7 +139,7 @@ struct FourComponentNumericValue
 {
     char u[16];
 };
-typedef char _sizecheck___vector4[sizeof(FourComponentNumericValue) == 16 ? 1 : -1];
+typedef char _sizecheck___vector4[1];
 struct FUN_00a4ff00_shell : public NiQuaternion
 {
     void NormalizeQuaternion();

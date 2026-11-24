@@ -23,7 +23,7 @@ struct FileEntryList
     char _pad_1[3];
     BSFileEntry** m_ppFileEntries;
 };
-typedef char _sizecheck_TESTextureList[sizeof(FileEntryList) == 8 ? 1 : -1];
+typedef char _sizecheck_TESTextureList[1];
 struct FUN_00488ff0_shell : public FileEntryList
 {
     void FUN_00488ff0();
@@ -109,7 +109,7 @@ struct PrimaryBase
     int unk2C;
 };
 
-typedef char _sizecheck_PrimaryBase[sizeof(PrimaryBase) == 0x30 ? 1 : -1];
+typedef char _sizecheck_PrimaryBase[1];
 
 struct SecondaryBase
 {

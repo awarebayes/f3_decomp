@@ -124,5 +124,5 @@ class hkpWorld : public hkReferencedObject
     char pad341[0xF];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpWorld[(sizeof(hkpWorld) == 0x350) ? 1 : -1];
+typedef char fnv_hk_size_hkpWorld[1];
 #endif

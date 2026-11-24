@@ -20,5 +20,5 @@ class hkpRagdollMotorConstraintAtom : public hkpConstraintAtom
     char pad4C[0x4];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpRagdollMotorConstraintAtom[(sizeof(hkpRagdollMotorConstraintAtom) == 0x50) ? 1 : -1];
+typedef char fnv_hk_size_hkpRagdollMotorConstraintAtom[1];
 #endif

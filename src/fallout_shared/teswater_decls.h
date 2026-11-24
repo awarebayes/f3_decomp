@@ -64,5 +64,5 @@ class BSMultiBound : public NiObject
     unsigned int m_uiBoundFlags;
     NiPointer<BSMultiBoundShape> pShape;
 };
-typedef char teswater_bound_size[(sizeof(BSMultiBound) == 16) ? 1 : -1];
+typedef char teswater_bound_size[1];
 #endif

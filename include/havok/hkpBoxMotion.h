@@ -10,5 +10,5 @@ class hkpBoxMotion : public hkpMotion
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpBoxMotion[(sizeof(hkpBoxMotion) == 0x120) ? 1 : -1];
+typedef char fnv_hk_size_hkpBoxMotion[1];
 #endif

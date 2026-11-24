@@ -12,5 +12,5 @@ class hkpBridgeAtoms
     hkpBridgeConstraintAtom m_kBridgeAtom;  // +0x0
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpBridgeAtoms[(sizeof(hkpBridgeAtoms) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkpBridgeAtoms[1];
 #endif

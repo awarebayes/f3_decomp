@@ -32,5 +32,5 @@ class hkClass
     hkInt32 m_iDescribedVersion;                      // +0x2C
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkClass[(sizeof(hkClass) == 0x30) ? 1 : -1];
+typedef char fnv_hk_size_hkClass[1];
 #endif

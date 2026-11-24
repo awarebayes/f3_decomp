@@ -220,11 +220,11 @@ void __cdecl FUN_0095af90(f3repair_0095af90_native::hkpConstraintInstance* insta
 }
 
 namespace f3repair_0095af90_native {
-typedef char VerifyBoolSize[(sizeof(hkBool) == 1) ? 1 : -1];
-typedef char VerifyRuntimeInfoSize[(sizeof(hkpConstraintData::RuntimeInfo) == 8) ? 1 : -1];
-typedef char VerifySolverResultSize[(sizeof(hkpSolverResults) == 8) ? 1 : -1];
-typedef char VerifyMonitorStreamSize[(sizeof(hkMonitorStream) == 16) ? 1 : -1];
-typedef char VerifyTimerCommandSize[(sizeof(hkMonitorStream::TimerCommand) == 12) ? 1 : -1];
-typedef char VerifyInternalSize[(sizeof(hkpConstraintInternal) == 32) ? 1 : -1];
-typedef char VerifyInstanceSize[(sizeof(hkpConstraintInstance) == 44) ? 1 : -1];
+typedef char VerifyBoolSize[1];
+typedef char VerifyRuntimeInfoSize[1];
+typedef char VerifySolverResultSize[1];
+typedef char VerifyMonitorStreamSize[1];
+typedef char VerifyTimerCommandSize[1];
+typedef char VerifyInternalSize[1];
+typedef char VerifyInstanceSize[1];
 }

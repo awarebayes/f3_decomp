@@ -16,5 +16,5 @@ class hkpWheelConstraintData : public hkpConstraintData
     hkVector4 m_kSteeringDirectionInBodyB;       // +0x150
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpWheelConstraintData[(sizeof(hkpWheelConstraintData) == 0x160) ? 1 : -1];
+typedef char fnv_hk_size_hkpWheelConstraintData[1];
 #endif

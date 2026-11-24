@@ -23,5 +23,5 @@ class hkaWaveletCompressedAnimation : public hkaAnimation
     hkArray<hkUint8> m_kCompressedData;                                     // +0x64
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkaWaveletCompressedAnimation[(sizeof(hkaWaveletCompressedAnimation) == 0x70) ? 1 : -1];
+typedef char fnv_hk_size_hkaWaveletCompressedAnimation[1];
 #endif

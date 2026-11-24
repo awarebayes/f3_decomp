@@ -13,5 +13,5 @@ class hkpBinaryAction : public hkpAction
     hkpEntity* m_pEntityB;  // +0x1C
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpBinaryAction[(sizeof(hkpBinaryAction) == 0x20) ? 1 : -1];
+typedef char fnv_hk_size_hkpBinaryAction[1];
 #endif

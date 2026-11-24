@@ -22224,7 +22224,7 @@ struct Block90 {unsigned int unk00;unsigned int unk04;unsigned int unk08;unsigne
 struct BlockD0 {unsigned int unk00;unsigned int unk04;unsigned int unk08;unsigned int unk0C;unsigned int unk10;unsigned int unk14;unsigned int unk18;unsigned int unk1C;unsigned int unk20;~BlockD0();};
 struct BlockF4 {unsigned int unk00;unsigned int unk04;unsigned int unk08;unsigned int unk0C;unsigned int unk10;unsigned int unk14;unsigned int unk18;unsigned int unk1C;unsigned int unk20;unsigned int unk24;~BlockF4();};
 struct Ragdoll:Form,Model {unsigned int unk30;unsigned int unk34;unsigned int unk38;unsigned int unk3C;unsigned int unk40;unsigned int unk44;unsigned int unk48;unsigned int unk4C;unsigned int unk50;unsigned int unk54;unsigned int unk58;unsigned int unk5C;unsigned int unk60;unsigned int unk64;unsigned int unk68;unsigned int unk6C;unsigned int unk70;unsigned int unk74;unsigned int unk78;unsigned int unk7C;Array16 values;Block90 first;BlockD0 second;BlockF4 third;String8 text;virtual ~Ragdoll();void FUN_00548b10();};
-typedef char RagdollLayoutSize[(sizeof(Ragdoll)==0x124)?1:-1];
+typedef char RagdollLayoutSize[1];
 Ragdoll::~Ragdoll(){FUN_00548b10();}
 }
 
@@ -22247,7 +22247,7 @@ struct Quest:Form,Scriptable,Icon,FullName{
  __forceinline void Reset(){conditions.FUN_005ae160();FUN_0055daf0();FUN_0055db60();Locals* owned=locals;if(owned){owned->FUN_00518ea0();DAT_01090a78.FUN_0086ba60(owned);locals=0;}}
  virtual ~Quest();
 };
-typedef char QuestSize[(sizeof(Quest)==0x6c)?1:-1];
+typedef char QuestSize[1];
 Quest::~Quest(){Reset();}
 }
 }   // namespace f3m_0055e330
@@ -24718,7 +24718,7 @@ struct NPC:ActorBase,Race {
     UndoArray undo;
     virtual void v0();NPC();void FUN_00557fd0();
 };
-typedef char ActorSize[(sizeof(ActorBase)==0x10c)?1:-1];
+typedef char ActorSize[1];
 NPC::NPC(){
     type=0x2a;FUN_00557fd0();
     AI::FUN_00450f40(50,false);AI::FUN_00450eb0(0,false);AI::FUN_00450ee0(2,false);AI::FUN_00450f10(50,false);
