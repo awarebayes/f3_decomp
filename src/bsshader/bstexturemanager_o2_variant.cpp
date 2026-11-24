@@ -308,7 +308,7 @@ FUN_00b6dd80::FUN_00b6dd80()
 }
 
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 void* NiMalloc(unsigned int size);
 
 template <class T> struct BaseArray

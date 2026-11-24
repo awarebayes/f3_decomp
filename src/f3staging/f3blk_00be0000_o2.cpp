@@ -15632,7 +15632,7 @@ GetDebrisManager()->GetFont(0)->icons.FUN_00a1bfa0(true);
 
 // @f3 0x00beece0 (community match, verified in this file)
 namespace fnv_00a0a410 {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" int __cdecl sscanf(const char*, const char*, ...);
 
 inline unsigned int __cdecl FUN_0044a670(const char* value) { return strlen(value); }
@@ -37380,7 +37380,7 @@ f3m_00be5770::Buffer::int_type f3m_00be5770::Buffer::FUN_00be5770()
 
 // @f3 0x00be7720 (community match, verified in this file)
 namespace f3m_00be7720 {
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern unsigned int DAT_01090bb0;
 extern int DAT_0117958c;
 struct Timer { unsigned int* FUN_004241e0(); };
@@ -39550,8 +39550,8 @@ extern void __cdecl FUN_00bedc80(Tile1eb0*);
 extern void __cdecl FUN_00bed4f0(Tile1eb0*);
 extern Tile1eb0* __cdecl FUN_0061a5b0();
 extern "C" int __cdecl strcmp(const char*,const char*);
-extern "C" int __cdecl strcpy_s(char*,unsigned int,const char*);
-extern "C" int __cdecl strcat_s(char*,unsigned int,const char*);
+extern "C" int __cdecl strcpy_s(char*,size_t,const char*);
+extern "C" int __cdecl strcat_s(char*,size_t,const char*);
 extern "C" char* __cdecl strtok(char*,const char*);
 extern "C" double __cdecl atof(const char*);
 extern const char DAT_00dd1dc4[];

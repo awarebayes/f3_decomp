@@ -6509,7 +6509,7 @@ void FUN_00644490(void* object){
 // @f3 0x00641d00 (community match, verified in this file)
 namespace f3m_00641d00 {
 namespace hacking_menu_constructor {
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 struct FUN_00bfcfe0 {FUN_00bfcfe0();virtual ~FUN_00bfcfe0();unsigned int unk04,unk08,unk0c,unk10,unk14,unk18;unsigned char unk1c,unk1d;unsigned short unk1e;unsigned int unk20,unk24;};
 struct FUN_00631d20 {unsigned int unk00,unk04,unk08,unk0c,unk10,unk14,unk18,unk1c,unk20,unk24,unk28;FUN_00631d20();~FUN_00631d20();};
 struct FUN_00409c20 {unsigned int id;unsigned char valid,unk05;unsigned short unk06;unsigned int state;FUN_00409c20();~FUN_00409c20(){}__forceinline FUN_00409c20& operator=(const FUN_00409c20& other){id=other.id;valid=other.valid;state=other.state;return *this;}};
@@ -9709,7 +9709,7 @@ void __cdecl FUN_00645440(Tile* apTile, float afMeterPercent, int aeJustify, int
 // @f3 0x00641fc0 (community match, verified in this file)
 extern unsigned DAT_00f6315c,DAT_00f63150,DAT_00f63168;
 namespace f3m_00641fc0 {
-extern "C" unsigned __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 namespace intro2105 {
 struct FUN_00637e00 {
  FUN_00637e00(const char*);void FUN_00631d70();~FUN_00637e00(){FUN_00631d70();}

@@ -155,5 +155,5 @@ class BGSImpactData
     void* m_pSecondaryImpactSound;
     char ImpactDecalInfo[36];
 };
-extern "C" void* __cdecl memset(void* data, int value, unsigned int size);
+extern "C" void* __cdecl memset(void* data, int value, size_t size);
 #endif

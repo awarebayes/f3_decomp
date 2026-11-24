@@ -2511,7 +2511,7 @@ Obj_b10008* FUN_00ba82a0_cls::FUN_00ba82a0(int arg)
     return p;
 }
 
-extern "C" int __cdecl strncmp(const char*, const char*, unsigned int);
+extern "C" int __cdecl strncmp(const char*, const char*, size_t);
 
 struct NiRTTI_S
 {
@@ -18366,7 +18366,7 @@ extern double DAT_01029790;
 
 extern "C" int __cdecl rand();
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 
 extern float __cdecl Gaussian(float, float);
 

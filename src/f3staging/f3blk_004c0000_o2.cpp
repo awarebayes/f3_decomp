@@ -20765,7 +20765,7 @@ void FUN_004d72b0(F3Vec3* pos)
 }   // namespace f3m_004d72b0
 
 // @f3 0x004c2d70 (community match, verified in this file)
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace n4c2d70 {
 struct TlsBlock { char pad[0x29c]; int warnings; };
 extern __declspec(thread) TlsBlock g_tls;
@@ -22501,7 +22501,7 @@ void Cell930::FUN_004db930(NiPointer<BSRenderedTexture>* pspOut)
 
 // @f3 0x004d2e60 (community match, verified in this file)
 namespace f3m_004d2e60 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct File2429 {
  int unk000;
  int unk004;
@@ -22789,7 +22789,7 @@ bool Land2429::FUN_004d2e60(File2429* file) {
 #include <malloc.h>
 #include <string.h>
 namespace f3m_004c33b0 {
-extern "C" void* __cdecl _alloca(unsigned);
+extern "C" void* __cdecl _alloca(size_t);
 namespace task2444 {
 struct File {
 unsigned unk000;
@@ -30676,7 +30676,7 @@ bool CellShell::FUN_004dec50()
 }
 
 // @f3 0x004d9470 (community match, verified in this file)
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" unsigned long __cdecl _byteswap_ulong(unsigned long);
 namespace Task1909 {
 struct CellFile {

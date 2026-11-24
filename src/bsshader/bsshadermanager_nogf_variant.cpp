@@ -754,7 +754,7 @@ inline bool IsExactB(Shader* s, RTTIStub* r)
 Shader* __cdecl FUN_00b55560(void*);
 void __cdecl UpdateShaderProperty(AVObj* obj, bool a1, bool a2, bool a3);
 void* __cdecl NiMalloc(unsigned int);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 void* __cdecl _fnv_zlib_memset(void*, int, unsigned int);
 struct MemoryManager
 {

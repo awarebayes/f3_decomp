@@ -1,7 +1,7 @@
 // bsshader/watershader.cpp: WaterShader, MaterialShader, WaterShaderLoader, WaterShaderReleaser and more (12 functions)
 #include "f3_common.h"
 #include "watershader_decls.h"
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 #pragma intrinsic(memset)
 
 // Creates the vertex and pixel shader constant maps once, registers their constants and stores the resulting handles in globals.

@@ -3595,7 +3595,7 @@ struct FloatSetting539
 extern BoolSetting539 DAT_011d8928;
 extern FloatSetting539 DAT_011d2178;
 extern const char DAT_010721f4[];
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 unsigned int __cdecl FUN_00457fe0();
 struct ActorAccess539
 {

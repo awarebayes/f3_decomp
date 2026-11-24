@@ -7737,7 +7737,7 @@ FUN_00425870::FUN_00425870(void* shader, int arg) : ShaderBase_425870(arg)
 }   // namespace f3m_00425870
 
 // @f3 0x0042a700 (community match, verified in this file)
-extern "C" int __cdecl memcpy_s(void* dst, unsigned int dstSize, const void* src, unsigned int count);
+extern "C" int __cdecl memcpy_s(void* dst, size_t dstSize, const void* src, size_t count);
 namespace f3m_0042a700 {
 class StrHeap
 {
@@ -10826,7 +10826,7 @@ void Mgr::FUN_004348e0(Ref* ref, Cell* cell, Obj3* obj3, bool skip)
 
 // @f3 0x00420d70 (community match, verified in this file)
 namespace f3m_00420d70 {
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 
 class BSExtraData
 {
@@ -13308,7 +13308,7 @@ bool Owner1007::FUN_00426670(int first, int second) {
 
 // @f3 0x00432120 (community match, verified in this file)
 extern "C" int __cdecl tolower(int c);
-extern "C" unsigned int __cdecl strlen(const char* s);
+extern "C" size_t __cdecl strlen(const char* s);
 namespace f3m_00432120 {
 extern __declspec(thread) int tls_memContext_432120;
 struct AutoMemContext432120 {
@@ -23516,7 +23516,7 @@ FactoryObject1519_43cda0* FUN_0043cda0(unsigned char type)
 
 // @f3 0x0042a040 (community match, verified in this file)
 namespace f3m_0042a040 {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct FUN_0042a040_Node {
     char* text;
     FUN_0042a040_Node* next;
@@ -23615,7 +23615,7 @@ public:
 };
 
 namespace f3m_00420820 {
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 }
 
 __declspec(noinline) DecalEntry420820* ExtraDecalRefs::FUN_0041f440(int key)
@@ -42038,7 +42038,7 @@ void PtrArray_43eb::FUN_0043eb00()
 // @f3 0x0042fe30 (community match, verified in this file)
 namespace f3m_0042fe30 {
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 
 struct StrHeap {
     void FUN_0086ba60(void* p);

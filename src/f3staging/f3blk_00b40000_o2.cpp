@@ -1375,7 +1375,7 @@ int ShaderSelector::FUN_00b5c2c0(NiGeometry* geom, ShadowSceneLight* light, unsi
 // @f3 0x00b50e50 (community match, verified in this file)
 extern int DAT_0116efb0;
 namespace f3m_00b50e50 {
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long*);
 struct PixelRef

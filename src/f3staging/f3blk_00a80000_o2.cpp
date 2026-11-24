@@ -328,7 +328,7 @@ int __thiscall FUN_00a80eb0_Object::FUN_00a80eb0(int value, int fallback) {
 
 // @f3 0x00a9ea90 (community match, verified in this file)
 #include <math.h>
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
 class NiPoint3
 {
@@ -729,7 +729,7 @@ void A9DDE0_Obj::FUN_00a9dde0(A9DDE0_Obj* dst, int unused)
 // @f3 0x00a9e3b0 (community match, verified in this file)
 namespace f3m_00a9e3b0 {
 namespace fo3_00a9e3b0 {
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 class NiPoint3
 {
   public:

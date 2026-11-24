@@ -1520,7 +1520,7 @@ void RemovePostProcess(S_00a63540_PostProcess apPostProcess)
 }
 }  // namespace fnv_00a63540
 
-extern "C" int __cdecl strcpy_s(char* destination, unsigned int size, const char* source);
+extern "C" int __cdecl strcpy_s(char* destination, size_t size, const char* source);
 extern "C" char* __cdecl strtok_s(char* text, const char* delimiters, char** context);
 extern long __cdecl FUN_00eca6d3(const char* text);
 
@@ -3672,7 +3672,7 @@ void FUN_00a647f0_shell::LoadGroups()
 }
 }  // namespace fnv_00a647f0
 
-extern "C" unsigned int __cdecl strlen(const char* pcStr);
+extern "C" size_t __cdecl strlen(const char* pcStr);
 
 struct NiBinaryStreamStandIn
 {
@@ -4627,7 +4627,7 @@ void __fastcall FUN_00a65300(FUN_00a65300_holder* s)
 
 namespace fnv_00a65400 {
 extern "C" char* __cdecl strstr(const char* pStr, const char* pSub);
-extern "C" int __cdecl strcpy_s(char* pDest, unsigned int uiSize, const char* pSrc);
+extern "C" int __cdecl strcpy_s(char* pDest, size_t uiSize, const char* pSrc);
 int __cdecl FUN_00404d80(char* pDest, unsigned int uiSize, const char* pSrc);
 
 struct NiBinaryStreamStandIn
@@ -4989,8 +4989,8 @@ void ObjectLoadStream::LoadTopObjects()
 
 namespace fnv_00a65800 {
 extern "C" int __cdecl strcmp(const char* pA, const char* pB);
-extern "C" int __cdecl strcpy_s(char* pDest, unsigned int uiSize, const char* pSrc);
-extern "C" int __cdecl strcat_s(char* pDest, unsigned int uiSize, const char* pSrc);
+extern "C" int __cdecl strcpy_s(char* pDest, size_t uiSize, const char* pSrc);
+extern "C" int __cdecl strcat_s(char* pDest, size_t uiSize, const char* pSrc);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long volatile* plAddend);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile* plAddend);
 

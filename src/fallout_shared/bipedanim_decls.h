@@ -927,7 +927,7 @@ class Interface
     static void ClearGunScope();
     static void InitGunScope(TESModel*);
 };
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 template <class T> class NiTNewInterface
 {
@@ -976,7 +976,7 @@ const NiFixedString& FUN_004ab220();
 NiAVObject* FUN_004ade00(NiNode*, const NiFixedString&);
 void FUN_004add50(char*, const char*, unsigned int);
 int FUN_00404dc0(const char*, const char*);
-extern "C" int __cdecl _strnicmp(const char*, const char*, unsigned int);
+extern "C" int __cdecl _strnicmp(const char*, const char*, size_t);
 template <class T> unsigned int BSStringLength(const T*);
 
 class InventoryChanges
@@ -1184,7 +1184,7 @@ class TaskQueueInterface
 };
 char* FUN_0040ab30(char*, int);
 int strcat_s(char*, unsigned int, const char*);
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 class FileFinder
 {
   public:

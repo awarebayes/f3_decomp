@@ -7,8 +7,8 @@
 #include "../../include/fnv_asm_helpers.h"
 
 // @f3 0x007a6880 (community match, verified in this file)
-extern "C" void* memcpy(void*, const void*, unsigned);
-extern "C" void* __cdecl _alloca(unsigned);
+extern "C" void* memcpy(void*, const void*, size_t);
+extern "C" void* __cdecl _alloca(size_t);
 struct Vec { float x,y,z; Vec() {} Vec(float a,float b,float c):x(a),y(b),z(c) {} Vec operator-(const Vec& b) const { return Vec(x-b.x,y-b.y,z-b.z); } float SquaredLength() const { return x*x+y*y+z*z; } Vec& operator=(const Vec& b) { memcpy(this,&b,12);return *this; } };
 extern Vec DAT_011f426c;
 struct Object {

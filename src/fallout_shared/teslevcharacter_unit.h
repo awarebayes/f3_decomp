@@ -161,8 +161,8 @@ class LeveledObject
     void SwapEndian();
 };
 extern LeveledObject* DAT_011c8e64;
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 void* operator new(size_t);
-extern "C" void* _alloca(unsigned int);
+extern "C" void* _alloca(size_t);
 #pragma intrinsic(_alloca)
 #endif

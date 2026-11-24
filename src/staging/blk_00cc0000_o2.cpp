@@ -21281,7 +21281,7 @@ void* FUN_00cdb3c0_class::FUN_00cdb3c0()
     return unk38;
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void* dest, int val, unsigned int count) throw();
+extern "C" void* __cdecl fnv_zlib_memset(void* dest, int val, size_t count) throw();
 
 struct hkMemoryAllocator {
     virtual void vfn0() throw() = 0;

@@ -82,7 +82,7 @@ struct ClipMatrix
         out.z = entries[col][2];
     }
 };
-extern "C" void* __cdecl memmove(void*, const void*, unsigned int);
+extern "C" void* __cdecl memmove(void*, const void*, size_t);
 struct SSNode
 {
     virtual void v0();
@@ -441,7 +441,7 @@ int __cdecl FUN_00a908d0(wa908d0::ConstraintInstance* inst, wa908d0::Vec4* pivot
 // @f3 0x00a82c50 (community match, verified in this file)
 extern const unsigned char DAT_00e88470[128];
 namespace f3m_00a82c50 {
-extern "C" void* __cdecl memcpy(void* dst, const void* src, unsigned int size);
+extern "C" void* __cdecl memcpy(void* dst, const void* src, size_t size);
 
 namespace w_a82c50 {
 

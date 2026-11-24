@@ -6999,7 +6999,7 @@ typedef void* HKEY_t;
 extern "C" __declspec(dllimport) long __stdcall RegSetValueExA(HKEY_t hKey, const char* lpValueName, unsigned long Reserved,
                                          unsigned long dwType, const unsigned char* lpData, unsigned long cbData);
 int __cdecl FUN_00c33090(int);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 
 struct RegSetting {
     int unk00;
@@ -7127,7 +7127,7 @@ typedef unsigned long DWORD;
 typedef unsigned char BYTE;
 extern "C" __declspec(dllimport) long __stdcall RegQueryValueExA(HKEY hKey, const char* lpValueName, DWORD* lpReserved, DWORD* lpType, BYTE* lpData, DWORD* lpcbData);
 
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 
 struct Setting {
     int unk00;
@@ -11383,7 +11383,7 @@ void __thiscall FUN_00c49f10_Obj::FUN_00c49f10() {
     }
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" char* __cdecl strstr(const char*, const char*);
 
 struct RangeNameObj {

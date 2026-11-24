@@ -2126,7 +2126,7 @@ unsigned int __stdcall FUN_00e84d00(FUN_00e84b60_prog* pkProgram, NiShaderConsta
 }
 }  // namespace fnv_00e84d00
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern "C" double __cdecl cos(double);
 
 class NiPoint3_ext : public NiPoint3

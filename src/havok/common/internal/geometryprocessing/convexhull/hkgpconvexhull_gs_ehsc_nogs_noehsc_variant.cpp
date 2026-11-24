@@ -5259,7 +5259,7 @@ extern "C" __m128 __cdecl _mm_add_ss(__m128 a, __m128 b);
 extern "C" __m128 __cdecl _mm_shuffle_ps(__m128 a, __m128 b, unsigned int imm);
 extern "C" __m128 __cdecl _mm_xor_ps(__m128 a, __m128 b);
 extern "C" void __cdecl _mm_store_ss(float* p, __m128 a);
-extern "C" void* __cdecl memcpy(void* d, const void* s, unsigned int n);
+extern "C" void* __cdecl memcpy(void* d, const void* s, size_t n);
 
 extern double DAT_01032980;
 extern double DAT_0101dae8;

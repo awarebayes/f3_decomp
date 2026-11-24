@@ -6,7 +6,7 @@
 // @f3 0x00552e30 (community match, verified in this file)
 #include <string.h>
 namespace f3m_00552e30 {
-extern "C" void* __cdecl _alloca(unsigned int size);
+extern "C" void* __cdecl _alloca(size_t size);
 namespace Small552e30 {
 struct String {
     char* value;

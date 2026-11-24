@@ -525,7 +525,7 @@ void FUN_00e9ed50_cls::FUN_00e9ed50(NiStream& kStream)
 typedef unsigned int u32;
 typedef unsigned short u16;
 
-extern "C" unsigned int __cdecl strlen(const char* s);
+extern "C" size_t __cdecl strlen(const char* s);
 void* __cdecl FUN_00aa1070(unsigned int size);
 int __cdecl FUN_00a305b0(char* buf, unsigned int count, const char* fmt, ...);
 

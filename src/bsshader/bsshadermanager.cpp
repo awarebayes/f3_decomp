@@ -2669,7 +2669,7 @@ void __cdecl UpdateShaderProperty(AVObj* obj, bool abUnused, bool abFlag8, bool 
 }
 
 void* __cdecl NiMalloc(unsigned int);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 void* __cdecl _fnv_zlib_memset(void*, int, unsigned int);
 struct MemoryManager
 {
@@ -4299,7 +4299,7 @@ struct AccumPointerInit
     }
 };
 extern AccumPointerInit* accumulators;
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 __forceinline void ClearCallbackTables()
 {
     memset(DAT_011f9f40 + 0, 0, 8);
@@ -4665,7 +4665,7 @@ struct NiBinaryExtraData : NiObject
 extern const char DAT_0102bf34[];
 extern const char DAT_010ad7a8[];
 extern const char DAT_010ad730[];
-extern "C" void* memmove(void*, const void*, unsigned int);
+extern "C" void* memmove(void*, const void*, size_t);
 extern "C" void* FUN_00ec61c0(void*, int, unsigned int);
 // Copies tangent and binormal data from extra data when present; otherwise computes per-vertex vectors from UVs and normals and updates geometry data.
 // @f3 0x00adaf60 (community match, verified in this file)

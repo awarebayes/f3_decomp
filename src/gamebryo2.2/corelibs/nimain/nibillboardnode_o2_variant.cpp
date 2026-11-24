@@ -648,7 +648,7 @@ void PropTarget::FUN_00a7e890(StrArr* array)
     array->Add(FUN_00a7db60("m_eMode", uiFlags));
 }
 
-extern "C" unsigned int __cdecl strlen(const char* s);
+extern "C" size_t __cdecl strlen(const char* s);
 
 void* __cdecl FUN_00aa1070(unsigned int size);
 int __cdecl FUN_00a305b0(char* buffer, unsigned int size, const char* format, ...);

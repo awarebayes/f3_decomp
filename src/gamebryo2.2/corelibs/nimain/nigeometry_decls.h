@@ -243,7 +243,7 @@ class NiPoint3
     float x, y, z;
     static const NiPoint3 ZERO;
 };
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 class NiBound
 {

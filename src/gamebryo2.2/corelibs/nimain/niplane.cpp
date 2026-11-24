@@ -22,7 +22,7 @@ void NiSphere::SaveBinary(NiStream& stream)
     stream.output->Write(&radius);
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 void* __cdecl _NiMalloc(unsigned int);
 int __cdecl _NiSprintf(char*, unsigned int, const char*, ...);
 struct FUN_00a69a60_Owner

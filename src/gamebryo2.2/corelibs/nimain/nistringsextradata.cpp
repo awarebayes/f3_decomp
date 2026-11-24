@@ -97,7 +97,7 @@ struct NiExtraDataFUN_00a7b330_shell
 
 void* __cdecl _NiMalloc(unsigned int);
 int __cdecl _strcpy_s(char*, unsigned int, const char*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 
 // @fnv 0x00a94880
 void __thiscall FUN_00a94880_shell::CopyStringsExtraData(NiStringsExtraData* pDest, void* pCloning)

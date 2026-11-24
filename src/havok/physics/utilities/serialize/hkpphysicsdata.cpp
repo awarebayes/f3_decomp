@@ -773,7 +773,7 @@ void HostType::FUN_00d4c2d0(ClientType* client, unsigned char flag)
 }
 
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
 struct Value
 {

@@ -535,7 +535,7 @@ static __forceinline void FNV_WriteField(FNV_WriteStream* pWriter, void* pData, 
 }
 __declspec(dllimport) long __stdcall InterlockedIncrement(long* p);
 __declspec(dllimport) long __stdcall InterlockedDecrement(long* p);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 void* __cdecl NiMalloc(unsigned int);
 class NiRefObject
 {

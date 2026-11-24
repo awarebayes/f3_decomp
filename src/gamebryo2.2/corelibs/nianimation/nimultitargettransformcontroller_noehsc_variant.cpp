@@ -70,7 +70,7 @@ extern MemoryManager _g_memoryManager;
 void* NiMalloc(unsigned int);
 
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long*);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 
 inline void* operator new(size_t n)
 {

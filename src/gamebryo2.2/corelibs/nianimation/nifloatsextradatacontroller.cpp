@@ -262,7 +262,7 @@ void ControllerStub::FUN_00a4f1e0(StreamStub* stream)
 }
 
 extern char* DAT_0109b220;
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile*);
 struct NiGlobalStringTable
 {

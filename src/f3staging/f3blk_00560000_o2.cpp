@@ -28815,7 +28815,7 @@ void __stdcall FUN_0056b0a0(World* world)
 // @f3 0x005669e0 (community match, verified in this file)
 #include <string.h>
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 namespace W06_2244 {
 struct Reader {
@@ -35214,7 +35214,7 @@ void Race::FUN_00560c20() {
 // @f3 0x00563730 (community match, verified in this file)
 #include <stdlib.h>
 namespace f3m_00563730 {
-extern "C" void* __cdecl _alloca(unsigned int size);
+extern "C" void* __cdecl _alloca(size_t size);
 
 namespace f3m_00563730 {
 
@@ -35426,7 +35426,7 @@ bool f3m_00563730::TESSkill::FUN_00563730(TESFile* file)
 // @f3 0x00563f90 (community match, verified in this file)
 #include <string.h>
 namespace f3m_00563f90 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 int FUN_00ec65a6(char* dst, unsigned int size, const char* src);
 

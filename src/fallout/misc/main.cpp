@@ -7405,7 +7405,7 @@ extern HandlerInit* handlerInstance;
 extern int DAT_011a2ffc;
 int* FUN_0086d480();
 const char* PrepareScriptMessage(const char*, bool);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct PointInit
 {
     float x, y, z;

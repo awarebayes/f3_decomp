@@ -804,8 +804,8 @@ class ActorValue
 };
 bool FUN_0066eba0(ActorValue__Index);
 int Warning(const char*, ...);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
+extern "C" void* __cdecl _alloca(size_t);
 
 union SETTING_VALUE
 {

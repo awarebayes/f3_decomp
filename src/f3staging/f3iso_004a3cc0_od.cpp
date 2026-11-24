@@ -169,7 +169,7 @@ unsigned GetChunkSize(){return chunkSize;}
     bool FUN_00448800(unsigned int*);
     bool FUN_00447d60(void*, unsigned int);
 };
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 class BGSListForm;
 class TESBoundObject;
 class TESForm

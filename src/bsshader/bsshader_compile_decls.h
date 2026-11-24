@@ -7,11 +7,11 @@ class IMemoryHeap;
 #include "MemoryManager.h"
 
 extern MemoryManager g_memoryManager;
-extern "C" unsigned int __security_cookie;
-extern "C" void __fastcall __security_check_cookie(unsigned int);
-extern "C" int strcpy_s(char*, unsigned int, const char*);
-extern "C" int strcat_s(char*, unsigned int, const char*);
-extern "C" int sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" uintptr_t __security_cookie;
+extern "C" void __fastcall __security_check_cookie(uintptr_t);
+extern "C" int strcpy_s(char*, size_t, const char*);
+extern "C" int strcat_s(char*, size_t, const char*);
+extern "C" int sprintf_s(char*, size_t, const char*, ...);
 struct _iobuf;
 extern "C" _iobuf* fopen(const char*, const char*);
 extern "C" unsigned int fwrite(const void*, unsigned int, unsigned int, _iobuf*);

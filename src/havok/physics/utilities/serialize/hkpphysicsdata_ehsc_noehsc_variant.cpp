@@ -500,7 +500,7 @@ struct HostType
     ArrayType m_0c;
     void FUN_00d4c2d0(ClientType*, unsigned char);
 };
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct Value
 {
     BoolResult FUN_00c9bff0();

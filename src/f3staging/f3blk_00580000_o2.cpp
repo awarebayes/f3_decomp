@@ -10725,9 +10725,9 @@ void Owner::FUN_00586a40(float* quantities,float time) {
 namespace f3m_0058c410 {
 namespace Task1133 {
 struct String { char* data; void FUN_004019c0(const char*,unsigned int); };
-extern "C" int __cdecl strcpy_s(char*,unsigned int,const char*);
+extern "C" int __cdecl strcpy_s(char*,size_t,const char*);
 extern "C" char* __cdecl strrchr(const char*,int);
-extern "C" int __cdecl sprintf_s(char*,unsigned int,const char*,...);
+extern "C" int __cdecl sprintf_s(char*,size_t,const char*,...);
 const char* __cdecl FUN_0058c410(String& result,const char* path) {
     char normalPath[260];
     char sourcePath[260];
@@ -34508,8 +34508,8 @@ extern "C" __declspec(dllimport) void __stdcall EnterCriticalSection(void*);
 extern "C" __declspec(dllimport) void __stdcall LeaveCriticalSection(void*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long volatile*);
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl _strnicmp(const char*, const char*, unsigned int);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl _strnicmp(const char*, const char*, size_t);
 extern "C" double __cdecl floor(double);
 
 extern __declspec(thread) unsigned DAT_0117c298;

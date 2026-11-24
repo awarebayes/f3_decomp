@@ -68,7 +68,7 @@ class ActorMover
     unsigned int GetCurrentMoveModeType();
 };
 extern "C" __declspec(dllimport) void* __stdcall CreateEventA(void*, int, int, const char*);
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 extern "C" unsigned int gPreferredMoveMode;
 
 // @fnv 0x008c7290

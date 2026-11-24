@@ -4527,7 +4527,7 @@ void Owner507770::FUN_00507770(void* input) {Owner507770* source=FUN_00c0050a(in
 extern const char DAT_00dd4150[];
 namespace f3m_00519fb0 {
 extern "C" int __cdecl isalnum(int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 struct ScriptLineBuffer
 {
@@ -31885,7 +31885,7 @@ haveName:
 #include <stdlib.h>
 extern unsigned DAT_00f4a768,DAT_00f4a9fc,DAT_00f4aa80;
 namespace f3m_00503970 {
-extern "C" void* __cdecl memset(void*,int,unsigned);
+extern "C" void* __cdecl memset(void*,int,size_t);
 namespace world2075 {
 struct TypeGroupInfo {unsigned type,unk04,label,groupType;};
 struct FileReader {
@@ -32860,7 +32860,7 @@ extern Heap DAT_01090a78;
 }
 
 extern "C" int __cdecl _stricmp(const char*, const char*);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 class WSpace_3cd0
 {
@@ -34574,7 +34574,7 @@ void State::FUN_005168c0(void* key, double value) {
 }
 
 // @f3 0x0050b300 (community match, verified in this file)
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace f3m_0050b300 {
 struct MemoryManager300 { void* FUN_0086b930(unsigned int size); void FUN_0086ba60(void* memory); };
 extern MemoryManager300 DAT_01090a78;
@@ -37299,7 +37299,7 @@ struct __declspec(align(8)) Point1355{float x,y;void FUN_004a22c0(float,float);}
 #include <malloc.h>
 #include <stdlib.h>
 namespace f3m_00509960 {
-extern "C" void* __cdecl _alloca(unsigned);
+extern "C" void* __cdecl _alloca(size_t);
 namespace Load9960 {
 struct File { int unk000; int unk004; int unk008; int unk00C; int unk010; int unk014; int unk018; int unk01C; int unk020; int unk024; int unk028; int unk02C; int unk030; int unk034; int unk038; int unk03C; int unk040; int unk044; int unk048; int unk04C; int unk050; int unk054; int unk058; int unk05C; int unk060; int unk064; int unk068; int unk06C; int unk070; int unk074; int unk078; int unk07C; int unk080; int unk084; int unk088; int unk08C; int unk090; int unk094; int unk098; int unk09C; int unk0A0; int unk0A4; int unk0A8; int unk0AC; int unk0B0; int unk0B4; int unk0B8; int unk0BC; int unk0C0; int unk0C4; int unk0C8; int unk0CC; int unk0D0; int unk0D4; int unk0D8; int unk0DC; int unk0E0; int unk0E4; int unk0E8; int unk0EC; int unk0F0; int unk0F4; int unk0F8; int unk0FC; int unk100; int unk104; int unk108; int unk10C; int unk110; int unk114; int unk118; int unk11C; int unk120; int unk124; int unk128; int unk12C; int unk130; int unk134; int unk138; int unk13C; int unk140; int unk144; int unk148; int unk14C; int unk150; int unk154; int unk158; int unk15C; int unk160; int unk164; int unk168; int unk16C; int unk170; int unk174; int unk178; int unk17C; int unk180; int unk184; int unk188; int unk18C; int unk190; int unk194; int unk198; int unk19C; int unk1A0; int unk1A4; int unk1A8; int unk1AC; int unk1B0; int unk1B4; int unk1B8; int unk1BC; int unk1C0; int unk1C4; int unk1C8; int unk1CC; int unk1D0; int unk1D4; int unk1D8; int unk1DC; int unk1E0; int unk1E4; int unk1E8; int unk1EC; int unk1F0; int unk1F4; int unk1F8; int unk1FC; int unk200; int unk204; int unk208; int unk20C; int unk210; int unk214; int unk218; int unk21C; int unk220; int unk224; int unk228; int unk22C; int unk230; int unk234; int unk238; int unk23C; int unk240; int unk244; int unk248; int unk24C; int unk250; int unk254; int unk258; unsigned chunkSize; int unk260; int unk264; int unk268; int unk26C; int unk270; int unk274; int unk278; int unk27C; int unk280; int unk284; int unk288; int unk28C; int unk290; int unk294; unsigned char unk298; bool swap; unsigned FUN_00448cc0(); unsigned FUN_004487d0(); bool FUN_00447020(); void FUN_00447d60(void*,unsigned); };
 struct Owner;
@@ -37347,7 +37347,7 @@ void Locals::FUN_00518670(Buffer* b){
 #include <malloc.h>
 #include <string.h>
 namespace f3m_00507890 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace task1395 {
 struct File {
 unsigned int u000;
@@ -37631,7 +37631,7 @@ return true;
 // @f3 0x00516150 (community match, verified in this file)
 #include <stdlib.h>
 namespace f3m_00516150 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" void _ReadWriteBarrier();
 namespace Load516 {
 struct Stream;
@@ -37863,7 +37863,7 @@ bool Load516::Owner::FUN_00516150(Stream* stream) {
 
 // @f3 0x0050c200 (community match, verified in this file)
 namespace f3m_0050c200 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" unsigned long __cdecl _byteswap_ulong(unsigned long);
 namespace task1597 {
 inline void Swap(unsigned long& v){v=_byteswap_ulong(v);}
@@ -38478,7 +38478,7 @@ bool Script5171::FUN_005171c0(Other5171* other)
 
 // @f3 0x00506100 (community match, verified in this file)
 namespace f3m_00506100 {
-extern "C" void* __cdecl _alloca(unsigned);
+extern "C" void* __cdecl _alloca(size_t);
 struct File506100 {
  unsigned unk000;
  unsigned unk004;
@@ -43379,7 +43379,7 @@ namespace f3m_00509150 {
 namespace f3m_n0_ns {
 namespace f3m_00509150 {
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct File50 {
     int unk000, unk004, unk008, unk00C, unk010, unk014, unk018, unk01C;

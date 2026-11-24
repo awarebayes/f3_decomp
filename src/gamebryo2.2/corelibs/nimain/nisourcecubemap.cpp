@@ -229,7 +229,7 @@ void Host61480::AppendGlobalString(StrArr* pkStrings)
 }
 
 namespace fnv_00a60ba0 {
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 __declspec(dllimport) long __stdcall InterlockedIncrement(long volatile* p) throw();
 __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile* p) throw();
 
@@ -1274,8 +1274,8 @@ void ShaderPass_a60::EnsureProgramCreated()
     }
 }
 
-extern "C" unsigned int __cdecl strlen(const char* s);
-extern "C" void* __cdecl memset(void* d, int v, unsigned int n);
+extern "C" size_t __cdecl strlen(const char* s);
+extern "C" void* __cdecl memset(void* d, int v, size_t n);
 
 struct S00a60cc0_Ref
 {

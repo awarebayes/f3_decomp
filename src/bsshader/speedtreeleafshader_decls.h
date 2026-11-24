@@ -60,7 +60,7 @@ template <> class NiPointer<NiD3DPass>
     ~NiPointer();
 };
 
-extern "C" void* __cdecl fnv_zlib_memset(void* destination, int value, unsigned int size);
+extern "C" void* __cdecl fnv_zlib_memset(void* destination, int value, size_t size);
 
 extern "C"
 {

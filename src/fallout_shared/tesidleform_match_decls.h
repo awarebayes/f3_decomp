@@ -238,8 +238,8 @@ class FUN_005a71d0
     unsigned int previous;
     void FUN_00462230();
 };
-extern "C" void* __cdecl memset(void*, int, unsigned int);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
+extern "C" void* __cdecl _alloca(size_t);
 class TESDataHandler
 {
   public:

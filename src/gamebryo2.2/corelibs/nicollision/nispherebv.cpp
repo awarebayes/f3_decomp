@@ -373,7 +373,7 @@ bool SphereBVLite::CheckSweptSphereOverlap(float fTime, const BoundVolLite& kBV0
     return fCenterDistSqr <= fRadiusSumSqr;
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" void* __cdecl FUN_00aa1070(unsigned int);
 extern "C" int __cdecl FUN_00a305b0(char*, unsigned int, const char*, ...);
 extern const char str_010f18a4[];

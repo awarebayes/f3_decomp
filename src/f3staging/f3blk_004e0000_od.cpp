@@ -9,7 +9,7 @@ extern float FUN_00dbea4c;
 #include <malloc.h>
 #include <stdlib.h>
 namespace f3m_004fed60 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct Input {
 unsigned unk000;
 unsigned unk004;
@@ -434,7 +434,7 @@ bool Obj::FUN_004fed60(Input* file) {
 #include <math.h>
 extern float FUN_00dcdb90;
 namespace f3m_004ec240 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct V { float x,y,z; };
 struct Entry { V pos; unsigned short angle; unsigned char kind,flags; void FUN_00ab00a0(float); };
 struct Base { int unk00; unsigned char type; bool FUN_004add50(unsigned); };

@@ -129,7 +129,7 @@ S5a* S5a::ValidateScriptNameTables()
 }
 
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 struct ScriptVariableData
 {
@@ -512,7 +512,7 @@ FUN_005ae5c0::~FUN_005ae5c0()
 }  // namespace fnv_005ae5c0
 
 extern "C" int __cdecl isalnum(int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 struct ScriptLineBuffer
 {

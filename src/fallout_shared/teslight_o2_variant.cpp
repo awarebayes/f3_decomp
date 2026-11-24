@@ -10,7 +10,7 @@ class TESSound : public TESForm
 };
 #include "teslight_r2d_types_TESObjectLIGH.h"
 #include "teslight_scene.h"
-extern "C" void* __cdecl memset(void* destination, int value, unsigned int size);
+extern "C" void* __cdecl memset(void* destination, int value, size_t size);
 extern "C" const char DAT_01029064[];
 extern int __cdecl Warning(const char* format, ...);
 extern float DAT_010249d8;

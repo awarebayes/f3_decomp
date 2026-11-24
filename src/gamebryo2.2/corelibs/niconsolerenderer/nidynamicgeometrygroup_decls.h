@@ -3,7 +3,7 @@
 #define NIDYNAMICGEOMETRYGROUP_DECLS_H
 #include "f3_common.h"
 void* __cdecl _NiMalloc(unsigned int);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 class NiGeometryGroup
 {
   public:

@@ -3566,7 +3566,7 @@ int copy_code_caller(BvTree* tree, CodeCopySource* source, BvArray<int>* refs, F
     return FUN_00e08380(tree, source, refs, destination);
 }
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 struct ObjectWriter
 {

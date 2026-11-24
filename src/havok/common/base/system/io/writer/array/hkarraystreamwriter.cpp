@@ -585,7 +585,7 @@ namespace fnvc_adapt {
 extern "C" hkMemoryRouterD46B& __cdecl FUN_00c85750() throw();
 }
 void __cdecl FUN_00c908c0(hkMemoryAllocatorD46B& kAlloc, void* apvArray, int aiNumElements, int iSizeElem) throw();
-extern "C" void* __cdecl fnv_zlib_memset(void* pvDst, int iValue, unsigned int uiSize) throw();
+extern "C" void* __cdecl fnv_zlib_memset(void* pvDst, int iValue, size_t uiSize) throw();
 
 class hkArrayD46B
 {

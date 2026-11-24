@@ -15783,7 +15783,7 @@ extern int DAT_00f5ea28;
 struct Mgr { void FUN_00429640(int a, int b, int c); };
 extern Mgr* DAT_0106ca70;
 void __stdcall FUN_004fc020(int a, int b);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 struct A {
     ~A() { FUN_00472f60(); }
     void FUN_00472f60();

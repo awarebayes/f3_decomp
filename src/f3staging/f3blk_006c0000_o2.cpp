@@ -66,7 +66,7 @@ void FUN_006d4630()
 
 // @f3 0x006d2e20 (community match, verified in this file)
 extern "C" int __cdecl vsprintf(char* apBuffer, const char* apFormat, char* apArgs);
-extern "C" int __cdecl strcpy_s(char* apDest, unsigned int auiSize, const char* apSrc);
+extern "C" int __cdecl strcpy_s(char* apDest, size_t auiSize, const char* apSrc);
 
 struct RHeapStandIn6d2e {
     void* Allocate(unsigned int auiSize);
@@ -296,7 +296,7 @@ void __cdecl FUN_006d1930(unsigned int first, unsigned int last) {
 }
 
 // @f3 0x006d47a0 (community match, verified in this file)
-extern "C" int __cdecl strcat_s(char*,unsigned int,const char*);
+extern "C" int __cdecl strcat_s(char*,size_t,const char*);
 extern const char DAT_00e0f198[];
 struct FUN_006d47a0 {
     void FUN_006d4030(void*,char*);
@@ -2722,7 +2722,7 @@ bool __cdecl FUN_006c0d10(bool value) { if(DAT_010791ce) return false; if(value)
 extern char DAT_00e0828c[];
 namespace f3m_006d4030 {
 namespace SaveFileExtension {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 int __cdecl FUN_00c007fc(char*,unsigned int,const char*);
 int __cdecl FUN_00c009eb(const char*,const char*);
 int __cdecl FUN_00c00fcc(char*,unsigned int,const char*);
@@ -3892,7 +3892,7 @@ Obj6cda90* __cdecl FUN_006cda90(int a1, int a2, int a3)
 // @f3 0x006d40c0 (community match, verified in this file)
 extern void* DAT_00f62c88;
 namespace f3m_006d40c0 {
-extern "C" int __cdecl sprintf_s(char* apDest, unsigned int auiSize, const char* apFormat, ...);
+extern "C" int __cdecl sprintf_s(char* apDest, size_t auiSize, const char* apFormat, ...);
 extern "C" int __cdecl FUN_006d27b0(void* apArg);
 extern "C" void __cdecl FUN_00619700(const char* apText, int a2, int a3, int a4, int a5, int a6, void* apObj, int a8);
 
@@ -6282,7 +6282,7 @@ public:
 };
 namespace f3m_006d1e80 {
 void* __cdecl FUN_0089e810(unsigned int size);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 struct MapItem { MapItem* next; TESGlobal* key; bool val; };
 class MapBase {
 public:
@@ -10469,7 +10469,7 @@ void Map::FUN_006ca2d0(Form* form, int id, int arg)
 // @f3 0x006cc3d0 (community match, verified in this file)
 namespace f3m_006cc3d0 {
 void* NiMalloc(unsigned int size);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 namespace q6cc3d0 {
 struct QItem;
 class QMap {
@@ -10566,7 +10566,7 @@ void Load6c6d::Owner::FUN_006c6d10(Buffer* buffer) {
 
 // @f3 0x006cdb10 (community match, verified in this file)
 #include <string.h>
-extern "C" unsigned __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 namespace stringb10 {
 int __cdecl FUN_00c007fc(char*, unsigned, const char*);
 struct Heap { void* FUN_0086b930(unsigned); };
@@ -11794,7 +11794,7 @@ void __stdcall FUN_006d63b0(unsigned int id, Target6d63b0* target)
 // @f3 0x006da780 (community match, verified in this file)
 extern const char* DAT_00f65058;
 namespace f3m_006da780 {
-extern "C" unsigned __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 namespace save2099 {
 struct File {
 unsigned unk00;
@@ -14930,9 +14930,9 @@ void __cdecl FUN_006c3820()
 }
 
 // @f3 0x006d85d0 (community match, verified in this file)
-extern "C" int __cdecl sprintf_s(char* apDest, unsigned int auiSize, const char* apFormat, ...);
-extern "C" int __cdecl strcat_s(char* apDest, unsigned int auiSize, const char* apSrc);
-extern "C" int __cdecl strcpy_s(char* apDest, unsigned int auiSize, const char* apSrc);
+extern "C" int __cdecl sprintf_s(char* apDest, size_t auiSize, const char* apFormat, ...);
+extern "C" int __cdecl strcat_s(char* apDest, size_t auiSize, const char* apSrc);
+extern "C" int __cdecl strcpy_s(char* apDest, size_t auiSize, const char* apSrc);
 // SaveFormatter::FormatChangeFlags (FNV twin: tessaveloadgame.cpp, @fnv 0x0085b320).
 namespace f3m_006d85d0 {
 void* __cdecl FUN_00c0050a(void* object, int offset, const void* from, const void* to, int isReference);
@@ -19380,7 +19380,7 @@ struct Heap6d4e80 {
 extern Heap6d4e80 DAT_01090a78;
 }
 void __stdcall FUN_006d46e0(char* out);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" int __cdecl FUN_00c007fc(char* dst, unsigned int size, const char* src);
 extern "C" int __cdecl FUN_00c00fcc(char* dst, unsigned int size, const char* src);
 int __cdecl FUN_00403230(char* dst, unsigned int size, const char* fmt, ...);

@@ -4539,8 +4539,8 @@ FUN_004a2270::FUN_004a2270()
 
 // @f3 0x004a41e0 (community match, verified in this file)
 namespace f3m_004a41e0 {
-extern "C" unsigned int __cdecl strlen(const char* text);
-extern "C" int __cdecl strcpy_s(char* dest, unsigned int size, const char* source);
+extern "C" size_t __cdecl strlen(const char* text);
+extern "C" int __cdecl strcpy_s(char* dest, size_t size, const char* source);
 
 struct Heap_41e0 {
     void* FUN_0086b930(unsigned int bytes);
@@ -5700,7 +5700,7 @@ bool FUN_004add90(unsigned int value) {
 }
 
 // @f3 0x004bfea0 (community match, verified in this file)
-extern "C" void* memset(void* destination, int value, unsigned int bytes);
+extern "C" void* memset(void* destination, int value, size_t bytes);
 class ClearPayload208 {
 public:
     unsigned int unk00, unk04, unk08, unk0C, unk10, unk14;
@@ -5872,7 +5872,7 @@ void Endian4abb60::FUN_004abb60() {
 }
 
 // @f3 0x004ac5b0 (community match, verified in this file)
-extern "C" void* __cdecl memcpy(void*,const void*,unsigned int);
+extern "C" void* __cdecl memcpy(void*,const void*,size_t);
 
 struct Ref { virtual void unused(); virtual void destroy(); volatile long count; };
 struct Vec { float x,y,z; Vec& operator=(Vec v){ memcpy(this,&v,12);return *this;} };
@@ -6505,8 +6505,8 @@ void Cls_004bf7b0::FUN_004bf7b0() {
 }
 
 // @f3 0x004b7010 (community match, verified in this file)
-extern "C" void* __cdecl memset(void*,int,unsigned int);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
+extern "C" void* __cdecl _alloca(size_t);
 #include <stdlib.h>
 
 #include <new>
@@ -6963,7 +6963,7 @@ FUN_004ba640::FUN_004ba640() : FUN_00a5ecb0(0) {
 // @f3 0x004bc900 (community match, verified in this file)
 #include <stdlib.h>
 namespace f3m_004bc900 {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" void _ReadWriteBarrier();
 extern unsigned char DAT_0106dd0e;
 struct Node900 { unsigned int unk00,unk04,unk08,unk0c; };
@@ -10887,7 +10887,7 @@ void FUN_004af110_Obj::FUN_004af110(int v) {
 }
 
 // @f3 0x004b5f00 (community match, verified in this file)
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 __pragma(intrinsic(memcmp))
 
 struct Owner4b5 {
@@ -11073,7 +11073,7 @@ float FUN_004a2670_Point::FUN_004a2670(const FUN_004a2670_Point* other)
 
 // @f3 0x004a4830 (community match, verified in this file)
 namespace f3m_004a4830 {
-extern "C" unsigned int __cdecl strlen(const char* text);
+extern "C" size_t __cdecl strlen(const char* text);
 struct Heap4a4830 {
     void* FUN_0086b930(unsigned int bytes);
 };
@@ -11467,7 +11467,7 @@ FUN_004a4100::FUN_004a4100() : unka8(0), unkac(0)
 }   // namespace f3m_004a4100
 
 // @f3 0x004a4670 (community match, verified in this file)
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 
 namespace f3m_004a4670 {
 
@@ -12806,7 +12806,7 @@ unsigned char FUN_004ad690_Obj::FUN_004ad690(int value) {
 
 // @f3 0x004b0320 (community match, verified in this file)
 namespace f3m_004b0320 {
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 struct FUN_004b0320_Obj
 {
     int unk00; int unk04; int unk08; int unk0C; int unk10; int unk14; int unk18; int unk1C;
@@ -13154,7 +13154,7 @@ FUN_004acfd0::FUN_004acfd0()
 
 // @f3 0x004b8b30 (community match, verified in this file)
 namespace f3m_004b8b30 {
-extern "C" void* __cdecl memset(void* dst, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dst, int value, size_t count);
 namespace f3m_004b8b30 {
 void* __cdecl FUN_0089e810(unsigned int bytes);
 struct MapBase {
@@ -14666,7 +14666,7 @@ void FUN_004ace40_Owner::FUN_004ace40(float a, float b, float c, int d)
 
 // @f3 0x004a37e0 (community match, verified in this file)
 namespace f3m_004a37e0 {
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 struct Data4_4a37e0 { unsigned char b0; unsigned char b1; unsigned char b2; unsigned char b3; };
 class BGSAddonNode : public TESForm
 {
@@ -14790,7 +14790,7 @@ Item_4a1860* Owner_4a1860::FUN_004a1860(int a, int b)
 }   // namespace f3m_004a1860
 
 // @f3 0x004b0f10 (community match, verified in this file)
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 
 namespace f3m_004b0f10 {
 struct Str_4b0f10 {
@@ -15336,7 +15336,7 @@ struct Heap {
 extern Heap DAT_01090a78;
 
 extern "C" void* __cdecl FUN_00bffa60(void* dst, const void* src, unsigned int size);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 
 struct Str {
     char* data;
@@ -15381,7 +15381,7 @@ bool Str::FUN_004a8ce0(const Str& src) {
 
 // @f3 0x004a4240 (community match, verified in this file)
 namespace f3m_004a4240 {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct Heap4a4240 {
     void* FUN_0086b930(unsigned int bytes);
     void FUN_0086ba60(void* memory);
@@ -17070,7 +17070,7 @@ void List1169::FUN_004b2790(Node1169* node) {
 
 // @f3 0x004a4770 (community match, verified in this file)
 namespace f3m_004a4770 {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct Entry1171 { unsigned char enabled,unk01,unk02,unk03; const char* text; };
 void __cdecl FUN_004a4190(Entry1171*);
 struct List1171 { void FUN_00635dd0(Entry1171*,void (__cdecl*)(Entry1171*)); };
@@ -17253,7 +17253,7 @@ void FUN_004b4da0_Obj::FUN_004b4da0() {
 
 // @f3 0x004bfc20 (community match, verified in this file)
 namespace f3m_004bfc20 {
-extern "C" void* __cdecl memcpy(void*,const void*,unsigned int);
+extern "C" void* __cdecl memcpy(void*,const void*,size_t);
 struct Buffer1199 {
  int unk00,unk04,unk08,unk0C,unk10;
  unsigned char unk14,unk15,unk16,unk17,unk18,unk19,unk1A,unk1B;
@@ -17596,7 +17596,7 @@ float FUN_004a2940_Obj::FUN_004a2940()
 
 // @f3 0x004bf9d0 (community match, verified in this file)
 namespace f3m_004bf9d0 {
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 class TESForm {
 public:
     virtual ~TESForm();
@@ -19169,7 +19169,7 @@ void BGSMovableStatic::FUN_004a5700()
 #include <stdlib.h>
 extern bool DAT_0106dd0e;
 namespace f3m_004aa430 {
-extern "C" unsigned __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 
 extern void __cdecl FUN_00455560(unsigned tag, const char* data, unsigned size);
 struct SaveComponent90 {
@@ -19290,7 +19290,7 @@ bool Owner::FUN_004b0930(void* input)
 
 // @f3 0x004b0a40 (community match, verified in this file)
 namespace f3m_004b0a40 {
-extern "C" unsigned strlen(const char*);
+extern "C" size_t strlen(const char*);
 namespace f3m_004b0a40 {
 extern void* __cdecl FUN_0089eb90(unsigned);
 class FUN_0082ea60 {
@@ -19448,7 +19448,7 @@ Object* Owner::FUN_004b0a40(unsigned argument)
 // @f3 0x004a6730 (community match, verified in this file)
 namespace f3m_004a6730 {
 extern "C" void* __cdecl FUN_00c0050a(void* obj, int offset, void* from, void* to, int isRef);
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 extern char DAT_00f46078;
 extern char DAT_00f49808;
 struct QComp {
@@ -20850,7 +20850,7 @@ bool Owner::FUN_004b75b0(TESObjectREFR* source,TESObjectREFR* target,int unused,
 
 namespace f3m_004a6ba0 {
 
-extern "C" unsigned int __cdecl strlen(const char* text);
+extern "C" size_t __cdecl strlen(const char* text);
 extern "C" void _ReadWriteBarrier();
 extern unsigned char DAT_0106dd0e;
 void __cdecl FUN_00454890(unsigned int, unsigned int);
@@ -21104,7 +21104,7 @@ void Cls_004b0730::FUN_004b0730()
 
 // @f3 0x004b4590 (community match, verified in this file)
 namespace f3m_004b4590 {
-extern "C" int __cdecl memcmp(const void*,const void*,unsigned int);
+extern "C" int __cdecl memcmp(const void*,const void*,size_t);
 class TESForm { public: virtual ~TESForm(); };
 class TESObjectARMA:public TESForm {public:
 unsigned unk004;
@@ -22590,7 +22590,7 @@ BGSDebris::~BGSDebris()
 
 // @f3 0x004aa530 (community match, verified in this file)
 namespace f3m_004aa530 {
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 class CloneHeap { public: void FUN_0086ba60(void* memory); };
 extern CloneHeap DAT_01090a78;
 
@@ -23909,7 +23909,7 @@ TESObjectMISC::TESObjectMISC(){formType=0x1f;FUN_00454240(true);}
 
 // @f3 0x004b6440 (community match, verified in this file)
 namespace f3m_004b6440 {
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 namespace book_form_constructor {
 struct BaseFormComponent { virtual void Initialize(); };
 struct TESForm : BaseFormComponent { virtual ~TESForm();unsigned char formType,unk05;unsigned short unk06;unsigned int flags,formId,unk10,unk14; };
@@ -24405,7 +24405,7 @@ void C4aaf40::FUN_004aaf40(int a)
 
 // @f3 0x004a9960 (community match, verified in this file)
 namespace f3m_004a9960 {
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 __pragma(intrinsic(memcmp))
 
 struct ItemA;
@@ -24505,7 +24505,7 @@ bool Foo::FUN_004a9960(void* param)
 }   // namespace f3m_004a9960
 
 // @f3 0x004a51a0 (community match, verified in this file)
-extern "C" int __cdecl memcmp(const void* a, const void* b, unsigned int size);
+extern "C" int __cdecl memcmp(const void* a, const void* b, size_t size);
 
 namespace f3m_004a51a0 {
 extern char DAT_00f46078;
@@ -25568,7 +25568,7 @@ void Object::FUN_004b4120() {
 // @f3 0x004aad20 (community match, verified in this file)
 namespace f3m_004aad20 {
 namespace ammo_construct1982 {
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 struct Heap {void FUN_0086ba60(void*);};extern Heap DAT_01090a78;
 struct String8 {char* data;unsigned short length,capacity;__forceinline void Clear(){if(data)DAT_01090a78.FUN_0086ba60(data);data=0;capacity=0;length=0;}__forceinline String8():data(0),length(0),capacity(0){}__forceinline ~String8(){if(data)DAT_01090a78.FUN_0086ba60(data);data=0;capacity=0;length=0;}};
 struct FullName {virtual void Interface();String8 text;__forceinline FullName(){}};
@@ -25603,7 +25603,7 @@ void Grass::FUN_004ae790(){FUN_004547d0();model.FUN_00457d90(0x4c444f4d,0x54444f
 }
 
 // @f3 0x004aa8e0 (community match, verified in this file)
-extern "C" int __cdecl memcmp(const void*,const void*,unsigned int);
+extern "C" int __cdecl memcmp(const void*,const void*,size_t);
 extern "C" int __cdecl _stricmp(const char*,const char*);
 namespace task1839 {
 extern char DAT_00f46078,DAT_00f47ad8;
@@ -26207,7 +26207,7 @@ void TESObjectACTI_4a7660::FUN_004a7660()
 
 // @f3 0x004b1f20 (community match, verified in this file)
 namespace f3m_004b1f20 {
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 namespace Light2080 {
 struct BoundAnim {
     BoundAnim();~BoundAnim();virtual void v0();
@@ -26546,7 +26546,7 @@ SpellNode* LevSpell::FUN_004b0070(int a, int b)
 
 // @f3 0x004aee40 (community match, verified in this file)
 namespace f3m_004aee40 {
-extern "C" void* __cdecl _alloca(unsigned);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" unsigned long __cdecl _byteswap_ulong(unsigned long);
 extern "C" unsigned short __cdecl _byteswap_ushort(unsigned short);
 namespace Task1923 {
@@ -26902,7 +26902,7 @@ bool Loader::FUN_004aee40(File* file)
 
 // @f3 0x004af300 (community match, verified in this file)
 #include <malloc.h>
-extern "C" void* memset(void*,int,unsigned int);
+extern "C" void* memset(void*,int,size_t);
 #include <stdlib.h>
 namespace Loader1922 {
 struct TESForm;struct FUN_00408e30;typedef FUN_00408e30 ContainerItemExtra;struct TESGlobal;
@@ -28560,7 +28560,7 @@ BIG::~BIG() { }
 #include <malloc.h>
 #include <stdlib.h>
 namespace f3m_004afbb0 {
-extern "C" void* __cdecl memset(void*,int,unsigned);
+extern "C" void* __cdecl memset(void*,int,size_t);
 namespace loader2069 {
 struct Reader {
 unsigned unk000;
@@ -28866,7 +28866,7 @@ bool Form::FUN_004afbb0(Reader* file){
 #include <stdlib.h>
 #include <malloc.h>
 namespace f3m_004af7a0 {
-extern "C" void* __cdecl memset(void*, int, unsigned);
+extern "C" void* __cdecl memset(void*, int, size_t);
 namespace worker06_2068 {
 struct File {
 unsigned unk000;
@@ -29943,7 +29943,7 @@ bool Owner::FUN_004a1cd0(int value){
 
 // @f3 0x004a48e0 (community match, verified in this file)
 #include <malloc.h>
-extern "C" unsigned __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 namespace Debris2117 {
 struct File {
 unsigned unk000;
@@ -31670,7 +31670,7 @@ bool __fastcall FUN_004b2510(Form* form)
 }
 
 // @f3 0x004ba8a0 (community match, verified in this file)
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 namespace f3m_004ba8a0 {
 extern char DAT_00f46078;
 extern char DAT_00f493dc;
@@ -32949,7 +32949,7 @@ bool Owner::FUN_004aa020(Form** input, bool enabled)
 // @f3 0x004a7330 (community match, verified in this file)
 #pragma intrinsic(_alloca)
 namespace f3m_004a7330 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace Task1382 {
 struct File {
  unsigned int field000;
@@ -33229,7 +33229,7 @@ bool Collection::FUN_004a7330(File* file){
 // @f3 0x004ada80 (community match, verified in this file)
 #include <malloc.h>
 namespace f3m_004ada80 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace task1398 {
 struct File {
 int unk0;
@@ -33492,7 +33492,7 @@ if(!file->FUN_00447020())break;}return true;}
 
 // @f3 0x004a4e40 (community match, verified in this file)
 namespace f3m_004a4e40 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace explosion1402 {
 struct File {
 unsigned unk000;
@@ -33801,7 +33801,7 @@ if(!file->FUN_00447020())break;
 // @f3 0x004ba1f0 (community match, verified in this file)
 #pragma intrinsic(_alloca)
 namespace f3m_004ba1f0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace Task1575 {
 struct File {
  unsigned int field000;
@@ -34082,7 +34082,7 @@ bool Collection::FUN_004ba1f0(File* file){
 
 // @f3 0x004b3650 (community match, verified in this file)
 namespace f3m_004b3650 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace T2071 {
 struct File {
  unsigned int unk000;
@@ -34365,7 +34365,7 @@ bool Activator::FUN_004b3650(File* file){
 // @f3 0x004a7710 (community match, verified in this file)
 #include <malloc.h>
 namespace f3m_004a7710 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace task2076 {
 struct File {
 int unk0;
@@ -34630,7 +34630,7 @@ if(!file->FUN_00447020())break;}return true;}
 // @f3 0x004aa580 (community match, verified in this file)
 #include <stdlib.h>
 namespace f3m_004aa580 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace n4aa580 {
 
 struct TESFile {
@@ -36082,7 +36082,7 @@ BillboardNode* Owner::FUN_004bb660(bool input) {
 #include <stdlib.h>
 extern const float DAT_00dc418c;
 namespace f3m_004b0410 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 namespace light2254 {
 
@@ -38093,7 +38093,7 @@ void LevList::FUN_004afea0(int id, unsigned short level, Form** outForm, unsigne
 #include <stdlib.h>
 #include <malloc.h>
 namespace f3m_004a6030 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace W6 {
 struct Rec6;
 inline void SwapWord6(unsigned int& value) { value = _byteswap_ulong(value); }
@@ -38511,7 +38511,7 @@ void Form::FUN_004b2830(Ref* ref)
 
 // @f3 0x004ab460 (community match, verified in this file)
 namespace f3m_004ab460 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 void* __cdecl FUN_00bffa60(void* destination, const void* source, unsigned int size);
 
 struct FormFile2346
@@ -38916,7 +38916,7 @@ bool Form2346::FUN_004ab460(FormFile2346* file)
 
 // @f3 0x004b6740 (community match, verified in this file)
 namespace f3m_004b6740 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" unsigned short __cdecl _byteswap_ushort(unsigned short);
 extern "C" unsigned long __cdecl _byteswap_ulong(unsigned long);
 namespace ClothingPort {
@@ -39465,7 +39465,7 @@ struct ShortData { unsigned short rating; };
 extern "C" unsigned short __cdecl _byteswap_ushort(unsigned short);
 inline unsigned short swapShort(unsigned short n) { return _byteswap_ushort(n); }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" unsigned long __cdecl _byteswap_ulong(unsigned long);
 struct RecordFile {
 unsigned int unk00;
@@ -40534,7 +40534,7 @@ Node* Owner::FUN_004b8290(Request* request)
 
 // @f3 0x004ac1c0 (community match, verified in this file)
 namespace f3m_004ac1c0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace n4ac1c0 {
 struct File {
     char pad[0x25c];
@@ -40695,7 +40695,7 @@ bool Form::FUN_004ac1c0(File* f)
 
 // @f3 0x004b4190 (community match, verified in this file)
 namespace f3m_004b4190 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace n4b4190 {
 struct File {
     char pad[0x254];
@@ -40852,7 +40852,7 @@ bool Form::FUN_004b4190(File* f)
 
 // @f3 0x004b8540 (community match, verified in this file)
 namespace f3m_004b8540 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 class TESForm { public: virtual void dummy(); };
 class TESSound : public TESForm {};
 struct Reader {
@@ -41329,7 +41329,7 @@ unsigned GetChunkSize(){return chunkSize;}
     bool FUN_00448800(unsigned int*);
     bool FUN_00447d60(void*, unsigned int);
 };
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 class BGSListForm;
 class TESBoundObject;
 class TESForm
@@ -43300,8 +43300,8 @@ extern bool DAT_0106cf3c;
 namespace f3m_004b1cc0 {
 namespace f3m_004b1cc0 {
 
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long*);
 extern char* __cdecl FUN_008242a0(const char*);
@@ -43549,7 +43549,7 @@ FUN_00ad2a40* LightForm::FUN_004b1cc0(ModelRef* reference)
 }   // namespace f3m_004b1cc0
 
 // @f3 0x004a9bc0 (community match, verified in this file)
-extern "C" void* __cdecl memcpy(void*,const void*,unsigned);
+extern "C" void* __cdecl memcpy(void*,const void*,size_t);
 namespace f3m_004a9bc0 {
 struct Heap{void*FUN_0086b930(unsigned);void FUN_0086ba60(void*);};
 extern Heap DAT_01090a78;
@@ -43567,7 +43567,7 @@ void Terminal::FUN_004a9bc0(void*form){Terminal*src=(Terminal*)FUN_00c0050a(form
 
 // @f3 0x004a0290 (community match, verified in this file)
 namespace f3m_004a0290 {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" void _ReadWriteBarrier();
 extern void __cdecl FUN_00455560(unsigned int tag, const char* data, unsigned int size);
 
@@ -44497,7 +44497,7 @@ void __stdcall FUN_004a52e0(Arg_4a52e0* arg) {
 
 // @f3 0x004ba570 (community match, verified in this file)
 namespace f3m_004ba570 {
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
 namespace f3m_004ba570 {
 struct Elem12 {
@@ -44637,7 +44637,7 @@ bool Object::FUN_004a29e0(bool closed){if(count<4)return false;Node* a=this;Node
 
 // @f3 0x004a0300 (community match, verified in this file)
 namespace f3m_004a0300 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace RegionMap0300 {
 struct File {
     int GetChunkID();
@@ -45324,7 +45324,7 @@ namespace f3m_004a3260 {
 namespace f3m_a1_ns {
 namespace nm4a3260 {
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct FileStandIn {
     int unk000, unk004, unk008, unk00C, unk010, unk014, unk018, unk01C;
@@ -46043,7 +46043,7 @@ bool Obj::FUN_004b81d0(FormArg* form) {
 // @f3 0x004ad3e0 (community match, verified in this file)
 namespace f3m_004ad3e0 {
 namespace f3m_004ad3e0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace task004ad3e0 {
 struct File {
 int unk0;
@@ -46416,7 +46416,7 @@ void Owner_4bb9a0::FUN_004bb9a0(void* a1, void* a2, void* a3, unsigned int a4, i
 
 // @f3 0x004bcd80 (community match, verified in this file)
 #include <math.h>
-extern "C" unsigned __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 namespace Task3095 {
 struct P12 {float x,y,z;P12(){};P12(float a,float b,float c):x(a),y(b),z(c){};
 __declspec(noinline) P12 FUN_004229a0(const P12& p)const{return P12(x-p.x,y-p.y,z-p.z);}
@@ -47983,7 +47983,7 @@ short Cls_004ae3b0::FUN_004ae3a0() { return m_4c; }
 // @f3 0x004bf7d0 (community match, verified in this file)
 namespace f3m_004bf7d0 {
 namespace f3m_004bf7d0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" unsigned long __cdecl _byteswap_ulong(unsigned long);
 
 struct EncounterFile {
@@ -48282,7 +48282,7 @@ bool EncounterZone::FUN_004bf7d0(EncounterFile* apFile) {
 // @f3 0x004bff00 (community match, verified in this file)
 namespace f3m_004bff00 {
 namespace f3m_004bff00 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct LoadFile {
     unsigned int unk000;
@@ -48578,7 +48578,7 @@ bool LightingTemplate::FUN_004bff00(LoadFile* apFile) {
 // @f3 0x004a57c0 (community match, verified in this file)
 namespace f3m_004a57c0 {
 namespace f3m_004a57c0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct Rd;
 struct Full;
 struct Dest;
@@ -48751,7 +48751,7 @@ bool Class::FUN_004a57c0(Rd* r)
 // @f3 0x004b4780 (community match, verified in this file)
 #include <stdlib.h>
 namespace f3m_004b4780 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct LoadFile {
  unsigned int unk000;
  unsigned int unk004;
@@ -49237,7 +49237,7 @@ bool ArmorLoader::FUN_004b4780(LoadFile* file) {
 namespace f3m_004b5ae0 {
 
 namespace f3_4b5ae0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct Rd5b {
     int pad[0x254 / 4];

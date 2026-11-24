@@ -27824,7 +27824,7 @@ namespace f3m_007d3970 {
 
 namespace f3c_007d3970 {
 
-extern "C" void* __cdecl memset(void* dst, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dst, int value, size_t count);
 
 enum DEBUGTEXT_LOCATION { DEBUGTEXT_LOCATION_NONE = 0, DEBUGTEXT_LOCATION_FORCE = 0x7fffffff };
 enum DEBUGTEXT_JUSTIFY { DEBUGTEXT_JUSTIFY_NONE = 0, DEBUGTEXT_JUSTIFY_FORCE = 0x7fffffff };

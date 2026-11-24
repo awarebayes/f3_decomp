@@ -235,8 +235,8 @@ struct __declspec(align(16)) PoseVector {
     }
 };
 struct PoseQuaternion {PoseVector vector; void FUN_00c66320(const PoseQuaternion&,const PoseQuaternion&);};
-extern "C" unsigned int __security_cookie;
-extern "C" void __fastcall __security_check_cookie(unsigned int);
+extern "C" uintptr_t __security_cookie;
+extern "C" void __fastcall __security_check_cookie(uintptr_t);
 struct QuaternionProduct {__m128 quad;};
 __declspec(noinline) void PoseQuaternion::FUN_00c66320(const PoseQuaternion& a,const PoseQuaternion& b) {
     unsigned int cookie=__security_cookie;

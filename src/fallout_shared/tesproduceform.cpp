@@ -91,7 +91,7 @@ void TESProduceForm::FUN_0048b610(BaseFormComponent* apCopyFC)
     ((FUN_0048b670_shell*)this)->CopyFromSource((void*)((char*)pCopy + 8));
 }
 
-extern "C" int __cdecl memcmp(const void* a, const void* b, unsigned int n);
+extern "C" int __cdecl memcmp(const void* a, const void* b, size_t n);
 struct ProduceFormData : BaseFormComponent
 {
     void* pIngredient;

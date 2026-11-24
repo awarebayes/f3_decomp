@@ -17493,7 +17493,7 @@ namespace f3m_0066d300 {
 class TESNPC;
 template<class T>class BSSimpleArray<T*,1024>{public:virtual ~BSSimpleArray();T** pBuffer;unsigned int iSize,SimpleArrayStorage;BSSimpleArray():pBuffer(0),iSize(0),SimpleArrayStorage(0){}};
 namespace race_sex_menu_constructor {
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 struct FUN_00bfcfe0 {FUN_00bfcfe0();virtual ~FUN_00bfcfe0();unsigned int unk04,unk08,unk0c,unk10,unk14,unk18;unsigned char unk1c,unk1d;unsigned short unk1e;unsigned int unk20,unk24;};
 struct String {char* data;unsigned short size,capacity;String(){data=0;size=0;capacity=0;}~String();};
 struct PtrState {unsigned int unk00,unk04;PtrState(int value):unk00(value){}~PtrState();};
@@ -35986,7 +35986,7 @@ bool MessageMenu::FUN_006694d0(int key)
 }   // namespace f3m_006694d0
 
 // @f3 0x0067cf50 (community match, verified in this file)
-extern "C" void* __cdecl _alloca(unsigned int size);
+extern "C" void* __cdecl _alloca(size_t size);
 
 namespace c4_0067cf50 {
 

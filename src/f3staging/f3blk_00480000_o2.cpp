@@ -30644,7 +30644,7 @@ void Owner::FUN_0048dbb0(QTreeItem* parent, QObj* obj)
 
 // @f3 0x0049e490 (community match, verified in this file)
 // FUN_0049e490 - TESRegion::Load  (twin: FNV 0x004f0b10, tesregion.cpp)
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 namespace t49e490 {
 

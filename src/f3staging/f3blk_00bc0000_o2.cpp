@@ -1333,8 +1333,8 @@ struct ArchiveHashValue {
     }
 };
 
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
-extern "C" int __cdecl strcat_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
+extern "C" int __cdecl strcat_s(char*, size_t, const char*);
 template <unsigned int N> inline int strcat_s(char (&dest)[N], const char* src)
 {
     return strcat_s(dest, N, src);
@@ -2243,7 +2243,7 @@ class FileFinder
     unsigned int FUN_00afe220(char*, unsigned int, unsigned int);
 };
 extern "C" FileFinder* DAT_011785d0;
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 
 class MemoryManager
 {
@@ -2685,8 +2685,8 @@ class BSGameSound
     bool FUN_00bd78e0(const char*, bool);
     static unsigned int FUN_00bd78b0(const char* pName);
 };
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 class BSAudio;
 class BSAudio
 {
@@ -5336,7 +5336,7 @@ void __cdecl FUN_00bc7800(const char* path, const char* rel, char* out)
 extern int DAT_00e2c4d4;
 namespace f3m_00bc9d80 {
 namespace task1399 {
-extern "C" void* __cdecl memmove(void*,const void*,unsigned);
+extern "C" void* __cdecl memmove(void*,const void*,size_t);
 __forceinline void RenderCopyData(void* dest,const void* src,unsigned size) { memmove(dest,src,size); }
 struct ArchiveRead {
  unsigned unk000;
@@ -5646,7 +5646,7 @@ int __cdecl FUN_00bc81e0(const char* pcString, const char* pcPattern)
 //   F +0x00, E +0x04, G +0x08, A(arg3 copy) +0x0C, B(idCopy) +0x10,
 //   struct {bool, int, char[260]} +0x14..+0x11F.
 
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 
 class SndE0X; // stand-in for the sound object created by vfn14
 
@@ -6932,7 +6932,7 @@ void Leaf_bc5700::FUN_00bc5700(const Vec3_bc5700& cTreeCenter, const Vec3_bc5700
 
 // @f3 0x00bdb390 (community match, verified in this file)
 namespace Audio1910 {
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 struct S_00af1c00_cls { bool FUN_00bda9b0(int,unsigned int,unsigned int,char*); };
 extern void* DAT_011790c8;
 struct FUN_00aee580_wfx
@@ -10412,7 +10412,7 @@ extern bool DAT_01069081;
 extern char* DAT_011786e8;
 namespace f3m_00bc8a10 {
 
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 
 struct FUN_00bc8a10_Heap {
     void* FUN_0086b930(unsigned int size);
@@ -15090,7 +15090,7 @@ struct SndInfo {int f0,f4,f8;};
 struct Wave {unsigned short wFormatTag,wChannels;unsigned int dwSamplesPerSec,dwAvgBytesPerSec;unsigned short wBlockAlign,wBitsPerSample,wCbSize;};
 struct Mgr {void* FUN_0086b930(unsigned int);void FUN_0086ba60(void*);};
 extern Mgr DAT_01090a78;
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 struct FUN_00bdc1a0
 {
     unsigned int unk000;
@@ -31196,7 +31196,7 @@ extern unsigned char DAT_01069081;
 extern bool DAT_011f8154;
 extern int DAT_011acdfc, DAT_011ace00, DAT_011ace04;
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" __declspec(dllimport) unsigned long __stdcall GetTickCount();
 extern "C" __declspec(dllimport) void __stdcall InitializeCriticalSection(void*);
 struct Directory077;
@@ -34817,8 +34817,8 @@ extern void (__stdcall *DAT_00d9b0a0)(void*);
 struct RecursiveMutex {
     unsigned debug, lockCount, recursionCount, owner, semaphore, spin;
 };
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 extern "C" char* __cdecl strrchr(const char*, int);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long*);

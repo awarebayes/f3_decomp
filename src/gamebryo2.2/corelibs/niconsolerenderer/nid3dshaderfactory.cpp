@@ -1100,8 +1100,8 @@ void ShaderFactoryShell::FUN_00e92470()
 
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long volatile*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile*);
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl strcpy_s(char* pcDest, unsigned int uiSize, const char* pcSrc);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl strcpy_s(char* pcDest, size_t uiSize, const char* pcSrc);
 
 void* __cdecl NiMalloc(unsigned int uiSize);
 

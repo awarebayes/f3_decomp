@@ -5629,7 +5629,7 @@ void S00cfb080_State::FUN_00cfb080()
 
 
 #include <math.h>
-extern "C" void* __cdecl fnv_zlib_memset(void* dst, int val, unsigned int n);
+extern "C" void* __cdecl fnv_zlib_memset(void* dst, int val, size_t n);
 
 struct Src
 {

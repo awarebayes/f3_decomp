@@ -5,7 +5,7 @@
 extern char DAT_00e947f8;
 extern char DAT_00e94814;
 void* FUN_0089e810(unsigned);
-extern "C" void* __cdecl memset(void*, int, unsigned);
+extern "C" void* __cdecl memset(void*, int, size_t);
 struct M_00adfa90 { int a, b, c; M_00adfa90() { c = 0; a = 0; b = 0; } ~M_00adfa90(); };
 struct B_00adfa90 { int f0; B_00adfa90() { f0 = 0; } ~B_00adfa90(); };
 struct R_00adfa90 { void* vt; int cap; int* buf; int cnt; R_00adfa90(int c) { vt = &DAT_00e947f8; cap = c; cnt = 0; buf = (int*)FUN_0089e810(cap * 4); memset(buf, 0, cap * 4); } };

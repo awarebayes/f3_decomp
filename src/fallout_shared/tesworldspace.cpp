@@ -3829,7 +3829,7 @@ bool WorldQuery::ContainsPoint(const NiPoint3* position)
 }
 
 namespace fnv_00583560 {
-extern "C" void* _alloca(unsigned int);
+extern "C" void* _alloca(size_t);
 void* operator new(size_t);
 void operator delete(void*);
 class File583

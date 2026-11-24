@@ -185,7 +185,7 @@ FUN_00a46b50_cls* FUN_00a46b50_cls::FUN_00a46b50()
     return this;
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct StrArray
 {
     void* m_vtbl;

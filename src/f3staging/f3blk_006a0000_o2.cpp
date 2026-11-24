@@ -715,7 +715,7 @@ void __cdecl FUN_006a2e20(Stream* s, Target* t)
 // @f3 0x006a0260 (community match, verified in this file)
 namespace f3m_006a0260 {
 namespace f3m_006a0260 {
-extern "C" int __cdecl _strnicmp(const char*, const char*, unsigned int);
+extern "C" int __cdecl _strnicmp(const char*, const char*, size_t);
 struct Entry { char name[0x40]; int unk40; };
 struct Table {
     char unk00[0x14];
@@ -10276,7 +10276,7 @@ void Owner::FUN_006ba710(){FUN_006bce80();unsigned char bit=(unsigned char)(info
 // @f3 0x006b25f0 (community match, verified in this file)
 namespace f3m_006b25f0 {
 namespace SerializedStringSize {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct Owner {void** methods;int unk04,unk08,unk0c,unk10,unk14,unk18;void* context;int unk20,unk24,unk28;const char* text;unsigned short FUN_006b25f0();};
 typedef unsigned short (__thiscall *BaseSize)(Owner*,int,void*);
 unsigned short Owner::FUN_006b25f0(){unsigned int length=strlen(text);unsigned short result=((BaseSize)methods[51])(this,0,context);result+=(unsigned short)length;result+=5;return result;}
@@ -49920,7 +49920,7 @@ Result6a11b0* __cdecl FUN_006a11b0(int arg0) {
 // @f3 0x006bd640 (community match, verified in this file)
 namespace f3m_6bd640 {
 extern "C" char* __cdecl strchr(const char*, int);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 extern const char DAT_00e0c57c[];
 }
 extern "C" void __cdecl FUN_006bd640(char* path)

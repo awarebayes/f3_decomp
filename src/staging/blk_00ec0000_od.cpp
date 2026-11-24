@@ -1144,7 +1144,7 @@ void __thiscall S_00ec2d80_Class::FUN_00ec2d80(int a, int b)
 
 // Look up the file name registered under a key and copy it into a MAX_PATH buffer.
 
-extern "C" int __cdecl strcpy_s(char* pcDest, unsigned int uiSize, const char* pcSrc);
+extern "C" int __cdecl strcpy_s(char* pcDest, size_t uiSize, const char* pcSrc);
 
 class EC2DF0NameMap
 {

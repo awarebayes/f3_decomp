@@ -83530,7 +83530,7 @@ FUN_006e1020::~FUN_006e1020() {
 // @f3 0x006e9ba0 (community match, verified in this file)
 // FO3 0x006e9ba0: render-system startup (FNV twin RenderSystem::FUN_0086d590, main.cpp).
 // Literal port: FNV's NiPointer get/set wrappers, flag setters and setting getters are inline here.
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 namespace Z6e9ba0 {
 void* __cdecl FUN_0089eb90(unsigned int size);
 void __cdecl FUN_0089ebb0(void* p);

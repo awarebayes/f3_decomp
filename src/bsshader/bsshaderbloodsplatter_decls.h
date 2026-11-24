@@ -103,8 +103,8 @@ struct _D3DXMACRO
     const char* Name;
     const char* Definition;
 };
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 extern NiD3DPass* DAT_0126f74c;
 #undef SPLATTER_ASSIGN
 FNV_STATIC_ASSERT(offsetof(NiD3DPass, m_uiStageMask) == 0x14);

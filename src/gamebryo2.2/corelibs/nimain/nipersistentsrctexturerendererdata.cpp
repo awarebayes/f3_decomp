@@ -400,7 +400,7 @@ inline bool IsKindOf_s(const NiRTTI* pkRTTI, NiObj_s* pkObject)
     return false;
 }
 
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 
 // @fnv 0x00a982f0
 bool PSTRData_s::FUN_00a982f0(NiObj_s* pkObject)

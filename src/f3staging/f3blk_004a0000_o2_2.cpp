@@ -204,7 +204,7 @@ float __fastcall FUN_004a8c80(void* a, void* b, int c)
 #include <stdlib.h>
 #include <string.h>
 namespace f3m_004ae610 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace Load4ae610 {
 struct File {
     unsigned unk000;
@@ -568,7 +568,7 @@ bool Tree::FUN_004bb210(File*file){
 #include <stdlib.h>
 extern const char WeaponWarning[];
 namespace f3m_004bd470 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 inline bool ValidAttack(unsigned x) { return x >= 32 && x <= 45; }
 inline void SwapWord(unsigned short& v) { v = _byteswap_ushort(v); }
 inline void SwapLong(unsigned& v) { v = _byteswap_ulong(v); }

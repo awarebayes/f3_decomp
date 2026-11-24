@@ -4,7 +4,7 @@
 
 extern "C" int NiSprintf(char*, unsigned int, const char*, ...);
 extern "C" void* _NiMalloc(unsigned int);
-extern "C" unsigned int strlen(const char*);
+extern "C" size_t strlen(const char*);
 
 struct NiFrustum
 {

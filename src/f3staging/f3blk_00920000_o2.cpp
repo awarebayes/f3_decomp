@@ -6104,7 +6104,7 @@ int* FUN_00923890_Obj::FUN_00923890(int* source)
 // @f3 0x00933ca0 (community match, verified in this file)
 namespace f3m_00933ca0 {
 namespace enabled_children_reset {
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 struct FUN_0093d600 {void* source;void* member;FUN_0093d600(void*,const char*);void* FUN_0093d6b0(int);};
 void __cdecl FUN_00933ca0(void* unused,void* object){FUN_0093d600 access(object,"enabledChildren");unsigned int* data=(unsigned int*)access.FUN_0093d6b0(0);data[0]=~0u;data[1]=~0u;data[2]=~0u;data[3]=~0u;data[4]=~0u;data[5]=~0u;data[6]=~0u;data[7]=~0u;}
 }

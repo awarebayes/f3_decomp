@@ -21071,7 +21071,7 @@ unsigned int unk278;
 unsigned int flags;};
 __declspec(thread) Tls tls;
 extern char DAT_00f46078,DAT_00f460fc;void* FUN_00c0050a(void*,int,void*,void*,int);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct LoadFile
 {
 unsigned int unk000;

@@ -87,7 +87,7 @@ class TESResponse
 };
 extern char* DAT_011a2224;
 extern const char ENGLISH[];
-extern "C" unsigned __cdecl strlen(const char*);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 int FUN_00408b20(const char*, const char*);
 #endif

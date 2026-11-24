@@ -15056,7 +15056,7 @@ void* __stdcall FUN_00548770(unsigned count)
 }
 
 // @f3 0x00557cd0 (community match, verified in this file)
-extern "C" void* __cdecl memset(void*, int, unsigned);
+extern "C" void* __cdecl memset(void*, int, size_t);
 namespace f3m_00557cd0 {
 struct Heap { void* FUN_0086b930(unsigned); };
 extern Heap DAT_01090a78;
@@ -19154,7 +19154,7 @@ struct Part5427; typedef void (__thiscall *Action5427)(Part5427*);
 struct Table5427 {Action5427 unk00;};
 struct Part5427 {Table5427* unk00; int unk04,unk08,unk0C,unk10,unk14; void FUN_004580f0(); Part5427(Table5427* table=0){FUN_004580f0();if(table)unk00=table;} ~Part5427(); void Run(){unk00->unk00(this);} };
 struct Tail5427 { int unk00; int unk04; int unk08; int unk0C; int unk10; int unk14; int unk18; int unk1C; int unk20; int unk24; int unk28; int unk2C; int unk30; int unk34; int unk38; int unk3C; int unk40; int unk44; int unk48; int unk4C; int unk50; void FUN_00541df0();};
-extern "C" void* __cdecl memset(void*,int,unsigned);
+extern "C" void* __cdecl memset(void*,int,size_t);
 struct Owner5427 {int* unk00; Text5427 unk04,unk0C,unk14,unk1C,unk24; Part5427 unk2C,unk44; Tail5427 unk5C; Owner5427();};
 Owner5427::Owner5427():unk00(&DAT_00de0b1c),unk44((Table5427*)&DAT_00de0af8){ memset(&unk5C,0,sizeof(unk5C));unk5C.FUN_00541df0();unk2C.Run();unk44.Run();}
 }   // namespace f3m_00542700
@@ -22900,7 +22900,7 @@ void FUN_005519a0()
 // @f3 0x0054ecd0 (community match, verified in this file)
 #include <stdlib.h>
 #include <string.h>
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct RecordFile {
 unsigned int unk000;
 unsigned int unk004;
@@ -27974,7 +27974,7 @@ TESIdleForm* TESIdleForm::FUN_00552b80(int a1, int a2, f3m_00552b80::Node* list)
 
 // @f3 0x00542b80 (community match, verified in this file)
 namespace f3m_00542b80 {
-extern "C" void* __cdecl _alloca(unsigned);
+extern "C" void* __cdecl _alloca(size_t);
 namespace body1925 {
 struct File {unsigned unk000; unsigned unk004; unsigned unk008; unsigned unk00c; unsigned unk010; unsigned unk014; unsigned unk018; unsigned unk01c; unsigned unk020; unsigned unk024; unsigned unk028; unsigned unk02c; unsigned unk030; unsigned unk034; unsigned unk038; unsigned unk03c; unsigned unk040; unsigned unk044; unsigned unk048; unsigned unk04c; unsigned unk050; unsigned unk054; unsigned unk058; unsigned unk05c; unsigned unk060; unsigned unk064; unsigned unk068; unsigned unk06c; unsigned unk070; unsigned unk074; unsigned unk078; unsigned unk07c; unsigned unk080; unsigned unk084; unsigned unk088; unsigned unk08c; unsigned unk090; unsigned unk094; unsigned unk098; unsigned unk09c; unsigned unk0a0; unsigned unk0a4; unsigned unk0a8; unsigned unk0ac; unsigned unk0b0; unsigned unk0b4; unsigned unk0b8; unsigned unk0bc; unsigned unk0c0; unsigned unk0c4; unsigned unk0c8; unsigned unk0cc; unsigned unk0d0; unsigned unk0d4; unsigned unk0d8; unsigned unk0dc; unsigned unk0e0; unsigned unk0e4; unsigned unk0e8; unsigned unk0ec; unsigned unk0f0; unsigned unk0f4; unsigned unk0f8; unsigned unk0fc; unsigned unk100; unsigned unk104; unsigned unk108; unsigned unk10c; unsigned unk110; unsigned unk114; unsigned unk118; unsigned unk11c; unsigned unk120; unsigned unk124; unsigned unk128; unsigned unk12c; unsigned unk130; unsigned unk134; unsigned unk138; unsigned unk13c; unsigned unk140; unsigned unk144; unsigned unk148; unsigned unk14c; unsigned unk150; unsigned unk154; unsigned unk158; unsigned unk15c; unsigned unk160; unsigned unk164; unsigned unk168; unsigned unk16c; unsigned unk170; unsigned unk174; unsigned unk178; unsigned unk17c; unsigned unk180; unsigned unk184; unsigned unk188; unsigned unk18c; unsigned unk190; unsigned unk194; unsigned unk198; unsigned unk19c; unsigned unk1a0; unsigned unk1a4; unsigned unk1a8; unsigned unk1ac; unsigned unk1b0; unsigned unk1b4; unsigned unk1b8; unsigned unk1bc; unsigned unk1c0; unsigned unk1c4; unsigned unk1c8; unsigned unk1cc; unsigned unk1d0; unsigned unk1d4; unsigned unk1d8; unsigned unk1dc; unsigned unk1e0; unsigned unk1e4; unsigned unk1e8; unsigned unk1ec; unsigned unk1f0; unsigned unk1f4; unsigned unk1f8; unsigned unk1fc; unsigned unk200; unsigned unk204; unsigned unk208; unsigned unk20c; unsigned unk210; unsigned unk214; unsigned unk218; unsigned unk21c; unsigned unk220; unsigned unk224; unsigned unk228; unsigned unk22c; unsigned unk230; unsigned unk234; unsigned unk238; unsigned unk23c; unsigned unk240; unsigned unk244; unsigned unk248; unsigned unk24c; unsigned unk250; unsigned unk254; unsigned unk258; unsigned chunkSize; unsigned GetChunkSize(){return chunkSize;} int FUN_00448cc0();int FUN_004487d0();bool FUN_00447020();void FUN_00448800(unsigned*);bool FUN_00447d60(void*,unsigned);};
 struct TLS {unsigned unk000; unsigned unk004; unsigned unk008; unsigned unk00c; unsigned unk010; unsigned unk014; unsigned unk018; unsigned unk01c; unsigned unk020; unsigned unk024; unsigned unk028; unsigned unk02c; unsigned unk030; unsigned unk034; unsigned unk038; unsigned unk03c; unsigned unk040; unsigned unk044; unsigned unk048; unsigned unk04c; unsigned unk050; unsigned unk054; unsigned unk058; unsigned unk05c; unsigned unk060; unsigned unk064; unsigned unk068; unsigned unk06c; unsigned unk070; unsigned unk074; unsigned unk078; unsigned unk07c; unsigned unk080; unsigned unk084; unsigned unk088; unsigned unk08c; unsigned unk090; unsigned unk094; unsigned unk098; unsigned unk09c; unsigned unk0a0; unsigned unk0a4; unsigned unk0a8; unsigned unk0ac; unsigned unk0b0; unsigned unk0b4; unsigned unk0b8; unsigned unk0bc; unsigned unk0c0; unsigned unk0c4; unsigned unk0c8; unsigned unk0cc; unsigned unk0d0; unsigned unk0d4; unsigned unk0d8; unsigned unk0dc; unsigned unk0e0; unsigned unk0e4; unsigned unk0e8; unsigned unk0ec; unsigned unk0f0; unsigned unk0f4; unsigned unk0f8; unsigned unk0fc; unsigned unk100; unsigned unk104; unsigned unk108; unsigned unk10c; unsigned unk110; unsigned unk114; unsigned unk118; unsigned unk11c; unsigned unk120; unsigned unk124; unsigned unk128; unsigned unk12c; unsigned unk130; unsigned unk134; unsigned unk138; unsigned unk13c; unsigned unk140; unsigned unk144; unsigned unk148; unsigned unk14c; unsigned unk150; unsigned unk154; unsigned unk158; unsigned unk15c; unsigned unk160; unsigned unk164; unsigned unk168; unsigned unk16c; unsigned unk170; unsigned unk174; unsigned unk178; unsigned unk17c; unsigned unk180; unsigned unk184; unsigned unk188; unsigned unk18c; unsigned unk190; unsigned unk194; unsigned unk198; unsigned unk19c; unsigned unk1a0; unsigned unk1a4; unsigned unk1a8; unsigned unk1ac; unsigned unk1b0; unsigned unk1b4; unsigned unk1b8; unsigned unk1bc; unsigned unk1c0; unsigned unk1c4; unsigned unk1c8; unsigned unk1cc; unsigned unk1d0; unsigned unk1d4; unsigned unk1d8; unsigned unk1dc; unsigned unk1e0; unsigned unk1e4; unsigned unk1e8; unsigned unk1ec; unsigned unk1f0; unsigned unk1f4; unsigned unk1f8; unsigned unk1fc; unsigned unk200; unsigned unk204; unsigned unk208; unsigned unk20c; unsigned unk210; unsigned unk214; unsigned unk218; unsigned unk21c; unsigned unk220; unsigned unk224; unsigned unk228; unsigned unk22c; unsigned unk230; unsigned unk234; unsigned unk238; unsigned unk23c; unsigned unk240; unsigned unk244; unsigned unk248; unsigned unk24c; unsigned unk250; unsigned unk254; unsigned unk258; unsigned unk25c; unsigned unk260; unsigned unk264; unsigned unk268; unsigned unk26c; unsigned unk270; unsigned unk274; unsigned unk278; unsigned unk27c; unsigned unk280; unsigned unk284; unsigned unk288; unsigned unk28c; unsigned unk290; unsigned unk294; unsigned unk298; int warnings;}; __declspec(thread) TLS tls;
@@ -28505,7 +28505,7 @@ void Race::FUN_0055f0f0() {
 }
 
 // @f3 0x00551d60 (community match, verified in this file)
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" unsigned long __cdecl _byteswap_ulong(unsigned long);
 namespace f3m_00551d60 {
 struct Heap { void* FUN_0086b930(unsigned size); void FUN_0086ba60(void* p); };
@@ -30502,7 +30502,7 @@ float Owner::FUN_0054ae70(TESForm* form){
 }   // namespace f3m_0054ae70
 
 // @f3 0x0054b150 (community match, verified in this file)
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 namespace n54b150 {
 struct Named {
     virtual void v0(); virtual void v1(); virtual void v2(); virtual void v3(); virtual void v4(); virtual void v5(); virtual void v6(); virtual void v7();
@@ -37547,7 +37547,7 @@ processGeometry:
 
 // @f3 0x00547920 (community match, verified in this file)
 namespace f3m_00547920 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct Heap
 {
     void FUN_0086ba60(void*);
@@ -37699,7 +37699,7 @@ bool PathOwner::FUN_0055e110(const char* volatile text)
 
 // @f3 0x0054a0b0 (community match, verified in this file)
 namespace f3m_0054a0b0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct FUN_0054a0b0_Object {
     virtual void vf00();
     virtual void vf04();
@@ -39404,7 +39404,7 @@ void FUN_00540060(Object* object,State* state,const char* format,...){char buffe
 
 // @f3 0x005416f0 (community match, verified in this file)
 namespace f3m_005416f0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" unsigned long __cdecl _byteswap_ulong(unsigned long);
 extern "C" unsigned short __cdecl _byteswap_ushort(unsigned short);
 namespace Sound16f0 {
@@ -41208,7 +41208,7 @@ int NPC_5550f0::FUN_005550f0(bool useBase)
 // @f3 0x0054d590 (community match, verified in this file)
 extern const char DAT_00de3398[];
 namespace f3m_0054d590 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 class TESFile_d590;
 class TESObject_d590;
@@ -41609,7 +41609,7 @@ void __cdecl FUN_0055dff0(f3m_0055dff0::TList<f3m_0055dff0::X*>* out, f3m_0055df
 
 // @f3 0x00547410 (community match, verified in this file)
 namespace f3m_00547410 {
-extern "C" void* __cdecl _alloca(unsigned);
+extern "C" void* __cdecl _alloca(size_t);
 
 namespace f3m_00547410
 {
@@ -44191,7 +44191,7 @@ void __cdecl FUN_00543fd0(void* owner, int functionType, int argumentCount, void
 
 // @f3 0x00544400 (community match, verified in this file)
 namespace f52_00544400 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 void* __cdecl FUN_00c00610(void*, int, unsigned);
 struct Heap {
     void* FUN_0086b930(unsigned size);
@@ -45492,7 +45492,7 @@ void HeadObject::FUN_00558640(HeadObject* owner, InputRef* input) {
 }
 
 // @f3 0x0054d850 (community match, verified in this file)
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 
 struct Writer { void FUN_006db460(const void* data, unsigned int length); };
 
@@ -49099,7 +49099,7 @@ void TESNPCLoad::FUN_0055b110(LoadFormBuffer* pBuffer)
 // @f3 0x005423d0 (community match, verified in this file)
 #pragma intrinsic(_alloca)
 namespace f3m_005423d0 {
-extern "C" void* __cdecl _alloca(unsigned int uiSize);
+extern "C" void* __cdecl _alloca(size_t uiSize);
 
 namespace f3m_005423d0 {
 
@@ -49449,7 +49449,7 @@ bool BPBodyPart::FUN_005423d0(BPFile* file)
 
 // @f3 0x00545660 (community match, verified in this file)
 namespace f3m_00545660 {
-extern "C" void* __cdecl _alloca(unsigned int size);
+extern "C" void* __cdecl _alloca(size_t size);
 struct TESFile {
     int unk000;
     int unk004;
@@ -49866,7 +49866,7 @@ extern "C" void _ReadWriteBarrier(void);
 
 
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 class SubObjX { public: int unk00; int unk04; void FUN_005ae230(class FileX* f); };
 class ModBaseX { public: int unk00; int unk04; int unk08; int unk0c; int unk10; int unk14; };
 class MgrX { public: void FUN_00507600(class SelfX* s); };
@@ -50774,7 +50774,7 @@ bool BGSNote::FUN_005454e0(TESForm* form)
 }
 
 // @f3 0x0055e990 (community match, verified in this file)
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 namespace f3m_0055e990 {
 
 struct RecordFile {

@@ -20318,7 +20318,7 @@ __declspec(noinline) void S94faa0_UShortArray::FUN_008243d0(unsigned int uiSize)
     FUN_0089e890(old);
 }
 
-extern "C" void* __cdecl memcpy(void* dst, const void* src, unsigned int n);
+extern "C" void* __cdecl memcpy(void* dst, const void* src, size_t n);
 
 struct S94faa0_Owner {
     virtual void v00();

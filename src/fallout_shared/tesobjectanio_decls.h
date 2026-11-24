@@ -3,7 +3,7 @@
 #define FNV_TESOBJECTANIO_DECLS_H
 #include "f3_common.h"
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 #pragma intrinsic(_alloca)
 
 class TESFileFormVersion

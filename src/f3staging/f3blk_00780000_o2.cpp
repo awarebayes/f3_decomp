@@ -4884,7 +4884,7 @@ extern int FUN_00f5ec8c;
 namespace f3m_0078bd90 {
 extern long (__stdcall* DAT_00d9b06c)(
     long volatile* destination, long exchange, long comparand);
-extern "C" int __cdecl memmove_s(void* dst, unsigned int dstSize, const void* src, unsigned int count);
+extern "C" int __cdecl memmove_s(void* dst, size_t dstSize, const void* src, size_t count);
 
 
 struct QLock78 {
@@ -29652,7 +29652,7 @@ void Owner::FUN_0078d9c0()
 
 // @f3 0x0079f2d0 (community match, verified in this file)
 #include <math.h>
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 inline float AddComponent(const volatile float& a, const volatile float& b) { return a+b; }
 class AirPoint3 {
 public:

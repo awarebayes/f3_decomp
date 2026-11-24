@@ -34346,8 +34346,8 @@ void Owner::FUN_00610900() {
 namespace NativeHotkeyMenu {
 extern "C" int __cdecl vsprintf(char*,const char*,va_list);
 struct MemoryHeap { void* FUN_0086b930(unsigned); void FUN_0086ba60(void*); };
-extern "C" unsigned __cdecl strlen(const char*);
-extern "C" void* __cdecl memcpy(void*,const void*,unsigned);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" void* __cdecl memcpy(void*,const void*,size_t);
 extern MemoryHeap DAT_01090a78;
 extern const char DAT_00e03530[],DAT_00e03524[],DAT_00e03514[],DAT_00e0350c[],DAT_00db3438[];
 struct BSString {

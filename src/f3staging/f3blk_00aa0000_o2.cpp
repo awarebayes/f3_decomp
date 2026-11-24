@@ -3321,7 +3321,7 @@ typedef unsigned long DWORD;
 typedef unsigned char BYTE;
 extern "C" __declspec(dllimport) long __stdcall RegQueryValueExA(HKEY hKey, const char* lpValueName, DWORD* lpReserved, DWORD* lpType, BYTE* lpData, DWORD* lpcbData);
 
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 
 struct Setting {
     int unk00;
@@ -10171,7 +10171,7 @@ typedef struct HKEY__* HKEY;
 typedef unsigned long DWORD;
 typedef unsigned char BYTE;
 extern "C" __declspec(dllimport) long __stdcall FUN_00d9b010(HKEY hKey, const char* lpValueName, DWORD Reserved, DWORD dwType, const BYTE* lpData, DWORD cbData);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 unsigned int FUN_00a9d930(const char* name);
 
 struct Setting {
@@ -21912,7 +21912,7 @@ void FUN_00aa0a90_owner::FUN_00aa0a90(void* arg)
 // @f3 0x00ab9b90 (community match, verified in this file)
 #include <string.h>
 namespace f3m_00ab9b90 {
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 
 struct Owner_00ab9b90 {
     int unk00;
@@ -29873,7 +29873,7 @@ int W_AA2B::Owner2b::FUN_00aa2ba0(void* obj, int value) {   // ORIG: ecx holds t
 
 // @f3 0x00aa54e0 (community match, verified in this file)
 namespace f3m_00aa54e0 {
-extern "C" void __fastcall __security_check_cookie(unsigned int);
+extern "C" void __fastcall __security_check_cookie(uintptr_t);
 void* __cdecl FUN_00bcca60(int, void*, int, int);
 void __cdecl BuildAssetPath(int, char*, int);
 int __cdecl FUN_00ec65a6(char*, unsigned int, const char*);

@@ -6,7 +6,7 @@
 
 // @f3 0x005a2aa0 (community match, verified in this file)
 namespace f3m_005a2aa0 {
-extern "C" void* __cdecl _alloca(unsigned int size);
+extern "C" void* __cdecl _alloca(size_t size);
 
 struct FileObj;
 

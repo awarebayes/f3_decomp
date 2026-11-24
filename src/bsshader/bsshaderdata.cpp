@@ -234,7 +234,7 @@ struct BSShaderVS
     static void __cdecl GetShaderPath(const char*, char*);
     NiD3DVertexShader* CompileVertexShader(const char*, const _D3DXMACRO*, const char*, const char*);
 };
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 struct FUN_00bb01c0_t : BSShaderVS
 {
     void CreatePrecipitationVertexShaders();

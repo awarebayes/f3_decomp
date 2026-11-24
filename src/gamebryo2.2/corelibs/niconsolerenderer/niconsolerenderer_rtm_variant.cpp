@@ -460,7 +460,7 @@ struct S_00e69a20
 	DepthDevice* dev;
 	bool __thiscall CreateDepthStencilBuffer(Ni2DBuffer* a, NiPixelFormat const* b, unsigned int c);
 };
-extern "C" char* __cdecl strcat_s(char* dest, unsigned int size, const char* src);
+extern "C" char* __cdecl strcat_s(char* dest, size_t size, const char* src);
 struct FUN_00e69c00_shell {
     char pad[0x5cc];
     unsigned int flags;
@@ -10826,7 +10826,7 @@ struct PackByteInfo {
     unsigned char* dest;
 };
 unsigned int __cdecl PackByteElements(PackByteInfo* pInfo);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 inline unsigned short minimum(unsigned short a, unsigned short b) { return a > b ? b : a; }
 struct ByteFloatStream {
  unsigned short lastComponent, unk02, type, unk06, vertices, unk0a;
@@ -11216,7 +11216,7 @@ struct Node {
     }
 
 };
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 void* NiMalloc(unsigned int);
 struct RendererBase {
  virtual void BaseVirtual();
@@ -20959,7 +20959,7 @@ unsigned int unk60c;
     bool __thiscall BuildPacket(Packet* pkPacket, void* pkModel, Entry* pkEntry, void* pkGeom);
     bool __thiscall BuildPacketEntries(void* a1, void* pkModel, Arg3* pkArg3, void* pkGeom, void* a5, void* a6);
 };
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 extern "C" void* __cdecl FUN_00ec61c0(void*,int,unsigned int);
 struct InitAdapterList;
 extern InitAdapterList* DAT_0126f0e8;

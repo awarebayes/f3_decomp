@@ -108,7 +108,7 @@ done:
     m_kFrustumPlanes.m_uiActivePlaneMask = active;
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern "C" const NiPoint3 NiPoint3_ZERO;
 extern const float runtimeFloatSettingDefault100;
 __forceinline void ShadowMatrixIdentity(D3DXMATRIX& m)

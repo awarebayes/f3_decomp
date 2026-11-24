@@ -812,7 +812,7 @@ extern NiFixedString EmptyFS;
 
 void* __cdecl NiMalloc(unsigned int);
 void __cdecl FUN_00aa10f0(void*);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 struct Key
 {
     const char* text;

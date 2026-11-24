@@ -1770,7 +1770,7 @@ struct S00cf0f40_Arr
     }
 };
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 inline void S00cf0f40_Swap4(void* p)
 {
     unsigned int t;

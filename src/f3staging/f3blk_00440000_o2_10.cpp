@@ -13,8 +13,8 @@
 extern char DAT_011f6238;
 namespace f3m_0045bab0 {
 
-extern "C" void* __cdecl _alloca(unsigned int);
-extern "C" unsigned int __cdecl strlen(const char* s);
+extern "C" void* __cdecl _alloca(size_t);
+extern "C" size_t __cdecl strlen(const char* s);
 
 struct ArgCh {
     void FUN_00447d60(char* buf, int a);

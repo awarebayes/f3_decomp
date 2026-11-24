@@ -22203,7 +22203,7 @@ bool __cdecl FUN_00535100(void* paramInfo, void* scriptData, QRef* thisObj, void
 
 // @f3 0x00536ca0 (community match, verified in this file)
 extern "C" char* __cdecl strcpy(char*,const char*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" int __cdecl _stricmp(const char*,const char*);
 
 namespace combat_debug_536ca0 {
@@ -48972,7 +48972,7 @@ class TESObjectREFR;
 class Script;
 class ScriptLocals;
 
-extern "C" void* __cdecl memset(void* dst, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dst, int value, size_t count);
 int __cdecl FUN_00c007fc(char* dst, unsigned int size, const char* src);
 void __cdecl FUN_006195d0(const char* format, ...);
 struct RefVirt {

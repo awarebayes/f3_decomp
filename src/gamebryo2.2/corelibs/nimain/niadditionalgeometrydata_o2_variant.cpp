@@ -457,7 +457,7 @@ struct FUN_00a730e0_cls
     void FUN_00a730e0(unsigned int newCount);
 };
 
-extern "C" void* __cdecl memcpy(void* dst, const void* src, unsigned int n);
+extern "C" void* __cdecl memcpy(void* dst, const void* src, size_t n);
 
 // @fnv 0x00a730e0
 void FUN_00a730e0_cls::FUN_00a730e0(unsigned int newCount)
@@ -604,7 +604,7 @@ FUN_00a746e0::FUN_00a746e0(int a1, int a2, int a3, int a4, int a5, int a6, int a
 
 // Equality of two byte buffers: same size and identical contents.
 
-extern "C" int __cdecl memcmp(const void* pvBuf1, const void* pvBuf2, unsigned int uiSize);
+extern "C" int __cdecl memcmp(const void* pvBuf1, const void* pvBuf2, size_t uiSize);
 
 class A2440Buffer
 {

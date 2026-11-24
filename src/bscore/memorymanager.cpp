@@ -463,7 +463,7 @@ inline void DestroyMemoryPools()
         DAT_011f67b8[i] = 0;
     }
 }
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 struct FUN_00aa3a40
 {
     bool unk00;

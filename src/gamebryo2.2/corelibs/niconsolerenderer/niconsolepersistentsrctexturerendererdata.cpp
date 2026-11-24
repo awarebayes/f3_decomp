@@ -5847,7 +5847,7 @@ PixelProxy* OwnerProxy::FUN_00e8fe10(TextureProxy* source, int multisample)
 }
 
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
 enum TextureSurfaceFormat
 {

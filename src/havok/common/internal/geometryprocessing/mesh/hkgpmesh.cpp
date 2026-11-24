@@ -2116,7 +2116,7 @@ struct FUN_00e22970_Cls {
 };
 
 void __cdecl FUN_00c908c0(void* apArg1, FUN_00e22970_Cls* apThis, int aCapacity, int aElemSize);
-extern "C" void* __cdecl memcpy(void* apDst, const void* apSrc, unsigned int aCount);
+extern "C" void* __cdecl memcpy(void* apDst, const void* apSrc, size_t aCount);
 
 // Grows the item array if needed, copies aCount 0x30-byte items from apSrc to the end, and updates the count.
 // @fnv 0x00e22970

@@ -6830,7 +6830,7 @@ void* Reset1113::FUN_007f9890() {
 
 // @f3 0x007fb120 (community match, verified in this file)
 namespace f3m_007fb120 {
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 struct NameMap1110 { bool FUN_00bea7b0(unsigned int, const char*&) const; };
 struct Registry1110 {
     unsigned char pad[0x38];
@@ -8104,7 +8104,7 @@ class MovieSemaphore
 template <class K, class V> class NiTMapItem;
 template <class T> class DFALL;
 void* __cdecl FUN_0089e810(unsigned int size);
-extern "C" void* __cdecl memset(void* dst, int val, unsigned int size);
+extern "C" void* __cdecl memset(void* dst, int val, size_t size);
 inline void* NiAllocBytes(unsigned int uiBytes)
 {
     return FUN_0089e810(uiBytes);

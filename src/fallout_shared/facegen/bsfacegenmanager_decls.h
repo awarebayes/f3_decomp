@@ -24,7 +24,7 @@ class BSFaceGenManager
 };
 extern BSFaceGenManager* DAT_011d59e8;
 void FUN_006519f0();
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 struct BGSTextureModel
 {
     char data[24];

@@ -6,7 +6,7 @@
 
 // @f3 0x004a6440 (community match, verified in this file)
 namespace f3m_004a6440 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" unsigned long __cdecl _byteswap_ulong(unsigned long);
 
 struct Rd {
@@ -396,7 +396,7 @@ bool Obj::FUN_004a6440(Rd* r)
 extern unsigned int DAT_010701ac;
 namespace f3m_004a3530 {
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 namespace f3m_004a3530 {
 

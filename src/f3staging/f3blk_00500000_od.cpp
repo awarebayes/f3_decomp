@@ -6,7 +6,7 @@
 
 // @f3 0x00515c10 (community match, verified in this file)
 namespace f3m_00515c10 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct CB20B0_Class {
     int GetType();
@@ -142,7 +142,7 @@ char Matrix44_shell::FUN_00515c10(CB20B0_Class* a2)
 
 // @f3 0x0050ae40 (community match, verified in this file)
 namespace f3m_0050ae40 {
-extern "C" void* __cdecl _alloca(unsigned);
+extern "C" void* __cdecl _alloca(size_t);
 struct File50ae{
 int unk000;
 int unk004;
@@ -303,7 +303,7 @@ bool Owner50ae::FUN_0050ae40(File50ae*file){if(file->FUN_00448cc0()!=5)return fa
 
 // @f3 0x0050aa60 (community match, verified in this file)
 namespace f3m_0050aa60 {
-extern "C" void* __cdecl _alloca(unsigned);
+extern "C" void* __cdecl _alloca(size_t);
 struct File50aa{
 int unk000;
 int unk004;
@@ -465,7 +465,7 @@ bool Owner50aa::FUN_0050aa60(File50aa*file){FUN_00454410(file);FUN_00454240(0);u
 // @f3 0x0050b9a0 (community match, verified in this file)
 #include <malloc.h>
 namespace f3m_0050b9a0 {
-extern "C" void* __cdecl _alloca(unsigned);
+extern "C" void* __cdecl _alloca(size_t);
 struct Stream50b9 {int unk00; int unk04; int unk08; int unk0C; int unk10; int unk14; int unk18; int unk1C; int unk20; int unk24; int unk28; int unk2C; int unk30; int unk34; int unk38; int unk3C; int unk40; int unk44; int unk48; int unk4C; int unk50; int unk54; int unk58; int unk5C; int unk60; int unk64; int unk68; int unk6C; int unk70; int unk74; int unk78; int unk7C; int unk80; int unk84; int unk88; int unk8C; int unk90; int unk94; int unk98; int unk9C; int unkA0; int unkA4; int unkA8; int unkAC; int unkB0; int unkB4; int unkB8; int unkBC; int unkC0; int unkC4; int unkC8; int unkCC; int unkD0; int unkD4; int unkD8; int unkDC; int unkE0; int unkE4; int unkE8; int unkEC; int unkF0; int unkF4; int unkF8; int unkFC; int unk100; int unk104; int unk108; int unk10C; int unk110; int unk114; int unk118; int unk11C; int unk120; int unk124; int unk128; int unk12C; int unk130; int unk134; int unk138; int unk13C; int unk140; int unk144; int unk148; int unk14C; int unk150; int unk154; int unk158; int unk15C; int unk160; int unk164; int unk168; int unk16C; int unk170; int unk174; int unk178; int unk17C; int unk180; int unk184; int unk188; int unk18C; int unk190; int unk194; int unk198; int unk19C; int unk1A0; int unk1A4; int unk1A8; int unk1AC; int unk1B0; int unk1B4; int unk1B8; int unk1BC; int unk1C0; int unk1C4; int unk1C8; int unk1CC; int unk1D0; int unk1D4; int unk1D8; int unk1DC; int unk1E0; int unk1E4; int unk1E8; int unk1EC; int unk1F0; int unk1F4; int unk1F8; int unk1FC; int unk200; int unk204; int unk208; int unk20C; int unk210; int unk214; int unk218; int unk21C; int unk220; int unk224; int unk228; int unk22C; int unk230; int unk234; int unk238; int unk23C; int unk240; int unk244; int unk248; int unk24C; int unk250; int unk254; int unk258; unsigned unk25C;unsigned FUN_004487d0();void FUN_00447d60(void*,unsigned);bool FUN_00447020();};
 struct Owner50b9;struct Part50b9;typedef void (__thiscall *PartCall50b9)(Part50b9*,char*);struct PartTable50b9 {int unk00,unk04,unk08,unk0C;PartCall50b9 unk10;};struct Part50b9 {PartTable50b9* unk00;};
 typedef void (__thiscall *Read50b9)(Owner50b9*,Stream50b9*);typedef void (__thiscall *Name50b9)(Owner50b9*,char*);struct Table50b9 {int unk00; int unk04; int unk08; int unk0C; int unk10; int unk14; int unk18; int unk1C; int unk20; int unk24; int unk28; int unk2C; int unk30; int unk34; int unk38; int unk3C; int unk40; int unk44; int unk48; int unk4C; int unk50; int unk54; int unk58; int unk5C; int unk60; int unk64; int unk68; int unk6C; int unk70; int unk74; int unk78; int unk7C; int unk80; int unk84; int unk88; int unk8C; int unk90; int unk94; int unk98; int unk9C; int unkA0; int unkA4; int unkA8; int unkAC; int unkB0; int unkB4; int unkB8; int unkBC; int unkC0; int unkC4; int unkC8; int unkCC; int unkD0; int unkD4; int unkD8; int unkDC; Read50b9 unkE0; int unkE4; int unkE8; int unkEC; int unkF0; int unkF4; int unkF8; int unkFC; int unk100; int unk104; int unk108; int unk10C; int unk110; int unk114; int unk118; int unk11C; int unk120; int unk124; int unk128; int unk12C; int unk130; Name50b9 unk134;};
@@ -477,7 +477,7 @@ bool Owner50b9::FUN_0050b9a0(Stream50b9* stream){FUN_00454410(stream);FUN_004542
 #include <stdlib.h>
 #include <string.h>
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 class BGSCameraShot;
 class BGSCameraPath;

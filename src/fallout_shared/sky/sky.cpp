@@ -942,7 +942,7 @@ void* Cls_0063a080::FUN_0063a080(unsigned int flags)
 }
 
 namespace fnv_0063d0e0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct Sky_Helper
 {
     void FUN_0063e860(int);

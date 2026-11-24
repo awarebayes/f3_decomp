@@ -27149,7 +27149,7 @@ void FUN_0069bde0_Class::FUN_0069bde0()
 namespace f3m_0068afb0 {
 
 extern "C" int sprintf(char*, const char*, ...);
-extern "C" int _strnicmp(const char*, const char*, unsigned);
+extern "C" int _strnicmp(const char*, const char*, size_t);
 
 struct Heap { void* FUN_0086b930(unsigned int size); };
 extern Heap DAT_01090a78;

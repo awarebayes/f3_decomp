@@ -40,7 +40,7 @@ void __fastcall FUN_00e89ad0(int value)
     FUN_00e92ee0(value);
 }
 
-extern "C" void* __cdecl memmove(void* pvDest, const void* pvSrc, unsigned int uiSize);
+extern "C" void* __cdecl memmove(void* pvDest, const void* pvSrc, size_t uiSize);
 
 extern int g_aiE89C70ConstantTypes[];
 

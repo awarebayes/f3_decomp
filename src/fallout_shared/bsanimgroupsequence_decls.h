@@ -374,7 +374,7 @@ class BSAnimGroupSequence : public NiControllerSequence
 };
 extern const float DAT_01023850;
 const NiFixedString& FUN_004ef990();
-extern "C" int _strnicmp(const char*, const char*, unsigned int);
+extern "C" int _strnicmp(const char*, const char*, size_t);
 int FUN_00404dc0(const char*, const char*);
 extern "C" char* strchr(const char*, int);
 extern "C" char* __insecure_strcpy(char*, const char*);

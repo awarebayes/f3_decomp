@@ -8,7 +8,7 @@
 #include <malloc.h>
 #include <stdlib.h>
 namespace f3m_0044c110 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct Model {
 virtual void v0();
 virtual void v1();
@@ -368,7 +368,7 @@ void CThing::FUN_0044d3b0()
 
 // @f3 0x00458210 (community match, verified in this file)
 namespace f3m_00458210 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 namespace f3m_00458210 {
 struct TESFile458 {
@@ -466,7 +466,7 @@ public:
 
 namespace f3m_00458510 {
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 class MemoryHeap
 {
@@ -550,7 +550,7 @@ namespace f3m_00454d10 {
 
 namespace f3m_00454d10 {
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" unsigned long __cdecl _byteswap_ulong(unsigned long);
 extern "C" unsigned short __cdecl _byteswap_ushort(unsigned short);
 

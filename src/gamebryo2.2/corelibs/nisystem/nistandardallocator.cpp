@@ -356,7 +356,7 @@ fwd_body:
 
 unsigned int __cdecl ReadUInt32(void* pMemory);
 void* __cdecl FUN_00aa1250(void* pvMemory, unsigned int stSizeInBytes, unsigned int stAlignment);
-extern "C" void* __cdecl memcpy(void* dst, const void* src, unsigned int n);
+extern "C" void* __cdecl memcpy(void* dst, const void* src, size_t n);
 
 struct StdAllocator
 {

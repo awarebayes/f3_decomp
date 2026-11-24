@@ -28,7 +28,7 @@ bool EqBase::FUN_00a6f070(NiObject* pkObject)
     return false;
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 char* __cdecl NiSprintf(char* dst, unsigned int size, const char* fmt, ...);
 void* __cdecl NiMalloc(unsigned int size);
 

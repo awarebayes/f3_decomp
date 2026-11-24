@@ -3801,7 +3801,7 @@ TreeNode::~TreeNode()
 // @f3 0x00ba3920 (community match, verified in this file)
 #pragma intrinsic(strlen)
 namespace f3m_00ba3920 {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 namespace Task1406 {
 struct Heap{void FUN_0086ba60(void*);};extern Heap DAT_01090a78;
 int* __cdecl FUN_00c02a76();
@@ -4004,9 +4004,9 @@ void CLeafGeometryWind::FUN_00bb31b0(unsigned short usLod)
 // @f3 0x00ba3c00 (community match, verified in this file)
 namespace f3m_00ba3c00 {
 namespace task1386 {
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00c01e8b();
 namespace std {
@@ -7373,7 +7373,7 @@ void __thiscall FUN_00ba34f0_Owner::FUN_00ba34f0()
 
 // @f3 0x00baf660 (community match, verified in this file)
 namespace f3m_00baf660 {
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void __cdecl FUN_00c01e8b();
 
 struct FUN_00baf660_Obj {
@@ -10134,7 +10134,7 @@ template <class A, class B> inline ScalarPointerTag pointerCategory(A&, B&)
     ScalarPointerTag category;
     return category;
 }
-extern "C" int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
 template <class It, class Cat>
 inline It copyBackward(It first, It last, It dest, Cat, ScalarPointerTag, CheckedRangeTag)
 {

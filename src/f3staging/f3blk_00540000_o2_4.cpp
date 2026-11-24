@@ -6,7 +6,7 @@
 
 // @f3 0x005447c0 (community match, verified in this file)
 namespace f3m_005447c0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 class TESFile
 {
@@ -109,7 +109,7 @@ bool TESModel::FUN_005447c0(TESFile* file)
 // @f3 0x00550f10 (community match, verified in this file)
 namespace f3m_00550f10 {
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 namespace f3m_00550f10 {
 
@@ -285,7 +285,7 @@ bool Target::FUN_00550f10(Reader* reader)
 
 // @f3 0x00552310 (community match, verified in this file)
 namespace f3m_00552310 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 class RecordFile {
 public:
     unsigned unk000;

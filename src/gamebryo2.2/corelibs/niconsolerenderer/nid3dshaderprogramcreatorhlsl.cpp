@@ -174,7 +174,7 @@ void __thiscall NiD3DShaderProgram::SetShaderCode(unsigned int uiSize, void* pvC
 void* __cdecl NiMalloc(unsigned int);
 void __cdecl NiFreeAlias(void*);
 int __cdecl strcpy_s(char*, unsigned int, const char*);
-extern "C" unsigned int strlen(const char*);
+extern "C" size_t strlen(const char*);
 struct FUN_00e95cf0_Holder
 {
     void FUN_00e95cf0(const char* pcEntryPoint);

@@ -761,7 +761,7 @@ NiNode* Tile3DCalc::CreateTileNode()
     return node;
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct AnimString
 {
     char* text;

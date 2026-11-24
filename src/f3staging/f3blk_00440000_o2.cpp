@@ -2870,7 +2870,7 @@ FUN_004513f0::~FUN_004513f0()
 }
 
 // @f3 0x004521f0 (community match, verified in this file)
-extern "C" unsigned int __cdecl strlen(const char* apString);
+extern "C" size_t __cdecl strlen(const char* apString);
 
 struct RStringStandIn4521 {
     char* m_pString;
@@ -5561,8 +5561,8 @@ bool Owner45e160::FUN_0045e160()
 }
 
 // @f3 0x0045d9e0 (community match, verified in this file)
-extern "C" unsigned int __cdecl strlen(const char* text);
-extern "C" int __cdecl _strnicmp(const char* a, const char* b, unsigned int count);
+extern "C" size_t __cdecl strlen(const char* text);
+extern "C" int __cdecl _strnicmp(const char* a, const char* b, size_t count);
 extern "C" int __cdecl tolower(int c);
 
 extern const char DAT_00dbe198[];
@@ -8338,7 +8338,7 @@ void Owner280::FUN_00450e10(Context280* context) {
 }
 
 // @f3 0x004516b0 (community match, verified in this file)
-extern "C" void* __cdecl memcpy(void* destination, const void* source, unsigned int size);
+extern "C" void* __cdecl memcpy(void* destination, const void* source, size_t size);
 struct Owner281 {
     unsigned int unk00;
     unsigned char values[7];
@@ -13624,7 +13624,7 @@ void Owner1019::FUN_0044e600(void* source) {
 
 // @f3 0x00447ad0 (community match, verified in this file)
 namespace f3m_00447ad0 {
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 void* __cdecl NiMalloc(unsigned int);
 
 struct MapBase_00447ad0 {
@@ -13664,7 +13664,7 @@ void Owner1026::FUN_00451640(void* source) {
 
 // @f3 0x00447b90 (community match, verified in this file)
 namespace f3m_00447b90 {
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 void* __cdecl NiMalloc(unsigned int);
 
 struct MapBase_00447b90 {
@@ -17102,7 +17102,7 @@ unsigned int ROwnerStandIn4558::FUN_00455800() const
 
 // @f3 0x00458740 (community match, verified in this file)
 namespace f3m_00458740 {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 // FUN_00458740: thiscall (ret 4), char* param; copies the string into a new heap block and
 // registers the copy with the member at this+4.
 struct FUN_00458740_sub4 {
@@ -17278,7 +17278,7 @@ bool Owner297::FUN_0044f250(unsigned int index) {
 
 // @f3 0x0045da70 (community match, verified in this file)
 namespace f3m_0045da70 {
-extern "C" int __cdecl _strnicmp(const char*, const char*, unsigned int);
+extern "C" int __cdecl _strnicmp(const char*, const char*, size_t);
 extern "C" int __cdecl tolower(int);
 namespace f3m_0045da70 {
 struct Key {
@@ -17634,7 +17634,7 @@ short Owner5d300::FUN_0045d300(Actor5d300* actor) {
 
 // @f3 0x0044d2b0 (community match, verified in this file)
 namespace f3m_0044d2b0 {
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 class BaseFormComponent {
 public:
     virtual ~BaseFormComponent();
@@ -32621,8 +32621,8 @@ bool SwapList::FUN_00458ae0(char** outData, unsigned int* outSize)
 }
 
 // @f3 0x00453800 (community match, verified in this file)
-extern "C" void* __cdecl _alloca(unsigned);
-extern "C" unsigned __cdecl strlen(const char*);
+extern "C" void* __cdecl _alloca(size_t);
+extern "C" size_t __cdecl strlen(const char*);
 namespace f3m_00453800 {
 struct File {
     unsigned unk000;
@@ -38729,7 +38729,7 @@ void __cdecl FUN_00455200()
 #include <string.h>
 namespace f3m_00458000 {
 namespace f3m_00458000 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct TexFile {
     unsigned int unk000, unk004, unk008, unk00c;
     unsigned int unk010, unk014, unk018, unk01c;
@@ -38795,7 +38795,7 @@ void TextureList::FUN_00458000(TexFile* file, const char* a, void* b) {
 // @f3 0x00459450 (community match, verified in this file)
 namespace f3m_00459450 {
 namespace f3m_00459450 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct SwapFile {
     unsigned int unk000;
     unsigned int unk004;
@@ -40323,7 +40323,7 @@ extern Alloc48c0 DAT_01090a78;
 extern unsigned char DAT_0106dd0e;
 extern unsigned int DAT_0106dd24;
 extern unsigned char* DAT_0106dd20;
-extern "C" void* __cdecl memcpy(void* destination, const void* source, unsigned int size);
+extern "C" void* __cdecl memcpy(void* destination, const void* source, size_t size);
 
 struct ChunkHeader48c0 {
     volatile unsigned int type;

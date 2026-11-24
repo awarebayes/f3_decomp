@@ -20,7 +20,7 @@ void NiColor::SaveBinary(NiStream& stream)
 
 extern "C" int __cdecl NiSprintf(char*, unsigned int, char const*, ...);
 extern "C" void* __cdecl _NiMalloc(unsigned int);
-extern "C" unsigned int __cdecl strlen(char const*);
+extern "C" size_t __cdecl strlen(char const*);
 
 struct NiPoint3
 {

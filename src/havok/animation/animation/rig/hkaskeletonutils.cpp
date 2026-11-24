@@ -96,7 +96,7 @@ short __cdecl FindIndexByKey(S_00cdd390_Table* pSearchEntries, const void* pKey,
 }
 
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 template <class T> struct Array
 {
     T* data;

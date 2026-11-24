@@ -973,7 +973,7 @@ bool __cdecl RaycastGeometry(const P3* origin, const P3* direction, Pick* pick, 
 
 
 extern char DAT_011f4248;
-extern "C" void* memcpy(void* dst, const void* src, unsigned int n);
+extern "C" void* memcpy(void* dst, const void* src, size_t n);
 struct NiPoint3
 {
     float x, y, z;

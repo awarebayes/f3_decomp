@@ -891,7 +891,7 @@ void S00e2e3f0_Obj::FUN_00e2e3f0()
 }
 
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 extern "C" int __cdecl FUN_00cb0fa0(const char*, const char*);
 struct String839
 {

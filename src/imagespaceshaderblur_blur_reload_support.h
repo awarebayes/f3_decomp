@@ -5,7 +5,7 @@
 // Declaration facts: public yvileapsis/yUI-NVSE CommonLib shader headers;
 // NiTArray/ImageSpaceEffect layout follows the accepted bloom declarations
 // (decomp/src/bsshader/imagespaceeffectbloom_decls.h).
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 struct D3DXMACRO
 {
     const char* Name;

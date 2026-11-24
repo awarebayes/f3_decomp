@@ -88,6 +88,6 @@ class NiD3DDefaultShader
   public:
     static void SetShaderName(const char*);
 };
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern "C" void* __cdecl fnv_zlib_memcpy(void*, const void*, unsigned int);
 #endif

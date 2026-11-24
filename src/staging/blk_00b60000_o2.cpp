@@ -566,7 +566,7 @@ void FUN_00b6f460_class::LoadAndSetAdditional(NiStream* kStream)
     }
 }
 
-extern "C" void* __cdecl memmove(void* dst, const void* src, unsigned int n);
+extern "C" void* __cdecl memmove(void* dst, const void* src, size_t n);
 struct FUN_00b71ad0_class
 {
     void CopySourceData(const void* src);
@@ -1326,8 +1326,8 @@ FnvB60280Owner* FnvB60280Owner::FUN_00b60280(FnvB60280Ref* pNew)
     return this;
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 void* __cdecl FUN_00aa1070(unsigned int);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);

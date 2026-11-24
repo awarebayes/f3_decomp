@@ -1,6 +1,6 @@
 // gamebryo2.2/corelibs/nimain/nioldscreenspace.cpp: NiScreenPolygon, NiScreenGeometry, Holder, HolderBase and more (45 functions)
 #include "f3_common.h"
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 #pragma intrinsic(memset)
 #include "nioldscreenspace_decls.h"
 // Zeroes the properties array, then assigns the contents of other into this object.

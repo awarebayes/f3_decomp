@@ -13440,7 +13440,7 @@ extern char DAT_00f46e68;
 extern char DAT_00f47da4;
 namespace f3m_0041cbb0 {
 namespace f3m_0041cbb0 {
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 class BSExtraData
 {
 public:
@@ -15853,7 +15853,7 @@ extern char DAT_00f46e68;
 extern char DAT_00f47618;
 namespace f3m_0041e8d0 {
 namespace f3m_0041e8d0 {
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 void* FUN_00c0050a(void* obj, int a, void* from, void* to, int b);
 struct Obj {
     char unk00[0xc];
@@ -22702,7 +22702,7 @@ class TESScriptableForm {public:virtual ~TESScriptableForm();void* script;void* 
 class Actor : public TESObjectREFR {};
 class MobileObject : public TESObjectREFR {};
 class TESPackage {public:virtual ~TESPackage();};
-extern "C" void* __cdecl memcpy(void*,const void*,unsigned int);
+extern "C" void* __cdecl memcpy(void*,const void*,size_t);
 namespace Task1995 {
 struct ActorBaseFixup {unsigned unk00;unsigned unk04;unsigned unk08;unsigned unk0c;unsigned unk10;unsigned unk14;unsigned unk18;unsigned unk1c;unsigned unk20;unsigned unk24;unsigned unk28;unsigned unk2c;unsigned unk30;unsigned unk34;unsigned unk38;unsigned unk3c;unsigned unk40;unsigned unk44;unsigned unk48;unsigned unk4c;unsigned unk50;unsigned unk54;unsigned unk58;unsigned unk5c;unsigned unk60;unsigned unk64;unsigned unk68;unsigned unk6c;unsigned unk70;unsigned unk74;unsigned unk78;unsigned unk7c;unsigned unk80;unsigned unk84;unsigned unk88;unsigned unk8c;unsigned unk90;unsigned unk94;unsigned unk98;unsigned unk9c;unsigned unka0;unsigned unka4;unsigned unka8;unsigned unkac;unsigned unkb0;unsigned unkb4;unsigned unkb8;unsigned unkbc;unsigned unkc0;unsigned unkc4;unsigned unkc8;unsigned unkcc;unsigned unkd0;unsigned unkd4;unsigned unkd8;unsigned unkdc;unsigned unke0;unsigned unke4;unsigned unke8;unsigned unkec;unsigned unkf0;TESScriptableForm script;};
 struct ActorFixup {unsigned unk00;unsigned unk04;unsigned unk08;unsigned unk0c;unsigned unk10;unsigned unk14;unsigned unk18;ActorBaseFixup* base;ActorBaseFixup* FUN_004181e0(){return base;}};
@@ -29577,7 +29577,7 @@ void ExtraList::FUN_00411250(bool on)
 #include <stdlib.h>
 extern const char FUN_00db4148[];
 namespace f3m_004049f0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 class TESFile {
 public:
 unsigned int unk000;
@@ -31059,7 +31059,7 @@ extern Entry DAT_00f462b8[];
 extern const char DAT_00db3920[];
 extern const char DAT_00db38c0[];
 namespace f3m_00402070 {
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern "C" void _ReadWriteBarrier(void);
 extern "C" unsigned long __cdecl _byteswap_ulong(unsigned long);
 
@@ -33928,7 +33928,7 @@ notAllowed:
 
 // @f3 0x0041f220 (community match, verified in this file)
 namespace f3m_0041f220 {
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 extern "C" void _ReadWriteBarrier(void);
 
 namespace f3m_0041f220 {
@@ -36762,7 +36762,7 @@ void Receiver::FUN_004012d0(Stream* stream, int tag)
 // @f3 0x00405ab0 (community match, verified in this file)
 #include <stddef.h>
 namespace f3m_00405ab0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 class RecordFile {
 public:
     unsigned unk000;
@@ -37003,7 +37003,7 @@ namespace f3m_00407680 {
 
 namespace f3m_00407680 {
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 class TESFile
 {
@@ -37224,7 +37224,7 @@ namespace f3m_00407960 {
 
 namespace f3m_00407960 {
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 class TESFile
 {

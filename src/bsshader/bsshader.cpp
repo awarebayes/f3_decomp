@@ -2237,7 +2237,7 @@ inline void Cat(char* d, unsigned n, const char* s)
     strcat_s(d, n, s);
 }
 extern "C" int FUN_00406d00(char*, int, const char*, ...);
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 class FileView;
 struct FileViewMethods
 {

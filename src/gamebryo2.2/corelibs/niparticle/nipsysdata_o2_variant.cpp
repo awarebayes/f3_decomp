@@ -10,7 +10,7 @@
 #include "nipsysdata_stream.h"
 extern MemoryManager g_memoryManager;
 void* _NiMalloc(unsigned int size);
-extern "C" void* fnv_zlib_memset(void* dst, int value, unsigned long size);
+extern "C" void* fnv_zlib_memset(void* dst, int value, size_t long size);
 
 struct FUN_00a67c00
 {

@@ -945,7 +945,7 @@ void FUN_00d44cc0(int a1, int a2, int a3, int a4)
 }
 
 extern "C" __m128 _mm_xor_ps(__m128 _A, __m128 _B);
-extern "C" void* __cdecl memcpy(void* _Dst, const void* _Src, unsigned int _Size);
+extern "C" void* __cdecl memcpy(void* _Dst, const void* _Src, size_t _Size);
 
 extern char DAT_010ce80c;
 extern __m128 DAT_010c44d0;
