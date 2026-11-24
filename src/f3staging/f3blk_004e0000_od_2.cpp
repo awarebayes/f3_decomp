@@ -1,3 +1,6 @@
+extern "C" unsigned __int64 __readgsqword(unsigned long);
+// fs:[0x2c] is the thread-local-storage array on x86; on x64 it is gs:[0x58].
+#define __readfsdword(offset) ((size_t)__readgsqword(0x58))
 #include <string.h>
 #include <intrin.h>
 // src/f3staging/f3blk_004e0000_od.cpp - Fallout 3 STAGING unit (f3_staging_units.py, 3 Nov 2026) for functions with no New Vegas counterpart
