@@ -896,7 +896,7 @@ enum hkResult
 };
 
 		typedef unsigned __int64 hkUint64;
-			typedef unsigned __w64 hk_size_t;
+			typedef size_t hk_size_t;
 typedef hkUint16 hkObjectIndex;
 typedef hkReal hkTime;
 class hkClass;

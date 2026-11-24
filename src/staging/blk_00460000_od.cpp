@@ -1286,7 +1286,7 @@ void __thiscall FUN_00471e10_class::SetFlag40(bool set)
         *(unsigned int*)((char*)this + 0x3e8) &= ~0x40;
 }
 
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 extern int DAT_010a2480;
 extern unsigned int DAT_01187014;
 
@@ -1389,7 +1389,7 @@ FUN_00474560_class::FUN_00474560_class(unsigned int size)
 
 extern int DAT_0101a384;
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_00474660_class
 {
     void* vtbl;
@@ -1590,7 +1590,7 @@ S* __thiscall S::ConstructShadowSceneArray()
 }
 
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void* p, int v, unsigned int n);
+void* __cdecl memset(void* p, int v, size_t n);
 struct FUN_004791f0_holder2
 {
     void* __thiscall InitArrayHolder(int a);

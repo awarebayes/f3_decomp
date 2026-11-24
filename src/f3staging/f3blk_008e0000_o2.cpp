@@ -1356,7 +1356,7 @@ struct Base380 {
 char* __cdecl FUN_00a7d330(const char* pcText);
 char* __cdecl ViewerStringStr(const char* pcPrefix, const char* pcValue);
 char* __cdecl CreateDebugString(const char* pcName, int iValue);
-int __cdecl sprintf_s(char* pcBuffer, unsigned int uiSizeOfBuffer, const char* pcFormat, ...);
+int __cdecl sprintf_s(char* pcBuffer, size_t uiSizeOfBuffer, const char* pcFormat, ...);
 
 void Base380::FUN_008f7d50(StrArr* apStrings)
 {

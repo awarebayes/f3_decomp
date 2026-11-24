@@ -28996,7 +28996,7 @@ FUN_00551cc0::FUN_00551cc0(){Form::table=DAT_00de4194;Name::table=DAT_00de417c;R
 
 // @f3 0x0054b3a0 (community match, verified in this file)
 namespace Task2053 {
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 void __cdecl FUN_00887da0(const char*, ...);
 
 struct LoadHdr

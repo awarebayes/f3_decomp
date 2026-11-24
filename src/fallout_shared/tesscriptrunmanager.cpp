@@ -433,7 +433,7 @@ bool ScriptExecutor::Run(Script* script, TESObjectREFR* reference, ScriptLocals*
     return result;
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 // Zeroes out all fields of the object pointed to by pThis and returns pThis.
 // @fnv 0x005e0c60

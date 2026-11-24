@@ -171,7 +171,7 @@ void __thiscall NiD3DShaderProgram::SetShaderCode(unsigned int uiSize, void* pvC
 
 void* __cdecl NiMalloc(unsigned int);
 void __cdecl NiFreeAlias(void*);
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 extern "C" size_t strlen(const char*);
 struct FUN_00e95cf0_Holder
 {
@@ -370,7 +370,7 @@ extern "C" long __stdcall D3DXCompileShader(const char* pSrcData, unsigned int S
                                             unsigned long Flags, ID3DXBuffer** ppShader, ID3DXBuffer** ppErrorMsgs,
                                             ID3DXConstantTable** ppConstantTable);
 int __cdecl FUN_00aa0020(int, bool, const char*, ...);
-int __cdecl strcpy_s(char*, unsigned int, char*);
+int __cdecl strcpy_s(char*, size_t, char*);
 void NiFree(void*);
 void* _memmove(void*, const void*, unsigned int);
 extern unsigned int DAT_0126fa24;

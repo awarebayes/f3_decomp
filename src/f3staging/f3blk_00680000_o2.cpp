@@ -21419,7 +21419,7 @@ float VATSMenuX::FUN_0068e730()
 
 // @f3 0x0068f0d0 (community match, verified in this file)
 namespace f3m_0068f0d0 {
-int sprintf_s(char* buffer, unsigned int size, const char* format, ...);
+int sprintf_s(char* buffer, size_t size, const char* format, ...);
 
 namespace N68f0d0 {
 

@@ -425,7 +425,7 @@ GO* __thiscall GO::FUN_008228f0(unsigned int flags)
 }
 
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_0082eee0_class
 {
     void* __thiscall InitArray(int size);
@@ -510,7 +510,7 @@ char FUN_00837280_Class::FUN_00837280()
 
 namespace fnv_0083b640 {
 extern "C" void* _NiMalloc(unsigned int size);
-void* memset(void* dest, int c, unsigned int count);
+void* memset(void* dest, int c, size_t count);
 extern "C" void* DAT_0107d9e4;
 struct FUN_0083b640_class
 {
@@ -1506,7 +1506,7 @@ struct DataHandler
 };
 extern DataHandler* g_dataHandler;
 
-int strcpy_s(char* dest, unsigned int size, const char* src);
+int strcpy_s(char* dest, size_t size, const char* src);
 unsigned int __cdecl SoundFlagsToAudioFlags(unsigned int flags);
 
 // @fnv 0x0082d150

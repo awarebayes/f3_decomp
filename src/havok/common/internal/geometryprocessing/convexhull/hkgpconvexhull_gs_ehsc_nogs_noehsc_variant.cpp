@@ -9808,7 +9808,7 @@ __m128 _mm_set_ss(float);
 __m128 _mm_load_ss(const float*);
 void _mm_store_ss(float*, __m128);
 double fabs(double);
-void* memcpy(void*,const void*,unsigned int);
+void* memcpy(void*,const void*,size_t);
 }
 extern const float DAT_010141cc;
 extern const float s_faderClearedAlpha;

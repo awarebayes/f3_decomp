@@ -8290,7 +8290,7 @@ typedef unsigned char	hkUint8;
 typedef unsigned short	hkUint16;
 typedef unsigned int	hkUint32;
 	typedef unsigned long __w64 hkUlong;
-			typedef unsigned __w64 hk_size_t;
+			typedef size_t hk_size_t;
 typedef hkReal hkTime;
 __forceinline hkUlong __cdecl hkGetByteOffset( const void* base, const void* pntr)
 {
@@ -11086,7 +11086,7 @@ typedef unsigned char	hkUint8;
 typedef unsigned short	hkUint16;
 typedef unsigned int	hkUint32;
 typedef unsigned long __w64 hkUlong;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 typedef hkReal hkTime;
 __forceinline hkUlong __cdecl hkGetByteOffset( const void* base, const void* pntr)
 {

@@ -321,8 +321,8 @@ struct FUN_00666650 : PathingSolutionBase
     FUN_00666650();
     virtual ~FUN_00666650();
 };
-int strcpy_s(char* apDst, unsigned int auiSize, const char* apSrc);
-int strcat_s(char* apDst, unsigned int auiSize, const char* apSrc);
+int strcpy_s(char* apDst, size_t auiSize, const char* apSrc);
+int strcat_s(char* apDst, size_t auiSize, const char* apSrc);
 template <class T> unsigned int BSStringLength(const T* apString);
 class FileFinder
 {

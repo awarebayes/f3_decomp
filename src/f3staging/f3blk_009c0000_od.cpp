@@ -1965,7 +1965,7 @@ enum hkResult
 	HK_SUCCESS = 0,
 	HK_FAILURE = 1
 };
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 class hkClass;
 typedef int hkBool32;
 class hkBool

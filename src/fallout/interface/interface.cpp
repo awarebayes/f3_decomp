@@ -3030,7 +3030,7 @@ struct TutorialState
 {
     void LoadTutorialSeenFlags(char*);
 };
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 // Reads menu page indices and map magnifications from the load buffer, applies them to the UI, and reads a settings blob when the version is at least 12.
 // @fnv 0x00706860
 void LoadMenuState(BGSLoadGameBuffer* apLoadGameBuffer)
@@ -3474,7 +3474,7 @@ struct TaskQueueInterface
 };
 
 void ___insecure_strcpy(char*, const char*);
-int strcat_s(char*, unsigned int, const char*);
+int strcat_s(char*, size_t, const char*);
 int _BSStringLength(const char*);
 int _sprintf(char*, const char*, ...);
 void __fastcall _ref_00ec408c(unsigned int);
@@ -5232,8 +5232,8 @@ void __cdecl GetControlLabel(int a1, char* a2, bool a3);
 bool __cdecl ResolveSettingString(const char* a1, char* a2);
 TESForm* __cdecl FUN_00483a00(const char* apName);
 
-int __cdecl sprintf_s(char* apBuffer, unsigned int auiBufferSize, const char* apFormat, ...);
-int __cdecl strcpy_s(char* apDest, unsigned int auiDestSize, const char* apSrc);
+int __cdecl sprintf_s(char* apBuffer, size_t auiBufferSize, const char* apFormat, ...);
+int __cdecl strcpy_s(char* apDest, size_t auiDestSize, const char* apSrc);
 int __cdecl _stricmp(const char* apStr1, const char* apStr2);
 
 // @fnv 0x007070c0

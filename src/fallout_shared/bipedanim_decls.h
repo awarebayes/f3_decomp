@@ -1183,7 +1183,7 @@ class TaskQueueInterface
     static void CopyStringToBuffer(char*, unsigned int, const char*);
 };
 char* FUN_0040ab30(char*, int);
-int strcat_s(char*, unsigned int, const char*);
+int strcat_s(char*, size_t, const char*);
 extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 class FileFinder
 {

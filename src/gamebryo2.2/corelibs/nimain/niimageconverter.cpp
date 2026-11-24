@@ -187,7 +187,7 @@ struct NiGlobalStringTable
 {
     static char* AddString(const char*);
 };
-int strcpy_s(char*, unsigned int, const char*);
+int strcpy_s(char*, size_t, const char*);
 extern const char* DAT_011f4a78;
 extern char* EmptyFS;
 // @fnv 0x00a76960

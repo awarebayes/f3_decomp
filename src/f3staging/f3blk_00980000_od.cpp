@@ -689,7 +689,7 @@ enum hkResult
 	HK_SUCCESS = 0,
 	HK_FAILURE = 1
 };
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 typedef hkReal hkTime;
 class hkClass;
 typedef int hkBool32;
@@ -3001,7 +3001,7 @@ enum hkResult
 HK_SUCCESS=0,
 HK_FAILURE=1
 };
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 typedef hkUint16 hkObjectIndex;
 typedef hkReal hkTime;
 class hkClass;
@@ -4564,7 +4564,7 @@ enum hkResult
 	HK_FAILURE = 1
 };
 typedef unsigned __int64 hkUint64;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 typedef hkUint16 hkObjectIndex;
 typedef hkReal hkTime;
 class hkClass;
@@ -6163,7 +6163,7 @@ enum hkResult
 };
 typedef unsigned __int64 hkUint64;
 typedef __int64 hkInt64;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 class hkClass;
 typedef int hkBool32;
 class hkBool
@@ -7117,7 +7117,7 @@ enum hkResult
 };
 typedef unsigned __int64 hkUint64;
 typedef __int64 hkInt64;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 class hkClass;
 typedef int hkBool32;
 class hkBool

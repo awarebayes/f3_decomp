@@ -2655,7 +2655,7 @@ void SaveWorld::FUN_00584170()
 extern "C" void* _FNV_DynamicCast(void*, int, const void*, const void*, int);
 extern char _FNV_RTTI_TESForm;
 extern char _FNV_RTTI_TESWorldSpace;
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 struct FUN_0058efd0
 {
     unsigned int unk000;

@@ -33,7 +33,7 @@ enum hkResult
 	HK_FAILURE = 1
 };
 typedef unsigned __int64 hkUint64;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 template <typename TYPE>
 __forceinline TYPE* __cdecl hkAddByteOffset( TYPE* base, hkUlong offset )
 {

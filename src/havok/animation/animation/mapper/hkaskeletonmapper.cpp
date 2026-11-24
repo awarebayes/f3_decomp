@@ -214,7 +214,7 @@ enum hkResult
 };
 typedef unsigned __int64 hkUint64;
 typedef __int64 hkInt64;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 class hkClass;
 typedef int hkBool32;
 class hkBool

@@ -216,7 +216,7 @@ struct TaskQueueInterface
 {
     static void CopyStringToBuffer(char*, unsigned int, const char*);
 };
-int strcat_s(char*, unsigned int, const char*);
+int strcat_s(char*, size_t, const char*);
 bool CleanPath(const char*, char*, unsigned int);
 class FileNameHash;
 class NiPoint2

@@ -421,7 +421,7 @@ void A6C900Skin::FUN_00a6c900(A6C900Stream& kStream)
         m_ucFlags |= m_pPartitions[i].m_ucFlags;
 }
 
-int sprintf_s(char* buffer, unsigned int size, const char* format, ...);
+int sprintf_s(char* buffer, size_t size, const char* format, ...);
 char* CreateDebugString(const char* pcName);
 char* CreateDebugString(const char* pcName, unsigned int uiValue);
 char* CreateDebugString(const char* pcName, bool bValue);

@@ -25076,7 +25076,7 @@ unsigned int FUN_00e78a70(Stream_e78910* apStream)
     return uiBytesWritten;
 }
 
-void* memcpy(void*,const void*,unsigned int);
+void* memcpy(void*,const void*,size_t);
 struct Stream78 {
  unsigned short type, unk02;
  unsigned short components, unk06;

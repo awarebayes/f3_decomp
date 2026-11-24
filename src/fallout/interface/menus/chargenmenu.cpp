@@ -258,7 +258,7 @@ extern GlobalObject_0040c150 g_011d3888;
 extern char const g_011d3d6c_arg1[];
 
 int __cdecl _sprintf_s(char*, unsigned int, char const*, ...);
-int __cdecl strcat_s(char*, unsigned int, char const*);
+int __cdecl strcat_s(char*, size_t, char const*);
 
 struct Tile_00753d20
 {

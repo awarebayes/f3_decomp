@@ -2,7 +2,7 @@
 // src/fallout_shared/tesproduceform.cpp - unit created 2026-10-16 from the whole-binary attribution (360 source path: d:/_fallout3/platforms/common/code/fallout shared/tesproduceform.cpp).
 // Functions are listed by their @fnv annotations; compile flags inferred from the PC code.
 
-void* __cdecl memset(void* p, int c, unsigned int n);
+void* __cdecl memset(void* p, int c, size_t n);
 
 struct FUN_0048b590_shell
 {

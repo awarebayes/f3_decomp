@@ -643,7 +643,7 @@ bool ObjectCandidate::FUN_00c86ab0(Item* item)
 
 extern __declspec(thread) int g_tlsHeapContext;
 
-int sprintf_s(char* buffer, unsigned int size, const char* format, ...);
+int sprintf_s(char* buffer, size_t size, const char* format, ...);
 char* __cdecl FUN_00a7d5e0(const char* className, const char* name);
 
 struct HeapContextGuard

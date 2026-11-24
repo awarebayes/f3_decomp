@@ -813,7 +813,7 @@ struct TextureLoad
 };
 extern bool DAT_011f5f00;
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 // @fnv 0x00e917e0
 void TextureLoad::LoadTextureData(LoadStream& stream)
 {

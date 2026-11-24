@@ -1349,7 +1349,7 @@ const char* FUN_0066e950(int);
 void CompareActorValueNames();
 int MinInt(int, int);
 bool FUN_00406d70(int, unsigned int);
-int strcpy_s(char*, unsigned int, const char*);
+int strcpy_s(char*, size_t, const char*);
 int FUN_00406d00(char*, unsigned int, const char*, ...);
 unsigned int FUN_0044a670(const char*);
 struct SkillsMenu

@@ -232,7 +232,7 @@ void TESDataHandler::ClearHairList()
     }
 }
 
-void* __cdecl memset(void* dst, int c, unsigned int n);
+void* __cdecl memset(void* dst, int c, size_t n);
 
 struct FUN_005af370_shell
 {
@@ -424,7 +424,7 @@ struct SL
     unsigned char _padding[8];
 };
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 char* __cdecl AllocateZeroed(int, int);
 
 extern char $SG3295[];
@@ -1299,7 +1299,7 @@ int ScriptBlockScanner::ScanBlockLines(CStringArgument* apData, unsigned int* ap
 
 // CRT isalnum in the game image
 int __cdecl FUN_00ec86e1(int c);
-int strcpy_s(char* dst, unsigned int size, const char* src);
+int strcpy_s(char* dst, size_t size, const char* src);
 void* __memcpy(void* dst, const void* src, unsigned int size);
 
 typedef bool(__cdecl* ScriptParseFunctionB15)(unsigned short usParamCount, void* pParams,
@@ -1886,7 +1886,7 @@ void Owner5AE6C0::ClearList()
 void __cdecl ReportScriptError(CStringArgument* a, const char* fmt, ...);
 unsigned char __cdecl ResolveScriptCommand(ScriptVariableData* w);
 extern "C" char* strchr(char* s, int c);
-int __cdecl strcpy_s(char* dst, unsigned int n, const char* src);
+int __cdecl strcpy_s(char* dst, size_t n, const char* src);
 extern "C" int isalnum(int c);
 extern "C" int isalpha(int c);
 extern "C" void* _FNV_DynamicCast(void* obj, int a, void* src, void* dst, int b);

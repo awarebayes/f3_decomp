@@ -10822,7 +10822,7 @@ struct QTri { int unk00; int unk04; int unk08; };
 struct QPos { float x; float y; float z; };
 }
 
-int sprintf_s(char* dst, unsigned int size, const char* fmt, ...);
+int sprintf_s(char* dst, size_t size, const char* fmt, ...);
 
 struct QPick {
   int unk00;

@@ -1834,7 +1834,7 @@ struct FUN_0091fe80_shell : public MiddleHighProcess
     void FUN_0091fe80(Animation*);
 };
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 void __cdecl AddAnimationToGarbageCollector(Animation*);
 
 // @fnv 0x0091fe80
@@ -7045,7 +7045,7 @@ struct FUN_0092c950
 };
 extern char DAT_011f426c;
 extern float DAT_01012054;
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_00913fe0 : FUN_0092c950
 {
     void FUN_008d8140(int);
@@ -7605,7 +7605,7 @@ struct VirtSrc
     virtual BSShaderPPLightingProperty* v317();
     virtual BSShaderPPLightingProperty* v318();
 };
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 
 struct Shell914 : public MiddleHighProcess
 {

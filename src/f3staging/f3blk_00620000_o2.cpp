@@ -23232,7 +23232,7 @@ FUN_006218a0::FUN_006218a0()
 }
 
 // @f3 0x00630b00 (community match, verified in this file)
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 struct NiNode;
 template <class T> class NodePointer1391
 {
@@ -27762,7 +27762,7 @@ extern TES62* g_TES62;
 extern bool g_bDumpMenuTextures;
 
 void __cdecl DebugLog62(const char* fmt, ...);
-int __cdecl sprintf_s(char* buf, unsigned int size, const char* fmt, ...);
+int __cdecl sprintf_s(char* buf, size_t size, const char* fmt, ...);
 
 struct DumpConsole62 {
     bool HasMenusPath(Texture62* tex);

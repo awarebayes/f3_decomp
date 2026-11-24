@@ -441,7 +441,7 @@ void FUN_00e92f70(int param_1)
 
 extern "C" int __cdecl strcmp(const char*, const char*);
 extern "C" size_t __cdecl strlen(const char*);
-int strcpy_s(char* dst, unsigned int size, const char* src);
+int strcpy_s(char* dst, size_t size, const char* src);
 void* NiMalloc(unsigned int size);
 extern "C" int __cdecl FUN_00aa1360(const char* a, const char* b);
 struct DirNode
