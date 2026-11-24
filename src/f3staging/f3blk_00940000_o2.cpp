@@ -8409,7 +8409,7 @@ struct FUN_00951690 {
     FUN_00951690();
 };
 
-inline void* operator new(size_t n) { return FUN_0089eb90(n); }
+inline void* x64_ns_new(size_t n) { return FUN_0089eb90(n); }
 
 extern unsigned int DAT_010f3194;
 
@@ -22284,9 +22284,9 @@ extern "C" {
         double  __cdecl sqrt(     double _X);
 inline float fabsf(     float _X)
         {return ((float)fabs((double)_X)); }
-inline float acosf(     float _X)
+inline float x64_local_acosf(     float _X)
         {return ((float)acos((double)_X)); }
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 
@@ -24399,7 +24399,7 @@ inline float fabsf(     float _X)
 
 extern "C" {
         double  __cdecl sqrt(     double _X);
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 

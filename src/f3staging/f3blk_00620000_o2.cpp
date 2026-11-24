@@ -15127,7 +15127,7 @@ void List26::FUN_00637f50(int a, int b, Callback26* c, int index) {
 
 // @f3 0x006354e0 (community match, verified in this file)
 namespace Native1677 {
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 extern char DAT_00f50fe4,DAT_00f50c20,DAT_00f6a41c,DAT_00f6a380;
 struct Book {
 unsigned unk00;
@@ -24742,7 +24742,7 @@ void Src::FUN_006214c0(Dst* p1, int p2, int p3)
 }   // namespace f3m_006214c0
 
 // @f3 0x0062b620 (community match, verified in this file)
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 namespace f3m_0062b620 {
 extern char DAT_00f50c20,DAT_00f50fe4,DAT_00f6a380,DAT_00f6a41c;
 class Tile; class TileMenu;
@@ -34205,7 +34205,7 @@ released:
 
 // @f3 0x0063ce90 (community match, verified in this file)
 #include <typeinfo.h>
-extern "C" void* __cdecl __RTDynamicCast(void* inptr, long vfDelta, void* srcType, void* targetType, int isReference);
+extern "C" void* __cdecl __RTDynamicCast(void* inptr, long vfDelta, void* srcType, void* targetType, int isReference) noexcept(false);
 class TileMenu {
 };
 namespace n63ce90 {

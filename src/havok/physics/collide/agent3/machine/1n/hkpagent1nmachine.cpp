@@ -11,7 +11,7 @@ void FUN_00da48e0(int b, int a)
     FUN_00da44d0(b, a, (void*)&ProcessEntryPair);
 }
 
-typedef unsigned int BlockPoolsize_t;
+typedef size_t BlockPoolsize_t;
 
 struct BlockPoolAllocator
 {
@@ -54,7 +54,7 @@ struct BlockPoolBlock
     {
         unk00 = 0;
     }
-    static void* operator new(BlockPoolsize_t, void* p) throw()
+    static void* operator new(size_t, void* p) throw()
     {
         return p;
     }

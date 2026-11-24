@@ -2938,8 +2938,8 @@ void Owner::FUN_005fe150(Stream* stream){stream->FUN_006e1830(this,1,0);stream->
 
 // @f3 0x005ebf20 (community match, verified in this file)
 namespace f3m_005ebf20 {
-inline void* operator new(size_t,void* destination){return destination;}
-inline void operator delete(void*,void*){}
+inline void* x64_ns_new(size_t,void* destination){return destination;}
+inline void x64_ns_delete(void*,void*){}
 struct Element5ebf {int unk00,unk04,unk08,unk0C,unk10,unk14,unk18,unk1C,unk20,unk24,unk28,unk2C;Element5ebf(int value){FUN_00610040(value);}void FUN_00610040(int);};
 struct Array5ebf {unsigned FUN_005eb230();};
 struct Owner5ebf {int unk00,unk04;Array5ebf unk08;Element5ebf* unk0C;unsigned FUN_005ebf20(int);};

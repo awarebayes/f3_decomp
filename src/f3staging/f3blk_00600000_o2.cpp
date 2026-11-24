@@ -4971,7 +4971,7 @@ struct MemoryManager4A60
     void FUN_0086ba60(void* pvMem);
 };
 extern MemoryManager4A60 DAT_01090a78;
-inline void __cdecl operator delete[](void* pvMem)
+inline void __cdecl x64_ns_delete_array(void* pvMem)
 {
     DAT_01090a78.FUN_0086ba60(pvMem);
 }

@@ -11424,7 +11424,7 @@ double  __cdecl fabs(     double _X);
 double  __cdecl sqrt(     double _X);
 inline float fabsf(     float _X)
         {return ((float)fabs((double)_X)); }
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath

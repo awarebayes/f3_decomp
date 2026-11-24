@@ -14,7 +14,7 @@ extern const float DAT_00dcd894,DAT_00dcd898,DAT_00dcd89c,DAT_00dcd8a0;
 
 extern "C" unsigned long _tls_index;
 struct HeapE { void* FUN_0086b930(unsigned); }; extern HeapE DAT_01090a78;
-inline void* operator new(size_t,void* p){return p;}
+inline void* x64_ns_new(size_t,void* p){return p;}
 struct AllocE { static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);} static void operator delete(void*); static void* operator new(size_t,void* p){return p;} static void operator delete(void*,void*); };
 struct TlsE {
 int unk000;

@@ -51,7 +51,7 @@ struct NiObject : public NiRefObject
 {
     virtual ~NiObject();
 };
-extern void __cdecl operator delete(void*, size_t);
+extern void __cdecl x64_ns_delete(void*, size_t);
 struct NiLODData_shell : public NiObject
 {
     void* __thiscall FUN_00aa09f0(int flags);

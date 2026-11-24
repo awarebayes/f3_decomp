@@ -47231,7 +47231,7 @@ void __cdecl FUN_006b3610(void* a, unsigned int b, unsigned int c, int d, Timer*
 }
 
 // @f3 0x006b3260 (community match, verified in this file)
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 namespace f3m_006b3260 {
 namespace n6b3260 {
 extern char DAT_00f4e9f4[], DAT_00f50b30[];
@@ -58323,7 +58323,7 @@ extern char DAT_00f46a7c;
 extern char DAT_00f6b8b4;
 extern char DAT_00f6c04c;
 
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 void __cdecl FUN_00518df0(EffectSetting* pSetting, ExtraDataList* pExtraList, int iFlag);
 void __cdecl FUN_006195d0(const char* pFormat, ...);
 void __cdecl FUN_00543420(int iEntryPoint, Actor* pActor, float* pValue);

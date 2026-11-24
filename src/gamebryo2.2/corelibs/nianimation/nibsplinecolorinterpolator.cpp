@@ -69,7 +69,7 @@ int S_a50a40::GetChannelResult(unsigned short usChannel)
     return 0 == usChannel ? 3 : 0;
 }
 
-typedef unsigned int A51BF0size_t;
+typedef size_t A51BF0size_t;
 
 struct A51BF0CloningProcess;
 
@@ -86,7 +86,7 @@ struct A51BF0ColorA
 
 struct A51BF0Base
 {
-    static void* operator new(A51BF0size_t stSize);
+    static void* operator new(size_t stSize);
 
     __declspec(nothrow) A51BF0Base(int a, int b);
     virtual ~A51BF0Base();

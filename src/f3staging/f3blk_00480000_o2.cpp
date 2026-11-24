@@ -6847,7 +6847,7 @@ FUN_0083f500* __stdcall FUN_004940a0(NiTriShapeData* data)
 
 // @f3 0x00491a90 (community match, verified in this file)
 #include <windows.h>
-extern "C" unsigned long __readfsdword(unsigned long); extern "C" void _ReadWriteBarrier();
+ extern "C" void _ReadWriteBarrier();
 extern unsigned long DAT_01179af4;
 struct ThreadData {
     int unk000;
@@ -7589,7 +7589,7 @@ if(blend){sprintf_s(text,256,"%s: %s, Count: %d, Blend: %0.2f",seq->name,state,s
 // @f3 0x004962b0 (community match, verified in this file)
 namespace f3m_004962b0 {
 
-extern "C" unsigned long __readfsdword(unsigned long);
+
 extern unsigned long DAT_01179af4;
 struct ThreadData {
 int unk000;
@@ -10715,7 +10715,7 @@ void Owner48::FUN_0048d370(HTREEITEM parent,CA4D780Object* obj) {
 namespace f3m_0049b240 {
 struct Heap0049b240 { void* FUN_0086b930(unsigned int bytes); void FUN_0086ba60(void* p); };
 extern Heap0049b240 DAT_01090a78;
-extern "C" unsigned long __readfsdword(unsigned long);
+
 extern "C" unsigned int _tls_index;
 extern "C" void _ReadWriteBarrier();
 struct AllocationScope_49b240 {
@@ -13741,7 +13741,7 @@ bool FUN_0049d080(NiControllerSequence* sequence, TESObjectREFR* reference)
 // @f3 0x00496010 (community match, verified in this file)
 namespace n496010 {
 
-extern "C" unsigned long __readfsdword(unsigned long);
+
 extern unsigned long DAT_01179af4;
 struct ThreadData {
 int unk000;
@@ -14858,7 +14858,7 @@ void Owner::FUN_00499b30()
 }
 
 // @f3 0x00497910 (community match, verified in this file)
-extern "C" unsigned long __readfsdword(unsigned long);
+
 extern "C" unsigned _tls_index;
 class ThreadState { public:
 unsigned unk000;
@@ -38205,7 +38205,7 @@ struct ThreadData {
     unsigned int unk294;
     unsigned int unk298;
 };
-extern "C" unsigned long __readfsdword(unsigned long);
+
 extern "C" unsigned long _tls_index;
 extern __declspec(thread) unsigned TLS_00000298;
 struct ScopedContext {

@@ -3617,7 +3617,7 @@ void __cdecl FUN_00a07730(void* memory){FinishingFlag flag;new(memory) FUN_00a07
 
 // @f3 0x00a07ca0 (community match, verified in this file)
 namespace f3m_00a07ca0 {
-inline void* operator new(size_t, void* p) { return p; }
+inline void* x64_ns_new(size_t, void* p) { return p; }
 class BE468B0Base {
 public:
     virtual ~BE468B0Base();
@@ -6084,7 +6084,7 @@ struct hkQuadReal;
 class hkVector4Comparison;
 extern "C" {
 double  __cdecl sqrt(     double _X);
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath
@@ -7409,7 +7409,7 @@ double  __cdecl fabs(     double _X);
 double  __cdecl sqrt(     double _X);
 inline float fabsf(     float _X)
         {return ((float)fabs((double)_X)); }
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath

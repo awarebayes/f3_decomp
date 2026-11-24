@@ -89,7 +89,7 @@ struct CloneHelper
 NiObject* CloneHelper::Clone(CloningProcess& kCloning)
 {
     NiPSysGravityFieldModifier* pkObject;
-    void* pMemory = BSFadeNode::operator new(0x48);
+    void* pMemory = ::operator new(0x48);
     if (pMemory)
         pkObject = ((CtorHelper*)pMemory)->Ctor();
     else

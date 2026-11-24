@@ -9892,7 +9892,7 @@ struct NTCVt
     {}
     NTCVt();
 };
-void* NTCVt::operator new(size_t size) throw()
+void* x64_orphan_NTCVt_new(size_t size) throw()
 {
     char* p = (char*)((MemoryManagerAllocHelper*)&_g_memoryManager)->Allocate(size);
     unsigned char adj = (unsigned char)(0x10 - ((unsigned char)(unsigned int)p & 0xf));

@@ -18655,8 +18655,8 @@ bool Owner4d3ee0::FUN_004d3ee0() {
 extern __declspec(thread) int DAT_0117c298;
 namespace f3m_004c15b0 {
 namespace MapMemory2020 {struct Heap {void* FUN_0086b930(unsigned int);};extern Heap DAT_01090a78;}
-void* __cdecl operator new(size_t bytes){return MapMemory2020::DAT_01090a78.FUN_0086b930(bytes);}
-void* __cdecl operator new[](size_t bytes){return MapMemory2020::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new(size_t bytes){return MapMemory2020::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new_array(size_t bytes){return MapMemory2020::DAT_01090a78.FUN_0086b930(bytes);}
 namespace MapConstruct2020 {
 struct InterfacedClass {virtual ~InterfacedClass();};
 struct MemoryContext {int saved;MemoryContext(){saved=DAT_0117c298;DAT_0117c298=6;}~MemoryContext(){DAT_0117c298=saved;}};
@@ -19366,7 +19366,7 @@ FUN_004d0330::~FUN_004d0330() {
 namespace f3m_004d04b0 {
 
 
-void* operator new[](size_t size) { return g_kMemoryManagerAA2.RawAllocate(size); }
+void* x64_ns_new_array(size_t size) { return g_kMemoryManagerAA2.RawAllocate(size); }
 
 namespace f3m_004d04b0 {
 

@@ -22770,7 +22770,7 @@ void __cdecl FUN_00689a90(float x, float y, float scale)
 }
 
 // @f3 0x00680d10 (community match, verified in this file)
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 namespace f3m_00680d10 {
 extern char DAT_00f46078[]; extern char DAT_00f49998[]; extern char DAT_00f460fc[]; extern char DAT_00f46b24[];
 extern char DAT_00e0822c[];
@@ -23101,7 +23101,7 @@ namespace TerminalLight69b6 {
 
 // @f3 0x006852f0 (community match, verified in this file)
 namespace f3m_006852f0 {
-inline void* operator new(size_t,void* p){return p;}
+inline void* x64_ns_new(size_t,void* p){return p;}
 namespace AddEffectSummary {
 struct Trait {unsigned int flags;int unk04,unk08,unk0c;};extern Trait DAT_00f462b8[];
 struct Setting {int unk00;int unk04;int unk08;int unk0c;int unk10;int unk14;int unk18;int unk1c;int unk20;int unk24;int unk28;int unk2c;int unk30;int unk34;int unk38;int unk3c;int unk40;int unk44;int unk48;int unk4c;int unk50;int unk54;unsigned int flags;int unk5c;int unk60;int unk64;int unk68;int unk6c;int unk70;int unk74;int unk78;int unk7c;int unk80;int unk84;int unk88;int unk8c;int unk90;int unk94; unsigned int index;};
@@ -35400,7 +35400,7 @@ namespace f3m_00686ee0 {
 extern "C" void _ReadWriteBarrier();
 
 
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 
 extern char DAT_00f460a8[], DAT_00f46090[], DAT_00f46078[], DAT_00f460c0[], DAT_00f46134[];
 

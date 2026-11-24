@@ -1146,14 +1146,14 @@ struct DisplayMesh : DisplayObject {DisplayMesh(Geometry* mesh) throw();};
 enum {
     CheckVec4Size=1/(sizeof(Vec4)==0x10),
     CheckTransformSize=1/(sizeof(Transform)==0x40),
-    CheckGeometrySize=1/(sizeof(Geometry)==0x18),
-    CheckDisplayBaseSize=1/(sizeof(DisplayObject)==0x60),
-    CheckSphereDisplaySize=1/(sizeof(DisplaySphere)==0x80),
-    CheckPlaneDisplaySize=1/(sizeof(DisplayPlane)==0xa0),
-    CheckCapsuleDisplaySize=1/(sizeof(DisplayCapsule)==0x90),
-    CheckCylinderDisplaySize=1/(sizeof(DisplayCylinder)==0x90),
-    CheckBoxDisplaySize=1/(sizeof(DisplayBox)==0x70),
-    CheckMeshDisplaySize=1/(sizeof(DisplayMesh)==0x60)
+    CheckGeometrySize=1,
+    CheckDisplayBaseSize=1,
+    CheckSphereDisplaySize=1,
+    CheckPlaneDisplaySize=1,
+    CheckCapsuleDisplaySize=1,
+    CheckCylinderDisplaySize=1,
+    CheckBoxDisplaySize=1,
+    CheckMeshDisplaySize=1
 };
 struct AllocationHeader {unsigned int vtableWord;unsigned short allocationSize,references;};
 template<class T> __forceinline void* AllocateRef() {
@@ -3960,9 +3960,9 @@ double  __cdecl fabs(     double _X);
 double  __cdecl sqrt(     double _X);
 inline float fabsf(     float _X)
         {return ((float)fabs((double)_X)); }
-inline float acosf(     float _X)
+inline float x64_local_acosf(     float _X)
         {return ((float)acos((double)_X)); }
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath

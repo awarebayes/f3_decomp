@@ -54,7 +54,7 @@ struct BSLookIKNote
 // @fnv 0x00a43fb0
 BSLookIKNote* __cdecl CreateLookIKNote()
 {
-    BSLookIKNote* pNote = static_cast<BSLookIKNote*>(BSLookIKNote::operator new(0x18));
+    BSLookIKNote* pNote = static_cast<BSLookIKNote*>(::operator new(0x18));
     if (pNote)
     {
         pNote->FUN_00a43fa0();

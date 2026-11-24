@@ -19155,7 +19155,7 @@ bool __cdecl FUN_0052dce0(void* param,void* data,void* actor,void* container,voi
 
 // @f3 0x00529ce0 (community match, verified in this file)
 namespace Query9ce0 {
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 extern char DAT_00f47aa8,DAT_00f47ac4; extern const char DAT_00dd6d18[];
 void __cdecl FUN_006195d0(const char*,...);
 struct ThreadState {
@@ -22775,7 +22775,7 @@ bool FUN_0052d610(const ScriptParameter* paramInfo, const char* scriptData, TESO
 }   // namespace f3m_0052d610
 
 // @f3 0x00534ed0 (community match, verified in this file)
-extern "C" unsigned long __readfsdword(unsigned long);
+
 #pragma intrinsic(__readfsdword)
 namespace Task1516 {extern const char DAT_00db3438[];}
 class TESForm {public:virtual ~TESForm();int a,b,c,d,e;};
@@ -22841,7 +22841,7 @@ bool __cdecl FUN_005203e0(const ScriptParameter* p,const char* name,Reference* r
 }
 
 // @f3 0x00536c10 (community match, verified in this file)
-extern "C" unsigned long __readfsdword(unsigned long);
+
 namespace task1541 {
 struct Result {int unk0;int unk4;int unk8;int unkc;int unk10;int unk14;int unk18;int unk1c;int unk20;int unk24;int unk28;int unk2c;int unk30;int unk34;int unk38;int unk3c;int unk40;int unk44;int unk48;const char* name;};
 struct ThreadData {int unk0;int unk4;int unk8;int unkc;int unk10;int unk14;int unk18;int unk1c;int unk20;int unk24;int unk28;int unk2c;int unk30;int unk34;int unk38;int unk3c;int unk40;int unk44;int unk48;int unk4c;int unk50;int unk54;int unk58;int unk5c;int unk60;int unk64;int unk68;int unk6c;int unk70;int unk74;int unk78;int unk7c;int unk80;int unk84;int unk88;int unk8c;int unk90;int unk94;int unk98;int unk9c;int unka0;int unka4;int unka8;int unkac;int unkb0;int unkb4;int unkb8;int unkbc;int unkc0;int unkc4;int unkc8;int unkcc;int unkd0;int unkd4;int unkd8;int unkdc;int unke0;int unke4;int unke8;int unkec;int unkf0;int unkf4;int unkf8;int unkfc;int unk100;int unk104;int unk108;int unk10c;int unk110;int unk114;int unk118;int unk11c;int unk120;int unk124;int unk128;int unk12c;int unk130;int unk134;int unk138;int unk13c;int unk140;int unk144;int unk148;int unk14c;int unk150;int unk154;int unk158;int unk15c;int unk160;int unk164;int unk168;int unk16c;int unk170;int unk174;int unk178;int unk17c;int unk180;int unk184;int unk188;int unk18c;int unk190;int unk194;int unk198;int unk19c;int unk1a0;int unk1a4;int unk1a8;int unk1ac;int unk1b0;int unk1b4;int unk1b8;int unk1bc;int unk1c0;int unk1c4;int unk1c8;int unk1cc;int unk1d0;int unk1d4;int unk1d8;int unk1dc;int unk1e0;int unk1e4;int unk1e8;int unk1ec;int unk1f0;int unk1f4;int unk1f8;int unk1fc;int unk200;int unk204;int unk208;int unk20c;int unk210;int unk214;int unk218;int unk21c;int unk220;int unk224;int unk228;int unk22c;int unk230;int unk234;int unk238;int unk23c;int unk240;int unk244;int unk248;int unk24c;bool console;};
@@ -25334,7 +25334,7 @@ bool __cdecl FUN_00517950(ParamInfo* paramInfo, void* scriptData, unsigned int* 
 extern char DAT_00f47aa8;
 extern char DAT_00f47ac4;
 }
-extern "C" void* __cdecl __RTDynamicCast(void* inptr, long vfDelta, void* srcType, void* targetType, int isReference);
+extern "C" void* __cdecl __RTDynamicCast(void* inptr, long vfDelta, void* srcType, void* targetType, int isReference) noexcept(false);
 
 bool __cdecl FUN_0052b810(f3m_0052b810::ParamInfo* paramInfo, void* scriptData,
     f3m_0052b810::TESObjectREFR* thisObj, f3m_0052b810::TESObjectREFR* containingObj,
@@ -30286,8 +30286,8 @@ extern Globals* DAT_0116efb8;
 extern Player* DAT_0107a224;
 void* __cdecl FUN_0089eb90(unsigned size);
 void __cdecl FreeBlock(void* p);
-void* FUN_0046c0f0::operator new(size_t size) { return FUN_0089eb90(size); }
-void FUN_0046c0f0::operator delete(void* p) { FreeBlock(p); }
+void* x64_orphan_FUN_0046c0f0_new(size_t size) { return FUN_0089eb90(size); }
+void x64_orphan_free_delete(void* p) { FreeBlock(p); }
 FUN_0046c0f0::FUN_0046c0f0(const Point3& pos, const Point2& size, const Matrix& rot) { refs = 0; unk08 = (int)pos.x; unk0C = (int)pos.y; unk10 = (int)size.x; unk14 = (int)rot.m00; Setup(); }
 bool __cdecl FUN_00517950(unsigned a1, unsigned a2, unsigned a8, unsigned a3, unsigned a4, unsigned a5, unsigned a6, float* f1, float* f2);
 
@@ -34073,7 +34073,7 @@ virtual void unknown1c4();
 virtual void unknown1c8();
 virtual void unknown1cc();
 virtual int Unk_1D0();unsigned unk004;unsigned unk008;unsigned unk00c;unsigned unk010;unsigned unk014;unsigned unk018;void* base;void* GetObjectReference(){return base;}void FUN_00729880();};
-extern unsigned char DAT_00f460fc,DAT_00f46b24;extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern unsigned char DAT_00f460fc,DAT_00f46b24;extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 void __cdecl FUN_005595d0(Race*,int,FaceArray*);
 void __cdecl FUN_0058e510(void*,void*,void*,int);
 float __cdecl FUN_0058f580(void*,int,int);
@@ -43917,7 +43917,7 @@ bool __cdecl FUN_005356c0(void* a, void* b, void* c, void* d, void* e, void* f, 
 }
 
 // @f3 0x00532b80 (community match, verified in this file)
-extern "C" unsigned long __readfsdword(unsigned long);
+
 class NiFixedString {
 public: const char* value; NiFixedString(const char*); ~NiFixedString();
 };
@@ -49110,7 +49110,7 @@ struct FUN_00470420 {unsigned unused;MapStorage map;FUN_00470420(){} ~FUN_004704
 void FUN_004704a0(int,char);void FUN_00470620(int);bool FUN_00470190(char*);unsigned FUN_0046ff60();};
 struct Heap{void FUN_0086ba60(void*);};extern Heap DAT_01090a78;
 }
-inline void __cdecl operator delete[](void* p){Task2019::DAT_01090a78.FUN_0086ba60(p);}
+inline void __cdecl x64_ns_delete_array(void* p){Task2019::DAT_01090a78.FUN_0086ba60(p);}
 namespace Task2019 {
 inline StrWork::~StrWork(){if (pString) DAT_01090a78.FUN_0086ba60(pString);}
 bool __cdecl FUN_00517950(const ScriptParameter* p0, const char* p1, unsigned int& offset, RefVirt* ref, TESObjectREFR* cont, Script* script, ScriptLocals* locals, char* buf);

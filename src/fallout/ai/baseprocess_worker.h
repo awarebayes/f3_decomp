@@ -105,7 +105,7 @@ extern char DAT_0118a6d4;
 extern char DAT_0118c64c;
 extern char DAT_011a3668;
 extern char DAT_011a364c;
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 class BaseProcessCopyVirtual
 {
   public:

@@ -2645,9 +2645,9 @@ double  __cdecl fabs(     double _X);
 double  __cdecl sqrt(     double _X);
 inline float fabsf(     float _X)
         {return ((float)fabs((double)_X)); }
-inline float acosf(     float _X)
+inline float x64_local_acosf(     float _X)
         {return ((float)acos((double)_X)); }
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath
@@ -3580,9 +3580,9 @@ double  __cdecl fabs(     double _X);
 double  __cdecl sqrt(     double _X);
 inline float fabsf(     float _X)
         {return ((float)fabs((double)_X)); }
-inline float acosf(     float _X)
+inline float x64_local_acosf(     float _X)
         {return ((float)acos((double)_X)); }
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath
@@ -4486,9 +4486,9 @@ double  __cdecl fabs(     double _X);
 double  __cdecl sqrt(     double _X);
 inline float fabsf(     float _X)
         {return ((float)fabs((double)_X)); }
-inline float asinf(     float _X)
+inline float x64_local_asinf(     float _X)
         {return ((float)asin((double)_X)); }
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath
@@ -6387,7 +6387,7 @@ struct hkQuadReal
 class hkVector4Comparison;
 extern "C" {
 double  __cdecl sqrt(     double _X);
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath
@@ -9213,7 +9213,7 @@ double  __cdecl fabs(     double _X);
 double  __cdecl sqrt(     double _X);
 inline float fabsf(     float _X)
         {return ((float)fabs((double)_X)); }
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath
@@ -10082,7 +10082,7 @@ double  __cdecl fabs(     double _X);
 double  __cdecl sqrt(     double _X);
 inline float fabsf(     float _X)
         {return ((float)fabs((double)_X)); }
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath
@@ -11337,7 +11337,7 @@ struct hkQuadReal;
 class hkVector4Comparison;
 extern "C" {
 double  __cdecl sqrt(     double _X);
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath
@@ -12274,7 +12274,7 @@ struct hkQuadReal
 class hkVector4Comparison;
 extern "C" {
 double  __cdecl sqrt(     double _X);
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath

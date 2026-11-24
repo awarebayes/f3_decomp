@@ -22427,7 +22427,7 @@ void FUN_006f3800(){N6F3800::Flags*flags=N6F3800::DAT_0107a0d4;flags->fifth=true
 // @f3 0x006e85e0 (community match, verified in this file)
 extern unsigned int DAT_00e27ed4;
 namespace f3m_006e85e0 {
-inline void* operator new(size_t,void* p){return p;}
+inline void* x64_ns_new(size_t,void* p){return p;}
 namespace EnqueueCommandCopy {
 struct Allocator {void* FUN_0086c710(unsigned int,unsigned int);};
 struct Message {unsigned int command;unsigned int param04,param08,param0c,param10,param14,param18,param1c;};

@@ -3799,7 +3799,7 @@ void __cdecl FUN_00e0d880(int aiParent, FUN_00e0d000* source)
 }
 
 namespace fnv_00e0d980 {
-inline void* __cdecl operator new(size_t, void* where) throw()
+inline void* __cdecl x64_ns_new(size_t, void* where) throw()
 {
     return where;
 }
@@ -4406,7 +4406,7 @@ S00e0ee00_Root* __cdecl S00e0ee00_Analyzer::FUN_00e0ee00(int aIndex, S_e0ce00_Bo
 
 
 namespace fnv_00e0f710 {
-inline void* __cdecl operator new(size_t, void* w) throw()
+inline void* __cdecl x64_ns_new(size_t, void* w) throw()
 {
     return w;
 }

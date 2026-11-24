@@ -2952,11 +2952,11 @@ extern MemMgrStand g_arcMemMgr;
 extern int DAT_011ace04;
 extern int DAT_010a2480;
 
-inline void* operator new[](size_t auiSize)
+inline void* x64_ns_new_array(size_t auiSize)
 {
     return g_arcMemMgr.Allocate(auiSize);
 }
-inline void operator delete[](void* apMem)
+inline void x64_ns_delete_array(void* apMem)
 {
     g_arcMemMgr.Deallocate(apMem);
 }
@@ -6827,7 +6827,7 @@ struct MemoryManager
     void* Allocate(unsigned int);
 };
 extern MemoryManager _g_memoryManager;
-inline void* __cdecl operator new[](size_t n)
+inline void* __cdecl x64_ns_new_array(size_t n)
 {
     return _g_memoryManager.Allocate(n);
 }
@@ -7112,19 +7112,19 @@ struct MemoryManager
     void __thiscall Deallocate(void*);
 };
 extern MemoryManager _g_memoryManager;
-inline void* __cdecl operator new[](size_t n)
+inline void* __cdecl x64_ns_new_array(size_t n)
 {
     return _g_memoryManager.Allocate(n);
 }
-inline void* __cdecl operator new(size_t n)
+inline void* __cdecl x64_ns_new(size_t n)
 {
     return _g_memoryManager.Allocate(n);
 }
-inline void __cdecl operator delete[](void* p)
+inline void __cdecl x64_ns_delete_array(void* p)
 {
     _g_memoryManager.Deallocate(p);
 }
-inline void __cdecl operator delete(void* p)
+inline void __cdecl x64_ns_delete(void* p)
 {
     _g_memoryManager.Deallocate(p);
 }

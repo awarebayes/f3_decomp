@@ -4149,7 +4149,7 @@ int Owner005a3ca0::FUN_005a3ca0()
 }   // namespace f3m_005a3ca0
 
 // @f3 0x005aa240 (community match, verified in this file)
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 extern char DAT_00f46078; extern char DAT_00f47bf4;
 class OwnerA240 {
 public:
@@ -8151,7 +8151,7 @@ struct Owner5BA6 { int unk00; int unk04; int unk08; int unk0C; int unk10; int un
 // @f3 0x005aab00 (community match, verified in this file)
 namespace f3m_005aab00 {
 namespace CopyAb00 {
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int); extern char DAT_00f66908,DAT_00f669e8;
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false); extern char DAT_00f66908,DAT_00f669e8;
 struct Heap { void* FUN_0086b930(unsigned); void FUN_0086ba60(void*); }; extern Heap DAT_01090a78;
 struct FUN_005acc50 { unsigned unk00,unk04,unk08; FUN_005acc50(); void FUN_005accd0(); void FUN_005acde0(FUN_005acc50*,int); static void* operator new(size_t n) {return DAT_01090a78.FUN_0086b930(n);} static void operator delete(void* p) {DAT_01090a78.FUN_0086ba60(p);} };
 struct Owner { unsigned unk00; FUN_005acc50* child; float value; void FUN_005aab00(void*); };
@@ -14970,8 +14970,8 @@ FUN_005afdd0::FUN_005afdd0(unsigned first,float second,const char* name,void* se
 // @f3 0x005a6b70 (community match, verified in this file)
 namespace f3m_005a6b70 {
 namespace Package1928 {struct Heap{void* FUN_0086b930(unsigned);void FUN_0086ba60(void*);};extern Heap DAT_01090a78;}
-void* operator new(size_t n){return Package1928::DAT_01090a78.FUN_0086b930(n);}
-void operator delete(void*p){Package1928::DAT_01090a78.FUN_0086ba60(p);}
+void* x64_ns_new(size_t n){return Package1928::DAT_01090a78.FUN_0086b930(n);}
+void x64_ns_delete(void*p){Package1928::DAT_01090a78.FUN_0086ba60(p);}
 namespace Package1928 {
 static const char packageSourcePath[] = "c:\\_Fallout3\\Platforms\\Common\\Code\\Fallout Shared\\Package.cpp";
 struct UnalignedFlags679
@@ -21683,7 +21683,7 @@ bool F5A4390::FUN_005a4390(void* input)
 extern char DAT_00f46078, DAT_00f47aa8;
 extern char DAT_00dff1a0[], DAT_00dff150[], DAT_00dff100[], DAT_00dff0a8[], DAT_00dff050[], DAT_00dff000[];
 namespace f3m_005ad900 {
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 namespace f3m_005ad900 {
 struct Form;
 Form* __cdecl FUN_00455190(unsigned int id);

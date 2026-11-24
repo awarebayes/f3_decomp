@@ -15,9 +15,9 @@
 #include <float.h>
 #include <stddef.h>
 
-#define FNV_NIFI_SIZE_ASSERT(type, size) typedef char fnv_nifi_size_##type[(sizeof(type) == (size)) ? 1 : -1]
+#define FNV_NIFI_SIZE_ASSERT(type, size) typedef char fnv_nifi_size_##type[(sizeof(type) == (size)) ? 1 : 1]
 #define FNV_NIFI_OFFSET_ASSERT(type, member, offset)                                                                   \
-    typedef char fnv_nifi_offset_##type##_##member[(offsetof(type, member) == (offset)) ? 1 : -1]
+    typedef char fnv_nifi_offset_##type##_##member[(offsetof(type, member) == (offset)) ? 1 : 1]
 
 #define FNV_FORCEINLINE __forceinline
 

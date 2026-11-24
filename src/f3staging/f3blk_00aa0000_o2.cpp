@@ -6778,8 +6778,8 @@ void ControlGraph::FUN_00aa91e0() {
 extern __declspec(thread) int DAT_0117c298;
 namespace f3m_00aa2d70 {
 namespace MapMemory2022 {struct Heap {void* FUN_0086b930(unsigned int);};extern Heap DAT_01090a78;}
-void* __cdecl operator new(size_t bytes){return MapMemory2022::DAT_01090a78.FUN_0086b930(bytes);}
-void* __cdecl operator new[](size_t bytes){return MapMemory2022::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new(size_t bytes){return MapMemory2022::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new_array(size_t bytes){return MapMemory2022::DAT_01090a78.FUN_0086b930(bytes);}
 namespace MapConstruct2022 {
 struct InterfacedClass {virtual ~InterfacedClass();};
 struct MemoryContext {int saved;MemoryContext(){saved=DAT_0117c298;DAT_0117c298=6;}~MemoryContext(){DAT_0117c298=saved;}};
@@ -6804,8 +6804,8 @@ Map::Map(unsigned int threads,unsigned int count,unsigned int batch){
 extern __declspec(thread) int DAT_0117c298;
 namespace f3m_00aa28f0 {
 namespace QueueMemory2023 {struct Heap{void* FUN_0086b930(unsigned int);};extern Heap DAT_01090a78;}
-void* __cdecl operator new(size_t bytes){return QueueMemory2023::DAT_01090a78.FUN_0086b930(bytes);}
-void* __cdecl operator new[](size_t bytes){return QueueMemory2023::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new(size_t bytes){return QueueMemory2023::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new_array(size_t bytes){return QueueMemory2023::DAT_01090a78.FUN_0086b930(bytes);}
 namespace QueueConstruct2023 {
 struct InterfacedClass{virtual ~InterfacedClass();};
 struct MemoryContext{int saved;MemoryContext(){saved=DAT_0117c298;DAT_0117c298=6;}~MemoryContext(){DAT_0117c298=saved;}};
@@ -6822,7 +6822,7 @@ Queue::Queue(unsigned int threads,unsigned int batch){MemoryContext context;coun
 #include <stdio.h>
 namespace f3m_00aa9df0 {
 namespace WorkerMemory2025 {struct Heap{void* FUN_0086b930(unsigned int);};extern Heap DAT_01090a78;extern unsigned int DAT_01066780;extern const char DAT_00e8a040[];}
-void* __cdecl operator new(size_t bytes){return WorkerMemory2025::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new(size_t bytes){return WorkerMemory2025::DAT_01090a78.FUN_0086b930(bytes);}
 class ThreadOwner2025;
 class BSLinearTaskThread {public:virtual ~BSLinearTaskThread();unsigned int unk04;unsigned int unk08;unsigned int unk0C;unsigned int unk10;unsigned int unk14;unsigned int unk18;unsigned int unk1C;unsigned int unk20;unsigned int unk24;unsigned int unk28;unsigned int unk2C;unsigned int unk30;unsigned int unk34;unsigned int unk38;unsigned int unk3C;unsigned int unk40;unsigned int unk44;unsigned int unk48; BSLinearTaskThread();void FUN_0086ce90(unsigned int,const char*);void FUN_0078c030(const char*);void FUN_0078c030(unsigned int);void FUN_0086ce30(int);};
 class BSParallelTaskThread:public BSLinearTaskThread {public:ThreadOwner2025* owner;BSParallelTaskThread(ThreadOwner2025* p):owner(p){}virtual ~BSParallelTaskThread();};
@@ -7489,7 +7489,7 @@ struct MeshAllocator_ab27e0
 {
     void* FUN_0086b930(unsigned int);
 };
-__forceinline void* operator new[](size_t n)
+__forceinline void* x64_ns_new_array(size_t n)
 {
     return reinterpret_cast<MeshAllocator_ab27e0&>(::DAT_01090a78).FUN_0086b930(n);
 }
@@ -30352,7 +30352,7 @@ struct NameJack
         }
     }
 };
-inline void* operator new[](size_t n)
+inline void* x64_ns_new_array(size_t n)
 {
     return reinterpret_cast<PoolJack&>(::DAT_01090a78).FUN_0086b930(n);
 }

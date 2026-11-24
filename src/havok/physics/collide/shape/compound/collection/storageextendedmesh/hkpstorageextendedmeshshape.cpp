@@ -1065,7 +1065,7 @@ hkpExtendedMeshShapeTrianglesSubpartD4AB& hkpExtendedMeshShapeTrianglesSubpartD4
 }
 
 namespace fnv_00d4ad60 {
-inline void* operator new(size_t, void* p) throw()
+inline void* x64_ns_new(size_t, void* p) throw()
 {
     return p;
 }
@@ -1673,7 +1673,7 @@ extern "C"
     int _mm_movemask_ps(__m128 a);
 }
 
-inline void* operator new(size_t, void* p) throw()
+inline void* x64_ns_new(size_t, void* p) throw()
 {
     return p;
 }

@@ -82,12 +82,12 @@ void NiRollController::FUN_00a48790(StrArr* pStrArr)
     pStrArr->SetAt(uiSize, pkString);
 }
 
-typedef unsigned int A486F0size_t;
+typedef size_t A486F0size_t;
 
 struct A486F0CloningProcess;
 
 struct A486F0Object {
-    static void* operator new(A486F0size_t stSize);
+    static void* operator new(size_t stSize);
 
     __declspec(nothrow) A486F0Object();
     virtual ~A486F0Object();

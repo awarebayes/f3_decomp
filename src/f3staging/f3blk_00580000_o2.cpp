@@ -16967,8 +16967,8 @@ void FaceCache2009::FUN_0058d0d0(const char* name,RefObject2009* model){
 namespace f3m_0059b220 {
 
 namespace MapMemory2021 {struct Heap {void* FUN_0086b930(unsigned int);};extern Heap DAT_01090a78;}
-void* __cdecl operator new(size_t bytes){return MapMemory2021::DAT_01090a78.FUN_0086b930(bytes);}
-void* __cdecl operator new[](size_t bytes){return MapMemory2021::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new(size_t bytes){return MapMemory2021::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new_array(size_t bytes){return MapMemory2021::DAT_01090a78.FUN_0086b930(bytes);}
 extern __declspec(thread) int DAT_0117c298;
 namespace MapConstruct2021 {
 struct InterfacedClass {virtual ~InterfacedClass();};

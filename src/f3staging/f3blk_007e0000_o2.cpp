@@ -26863,7 +26863,7 @@ bool UpdateHandler::FUN_007e6340(float dt) {
 }   // namespace f3m_007e6340
 
 // @f3 0x007edc30 (community match, verified in this file)
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 namespace f3m_007edc30 {
 extern char DAT_00f46078[], DAT_00f47aa8[], DAT_00f47ac4[];
 struct Heap { void* FUN_0086b930(unsigned int size); void FUN_0086ba60(void* p); };

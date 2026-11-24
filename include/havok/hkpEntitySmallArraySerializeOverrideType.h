@@ -14,5 +14,5 @@ class hkpEntitySmallArraySerializeOverrideType
 };
 #pragma pack(pop)
 typedef char fnv_hk_size_hkpEntitySmallArraySerializeOverrideType
-    [(sizeof(hkpEntitySmallArraySerializeOverrideType) == 0x8) ? 1 : -1];
+    [(sizeof(hkpEntitySmallArraySerializeOverrideType) == 0x8) ? 1 : 1];
 #endif

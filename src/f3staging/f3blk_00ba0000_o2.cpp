@@ -5950,8 +5950,8 @@ void __cdecl FUN_00bb6600(Entry* left, Entry* right)
 #include <string>
 #include <stdexcept>
 namespace f3m_00bbf6f0 {
-inline void* __cdecl operator new[](size_t size) { return operator new(size); }
-inline void __cdecl operator delete[](void* p) { operator delete(p); }
+inline void* __cdecl x64_ns_new_array(size_t size) { return x64_ns_new(size); }
+inline void __cdecl x64_ns_delete_array(void* p) { x64_ns_delete(p); }
 struct LeafRecord716;
 struct BinaryReader716 { int FUN_00ba92d0(); };
 LeafRecord716* FUN_00bc58c0(BinaryReader716*);
@@ -5998,8 +5998,8 @@ void LeafLodLoader716::FUN_00bbf6f0(BinaryReader716* reader)
 // @f3 0x00bbf090 (community match, verified in this file)
 #include <vector>
 namespace f3m_00bbf090 {
-inline void* __cdecl operator new[](size_t size) { return operator new(size); }
-inline void __cdecl operator delete[](void* p) { operator delete(p); }
+inline void* __cdecl x64_ns_new_array(size_t size) { return x64_ns_new(size); }
+inline void __cdecl x64_ns_delete_array(void* p) { x64_ns_delete(p); }
 
 namespace leaflod_bbf090 {
 
@@ -9651,7 +9651,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -9696,7 +9696,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -9741,7 +9741,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -9785,7 +9785,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -9827,7 +9827,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -9886,7 +9886,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -9940,7 +9940,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -9988,7 +9988,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -15831,7 +15831,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}

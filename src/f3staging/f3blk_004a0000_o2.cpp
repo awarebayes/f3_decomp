@@ -38012,7 +38012,7 @@ bool Owner::FUN_004b92b0(Ref* reference, Ref* activator, int arg3, int arg4, int
 }
 
 // @f3 0x004afea0 (community match, verified in this file)
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 namespace f3m_004afea0 {
 extern char DAT_00f46078[];
 extern char DAT_00f460a8[];

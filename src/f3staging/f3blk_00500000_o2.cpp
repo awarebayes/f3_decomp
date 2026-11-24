@@ -5714,7 +5714,7 @@ bool __cdecl FUN_0051ea40(){DAT_0116ef71=!DAT_0116ef71;FUN_006195d0(DAT_00dd5d88
 // @f3 0x00516310 (community match, verified in this file)
 namespace f3m_00516310 {
 namespace Copy6310 {
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int); extern char DAT_00f46078; extern char DAT_00f49840;
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false); extern char DAT_00f46078; extern char DAT_00f49840;
 struct Heap { void* FUN_0086b930(unsigned); }; extern Heap DAT_01090a78;
 struct Node { void* item; Node* next; Node(void* value):item(value),next(0) {} static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); } Node* Head() { return this; } __forceinline void Append(void* const& value) { Node* tail=this; while(tail->next) tail=tail->next; if(tail->item) tail->next=new Node(value); else tail->item=value; } };
 struct Owner { int unk00; int unk04; int unk08; int unk0C; int unk10; int unk14; int unk18; int unk1C; int unk20; int unk24; int unk28; Node head; void FUN_00515fd0(); void FUN_00454480(Owner*); void FUN_00516310(void*); };
@@ -35687,7 +35687,7 @@ void TESWeather::FUN_005002b0(void* form)
 // @f3 0x005069d0 (community match, verified in this file)
 #include <intrin.h>
 
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 namespace n5069d0 {
 extern char DAT_00f46078;
 extern char DAT_00f50750;
@@ -38115,7 +38115,7 @@ extern long DAT_0116d6bc;
 extern __declspec(thread) int DAT_0117c29c;
 extern const char DAT_00dd1700[], DAT_00dc5300[];
 namespace f3m_0050b070 {
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long volatile*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile*);
 
@@ -38760,7 +38760,7 @@ bool Record506100::FUN_00506100(File506100* file) {
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 namespace N51af10 {
 struct ScriptLineBuffer
 {
@@ -49293,7 +49293,7 @@ extern char DAT_00f46078[], DAT_00f47a3c[], DAT_00f4efe8[];
 namespace f3m_00500f40 {
 namespace WorldOrder500 {
 
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 
 struct Form {
     virtual void Slot0();

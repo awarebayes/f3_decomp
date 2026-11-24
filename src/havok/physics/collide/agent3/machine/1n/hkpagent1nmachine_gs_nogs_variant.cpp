@@ -8,7 +8,7 @@
 void ProcessEntryPair();
 void FUN_00da44d0(int, int, void*);
 void FUN_00da48e0(int b, int a);
-typedef unsigned int BlockPoolsize_t;
+typedef size_t BlockPoolsize_t;
 struct BlockPoolAllocator {
     virtual void unk00();
     virtual void* AllocateMemoryBlock(int numBytes);
@@ -38,7 +38,7 @@ struct BlockPoolBlock {
     int unk18;
 
     BlockPoolBlock() { unk00 = 0; }
-    static void* operator new(BlockPoolsize_t, void* p) throw() { return p; }
+    static void* operator new(size_t, void* p) throw() { return p; }
 };
 struct BlockPoolArray {
     BlockPoolBlock** m_data;

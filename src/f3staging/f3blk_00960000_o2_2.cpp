@@ -1,3 +1,4 @@
+#include <math.h>
 // src/f3staging/f3blk_00960000_o2.cpp - Fallout 3 STAGING unit (f3_staging_units.py, 3 Nov 2026) for functions with no New Vegas counterpart
 // (128 KB address window, o2 code style). Not a real source path: move functions to their real units once identified.
 
@@ -669,7 +670,7 @@ struct hkQuadReal
 class hkVector4Comparison;
 extern "C" {
 double  __cdecl sqrt(     double _X);
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath

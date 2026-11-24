@@ -14334,8 +14334,8 @@ namespace f3m_005c3860 {
 struct Heap { void* FUN_0086b930(unsigned int); void FUN_0086ba60(void*); };
 extern Heap DAT_01090a78;
 struct Point { float x, y, z; };
-inline void* operator new[](size_t n) { return DAT_01090a78.FUN_0086b930(n); }
-inline void operator delete[](void* p) { DAT_01090a78.FUN_0086ba60(p); }
+inline void* x64_ns_new_array(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
+inline void x64_ns_delete_array(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 class Element {
 public:
  Element();

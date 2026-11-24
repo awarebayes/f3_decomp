@@ -37,7 +37,7 @@ struct BSFadeNode
 // @fnv 0x00c20350
 BSFadeNode* __cdecl FUN_00c20350()
 {
-    BSFadeNode* node = (BSFadeNode*)BSFadeNode::operator new(100);
+    BSFadeNode* node = (BSFadeNode*)::operator new(100);
     if (node)
     {
         node->FUN_00c31af0();

@@ -4560,7 +4560,7 @@ void FUN_00549e90_shell::FUN_00549e90(TESForm* apCopy)
 // @f3 0x00545010 (community match, verified in this file)
 extern char DAT_00f46078; extern char DAT_00f5a9c4;
 namespace f3m_00545010 {
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 struct Owner5010 { void FUN_00454480(void*); void FUN_00545010(void* form); };
 void Owner5010::FUN_00545010(void* form) { void* marker=__RTDynamicCast(form,0,&DAT_00f46078,&DAT_00f5a9c4,0); if(marker) FUN_00454480(marker); }
 }   // namespace f3m_00545010
@@ -9953,7 +9953,7 @@ void OwnerEA50::FUN_0054ea50(FileEA50* file) { FUN_0054b620(file); if(file->Exte
 namespace f3m_00552ca0 {
 namespace Remove2CA0 {
 struct Element { int unk00; int unk04; int unk08; int unk0C; int unk10; int unk14; int unk18; int unk1C; int unk20; int unk24; int unk28; int unk2C; int unk30; int unk34; int unk38; int unk3C; int unk40; int unk44; Element* previous; };
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int); extern char DAT_00f46078; extern char DAT_00f49cf4;
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false); extern char DAT_00f46078; extern char DAT_00f49cf4;
 struct Array { void* table; Element** data; unsigned capacity,size,effective; void* FUN_0048c780(unsigned); void FUN_0043eb00(); void Remove(unsigned index) { if(index<size) { Element* old=data[index]; data[index]=0; if(old) --effective; if(index==size-1) --size; } } };
 struct Owner { int unk00; int unk04; int unk08; int unk0C; int unk10; int unk14; int unk18; int unk1C; int unk20; int unk24; int unk28; int unk2C; int unk30; int unk34; int unk38; int unk3C; Array* array; Element* Get(unsigned index) { Element* result=0; if(array) result=(Element*)__RTDynamicCast(array->FUN_0048c780(index),0,&DAT_00f46078,&DAT_00f49cf4,0); return result; } void FUN_00552ca0(unsigned); };
 void Owner::FUN_00552ca0(unsigned index) { if(array) { Element* next=Get(index+1); Element* previous=Get(index-1); if(next) next->previous=previous; array->Remove(index); array->FUN_0043eb00(); } }
@@ -11470,7 +11470,7 @@ BGSEntryPointFunctionDataLeveledList::FUN_00543ad0()
 extern char DAT_00f46078, DAT_00f46060;
 namespace f3m_00541540 {
 namespace Copy1540 {
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 struct Data { unsigned unk00,unk04,unk08,unk0c,unk10,unk14,unk18,unk1c,unk20; };
 struct Form { unsigned unk00,unk04,unk08,unk0c,unk10,unk14,unk18,unk1c,unk20,unk24,unk28,unk2c,unk30,unk34,unk38,unk3c,unk40; Data data; void FUN_00454480(void*); void FUN_00541540(void*); };
 void Form::FUN_00541540(void* input) { Form* source=(Form*)__RTDynamicCast(input,0,&DAT_00f46078,&DAT_00f46060,0); if(source) { FUN_00454480(input); data=source->data; } }
@@ -15791,7 +15791,7 @@ extern char DAT_00f46078;
 extern char DAT_00f49cf4;
 namespace f3m_00552b10 {
 namespace f3m_00552b10 {
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 
 struct Sub_552b10 {
     int unk00;
@@ -16921,7 +16921,7 @@ namespace f3m_00552070 {
 struct Heap { void* FUN_0086b930(unsigned); void FUN_0086ba60(void*); };
 extern Heap DAT_01090a78;
 
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 extern char DAT_00f46078;
 extern char DAT_00f47bd8;
 
@@ -26872,7 +26872,7 @@ void Owner::FUN_00558db0(File* file) {
 }   // namespace f3m_00558db0
 
 // @f3 0x0054e3b0 (community match, verified in this file)
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 extern char DAT_00f46078;
 extern char DAT_00f46b08;
 namespace f3m_0054e3b0 {
@@ -33997,7 +33997,7 @@ bool NpcRecord::FUN_0055bc40(NpcFile* file)
 // @f3 0x00556810 (community match, verified in this file)
 #include <stdio.h>
 
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 
 namespace f3m_00556810 {
 
@@ -46773,7 +46773,7 @@ void NbOwner::FUN_005564a0(ActorLocal* actor,NbCollection* collection,Node* firs
 
 // @f3 0x0054f830 (community match, verified in this file)
 #include <stdio.h>
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 namespace n54f830 {
 class TESActorBaseData
 {

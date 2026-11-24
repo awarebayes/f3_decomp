@@ -645,7 +645,7 @@ struct BSFadeNode
 // @fnv 0x00a2f6c0
 void* __cdecl FUN_00a2f6c0()
 {
-    BSFadeNode* p = (BSFadeNode*)BSFadeNode::operator new(0x7c);
+    BSFadeNode* p = (BSFadeNode*)::operator new(0x7c);
     if (p)
         return p->FUN_00a2eed0();
     return 0;

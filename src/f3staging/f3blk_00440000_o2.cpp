@@ -33200,7 +33200,7 @@ void FUN_0045a450_Obj::FUN_0045a450(unsigned int flags, int unused)
 }
 
 // @f3 0x0044bf00 (community match, verified in this file)
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 namespace f3m_0044bf00 {
 extern char DAT_00f46040[], DAT_00f46254[];
 struct Heap { void* FUN_0086b930(unsigned int size); void FUN_0086ba60(void* p); };
@@ -34729,7 +34729,7 @@ void Model2942::FUN_00458e40(unsigned int first,unsigned int second,unsigned int
 }
 
 // @f3 0x0044d5f0 (community match, verified in this file)
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 namespace task2970 {
 extern char DAT_00f49cf4,DAT_00f46078;extern const char DAT_00dbb678[],DAT_00dbb63c[];
 class TESForm {public:
@@ -34818,7 +34818,7 @@ void Collection::FUN_0044d5f0(TESForm* form){TESIdleForm*idle=0;for(unsigned ind
 }
 
 // @f3 0x00449f30 (community match, verified in this file)
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 namespace task2976 {
 extern char DAT_00f49948,DAT_00f46078;extern const char DAT_00dbb208[],DAT_00dbb1b8[],DAT_00dbb170[],DAT_00dbb0f0[];
 struct Form {
@@ -48253,7 +48253,7 @@ extern char DAT_00f461fc;
 extern char DAT_00f47aa8;
 extern char DAT_00f47ac4;
 
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 void* __cdecl FUN_004566c0(TESForm* pForm);
 void __cdecl FUN_0061b850(const char* pMessage, int iType, const char* pIcon, const char* pSound, float fTime);
 

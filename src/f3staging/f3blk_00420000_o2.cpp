@@ -17357,8 +17357,8 @@ Map::Map(unsigned int threads,unsigned int count,unsigned int batch){
 extern __declspec(thread) int DAT_0117c298;
 namespace f3m_0042b3c0 {
 namespace MapMemory2018 {struct Heap {void* FUN_0086b930(unsigned int);};extern Heap DAT_01090a78;}
-void* __cdecl operator new(size_t bytes){return MapMemory2018::DAT_01090a78.FUN_0086b930(bytes);}
-void* __cdecl operator new[](size_t bytes){return MapMemory2018::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new(size_t bytes){return MapMemory2018::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new_array(size_t bytes){return MapMemory2018::DAT_01090a78.FUN_0086b930(bytes);}
 namespace MapConstruct2018 {
 struct InterfacedClass {virtual ~InterfacedClass();};
 struct MemoryContext {int saved;MemoryContext(){saved=DAT_0117c298;DAT_0117c298=6;}~MemoryContext(){DAT_0117c298=saved;}};
@@ -17383,8 +17383,8 @@ Map::Map(unsigned int threads,unsigned int count,unsigned int batch){
 extern __declspec(thread) int DAT_0117c298;
 namespace f3m_0042b790 {
 namespace MapMemory2019 {struct Heap {void* FUN_0086b930(unsigned int);};extern Heap DAT_01090a78;}
-void* __cdecl operator new(size_t bytes){return MapMemory2019::DAT_01090a78.FUN_0086b930(bytes);}
-void* __cdecl operator new[](size_t bytes){return MapMemory2019::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new(size_t bytes){return MapMemory2019::DAT_01090a78.FUN_0086b930(bytes);}
+void* __cdecl x64_ns_new_array(size_t bytes){return MapMemory2019::DAT_01090a78.FUN_0086b930(bytes);}
 namespace MapConstruct2019 {
 struct InterfacedClass {virtual ~InterfacedClass();};
 struct MemoryContext {int saved;MemoryContext(){saved=DAT_0117c298;DAT_0117c298=6;}~MemoryContext(){DAT_0117c298=saved;}};
@@ -32976,7 +32976,7 @@ Outer* FUN_00422d70(Source* src) {
 
 // @f3 0x00438510 (community match, verified in this file)
 #include <string.h>
-extern "C" unsigned long __readfsdword(unsigned long);
+
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long* value);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long* value);
 namespace z438510 {

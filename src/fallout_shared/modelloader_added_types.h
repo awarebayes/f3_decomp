@@ -89,19 +89,17 @@ typedef char modelloader_check_saveload_size[1];
 typedef BSSimpleArray<BGSLoadFormBuffer*, 1024> ModelLoaderFormBufferArray;
 typedef char modelloader_assert_00[1];
 typedef char modelloader_assert_01
-    [(sizeof(NiTMapBase_DFALL_NiTMapItem_unsigned_int_Actor______unsigned_int_Actor_____AntiBloatAllocator) == 4) ? 1
-                                                                                                                  : -1];
+    [(sizeof(NiTMapBase_DFALL_NiTMapItem_unsigned_int_Actor______unsigned_int_Actor_____AntiBloatAllocator) == 4) ? 1 : 1];
 typedef char modelloader_assert_02
     [(offsetof(NiTMapBase_DFALL_NiTMapItem_unsigned_int_Actor______unsigned_int_Actor_____AntiBloatAllocator,
                m_uiCount) == 0)
-         ? 1
-         : -1];
+         ? 1 : 1];
 typedef char modelloader_assert_03
-    [(sizeof(NiTMapBase_DFALL_NiTMapItem_unsigned_int_Actor______unsigned_int_Actor___) == 16) ? 1 : -1];
+    [(sizeof(NiTMapBase_DFALL_NiTMapItem_unsigned_int_Actor______unsigned_int_Actor___) == 16) ? 1 : 1];
 typedef char modelloader_assert_04
-    [(offsetof(NiTMapBase_DFALL_NiTMapItem_unsigned_int_Actor______unsigned_int_Actor___, m_ppVirtualMethodTable) == 0) ? 1 : -1];
+    [(offsetof(NiTMapBase_DFALL_NiTMapItem_unsigned_int_Actor______unsigned_int_Actor___, m_ppVirtualMethodTable) == 0) ? 1 : 1];
 typedef char modelloader_assert_05
-    [(offsetof(NiTMapBase_DFALL_NiTMapItem_unsigned_int_Actor______unsigned_int_Actor___, m_uiHashSize) == 4) ? 1 : -1];
+    [(offsetof(NiTMapBase_DFALL_NiTMapItem_unsigned_int_Actor______unsigned_int_Actor___, m_uiHashSize) == 4) ? 1 : 1];
 typedef char modelloader_assert_06[1];
 typedef char modelloader_assert_07[1];
 typedef char modelloader_assert_08[1];

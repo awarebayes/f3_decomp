@@ -4833,7 +4833,7 @@ struct CopyEntry {
     CopyEntry& operator=(const CopyEntry& other) { m_00 = other.m_00; m_04.FUN_00cb0c30(&other.m_04); return *this; }
     ~CopyEntry() { m_04.FUN_00cb0c00(); }
 };
-inline void* operator new(size_t, void* p) { return p; }
+inline void* x64_ns_new(size_t, void* p) { return p; }
 struct CopyAllocator { int m_00, m_04, m_08, m_0c; void* m_10; };
 CopyAllocator* __cdecl FUN_00c85750();
 void __cdecl FUN_00c908c0(void*, void*, int, int);

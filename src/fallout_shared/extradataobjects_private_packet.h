@@ -338,7 +338,7 @@ class ExtraGuardedRefData
 
 extern char DAT_01183b2c;
 extern char DAT_01184680;
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 class TESFaction;
 class BGSPerkEntry
 {

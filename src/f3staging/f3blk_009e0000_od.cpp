@@ -1942,7 +1942,7 @@ struct hkQuadReal
 class hkVector4Comparison;
 extern "C" {
 double  __cdecl sqrt(     double _X);
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 namespace hkMath
@@ -3218,7 +3218,7 @@ struct hkQuadReal
 class hkVector4Comparison;
 extern "C" {
 double  __cdecl sqrt(     double _X);
-inline float sqrtf(     float _X)
+inline float x64_local_sqrtf(     float _X)
         {return ((float)sqrt((double)_X)); }
 }
 extern "C"

@@ -137,7 +137,7 @@ struct FUN_00ce26f0_Class
     void ApplyValueToTransforms(float a, FUN_00ce2430_Transform* b);
     void FUN_00ce26f0(FUN_00ce2430_Transform* a);
 };
-typedef unsigned int hk_size_tR;
+typedef size_t hk_size_tR;
 class hkMemoryAllocatorR
 {
   public:
@@ -270,7 +270,7 @@ class hkaSkeletonR : public hkReferencedObjectR
 class hkaRagdollInstanceR : public hkReferencedObjectR
 {
   public:
-    __forceinline void* operator new(hk_size_tR uiBytes)
+    __forceinline void* operator new(size_t uiBytes)
     {
         hkReferencedObjectR* b =
             static_cast<hkReferencedObjectR*>(GetMemoryRouterR().heap().AllocateMemoryBlock(uiBytes));

@@ -9388,7 +9388,7 @@ FUN_00ab54f0* TQOwner::FUN_00bf5c80(TQStr kPath, TQPoint3 kPosition, int iWidth,
 
 // @f3 0x00bfd6b0 (community match, verified in this file)
 #include <windows.h>
-extern "C" unsigned long __readfsdword(unsigned long);
+
 namespace Task0678 {
 struct Texture {
  virtual void V0(); virtual void Free(); long refs;
@@ -20725,7 +20725,7 @@ struct Region {
     Rect rect;
 };
 void FUN_00bf14c0(const char* definition, const char* image, Str* texture, float* bounds);
-inline void* operator new(size_t, void* p) { return p; }
+inline void* x64_ns_new(size_t, void* p) { return p; }
 struct RegionArray {
     virtual void v0();
     virtual Region* Allocate(unsigned int count);
@@ -26510,7 +26510,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -26558,7 +26558,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -26606,7 +26606,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -26654,7 +26654,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -26704,7 +26704,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -26800,7 +26800,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -37325,7 +37325,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -44476,7 +44476,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}
@@ -44533,7 +44533,7 @@ public:
     typedef T& reference;
     typedef const T* const_pointer;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind { typedef Alloc<U> other; };
     Alloc() {}

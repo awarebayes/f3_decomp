@@ -3259,7 +3259,7 @@ FUN_00cc2f40_cls::FUN_00cc2f40_cls() {
     m_3d = 1;
 }
 
-typedef unsigned int CC2F90size_t;
+typedef size_t CC2F90size_t;
 
 struct CC2F90MemoryManager {
     void* Allocate(unsigned int uiSize);
@@ -3291,7 +3291,7 @@ inline void* CC2F90AlignedAlloc(unsigned int uiSize)
 struct CC2F90Child {
     CC2F90Child();
 
-    static void* operator new(CC2F90size_t, void* pvMem) { return pvMem; }
+    static void* operator new(size_t, void* pvMem) { return pvMem; }
 };
 
 struct CC2F90Owner {
@@ -10222,7 +10222,7 @@ SpawnC_cls* FUN_00ccb4e0_cls::CreateSpawnC(unsigned int param)
 }
 }  // namespace fnv_00ccb4e0
 
-typedef unsigned int CCB730size_t;
+typedef size_t CCB730size_t;
 
 struct CCB730MemoryManager {
     void* Allocate(unsigned int uiSize);
@@ -10275,7 +10275,7 @@ struct CCB730Child {
     float m_f38;
     float m_f3C;
 
-    static void* operator new(CCB730size_t, void* pvMem) { return pvMem; }
+    static void* operator new(size_t, void* pvMem) { return pvMem; }
 };
 
 struct CCB730Owner {
@@ -18080,7 +18080,7 @@ void MoppOwner570::OutputMoppCodeInfo(StringArray403* output) {
  output->Add(point.FUN_00a59af0("MoppCode Offset"));
 }
 
-typedef unsigned int CCADB0size_t;
+typedef size_t CCADB0size_t;
 
 struct CCADB0MemoryManager {
     void* Allocate(unsigned int uiSize);
@@ -18126,7 +18126,7 @@ struct CCADB0Child {
     float m_f38;
     float m_f3C;
 
-    static void* operator new(CCADB0size_t uiSize) throw() { return g_CCADB0MemoryManager.Allocate(uiSize); }
+    static void* operator new(size_t uiSize) throw() { return g_CCADB0MemoryManager.Allocate(uiSize); }
     static void operator delete(void* pvMem) {}
 };
 
@@ -20836,7 +20836,7 @@ void __cdecl FUN_00cc9cf0()
 }
 
 namespace fnv_00cca2a0 {
-inline void* __cdecl operator new(size_t, void* place) { return place; }
+inline void* __cdecl x64_ns_new(size_t, void* place) { return place; }
 struct Vec4 {
     unsigned int x, y, z;
     float w;

@@ -2,7 +2,7 @@
 // src/havok/common/visualize/serialize/hkobjectserialize.cpp - unit created 2026-10-16 from the whole-binary attribution (360 source path: d:/projects/fallout/code/havok/source/common/visualize/serialize/hkobjectserialize.cpp).
 // Functions are listed by their @fnv annotations; compile flags inferred from the PC code.
 
-typedef unsigned int C68E30size_t;
+typedef size_t C68E30size_t;
 
 struct C68E30Allocator;
 
@@ -52,7 +52,7 @@ struct C68E30Pair
     C68E30Listener* m_kListener;
     int m_uiFilterValue;
 
-    static void* operator new(C68E30size_t, void* p) throw()
+    static void* operator new(size_t, void* p) throw()
     {
         return p;
     }

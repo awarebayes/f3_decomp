@@ -76,7 +76,7 @@ extern int DAT_0109e574;
 // @fnv 0x00a84d30
 void* __cdecl FUN_00a84d30()
 {
-    void* p = BSFadeNode::operator new(0x48);
+    void* p = ::operator new(0x48);
     if (p)
     {
         ((BSFadeNode*)p)->_Call_a5d3a0::_Call_a5d3a0();

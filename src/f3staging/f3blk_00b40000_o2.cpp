@@ -13145,7 +13145,7 @@ Derived467c0* Owner467c0::FUN_00b467c0(int arg)
 
 // @f3 0x00b47aa0 (community match, verified in this file)
 namespace f3m_00b47aa0 {
-void* operator new(size_t size)
+void* x64_ns_new(size_t size)
 {
     return f3_0262::FUN_0089eb90(size);
 }

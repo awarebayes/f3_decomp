@@ -40,7 +40,7 @@ struct CloneOwner
 void* __thiscall CloneOwner::Clone(void* kCloning)
 {
     CloneOwner* pkObject;
-    pkObject = (CloneOwner*)BSFadeNode::operator new(0x34);
+    pkObject = (CloneOwner*)::operator new(0x34);
     if (pkObject)
     {
         FUN_00a36890(pkObject);

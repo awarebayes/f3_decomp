@@ -49406,7 +49406,7 @@ void Actor::FUN_00731640(Actor* other) {
 extern char DAT_00f4e9f4, DAT_00f4ea10, DAT_00f50b30, DAT_00f6e560, DAT_00f6e544;
 namespace f3m_00727220 {
 namespace Task0684 {
-extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int);
+extern "C" void* __cdecl __RTDynamicCast(void*,long,void*,void*,int) noexcept(false);
 struct BaseProcessCopyVirtual {
  virtual void v000();
  virtual void v004();
@@ -96568,7 +96568,7 @@ bool Actor::FUN_00730c30(Actor* a, Actor* b)
 }   // namespace f3m_00730c30
 
 // @f3 0x0072a130 (community match, verified in this file)
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 namespace f3m_0072a130 {
 
 struct NiFixedString;

@@ -6922,7 +6922,7 @@ bool* FUN_00a8a620(bool* result, PointArray* first, PointArray* second, PlaneArr
 // temporary's address does not escape (0x00a82280 forwards to 0x00929ad0).
 namespace cand_a8f110 {
 
-inline void* __cdecl operator new(size_t, void* p) throw()
+inline void* __cdecl x64_ns_new(size_t, void* p) throw()
 {
     return p;
 }

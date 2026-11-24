@@ -9663,7 +9663,7 @@ template <class T> struct ArrayX
     }
 };
 
-inline void* operator new(size_t, void* p) throw()
+inline void* x64_ns_new(size_t, void* p) throw()
 {
     return p;
 }

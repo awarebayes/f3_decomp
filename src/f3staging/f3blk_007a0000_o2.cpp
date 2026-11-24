@@ -3821,7 +3821,7 @@ void __stdcall FUN_007a6d20(Obj7a6d20* o, int unused)
 
 // @f3 0x007ad430 (community match, verified in this file)
 namespace f3m_007ad430 {
-inline void* operator new(size_t, void* p) { return p; }
+inline void* x64_ns_new(size_t, void* p) { return p; }
 struct Elem7ad430 { int unk00; float value; Elem7ad430() { value = 0.0f; } };
 void __stdcall FUN_007ad430(Elem7ad430* p, unsigned int n)
 {

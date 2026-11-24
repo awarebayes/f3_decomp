@@ -4606,7 +4606,7 @@ __declspec(dllimport) unsigned long __stdcall GetCurrentThreadId(void);
 }
 extern "C" unsigned long __readfsdword(unsigned long);
 
-inline void* operator new(size_t, void* p) { return p; }
+inline void* x64_ns_new(size_t, void* p) { return p; }
 struct Pool { void* FUN_008f6f60(int a, int b); };
 struct Obj330 {
     Obj330(int a, int b);
@@ -7774,7 +7774,7 @@ struct FilterCast : WorldRayCaster
         FUN_00942be0(world->field54, query, mode, cache, collector);
     }
 };
-inline void* __cdecl operator new(size_t, void* p)
+inline void* __cdecl x64_ns_new(size_t, void* p)
 {
     return p;
 }
