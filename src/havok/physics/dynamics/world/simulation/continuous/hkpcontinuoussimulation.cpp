@@ -5350,10 +5350,7 @@ struct TraceCmd {
     __forceinline void setTime()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         time0=ticks;
     }
 };
@@ -6876,10 +6873,7 @@ class hkMonitorStream
 void hkMonitorStream::TimerCommand::setTime()
 {
 		hkUint32 ticks;
-		__asm {
-			rdtsc
-			mov dword ptr[ticks], eax
-		}
+		;
 		m_time0 = ticks;
 }
 template <typename T>
@@ -7237,10 +7231,7 @@ static __forceinline void WriteClock(const char* name) {
         h->m_name = name;
         _ReadWriteBarrier();
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         h->m_uiCommandId = ticks;
         s->m_kRayEnd = (char*)(h + 1);
     }
@@ -7307,10 +7298,7 @@ static __forceinline void WriteClock(const char* name) {
         h->m_name = name;
         _ReadWriteBarrier();
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         h->m_uiCommandId = ticks;
         s->m_kRayEnd = (char*)(h + 1);
     }
@@ -10011,10 +9999,7 @@ typedef unsigned long DWORD;
 struct ProfRec { const char* m_pName; DWORD m_iTick; DWORD unk08;
     __forceinline void stamp() {
         DWORD value;
-        __asm {
-            rdtsc
-            mov dword ptr[value], eax
-        }
+        ;
         m_iTick=value;
     }
 };

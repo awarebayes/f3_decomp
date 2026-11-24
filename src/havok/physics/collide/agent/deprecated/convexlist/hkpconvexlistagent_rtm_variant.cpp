@@ -1303,10 +1303,7 @@ static __forceinline bool cachedFO(Agent* self,const Shape& a,const Shape& b,con
    if(r<(Rec12*)p->end) {
     r->name=DAT_00e7ee88;
     unsigned ticks;
-    __asm {
-     rdtsc
-     mov dword ptr[ticks], eax
-    }
+    ;
     r->tick=ticks;
     p->cursor=(char*)(r+1);
    }
@@ -1347,10 +1344,7 @@ void __thiscall Agent::FUN_00d33f40(const Shape& a,const Shape& b,const Arg3& c,
   if(r<(Rec16*)p->end) {
    r->name=DAT_00e7ed64; r->name2=DAT_00e7ed5c;
    unsigned ticks;
-   __asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-   }
+   ;
    r->tick=ticks;
    p->cursor=(char*)(r+1);
   }
@@ -1365,10 +1359,7 @@ stream: {
   if(r<(Rec12*)p->end) {
    r->name=DAT_00e7ed50;
    unsigned ticks;
-   __asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-   }
+   ;
    r->tick=ticks;
    p->cursor=(char*)(r+1);
   }
@@ -1421,10 +1412,7 @@ tail:
   if(r<(Rec12*)p->end) {
    r->name=str_01076f38;
    unsigned ticks;
-   __asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-   }
+   ;
    r->tick=ticks;
    p->cursor=(char*)(r+1);
   }

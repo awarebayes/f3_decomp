@@ -579,10 +579,7 @@ __forceinline void timerBegin(const char* name)
     {
         record->name = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         record->ticks = ticks;
         monitor->next = record + 1;
     }
@@ -855,10 +852,7 @@ void FUN_009c5c30(S009c5c30_A* a, S009c5c30_B* b, unsigned int unk10, S009c5c30_
     if (ev < tls->end) {
         ev->id = DAT_00e7f1b8;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         ev->tick = ticks;
         tls->cur = ev + 1;
     }
@@ -905,10 +899,7 @@ void FUN_009c5c30(S009c5c30_A* a, S009c5c30_B* b, unsigned int unk10, S009c5c30_
     if (ev < tls->end) {
         ev->id = DAT_00e32798;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         ev->tick = ticks;
         tls->cur = ev + 1;
     }
@@ -1681,10 +1672,7 @@ S009c2530_AgentData* FUN_009c2530(const hkpAgent3ProcessInput& input, hkpAgentEn
         {
             *(const char**)cur = "TtCapsTri3";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             *(unsigned int*)(cur + 4) = ticks;
             s->m_cur = cur + 12;
         }
@@ -1776,10 +1764,7 @@ storeId:
         {
             *(const char**)cur = "Et";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             *(unsigned int*)(cur + 4) = ticks;
             s->m_cur = cur + 12;
         }

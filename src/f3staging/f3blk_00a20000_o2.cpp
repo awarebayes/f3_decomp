@@ -1152,10 +1152,7 @@ void __cdecl FUN_00a235a0(hkpSimulationIslandA235* island, hkpSimulationA235* si
             h->m_commandAndMonitor = "LtIntegrate";
             h->m_nameOfFirstSplit = "StSolve";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             h->m_time0 = ticks;
             mStream.setEnd(reinterpret_cast<char*>(h + 1));
         }
@@ -1197,10 +1194,7 @@ void __cdecl FUN_00a235a0(hkpSimulationIslandA235* island, hkpSimulationA235* si
             hkMonitorStream::TimerCommand* h = reinterpret_cast<hkMonitorStream::TimerCommand*>(mStream.getEnd());
             h->m_commandAndMonitor = "lt";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             h->m_time0 = ticks;
             mStream.setEnd(reinterpret_cast<char*>(h + 1));
         }
@@ -4112,10 +4106,7 @@ static __forceinline void timer(const char* name) {
  if(cursor < monitor->end) {
   cursor->name = name;
   unsigned int ticks;
-  __asm {
-   rdtsc
-   mov dword ptr[ticks], eax
-  }
+  ;
   cursor->ticks = ticks;
   monitor->cursor = cursor + 1;
  }
@@ -4753,10 +4744,7 @@ int Sa21d70_JobQueue::FUN_00a21d70(int queueIndexOfNewJob, int addAtBack, int th
         if (h < mon->m_capacityMinusEpsilon) {
             h->m_name = "TtGetNextJob";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             h->m_ticks = ticks;
             mon->m_end = h + 1;
         }
@@ -4846,10 +4834,7 @@ int Sa21d70_JobQueue::FUN_00a21d70(int queueIndexOfNewJob, int addAtBack, int th
             if (h < mon->m_capacityMinusEpsilon) {
                 h->m_name = "Et";
                 unsigned int ticks;
-                __asm {
-                    rdtsc
-                    mov dword ptr[ticks], eax
-                }
+                ;
                 h->m_ticks = ticks;
                 mon->m_end = h + 1;
             }
@@ -4864,10 +4849,7 @@ int Sa21d70_JobQueue::FUN_00a21d70(int queueIndexOfNewJob, int addAtBack, int th
             if (h < mon->m_capacityMinusEpsilon) {
                 h->m_name = "Et";
                 unsigned int ticks;
-                __asm {
-                    rdtsc
-                    mov dword ptr[ticks], eax
-                }
+                ;
                 h->m_ticks = ticks;
                 mon->m_end = h + 1;
             }
@@ -4881,10 +4863,7 @@ int Sa21d70_JobQueue::FUN_00a21d70(int queueIndexOfNewJob, int addAtBack, int th
             if (h < mon->m_capacityMinusEpsilon) {
                 h->m_name = "EtGetNextJob";
                 unsigned int ticks;
-                __asm {
-                    rdtsc
-                    mov dword ptr[ticks], eax
-                }
+                ;
                 h->m_ticks = ticks;
                 mon->m_end = h + 1;
             }
@@ -4900,10 +4879,7 @@ int Sa21d70_JobQueue::FUN_00a21d70(int queueIndexOfNewJob, int addAtBack, int th
                 if (h < mon->m_capacityMinusEpsilon) {
                     h->m_name = "TtWaitForSignal";
                     unsigned int ticks;
-                    __asm {
-                        rdtsc
-                        mov dword ptr[ticks], eax
-                    }
+                    ;
                     h->m_ticks = ticks;
                     mon->m_end = h + 1;
                 }
@@ -4915,10 +4891,7 @@ int Sa21d70_JobQueue::FUN_00a21d70(int queueIndexOfNewJob, int addAtBack, int th
                 if (h < mon->m_capacityMinusEpsilon) {
                     h->m_name = "Et";
                     unsigned int ticks;
-                    __asm {
-                        rdtsc
-                        mov dword ptr[ticks], eax
-                    }
+                    ;
                     h->m_ticks = ticks;
                     mon->m_end = h + 1;
                 }
@@ -4932,10 +4905,7 @@ int Sa21d70_JobQueue::FUN_00a21d70(int queueIndexOfNewJob, int addAtBack, int th
                 if (h < mon->m_capacityMinusEpsilon) {
                     h->m_name = "TtWaitForSignal";
                     unsigned int ticks;
-                    __asm {
-                        rdtsc
-                        mov dword ptr[ticks], eax
-                    }
+                    ;
                     h->m_ticks = ticks;
                     mon->m_end = h + 1;
                 }
@@ -4947,10 +4917,7 @@ int Sa21d70_JobQueue::FUN_00a21d70(int queueIndexOfNewJob, int addAtBack, int th
                 if (h < mon->m_capacityMinusEpsilon) {
                     h->m_name = "Et";
                     unsigned int ticks;
-                    __asm {
-                        rdtsc
-                        mov dword ptr[ticks], eax
-                    }
+                    ;
                     h->m_ticks = ticks;
                     mon->m_end = h + 1;
                 }
@@ -6579,20 +6546,14 @@ struct hkMonitorStream
 __forceinline void hkMonitorStream::TimerCommand::setTime()
 {
     unsigned int ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     m_time0 = ticks;
 }
 
 __forceinline void hkMonitorStream::TimerBeginListCommand::setTime()
 {
     unsigned int ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     m_time0 = ticks;
 }
 
@@ -11969,10 +11930,7 @@ public:
         {
             // hkMonitorStream.inl, IA32/MSVC timer.
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };

@@ -9004,10 +9004,7 @@ __forceinline void hkTimerCommand(const char* name)
         hkMonitorStream::TimerCommand* command = (hkMonitorStream::TimerCommand*)stream.getEnd();
         command->m_commandAndMonitor = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         command->m_time0 = ticks;
         stream.setEnd((char*)(command + 1));
     }
@@ -9334,10 +9331,7 @@ __forceinline void hkTimerCommand(const char* name)
         hkMonitorStream::TimerCommand* command = (hkMonitorStream::TimerCommand*)stream.getEnd();
         command->m_commandAndMonitor = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         command->m_time0 = ticks;
         stream.setEnd((char*)(command + 1));
     }
@@ -11816,10 +11810,7 @@ class hkMonitorStream
 void hkMonitorStream::TimerCommand::setTime()
 {
 		hkUint32 ticks;
-		__asm {
-			rdtsc
-			mov dword ptr[ticks], eax
-		}
+		;
 		m_time0 = ticks;
 }
 class hkMotionState;
@@ -13337,10 +13328,7 @@ __forceinline void hkTimerCommand(const char* name)
         hkMonitorStream::TimerCommand* command = (hkMonitorStream::TimerCommand*)stream.getEnd();
         command->m_commandAndMonitor = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         command->m_time0 = ticks;
         stream.setEnd((char*)(command + 1));
     }
@@ -13689,10 +13677,7 @@ struct hkMonitorStream
         __forceinline void setTime()
         {
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
 
@@ -14089,10 +14074,7 @@ __forceinline void hkTimerCommand(const char* name)
         hkMonitorStream::TimerCommand* command = (hkMonitorStream::TimerCommand*)stream.getEnd();
         command->m_commandAndMonitor = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         command->m_time0 = ticks;
         stream.setEnd((char*)(command + 1));
     }
@@ -14891,10 +14873,7 @@ __forceinline void hkTimerCommand(const char* name)
         hkMonitorStream::TimerCommand* command = (hkMonitorStream::TimerCommand*)stream.getEnd();
         command->m_commandAndMonitor = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         command->m_time0 = ticks;
         stream.setEnd((char*)(command + 1));
     }
@@ -15725,10 +15704,7 @@ struct hkMonitorStream
         __forceinline void setTime()
         {
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
 
@@ -17001,10 +16977,7 @@ public:
         __forceinline void setTime()
         {
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };
@@ -17255,10 +17228,7 @@ public:
         __forceinline void setTime()
         {
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };

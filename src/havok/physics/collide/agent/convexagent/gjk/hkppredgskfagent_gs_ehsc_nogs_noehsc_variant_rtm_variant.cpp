@@ -396,10 +396,7 @@ __forceinline void setTime();
 void StringCursor::CommandTimingEntry::setTime()
 {
 hkUint32 ticks;
-__asm{
-rdtsc
-mov dword ptr[ticks],eax
-}
+;
 m_uiStartTicks=ticks;
 }
 class ScopedTimer

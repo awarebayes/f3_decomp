@@ -413,10 +413,7 @@ public:
         __forceinline void setTime()
         {
             UInt32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };

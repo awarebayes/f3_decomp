@@ -738,11 +738,7 @@ void __cdecl FUN_00d947e0( S00d947e0_Obj** a1, S00d947e0_Queue* apQueue, S00d947
         P2PTimerRecord4* pRec4 = (P2PTimerRecord4*)pRec;
         pRec4->m_pTag = DAT_00e7d35c;
         pRec4->m_pSplitTag = DAT_00e855d8;
-        __asm
-        {
-            rdtsc
-            mov dword ptr [tb], eax
-        }
+        ;
         pRec4->m_dwTime = tb;
         pTb->m_pCurrent = (P2PTimerRecord*)( (char*)pRec + 0x10 );
     }
@@ -773,11 +769,7 @@ void __cdecl FUN_00d947e0( S00d947e0_Obj** a1, S00d947e0_Queue* apQueue, S00d947
         if ( pRec2 < pTb2->m_pRecordEnd )
         {
             pRec2->m_pTag = DAT_00e855ec;
-            __asm
-        {
-            rdtsc
-            mov dword ptr [tb], eax
-        }
+            ;
             pRec2->m_dwTime = tb;
             pTb2->m_pCurrent = (P2PTimerRecord*)( (char*)pRec2 + 0xc );
         }
@@ -792,11 +784,7 @@ void __cdecl FUN_00d947e0( S00d947e0_Obj** a1, S00d947e0_Queue* apQueue, S00d947
         if ( pRec3 < pTb3->m_pRecordEnd )
         {
             pRec3->m_pTag = DAT_00e0811c;
-            __asm
-        {
-            rdtsc
-            mov dword ptr [tb], eax
-        }
+            ;
             pRec3->m_dwTime = tb;
             pTb3->m_pCurrent = (P2PTimerRecord*)( (char*)pRec3 + 0xc );
         }

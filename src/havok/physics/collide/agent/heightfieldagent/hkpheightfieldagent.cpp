@@ -357,10 +357,7 @@ struct StringCursor {
             cmd->name = name1;
             cmd->subName = name2;
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             cmd->time = ticks;
             m_memPos = (char*)(cmd + 1);
         }
@@ -370,10 +367,7 @@ struct StringCursor {
             MonitorCommand* cmd = (MonitorCommand*)m_memPos;
             cmd->name = name;
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             cmd->time = ticks;
             m_memPos = (char*)cmd + 12;
         }

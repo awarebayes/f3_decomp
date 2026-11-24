@@ -440,10 +440,7 @@ void S00d3d6b0_SphereTriAgent::FUN_00d3d6b0(S00d3d6b0_BodyHolderB* a, S00d3d6b0_
         if (record < buffer->end) {
             record->name = DAT_00e7f23c;
             DWORD tick;
-            __asm {
-                rdtsc
-                mov dword ptr [tick], eax
-            }
+            ;
             record->tsc = tick;
             buffer->cur = record + 1;
         }
@@ -460,10 +457,7 @@ void S00d3d6b0_SphereTriAgent::FUN_00d3d6b0(S00d3d6b0_BodyHolderB* a, S00d3d6b0_
         if (record < buffer->end) {
             record->name = DAT_00e32798;
             DWORD tick;
-            __asm {
-                rdtsc
-                mov dword ptr [tick], eax
-            }
+            ;
             record->tsc = tick;
             buffer->cur = record + 1;
         }
@@ -653,10 +647,7 @@ void TargetAgent_Cand::FUN_00d3dd90(const CdBody* bodyA, const CdBody* bodyB, co
         cur->name = DAT_010cf0d4;
         unsigned int ticks;
         _ReadWriteBarrier();
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         cur->timestamp = ticks;
         stream->m_pTileTemplate = cur + 1;
     }
@@ -705,10 +696,7 @@ void TargetAgent_Cand::FUN_00d3dd90(const CdBody* bodyA, const CdBody* bodyB, co
         curEnd->name = DAT_010c41f8;
         unsigned int ticks;
         _ReadWriteBarrier();
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         curEnd->timestamp = ticks;
         streamEnd->m_pTileTemplate = curEnd + 1;
     }

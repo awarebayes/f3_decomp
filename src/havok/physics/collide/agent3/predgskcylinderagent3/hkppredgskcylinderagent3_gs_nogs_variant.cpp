@@ -3597,10 +3597,7 @@ namespace fn_009cb440
     inline void SetTime(unsigned int* h)
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         h[1] = ticks;
     }
 

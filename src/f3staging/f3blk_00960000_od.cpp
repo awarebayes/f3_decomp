@@ -1235,10 +1235,7 @@ Bool TransformShape::FUN_0097df50(const RayInput& input, RayOutput& out)
     if (c < s->limit) {
         c->name = DAT_00e7d25c;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         c->ticks = ticks;
         s->cursor = c + 1;
     }
@@ -1258,10 +1255,7 @@ Bool TransformShape::FUN_0097df50(const RayInput& input, RayOutput& out)
     if (c2 < s2->limit) {
         c2->name = DAT_00e32798;
         unsigned int ticks2;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks2], eax
-        }
+        ;
         c2->ticks = ticks2;
         s2->cursor = c2 + 1;
     }
@@ -6983,10 +6977,7 @@ class hkMonitorStream
 void hkMonitorStream::TimerCommand::setTime()
 {
 		hkUint32 ticks;
-		__asm {
-			rdtsc
-			mov dword ptr[ticks], eax
-		}
+		;
 		m_time0 = ticks;
 }
 class hkaBone;

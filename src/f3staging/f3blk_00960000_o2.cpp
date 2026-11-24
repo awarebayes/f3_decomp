@@ -7184,10 +7184,7 @@ void TransformShape::FUN_0097e130(const RayInput& input, const CdBody& parent, v
     if (c < s->limit) {
         c->name = DAT_00e7d25c;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         c->ticks = ticks;
         s->cursor = c + 1;
     }
@@ -7205,10 +7202,7 @@ void TransformShape::FUN_0097e130(const RayInput& input, const CdBody& parent, v
     if (c2 < s2->limit) {
         c2->name = DAT_00e32798;
         unsigned int ticks2;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks2], eax
-        }
+        ;
         c2->ticks = ticks2;
         s2->cursor = c2 + 1;
     }
@@ -12842,10 +12836,7 @@ public:
         __forceinline void setTime()
         {
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };
@@ -13097,10 +13088,7 @@ public:
         __forceinline void setTime()
         {
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };

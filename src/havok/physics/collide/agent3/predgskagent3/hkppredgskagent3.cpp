@@ -674,10 +674,7 @@ struct TimerCommand
     __forceinline void setTime()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         m_time0 = ticks;
     }
 };

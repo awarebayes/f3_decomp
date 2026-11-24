@@ -798,10 +798,7 @@ static __forceinline void Mark(const char* name) {
         return;
     entry->name = name;
     unsigned int ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     entry->tsc = ticks;
     stream->cur = entry + 1;
 }

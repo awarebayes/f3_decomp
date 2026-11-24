@@ -4569,10 +4569,7 @@ static __declspec(noinline) void FUN_00a687a0(const S687a0_Vector4& from, const 
             S687a0_TimerCommand* h = (S687a0_TimerCommand*)s->m_end;
             h->m_commandAndMonitor = "TthkContactPointViewer_displayArrow";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             h->m_time = ticks;
             s->m_end = (char*)(h + 1);
         }
@@ -4585,10 +4582,7 @@ static __declspec(noinline) void FUN_00a687a0(const S687a0_Vector4& from, const 
             S687a0_TimerCommand* h = (S687a0_TimerCommand*)s->m_end;
             h->m_commandAndMonitor = "Et";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             h->m_time = ticks;
             s->m_end = (char*)(h + 1);
         }
@@ -4615,10 +4609,7 @@ static __declspec(noinline) void FUN_00a687a0(const S687a0_Vector4& from, const 
             S687a0_TimerCommand* h = (S687a0_TimerCommand*)s->m_end;
             h->m_commandAndMonitor = "Et";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             h->m_time = ticks;
             s->m_end = (char*)(h + 1);
         }
@@ -6561,10 +6552,7 @@ struct TimerCommand {
 
     __forceinline void setTime() {
         hkUint32 ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         time0 = ticks;
     }
 };

@@ -1700,10 +1700,7 @@ extern TlsFn FUN_00d9b080;
 static __forceinline void eventF3(const char* tag,TlsFn get) {
  Stream* s=(Stream*)get(DAT_0126835c); TimerEvent* p=(TimerEvent*)s->pos;
  if((char*)p<s->cap) { p->tag=tag; unsigned int ticks;
- __asm {
- rdtsc
- mov dword ptr[ticks], eax
- }
+ ;
  p->stamp=ticks; s->pos=(char*)p+12; }
 }
 extern "C" void __cdecl FUN_0099a2d0(void*,void*,int);
@@ -1745,10 +1742,7 @@ extern const char str_00e7d388[];
 extern const char str_00e7d37c[];
 extern const char str_00e7d370[];
 static __forceinline void beginF3(TlsFn get) { Stream* s=(Stream*)get(DAT_0126835c); TimerEvent* p=(TimerEvent*)s->pos; if((char*)p<s->cap) { p->tag=str_00e7d3bc; p->subtag=str_00e7d3b0; unsigned int ticks;
- __asm {
- rdtsc
- mov dword ptr[ticks], eax
- }
+ ;
  p->stamp=ticks; s->pos=(char*)p+16; }}
 extern "C" unsigned long DAT_010f3170;
 struct StackAllocatorF3 {
@@ -2500,10 +2494,7 @@ struct TimerCommand {
     __forceinline void setTime()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         m_time0 = ticks;
     }
 };
@@ -2657,10 +2648,7 @@ __forceinline void stamp(const char* name, volatile unsigned int& clockSlot) {
  if (e < t->m_last) {
   e->m_name = name;
   unsigned int ticks;
-  __asm {
-      rdtsc
-      mov dword ptr[ticks], eax
-  }
+  ;
   e->m_low = ticks;
   t->m_next = e + 1;
  }
@@ -2982,10 +2970,7 @@ __forceinline void stampN(const char* name) {
  if (e < t->m_last) {
   e->m_name = name;
   unsigned int ticks;
-  __asm {
-      rdtsc
-      mov dword ptr[ticks], eax
-  }
+  ;
   e->m_low = ticks;
   t->m_next = e + 1;
  }
@@ -2996,10 +2981,7 @@ __forceinline void stampEnd() {
  if (e < t->m_last) {
   e->m_name = str_010c41f8;
   unsigned int ticks;
-  __asm {
-      rdtsc
-      mov dword ptr[ticks], eax
-  }
+  ;
   e->m_low = ticks;
   t->m_next = e + 1;
  }

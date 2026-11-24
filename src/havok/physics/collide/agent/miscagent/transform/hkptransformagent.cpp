@@ -1534,10 +1534,7 @@ struct S_00d42b50_TimerCommand {
     void setTime()
     {
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         m_uiStartTicks = t;
     }
 };
@@ -1634,10 +1631,7 @@ void S_00d42b50_Cls::FUN_00d42b50(const S_00d42b50_CdBody& bodyA, const S_00d42b
             S_00d42b50_TimerCommand* h = (S_00d42b50_TimerCommand*)mStream.m_kRayEnd;
             h->m_pCommandName = "TtTransform";
             { unsigned int fnv_ticks;
-                __asm {
-                    rdtsc
-                    mov dword ptr[fnv_ticks], eax
-                }
+                ;
                 scratch.tick = fnv_ticks; }
             h->m_uiStartTicks = scratch.tick;
             mStream.m_kRayEnd = (char*)(h + 1);
@@ -1686,10 +1680,7 @@ void S_00d42b50_Cls::FUN_00d42b50(const S_00d42b50_CdBody& bodyA, const S_00d42b
             S_00d42b50_TimerCommand* h = (S_00d42b50_TimerCommand*)mStream.m_kRayEnd;
             h->m_pCommandName = "Et";
             { unsigned int fnv_ticks;
-                __asm {
-                    rdtsc
-                    mov dword ptr[fnv_ticks], eax
-                }
+                ;
                 scratch.tick = fnv_ticks; }
             h->m_uiStartTicks = scratch.tick;
             mStream.m_kRayEnd = (char*)(h + 1);

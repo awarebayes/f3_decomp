@@ -814,10 +814,7 @@ void CapsuleTriangleAgent::FUN_00d3a620(const hkpCdBody& bodyA, const hkpCdBody&
             ProfRec* pRec = pBuf->m_pCur;
             pRec->m_pName = DAT_010cef80;
             DWORD tick;
-            __asm {
-                rdtsc
-                mov dword ptr [tick], eax
-            }
+            ;
             pRec->m_iTick = tick;
             pBuf->m_pCur = pRec + 1;
         }
@@ -837,10 +834,7 @@ void CapsuleTriangleAgent::FUN_00d3a620(const hkpCdBody& bodyA, const hkpCdBody&
             ProfRec* pRec = pBuf2->m_pCur;
             pRec->m_pName = DAT_010c41f8;
             DWORD tick;
-            __asm {
-                rdtsc
-                mov dword ptr [tick], eax
-            }
+            ;
             pRec->m_iTick = tick;
             pBuf2->m_pCur = pRec + 1;
         }
@@ -954,10 +948,7 @@ void CollisionAgent::FUN_00d39ef0(const BodyRecord& a,const BodyRecord& b,const 
             MonitorRecord* rec=stream->cursor;
             rec->name="TtCapsTriangle";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             rec->time=ticks;
             stream->cursor=rec+1;
         }
@@ -1005,10 +996,7 @@ done:
             MonitorRecord* rec=stream->cursor;
             rec->name="Et";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             rec->time=ticks;
             stream->cursor=rec+1;
         }
@@ -1140,10 +1128,7 @@ void __cdecl FUN_00d3a8c0(Body* apBodyA, Body* apBodyB, Input* input, Penetratio
             ProfRec* pRec = pBuf->m_pCur;
             pRec->m_pName = ::DAT_010cef80;
             DWORD tick;
-            __asm {
-                rdtsc
-                mov dword ptr [tick], eax
-            }
+            ;
             pRec->m_iTick = tick;
             pBuf->m_pCur = pRec + 1;
         }
@@ -1166,10 +1151,7 @@ void __cdecl FUN_00d3a8c0(Body* apBodyA, Body* apBodyB, Input* input, Penetratio
             ProfRec* pRec = pBuf2->m_pCur;
             pRec->m_pName = ::DAT_010c41f8;
             DWORD tick;
-            __asm {
-                rdtsc
-                mov dword ptr [tick], eax
-            }
+            ;
             pRec->m_iTick = tick;
             pBuf2->m_pCur = pRec + 1;
         }

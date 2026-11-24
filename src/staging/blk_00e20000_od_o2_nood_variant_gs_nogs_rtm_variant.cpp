@@ -330,10 +330,7 @@ __forceinline void ProfMark(const char* pName)
         ProfRec* pRec = (ProfRec*)pBuf->m_pCur;
         pRec->m_pName = pName;
         { unsigned int ticks;
-__asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-}
+;
 pRec->m_iTick = ticks; }
         pBuf->m_pCur = (char*)(pRec + 1);
     }
@@ -347,10 +344,7 @@ __forceinline void ProfMark2(const char* pName, const char* pName2)
         pRec->m_pName = pName;
         pRec->m_pName2 = pName2;
         { unsigned int ticks;
-__asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-}
+;
 pRec->m_iTick = ticks; }
         pBuf->m_pCur = (char*)(pRec + 1);
     }

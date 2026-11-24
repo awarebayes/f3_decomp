@@ -653,10 +653,7 @@ __forceinline void TimerMark(const char* name) {
     if (c < s->end) {
         c[0]=(int)name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         c[1]=ticks;
         s->cur=c+3;
     }

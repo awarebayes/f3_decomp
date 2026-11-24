@@ -423,10 +423,7 @@ __forceinline void setTime();
 void StringCursor::CommandTimingEntry::setTime()
 {
 hkUint32 ticks;
-__asm{
-rdtsc
-mov dword ptr[ticks],eax
-}
+;
 m_uiStartTicks=ticks;
 }
 class hkAabb
@@ -877,10 +874,7 @@ __forceinline void RecordCapsuleEvent(const char* name)
         CommandTimingEntry* entry = reinterpret_cast<CommandTimingEntry*>(stream->m_kRayEnd);
         entry->m_pCommandName = name;
         unsigned int count;
-        __asm {
-            rdtsc
-            mov dword ptr [count], eax
-        }
+        ;
         entry->m_uiStartTicks = count;
         stream->m_kRayEnd = reinterpret_cast<char*>(entry + 1);
     }

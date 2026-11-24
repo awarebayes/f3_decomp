@@ -109,10 +109,7 @@ S9ed140_Bool S9ed140_TransformShape::FUN_009ed140(const S9ed140_RayInput& input,
     if (pos < mon->cap) {
         *(const char**)pos = ::DAT_00e80824;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         pos[1] = ticks;
         mon->pos = pos + 3;
     }
@@ -132,10 +129,7 @@ S9ed140_Bool S9ed140_TransformShape::FUN_009ed140(const S9ed140_RayInput& input,
     if (pos2 < mon2->cap) {
         *(const char**)pos2 = "Et";
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         pos2[1] = ticks;
         mon2->pos = pos2 + 3;
     }
@@ -1009,10 +1003,7 @@ struct TimerCommand {
     __forceinline void SetTime()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         time = ticks;
     }
 };

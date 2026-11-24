@@ -12151,10 +12151,7 @@ void HostWorld_00c951b0::RemoveEntities(void* const* entityBatch, int numEntitie
             *(const char**)(p + 0xc) = DAT_00e34fb0;
             _ReadWriteBarrier();
             unsigned int t;
-            __asm {
-                rdtsc
-                mov dword ptr[t], eax
-            }
+            ;
             *(unsigned int*)(p + 4) = t;
             m->cur = p + 0x10;
         }
@@ -12177,10 +12174,7 @@ void HostWorld_00c951b0::RemoveEntities(void* const* entityBatch, int numEntitie
                 *(const char**)p = DAT_00e34fa0;
                 _ReadWriteBarrier();
                 unsigned int t;
-            __asm {
-                rdtsc
-                mov dword ptr[t], eax
-            }
+            ;
                 *(unsigned int*)(p + 4) = t;
                 m->cur = p + 0xc;
             }
@@ -12195,10 +12189,7 @@ void HostWorld_00c951b0::RemoveEntities(void* const* entityBatch, int numEntitie
                 *(const char**)p = DAT_00e34f94;
                 _ReadWriteBarrier();
                 unsigned int t;
-            __asm {
-                rdtsc
-                mov dword ptr[t], eax
-            }
+            ;
                 *(unsigned int*)(p + 4) = t;
                 m->cur = p + 0xc;
             }
@@ -12214,10 +12205,7 @@ void HostWorld_00c951b0::RemoveEntities(void* const* entityBatch, int numEntitie
             *(const char**)p = DAT_00e34f88;
             _ReadWriteBarrier();
             unsigned int t;
-            __asm {
-                rdtsc
-                mov dword ptr[t], eax
-            }
+            ;
             *(unsigned int*)(p + 4) = t;
             m->cur = p + 0xc;
         }
@@ -12245,10 +12233,7 @@ void HostWorld_00c951b0::RemoveEntities(void* const* entityBatch, int numEntitie
             *(const char**)p = "lt";
             _ReadWriteBarrier();
             unsigned int t;
-            __asm {
-                rdtsc
-                mov dword ptr[t], eax
-            }
+            ;
             *(unsigned int*)(p + 4) = t;
             m->cur = p + 0xc;
         }
@@ -12800,10 +12785,7 @@ void World::FUN_00c96df0(Collidable* collA, const QueryCollisionInput* input, Co
         ((MonitorCommand*)pos1)->m_category = str_010c6748;
         _ReadWriteBarrier();
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         ((MonitorCommand*)pos1)->m_ticks = t;
         ms1.m_pos = pos1 + 16;
     }
@@ -12826,10 +12808,7 @@ void World::FUN_00c96df0(Collidable* collA, const QueryCollisionInput* input, Co
         ((MonitorCommand*)pos2)->m_name = str_010c68dc;
         _ReadWriteBarrier();
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         ((MonitorCommand*)pos2)->m_ticks = t;
         ms2.m_pos = pos2 + 12;
     }
@@ -12859,10 +12838,7 @@ void World::FUN_00c96df0(Collidable* collA, const QueryCollisionInput* input, Co
         ((MonitorCommand*)pos3)->m_name = str_01076f38;
         _ReadWriteBarrier();
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         ((MonitorCommand*)pos3)->m_ticks = t;
         ms3.m_pos = pos3 + 12;
     }
@@ -12900,10 +12876,7 @@ struct S96_WorldShell : hkpWorld {
    S96_TimerEntry* entry=timer->unk04;
    entry->name=name;
    unsigned tick;
-   __asm {
-    rdtsc
-    mov dword ptr[tick], eax
-   }
+   ;
    entry->tick=tick;
    timer->unk04=entry+1;
   }
@@ -12914,10 +12887,7 @@ struct S96_WorldShell : hkpWorld {
    S96_TimerEntry* entry=timer->unk04;
    entry->name=str_010c41f8;
    unsigned tick;
-   __asm {
-    rdtsc
-    mov dword ptr[tick], eax
-   }
+   ;
    entry->tick=tick;
    timer->unk04=entry+1;
   }
@@ -12934,10 +12904,7 @@ struct TimingEntry1135 {
     unsigned int m_uiEndTicks;
     __forceinline void setTime() {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         m_uiStartTicks = ticks;
     }
 };
@@ -13137,10 +13104,7 @@ struct S97_MonitorStream {
         __forceinline void setTime()
         {
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_uiStartTicks = ticks;
         }
     };
@@ -14071,10 +14035,7 @@ const char*vnOFS; } ; struct CommandTimingStringEntry:public TMS::CommandTimingE
 const char*voN; } ; struct PointerAndIntegerCommand:public TMS::Command{
 void*vp6; int vsAF; } ;
 } ; void TMS::CommandTimingEntry::setTime()throw(){ TU32 ticks;
-__asm {
-rdtsc
-mov dword ptr[ticks], eax
-}
+;
  vt0=ticks; } class TTFH; class TWMAWD;
 class TCB; struct TCI; class TCLF; class TC2;
 class TCCF{ public:virtual~TCCF()throw(); virtual void vs47()const throw(); }
@@ -14474,10 +14435,7 @@ static __forceinline void doShift(Sbp_World* self,const __m128& rawShift, __m128
         if (entry < timer->unk0C) {
             entry->name = str_010c68c8;
             unsigned int openingTick;
-            __asm {
-                rdtsc
-                mov dword ptr[openingTick], eax
-            }
+            ;
             entry->tick = openingTick;
             timer->unk04 = entry + 1;
         }
@@ -14539,10 +14497,7 @@ static __forceinline void doShift(Sbp_World* self,const __m128& rawShift, __m128
         if (entry < timer->unk0C) {
             entry->name = str_010c41f8;
             unsigned int closingTick;
-            __asm {
-                rdtsc
-                mov dword ptr[closingTick], eax
-            }
+            ;
             entry->tick = closingTick;
             timer->unk04 = entry + 1;
         }

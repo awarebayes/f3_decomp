@@ -1265,10 +1265,7 @@ __forceinline void S009f6cd0_timer(const char* name)
         S009f6cd0_TimerCmd* cmd = (S009f6cd0_TimerCmd*)end;
         cmd->name = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         cmd->time = ticks;
         stream->m_end = end + 0xc;
     }
@@ -2547,10 +2544,7 @@ __forceinline void S9f1730_timer(const char* name)
         S9f1730_TimerCmd* cmd = (S9f1730_TimerCmd*)end;
         cmd->name = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         cmd->time = ticks;
         stream->m_end = end + 0xc;
     }

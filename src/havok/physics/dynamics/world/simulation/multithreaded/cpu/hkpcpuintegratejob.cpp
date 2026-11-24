@@ -618,10 +618,7 @@ void FUN_00d95130(SceneInput island, FlagByte coherent, JobHeader* header,
             MonitorStream::CommandTimingEntry* event=(MonitorStream::CommandTimingEntry*)bytesCopy(stream.GetStreamEnd());
             event->m_pCommandName=str_010d3f1c; _ReadWriteBarrier();
             DWORD ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             event->m_uiStartTicks=ticks;
             stream.setEnd((char*)(event+1));
         }
@@ -788,10 +785,7 @@ void FUN_00d95130(SceneInput island, FlagByte coherent, JobHeader* header,
             MonitorStream::CommandTimingEntry* event=(MonitorStream::CommandTimingEntry*)stream.GetStreamEnd();
             event->m_pCommandName=str_010c41f8; _ReadWriteBarrier();
             DWORD ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             event->m_uiStartTicks=ticks;
             stream.setEnd((char*)(event+1));
         }
@@ -864,10 +858,7 @@ struct MonitorStream {
 
 __forceinline void MonitorStream::CommandTimingEntry::setTime() {
     unsigned int ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     time0 = ticks;
 }
 
@@ -2324,10 +2315,7 @@ class hkMonitorStream
 void hkMonitorStream::TimerCommand::setTime()
 {
 		unsigned int ticks;
-	__asm {
-		rdtsc
-		mov dword ptr[ticks], eax
-	}
+	;
 		m_time0 = ticks;
 }
 class  hkTimeFunctionHelper

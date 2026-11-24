@@ -1213,10 +1213,7 @@ void Owner::FUN_00942cf0(Obj* a1, Blk* a2, int a3, char* a4, int a5, int a6)
         if (e < ps->end) {
             e->tag = &DAT_00e7a1c8;
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             e->start = ticks;
             ps->cur = e + 1;
         }
@@ -1283,10 +1280,7 @@ void Owner::FUN_00942cf0(Obj* a1, Blk* a2, int a3, char* a4, int a5, int a6)
         if (e2 < ps2->end) {
             e2->tag = &DAT_00e32798;
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             e2->start = ticks;
             ps2->cur = e2 + 1;
         }
@@ -1466,10 +1460,7 @@ void S945a80_Picker::FUN_00945a80(S945a80_RayIn* in, S945a80_Out* out)
     if (room) {
         rec->m_pName = DAT_00e7a3fc;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         rec->m_iTick = ticks;
         buf->m_pCur = rec + 1;
     }
@@ -1521,10 +1512,7 @@ void S945a80_Picker::FUN_00945a80(S945a80_RayIn* in, S945a80_Out* out)
     if (rec < buf->m_pEnd) {
         rec->m_pName = DAT_00e32798;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         rec->m_iTick = ticks;
         buf->m_pCur = rec + 1;
     }

@@ -576,10 +576,7 @@ void Agent::FUN_00d3c060(const CdBody* bodyA, const CdBody* bodyB, const Collisi
         {
             pRec->tag = DAT_00e7f134;
             DWORD tick;
-            __asm {
-                rdtsc
-                mov dword ptr [tick], eax
-            }
+            ;
             pRec->stamp = tick;
             pBuf->unk04 = (char*)(pRec + 1);
         }
@@ -632,10 +629,7 @@ void Agent::FUN_00d3c060(const CdBody* bodyA, const CdBody* bodyB, const Collisi
         {
             pRec->tag = DAT_00e32798;
             DWORD tick;
-            __asm {
-                rdtsc
-                mov dword ptr [tick], eax
-            }
+            ;
             pRec->stamp = tick;
             pBuf->unk04 = (char*)(pRec + 1);
         }

@@ -341,10 +341,7 @@ struct BRMonitorStream
         {
             _ReadWriteBarrier();
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_uiStartTicks = ticks;
         }
     };
@@ -366,10 +363,7 @@ struct BRMonitorStream
             h->m_pCommandName=name;
             _ReadWriteBarrier();
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             _ReadWriteBarrier();
             h->m_uiStartTicks=ticks;
             m_kRayEnd=(char*)(h+1);

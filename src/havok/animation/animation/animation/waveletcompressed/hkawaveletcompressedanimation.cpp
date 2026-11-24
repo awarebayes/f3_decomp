@@ -1251,10 +1251,7 @@ static inline void MonBeginE30(const char* name, const char* sub)
         r->m_name = name;
         r->m_sub = sub;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         r->m_uiCommandId = ticks;
         s->m_curr = p + 16;
     }
@@ -1267,10 +1264,7 @@ static inline void MonSplitE30(const char* name)
         MonRecE30* r = (MonRecE30*)p;
         r->m_name = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         r->m_uiCommandId = ticks;
         s->m_curr = p + 12;
     }

@@ -985,10 +985,7 @@ __forceinline void TimerMark(const char* name, int kind)
     if (r < s->m_kRayEnd) {
         r->m_name = name;
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         r->m_uiCommandId = t;
         s->m_cur = r + 1;
     }
@@ -1001,10 +998,7 @@ __forceinline void TimerMarkOut(const char* name, int kind)
     if (r < s->m_kRayEnd) {
         r->m_name = name;
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         r->m_uiCommandId = t;
         s->m_cur = r + 1;
     }

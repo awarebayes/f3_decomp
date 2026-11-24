@@ -629,10 +629,7 @@ void FUN_00d3d3e0(S_00d3d3e0_P1P a1, S_00d3d3e0_P2P a2, int unused, S_00d3d3e0_P
         S_00d3d3e0_Entry* e = h->cur;
         e->name = DAT_010cf0d4;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         e->time = ticks;
         h->cur = e + 1;
     }
@@ -663,10 +660,7 @@ void FUN_00d3d3e0(S_00d3d3e0_P1P a1, S_00d3d3e0_P2P a2, int unused, S_00d3d3e0_P
         S_00d3d3e0_Entry* e = h->cur;
         e->name = DAT_010c41f8;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         e->time = ticks;
         h->cur = e + 1;
     }

@@ -603,10 +603,7 @@ void __cdecl FUN_00989340(Container989340* self, void* a)
                 r->label = DAT_00e7d950;
                 _ReadWriteBarrier();
 unsigned int t;
-                __asm {
-                    rdtsc
-                    mov dword ptr[t], eax
-                }
+                ;
                 r->ticks = t;
                 b->cur = r + 1;
             }
@@ -617,10 +614,7 @@ unsigned int t;
                 r->label = DAT_00e32798;
                 _ReadWriteBarrier();
 unsigned int t2;
-                __asm {
-                    rdtsc
-                    mov dword ptr[t2], eax
-                }
+                ;
                 r->ticks = t2;
                 b->cur = r + 1;
             }
@@ -1236,10 +1230,7 @@ void __cdecl FUN_00988e70(Container988e70* self) {
                     r->label = DAT_00e7d904;
                     _ReadWriteBarrier();
                     unsigned int ticks;
-                    __asm {
-                        rdtsc
-                        mov dword ptr[ticks], eax
-                    }
+                    ;
                     r->ticks = ticks;
                     b->cur = r + 1;
                 }
@@ -1250,10 +1241,7 @@ void __cdecl FUN_00988e70(Container988e70* self) {
                     r->label = DAT_00e32798;
                     _ReadWriteBarrier();
                     unsigned int ticks2;
-                    __asm {
-                        rdtsc
-                        mov dword ptr[ticks2], eax
-                    }
+                    ;
                     r->ticks = ticks2;
                     b->cur = r + 1;
                 }
@@ -3996,10 +3984,7 @@ void __cdecl FUN_00989600(n989600::Container* self, void* a, void* b)
                     r->label = DAT_00e7d96c;
                     _ReadWriteBarrier();
                     unsigned int t;
-                    __asm {
-                        rdtsc
-                        mov dword ptr[t], eax
-                    }
+                    ;
                     r->ticks = t;
                     buf->cur = r + 1;
                 }
@@ -4010,10 +3995,7 @@ void __cdecl FUN_00989600(n989600::Container* self, void* a, void* b)
                     r->label = DAT_00e32798;
                     _ReadWriteBarrier();
                     unsigned int t2;
-                    __asm {
-                        rdtsc
-                        mov dword ptr[t2], eax
-                    }
+                    ;
                     r->ticks = t2;
                     buf->cur = r + 1;
                 }
@@ -4766,20 +4748,14 @@ void Owner981::FUN_00981a30(Input981* input){
  Monitor981* mon=(Monitor981*)TlsGetValue(DAT_0116913c);
  if(mon->current<mon->end){Event981* event=mon->current;event->name=DAT_00e7d300;
  unsigned int ticks;
- __asm {
- rdtsc
- mov dword ptr[ticks], eax
- }
+ ;
  event->ticks=ticks;mon->current=event+1;}
  int type=input->type;
  if(type==0) FUN_009817a0(2);else if(type==1) FUN_009817a0(type);else FUN_009817a0(0);
  mon=(Monitor981*)TlsGetValue(DAT_0116913c);
  if(mon->current<mon->end){Event981* event=mon->current;event->name=DAT_00e32798;
  unsigned int ticks;
- __asm {
- rdtsc
- mov dword ptr[ticks], eax
- }
+ ;
  event->ticks=ticks;mon->current=event+1;}
 }
 }   // namespace f3m_00981a30
@@ -4952,18 +4928,12 @@ struct Owner {int unk000; int unk004; int unk008; int unk00C; int unk010; int un
 void FUN_00988dc0(Owner* owner,Out* out){List* list=&owner->list;out->unk08=0;int i=list->size-1;if(i>=0){void* (__stdcall *tls)(unsigned long)=DAT_00d9b080;do{if(list->data[i]){
  Monitor* m=(Monitor*)tls(DAT_0116913c);
  if(m->current<m->end){Event* event=m->current;event->tag=DAT_00e7d8f8;unsigned ticks;
- __asm {
- rdtsc
- mov dword ptr[ticks], eax
- }
+ ;
  event->ticks=ticks;m->current=event+1;}
  list->data[i]->Visit(out);
  m=(Monitor*)tls(DAT_0116913c);
  if(m->current<m->end){Event* event=m->current;event->tag=DAT_00e32798;unsigned ticks;
- __asm {
- rdtsc
- mov dword ptr[ticks], eax
- }
+ ;
  event->ticks=ticks;m->current=event+1;}
  }}while(--i>=0);}FUN_00988440(list);}
 }
@@ -7223,10 +7193,7 @@ void __cdecl FUN_00989280(World* world)
                 r->label = DAT_00e7d944;
                 _ReadWriteBarrier();
                 unsigned int t;
-                __asm {
-                    rdtsc
-                    mov dword ptr[t], eax
-                }
+                ;
                 r->ticks = t;
                 b->cur = r + 1;
             }
@@ -7237,10 +7204,7 @@ void __cdecl FUN_00989280(World* world)
                 r->label = DAT_00e32798;
                 _ReadWriteBarrier();
                 unsigned int t2;
-                __asm {
-                    rdtsc
-                    mov dword ptr[t2], eax
-                }
+                ;
                 r->ticks = t2;
                 b->cur = r + 1;
             }
@@ -10095,10 +10059,7 @@ struct MonitorStream {
         if (p < limit) {
             p->command=label;
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             p->time0=ticks;
             end=p+1;
         }
@@ -11774,10 +11735,7 @@ public:
         __forceinline void setTime()
         {
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };
@@ -12362,10 +12320,7 @@ struct ProfRec {
     __forceinline void stamp()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         m_iTick = ticks;
     }
 };
@@ -12377,10 +12332,7 @@ struct ProfPairRec {
     __forceinline void stamp()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         m_iTick = ticks;
     }
 };
@@ -13517,10 +13469,7 @@ void Owner_L::FUN_0099f4c0(Arg0_L* arg0, Arg1_L* arg1, Arg2_L* arg2)
     if (pProfRec < pProfSlot->end)
     {
         pProfRec->id = &DAT_00e7de28;
-        __asm {
-            rdtsc
-            mov dword ptr[uiTimestamp], eax
-        }
+        ;
         pProfRec->time = uiTimestamp;
         pProfSlot->head = pProfRec + 1;
     }
@@ -13568,10 +13517,7 @@ void Owner_L::FUN_0099f4c0(Arg0_L* arg0, Arg1_L* arg1, Arg2_L* arg2)
     if (pProfRec < pProfSlot->end)
     {
         pProfRec->id = &DAT_00e32798;
-        __asm {
-            rdtsc
-            mov dword ptr[uiTimestamp], eax
-        }
+        ;
         pProfRec->time = uiTimestamp;
         pProfSlot->head = pProfRec + 1;
     }

@@ -476,10 +476,7 @@ class Monitor
 			__forceinline void setTime()
 			{
 				UInt32 ticks;
-				__asm {
-					rdtsc
-					mov dword ptr[ticks], eax
-				}
+				;
 				m_time0 = ticks;
 			}
 		};
@@ -4487,10 +4484,7 @@ class hkMonitorStream
 void hkMonitorStream::TimerCommand::setTime()
 {
 		hkUint32 ticks;
-		__asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+		;
 		m_time0 = ticks;
 }
 class hkMotionState
@@ -6891,10 +6885,7 @@ class hkMonitorStream
 void hkMonitorStream::TimerCommand::setTime()
 {
 		hkUint32 ticks;
-		__asm {
-			rdtsc
-			mov dword ptr[ticks], eax
-		}
+		;
 		m_time0 = ticks;
 }
 

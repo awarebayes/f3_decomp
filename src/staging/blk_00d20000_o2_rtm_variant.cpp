@@ -2076,10 +2076,7 @@ struct S00d386c0_TimerCommand
     __forceinline void setTime()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         m_uiStartTicks = ticks;
     }
 };
@@ -2352,10 +2349,7 @@ struct hkMonitorStream
         __forceinline void setTime()
         {
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
 

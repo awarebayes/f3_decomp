@@ -1930,10 +1930,7 @@ static __forceinline void hkTimerCommand(const char* name)
         hkMonitorStreamCommand* h = (hkMonitorStreamCommand*)stream.getEnd();
         h->m_commandAndMonitor = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         h->m_time0 = ticks;
         stream.setEnd((char*)(h + 1));
     }
@@ -2710,10 +2707,7 @@ class Monitor
 			__forceinline void setTime()
 			{
 				UInt32 ticks;
-				__asm {
-					rdtsc
-					mov dword ptr[ticks], eax
-				}
+				;
 				m_time0 = ticks;
 			}
 		};
@@ -3874,10 +3868,7 @@ class hkMonitorStream
 void hkMonitorStream::TimerCommand::setTime()
 {
 		hkUint32 ticks;
-		__asm {
-			rdtsc
-			mov dword ptr[ticks], eax
-		}
+		;
 		m_time0 = ticks;
 }
 class hkMotionState;
@@ -4363,10 +4354,7 @@ public:
         __forceinline void setTime()
         {
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };
@@ -4623,10 +4611,7 @@ public:
         __forceinline void setTime()
         {
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };
@@ -4950,10 +4935,7 @@ public:
         __forceinline void setTime()
         {
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };
@@ -6246,10 +6228,7 @@ class hkMonitorStream
 void hkMonitorStream::TimerCommand::setTime()
 {
 		hkUint32 ticks;
-		__asm {
-			rdtsc
-			mov dword ptr[ticks], eax
-		}
+		;
 		m_time0 = ticks;
 }
 class hkMotionState;
@@ -7335,10 +7314,7 @@ class hkMonitorStream
 void hkMonitorStream::TimerCommand::setTime()
 {
 		hkUint32 ticks;
-		__asm {
-			rdtsc
-			mov dword ptr[ticks], eax
-		}
+		;
 		m_time0 = ticks;
 }
 class hkAabb;
@@ -10658,10 +10634,7 @@ struct TimerCommand
     __forceinline void setTime()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         m_time0 = ticks;
     }
 };

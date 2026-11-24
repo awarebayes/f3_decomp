@@ -73,10 +73,7 @@ void __cdecl FUN_009c47e0(const Body47& bodyA,const Body47& bodyB,const Input47&
             Record47* rec=mon->next;
             rec->tag=DAT_00e7f134;
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             rec->time=ticks;
             mon->next=rec+1;
         }
@@ -99,10 +96,7 @@ void __cdecl FUN_009c47e0(const Body47& bodyA,const Body47& bodyB,const Input47&
             Record47* rec=mon->next;
             rec->tag=DAT_00e32798;
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             rec->time=ticks;
             mon->next=rec+1;
         }

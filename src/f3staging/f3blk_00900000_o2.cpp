@@ -10112,10 +10112,7 @@ void C915Owner::FUN_00915b70(C915Owner* dest,void* map) {
 namespace f3m_00902f70 {
 extern "C" __declspec(dllimport) void* __stdcall TlsGetValue(unsigned long);
 namespace monitorf70 {struct Owner;struct Event {const char* name;unsigned ticks;int unk08;};struct Stream {int unk00;Event* current;int unk08;Event* end;};extern unsigned long DAT_0116913c;extern char DAT_00e34ba0[];extern char DAT_00e32798[];__forceinline void Record(const char* name){Stream* stream=(Stream*)TlsGetValue(DAT_0116913c);Event* e=stream->current;if(e<stream->end){e->name=name;unsigned ticks;
-__asm {
-rdtsc
-mov dword ptr[ticks],eax
-}
+;
 e->ticks=ticks;stream->current=e+1;}}struct Callback;struct CallbackTable {void* unk00;void* unk04;void* unk08;void (__thiscall *run)(Callback*,Owner*);};struct Callback {CallbackTable* table;int unk04;int id;};struct Manager;struct ManagerTable {
 void* unk00;
 void* unk04;
@@ -10758,18 +10755,12 @@ if(!*DAT_010f3400->table->check(DAT_010f3400,(unsigned char*)&ticks,notify->valu
 void* (__stdcall* getStream)(unsigned long)=DAT_00d9b080;
 Stream* first=(Stream*)getStream(DAT_0116913c);
 {Record* r=first->cursor;if(r<first->end){r->tag=DAT_00e34ba0;_ReadWriteBarrier();
-__asm {
-rdtsc
-mov dword ptr[ticks], eax
-}
+;
 r->ticks=ticks;first->cursor=r+1;}}
 notify->table->notify(notify,this);
 Stream* second=(Stream*)getStream(DAT_0116913c);
 {Record* r=second->cursor;if(r<second->end){r->tag=DAT_00e32798;_ReadWriteBarrier();
-__asm {
-rdtsc
-mov dword ptr[ticks], eax
-}
+;
 r->ticks=ticks;second->cursor=r+1;}}
 }}}return result;}
 }
@@ -14332,10 +14323,7 @@ __forceinline void TimerMark(const char* name)
     if (h < stream->capacity) {
         h->name = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         h->ticks = ticks;
         stream->end = h + 1;
     }
@@ -15588,10 +15576,7 @@ void World::FUN_00907b70(const Collidable* collA, const Input* input, Collector*
             *(const char**)p = "LthkpWorld::getClosestPoints";
             *(const char**)(p + 0xc) = "Stbroadphase";
             unsigned int t1;
-            __asm {
-                rdtsc
-                mov dword ptr[t1], eax
-            }
+            ;
             *(unsigned int*)(p + 4) = t1;
             m->cur = p + 0x10;
         }
@@ -15608,10 +15593,7 @@ void World::FUN_00907b70(const Collidable* collA, const Input* input, Collector*
         if (p < m->end) {
             *(const char**)p = "Stnarrowphase";
             unsigned int t2;
-            __asm {
-                rdtsc
-                mov dword ptr[t2], eax
-            }
+            ;
             *(unsigned int*)(p + 4) = t2;
             m->cur = p + 0xc;
         }
@@ -15635,10 +15617,7 @@ void World::FUN_00907b70(const Collidable* collA, const Input* input, Collector*
         if (p < m->end) {
             *(const char**)p = "lt";
             unsigned int t3;
-            __asm {
-                rdtsc
-                mov dword ptr[t3], eax
-            }
+            ;
             *(unsigned int*)(p + 4) = t3;
             m->cur = p + 0xc;
         }
@@ -19179,10 +19158,7 @@ namespace f3m_00906740 {
 namespace T2204 {
 struct World;struct Entity;struct MotionState{};struct Shape;
 struct Timer {const char*name;unsigned time,time2; __forceinline void setTime()throw(){unsigned ticks;
-__asm {
-rdtsc
-mov dword ptr[ticks], eax
-}
+;
 time=ticks;}};
 struct NamedTimer:Timer{const char*first;};
 struct Monitor {char*start;char*end;char*capacity;char*limit;__forceinline static Monitor& get()throw(){return *(Monitor*)TlsGetValue(DAT_0116913c);}__forceinline bool available()throw(){return end<limit;}};
@@ -21035,10 +21011,7 @@ struct hkMonitorStream
         __forceinline void setTime()
         {
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };
@@ -22501,10 +22474,7 @@ struct hkMonitorStream
         __forceinline void setTime()
         {
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             m_time0 = ticks;
         }
     };

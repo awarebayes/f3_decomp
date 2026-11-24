@@ -9232,10 +9232,7 @@ void TransformShape::FUN_009ed320(const RayInput& input, const CdBody& parent, v
     if (c < s->limit) {
         c->name = DAT_00e80834;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         c->ticks = ticks;
         s->cursor = c + 1;
     }
@@ -9253,10 +9250,7 @@ void TransformShape::FUN_009ed320(const RayInput& input, const CdBody& parent, v
     if (c2 < s2->limit) {
         c2->name = DAT_00e32798;
         unsigned int ticks2;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks2], eax
-        }
+        ;
         c2->ticks = ticks2;
         s2->cursor = c2 + 1;
     }
@@ -10624,10 +10618,7 @@ struct ProfRec {
     __forceinline void stamp()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         m_iTick = ticks;
     }
 };
@@ -11346,10 +11337,7 @@ inline void hkTimerCommandMark(const char* name)
     {
         cmd->m_commandAndMonitor = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         cmd->m_time = ticks;
         stream->m_end = (char*)(cmd + 1);
     }
@@ -13615,10 +13603,7 @@ class hkMonitorStream
 void hkMonitorStream::TimerCommand::setTime()
 {
 		hkUint32 ticks;
-		__asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+		;
 		m_time0 = ticks;
 }
 class hkAabb;
@@ -15078,10 +15063,7 @@ __forceinline void TimerA(const char* name)
         TimerCommand* cmd = reinterpret_cast<TimerCommand*>(end);
         cmd->m_commandAndMonitor = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         cmd->m_time0 = ticks;
         stream->m_end = end + 0xc;
     }
@@ -15095,10 +15077,7 @@ __forceinline void TimerB(const char* name)
         TimerCommand* h = reinterpret_cast<TimerCommand*>(mStream.getEnd());
         h->m_commandAndMonitor = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         h->m_time0 = ticks;
         mStream.setEnd(reinterpret_cast<char*>(h + 1));
     }
@@ -15111,10 +15090,7 @@ __forceinline void TimerC(const char* name)
         unsigned int ticks;
         TimerCommand* h = reinterpret_cast<TimerCommand*>(mStream.getEnd());
         h->m_commandAndMonitor = name;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         h->m_time0 = ticks;
         mStream.setEnd(mStream.getEnd() + 0xc);
     }
@@ -15905,10 +15881,7 @@ class hkMonitorStream
 void hkMonitorStream::TimerCommand::setTime()
 {
 		hkUint32 ticks;
-		__asm {
-			rdtsc
-			mov dword ptr[ticks], eax
-		}
+		;
 		m_time0 = ticks;
 }
 

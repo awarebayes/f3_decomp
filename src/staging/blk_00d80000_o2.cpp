@@ -4050,10 +4050,7 @@ void __cdecl FUN_00d944d0(S00d944d0_Obj* apObj, S00d944d0_Arg1* a2, S00d944d0_Ar
         ent->m_name = timer3182::DAT_00e7d35c;
         ent->m_ucOperationType = timer3182::DAT_00e855cc;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr [ticks], eax
-        }
+        ;
         ent->m_ts = ticks;
         stream->m_cur = (char*)(ent + 1);
     }
@@ -4066,10 +4063,7 @@ void __cdecl FUN_00d944d0(S00d944d0_Obj* apObj, S00d944d0_Arg1* a2, S00d944d0_Ar
         S00d944d0_Ent12* ent2 = (S00d944d0_Ent12*)stream->m_cur;
         ent2->m_name = timer3182::DAT_00e0811c;
         unsigned int ticks2;
-        __asm {
-            rdtsc
-            mov dword ptr [ticks2], eax
-        }
+        ;
         ent2->m_ts = ticks2;
         stream->m_cur = (char*)(ent2 + 1);
     }
@@ -6179,10 +6173,7 @@ struct S00d94a80_TimerCmd {
     __forceinline void setTime()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         m_uiStartTicks = ticks;
     }
 };

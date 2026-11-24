@@ -851,10 +851,7 @@ __forceinline void setTime();
 void hkMonitorStream_S::CommandTimingEntry::setTime()
 {
 hkUint32 ticks;
-__asm{
-rdtsc
-mov dword ptr[ticks],eax
-}
+;
 m_uiStartTicks=ticks;
 }
 class hkContactPoint_S

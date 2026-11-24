@@ -27057,10 +27057,7 @@ void PickSelf::FUN_00cc26c0(RayArg *arg1, BestOut *arg2)
     {
         rec->m_pName = DAT_010c9544;
         unsigned int stamp;
-        __asm {
-            rdtsc
-            mov dword ptr[stamp], eax
-        }
+        ;
         rec->m_iTick = stamp;
         buf->m_pCur = rec + 1;
     }
@@ -27119,10 +27116,7 @@ void PickSelf::FUN_00cc26c0(RayArg *arg1, BestOut *arg2)
         {
             rec2->m_pName = DAT_010c41f8;
             unsigned int stamp;
-            __asm {
-                rdtsc
-                mov dword ptr[stamp], eax
-            }
+            ;
             rec2->m_iTick = stamp;
             buf2->m_pCur = rec2 + 1;
         }

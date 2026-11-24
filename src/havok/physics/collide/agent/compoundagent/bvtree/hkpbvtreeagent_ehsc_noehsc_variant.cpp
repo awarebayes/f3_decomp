@@ -490,10 +490,7 @@ inline void beginMonitor(){
   _ReadWriteBarrier();
 
   unsigned ticks;
-  __asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-  }
+  ;
   cmd->start=ticks;
 
   stream.current=reinterpret_cast<char*>(cmd+1);
@@ -515,10 +512,7 @@ inline void splitMonitor(const char* tag){
   _ReadWriteBarrier();
 
   unsigned ticks;
-  __asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-  }
+  ;
   cmd->start=ticks;
 
   stream.current=reinterpret_cast<char*>(cmd+1);
