@@ -5,7 +5,7 @@
 void* __cdecl FUN_0089eb90(unsigned int);
 
 struct B_008647d0 { B_008647d0() throw(); virtual void w(); int p[2]; };
-struct C_008647d0 : B_008647d0 { C_008647d0() { f10 = 0; f0c = 0; } virtual void w(); int f0c; int f10; static void* operator new(unsigned int s) { return FUN_0089eb90(s); } };
+struct C_008647d0 : B_008647d0 { C_008647d0() { f10 = 0; f0c = 0; } virtual void w(); int f0c; int f10; static void* operator new(size_t s) { return FUN_0089eb90(s); } };
 C_008647d0* FUN_008647d0()
 {
     return new C_008647d0;
@@ -144,7 +144,7 @@ struct D_008bac30
     void* vp;
     char pad[44];
     D_008bac30() throw();
-    static void* operator new(unsigned) throw();
+    static void* operator new(size_t) throw();
 };
 D_008bac30::D_008bac30() throw()
 {

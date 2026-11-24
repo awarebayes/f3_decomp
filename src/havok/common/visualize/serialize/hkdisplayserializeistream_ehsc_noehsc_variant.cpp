@@ -156,7 +156,7 @@ struct hkGeometryQ
     int unk10;
     int unk14;
     hkGeometryQ();
-    __forceinline static void* operator new(unsigned int nbytes)
+    __forceinline static void* operator new(size_t nbytes)
     {
         return getRouterQ()->heap().AllocateMemoryBlock(nbytes);
     }
@@ -173,7 +173,7 @@ struct hkDisplayGeometryQ
     int unk0C;
     hkTransformQ m_kMotionTransform;
 
-    __forceinline static void* operator new(unsigned int nbytes)
+    __forceinline static void* operator new(size_t nbytes)
     {
         void* b = getRouterQ()->heap().AllocateMemoryBlock(nbytes);
         static_cast<hkDisplayGeometryQ*>(b)->m_usMemSizeAndFlags = static_cast<unsigned short>(nbytes);

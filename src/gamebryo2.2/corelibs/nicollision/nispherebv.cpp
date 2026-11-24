@@ -676,7 +676,7 @@ struct ObjB0
     void* vf;
     NiPoint3 m_iThirdValue;
     float m_r;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }

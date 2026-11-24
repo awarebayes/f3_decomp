@@ -59,7 +59,7 @@ struct S_00d65180_RefObj
     short m_sReferenceCount;
     virtual ~S_00d65180_RefObj() throw()
     {}
-    void* operator new(unsigned int nbytes)
+    void* operator new(size_t nbytes)
     {
         S_00d65180_RefObj* b = static_cast<S_00d65180_RefObj*>(FUN_00c85750()->heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;

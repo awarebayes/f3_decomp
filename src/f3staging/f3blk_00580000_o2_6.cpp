@@ -38,7 +38,7 @@ virtual void v34();
 virtual void v38();
 int type; float time; float* quantities; unsigned count;
 FUN_0058a210(int,unsigned); bool FUN_00585b00(unsigned,float);
-static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 class Animation { public:
 virtual void v000();

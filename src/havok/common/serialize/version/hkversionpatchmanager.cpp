@@ -456,7 +456,7 @@ class BDBA270Allocator;
 void __cdecl FUN_00c908c0(BDBA270Allocator& kAlloc, void* apvArray, int iReqCapacity, int iElementSize);
 void __cdecl FUN_00d2cc70(void* pvDst, const void* pvSrc, int iNumBytes);
 
-inline void* __cdecl operator new(unsigned int, void* pvWhere)
+inline void* __cdecl operator new(size_t, void* pvWhere)
 {
     return pvWhere;
 }
@@ -799,7 +799,7 @@ struct DB85E0Impl
 {
     ~DB85E0Impl();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         fnvc_adapt::FUN_00c85750().heap().ReleaseBlock(p, nbytes);
     }
@@ -908,7 +908,7 @@ extern "C" DBA1E0MemoryRouter& __cdecl FUN_00c85750();
 class DBA1E0ReferencedObject
 {
   public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         DBA1E0ReferencedObject* b =
             static_cast<DBA1E0ReferencedObject*>(fnvc_adapt::FUN_00c85750().heap().AllocateMemoryBlock(nbytes));

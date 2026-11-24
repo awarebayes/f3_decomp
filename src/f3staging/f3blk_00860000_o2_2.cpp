@@ -333,10 +333,10 @@ Heap441* Heap441::FUN_0086d9d0(void* baseAddress, unsigned int bytes, unsigned i
 
 // @f3 0x008734e0 (community match, verified in this file)
 namespace f3m_008734e0 {
-struct Block {unsigned int unk00,unk04,unk08,handle,kind,unk14,unk18,unk1c,unk20,unk24,unk28,unk2c,unk30,unk34,unk38,unk3c,unk40;Block(const Block& other) {*this=other;} static void* operator new(unsigned int n);void init(unsigned int);void initIndexed(unsigned int);};
+struct Block {unsigned int unk00,unk04,unk08,handle,kind,unk14,unk18,unk1c,unk20,unk24,unk28,unk2c,unk30,unk34,unk38,unk3c,unk40;Block(const Block& other) {*this=other;} static void* operator new(size_t n);void init(unsigned int);void initIndexed(unsigned int);};
 class CloneHeap {public: void* FUN_0086b930(unsigned int);void FUN_0086ba60(void*);};
 extern CloneHeap DAT_01090a78;
-__forceinline void* Block::operator new(unsigned int n) {return DAT_01090a78.FUN_0086b930(n);}
+__forceinline void* Block::operator new(size_t n) {return DAT_01090a78.FUN_0086b930(n);}
 extern "C" unsigned int __cdecl FUN_00881ef0(int*);
 __forceinline void Block::init(unsigned int k) {unsigned int h=FUN_00881ef0((int*)this);kind=k;handle=h;}
 __forceinline void Block::initIndexed(unsigned int k) {handle=FUN_00881ef0((int*)this);kind=k;}

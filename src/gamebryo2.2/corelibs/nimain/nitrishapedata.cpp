@@ -7,7 +7,7 @@ void __fastcall FUN_00a7b8c0(void*);
 class NiMemObject
 {
   public:
-    static void __cdecl operator delete(void*, unsigned int);
+    static void __cdecl operator delete(void*, size_t);
 };
 
 // Calls FUN_00a7b8c0 on pThis, then frees pThis with NiMemObject::operator delete when flags has bit 1 set, and returns pThis.
@@ -360,7 +360,7 @@ struct FUN_00a7b870
     unsigned short m_usElementCount;
     unsigned short* m_pusArray;
     FUN_00a7b870() throw();
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }
@@ -386,7 +386,7 @@ struct IndexBufferBlock
     unsigned int m_uiIndexCapacity;
     unsigned int m_uiUsedIndexCount;
     IndexBufferBlock* m_pkNext;
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }

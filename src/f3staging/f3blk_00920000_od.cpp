@@ -23,7 +23,7 @@ public:
 };
 class hkReferencedObject : public hkBaseObject {
 public:
-    static void* operator new(unsigned int n) throw() {
+    static void* operator new(size_t n) throw() {
         void* p = f3m_0092eaa0::hkThreadMemory::getInstance()->FUN_008f6d30(n, 0x15);
         ((unsigned short*)p)[2] = (unsigned short)n;
         return p;

@@ -544,7 +544,7 @@ class FUN_00a4dfa0 : public hkReferencedObjectDCE
   public:
     FUN_00a4dfa0();
 
-    static void* operator new(unsigned int, void* storage)
+    static void* operator new(size_t, void* storage)
     {
         return storage;
     }

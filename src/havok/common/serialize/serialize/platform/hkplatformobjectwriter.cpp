@@ -602,7 +602,7 @@ struct FUN_00e02e40
     FUN_00e02e40();
     virtual ~FUN_00e02e40();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         FUN_00e02e40* b = static_cast<FUN_00e02e40*>(p);
         FUN_00c85750().heap().ReleaseBlock(p, b->m_usMemSizeAndFlags);

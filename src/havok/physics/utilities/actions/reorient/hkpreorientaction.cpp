@@ -58,7 +58,7 @@ class hkReferencedObjectE445
     hkUint16 m_usMemSizeAndFlags;
     hkInt16 m_sReferenceCount;
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         hkReferencedObjectE445* pkObj = static_cast<hkReferencedObjectE445*>(
             hkMemoryRouterE445::GetMonitorStream().heap().AllocateMemoryBlock(uiSize));
@@ -116,7 +116,7 @@ struct E445HeapF3
     void* Allocate(unsigned int bytes, unsigned int tag);
 };
 struct E445NewF3 {};
-__forceinline void* operator new(unsigned int uiSize, E445NewF3*)
+__forceinline void* operator new(size_t uiSize, E445NewF3*)
 {
     E445HeapF3* heap = (E445HeapF3*)TlsGetValue(DAT_010f3170);
     hkReferencedObjectE445* pkObj = static_cast<hkReferencedObjectE445*>(heap->Allocate(uiSize, 0x29));

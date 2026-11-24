@@ -203,7 +203,7 @@ void __cdecl FUN_009e8ae0(Src970* src, Arr970* second, Arr970* first);
 struct Obj970
 {
     int unk00; int unk04; int unk08; int unk0c; int unk10;
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     Obj970(Data970* data);
 };
 
@@ -3291,7 +3291,7 @@ struct Obj : RefHeader {
     float v[4];
     Array arr;
     int unk2c;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         hkThreadMemory* mem = (hkThreadMemory*)TlsGetValue(DAT_010f3170);
         Obj* b = (Obj*)mem->FUN_008f6d30(size, 0x28);
@@ -6102,7 +6102,7 @@ template <class T> struct hkArray {
 
 class FUN_00978f10 {
 public:
-    static void* operator new(unsigned int n) throw() {
+    static void* operator new(size_t n) throw() {
         void* p = hkThreadMemory::getInstance()->FUN_008f6d30(n, 0x31);
         ((unsigned short*)p)[2] = (unsigned short)n;
         return p;
@@ -6452,7 +6452,7 @@ namespace f3m_00970b70 {
 struct Shape970b70 : FUN_009e8750 {
     virtual ~Shape970b70();
 
-    static void* operator new(unsigned int n) {
+    static void* operator new(size_t n) {
         ThreadMemory* mem = (ThreadMemory*)::FUN_00d9b080(DAT_010f3170);
         void* p = mem->FUN_008f6d30(n, 0x27);
         ((unsigned short*)p)[2] = (unsigned short)n;

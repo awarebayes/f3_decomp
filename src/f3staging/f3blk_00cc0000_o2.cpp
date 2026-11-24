@@ -20,7 +20,7 @@ extern MemoryManager g_memoryManager;
 class FUN_00403100
 {
   public:
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
@@ -94,7 +94,7 @@ public:
     SettingT(const char* name, const char* value);
     virtual ~SettingT();
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return DAT_01090a78.FUN_0086b930(size);
     }

@@ -415,7 +415,7 @@ public:
     virtual void v0();
     unsigned short w4; unsigned short w6; int a8, ac, a10;
     Base4080(int a, int b, int c, int d) throw();
-    static void* operator new(unsigned int n) {
+    static void* operator new(size_t n) {
         Alloc4080* a = TlsGetValue(DAT_010f3170);
         void* p = a->FUN_008f6d30(n, 0x1f);
         ((Base4080*)p)->w4 = (unsigned short)n;
@@ -573,7 +573,7 @@ struct FUN_009bffd0 {
     short refCount;
     char pad[0x18];
     FUN_009bffd0(int a, int b, int c, int d) throw();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Alloc* al = FUN_00d9b080(DAT_010f3170);
         void* p = al->FUN_008f6d30(size, 0x1f);
@@ -1096,7 +1096,7 @@ struct RefObj {
     short refCount;
     RefObj() : refCount(1) {}
     virtual ~RefObj();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Alloc* al = FUN_00d9b080(DAT_010f3170);
         void* p = al->FUN_008f6d30(size, 0x1f);
@@ -1562,13 +1562,13 @@ struct FUN_009de610 {
     unsigned short memSize;
     short refCount;
     FUN_009de610();
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         n9dd9b0::Alloc* a = n9dd9b0::FUN_00d9b080(n9dd9b0::DAT_010f3170);
         FUN_009de610* p = (FUN_009de610*)a->FUN_008f6d30(size, 0x2c);
         p->memSize = (unsigned short)size;
         return p;
     }
-    static void operator delete(void* p, unsigned int size) {
+    static void operator delete(void* p, size_t size) {
         n9dd9b0::FUN_00d9b080(n9dd9b0::DAT_010f3170)->FUN_008f6d90(p, size, 0x2c);
     }
     char pad[0x58 - 8];
@@ -1650,7 +1650,7 @@ class Obj_009c97e0 : public Base_009c97e0 {
 public:
     virtual ~Obj_009c97e0();
     Obj_009c97e0(int a) : Base_009c97e0(a) { unk0C = 0xffff; }
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         Pool_009c97e0* pool = (Pool_009c97e0*)DAT_00d9b080(DAT_010f3170);
         Base_009c97e0* p = (Base_009c97e0*)pool->FUN_008f6d30(0x10, 0x1f);
         p->unk04 = 0x10;
@@ -1680,7 +1680,7 @@ class Obj_009c80a0 : public Base_009c80a0 {
 public:
     virtual ~Obj_009c80a0();
     Obj_009c80a0(int a) : Base_009c80a0(a) { }
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         Pool_009c80a0* pool = (Pool_009c80a0*)DAT_00d9b080(DAT_010f3170);
         Base_009c80a0* p = (Base_009c80a0*)pool->FUN_008f6d30(0x10, 0x1f);
         p->unk04 = 0x10;
@@ -1710,7 +1710,7 @@ class Obj_009c8030 : public Base_009c8030 {
 public:
     virtual ~Obj_009c8030();
     Obj_009c8030(int a) : Base_009c8030(a) { unk0C = 0xffff; }
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         Pool_009c8030* pool = (Pool_009c8030*)DAT_00d9b080(DAT_010f3170);
         Base_009c8030* p = (Base_009c8030*)pool->FUN_008f6d30(0x10, 0x1f);
         p->unk04 = 0x10;
@@ -1740,7 +1740,7 @@ class Obj_009c5bf0 : public Base_009c5bf0 {
 public:
     virtual ~Obj_009c5bf0();
     Obj_009c5bf0(int a) : Base_009c5bf0(a) { unk0C = 0xffff; }
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         Pool_009c5bf0* pool = (Pool_009c5bf0*)DAT_00d9b080(DAT_010f3170);
         Base_009c5bf0* p = (Base_009c5bf0*)pool->FUN_008f6d30(0x10, 0x1f);
         p->unk04 = 0x10;
@@ -1770,7 +1770,7 @@ class Obj_009c5bb0 : public Base_009c5bb0 {
 public:
     virtual ~Obj_009c5bb0();
     Obj_009c5bb0(int a) : Base_009c5bb0(a) { }
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         Pool_009c5bb0* pool = (Pool_009c5bb0*)DAT_00d9b080(DAT_010f3170);
         Base_009c5bb0* p = (Base_009c5bb0*)pool->FUN_008f6d30(0x10, 0x1f);
         p->unk04 = 0x10;
@@ -2392,7 +2392,7 @@ public:
     unsigned short memSizeAndFlags;
     short refCount;
     virtual ~RefObj();
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     static void operator delete(void* p) {
         RefObj* o = static_cast<RefObj*>(p);
         Heap* h = FUN_00d9b080(DAT_010f3170);
@@ -2419,7 +2419,7 @@ public:
 };
 }
 struct FUN_009c5770 : n9c5770::RefObj {
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     static void operator delete(void* p) {
         FUN_009c5770* o = static_cast<FUN_009c5770*>(p);
         n9c5770::Heap* h = n9c5770::FUN_00d9b080(DAT_010f3170);
@@ -2443,7 +2443,7 @@ public:
 };
 }
 struct FUN_009d7720 : n9d7720::Base {
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     static void operator delete(void* p) {
         FUN_009d7720* o = static_cast<FUN_009d7720*>(p);
         n9d7720::Heap* h = n9d7720::FUN_00d9b080(DAT_010f3170);
@@ -2467,7 +2467,7 @@ public:
 };
 }
 struct FUN_009d8980 : n9d8980::Base {
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     static void operator delete(void* p) {
         FUN_009d8980* o = static_cast<FUN_009d8980*>(p);
         n9d8980::Heap* h = n9d8980::FUN_00d9b080(DAT_010f3170);
@@ -2784,7 +2784,7 @@ public:
     virtual void v0();
     unsigned short w4; unsigned short w6; int a8, ac, a10, a14, a18, a1c;
     Basec0090(int a, int b, int c, int d) throw();
-    static void* operator new(unsigned int n) {
+    static void* operator new(size_t n) {
         Allocc0090* a = TlsGetValue(DAT_010f3170);
         void* p = a->FUN_008f6d30(n, 0x1f);
         ((Basec0090*)p)->w4 = (unsigned short)n;
@@ -2809,7 +2809,7 @@ public:
     virtual void v0();
     unsigned short w4; unsigned short w6; int a8, ac, a10, a14, a18, a1c, a20, a24, a28, a2c, a30, a34;
     Based1f80(int a, int b, int c, int d) throw();
-    static void* operator new(unsigned int n) {
+    static void* operator new(size_t n) {
         Allocd1f80* a = TlsGetValue(DAT_010f3170);
         void* p = a->FUN_008f6d30(n, 0x1f);
         ((Based1f80*)p)->w4 = (unsigned short)n;
@@ -2834,7 +2834,7 @@ public:
     virtual void v0();
     unsigned short w4; unsigned short w6; int a8, ac, a10, a14, a18, a1c, a20, a24, a28, a2c, a30, a34;
     Based2df0(int a, int b, int c, int d) throw();
-    static void* operator new(unsigned int n) {
+    static void* operator new(size_t n) {
         Allocd2df0* a = TlsGetValue(DAT_010f3170);
         void* p = a->FUN_008f6d30(n, 0x1f);
         ((Based2df0*)p)->w4 = (unsigned short)n;
@@ -2902,7 +2902,7 @@ public:
     unsigned short memSizeAndFlags;
     short referenceCount;
     Ref_6f70() throw() : referenceCount(1) {}
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Mem_6f70* mem = FUN_00d9b080(DAT_010f3170);
         Ref_6f70* p = (Ref_6f70*)mem->FUN_008f6d30(size, 0x1f);
@@ -2965,14 +2965,14 @@ public:
     char pad08[0x58 - 8];
 
     FUN_009de610();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Mem_da40* mem = FUN_00d9b080(DAT_010f3170);
         FUN_009de610* p = (FUN_009de610*)mem->FUN_008f6d30(size, 0x2c);
         p->memSizeAndFlags = (unsigned short)size;
         return p;
     }
-    static void operator delete(void* p, unsigned int size)
+    static void operator delete(void* p, size_t size)
     {
         FUN_00d9b080(DAT_010f3170)->FUN_008f6d90(p, size, 0x2c);
     }
@@ -3005,7 +3005,7 @@ void MarkerContext::FUN_009df580(){--depth;MarkerArray* array=&owner->markers;if
 // @f3 0x009ddac0 (community match, verified in this file)
 #include <cstddef>
 namespace f3m_009ddac0 {
-namespace Task9dda{struct Heap{void*FUN_0086b930(unsigned);};extern Heap DAT_01090a78;extern int DAT_00e7ae04;struct Serializable{int value;int refs;};struct Object{void*methods;Serializable base;int unk0c;int unk10;Object(){base.value=0;unk0c=0;unk10=0;base.refs=1;methods=&DAT_00e7ae04;}static void*operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}static Serializable* Create(){Object*p=new Object;return p?&p->base:0;}static Object*From(Serializable*p){return p?(Object*)((char*)p - offsetof(Object,base)):0;}};struct Owner{int unk00;int unk04;int active;Serializable*cached;void FUN_008fc420(Object*);Serializable*FUN_009ddac0(bool*);};Serializable* Owner::FUN_009ddac0(bool*created){if(!cached){cached=Object::Create();if(active)FUN_008fc420(Object::From(cached));*created=true;}else *created=false;return cached;}}
+namespace Task9dda{struct Heap{void*FUN_0086b930(unsigned);};extern Heap DAT_01090a78;extern int DAT_00e7ae04;struct Serializable{int value;int refs;};struct Object{void*methods;Serializable base;int unk0c;int unk10;Object(){base.value=0;unk0c=0;unk10=0;base.refs=1;methods=&DAT_00e7ae04;}static void*operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}static Serializable* Create(){Object*p=new Object;return p?&p->base:0;}static Object*From(Serializable*p){return p?(Object*)((char*)p - offsetof(Object,base)):0;}};struct Owner{int unk00;int unk04;int active;Serializable*cached;void FUN_008fc420(Object*);Serializable*FUN_009ddac0(bool*);};Serializable* Owner::FUN_009ddac0(bool*created){if(!cached){cached=Object::Create();if(active)FUN_008fc420(Object::From(cached));*created=true;}else *created=false;return cached;}}
 }   // namespace f3m_009ddac0
 
 // @f3 0x009dd8f0 (community match, verified in this file)
@@ -3030,7 +3030,7 @@ struct bhkConstraint : FUN_008f7c10 {
 };
 struct bhkGenericConstraint : bhkConstraint {
     virtual void slot2();
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     bhkGenericConstraint() { DAT_011697b4+=1; }
 };
 struct Factory {
@@ -4634,7 +4634,7 @@ struct RefObj {
     short refCount;
     RefObj() : refCount(1) {}
     virtual ~RefObj();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Alloc* al = FUN_00d9b080(DAT_010f3170);
         void* p = al->FUN_008f6d30(size, 0x1f);
@@ -5546,7 +5546,7 @@ template <class T> struct hkArray {
 
 class FUN_009d9880 {
 public:
-    static void* operator new(unsigned int n) throw() {
+    static void* operator new(size_t n) throw() {
         void* p = hkThreadMemory::getInstance()->FUN_008f6d30(n, 0x31);
         ((unsigned short*)p)[2] = (unsigned short)n;
         return p;

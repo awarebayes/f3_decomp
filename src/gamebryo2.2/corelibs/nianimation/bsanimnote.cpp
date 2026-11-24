@@ -33,7 +33,7 @@ extern int DAT_01097dd4;
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct _Call_a5d3a0
@@ -283,7 +283,7 @@ class A4AF0MemoryManager
 };
 extern A4AF0MemoryManager g_kA4AF0MemoryManager;
 
-inline void* __cdecl operator new[](unsigned int uiSize)
+inline void* __cdecl operator new[](size_t uiSize)
 {
     return g_kA4AF0MemoryManager.Allocate(uiSize);
 }

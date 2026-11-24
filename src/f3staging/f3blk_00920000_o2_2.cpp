@@ -1369,12 +1369,12 @@ struct FixedString
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int n);
-    static void operator delete(void* p, unsigned int size);
+    static void* operator new(size_t n);
+    static void operator delete(void* p, size_t size);
     unsigned int unk00;
 };
 
-void* BSFadeNode::operator new(unsigned int n){return FUN_0089eb90(n);}
+void* BSFadeNode::operator new(size_t n){return FUN_0089eb90(n);}
 
 struct FUN_0082ea60 : BSFadeNode
 {
@@ -2069,14 +2069,14 @@ struct MotionBase : RefHeader31
     void FUN_00902180(int a, int b, int c);
     void FUN_008f8620(MotionBase* p);
     float FUN_008f8410();
-    __forceinline static void* operator new(unsigned int nbytes)
+    __forceinline static void* operator new(size_t nbytes)
     {
         Pool1884* pool = DAT_00d9b080(DAT_010f3170);
         RefHeader31* b = static_cast<RefHeader31*>(pool->FUN_008f6d30(nbytes, 0x2e));
         b->m_04 = static_cast<unsigned short>(nbytes);
         return b;
     }
-    __forceinline static void* operator new(unsigned int, void* p)
+    __forceinline static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -2674,7 +2674,7 @@ struct Controller : ControllerBase {
     hkVector4 unk40;
     char pad50[0x20];
     Controller();  // FUN_0092b8d0
-    static void* operator new(unsigned int n) {
+    static void* operator new(size_t n) {
         char* p = (char*)DAT_01090a78.FUN_0086b930(n);
         unsigned char o = (unsigned char)(0x10 - ((unsigned int)p & 0xf));
         p += o;

@@ -899,7 +899,7 @@ struct PixelData
     unsigned int* heights;
     unsigned int* offsets;
     unsigned int levels, unk64, unk68, faces, unk70;
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     PixelData(unsigned int, unsigned int, const NiPixelFormat&, unsigned int, unsigned int) throw();
 };
 void __cdecl Convert32(ImageStream*, PixelData*, NiPixelFormat, NiPixelFormat, unsigned int, unsigned int,

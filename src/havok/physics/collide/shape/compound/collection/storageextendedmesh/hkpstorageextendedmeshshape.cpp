@@ -257,7 +257,7 @@ __declspec(noinline) FUN_00d49c40::FUN_00d49c40(hkFinishLoadedObjectFlagD4A1 fla
 __declspec(noinline) FUN_00d4a170::FUN_00d4a170(hkFinishLoadedObjectFlagD4A1 flag) throw()
 {}
 
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }
@@ -1065,7 +1065,7 @@ hkpExtendedMeshShapeTrianglesSubpartD4AB& hkpExtendedMeshShapeTrianglesSubpartD4
 }
 
 namespace fnv_00d4ad60 {
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }
@@ -1379,7 +1379,7 @@ struct StorageReferencedObject : hkBaseObject
     hkInt16 m_sReferenceCount;
     __forceinline StorageReferencedObject() : m_sReferenceCount(1)
     {}
-    __forceinline void* operator new(unsigned int nbytes)
+    __forceinline void* operator new(size_t nbytes)
     {
         StorageReferencedObject* b = static_cast<StorageReferencedObject*>(
             NineIntegerRecord::GetMonitorStream().heap().AllocateMemoryBlock(nbytes));
@@ -1673,7 +1673,7 @@ extern "C"
     int _mm_movemask_ps(__m128 a);
 }
 
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }

@@ -112,7 +112,7 @@ struct AttrArray:RawAttrArray {
 };
 struct Token {
  virtual void v0();unsigned short memorySize,refs;int kind;
- static __forceinline void* operator new(unsigned n) throw(){Token* p=(Token*)GetHeap()->FUN_008f6d30(n,1);p->memorySize=(unsigned short)n;return p;}
+ static __forceinline void* operator new(size_t n) throw(){Token* p=(Token*)GetHeap()->FUN_008f6d30(n,1);p->memorySize=(unsigned short)n;return p;}
 };
 struct FUN_00a82310:Token {String text; FUN_00a82310(const char*,int) throw();};
 struct FUN_00a82290:Token {String name; FUN_00a82290(const String&) throw();};

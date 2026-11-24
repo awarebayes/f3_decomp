@@ -548,7 +548,7 @@ FUN_00c9fde0::FUN_00c9fde0()
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 extern int DAT_01030864;
@@ -1202,7 +1202,7 @@ struct TlsGuard_t
     }
 };
 
-inline void* operator new(unsigned int n)
+inline void* operator new(size_t n)
 {
     return FUN_00aa13e0(n);
 }
@@ -2088,7 +2088,7 @@ struct FUN_00cf2cb0
 {
     int unk0;
     unsigned short length;
-    static void* operator new(unsigned int count)
+    static void* operator new(size_t count)
     {
         Pool* pool = FUN_00c85750();
         FUN_00cf2cb0* p = (FUN_00cf2cb0*)pool->allocator->Allocate(224);
@@ -2852,7 +2852,7 @@ class CA0840Output
     CA0840Output() : m_pkTarget(0), m_fValue(DAT_010c72bc)
     {}
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }
@@ -2941,7 +2941,7 @@ struct FUN_00cb3860
         memory[-1] = offset;
         return memory;
     }
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         return align((unsigned char*)DAT_011f6238.FUN_00aa3e40(0x50));
     }
@@ -3163,8 +3163,8 @@ FUN_00ccf740_cls::~FUN_00ccf740_cls()
 class NiObjectC9E
 {
   public:
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pvMem, unsigned int uiSize);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pvMem, size_t uiSize);
 
     virtual ~NiObjectC9E();
 };
@@ -6079,7 +6079,7 @@ struct FUN_0094dbb0
     unsigned int unk0C;
     unsigned int unk10;
     FUN_0094dbb0();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }
@@ -7029,7 +7029,7 @@ struct S00ca0900_Shape
 {
     unsigned int unk00;
     unsigned short m_usMemSizeAndFlags;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Pool* pool = FUN_00c85750();
         S00ca0900_Shape* p = (S00ca0900_Shape*)pool->allocator->Allocate(0x20);
@@ -7106,7 +7106,7 @@ struct FUN_00970f60
 {
     unsigned int unk00;
     unsigned short m_usMemSizeAndFlags;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         S00ca0900_Pool* pool = (S00ca0900_Pool*)DAT_00d9b080(DAT_010f3170);
         FUN_00970f60* p = (FUN_00970f60*)pool->FUN_008f6d30(0x20, 0x27);
@@ -7237,7 +7237,7 @@ struct S00cb39d0_S_00cb3860
     S00cb39d0_S_00cb3860();
 };
 
-void* __cdecl operator new(unsigned int size, S00cb39d0_S_00aa3e40& manager, unsigned int allocationSize)
+void* __cdecl operator new(size_t size, S00cb39d0_S_00aa3e40& manager, size_t allocationSize)
 {
     unsigned char* ptr = static_cast<unsigned char*>(manager.FUN_00aa3e40(allocationSize));
     unsigned int address = reinterpret_cast<unsigned int>(ptr);
@@ -7247,7 +7247,7 @@ void* __cdecl operator new(unsigned int size, S00cb39d0_S_00aa3e40& manager, uns
     return ptr;
 }
 
-void __cdecl operator delete(void* ptr, S00cb39d0_S_00aa3e40& manager, unsigned int allocationSize)
+void __cdecl operator delete(void* ptr, S00cb39d0_S_00aa3e40& manager, size_t allocationSize)
 {}
 
 // @fnv 0x00cb39d0

@@ -13,7 +13,7 @@ namespace f3m_006315e0 {
 struct MenuHeap { void* FUN_0086b930(unsigned size); void Free(void* p); };
 extern MenuHeap DAT_01090a78;
 struct MenuStorage {
-    static void* operator new(unsigned size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* p) { DAT_01090a78.Free(p); }
 };
 struct Menu00 : MenuStorage {

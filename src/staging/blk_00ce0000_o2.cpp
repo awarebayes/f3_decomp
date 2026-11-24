@@ -1111,7 +1111,7 @@ extern MemoryManager _g_memoryManager;
 class CF4840Saver
 {
   public:
-    void* operator new(unsigned int size)
+    void* operator new(size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -3637,7 +3637,7 @@ struct hkMemoryRouterX
     }
 };
 
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

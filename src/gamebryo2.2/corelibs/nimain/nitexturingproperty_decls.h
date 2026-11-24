@@ -35,7 +35,7 @@ extern MemoryManager g_memoryManager;
 class NiMemObject
 {
   public:
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 class NiBinaryStream
 {
@@ -105,7 +105,7 @@ template <class T> class NiTPrimitiveArray : public NiTArray<T, NiTMallocInterfa
 {
   public:
     NiTPrimitiveArray(unsigned int size, unsigned int grow = 1) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }
@@ -139,7 +139,7 @@ class TextureMapTransform
     unsigned char data[0x48];
     TextureMapTransform() throw();
     void LoadBinary(NiStream&);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }
@@ -214,7 +214,7 @@ class NiTexturingProperty : public NiProperty
             SetFilterMode(filter);
             SetTextureIndex(index);
         }
-        static void* operator new(unsigned int n)
+        static void* operator new(size_t n)
         {
             return g_memoryManager.Allocate(n);
         }

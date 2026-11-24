@@ -1412,7 +1412,7 @@ struct FUN_008f1290 : Scene {
  unsigned int unk4d8;
  unsigned int unk4dc;
  FUN_008f1290(Init&);
- static void* operator new(unsigned int n) {
+ static void* operator new(size_t n) {
   char* memory=(char*)DAT_01090a78.FUN_0086b930(n+16);
   unsigned char adjust=16-((unsigned)memory&15);
   memory+=adjust;

@@ -47,7 +47,7 @@ struct FUN_00a3ddf0_shell
 };
 extern void* DAT_011f3ca8[];
 void __cdecl FUN_00a3dd40();
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 struct FUN_00a3e980_shell
 {
     void* __thiscall Destroy(unsigned int flags);
@@ -161,7 +161,7 @@ struct FUN_00a3dcc0_cls
 };
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct FUN_00a3f060_shell
 {
@@ -656,7 +656,7 @@ class NiObjectA3F
     NiObjectA3F(void* pvFirst, void* pvSecond) throw();
     virtual ~NiObjectA3F();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     int unk04;
     int unk08;

@@ -10,9 +10,9 @@ char const* const* __cdecl FUN_00be0ae0()
     return &g_0126fa40_arg1;
 }
 
-void __cdecl operator delete(void* p, unsigned int flags);
-void* __cdecl operator new(unsigned int size, unsigned int flags);
-void* __cdecl operator new(unsigned int size);
+void __cdecl operator delete(void* p, size_t flags);
+void* __cdecl operator new(size_t size, size_t flags);
+void* __cdecl operator new(size_t size);
 void* __cdecl ReleaseStrings();
 
 struct FUN_00eea750_shell

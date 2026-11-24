@@ -2587,7 +2587,7 @@ void* WorldWatchDogHolder::FUN_00c93570() {
     return m_pMemoryWatchDog;
 }
 
-inline void* __cdecl operator new(unsigned int, void* p) { return p; }
+inline void* __cdecl operator new(size_t, void* p) { return p; }
 inline void __cdecl operator delete(void*, void*) { }
 
 struct hkpPhantom;
@@ -8835,7 +8835,7 @@ public:
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         hkRefObjC97E* b = static_cast<hkRefObjC97E*>(hkRouterC97E::FUN_00c85750().heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -9364,7 +9364,7 @@ struct CFB240ContactMgrFactory {
     virtual ~CFB240ContactMgrFactory();
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
-    void* operator new(unsigned int n) {
+    void* operator new(size_t n) {
         CFB240ContactMgrFactory* b = static_cast<CFB240ContactMgrFactory*>(c912::router()->heap().AllocateMemoryBlock(n));
         b->m_usMemSizeAndFlags = (unsigned short)n;
         return b;
@@ -11063,7 +11063,7 @@ struct FUN_00d065e0 {
     unsigned char active;
     unsigned char unk41, unk42, unk43;
     FUN_00d065e0() throw();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         MatchRouter* router = (MatchRouter*)::FUN_00c85750();
         FUN_00d065e0* memory = (FUN_00d065e0*)router->heap->allocate(size);
@@ -11184,7 +11184,7 @@ struct ThreadMemory {
 }
 namespace N904470 {
 struct System : FUN_00d065e0 {
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         FUN_00d065e0* memory = (FUN_00d065e0*)ThreadMemory::getInstance().allocateChunk((int)size, 0x2f);
         memory->memorySize = (unsigned short)size;
@@ -14560,7 +14560,7 @@ public:
     int unk28;
     int unk2C;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         hkReferencedObject* b = static_cast<hkReferencedObject*>(FUN_00c85750().heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -15406,7 +15406,7 @@ class hkpLimitedHingeConstraintData : public hkpConstraintData {
 public:
  HingeAtoms atoms;
  hkpLimitedHingeConstraintData();
- static void* operator new(unsigned int size) {void* p=FUN_00c85750()->heap().AllocateMemoryBlock(size); static_cast<hkReferencedObject*>(p)->m_usMemSizeAndFlags=(unsigned short)size;return p;}
+ static void* operator new(size_t size) {void* p=FUN_00c85750()->heap().AllocateMemoryBlock(size); static_cast<hkReferencedObject*>(p)->m_usMemSizeAndFlags=(unsigned short)size;return p;}
  static void operator delete(void* p) {FUN_00c85750()->heap().ReleaseBlock(p,0xe0);}
 };
 class LimitedHingeWrapper {
@@ -15620,7 +15620,7 @@ public:
 class bhkRefObject {
 public:
     int Initialize();
-    static void* operator new(unsigned int size) { return FUN_00aa13e0(size); }
+    static void* operator new(size_t size) { return FUN_00aa13e0(size); }
     const void* m_vtbl;
     unsigned int unk04;
     unsigned int unk08;
@@ -15719,7 +15719,7 @@ struct TgtFO3 {
 class bhkRefObjectFO3 {
 public:
     int Initialize();
-    static void* operator new(unsigned int size) { return FUN_00aa13e0(size); }
+    static void* operator new(size_t size) { return FUN_00aa13e0(size); }
     const void* m_vtbl;
     unsigned int unk04;
     unsigned int unk08;
@@ -16381,14 +16381,14 @@ class hkReferencedObjectCAA {
 public:
     virtual ~hkReferencedObjectCAA();
 
-    void* operator new(unsigned int nbytes)
+    void* operator new(size_t nbytes)
     {
         hkReferencedObjectCAA* b = static_cast<hkReferencedObjectCAA*>(((hkMemoryRouterCAA*)FUN_00c85750())->heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = static_cast<unsigned short>(nbytes);
         return b;
     }
 
-    void operator delete(void* p, unsigned int nbytes)
+    void operator delete(void* p, size_t nbytes)
     {
         ((hkMemoryRouterCAA*)FUN_00c85750())->heap().ReleaseBlock(p, nbytes);
     }

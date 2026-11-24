@@ -79,7 +79,7 @@ struct FUN_00a8d060 {
     enum NodeType { TIMER, DIRECTORY, SINGLE };
 
     FUN_00a8d060(Node* owner, const char* label, NodeType nodeType) throw();
-    static void* operator new(unsigned int) {
+    static void* operator new(size_t) {
         ThreadMemory* thread = static_cast<ThreadMemory*>(TlsGetValue(DAT_010f3170));
         return thread->allocateMonitorNode();
     }

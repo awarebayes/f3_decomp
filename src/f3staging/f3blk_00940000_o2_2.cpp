@@ -269,7 +269,7 @@ struct Node {
     unsigned short unk4;
     short unk6;
     int unk8; int unkc; int unk10; int unk14; int unk18; int unk1c;
-    void* operator new(unsigned int) {
+    void* operator new(size_t) {
         Pool* p = (Pool*)TlsGetValue(DAT_010f3170);
         Node* n = (Node*)p->Alloc(0x140, 0x2c);
         n->unk4 = 0x140;
@@ -802,7 +802,7 @@ public:
     int unk154;
     int unk158;
     int unk15C;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Ctx* ctx = (Ctx*)TlsGetValue(DAT_010f3170);
         Blk* b = ctx->FUN_008f6d30(size, 0x31);
@@ -974,7 +974,7 @@ struct FUN_009da340 {
     int unk08, unk0C, unk10, unk14, unk18, unk1C, unk20, unk24, unk28, unk2C, unk30, unk34, unk38, unk3C;
     FUN_009da340(void*, const Aligned4&, float, float);
     static void operator delete(void* p) { FUN_008f90f0(p); }
-    static void* operator new(unsigned n) {
+    static void* operator new(size_t n) {
         Heap* heap = (Heap*)DAT_00d9b080(DAT_010f3170);
         FUN_009da340* result = (FUN_009da340*)heap->FUN_008f6d30(n, 0x29);
         result->size = (unsigned short)n;
@@ -1066,7 +1066,7 @@ struct RefBase {virtual void Destroy(int); unsigned short size; short refs;};
 struct FUN_009e2ec0 : RefBase {
  int unk08,unk0c;
  V a,b,c;
- static void* operator new(unsigned int bytes) {Heap* h=(Heap*)TlsGetValue(DAT_010f3170);FUN_009e2ec0*p=(FUN_009e2ec0*)h->FUN_008f6d30(bytes,0x27);p->size=(unsigned short)bytes;return p;}
+ static void* operator new(size_t bytes) {Heap* h=(Heap*)TlsGetValue(DAT_010f3170);FUN_009e2ec0*p=(FUN_009e2ec0*)h->FUN_008f6d30(bytes,0x27);p->size=(unsigned short)bytes;return p;}
  static void operator delete(void* p);
  FUN_009e2ec0(const V&,const V&,const V&);
  void RemoveReference(){if(size && --refs==0)Destroy(1);}

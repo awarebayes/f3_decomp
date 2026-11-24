@@ -181,7 +181,7 @@ void FnvTileShaderProperty::CopyTileShaderProperty(FnvTileShaderProperty* dst, i
 
 struct NiMemObjectAllocation
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 struct TilePropertyClone : NiMemObjectAllocation, FnvTileShaderProperty

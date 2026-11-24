@@ -56,7 +56,7 @@ struct NiGeometryData_SetConsistency_View
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int uiSize);
+    static void* __cdecl operator new(size_t uiSize);
 };
 
 extern char DAT_010a05e4[];
@@ -189,7 +189,7 @@ struct ParticleViewFrame
     NiPoint3 axisX, axisY, axisZ;
 };
 extern MemoryManager g_memoryManager;
-inline void* operator new[](unsigned int bytes, MemoryManager& manager)
+inline void* operator new[](size_t bytes, MemoryManager& manager)
 {
     return manager.Allocate(bytes);
 }
@@ -221,7 +221,7 @@ void ParticleViewData::FUN_00a96910(ParticleViewFrame* pViewFrame)
 }
 
 void* __cdecl FUN_00aa13e0(unsigned int uiSize);
-inline void* __cdecl operator new(unsigned int, void* pv) throw()
+inline void* __cdecl operator new(size_t, void* pv) throw()
 {
     return pv;
 }
@@ -922,7 +922,7 @@ struct AllocSvc
 extern AllocSvc DAT_011f6238;
 struct ArrNew
 {
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return DAT_011f6238.FUN_00aa3e40(n);
     }
@@ -1010,7 +1010,7 @@ struct NewRot16Stand
     float qy;
     float qz;
     float qw;
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return ((AllocStandIn*)&DAT_011f6238)->FUN_0086b930(n);
     }
@@ -1021,7 +1021,7 @@ struct NewAxis12Stand
     float ax;
     float ay;
     float az;
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return ((AllocStandIn*)&DAT_011f6238)->FUN_0086b930(n);
     }

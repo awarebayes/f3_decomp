@@ -28,7 +28,7 @@ unsigned char FUN_00e7cdf0_shell::FUN_00e7cdf0()
 
 void __cdecl FUN_00e7d1b0();
 
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00e7d230_cls
 {
@@ -3262,7 +3262,7 @@ void __cdecl BE7B040SizedFree(void* pvMem, unsigned int uiSize);
 
 struct BE7B040Value
 {
-    static void operator delete(void* pvMem, unsigned int uiSize)
+    static void operator delete(void* pvMem, size_t uiSize)
     {
         BE7B040SizedFree(pvMem, uiSize);
     }
@@ -3544,7 +3544,7 @@ class BE7BBF0Source
 class BE7BBF0Item
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     BE7BBF0Item(BE7BBF0Source* pkSource, unsigned int uiIndex, void* pvContext) throw();
 
@@ -4397,7 +4397,7 @@ class Ni2DBufferStub;
 class NiRefObjectStub
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     NiRefObjectStub() throw()
     {
         m_uiRefCount = 0;
@@ -5160,7 +5160,7 @@ struct E74Geometry
 class BSFaceGenMorphData
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 };
 struct E74ShaderPtr
 {
@@ -6454,7 +6454,7 @@ extern CE7C500Heap g_kE7C500Heap;
 class CE7C500PixelFormat
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kE7C500Heap.Allocate(uiSize);
     }
@@ -6719,7 +6719,7 @@ struct IndexSource
     int unk18;
 };
 
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }
@@ -7983,7 +7983,7 @@ __forceinline ModeItem404* const& GetNext(ListNode*& pos)
 struct FUN_00e7b260 : ModeItem404
 {
 
-    static void* operator new(unsigned int size) throw();
+    static void* operator new(size_t size) throw();
 
     FUN_00e7b260(S00e7b590_D3D* dev, int ctx, D3DDEVTYPE id, D3DFORMAT key, bool fullscreen, bool windowed) throw();
 };
@@ -10128,7 +10128,7 @@ struct DisplayModeInfo
         list.AddHead(d.refresh);
         unk08 = FUN_00e7acb0(d.format);
     }
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         return FUN_00aa13e0(size);
     }
@@ -10651,7 +10651,7 @@ struct ModeEntry
 
     }
 
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
 
     {
 
@@ -11227,7 +11227,7 @@ struct RTInfoZ : NiDX9RenderTargetInfo
         for (unsigned int n = 0; n < sizeof(*this) / sizeof(unsigned int); n++)
             puiData[n] = 0;
     }
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }

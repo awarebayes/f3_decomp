@@ -117,7 +117,7 @@ struct CalleeA5d7a0
 void* __cdecl FUN_00aa13e0(unsigned int);
 void __stdcall CreateVertexBufferSet(void*, int);
 
-void* __cdecl operator new(unsigned int, void* p)
+void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -159,7 +159,7 @@ struct NiFogProperty : NiProperty
     float m_fFogDepth;
     NiColor m_kFogTint;
 
-    static void* operator new(unsigned int, void* memory)
+    static void* operator new(size_t, void* memory)
     {
         return memory;
     }

@@ -170,7 +170,7 @@ struct FUN_00d76f90_cls
     Inner* m_08;
     void FUN_00d76f90();
 };
-inline void* operator new(unsigned int, void* pvMem)
+inline void* operator new(size_t, void* pvMem)
 {
     return pvMem;
 }
@@ -1542,7 +1542,7 @@ class hkReferencedObjectD62
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         hkReferencedObjectD62* b =
             static_cast<hkReferencedObjectD62*>(hkRouterD62::FUN_00c85750().heap().AllocateMemoryBlock(nbytes));

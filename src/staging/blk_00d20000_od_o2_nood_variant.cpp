@@ -650,7 +650,7 @@ void FUN_00d23380(SortList* list)
 }
 }  // namespace fnv_00d23380
 
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }

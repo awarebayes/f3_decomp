@@ -340,7 +340,7 @@ struct SweptWorldData
     SweptWorld* m_pOwningWorld;
     SweptArray<unsigned long> m_kEntityIDs;
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         FUN_00c85750().heap().ReleaseBlock(p, nbytes);
     }
@@ -769,7 +769,7 @@ struct FUN_00d649c0
     short m_sReferenceCount;
 
     FUN_00d649c0();
-    static void operator delete(void* p, unsigned int)
+    static void operator delete(void* p, size_t)
     {
         FUN_00d649c0* b = static_cast<FUN_00d649c0*>(p);
         FUN_00c85750().heap().ReleaseBlock(p, b->m_usMemSizeAndFlags);

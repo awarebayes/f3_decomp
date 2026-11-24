@@ -169,7 +169,7 @@ struct FUN_00b617f0
     unsigned int m_38;
     unsigned int m_3c;
     FUN_00b617f0();
-    static void* operator new(unsigned int s)
+    static void* operator new(size_t s)
     {
         return ((P03MM*)&g_memoryManager)->Allocate(s);
     }
@@ -265,7 +265,7 @@ struct FUN_00bd8f90
     {
         return m_usFirstValue - m_usSecondValue;
     }
-    static void* operator new(unsigned int s)
+    static void* operator new(size_t s)
     {
         return ((P03MM*)&g_memoryManager)->Allocate(s);
     }
@@ -343,7 +343,7 @@ unsigned short __cdecl GetOrCreateGrassGroup(IntegerDataBlock* apGrassParam, int
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     BSFadeNode();
 };

@@ -365,11 +365,11 @@ struct S_00ea04b0_Obj
     int unk34;
     float m_f38;
 
-    static void* operator new(unsigned int sz) throw()
+    static void* operator new(size_t sz) throw()
     {
         return DAT_011f6238.FUN_00aa3e40(sz);
     }
-    static void operator delete(void*, unsigned int) throw()
+    static void operator delete(void*, size_t) throw()
     {}
     void FUN_00e9f1b0() throw();
 

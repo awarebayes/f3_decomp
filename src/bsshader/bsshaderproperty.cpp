@@ -224,7 +224,7 @@ void __fastcall FUN_00ba8be0(BSSP_stub* self, int, int arg)
 struct AllocElem
 {
     int v;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
@@ -321,7 +321,7 @@ void BB97550Shader::FUN_00b97550(unsigned int uiPassIndex, int iA, int iB, int i
 struct S_00ba8c50_Slot
 {
     ShadowSceneLight* light;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

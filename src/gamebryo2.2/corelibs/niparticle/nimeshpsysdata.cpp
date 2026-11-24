@@ -23,7 +23,7 @@ struct NiMeshPSysData : NiPSysData
     void* __thiscall FUN_00c30bd0(unsigned int);
 };
 
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 // Calls FUN_00c309d0, then deletes this with size 0x98 when bit 0 of flags is set, and returns this.
 // @fnv 0x00c30bd0
@@ -208,7 +208,7 @@ struct NiObject;
 struct CloningProcess;
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct Hc00
 {
@@ -344,7 +344,7 @@ void* __thiscall FUN_00c309a0_shell::Destroy(unsigned char deallocate)
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 // @fnv 0x00c30ca0
@@ -1276,7 +1276,7 @@ template <class T> struct NiTArray436
 template <class T> struct NiTObjectArray : NiTArray436<T>
 {
     virtual ~NiTObjectArray();
-    static void* operator new(unsigned size) throw()
+    static void* operator new(size_t size) throw()
     {
         return reinterpret_cast<Heap436*>(&DAT_011f6238)->FUN_00aa3e40(size);
     }
@@ -1553,7 +1553,7 @@ extern MemMgrStub g_kMemMgrStub;
 
 struct NiMemObjectStub
 {
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kMemMgrStub.Allocate(uiSize);
     }

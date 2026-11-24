@@ -539,7 +539,7 @@ Derived::Derived()
 
 extern "C" void _ReadWriteBarrier();
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

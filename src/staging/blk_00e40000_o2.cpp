@@ -4833,7 +4833,7 @@ struct CopyEntry {
     CopyEntry& operator=(const CopyEntry& other) { m_00 = other.m_00; m_04.FUN_00cb0c30(&other.m_04); return *this; }
     ~CopyEntry() { m_04.FUN_00cb0c00(); }
 };
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 struct CopyAllocator { int m_00, m_04, m_08, m_0c; void* m_10; };
 CopyAllocator* __cdecl FUN_00c85750();
 void __cdecl FUN_00c908c0(void*, void*, int, int);
@@ -6205,7 +6205,7 @@ struct Se5b160_RefObj {
     static Se5b160_Heap& heap() { return reinterpret_cast<Se5b160_Router*>(FUN_00c85750())->heap(); }
     unsigned short m_usAllocationSize;
     unsigned short m_iObjectReferenceCount;
-    static void* operator new(unsigned int nbytes) {
+    static void* operator new(size_t nbytes) {
         Se5b160_RefObj* b = static_cast<Se5b160_RefObj*>(Se5b160_Router::GetMonitorStream().heap().AllocateMemoryBlock(static_cast<int>(nbytes)));
         b->m_usAllocationSize = static_cast<unsigned short>(nbytes);
         return b;
@@ -6322,7 +6322,7 @@ struct Pc_RefObj {
     virtual ~Pc_RefObj();
     unsigned short m_usAllocationSize;
     short m_iObjectReferenceCount;
-    static void* operator new(unsigned int nbytes) {
+    static void* operator new(size_t nbytes) {
         Pc_RefObj* b = static_cast<Pc_RefObj*>(Pc_ThreadMemory::getInstance().allocateChunk(static_cast<int>(nbytes), 0x2c));
         b->m_usAllocationSize = static_cast<unsigned short>(nbytes);
         return b;

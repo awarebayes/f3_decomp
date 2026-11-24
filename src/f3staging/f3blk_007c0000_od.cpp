@@ -1280,7 +1280,7 @@ void* __cdecl FUN_008dba50(unsigned int size);
 
 struct Shape
 {
-    __forceinline static void* operator new(unsigned int size) throw() { return FUN_0089eb90(size); }
+    __forceinline static void* operator new(size_t size) throw() { return FUN_0089eb90(size); }
     static void operator delete(void* memory) throw();
     Shape(float radius, int type);
     unsigned int unk00, unk04, unk08, unk0c, unk10;
@@ -1705,7 +1705,7 @@ struct Controller
     unsigned int unk4e8;
     unsigned int unk4ec;
 
-    __forceinline static void* operator new(unsigned int size) throw() { return FUN_008dba50(size); }
+    __forceinline static void* operator new(size_t size) throw() { return FUN_008dba50(size); }
     static void operator delete(void* memory) throw();
     Controller(ControllerInfo& info, Actor* actor);
 

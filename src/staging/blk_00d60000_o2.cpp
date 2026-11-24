@@ -430,7 +430,7 @@ int FUN_00d68820()
 }
 }  // namespace fnv_00d68820
 
-inline void* operator new(unsigned int, void* pvMem)
+inline void* operator new(size_t, void* pvMem)
 {
     return pvMem;
 }
@@ -2855,7 +2855,7 @@ class hkReferencedObjectD62
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         hkReferencedObjectD62* b =
             static_cast<hkReferencedObjectD62*>(hkRouterD62::FUN_00c85750().heap().AllocateMemoryBlock(nbytes));

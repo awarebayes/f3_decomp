@@ -31,7 +31,7 @@ struct FUN_00a744a0
 struct BSFadeNode
 {
     void* vtbl;
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 extern const void* DAT_0109e984;
 BSFadeNode* FUN_00a877a0();
@@ -406,7 +406,7 @@ struct FUN_00a5a390_shell
     void DestroyFogProperty();
     FUN_00a5a390_shell* FUN_00a950f0(bool bDel);
 };
-void __cdecl operator delete(void* p, unsigned int);
+void __cdecl operator delete(void* p, size_t);
 void __cdecl FUN_00a9b8b0();
 void __cdecl FUN_00a9b9b0();
 void __cdecl FUN_00a9ba80();
@@ -851,7 +851,7 @@ struct S_00a8f2c0_Obj
     int unk08;
     int unk0c;
     S_00a8f2c0_Sub sub;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return BSFadeNode::operator new(n);
     }
@@ -1094,7 +1094,7 @@ struct WeightArray
         m_iElementCount++;
     }
 
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return static_cast<MemMgr&>(g_memoryManager).Allocate(size);
     }
@@ -1340,7 +1340,7 @@ class FUN_00a8b110 : public NiRefObject
 {
   public:
     unsigned int unk08, unk0c, unk10, unk14, unk18, unk1c, unk20;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return BSFadeNode::operator new(n);
     }
@@ -1360,7 +1360,7 @@ class NiPixelData
     unsigned int levels;
     unsigned int stride;
     unsigned int unk68, unk6c, unk70;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return BSFadeNode::operator new(n);
     }
@@ -1605,7 +1605,7 @@ NiPixelData* BmpReader::FUN_00a8e810(BmpStream& stream, NiPixelData* optional)
     return dest;
 }
 
-inline void* operator new[](unsigned int size, int) throw()
+inline void* operator new[](size_t size, int) throw()
 {
     return static_cast<MemMgr&>(g_memoryManager).Allocate(size);
 }

@@ -39,7 +39,7 @@ FUN_00a3ca10::FUN_00a3ca10()
     *reinterpret_cast<void**>(this) = &_DAT_01097054;
 }
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 extern "C" void* DAT_01097054;
 struct NiKeyBasedInterpolator
 {

@@ -16,13 +16,13 @@ int __fastcall FUN_00b67260(char* pThis, int, int idx1, int idx2)
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct NewObj
 {
     char pad[0x104];
     NewObj();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return BSFadeNode::operator new(n);
     }
@@ -874,7 +874,7 @@ struct CopyAllocator
     void* Allocate(unsigned int);
 };
 extern CopyAllocator copyAllocator;
-inline void* operator new[](unsigned int size)
+inline void* operator new[](size_t size)
 {
     return copyAllocator.Allocate(size);
 }
@@ -1407,7 +1407,7 @@ struct PropObj
 };
 struct NiMemObject
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct FUN_00bb4540 : NiMemObject
 {
@@ -1636,7 +1636,7 @@ extern int DAT_01000000;
 class BSFaceGenMorphData
 {
   public:
-    static void* operator new(unsigned int auiSize);
+    static void* operator new(size_t auiSize);
     static void operator delete(void* apMem);
 };
 
@@ -2289,7 +2289,7 @@ template <class T> class NiPointer
         }
         return *this;
     }
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -2459,7 +2459,7 @@ struct NiPtrX
         }
         return *this;
     }
-    static void* operator new[](unsigned int s)
+    static void* operator new[](size_t s)
     {
         return DAT_011f6238.FUN_00aa3e40(s);
     }

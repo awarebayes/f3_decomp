@@ -1091,7 +1091,7 @@ struct Lock {
     Lock* prev;
     Lock* next;
     void FUN_00908a00();
-    static void* operator new(unsigned int) throw()
+    static void* operator new(size_t) throw()
     {
         Pool* pool = TlsGetValue(DAT_010f3170);
         void* p = pool->freeList;
@@ -1308,7 +1308,7 @@ struct FUN_00a65650_Array {
 struct FUN_00a65650_Grid {
     FUN_00a65650_Array a;
     FUN_00a65650_Array b;
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
 };
 
 struct FUN_00a65650_Pool {
@@ -1344,7 +1344,7 @@ struct FUN_00a65650_Object {
     void* FUN_00a67b10(FUN_00a65650_Grid* grid);
 };
 
-inline void* FUN_00a65650_Grid::operator new(unsigned int) throw() {
+inline void* FUN_00a65650_Grid::operator new(size_t) throw() {
     FUN_00a65650_Pool* pool = (FUN_00a65650_Pool*)TlsGetValue(DAT_010f3170);
     void* memory = pool->head;
     if (memory != 0) {

@@ -769,7 +769,7 @@ class hkpWorldObjectD1F7
 class FUN_00d1f730 : public hkpWorldObjectD1F7
 {
   public:
-    static __forceinline void* operator new(unsigned int uiSize) throw()
+    static __forceinline void* operator new(size_t uiSize) throw()
     {
         hkpWorldObjectD1F7* p = (hkpWorldObjectD1F7*)FUN_00c85750().heap().AllocateMemoryBlock(uiSize);
         p->m_usMemSizeAndFlags = (hkUint16)uiSize;

@@ -73,7 +73,7 @@ struct ConstraintInstance : ReferencedObject
     enum ConstraintPriority { PRIORITY_INVALID, PRIORITY_PSI, PRIORITY_SIMPLIFIED_TOI_UNUSED, PRIORITY_TOI, PRIORITY_TOI_HIGHER, PRIORITY_TOI_FORCED };
     enum CloningMode { CLONE_INSTANCES_ONLY = 0, CLONE_DATAS_WITH_MOTORS = 1 };
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         ReferencedObject* b = static_cast<ReferencedObject*>(ThreadMemory::getInstance().allocateChunk(static_cast<int>(nbytes), 0x2c));
         b->m_memSizeAndFlags = static_cast<unsigned short>(nbytes);

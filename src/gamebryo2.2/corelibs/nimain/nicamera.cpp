@@ -181,7 +181,7 @@ void __fastcall FUN_00a5a390(void* pThis);
 
 struct NiMemObject
 {
-    static void __cdecl operator delete(void*, unsigned int);
+    static void __cdecl operator delete(void*, size_t);
 };
 
 // @fnv 0x00a70050
@@ -219,7 +219,7 @@ struct FUN_00a713e0_shell : public NiCamera
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct FUN_00a712f0 : BSFadeNode
 {
@@ -241,7 +241,7 @@ void* __fastcall FUN_00a713e0(CamStub* self, int edx, CloningProcess* kCloning)
 namespace fnv_00a71430 {
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct FUN_00a712f0 : BSFadeNode
 {

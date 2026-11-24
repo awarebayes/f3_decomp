@@ -135,7 +135,7 @@ bool Self::FUN_00a394b0(QT* kValue)
 namespace fnv_00a39700 {
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct Obj
@@ -237,7 +237,7 @@ struct Item
 {
     char d[0x68];
     Item() throw();
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return g_memoryManager.Allocate(n);
     }
@@ -287,7 +287,7 @@ struct Item
 {
     char d[0x68];
     Item() throw();
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return g_memoryManager.Allocate(n);
     }
@@ -342,7 +342,7 @@ struct Item
     QT b;
     ThreeByThreeMatrix m;
     Item() throw();
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return g_memoryManager.Allocate(n);
     }
@@ -441,7 +441,7 @@ bool Self::UpdateInterpolators(float fTime, NiObjectNET* pkInterpTarget, NiQuatT
 namespace fnv_00a3a660 {
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct FUN_00a39230 : BSFadeNode
 {

@@ -286,7 +286,7 @@ public:
     float m_20, m_24, m_28, m_2c;
     float m_30, m_34, m_38, m_3c;
     Base_9ba620(int a);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Heap_9ba620* heap = (Heap_9ba620*)TlsGetValue(DAT_010f3170);
         void* mem = heap->FUN_008f6d30(size, 0x1f);
@@ -1287,7 +1287,7 @@ struct Base {
     unsigned short memSize;
     short refCount;
     Base(int a, int b, int c, int d) throw();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Alloc* al = FUN_00d9b080(DAT_010f3170);
         void* p = al->FUN_008f6d30(size, 0x1f);
@@ -1467,7 +1467,7 @@ struct RefObj {
     short refCount;
     RefObj() : refCount(1) {}
     virtual ~RefObj();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Alloc* al = FUN_00d9b080(DAT_010f3170);
         void* p = al->FUN_008f6d30(size, 5);
@@ -2040,9 +2040,9 @@ struct Obj {
     Obj* Init90(int a, int b, int c, int d);   // FUN_009bd700
     Obj* Init80(int a, int b, int c);          // FUN_00a35730
 };
-struct V38 { virtual void vf(); void* operator new(unsigned int, void* p) throw() { return p; } };
-struct V90 { virtual void vf(); void* operator new(unsigned int, void* p) throw() { return p; } };
-struct V80 { virtual void vf(); void* operator new(unsigned int, void* p) throw() { return p; } };
+struct V38 { virtual void vf(); void* operator new(size_t, void* p) throw() { return p; } };
+struct V90 { virtual void vf(); void* operator new(size_t, void* p) throw() { return p; } };
+struct V80 { virtual void vf(); void* operator new(size_t, void* p) throw() { return p; } };
 struct Sel {
     virtual void v0(); virtual void v1(); virtual void v2();
     virtual int Classify(int a, int b, Sel* c);
@@ -2114,7 +2114,7 @@ struct Base38 {
 struct Der38 : Base38 {
     __forceinline Der38(int a, int b, int c, int d) throw() : Base38(a, b, c, d) {}
     virtual void vf0();
-    void* operator new(unsigned int, void* p) throw() { return p; }
+    void* operator new(size_t, void* p) throw() { return p; }
 };
 struct Base80 {
     virtual void vf0();
@@ -2124,13 +2124,13 @@ struct Base80 {
 struct Der80 : Base80 {
     __forceinline Der80(int a, int b, int c) throw() : Base80(a, b, c) {}
     virtual void vf0();
-    void* operator new(unsigned int, void* p) throw() { return p; }
+    void* operator new(size_t, void* p) throw() { return p; }
 };
 struct Obj90 {
     virtual void vf0();
     unsigned short unk04;
     Obj90(int a, int b, int c, int d) throw();
-    void* operator new(unsigned int, void* p) throw() { return p; }
+    void* operator new(size_t, void* p) throw() { return p; }
 };
 
 struct Dispatcher { virtual void v0(); virtual void v1(); virtual void v2(); virtual int v3(int a, int b, int c); };
@@ -2340,7 +2340,7 @@ public:
     virtual ~hkRef9b0450() {}
     unsigned short memSize;
     short refCount;
-    static void operator delete(void* p, unsigned int)
+    static void operator delete(void* p, size_t)
     {
         n9b0450::Alloc* a = n9b0450::FUN_00d9b080(DAT_010f3170);
         a->FUN_008f6d90(p, ((hkRef9b0450*)p)->memSize, 0x15);
@@ -3190,7 +3190,7 @@ FUN_009a0ef0::FUN_009a0ef0():zero(0),one(1){}
 // @f3 0x009b7b40 (community match, verified in this file)
 namespace f3m_009b7b40 {
 extern "C" __declspec(dllimport) void* __stdcall TlsGetValue(unsigned long);
-namespace Factory427{extern unsigned long DAT_010f3170;extern int DAT_00e7eb2c;struct Heap{void*FUN_008f6d30(unsigned int,int);};struct Priority{unsigned int unk00,unk04,unk08,unk0c,unk10,unk14,unk18,unk1c,unk20;int value;};struct Entry{unsigned int unk00,unk04,unk08,unk0c;Priority*priority;};struct FUN_009b7930{void*vtable;unsigned short memory,refs;unsigned int unk08,unk0c,unk10,unk14,unk18,unk1c,unk20,unk24,unk28,unk2c,unk30,unk34,unk38,unk3c;FUN_009b7930(void*)throw();static void*operator new(unsigned int size){Heap*heap=(Heap*)TlsGetValue(DAT_010f3170);FUN_009b7930*memory=(FUN_009b7930*)heap->FUN_008f6d30(size,31);memory->memory=(unsigned short)size;return memory;}};struct Derived:FUN_009b7930{Derived(void*context):FUN_009b7930(context){vtable=&DAT_00e7eb2c;}};FUN_009b7930*__cdecl FUN_009b7b40(Entry*const*a,Entry*const*b,void*unused,void*context){if((*a)->priority->value<(*b)->priority->value)return new FUN_009b7930(context);return new Derived(context);}}
+namespace Factory427{extern unsigned long DAT_010f3170;extern int DAT_00e7eb2c;struct Heap{void*FUN_008f6d30(unsigned int,int);};struct Priority{unsigned int unk00,unk04,unk08,unk0c,unk10,unk14,unk18,unk1c,unk20;int value;};struct Entry{unsigned int unk00,unk04,unk08,unk0c;Priority*priority;};struct FUN_009b7930{void*vtable;unsigned short memory,refs;unsigned int unk08,unk0c,unk10,unk14,unk18,unk1c,unk20,unk24,unk28,unk2c,unk30,unk34,unk38,unk3c;FUN_009b7930(void*)throw();static void*operator new(size_t size){Heap*heap=(Heap*)TlsGetValue(DAT_010f3170);FUN_009b7930*memory=(FUN_009b7930*)heap->FUN_008f6d30(size,31);memory->memory=(unsigned short)size;return memory;}};struct Derived:FUN_009b7930{Derived(void*context):FUN_009b7930(context){vtable=&DAT_00e7eb2c;}};FUN_009b7930*__cdecl FUN_009b7b40(Entry*const*a,Entry*const*b,void*unused,void*context){if((*a)->priority->value<(*b)->priority->value)return new FUN_009b7930(context);return new Derived(context);}}
 }   // namespace f3m_009b7b40
 
 // @f3 0x009a7ea0 (community match, verified in this file)
@@ -3629,14 +3629,14 @@ struct FUN_009afd00 {
     unsigned unk08,unk0c,unk10,unk14,unk18,unk1c;
     float f20, f24, f28, f2c;
     FUN_009afd00(Inner* a, int b);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Alloc* al = DAT_00d9b080(DAT_010f3170);
         void* p = al->FUN_008f6d30(size, 0x29);
         ((short*)p)[2] = (short)size;
         return p;
     }
-    static void* operator new(unsigned, void* block) { return block; }
+    static void* operator new(size_t, void* block) { return block; }
     static void operator delete(void* p) { FUN_008f90f0(p); }
 
 };

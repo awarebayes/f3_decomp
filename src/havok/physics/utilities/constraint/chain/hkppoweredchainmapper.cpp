@@ -121,7 +121,7 @@ void hkSetE3A5::CollectSlotValues(int range, int slot, hkArrayE3A5<int>& out)
 struct FnPlacement
 {
 };
-inline void* operator new(unsigned int, FnPlacement* p)
+inline void* operator new(size_t, FnPlacement* p)
 {
     return p;
 }
@@ -292,7 +292,7 @@ struct FnMapper
     FnArray<FnLink> links;
     FnArray<FnTarget> targets;
     FnArray<FnObject*> chains;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         FnAllocator& allocator = FUN_00c85750()->getHeap();
         FnMapper* p = (FnMapper*)allocator.allocate(size);
@@ -489,7 +489,7 @@ struct FnMapperNew : HRefBase
     FnMapperNew() throw()
     {}
     virtual ~FnMapperNew() throw();
-    static void* operator new(unsigned int sz) throw()
+    static void* operator new(size_t sz) throw()
     {
         HkRouter* r = getRouter();
         FnMapperNew* p = (FnMapperNew*)r->alloc(sz, sz);

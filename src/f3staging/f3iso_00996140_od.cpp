@@ -56,7 +56,7 @@ struct Arr996140 {
 
 struct Marker996140 {
     // Fake match: class-local placement allocation preserves the nonthrowing construction ABI.
-    void* operator new(unsigned int, void* p) throw() { return p; }
+    void* operator new(size_t, void* p) throw() { return p; }
     unsigned short node, value;
     Arr996140<unsigned short> overlaps;
 };

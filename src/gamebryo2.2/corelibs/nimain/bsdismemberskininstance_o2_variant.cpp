@@ -7,14 +7,14 @@ const NiRTTI BSDismemberSkinInstance::ms_kRTTI;
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct _Call_a5d3a0
 {
     _Call_a5d3a0();
 };
 extern int DAT_01069a84;
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -56,7 +56,7 @@ struct BytePairWord
     unsigned char uc2;
     unsigned short m_usTrailingValue;
 
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -135,7 +135,7 @@ struct S00a6c7c0 : _Call_a5d3a0
 
     S00a6c7c0() throw();
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return BSFadeNode::operator new(size);
     }
@@ -366,7 +366,7 @@ struct A6C900Partition
     unsigned char m_ucBones;
     unsigned short m_usVertices;
 
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }

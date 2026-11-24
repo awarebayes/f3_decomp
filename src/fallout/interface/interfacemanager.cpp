@@ -3333,7 +3333,7 @@ void FUN_0070c4a0_shell::UpdateInterface()
 }
 }  // namespace fnv_0070c4a0
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct Scratch
 {
     int a;
@@ -3410,8 +3410,8 @@ struct SL
 class MenuAlphaProperty
 {
   public:
-    static void* operator new(unsigned int auiSize);
-    static void operator delete(void* apMem, unsigned int);
+    static void* operator new(size_t auiSize);
+    static void operator delete(void* apMem, size_t);
     MenuAlphaProperty();
     void FUN_0049ed90(bool abEnable);
     void FUN_00636000(bool abEnable);
@@ -3423,8 +3423,8 @@ class MenuAlphaProperty
 class BSShaderAccumulator
 {
   public:
-    static void* operator new(unsigned int auiSize);
-    static void operator delete(void* apMem, unsigned int);
+    static void* operator new(size_t auiSize);
+    static void operator delete(void* apMem, size_t);
     BSShaderAccumulator(int aeMode, unsigned int auiA, unsigned int auiB);
     void FUN_004a1040(int aiValue);
     void FUN_0070a900(bool abValue);
@@ -3743,7 +3743,7 @@ struct AutoMemContext
 };
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct NiUpdateDataH
 {
@@ -3759,8 +3759,8 @@ struct NiUpdateDataH
 class NiMemObject
 {
   public:
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 
 class NiFixedString
@@ -5918,8 +5918,8 @@ const char* PrepareScriptMessage(const char*, bool);
 class NiAVObject
 {
   public:
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     virtual void v00();
     virtual void v01();
     virtual void v02();
@@ -6074,7 +6074,7 @@ SceneGraph* FUN_00712e90_shell::FUN_00712e90(SceneGraph* apGraph, char* apName, 
 }
 }  // namespace fnv_00712e90
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct Widget
 {
     Widget();
@@ -14632,7 +14632,7 @@ struct FUN_00718ee0_shell : public SystemColorManager
     void AddColor(char*, unsigned int, unsigned int, unsigned int, SystemColorInfo*, int);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 unsigned int __cdecl PackRgba(unsigned int, unsigned int, unsigned int, unsigned int);
 
 struct FUN_00719250_stand
@@ -14839,7 +14839,7 @@ struct GlobalObject2_0040c150
 {
     int* Int();
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 unsigned int __cdecl PackRgba(unsigned int, unsigned int, unsigned int, unsigned int);
 struct FUN_007192e0
 {

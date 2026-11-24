@@ -219,7 +219,7 @@ __m128* FUN_00e2ab00(__m128* src, __m128* out1, __m128* out2) {
 }
 }  // namespace fnv_00e2ab00
 
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 
 struct Router_e3a1 {
     int unk00, unk04, unk08, unk0C;

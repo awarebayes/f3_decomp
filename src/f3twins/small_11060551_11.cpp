@@ -158,7 +158,7 @@ struct D_0083c0c0
     void* vp;
     char pad[192];
     D_0083c0c0() throw();
-    static void* operator new(unsigned) throw();
+    static void* operator new(size_t) throw();
 };
 D_0083c0c0::D_0083c0c0() throw()
 {
@@ -175,7 +175,7 @@ struct D_0085bf30
     void* vp;
     char pad[192];
     D_0085bf30() throw();
-    static void* operator new(unsigned) throw();
+    static void* operator new(size_t) throw();
 };
 D_0085bf30::D_0085bf30() throw()
 {

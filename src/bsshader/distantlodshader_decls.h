@@ -8,7 +8,7 @@ extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile lo
 class NiMemObject
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 
 class NiRefObject : public NiMemObject

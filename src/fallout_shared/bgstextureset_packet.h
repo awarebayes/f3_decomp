@@ -14,8 +14,8 @@
 class NiMemObject
 {
   public:
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 class NiObject : public NiMemObject
 {
@@ -204,7 +204,7 @@ struct TESDataHandlerForms
 class TESDataHandler;
 extern TESDataHandler* g_dataHandler;
 
-void* operator new(unsigned int);
+void* operator new(size_t);
 void operator delete(void*);
 struct TESFileChunkData16
 {

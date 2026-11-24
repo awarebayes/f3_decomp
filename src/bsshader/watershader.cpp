@@ -458,7 +458,7 @@ struct FUN_00b09370{
  unsigned int unk248;
  unsigned int unk24c;
  FUN_00b09370();
- static void* operator new(unsigned int n){return FUN_0089eb90(n);}
+ static void* operator new(size_t n){return FUN_0089eb90(n);}
  static void operator delete(void*);
  void FUN_00b04f50();
  void FUN_00b06570();

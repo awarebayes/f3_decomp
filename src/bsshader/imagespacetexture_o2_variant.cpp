@@ -1329,7 +1329,7 @@ struct TextureAllocationManagerB63
     void* FUN_00aa3e40(unsigned int bytes);
 };
 extern TextureAllocationManagerB63 DAT_011f6238;
-inline void* operator new(unsigned int bytes)
+inline void* operator new(size_t bytes)
 {
     return DAT_011f6238.FUN_00aa3e40(bytes);
 }

@@ -406,7 +406,7 @@ void MeshLookup::GetMeshHandle(unsigned int index, CloneHandle* result)
 class C217F0Object
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     virtual ~C217F0Object();
@@ -517,7 +517,7 @@ class BC21890ObjectArray : public BC21890ChildArray
 class BC21890AVObject
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     BC21890AVObject() throw();
     virtual ~BC21890AVObject();

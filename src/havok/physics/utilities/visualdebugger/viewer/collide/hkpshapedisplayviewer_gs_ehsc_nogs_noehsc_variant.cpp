@@ -369,7 +369,7 @@ struct PendingNode
         m_08 = 0;
         m_0c = 0x80000000u;
     }
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         AllocHolder* holder = (AllocHolder*)FUN_00c85750();
         SpawnAlloc* alloc = holder->m_pAllocator;
@@ -1242,7 +1242,7 @@ struct S65_Self : S65_Prim, S65_Sec
     void FUN_00d65ad0(S65_Param* param);
 };
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

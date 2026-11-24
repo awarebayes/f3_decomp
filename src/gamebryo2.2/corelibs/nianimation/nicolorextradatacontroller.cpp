@@ -36,7 +36,7 @@ extern "C" void __cdecl FUN_00a572d0(void);
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 
 int* __fastcall InitTimeController(int* p);

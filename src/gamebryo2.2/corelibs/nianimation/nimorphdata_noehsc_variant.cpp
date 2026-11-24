@@ -628,7 +628,7 @@ struct MorphPoint3
     float x, y, z;
     MorphPoint3()
     {}
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return _g_memoryManager.Allocate(n);
     }
@@ -696,7 +696,7 @@ struct NiFloatInterpolator
         if (InterlockedDecrement(&m_uiRefCount) == 0)
             DeleteThis();
     }
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     NiFloatInterpolator(NiFloatData*) throw();
     void SetKeyData(void* pkKeys, unsigned int uiNumKeys, unsigned int eType);
 };
@@ -787,7 +787,7 @@ struct FUN_00a415f0
     {
         _g_memoryManager.Deallocate(m_pkVertexPositions);
     }
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return _g_memoryManager.Allocate(n);
     }

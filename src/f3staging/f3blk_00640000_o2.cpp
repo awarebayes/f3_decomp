@@ -3094,7 +3094,7 @@ struct Heap{void* FUN_0086b930(unsigned);};extern Heap DAT_01090a78;
 struct Node{
  void* item;unsigned char kind;int value;Node* next;
  Node(const Node& source):item(source.item),kind(source.kind),value(source.value),next(0){}
- static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}
+ static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}
  void FUN_0065f280(const Node& source);
 };
 }
@@ -5781,7 +5781,7 @@ struct QuadUpdate { float m_f0; bool m_b4,m_b5,m_b6,m_b7,m_b8; };
 class NiCamera { public: void UpdateViewFrustum(const NiFrustum&); };
 class CamLook { public: bool SetLookAt(const CamPoint&,const CamPoint&); };
 class ScreenQuad { public: void Update(QuadUpdate&); };
-class NiScreenSpaceCameraNew { public: static void* operator new(unsigned int); };
+class NiScreenSpaceCameraNew { public: static void* operator new(size_t); };
 struct CamRenderer {
     virtual void u00();virtual void u04();virtual void u08();virtual void u0c();
     virtual void u10();virtual void u14();virtual void u18();virtual void u1c();
@@ -6969,8 +6969,8 @@ struct Heap { void* FUN_0086b930(unsigned); };
 extern Heap DAT_01090a78;
 struct Entry {
     Tile* tile; void* data; unsigned char flag;
-    static void* operator new(unsigned n) {return DAT_01090a78.FUN_0086b930(n);}
-    static void* operator new(unsigned, void* p) {return p;}
+    static void* operator new(size_t n) {return DAT_01090a78.FUN_0086b930(n);}
+    static void* operator new(size_t, void* p) {return p;}
     Entry(Tile* t,void* p):tile(t),data(p),flag(0){}
 };
 struct Node {
@@ -8560,7 +8560,7 @@ struct Loader { Tile* FUN_00bf37b0(const char*); };
 struct UI { int x00;int x04;int x08;int x0c;int x10;int x14;int x18;int x1c;int x20;int x24;int x28;int x2c;int x30;int x34;int x38;int x3c;int x40;int x44;int x48;int x4c;int x50;int x54;int x58;int x5c;int x60;int x64;int x68;int x6c;int x70;int x74;int x78;int x7c;int x80;int x84;int x88;int x8c;int x90;int x94;int x98; Loader* x9c; };
 struct FUN_00657b10 {
     FUN_00657b10();
-    static void* operator new(unsigned n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
     int f00;int f04;int f08;int f0c;int f10;int f14;int f18;int f1c;int f20;int f24;int f28;int f2c;int f30;int f34;int f38;int f3c;int f40;int f44;int f48;
 };
@@ -9320,7 +9320,7 @@ namespace ListBox2180 {
 extern void* DAT_00e06098[];
 struct FUN_00655f40;
 struct Heap {void* FUN_0086b930(unsigned int);};extern Heap DAT_01090a78;
-struct Node {FUN_00655f40* item;Node* next;Node(FUN_00655f40* value):item(value),next(0){}static void* operator new(unsigned int size){return DAT_01090a78.FUN_0086b930(size);}};
+struct Node {FUN_00655f40* item;Node* next;Node(FUN_00655f40* value):item(value),next(0){}static void* operator new(size_t size){return DAT_01090a78.FUN_0086b930(size);}};
 extern FUN_00655f40* DAT_01075bd4;extern Node* DAT_01075bd8;
 struct List {void* item;List* next;List():item(0),next(0){}~List();};
 
@@ -17237,7 +17237,7 @@ struct HeapQ { void* FUN_0086b930(unsigned int); }; extern HeapQ DAT_01090a78;
 struct FUN_00641fc0 {
  int unk00,unk04,unk08,unk0c,unk10,unk14,unk18,unk1c,unk20,unk24,unk28,unk2c,unk30;
  FUN_00641fc0(const char*,void*,const char*,int,int);
- static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+ static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
  static void operator delete(void*);
 };
 struct MenuQ : BaseQ {
@@ -17608,7 +17608,7 @@ struct FORenderedTerminal : f3m_006406a0::FUN_006999e0 {
     int m_e4;
     int m_e8;
     FORenderedTerminal() { m_e4 = 0; }
-    static void* operator new(unsigned n) { return f3m_006406a0::DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return f3m_006406a0::DAT_01090a78.FUN_0086b930(n); }
 };
 
 namespace f3m_006406a0 {
@@ -21758,7 +21758,7 @@ struct String {
 void __cdecl FUN_00403a00(String* out, const char* fmt, ...);
 
 struct FUN_005163e0 {
-    static void* operator new(unsigned n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
     FUN_005163e0();
     void FUN_004553b0();
     int unk00; int unk04; int unk08; int unk0c; int unk10; int unk14; int unk18;
@@ -21963,7 +21963,7 @@ struct Entry : EntryBase {
     Tile* tile;
     int unk30;
 
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* memory) { DAT_01090a78.FUN_0086ba60(memory); }
 
     Entry(char* value, Tile* parent, const char* templateName, int position, int type);
@@ -21977,7 +21977,7 @@ struct Entry : EntryBase {
 
 struct Position {
     int value;
-    static void* operator new[](unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new[](size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete[](void* memory) { DAT_01090a78.FUN_0086ba60(memory); }
 };
 
@@ -24874,7 +24874,7 @@ struct Message {
     char icon[0x104];
     char sound[0x104];
     float time;
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
 };
 struct MessageList {
     Message* item;
@@ -26431,7 +26431,7 @@ struct FUN_006c8220 {
     char*& Item() { return word; }
     FUN_006c8220* Next() { return next; }
     ~FUN_006c8220();
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* memory) { DAT_01090a78.FUN_0086ba60(memory); }
 };
 
@@ -26893,7 +26893,7 @@ struct List {
     List* next;
 
     List(const T& v) : item(v), next(0) {}
-    static void* operator new(unsigned size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 
     unsigned Count()
@@ -27066,7 +27066,7 @@ struct AsmRec {
     int unk0c;
     int id;
     AsmRec() : value(0), unk04(0), unk08(0), unk0c(0), id(-1) {}
-    static void* operator new(unsigned int, void* p) { return p; }
+    static void* operator new(size_t, void* p) { return p; }
 };
 
 struct ModArray {
@@ -27541,7 +27541,7 @@ public:
     int unk24; int unk28; int unk2c; int unk30;
     NiMatrix3 m_kRotate;
     NiPoint3 m_kTranslate;
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     NiControllerManager* FUN_00825200(void* rtti);
     void FUN_008264c0(NiUpdateData& data);
     void SetRotate(const NiMatrix3& m) { m_kRotate = m; }
@@ -28567,7 +28567,7 @@ struct UpdateInfo {
 };
 struct Bounds { Point center; float radius; float GetRadius() const { return radius; } };
 extern Bounds DAT_0108edc8;
-class A43FF0Object : public RefObject { public: static void* operator new(unsigned int); static void operator delete(void*); };
+class A43FF0Object : public RefObject { public: static void* operator new(size_t); static void operator delete(void*); };
 struct SceneNode : public A43FF0Object {
     int field008,field00c,field010,field014,field018,field01c;
     Bounds* bounds;
@@ -30141,7 +30141,7 @@ struct ExtraDataListNode {
     ExtraDataList* item;
     ExtraDataListNode* next;
     ExtraDataListNode() : item(0), next(0) {}
-    static void* operator new(unsigned int size) { return reinterpret_cast<Heap&>(DAT_01090a78).FUN_0086b930(size); }
+    static void* operator new(size_t size) { return reinterpret_cast<Heap&>(DAT_01090a78).FUN_0086b930(size); }
     ExtraDataListNode(ExtraDataList* const& value) : item(value), next(0) {}
     void FUN_0049fac0(ExtraDataList* const& value) {
         if (!value)

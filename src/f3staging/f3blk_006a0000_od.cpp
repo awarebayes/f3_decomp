@@ -653,7 +653,7 @@ extern float DAT_00e0abd0;
 
 class S6b1280_Small {
 public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     S6b1280_Small(float scale, int count);
     int unk00;
@@ -1114,7 +1114,7 @@ void FUN_008d7720(void* obj, bool a, bool b);
 
 class S6b1280_Ref {
 public:
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         char* p = (char*)DAT_01090a78.FUN_0086b930(size + 0x10);
         unsigned char pad = (unsigned char)(0x10 - ((unsigned int)p & 0xf));

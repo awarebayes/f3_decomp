@@ -94,7 +94,7 @@ struct MyInterp
 };
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     void* __thiscall FUN_00a4bcf0(unsigned int a, unsigned int b, unsigned int c);
 };
 void* __cdecl FUN_00a4c5a0();

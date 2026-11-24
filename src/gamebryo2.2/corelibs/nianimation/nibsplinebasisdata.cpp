@@ -153,7 +153,7 @@ class SplineObj : public SplineBase
         m_08.m_1c = 3;
     }
     virtual ~SplineObj() throw();
-    static void* operator new(unsigned int n) throw()
+    static void* operator new(size_t n) throw()
     {
         return FUN_00aa13e0(n);
     }
@@ -185,7 +185,7 @@ class NiSplineBase
   public:
     NiSplineBase();
     virtual ~NiSplineBase();
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return FUN_00aa13e0(uiSize);
     }

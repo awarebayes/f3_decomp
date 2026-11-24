@@ -9,7 +9,7 @@ struct BSTreeModel
 {
     virtual ~BSTreeModel();
     void* DestroyAndFree(unsigned int flags);
-    static void operator delete(void* p, unsigned int flags);
+    static void operator delete(void* p, size_t flags);
 };
 struct FUN_00666f00_shell
 {
@@ -82,7 +82,7 @@ struct NiAlphaProperty
     void SetFlag512(bool);
     void SetFlags(unsigned short);
     void FUN_0094db80(unsigned char);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 NiAlphaProperty* FUN_006698f0();
 struct RefBase
@@ -137,7 +137,7 @@ struct ColorAX
 };
 struct MemObjX
 {
-    static void* operator new(unsigned int auiSize);
+    static void* operator new(size_t auiSize);
     static void operator delete(void* apMem);
 };
 struct LeafDataX : public MemObjX
@@ -264,7 +264,7 @@ template <class T> struct NiPointer
     NiPointer& operator=(const NiPointer&);
     NiPointer& operator=(T*);
     operator T*();
-    static void* operator new[](unsigned int);
+    static void* operator new[](size_t);
     static void operator delete[](void*);
 };
 struct TreeRuntimeCopy
@@ -534,7 +534,7 @@ struct Geometry
     int unkb8;
     int unkbc;
     int unkc0;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     Geometry(GeometryData*);
     void FUN_00439410(Property*);
@@ -748,7 +748,7 @@ struct Tree
     int unkec;
     int unkf0;
     int unkf4;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     Tree(Model*, Object*);
     void FUN_00a5a040();
@@ -1007,7 +1007,7 @@ struct FUN_0059fa80 : MemObjX
 struct FUN_004f06c0 : NiNode
 {
     int unk00, unk04, unk08, unk0c, unk10, unk14, unk18;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     FUN_004f06c0(FUN_00c8f510*);
 };

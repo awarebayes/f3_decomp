@@ -326,7 +326,7 @@ struct OutputData : RefObject
     int m8c;
     int m90;
     int m94;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FUN_00aa13e0(n);
     }
@@ -405,7 +405,7 @@ struct C1AClass : RefObject
     int mcc;
     int md0;
     int md4;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FUN_00aa13e0(n);
     }
@@ -474,7 +474,7 @@ struct C469Class : RefObject
     RefObject* child;
     int mb0;
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FUN_00aa13e0(n);
     }
@@ -544,7 +544,7 @@ struct SmallRef : RefObject
 
     RefObject* m0c;
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FUN_00aa13e0(n);
     }
@@ -562,7 +562,7 @@ struct OtherRef : RefObject
     int m18;
     int m1c;
     int m20;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FUN_00aa13e0(n);
     }
@@ -582,7 +582,7 @@ struct GridBuffer : RefObject
     int m20;
     int m24;
     int m28;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FUN_00aa13e0(n);
     }
@@ -619,7 +619,7 @@ struct QuadIndex
 
 extern HeapAllocator DAT_011f6238;
 
-__forceinline void* __cdecl operator new[](unsigned int bytes, HeapAllocator& alloc)
+__forceinline void* __cdecl operator new[](size_t bytes, HeapAllocator& alloc)
 {
     return alloc.FUN_00aa3e40(bytes);
 }

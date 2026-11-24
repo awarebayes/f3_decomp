@@ -26,7 +26,7 @@ extern int DAT_01099fb4;
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 // Allocates a 0x20-byte NiBoolInterpolator, initialises its vtable, clears the field at offset 0x18 and the byte at 0x1c, and returns it (or null).
@@ -118,7 +118,7 @@ struct NiKeyBasedInterpolator
 };
 extern unsigned int DAT_0109a0b4;
 extern unsigned char DAT_0109a914;
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -403,7 +403,7 @@ class InterpA52F : public FUN_00a53280
     }
     virtual ~InterpA52F() throw();
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return BSFadeNode::operator new(n);
     }

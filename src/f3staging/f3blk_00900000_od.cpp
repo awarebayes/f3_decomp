@@ -406,8 +406,8 @@ struct SolverCtor {
     void FUN_00902100(float,float);
     __forceinline DeactivationCtor& configureTier(int,float,float,float,float);
 };
-struct ManifoldCtor { float tolerance; int count; static void* operator new(unsigned int) { return poolAlloc<2,0x1f>(); } ManifoldCtor() : tolerance(0.01f), count(20) {} };
-struct JobsCtor { int unk00; static void* operator new(unsigned int) { return poolAlloc<3,0x2f>(); } JobsCtor() {} };
+struct ManifoldCtor { float tolerance; int count; static void* operator new(size_t) { return poolAlloc<2,0x1f>(); } ManifoldCtor() : tolerance(0.01f), count(20) {} };
+struct JobsCtor { int unk00; static void* operator new(size_t) { return poolAlloc<3,0x2f>(); } JobsCtor() {} };
 struct CollisionInputCtor {
     ObjectCtor* dispatcher;
     float tolerance;

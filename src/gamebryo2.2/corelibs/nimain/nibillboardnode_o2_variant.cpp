@@ -489,7 +489,7 @@ inline float NiPoint3A7E::Length() const
 class NiBoundA7E
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kMemManagerA7E.Allocate(uiSize);
     }
@@ -1044,7 +1044,7 @@ struct BillboardClone : StandIn
 {
     float m_uiFilterValue;
 
-    static void* __cdecl operator new(unsigned int, void* storage)
+    static void* __cdecl operator new(size_t, void* storage)
     {
         return storage;
     }

@@ -16,7 +16,7 @@ NiRTTI* __cdecl FUN_00a43ab0()
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct NiTransformInterpolator
 {

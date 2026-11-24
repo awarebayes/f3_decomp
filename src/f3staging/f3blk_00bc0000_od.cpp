@@ -211,7 +211,7 @@ float FUN_00bc7610_Owner::FUN_00bc7610()
 }   // namespace f3m_00bc7610
 
 // @f3 0x00bd1850 (community match, verified in this file)
-void* operator new(unsigned int,void* p) { return p; }
+void* operator new(size_t,void* p) { return p; }
 #include <string.h>
 extern "C" unsigned long __readfsdword(unsigned long);
 extern "C" __declspec(dllimport) void __stdcall EnterCriticalSection(void*);

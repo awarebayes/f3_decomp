@@ -216,7 +216,7 @@ void O848ed0::FUN_00848ed0(P848ed0* p) { FUN_00848700(p->f); FUN_0082d9f0(p); }
 namespace f3m_0084be60 {
 void* __cdecl FUN_0089eb90(unsigned int n) throw();
 struct B84be60 { virtual ~B84be60(); virtual void v4(); int pad[21]; B84be60() throw(); };
-struct D84be60 : B84be60 { unsigned short w58, w5a; virtual ~D84be60(); static void* operator new(unsigned int n) throw() { return FUN_0089eb90(n); } D84be60() throw(); };
+struct D84be60 : B84be60 { unsigned short w58, w5a; virtual ~D84be60(); static void* operator new(size_t n) throw() { return FUN_0089eb90(n); } D84be60() throw(); };
 D84be60::D84be60() throw() { w58 = 0; w5a = 0; }
 D84be60* __cdecl FUN_0084be60() { return new D84be60(); }
 }   // namespace f3m_0084be60
@@ -911,7 +911,7 @@ bool SkinPartition1539::FUN_0084d0b0(const SkinPartition1539* other)
 class NiMemObject
 {
   public:
-    static void operator delete(void* p, unsigned int size);
+    static void operator delete(void* p, size_t size);
 };
 
 class NiRefObject : public NiMemObject

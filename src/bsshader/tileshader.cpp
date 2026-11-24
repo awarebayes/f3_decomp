@@ -326,7 +326,7 @@ extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long volati
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile*);
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     static void __cdecl operator delete(void*);
 };
 struct NiD3DShaderConstantMap : public BSFadeNode
@@ -570,7 +570,7 @@ extern void* DAT_011f9508;
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct NiD3DVertexDeclaration

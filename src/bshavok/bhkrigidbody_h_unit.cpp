@@ -26,7 +26,7 @@ struct FUN_00c8f510
     FUN_00c8f510();
     ~FUN_00c8f510();
 };
-__forceinline void* __cdecl operator new(unsigned int size, AllocationManager& allocator)
+__forceinline void* __cdecl operator new(size_t size, AllocationManager& allocator)
 {
     unsigned char* storage = static_cast<unsigned char*>(allocator.FUN_00aa3e40(0xf0));
     unsigned char adjustment = static_cast<unsigned char>(16 - (reinterpret_cast<unsigned int>(storage) & 15));
@@ -51,7 +51,7 @@ struct RigidBodyInfoAllocator
 };
 extern RigidBodyInfoAllocator DAT_01090a78;
 
-__forceinline void* __cdecl operator new(unsigned int size, RigidBodyInfoAllocator& allocator)
+__forceinline void* __cdecl operator new(size_t size, RigidBodyInfoAllocator& allocator)
 {
     unsigned char* storage = static_cast<unsigned char*>(allocator.FUN_0086b930(0xf0));
     unsigned char adjustment = static_cast<unsigned char>(16 - (reinterpret_cast<unsigned int>(storage) & 15));

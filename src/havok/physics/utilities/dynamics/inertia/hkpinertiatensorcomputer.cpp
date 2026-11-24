@@ -2003,7 +2003,7 @@ extern "C"
     __m128 _mm_cmpeq_ss(__m128, __m128);
     __m128 _mm_andnot_ps(__m128, __m128);
 }
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

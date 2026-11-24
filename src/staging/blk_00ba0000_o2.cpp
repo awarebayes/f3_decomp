@@ -150,7 +150,7 @@ void* __thiscall FUN_00ba4920_Class::FUN_00ba4920(int a)
 
 void __cdecl FUN_00ba7df0();
 void __cdecl operator delete(void*);
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 
 struct FUN_00ba8270_Class
 {
@@ -248,7 +248,7 @@ char __thiscall FUN_00bae780_Class::FUN_00bae780(NiAVObject* apObject)
 }
 
 void __cdecl FUN_00bb0de0();
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 
 struct FUN_00bb0ea0_Class
 {
@@ -267,7 +267,7 @@ void* __thiscall FUN_00bb0ea0_Class::FUN_00bb0ea0(bool abDelete)
 
 namespace fnv_00bb3140 {
 extern int DAT_010b9338;
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00bb3140_Class
 {
     int m_vtbl;
@@ -375,7 +375,7 @@ void* __thiscall FUN_00bb3710_Class::FUN_00bb3710(void* apValue, short asValue)
 }
 
 void __cdecl FUN_00bb35b0();
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 
 struct FUN_00bb38e0_Class
 {
@@ -444,7 +444,7 @@ void* __thiscall FUN_00bb4650_Class::FUN_00bb4650(unsigned char flags)
 }
 
 void __cdecl FUN_00bb7d70();
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00bb7f60_Class
 {
     void __thiscall FUN_00bb7d70();
@@ -807,7 +807,7 @@ struct FUN_00bb7170_Class
 {
     char m0[0x68];
     FUN_00bb7170_Class();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct FUN_00bb7300_Class
 {
@@ -1072,7 +1072,7 @@ void __thiscall FUN_00bb3cb0_Class::FUN_00bb3cb0(const void* apData, unsigned in
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct FUN_00bb3ba0 : A51BF0Base
@@ -2490,7 +2490,7 @@ struct Obj_b10008
     int unk144;
     int unk148;
     Obj_b10008();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }
@@ -2865,7 +2865,7 @@ struct SpawnedObject
     unsigned int unk00, unk04, unk08, unk0C, unk10, unk14, unk18, unk1C;
     unsigned int unk20, unk24, unk28, unk2C, unk30, unk34;
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }
@@ -3079,10 +3079,10 @@ struct FUN_00ba94b0
 
     FUN_00ba94b0(unsigned int a);
 
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
-void* FUN_00ba94b0::operator new(unsigned int size)
+void* FUN_00ba94b0::operator new(size_t size)
 {
     MemoryManagerAllocator* pAllocator = (MemoryManagerAllocator*)&g_memoryManager;
     return pAllocator->Allocate(size);
@@ -3219,7 +3219,7 @@ class BA97B0Child
 
     BA97B0Child(unsigned int uiValue);
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return BA97B0GetHeap().FUN_00aa3e40(uiSize);
     }
@@ -3276,7 +3276,7 @@ struct SpawnedObject_b7307
 {
     char m0[0x14];
     SpawnedObject_b7307(int a);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return reinterpret_cast<NiMemoryManager*>(&DAT_011f6238)->FUN_00aa3e40(size);
     }
@@ -4201,7 +4201,7 @@ void FUN_00baec80_cls::FUN_00baec80(int value)
 struct SpawnedObject90
 {
     SpawnedObject90();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     unsigned int unk00;
     unsigned int unk04;
     unsigned int unk08;
@@ -4260,7 +4260,7 @@ namespace fnv_00baee40 {
 struct SpawnedObject90
 {
     SpawnedObject90();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     unsigned int unk00;
     unsigned int unk04;
     unsigned int unk08;
@@ -4933,7 +4933,7 @@ struct MatProp
     unsigned int m_rev;
     int unk48;
     MatProp();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     void SetAmb(const NiColor& c)
     {
@@ -5640,7 +5640,7 @@ class SpawnedObject
         m_9c = 0;
         m_1c = 0x12;
     }
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         return FUN_00aa13e0(size);
     }
@@ -6548,7 +6548,7 @@ struct Obj_b9933 : public BaseObj_b9933
         m_58 = 4;
         m_1c = 0xa;
     }
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }
@@ -6702,7 +6702,7 @@ int field100;
 int field104;
 NativePass2549(int arg):BaseObj_b9933(arg) { field058=4; field01c=9; }
 virtual void b00();
-static void* operator new(unsigned int size) { return FUN_00aa13e0(size); }
+static void* operator new(size_t size) { return FUN_00aa13e0(size); }
 };
 struct StateView2549 {
 virtual void slot000();
@@ -6860,7 +6860,7 @@ void* FUN_00bb3210_cls::FUN_00bb3210()
 }
 
 extern "C" void* __cdecl FUN_00aa13e0(unsigned int size);
-__forceinline void* __cdecl operator new(unsigned int size)
+__forceinline void* __cdecl operator new(size_t size)
 {
     return FUN_00aa13e0(size);
 }
@@ -8204,7 +8204,7 @@ class ObjectDerived_b9105 : public ObjectBase_b9105
     virtual void v00();
     int m100;
     int m104;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }
@@ -8489,7 +8489,7 @@ struct Obj_b9974 : public BaseObj_b9974
     virtual void v00();
     int m100;
     int m104;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }
@@ -8815,7 +8815,7 @@ void* __cdecl FUN_00aa13e0(unsigned int size);
 struct FUN_00bb7170_Node
 {
     FUN_00bb7170_Node();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }
@@ -8920,7 +8920,7 @@ void* __cdecl FUN_00aa13e0(unsigned int);
 class FUN_00bb7c30_Class
 {
   public:
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         return FUN_00aa13e0(0xb0);
     }
@@ -9095,11 +9095,11 @@ struct FogProp_bb8280
     FogProp_bb8280();
     void CopyMemberData(FogProp_bb8280* pDest, void* pCloning);
     FogProp_bb8280* Clone(void* pCloning);
-    static void* __cdecl operator new(unsigned int s)
+    static void* __cdecl operator new(size_t s)
     {
         return FUN_00aa13e0(s);
     }
-    static void __cdecl operator delete(void* p, unsigned int s)
+    static void __cdecl operator delete(void* p, size_t s)
     {
         FUN_00aa1460(p, s);
     }
@@ -9518,7 +9518,7 @@ FUN_00ba02f0::FUN_00ba02f0()
     m_pReferencedObject = 0;
 }
 
-inline void* __cdecl operator new[](unsigned int uiSize)
+inline void* __cdecl operator new[](size_t uiSize)
 {
     return ((MemoryManagerAllocator*)&g_memoryManager)->Allocate(uiSize);
 }
@@ -9634,7 +9634,7 @@ struct S_00ba63e0_Elem
     int unk14;
     int unk18;
     S_00ba63e0_Elem();
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return DAT_011f6238.Allocate(n);
     }
@@ -9918,7 +9918,7 @@ struct NewObj
     unsigned int unk0C;
     unsigned int unk10;
     NewObj(int a1);
-    static void* operator new(unsigned int sz) throw()
+    static void* operator new(size_t sz) throw()
     {
         return DAT_011f6238.Allocate(sz);
     }
@@ -10290,8 +10290,8 @@ FUN_00baec90::~FUN_00baec90()
 
 struct NiMemObjectAllocation
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 struct FUN_00b6abb0 : NiMemObjectAllocation
 {
@@ -10649,7 +10649,7 @@ struct FUN_00c05880 : NiMemObjectAllocation
     int unk100;
     int unk104;
 };
-inline void* operator new(unsigned int, int bytes)
+inline void* operator new(size_t, int bytes)
 {
     return NiMemObjectAllocation::operator new(bytes);
 }
@@ -10669,43 +10669,43 @@ namespace nb31310 {
 struct FUN_00aea2f0 {
     char data[0x104];
     FUN_00aea2f0();
-    static void* operator new(unsigned int size) { return ::FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return ::FUN_0089eb90(size); }
     static void operator delete(void* p) { ::FUN_0089ec20(p); }
 };
 struct FUN_00aedf60 {
     char data[0x150];
     FUN_00aedf60();
-    static void* operator new(unsigned int size) { return ::FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return ::FUN_0089eb90(size); }
     static void operator delete(void* p) { ::FUN_0089ec20(p); }
 };
 struct FUN_00af2240 {
     char data[0x80];
     FUN_00af2240();
-    static void* operator new(unsigned int size) { return ::FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return ::FUN_0089eb90(size); }
     static void operator delete(void* p) { ::FUN_0089ec20(p); }
 };
 struct FUN_00b46e90 {
     char data[0x70];
     FUN_00b46e90();
-    static void* operator new(unsigned int size) { return ::FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return ::FUN_0089eb90(size); }
     static void operator delete(void* p) { ::FUN_0089ec20(p); }
 };
 struct FUN_00b30b60 {
     char data[0x90];
     FUN_00b30b60();
-    static void* operator new(unsigned int size) { return ::FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return ::FUN_0089eb90(size); }
     static void operator delete(void* p) { ::FUN_0089ec20(p); }
 };
 struct FUN_00adea80 {
     char data[0x98];
     FUN_00adea80();
-    static void* operator new(unsigned int size) { return ::FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return ::FUN_0089eb90(size); }
     static void operator delete(void* p) { ::FUN_0089ec20(p); }
 };
 struct FUN_00b39a70 {
     char data[0xb0];
     FUN_00b39a70(int a);
-    static void* operator new(unsigned int size) { return ::FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return ::FUN_0089eb90(size); }
     static void operator delete(void* p) { ::FUN_0089ec20(p); }
 };
 }
@@ -12068,7 +12068,7 @@ class B30B0Pass
     B30B0Pass(void* pvState);
     virtual ~B30B0Pass();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     int unk04;
@@ -12379,7 +12379,7 @@ class CBB3B10RefObject
         InterlockedDecrement(&ms_lObjects);
     }
 
-    static void operator delete(void* pvMem, unsigned int uiSize);
+    static void operator delete(void* pvMem, size_t uiSize);
 
     unsigned int m_uiRefCount;
 
@@ -12541,7 +12541,7 @@ void FUN_00bb3d80_cls::FUN_00bb3d80(FUN_00bb3d80_cls* arg1, unsigned int arg2)
 class BSFaceGenMorphData
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 
 namespace nsbb {
@@ -12740,7 +12740,7 @@ struct BB5DD0Obj
     int unk08;
     int unk0C;
     BB5DD0Obj(BB5DD0Ref* pRef, int iType, ...);
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return reinterpret_cast<BB5DD0Heap&>(g_memoryManager).FUN_00aa3e40(uiSize);
     }
@@ -14439,7 +14439,7 @@ struct S00ba1770_Param : EffectParam
     int unk84;
     S00ba1770_Param();
     void FUN_00b8ab10(int a1, int a2);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return reinterpret_cast<S00ba1770_Heap&>(g_memoryManager).FUN_00aa3e40(size);
     }
@@ -17465,7 +17465,7 @@ struct PoolElement20
     int unk14;
     int unk18;
     int unk1c;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return DAT_011f6238.FUN_00aa3e40(size);
     }
@@ -17521,7 +17521,7 @@ struct ImageSpaceEffectParam
 struct ImageSpaceShaderParam : ImageSpaceEffectParam
 {
     ImageSpaceShaderParam();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_gameHeap.Allocate(size);
     }

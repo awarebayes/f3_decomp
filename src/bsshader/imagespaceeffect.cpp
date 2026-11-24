@@ -148,7 +148,7 @@ struct BBA3C00Range
 
 struct BBA3C00Entry
 {
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kBA3C00Heap.Allocate(uiSize);
     }

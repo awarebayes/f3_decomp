@@ -46,7 +46,7 @@ struct NiGeometryBufferData
 {
     NiGeometryBufferData();
 };
-__forceinline void* __cdecl operator new(unsigned int, void* p)
+__forceinline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -403,7 +403,7 @@ extern bool DAT_0126f0d0;
 class NiMemObject_E94
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 };
 class NiVBChipE94 : public NiMemObject_E94
 {

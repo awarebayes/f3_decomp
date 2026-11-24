@@ -26,7 +26,7 @@ struct N_00acf8b0
     void* vp;
     char pad[0x3c];
     N_00acf8b0() throw();
-    static void* operator new(unsigned) throw();
+    static void* operator new(size_t) throw();
 };
 N_00acf8b0::N_00acf8b0() throw()
 {

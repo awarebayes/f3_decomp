@@ -26,7 +26,7 @@ char const* const* __cdecl FUN_00a51aa0()
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct BaseHolder
 {

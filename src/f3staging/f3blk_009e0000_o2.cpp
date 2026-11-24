@@ -1845,7 +1845,7 @@ struct First_9ef440 { int unk00; unsigned short unk04; unsigned short unk06; };
 struct Second_9ef440 { int unk00; };
 struct Obj_9ef440 : First_9ef440, Second_9ef440 {
     Obj_9ef440(int a, int b) throw();
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         Pool_9ef440* pool = (Pool_9ef440*)DAT_00d9b080(DAT_010f3170);
         Hdr_9ef440* p = (Hdr_9ef440*)pool->FUN_008f6d30(0x2c, 0x35);
         p->unk04 = 0x2c;
@@ -2139,7 +2139,7 @@ public:
         }
     }
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Allocator_9e1260* a = (Allocator_9e1260*)f3m_009ee430::TlsGetValue(DAT_010f3170);
         Ref_9e1260* p = (Ref_9e1260*)a->FUN_008f6d30(size, 0x2c);
@@ -4458,7 +4458,7 @@ unsigned unk54;
 unsigned unk58;
 unsigned unk5c;
 FUN_0092e3c0(const Vector&,const Vector&,float,float,float,Entity*,int) throw();
-static __forceinline void* operator new(unsigned n){Pool* p=(Pool*)DAT_00d9b080(DAT_010f3170);FUN_0092e3c0* v=(FUN_0092e3c0*)p->FUN_008f6d30(n,0x29);v->size=(unsigned short)n;return v;}
+static __forceinline void* operator new(size_t n){Pool* p=(Pool*)DAT_00d9b080(DAT_010f3170);FUN_0092e3c0* v=(FUN_0092e3c0*)p->FUN_008f6d30(n,0x29);v->size=(unsigned short)n;return v;}
 void FUN_0092dea0(float);
 };
 struct Node {unsigned unk00,unk04,unk08,unk0c;signed char ownerOffset;char unk11,unk12,unk13;unsigned unk14;unsigned char type;};
@@ -5858,7 +5858,7 @@ struct F009f4210Base0 { void* vtable; unsigned short memSizeAndFlags; unsigned s
 struct F009f4210Base8 { int unk[16]; };
 struct FUN_009f40d0 : F009f4210Base0, F009f4210Base8 {
     FUN_009f40d0(void* arg) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         F009f4210Heap* heap = (F009f4210Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x35);
@@ -5881,7 +5881,7 @@ struct F009f5010Base0 { void* vtable; unsigned short memSizeAndFlags; unsigned s
 struct F009f5010Base8 { int unk[9]; };
 struct FUN_009f4bd0 : F009f5010Base0, F009f5010Base8 {
     FUN_009f4bd0(void* arg) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         F009f5010Heap* heap = (F009f5010Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x35);
@@ -5904,7 +5904,7 @@ struct F009f5160Base0 { void* vtable; unsigned short memSizeAndFlags; unsigned s
 struct F009f5160Base8 { int unk[10]; };
 struct FUN_009f5110 : F009f5160Base0, F009f5160Base8 {
     FUN_009f5110(void* arg) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         F009f5160Heap* heap = (F009f5160Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x35);
@@ -5927,7 +5927,7 @@ struct F009f5220Base0 { void* vtable; unsigned short memSizeAndFlags; unsigned s
 struct F009f5220Base8 { int unk[10]; };
 struct FUN_009f51d0 : F009f5220Base0, F009f5220Base8 {
     FUN_009f51d0(void* arg) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         F009f5220Heap* heap = (F009f5220Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x35);
@@ -5950,7 +5950,7 @@ struct F009f5780Base0 { void* vtable; unsigned short memSizeAndFlags; unsigned s
 struct F009f5780Base8 { int unk[13]; };
 struct FUN_009f5530 : F009f5780Base0, F009f5780Base8 {
     FUN_009f5530(void* arg) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         F009f5780Heap* heap = (F009f5780Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x35);
@@ -5973,7 +5973,7 @@ struct F009f6250Base0 { void* vtable; unsigned short memSizeAndFlags; unsigned s
 struct F009f6250Base8 { int unk[12]; };
 struct FUN_009f5fc0 : F009f6250Base0, F009f6250Base8 {
     FUN_009f5fc0(void* arg) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         F009f6250Heap* heap = (F009f6250Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x11);
@@ -5996,7 +5996,7 @@ struct F009f6a20Base0 { void* vtable; unsigned short memSizeAndFlags; unsigned s
 struct F009f6a20Base8 { int unk[13]; };
 struct FUN_009f6920 : F009f6a20Base0, F009f6a20Base8 {
     FUN_009f6920(void* arg) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         F009f6a20Heap* heap = (F009f6a20Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x35);
@@ -6019,7 +6019,7 @@ struct F009f6c90Base0 { void* vtable; unsigned short memSizeAndFlags; unsigned s
 struct F009f6c90Base8 { int unk[12]; };
 struct FUN_009f6b60 : F009f6c90Base0, F009f6c90Base8 {
     FUN_009f6b60(void* arg) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         F009f6c90Heap* heap = (F009f6c90Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x11);
@@ -6042,7 +6042,7 @@ struct F009f76b0Base0 { void* vtable; unsigned short memSizeAndFlags; unsigned s
 struct F009f76b0Base8 { int unk[12]; };
 struct FUN_009f7580 : F009f76b0Base0, F009f76b0Base8 {
     FUN_009f7580(void* arg) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         F009f76b0Heap* heap = (F009f76b0Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x11);

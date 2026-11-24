@@ -25,7 +25,7 @@ struct GeometryBuffers
     DynamicArray<Edge> edges;
     GeometryBuffers() : vertices(), edges()
     {}
-    static void* operator new(unsigned int, void* position)
+    static void* operator new(size_t, void* position)
     {
         return position;
     }

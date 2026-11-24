@@ -2485,7 +2485,7 @@ extern "C" C1A3B0Point3 _NiPoint3_ZERO;
 class C1A3B0Bound
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return reinterpret_cast<C1A3B0Heap&>(g_memoryManager).Allocate(uiSize);
     }
@@ -4396,7 +4396,7 @@ class NiD3DShaderConstantMap : public RefObjectStandin
     int unk38;
     int unk3c;
     int unk40;
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     static void operator delete(void*);
     NiD3DShaderConstantMap(void*, int);
 };

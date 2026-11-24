@@ -13,7 +13,7 @@ int* FUN_00d1bb40_Class::FUN_00d1bb40(unsigned short index)
     return *reinterpret_cast<int**>(this) + index * 12;
 }
 
-inline void* __cdecl operator new(unsigned int, void* where) throw()
+inline void* __cdecl operator new(size_t, void* where) throw()
 {
     return where;
 }

@@ -149,7 +149,7 @@ extern "C" D2FA00MemoryRouter& __cdecl FUN_00c85750();
 class D2FA00ReferencedObject
 {
   public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         D2FA00ReferencedObject* b =
             static_cast<D2FA00ReferencedObject*>(fnvc_adapt::FUN_00c85750().heap().AllocateMemoryBlock(nbytes));
@@ -781,7 +781,7 @@ struct SolSortState
 };
 extern void __cdecl QuickSortRange(unsigned*, int, int, SolSortState);
 struct SolPlace;
-inline void* operator new(unsigned int, SolPlace* p)
+inline void* operator new(size_t, SolPlace* p)
 {
     return p;
 }

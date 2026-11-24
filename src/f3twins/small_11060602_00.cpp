@@ -102,7 +102,7 @@ void* FUN_00830700()
 
 
 namespace n_0083c020 {
-struct X { char pad[80]; X(unsigned a0, unsigned a1, unsigned a2, unsigned a3, unsigned a4, unsigned a5, unsigned a6, unsigned a7, unsigned a8, unsigned a9, unsigned a10) throw(); static void* operator new(unsigned) throw(); };
+struct X { char pad[80]; X(unsigned a0, unsigned a1, unsigned a2, unsigned a3, unsigned a4, unsigned a5, unsigned a6, unsigned a7, unsigned a8, unsigned a9, unsigned a10) throw(); static void* operator new(size_t) throw(); };
 struct C { void* vt; void FUN_00855390(X*); C* FUN_0083c020(unsigned a0, unsigned a1, unsigned a2, unsigned a3, unsigned a4, unsigned a5, unsigned a6, unsigned a7, unsigned a8, unsigned a9, unsigned a10); };
 }
 extern char DAT_00e2260c;
@@ -119,7 +119,7 @@ __declspec(noinline) n_0083c020::C* n_0083c020::C::FUN_0083c020(unsigned a0, uns
 
 
 namespace n_0083f490 {
-struct X { char pad[88]; X(unsigned a0, unsigned a1, unsigned a2, unsigned a3, unsigned a4, unsigned a5, unsigned a6, unsigned a7, unsigned a8) throw(); static void* operator new(unsigned) throw(); };
+struct X { char pad[88]; X(unsigned a0, unsigned a1, unsigned a2, unsigned a3, unsigned a4, unsigned a5, unsigned a6, unsigned a7, unsigned a8) throw(); static void* operator new(size_t) throw(); };
 struct C { void* vt; void FUN_00855390(X*); C* FUN_0083f490(unsigned a0, unsigned a1, unsigned a2, unsigned a3, unsigned a4, unsigned a5, unsigned a6, unsigned a7, unsigned a8); };
 }
 extern char DAT_00e22d8c;
@@ -148,7 +148,7 @@ O_00854090* C_00854090::FUN_00854090(int arg)
 
 // ---- family f203
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct B_0085df10 { B_0085df10() throw(); virtual void v0(); int u1, u2; void FUN_00845a50(B_0085df10*, int); };
 struct D_0085df10 : B_0085df10 { float a, b, c, d; D_0085df10() { d = 0.0f; c = 0.0f; b = 0.0f; a = 0.0f; } D_0085df10* FUN_0085df10(int); };
 
@@ -180,7 +180,7 @@ O_00863b80* C_00863b80::FUN_00863b80(int arg)
 
 // ---- family f209
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct V4_00864dc0 { float a, b, c, d; V4_00864dc0() : a(0.0f), b(0.0f), c(0.0f), d(0.0f) {} };
 extern V4_00864dc0 DAT_00f73210;
 struct B_00864dc0 { B_00864dc0() throw(); virtual void v0(); int u1, u2; };

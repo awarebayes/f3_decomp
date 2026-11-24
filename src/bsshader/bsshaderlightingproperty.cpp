@@ -992,7 +992,7 @@ struct _Helper_00ba8b10
 };
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct FUN_00ba8e50 : BSFadeNode
 {
@@ -1041,7 +1041,7 @@ NewObj* __fastcall FUN_00b71800(_Helper_00ba8b10* self, int unused, void* arg)
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct FUN_00b71720 : BSFadeNode
 {
@@ -2199,8 +2199,8 @@ extern S00b700d0_RTTI DAT_01202560;
 class S00b700d0_Alpha : public NiProperty
 {
   public:
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     S00b700d0_Alpha();
     void FUN_0049ed90(bool);
     void FUN_004393c0(bool);

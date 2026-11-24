@@ -1181,7 +1181,7 @@ FUN_00e2ebc0_class* FUN_00e2ebc0_class::Init(F_e2ebc0 flags)
     return this;
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -1219,7 +1219,7 @@ struct Resource_e2ef
     Container_e2ef* m_parent;
     void FUN_00c90510() throw();
     void FUN_00c905b0() throw();
-    static void* operator new(unsigned int nbytes) throw()
+    static void* operator new(size_t nbytes) throw()
     {
         Resource_e2ef* p = (Resource_e2ef*)Router_e2ef::FUN_00c85750().heap().AllocateMemoryBlock(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;

@@ -148,7 +148,7 @@ struct ShaderObj
     int m_unk10;
     int m_unk14;
     ShaderObj() throw();
-    void* operator new(unsigned int n)
+    void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }

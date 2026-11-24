@@ -142,7 +142,7 @@ struct S_00d56880_Router
 };
 void __cdecl FUN_00c908c0(S_00d56880_Alloc& a, void* arr, int n, int elemSize);
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

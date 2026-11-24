@@ -321,7 +321,7 @@ AA0F30Object* AA0F30Object::DestroyAndFree(unsigned int uiFlags)
 class BSFaceGenMorphData
 {
   public:
-    static void* operator new(unsigned int auiSize);
+    static void* operator new(size_t auiSize);
 };
 
 class CloningProcess;

@@ -143,7 +143,7 @@ class A89400ExtraData
   public:
     A89400ExtraData() throw();
     virtual ~A89400ExtraData();
-    static void* operator new(unsigned int uiSize) throw();
+    static void* operator new(size_t uiSize) throw();
     static void operator delete(void* pvMem);
 
     void CopyMemberData(A89400ExtraData* pkDest, A89400CloningProcess& kCloning);

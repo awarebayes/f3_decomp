@@ -378,7 +378,7 @@ bool* CheckSubQueries(bool* result, void* key, Iface* self)
 void* FUN_00c908c0(void* alloc, void* arr, int numElems, int elemSize);
 void FUN_00d2cc70(void* dst, const void* src, int numBytes);
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

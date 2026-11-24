@@ -1073,7 +1073,7 @@ struct CollapseRefObject : hkBaseObject
 {
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
-    __forceinline void* operator new(unsigned int nbytes)
+    __forceinline void* operator new(size_t nbytes)
     {
         CollapseRefObject* b =
             static_cast<CollapseRefObject*>(NineIntegerRecord::GetMonitorStream().heap().AllocateMemoryBlock(nbytes));

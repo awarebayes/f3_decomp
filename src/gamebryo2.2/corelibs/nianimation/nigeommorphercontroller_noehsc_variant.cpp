@@ -205,7 +205,7 @@ struct LoadItem
     {}
     ~LoadItem() throw()
     {}
-    static void* operator new[](unsigned int size) throw()
+    static void* operator new[](size_t size) throw()
     {
         return DAT_011f6238.FUN_00aa3e40(size);
     }

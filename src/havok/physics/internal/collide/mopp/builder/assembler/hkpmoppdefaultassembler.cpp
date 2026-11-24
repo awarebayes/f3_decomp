@@ -2754,7 +2754,7 @@ struct FUN_00e065f0
     void FUN_00e06480();
     FUN_00e065f0(unsigned int id) throw();
     void Destroy();
-    void* operator new(unsigned int n)
+    void* operator new(size_t n)
     {
         FUN_00e065f0* p = static_cast<FUN_00e065f0*>(GetBvRouter()->allocator->AllocateMemoryBlock(n));
         p->m_usMemSizeAndFlags = (unsigned short)n;
@@ -2963,7 +2963,7 @@ void BvBuilder::FUN_00e08a60(BvNode* node, FUN_00e095d0_cls* parent, FUN_00e095d
     }
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

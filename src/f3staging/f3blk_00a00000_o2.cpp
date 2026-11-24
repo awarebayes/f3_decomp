@@ -249,7 +249,7 @@ struct FUN_00a74790 {
     MatrixB0 m1;
     MatrixB0 m2;
     FUN_00a74790();
-    static void* operator new(unsigned int size) { AllocB0* alloc = DAT_00d9b080(DAT_010f3170); FUN_00a74790* mem = (FUN_00a74790*)alloc->FUN_008f6d30(0xb0, 0x2c); *(short*)((char*)mem + 4) = 0xb0; return mem; }
+    static void* operator new(size_t size) { AllocB0* alloc = DAT_00d9b080(DAT_010f3170); FUN_00a74790* mem = (FUN_00a74790*)alloc->FUN_008f6d30(0xb0, 0x2c); *(short*)((char*)mem + 4) = 0xb0; return mem; }
 };
 struct SettingsB0 { int pad[4]; float scale; };
 struct OwnerB0 {
@@ -3037,7 +3037,7 @@ public:
 };
 class Shape : public ShapeBase, public Interface {
 public:
-    static void* operator new(unsigned int, void* where) { return where; }
+    static void* operator new(size_t, void* where) { return where; }
     static void operator delete(void*, void*) {}
     Shape(FinishFlag f) : ShapeBase(f), Interface(f) { type = 8; }
     virtual void v04();
@@ -3076,7 +3076,7 @@ public:
 };
 class Shape : public ShapeBase, public Interface {
 public:
-    static void* operator new(unsigned int, void* where) { return where; }
+    static void* operator new(size_t, void* where) { return where; }
     static void operator delete(void*, void*) {}
     Shape(FinishFlag f) : ShapeBase(f), Interface(f) { type = 8; }
     virtual void v04();
@@ -3141,7 +3141,7 @@ public:
 };
 class Shape : public ReferencedObject, public Interface {
 public:
-    static void* operator new(unsigned int, void* where) { return where; }
+    static void* operator new(size_t, void* where) { return where; }
     static void operator delete(void*, void*) {}
     Shape(FinishFlag f) : ReferencedObject(f), Interface(f) {}
     virtual void v04();
@@ -3180,7 +3180,7 @@ public:
 };
 class Shape : public ShapeBase {
 public:
-    static void* operator new(unsigned int, void* where) { return where; }
+    static void* operator new(size_t, void* where) { return where; }
     static void operator delete(void*, void*) {}
     Shape(FinishFlag f) : ShapeBase(f), member(f) { type = 0xc; }
     int unk10;
@@ -3617,7 +3617,7 @@ void __cdecl FUN_00a07730(void* memory){FinishingFlag flag;new(memory) FUN_00a07
 
 // @f3 0x00a07ca0 (community match, verified in this file)
 namespace f3m_00a07ca0 {
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 class BE468B0Base {
 public:
     virtual ~BE468B0Base();
@@ -3908,7 +3908,7 @@ struct FUN_00a74790
     int unkac;
     FUN_00a74790();
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Allocator2377* allocator = DAT_00d9b080(DAT_010f3170);
         FUN_00a74790* memory = static_cast<FUN_00a74790*>(allocator->FUN_008f6d30(size, 0x2c));

@@ -1215,7 +1215,7 @@ void __stdcall NotifyPhantomCollision(PairD020* pkPair)
     }
 }
 
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }

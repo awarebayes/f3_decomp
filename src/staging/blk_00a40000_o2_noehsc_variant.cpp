@@ -16,7 +16,7 @@ struct FUN_00a409b0_class
 void __fastcall FUN_00a36890(void*);
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 void* __cdecl FUN_00a409d0();
 float FUN_00a42050(float a, float b, float c);
@@ -171,7 +171,7 @@ struct FUN_00a414c0_class
 extern int DAT_010976fc;
 struct A51BF0Base
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct A51BF0
 {
@@ -285,7 +285,7 @@ class FUN_00a41410_cls
 };
 struct S_00a42290_Mem
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct FUN_00a5d3a0 : S_00a42290_Mem
 {
@@ -1454,7 +1454,7 @@ struct Result
     int unk28;
     int unk2c;
     int unk30;
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     Result(const char*, int, int) throw();
     void FUN_00a47420(Obj*) throw();
     void AddSeq(void*, Obj*) throw();

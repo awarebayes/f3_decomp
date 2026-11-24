@@ -1380,7 +1380,7 @@ struct S_00d43030_RefObj {
     short m_sReferenceCount;
     virtual ~S_00d43030_RefObj() throw();
     __forceinline S_00d43030_RefObj() throw() { m_sReferenceCount = 1; }
-    __forceinline void* operator new(unsigned int nbytes)
+    __forceinline void* operator new(size_t nbytes)
     {
         S_00d43030_RefObj* b = static_cast<S_00d43030_RefObj*>((void*)static_cast<S_00d43030_Router*>(FUN_00c85750())->heap().allocate(nbytes));
         b->m_usMemSizeAndFlags = static_cast<unsigned short>(nbytes);
@@ -1420,7 +1420,7 @@ template <class AGENT> struct S_00d43030_Symmetric : AGENT {
 // @f3 0x009cdb30 (community match, verified in this file)
 struct S9cdb30_TransformAgent : S_00d43030_Agent {
     S_00d43030_Agent* m_pAgent;
-    __forceinline void* operator new(unsigned int nbytes)
+    __forceinline void* operator new(size_t nbytes)
     {
         void* tls = DAT_00d9b080(DAT_010f3170);
         S_00d43030_RefObj* b = (S_00d43030_RefObj*)((BlockAllocator*)tls)->FUN_008f6d30(nbytes, 0x1f);

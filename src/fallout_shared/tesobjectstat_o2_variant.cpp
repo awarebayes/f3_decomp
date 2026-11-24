@@ -34,7 +34,7 @@ struct FUN_0051b6d0 : Primary231, Secondary231
 struct Complete231 : FUN_0051b6d0
 {
 };
-void* operator new(unsigned int, void* storage)
+void* operator new(size_t, void* storage)
 {
     return storage;
 }

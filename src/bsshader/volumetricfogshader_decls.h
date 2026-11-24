@@ -7,7 +7,7 @@
 class NiMemObject
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* pointer);
 };
 

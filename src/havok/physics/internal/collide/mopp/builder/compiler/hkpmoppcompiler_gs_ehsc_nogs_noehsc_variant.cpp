@@ -126,7 +126,7 @@ class hkReferencedObject : public hkBaseObject
     {
         referenceCount = 1;
     }
-    static void* operator new(unsigned int n) throw()
+    static void* operator new(size_t n) throw()
     {
         hkReferencedObject* b = (hkReferencedObject*)FUN_00c85750()->heap().allocate(n);
         b->memSizeAndFlags = (unsigned short)n;
@@ -379,7 +379,7 @@ struct Code {
     ScalarInfo info;
     ByteArray code;
 
-    static void* operator new(unsigned size) throw() {
+    static void* operator new(size_t size) throw() {
         Code* allocation = static_cast<Code*>(ThreadHeap()->FUN_008f6d30(size,0x28));
         allocation->memSizeAndFlags = static_cast<unsigned short>(size);
         return allocation;

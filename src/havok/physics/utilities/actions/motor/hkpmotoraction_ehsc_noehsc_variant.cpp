@@ -49,14 +49,14 @@ template <class T> struct hkArrayMA
 class hkpMotorActionMA : public hkpMotorAction
 {
   public:
-    void* operator new(unsigned int nbytes)
+    void* operator new(size_t nbytes)
     {
         hkReferencedObject* b =
             static_cast<hkReferencedObject*>(FUN_00c85750().heap().AllocateMemoryBlock(static_cast<int>(nbytes)));
         b->m_usMemSizeAndFlags = static_cast<hkUint16>(nbytes);
         return b;
     }
-    void operator delete(void*, unsigned int);
+    void operator delete(void*, size_t);
 
     hkpMotorActionMA(hkpRigidBody* body, const hkVector4& axis, hkReal spinRate, hkReal gain);
 

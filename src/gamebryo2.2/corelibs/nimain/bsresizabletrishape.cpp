@@ -99,7 +99,7 @@ struct NiObject;
 struct CloningProcess;
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     void __thiscall FUN_00a744a0();
 };
 struct FUN_00a744c0_holder

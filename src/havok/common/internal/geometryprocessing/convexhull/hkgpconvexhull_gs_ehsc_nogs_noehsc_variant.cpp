@@ -1852,7 +1852,7 @@ struct S00d7d1c0_Base {
     virtual void v2(void* p, int size);
     unsigned short m04;
 };
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 struct S00d7d1c0_Derived : S00d7d1c0_Base {
     S00d7d1c0_M08 m08;
     S00d7d1c0_M20 m20;
@@ -3351,7 +3351,7 @@ struct PoolBlock40
     int unk800;
     int m_iAllocatedCount;
 
-    static void operator delete(void* p, unsigned int size)
+    static void operator delete(void* p, size_t size)
     {
         ((BlockAllocAB*)FUN_00c85750()->heap())->ReleaseBlock(p, size);
     }
@@ -3493,7 +3493,7 @@ struct PoolBlock48
     int unk900;
     int m_iAllocatedCount;
 
-    static void operator delete(void* p, unsigned int size)
+    static void operator delete(void* p, size_t size)
     {
         ((BlockAllocAB*)FUN_00c85750()->heap())->ReleaseBlock(p, size);
     }
@@ -6158,7 +6158,7 @@ struct SplitWork {
     union { float rounded; SplitVertex** edge; } scratch;
     union { VecArrayBase front; SplitRawVec position; ErrorWork stream; } current;
 };
-inline void* operator new(unsigned int, HullVec* place) { return place; }
+inline void* operator new(size_t, HullVec* place) { return place; }
 struct HullImpl;
 struct FUN_00d76ca0 {
     __declspec(nothrow) virtual ~FUN_00d76ca0() throw();
@@ -6168,7 +6168,7 @@ struct FUN_00d76ca0 {
     int unk0c;
     int unk10;
     __declspec(nothrow) FUN_00d76ca0() throw();
-    __declspec(nothrow) static void* operator new(unsigned int n)
+    __declspec(nothrow) static void* operator new(size_t n)
     {
         HullMemory* mem = (HullMemory*)&fnvc_adapt::FUN_00c85750();
         FUN_00d76ca0* p = (FUN_00d76ca0*)mem->m_pAllocator->BlockAlloc(n);
@@ -8341,7 +8341,7 @@ public:
 struct S00d81510_TypeIsPod {};
 struct S00d81510_TypeIsClass {};
 struct S00d81510_Vertex;
-__forceinline void* operator new(unsigned int, S00d81510_Vertex* p) throw() { return p; }
+__forceinline void* operator new(size_t, S00d81510_Vertex* p) throw() { return p; }
 
 struct S00d81510_Allocator {
     virtual void vtbl00();
@@ -9558,8 +9558,8 @@ struct S00d7fb80_TriangleList {
     __forceinline S00d7fb80_Triangle* allocate(const S00d7fb80_Triangle& t = S00d7fb80_Triangle()) { return FUN_00d7efc0(t); }
     __forceinline S00d7fb80_Triangle* getFirst() const { return m_uiBufferCapacity; }
 };
-__forceinline void* operator new(unsigned int, S00d7fb80_Vertex* p) throw() { return p; }
-__forceinline void* operator new(unsigned int, S00d7fb80_Triangle* p) throw() { return p; }
+__forceinline void* operator new(size_t, S00d7fb80_Vertex* p) throw() { return p; }
+__forceinline void* operator new(size_t, S00d7fb80_Triangle* p) throw() { return p; }
 
 __declspec(noinline) S00d7fb80_Vertex* S00d7fb80_VertexList::CloneNode(const S00d7fb80_Vertex& v)
 {

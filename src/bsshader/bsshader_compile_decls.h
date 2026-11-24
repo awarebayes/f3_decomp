@@ -57,7 +57,7 @@ extern "C" long __stdcall D3DXCompileShader(const char*, unsigned int, const _D3
 class NiMemObjectAllocation
 {
   public:
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 class NiD3DVertexShader
 {

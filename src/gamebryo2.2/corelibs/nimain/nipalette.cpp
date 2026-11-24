@@ -40,7 +40,7 @@ void FUN_00a8b010_Node::Unlink()
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 extern int DAT_0109f3fc;
 void __fastcall _Call_a5d3a0(void*);
@@ -180,7 +180,7 @@ extern A8b110Allocator DAT_011f6238;
 
 struct A8b110Elem
 {
-    static void* operator new[](unsigned int bytes)
+    static void* operator new[](size_t bytes)
     {
         return DAT_011f6238.FUN_00aa3e40(bytes);
     }
@@ -344,7 +344,7 @@ struct MemoryBlock
     unsigned int value;
     MemoryBlock()
     {}
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return reinterpret_cast<MMExtra&>(g_memoryManager)._Allocate(size);
     }
@@ -654,7 +654,7 @@ struct MMAllocInterface
 struct ArrayElement
 {
     unsigned int value;
-    static void* operator new[](unsigned int bytes)
+    static void* operator new[](size_t bytes)
     {
         return ((MMAllocInterface*)&g_memoryManager)->FUN_00aa3e40(bytes);
     }

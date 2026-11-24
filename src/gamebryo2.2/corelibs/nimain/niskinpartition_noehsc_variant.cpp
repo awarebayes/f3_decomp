@@ -1139,7 +1139,7 @@ struct LBMemoryManager
 
 extern LBMemoryManager g_kLBMemoryManager;
 
-inline void* __cdecl operator new[](unsigned int auiSize)
+inline void* __cdecl operator new[](size_t auiSize)
 {
     return g_kLBMemoryManager.Allocate(auiSize);
 }

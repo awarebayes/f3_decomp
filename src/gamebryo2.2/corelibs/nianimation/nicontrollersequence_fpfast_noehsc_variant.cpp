@@ -127,7 +127,7 @@ struct FUN_00a30900_shell
 };
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct FUN_00a316a0_shell
 {
@@ -1459,7 +1459,7 @@ struct SeqInterpItem
 
     SeqInterpItem();
     ~SeqInterpItem();
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return _g_memoryManager.Allocate(uiSize);
     }
@@ -1475,7 +1475,7 @@ struct SeqTag
 
     SeqTag();
     ~SeqTag();
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return _g_memoryManager.Allocate(uiSize);
     }

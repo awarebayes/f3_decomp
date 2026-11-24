@@ -14,7 +14,7 @@ extern "C" __m128 _mm_setzero_ps();
 extern "C" __m128 _mm_mul_ps(__m128 kA, __m128 kB);
 extern "C" __m128 _mm_load_ps(const float*);
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

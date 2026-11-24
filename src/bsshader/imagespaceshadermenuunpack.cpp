@@ -10,7 +10,7 @@ struct NiRefObject
     volatile long refCount;
     NiRefObject() : refCount(0)
     {}
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     void IncRefCount()
     {
         InterlockedIncrement(&refCount);
@@ -98,7 +98,7 @@ struct ImageSpaceTexture
 
 struct NiScreenElementsData
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     int unk00;
     int unk04;
     int unk08;

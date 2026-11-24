@@ -855,7 +855,7 @@ struct AStarNodeFresh : AStarNode
         iKey = 0;
         m_pNextHashNode = 0;
     }
-    static void* operator new(unsigned int size, ScrapHeapBuffer& pool) throw()
+    static void* operator new(size_t size, ScrapHeapBuffer& pool) throw()
     {
         return pool.FUN_0086c710(size, ::DAT_00e27ed4);
     }

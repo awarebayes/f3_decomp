@@ -18,7 +18,7 @@ class NiGeomMorpherController
             if (m_spControllerInterpolator)
                 m_spControllerInterpolator->DecRefCount();
         }
-        static void* operator new[](unsigned int size) throw()
+        static void* operator new[](size_t size) throw()
         {
             return g_memoryManager.Allocate(size);
         }

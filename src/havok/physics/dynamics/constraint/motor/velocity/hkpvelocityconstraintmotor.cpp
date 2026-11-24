@@ -26,7 +26,7 @@ struct Router_d861
     static hkThreadMemoryHolder_d861c0& __cdecl FUN_00c85750() throw();
 };
 
-inline void* operator new(unsigned int size, void* p)
+inline void* operator new(size_t size, void* p)
 {
     return p;
 }

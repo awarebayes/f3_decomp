@@ -127,7 +127,7 @@ struct NiNode : NodeInterfaceCredits {
  unsigned unka4;
  unsigned unka8;
  NiNode(unsigned short n);
- static void* operator new(unsigned n) {return FUN_0089eb90(n);}
+ static void* operator new(size_t n) {return FUN_0089eb90(n);}
  void SetPosition(const VecCredits& v){position=v;}
  void FUN_004236f0(void*);
  void FUN_008268a0();void FUN_00c24b70();void FUN_008264c0(const UpdateCredits&);
@@ -138,7 +138,7 @@ struct NiProperty {
  NiProperty();
 };
 struct NiAlphaProperty : NiProperty {
- static void* operator new(unsigned n){return FUN_0089eb90(n);}
+ static void* operator new(size_t n){return FUN_0089eb90(n);}
  unsigned short flags; unsigned char unk1a;
  NiAlphaProperty():flags(0xec),unk1a(0) {}
  virtual ~NiAlphaProperty();

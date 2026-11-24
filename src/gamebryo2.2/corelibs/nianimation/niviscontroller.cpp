@@ -30,7 +30,7 @@ void* __cdecl FUN_00a44eb0()
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct FUN_00a57790_shell
@@ -334,7 +334,7 @@ template <class T> class BA44D50Pointer
 class BA44D50BoolInterpolator : public BA44D50RefObject
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     BA44D50BoolInterpolator(BA44D50Object* pkData) throw();
@@ -382,7 +382,7 @@ void BA44D50Controller::LinkBoolInterpolator(BA44D50Stream& kStream)
 class BSFaceGenMorphData
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 };
 struct CtlA44 : FUN_00a57790_shell
 {
@@ -393,7 +393,7 @@ struct CtlA44 : FUN_00a57790_shell
         *(void***)this = &DAT_01097e8c;
     }
 };
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

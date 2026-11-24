@@ -515,7 +515,7 @@ class ObjDDF9
         ClearItems();
     }
     void ClearItems() throw();
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         hkRouterDDF9::FUN_00c85750().heap().ReleaseBlock(p, nbytes);
     }
@@ -717,7 +717,7 @@ struct FUN_00ddeff0
     int unk4;
     FUN_00ddeff0();
     virtual ~FUN_00ddeff0();
-    void operator delete(void* p, unsigned int nbytes)
+    void operator delete(void* p, size_t nbytes)
     {
         if (p)
             S_00ddeff0_Router::FUN_00c85750()->heap().ReleaseBlock(p, nbytes);

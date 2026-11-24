@@ -963,7 +963,7 @@ FUN_00d9c110_cls::FUN_00d9c110_cls() {
     m70 = v;
 }
 
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 
 template <class T> struct hkArray_d9c4 {
     T* m_data;

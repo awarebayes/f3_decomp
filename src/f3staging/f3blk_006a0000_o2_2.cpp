@@ -478,7 +478,7 @@ struct Q6bPoint { float x, y, z; };
 
 class FUN_0073a860 {
 public:
-    static void* operator new(unsigned int n) { return f3m_6b3e70::DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return f3m_6b3e70::DAT_01090a78.FUN_0086b930(n); }
     static void operator delete(void* p) { f3m_6b3e70::DAT_01090a78.FUN_0086ba60(p); }
     FUN_0073a860();
     int unk00;

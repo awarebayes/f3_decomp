@@ -7,7 +7,7 @@ extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volati
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct NiRefObject_s
 {

@@ -395,7 +395,7 @@ struct DistantTreeInstance
             DAT_012007b8 = fnv_particle_shader_renderer_level >= 2 ? 114 : 40;
         return DAT_012007b8;
     }
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
@@ -658,7 +658,7 @@ struct FUN_00bb6c30
     int unkf0;
     int unkf4;
     int unkf8;
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         return FUN_00aa13e0(bytes);
     }
@@ -1192,7 +1192,7 @@ extern char DAT_01011584;
 
 struct Obj
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     Obj(int a, int b);
     virtual void Slot0();
     virtual void DeleteThis();

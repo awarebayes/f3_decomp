@@ -589,7 +589,7 @@ float FUN_0056fc20(float scale,Input56* input,bool adjust){if(!input)return scal
 extern int DAT_0106e9cc;
 namespace f3m_00573570 {
 namespace waterAlloc573 {struct Heap {void* FUN_0086b930(unsigned int);};extern Heap DAT_01090a78;}
-struct WaterScalar573 {float value;static void* operator new[](unsigned int size){return waterAlloc573::DAT_01090a78.FUN_0086b930(size);}};
+struct WaterScalar573 {float value;static void* operator new[](size_t size){return waterAlloc573::DAT_01090a78.FUN_0086b930(size);}};
 struct bhkWaterListener {virtual ~bhkWaterListener();int unk04,unk08,unk0C,unk10;bhkWaterListener();};
 struct BGSZoneTargetListener {virtual ~BGSZoneTargetListener();int unk04;BGSZoneTargetListener();};
 struct WaterList573 {int first,count,capacity;WaterList573(){capacity=0;first=0;count=0;}~WaterList573();};

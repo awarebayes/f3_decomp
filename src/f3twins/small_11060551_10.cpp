@@ -70,12 +70,12 @@ void FUN_00d99aa0()
 
 void __fastcall FUN_0082e4f0(void*);
 void __cdecl FUN_0089ec10(void*, unsigned int);
-struct C_00432f20 { virtual ~C_00432f20(); char p[176 - 4]; static void operator delete(void* q, unsigned int s) { FUN_0089ec10(q, s); } };
+struct C_00432f20 { virtual ~C_00432f20(); char p[176 - 4]; static void operator delete(void* q, size_t s) { FUN_0089ec10(q, s); } };
 C_00432f20::~C_00432f20() { FUN_0082e4f0(this); }
 
 void __fastcall FUN_0082e4f0(void*);
 void __cdecl FUN_0089ec10(void*, unsigned int);
-struct C_00860540 { virtual ~C_00860540(); char p[176 - 4]; static void operator delete(void* q, unsigned int s) { FUN_0089ec10(q, s); } };
+struct C_00860540 { virtual ~C_00860540(); char p[176 - 4]; static void operator delete(void* q, size_t s) { FUN_0089ec10(q, s); } };
 C_00860540::~C_00860540() { FUN_0082e4f0(this); }
 
 // ---- family f096

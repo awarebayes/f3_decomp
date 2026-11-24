@@ -718,7 +718,7 @@ struct S0095e7a0_Bone
     void* name;
     bool lockTranslation;
 
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         S0095e7a0_Heap* h = S0095e7a0_GetHeap();
         void* p = h->freeList40;
@@ -776,7 +776,7 @@ struct S0095e7a0_Skeleton
         unk1c = 0;
         unk20 = 0;
     }
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         S0095e7a0_Heap* h = S0095e7a0_GetHeap();
         void* p = h->freeList58;

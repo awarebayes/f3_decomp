@@ -419,13 +419,13 @@ struct CopyMaps {Deletable* a; Deletable* b; unsigned c,d; CopyMaps(unsigned n);
 struct FloatConfiguredObject { CopyMaps maps; Point scale; FloatConfiguredObject(float f):maps(0x101) {scale.z=f;scale.y=f;scale.x=f;} };
 void* __cdecl FUN_0089eb90(unsigned);
 void __cdecl FUN_0089ed40(void*);
-struct BigObj : Obj { static void* operator new(unsigned n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);} unsigned unka8; BigObj(int); };
+struct BigObj : Obj { static void* operator new(size_t n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);} unsigned unka8; BigObj(int); };
 struct Rnd { unsigned FUN_0086c4b0(int); float F() {unsigned r=FUN_0086c4b0(-1);return (float)r*4.656612873077393e-10-1.0;} };
 Rnd* FUN_0044a2d0();
 struct InitBase {unsigned* vtable;unsigned unk04,unk08,unk0c,unk10; InitBase(void*);};
 extern unsigned DAT_00dce0cc[];
-struct InitObj:InitBase {static void* operator new(unsigned n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);} InitObj(void* p):InitBase(p) {vtable=DAT_00dce0cc;} void FUN_008da000(void*);};
-struct Sphere {unsigned unk00,unk04;void* shape;unsigned unk0c,unk10;static void* operator new(unsigned n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);} Sphere(float,bool);void* GetShape(){return shape;}};
+struct InitObj:InitBase {static void* operator new(size_t n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);} InitObj(void* p):InitBase(p) {vtable=DAT_00dce0cc;} void FUN_008da000(void*);};
+struct Sphere {unsigned unk00,unk04;void* shape;unsigned unk0c,unk10;static void* operator new(size_t n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);} Sphere(float,bool);void* GetShape(){return shape;}};
 extern unsigned DAT_00f79e58;
 inline unsigned Filter(int layer,void*,int) {unsigned x=(DAT_00f79e58+1)&0xffff;DAT_00f79e58=x;if(!x)DAT_00f79e58=x=10;return (x<<16)|layer;}
 struct Temp622 {unsigned value; Temp622* Ctor(int a,void* b,int c) {value=Filter(a,b,c);return this;} void* FUN_00559450() {return (void*)value;} };
@@ -479,8 +479,8 @@ void FUN_0056f0f0(void* x) {filter=(unsigned)x;filter2=(unsigned)x;}
 void FUN_0056f110(Sphere* p) {void* x=p?p->GetShape():0;material=x;material2=x;}
 ~Big() {if(((unsigned)capacity&0x80000000)==0) {int n=capacity&0x3fffffff;Memory* m=(Memory*)TlsGetValue(DAT_010f3170);m->FUN_008f6d90(data,n*8,0x17);}}
 };
-struct Body {unsigned unk00,unk04;void* body;unsigned unk0c,unk10,unk14,unk18;static void* operator new(unsigned n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);} Body(Big*);void* FUN_004ae750(){return this?body:0;}void FUN_00900ad0(void*);};
-struct Acc { static void* operator new(unsigned n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);}
+struct Body {unsigned unk00,unk04;void* body;unsigned unk0c,unk10,unk14,unk18;static void* operator new(size_t n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);} Body(Big*);void* FUN_004ae750(){return this?body:0;}void FUN_00900ad0(void*);};
+struct Acc { static void* operator new(size_t n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);}
 unsigned unk00;
 unsigned unk04;
 unsigned unk08;
@@ -530,7 +530,7 @@ unsigned unkb4;
 Acc();void FUN_005468d0(int x) {unkb0=x;}
 };
 struct S1fc {unsigned unk00;void* m04;float fa,fb,fc,fd;void Ctor() {unk00=0;}};
-struct Liquid {static void* operator new(unsigned n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);}
+struct Liquid {static void* operator new(size_t n) {return FUN_0089eb90(n);} static void operator delete(void* p) {FUN_0089ed40(p);}
 unsigned unk00;
 unsigned unk04;
 unsigned unk08;

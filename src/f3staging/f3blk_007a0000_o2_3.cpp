@@ -12,7 +12,7 @@ namespace task1956 {
 struct Heap {void* FUN_0086b930(unsigned int);void FUN_0086ba60(void*);};
 extern Heap DAT_01090a78;
 struct Weapon; struct BoundObject;
-struct Allocated {static void* operator new(unsigned int n){return DAT_01090a78.FUN_0086b930(n);} static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
+struct Allocated {static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);} static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
 struct FUN_007d6500:Allocated {
  unsigned int unk000;
  unsigned int unk004;

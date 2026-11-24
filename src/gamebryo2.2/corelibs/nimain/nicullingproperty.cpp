@@ -13,7 +13,7 @@ GlobalObjectO2_00a7b610* __cdecl FUN_00a8f520()
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct FUN_00a8fce0_shell
@@ -337,7 +337,7 @@ void BA8F690Property::GetViewerStrings(BA8F690StringArray* pkStrings)
 }
 
 extern int DAT_0109f68c;
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

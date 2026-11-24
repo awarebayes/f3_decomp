@@ -143,7 +143,7 @@ struct PrimArray : GlobalObject_004aff00
 struct BoundDataBlock
 {
     char data[0x30];
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
@@ -352,7 +352,7 @@ struct FloatQuad
 {
     float v;
 
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return reinterpret_cast<TableAllocator*>(&DAT_011f6238)->FUN_00aa3e40(uiSize);
     }

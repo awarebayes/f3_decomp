@@ -6279,7 +6279,7 @@ struct Message86
     int x;
     int y;
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern Receiver86* g_dataHandler;
 extern Receiver86* g_TESSaveLoadGame;
 extern Receiver86* g_BGSSaveLoadGame;
@@ -10983,12 +10983,12 @@ struct Output : Scene
     unsigned int unk278;
     unsigned int unk27c;
     Output(int, int, int);
-    static __forceinline void* operator new(unsigned int);
+    static __forceinline void* operator new(size_t);
     static __forceinline void operator delete(void*)
     {}
 };
 void* FUN_00aa13e0(unsigned int);
-__forceinline void* Output::operator new(unsigned int n)
+__forceinline void* Output::operator new(size_t n)
 {
     return FUN_00aa13e0(n);
 }

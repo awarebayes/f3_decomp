@@ -160,7 +160,7 @@ void* __thiscall FUN_00a97740_shell::DestroyRangeLODData(unsigned int auiFlags)
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct Base00aa09a0
 {
@@ -249,7 +249,7 @@ extern const BA97CE0Point3 g_kA97CE0Zero;
 class BA97CE0Object
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     BA97CE0Object() throw();
     virtual ~BA97CE0Object();

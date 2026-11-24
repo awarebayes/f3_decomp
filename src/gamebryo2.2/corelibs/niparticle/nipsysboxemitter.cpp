@@ -31,7 +31,7 @@ GlobalObjectO2_00a7b618* __cdecl FUN_00c201c0()
 extern int DAT_010bda2c;
 struct BSFadeNode
 {
-    void* operator new(unsigned int);
+    void* operator new(size_t);
     void FUN_00c31af0();
 };
 // Allocates a 100-byte BSFadeNode, runs its constructor, zeroes the floats at offsets 0x58-0x60, sets its vtable, and returns it (or null).
@@ -100,7 +100,7 @@ struct CloningProcess
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct FUN_00c1ffa0_s

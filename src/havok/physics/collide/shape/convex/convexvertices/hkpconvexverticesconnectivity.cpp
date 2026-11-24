@@ -28,7 +28,7 @@ void hkpCVCStandIn::FUN_00e48de0()
     m_kNumVerticesPerFace.m_iElementCount = 0;
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

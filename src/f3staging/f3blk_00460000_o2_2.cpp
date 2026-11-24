@@ -2512,7 +2512,7 @@ struct RgbaColor
     float m_f08;
     float m_f0c;
     RgbaColor();
-    static void* operator new[](unsigned int uiSize) { return DAT_01090a78.FUN_0086b930(uiSize); }
+    static void* operator new[](size_t uiSize) { return DAT_01090a78.FUN_0086b930(uiSize); }
     static void operator delete[](void* pv) { DAT_01090a78.FUN_0086ba60(pv); }
 };
 
@@ -2619,7 +2619,7 @@ struct NiAlphaProperty : NiPropBase
     unsigned short m_us18;  // +0x18
     unsigned char m_b1a;    // +0x1a
     NiAlphaProperty() : m_us18(0xec), m_b1a(0) {}
-    static void* operator new(unsigned int uiSize) { return FUN_0089eb90(uiSize); }
+    static void* operator new(size_t uiSize) { return FUN_0089eb90(uiSize); }
     static void operator delete(void* pv);
 };
 
@@ -2659,7 +2659,7 @@ struct FUN_00af2240
     int m_i78;
     int m_i7c;
     FUN_00af2240();
-    static void* operator new(unsigned int uiSize) { return FUN_0089eb90(uiSize); }
+    static void* operator new(size_t uiSize) { return FUN_0089eb90(uiSize); }
     static void operator delete(void* pv);
 };
 
@@ -2724,7 +2724,7 @@ struct FUN_00ad2a40
     int m_idc;
     int m_ie0;;
     FUN_00ad2a40();
-    static void* operator new(unsigned int uiSize) { return FUN_0089eb90(uiSize); }
+    static void* operator new(size_t uiSize) { return FUN_0089eb90(uiSize); }
     static void operator delete(void* pv);
 };
 
@@ -2783,7 +2783,7 @@ struct FUN_0083c020
     FUN_0083c020(unsigned short usCount, float* pfPos, int iZero, RgbaColor* pQuads,
                  int iZero2, int iZero3, int iZero4, unsigned short usSub,
                  int iOne, unsigned short* pusCount, unsigned short* pusIdx);
-    static void* operator new(unsigned int uiSize) { return FUN_0089eb90(uiSize); }
+    static void* operator new(size_t uiSize) { return FUN_0089eb90(uiSize); }
     static void operator delete(void* pv);
 };
 

@@ -30,7 +30,7 @@ class NiMemObject
 {
   public:
     static void* operator new(size_t size);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 FNV_STATIC_ASSERT(sizeof(NiMemObject) == sizeof(FNV_NiMemObject_Canonical));
 

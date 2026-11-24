@@ -89,8 +89,8 @@ class PathingRequest : public PathingInfo
     void SetAvoidNodeArray(BSSimpleArray<void*, 1024>*);
     void SetGoalZDelta(float);
 
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     static PathingRequest* CreateRequestForType(PATHING_REQUEST_TYPE);
     void LoadGame(BGSLoadFormBuffer* buffer);
     void InitLoadGame(BGSLoadFormBuffer* buffer);

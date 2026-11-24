@@ -237,7 +237,7 @@ struct S_00e064f0_Ref
     virtual void vfn00();
     short m_usAllocationSize;
     short m_ref;
-    static void* operator new(unsigned n)
+    static void* operator new(size_t n)
     {
         char* p = (char*)S_00e064f0_Router::GetMonitorStream().heap().AllocateMemoryBlock(n);
         *(short*)(p + 4) = (short)n;

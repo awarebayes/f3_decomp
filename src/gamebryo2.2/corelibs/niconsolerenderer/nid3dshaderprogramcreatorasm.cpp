@@ -127,7 +127,7 @@ struct NiD3DShaderProgramStub
 {
     NiD3DShaderProgramStub(void* pkRenderer, int eType) throw();
     virtual ~NiD3DShaderProgramStub();
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     int unk04;
     int unk08;
     int unk0C;
@@ -261,7 +261,7 @@ int FUN_00aa0020(int, int, const char*, long);
 
 struct NiMemObjectStub
 {
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 };
 
 struct NiD3DShaderProgramStub : NiMemObjectStub
@@ -381,7 +381,7 @@ extern void* DAT_0126fa2c;
 int FUN_00aa0020(int, int, const char*, long);
 struct NiMemObject
 {
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
 };
 struct PixelBase : NiMemObject
 {

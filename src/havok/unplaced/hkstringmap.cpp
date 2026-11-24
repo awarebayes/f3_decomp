@@ -612,7 +612,7 @@ class FUN_00d87790
 
     FUN_00d87790(hkBoolE028 bOwnsKeys) throw();
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return hkRouterE028::FUN_00c85750().heap().AllocateMemoryBlock(uiSize);
     }

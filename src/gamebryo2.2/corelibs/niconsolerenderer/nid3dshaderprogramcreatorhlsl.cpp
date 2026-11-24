@@ -118,7 +118,7 @@ void __thiscall NiD3DShaderProgram::FUN_00eea540(NiD3DShaderProgramCreator* pkCr
     *reinterpret_cast<unsigned int*>(this + 0x1c) = reinterpret_cast<unsigned int>(pkCreator);
 }
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 void __cdecl FUN_00e89b70();
 
 struct FUN_00be0b70_shell
@@ -136,7 +136,7 @@ void* __thiscall FUN_00be0b70_shell::FUN_00be0b70(unsigned int flags)
     return this;
 }
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 struct NiD3DHLSLPixelShader : NiD3DPixelShader
 {
@@ -724,7 +724,7 @@ class NiD3DHLSLPixelShaderStandIn : public NiD3DPixelShaderStandIn
         m_pcShaderProfile = 0;
         m_pShaderConstantTable = 0;
     }
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     virtual void v01();
     virtual void v02();
     virtual void v03();
@@ -1179,7 +1179,7 @@ NiD3DHLSLPixelShaderStandIn* HLSLCreator_b10814::FUN_00e95f20(void* pvBuffer, un
 
 struct NiMemObject
 {
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 };
 extern void* DAT_0126fa2c;
 extern void* DAT_0126fa28;
@@ -1596,7 +1596,7 @@ struct S00e96610_VS : S00e96610_VSMid
         m_i44 = 0;
     }
     virtual ~S00e96610_VS();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 struct S00e96610_Creator

@@ -53,7 +53,7 @@ public:
     virtual void Open(int a, int b);
 
     BSFile(const char* apPath, int aeMode, int aiBufferSize, int abTextMode);
-    static void* operator new(unsigned int auiSize) { return DAT_01090a78.Allocate(auiSize); }
+    static void* operator new(size_t auiSize) { return DAT_01090a78.Allocate(auiSize); }
     static void operator delete(void* apMem) { DAT_01090a78.Free(apMem); }
 
     int unk04;
@@ -238,7 +238,7 @@ struct List {
     Item* head;
     int unk04;
     List() { head = 0; unk04 = 0; }
-    static void* operator new(unsigned int size) throw() { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) throw() { return DAT_01090a78.FUN_0086b930(size); }
 };
 struct Mgr {
     List* list;

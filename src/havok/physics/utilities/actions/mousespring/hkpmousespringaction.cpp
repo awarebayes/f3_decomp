@@ -448,7 +448,7 @@ class FUN_00cbb4e0 : public hkpUnaryAction
 
     FUN_00cbb4e0(hkpEntity* pkEntity) throw();
 
-    void* operator new(unsigned int uiSize)
+    void* operator new(size_t uiSize)
     {
         hkMemoryRouterCBB7* pkRouter = (hkMemoryRouterCBB7*)FUN_00c85750();
         hkReferencedObject* pkObj = (hkReferencedObject*)pkRouter->m_pStreamAllocator->AllocateMemoryBlock(uiSize);

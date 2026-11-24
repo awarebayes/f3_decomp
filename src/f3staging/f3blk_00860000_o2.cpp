@@ -1636,7 +1636,7 @@ void __cdecl FUN_0086cbc0() { delete f3m_0086cbc0::DAT_01090bdc; f3m_0086cbc0::D
 namespace f3m_008603e0 {
 void* __cdecl FUN_0089eb90(unsigned int n) throw();
 struct B008603e0 { virtual ~B008603e0(); virtual void v4(); int pad[5]; B008603e0() throw(); };
-struct D008603e0 : B008603e0 { unsigned short value; virtual ~D008603e0(); static void* operator new(unsigned int n) throw() { return FUN_0089eb90(n); } D008603e0() throw(); };
+struct D008603e0 : B008603e0 { unsigned short value; virtual ~D008603e0(); static void* operator new(size_t n) throw() { return FUN_0089eb90(n); } D008603e0() throw(); };
 D008603e0::D008603e0() throw() { value = 0; }
 D008603e0* __cdecl FUN_008603e0() { return new D008603e0(); }
 }   // namespace f3m_008603e0
@@ -1645,7 +1645,7 @@ D008603e0* __cdecl FUN_008603e0() { return new D008603e0(); }
 namespace f3m_00864bb0 {
 void* __cdecl FUN_0089eb90(unsigned int n) throw();
 struct B00864bb0 { virtual ~B00864bb0(); virtual void v4(); int pad[5]; B00864bb0() throw(); };
-struct D00864bb0 : B00864bb0 { unsigned short value; virtual ~D00864bb0(); static void* operator new(unsigned int n) throw() { return FUN_0089eb90(n); } D00864bb0() throw(); };
+struct D00864bb0 : B00864bb0 { unsigned short value; virtual ~D00864bb0(); static void* operator new(size_t n) throw() { return FUN_0089eb90(n); } D00864bb0() throw(); };
 D00864bb0::D00864bb0() throw() { value = 0; }
 D00864bb0* __cdecl FUN_00864bb0() { return new D00864bb0(); }
 }   // namespace f3m_00864bb0
@@ -1967,7 +1967,7 @@ void __cdecl FUN_00866240() {
 namespace f3m_00860800 {
 void* __cdecl FUN_0089eb90(unsigned int n) throw();
 struct B860800 { virtual ~B860800(); virtual void v4(); int pad[5]; B860800() throw(); };
-struct D860800 : B860800 { unsigned short w18; char pad2[2]; int a1c; virtual ~D860800(); static void* operator new(unsigned int n) throw() { return FUN_0089eb90(n); } D860800() throw(); };
+struct D860800 : B860800 { unsigned short w18; char pad2[2]; int a1c; virtual ~D860800(); static void* operator new(size_t n) throw() { return FUN_0089eb90(n); } D860800() throw(); };
 D860800::D860800() throw() { a1c = -1; w18 = 1; }
 D860800* __cdecl FUN_00860800() { return new D860800(); }
 }   // namespace f3m_00860800
@@ -2387,7 +2387,7 @@ void AbstractHeapX::FUN_0086df90(HeapStatsX* stats, bool full)
 
 // @f3 0x0086c600 (community match, verified in this file)
 namespace f3m_0086c600 {
-namespace f3m_0086c600 { struct Heap { void* FUN_0086b930(unsigned int n); }; extern Heap DAT_01090a78; struct O { char pad[0x200]; int a200, a204; char pad2[0x18]; int a220, a224; char pad3[0x18]; static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); } O() { a200 = 0; a204 = 0; a220 = 0; a224 = 0; } }; extern O* DAT_01090bdc; }
+namespace f3m_0086c600 { struct Heap { void* FUN_0086b930(unsigned int n); }; extern Heap DAT_01090a78; struct O { char pad[0x200]; int a200, a204; char pad2[0x18]; int a220, a224; char pad3[0x18]; static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); } O() { a200 = 0; a204 = 0; a220 = 0; a224 = 0; } }; extern O* DAT_01090bdc; }
 void __cdecl FUN_0086c600() { f3m_0086c600::DAT_01090bdc = new f3m_0086c600::O(); }
 }   // namespace f3m_0086c600
 
@@ -5039,7 +5039,7 @@ struct AllocationBlock {
     unsigned int unk5c;
     AllocationBlock(unsigned int,unsigned int,unsigned int);
     ~AllocationBlock();
-    static void* operator new(unsigned int bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new(size_t bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
     static void operator delete(void* memory) { DAT_01090a78.FUN_0086ba60(memory); }
 };
 struct Owner {
@@ -5406,7 +5406,7 @@ struct Manager86cb00 {
     int unk238;
     int unk23c;
     Manager86cb00() { unk200 = 0; unk204 = 0; unk220 = 0; unk224 = 0; }
-    static void* operator new(unsigned int size) throw() { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) throw() { return DAT_01090a78.FUN_0086b930(size); }
     char* FUN_0086c840(unsigned int* size);
 };
 
@@ -6274,7 +6274,7 @@ struct Heap { void* FUN_0086b930(unsigned int bytes); };
 extern Heap DAT_01090a78;
 struct Slot {
     unsigned short v;
-    static void* operator new[](unsigned int bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new[](size_t bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
 };
 }
 struct Pool86d690;
@@ -6336,7 +6336,7 @@ extern "C" __declspec(dllimport) unsigned long __stdcall GetCurrentThreadId();
 struct FUN_0086cb70 {
     int unk00, unk04, unk08, unk0c;
     FUN_0086cb70();
-    static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
     static void operator delete(void* p);
 };
 struct Map {
@@ -7876,9 +7876,9 @@ int unk230;
 int unk234;
 int unk238;
 int unk23c;
-Recycler():unk200(0),unk204(0),unk220(0),unk224(0){} void* operator new(unsigned);void FUN_0086c9a0(void*,unsigned);};extern Recycler* DAT_01090bdc;
+Recycler():unk200(0),unk204(0),unk220(0),unk224(0){} void* operator new(size_t);void FUN_0086c9a0(void*,unsigned);};extern Recycler* DAT_01090bdc;
 struct Heap {void* FUN_0086b930(unsigned);};extern Heap DAT_01090a78;
-void* Recycler::operator new(unsigned size){return DAT_01090a78.FUN_0086b930(size);}
+void* Recycler::operator new(size_t size){return DAT_01090a78.FUN_0086b930(size);}
 struct Object {char* first;int count;char* last;void FUN_0086caa0();};
 void Object::FUN_0086caa0(){if(!DAT_01090bdc)DAT_01090bdc=new Recycler;DAT_01090bdc->FUN_0086c9a0(first,last-first);first=0;count=0;}
 }

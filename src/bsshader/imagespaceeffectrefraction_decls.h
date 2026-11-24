@@ -60,7 +60,7 @@ class ImageSpaceShaderParam : public ImageSpaceEffectParam
     ImageSpaceShaderParam();
     void AllocateShaderConstants(int vertexCount, int pixelCount);
     void SetShaderConstantVector4(int index, float x, float y, float z, float w);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

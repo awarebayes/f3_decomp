@@ -36,9 +36,9 @@ struct NiNode
 };
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }
@@ -188,7 +188,7 @@ struct S_00a953b0_Node
     int unka8;
     S_00a953b0_Node(unsigned short) throw();
     virtual void v0();
-    void* operator new(unsigned int n)
+    void* operator new(size_t n)
     {
         return FUN_00aa13e0(n);
     }

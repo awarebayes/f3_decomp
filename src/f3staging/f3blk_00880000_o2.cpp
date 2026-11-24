@@ -606,7 +606,7 @@ bool Owner24::FUN_0088ba60(Object24* object, void* unused1, void* unused2) {
 // @f3 0x0089aae0 (community match, verified in this file)
 void __cdecl FUN_0089ec10(void*, unsigned int);
 void __cdecl FUN_0089e890(void*);
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 extern int DAT_00e2be70;
 extern void* DAT_00e2be98;
 extern void* DAT_00e2be78;
@@ -639,7 +639,7 @@ struct DynamicSetData
 };
 struct DynamicChipData
 {
-    static __forceinline void operator delete(void* p, unsigned int size) { ::operator delete(p, size); }
+    static __forceinline void operator delete(void* p, size_t size) { ::operator delete(p, size); }
     ~DynamicChipData()
     {
         buffer = 0;
@@ -1155,7 +1155,7 @@ unsigned int unk24;
 unsigned int unk28;
 unsigned int unk2c;
 unsigned int unk30;
-~Value301(){FUN_00899a00();}void FUN_00899a00();static void operator delete(void*p,unsigned int size){FUN_0089ec10(p,size);}};struct Node301{unsigned int unk00;};struct Map301{void*vtable;unsigned int size;Node301**buckets;__forceinline Node301* First(){for(unsigned int i=0;i<size;++i)if(buckets[i])return buckets[i];return 0;}void FUN_0089a5d0(Node301*&,unsigned int&,Value301* volatile&);void FUN_00899cf0(unsigned int);};struct Owner301{unsigned int unk00,unk04,unk08;Map301 map;void FUN_00899e20();};
+~Value301(){FUN_00899a00();}void FUN_00899a00();static void operator delete(void*p,size_t size){FUN_0089ec10(p,size);}};struct Node301{unsigned int unk00;};struct Map301{void*vtable;unsigned int size;Node301**buckets;__forceinline Node301* First(){for(unsigned int i=0;i<size;++i)if(buckets[i])return buckets[i];return 0;}void FUN_0089a5d0(Node301*&,unsigned int&,Value301* volatile&);void FUN_00899cf0(unsigned int);};struct Owner301{unsigned int unk00,unk04,unk08;Map301 map;void FUN_00899e20();};
 void Owner301::FUN_00899e20(){Node301*position=map.First();while(position){unsigned int key;Value301* volatile value;map.FUN_0089a5d0(position,key,value);map.FUN_00899cf0(key);Value301*current=value;if(current){current->FUN_00899a00();FUN_0089ec10(current,sizeof(Value301));}}}
 }
 }   // namespace f3m_00899e20

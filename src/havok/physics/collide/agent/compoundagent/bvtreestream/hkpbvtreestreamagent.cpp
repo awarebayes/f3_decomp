@@ -1093,7 +1093,7 @@ void* __cdecl ::fnv_00d2e5a0::FUN_00d2e5a0(void* second, void* first, void* cont
 
 }  // namespace fnv_00d2e5a0
 
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

@@ -35,7 +35,7 @@ NiSpotLightShell* __thiscall NiSpotLightShell::FUN_00a94d60(unsigned int flags)
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     void* __thiscall FUN_00a94ce0();
 };
 
@@ -593,7 +593,7 @@ class BA94DD0CloningProcess;
 class BA94DD0FadeNode
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     BA94DD0FadeNode() throw();
     virtual ~BA94DD0FadeNode();

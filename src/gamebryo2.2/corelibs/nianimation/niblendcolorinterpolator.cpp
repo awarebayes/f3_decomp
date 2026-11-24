@@ -39,7 +39,7 @@ void* __cdecl FUN_00a56060()
 void __fastcall FUN_00a36890(void*);
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 extern RgbaColor const DAT_011a9430;
 extern int DAT_011a9434;

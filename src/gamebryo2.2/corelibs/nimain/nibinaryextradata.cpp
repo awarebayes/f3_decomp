@@ -9,7 +9,7 @@ struct NiExtraData
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 
 extern int DAT_0102e394;
@@ -409,7 +409,7 @@ extern void* __cdecl NiMalloc(unsigned int stSize);
 class A7F920ExtraData
 {
   public:
-    static void* operator new(unsigned int stSize);
+    static void* operator new(size_t stSize);
     static void operator delete(void* p);
 
     __declspec(nothrow) A7F920ExtraData();

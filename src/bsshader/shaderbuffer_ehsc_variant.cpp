@@ -118,7 +118,7 @@ struct Thing_b9704
     unsigned int unk100;
     unsigned int unk104;
     Thing_b9704(unsigned int a1, unsigned int a2, Thing_b9704* a3);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return ((S00b7fd90_Alloc*)&DAT_011f6238)->FUN_00aa3e40(size);
     }

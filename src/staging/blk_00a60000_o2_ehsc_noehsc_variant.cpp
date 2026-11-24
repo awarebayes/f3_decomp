@@ -54,7 +54,7 @@ extern void* DAT_011c5f58;
 void __stdcall FUN_00a638c0(void* p);
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct NiTriBasedGeomData;
 NiTriBasedGeomData* __fastcall InitializeTriBasedGeomData(NiTriBasedGeomData*);
@@ -88,7 +88,7 @@ struct FUN_00a72590_Class
 };
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct FUN_00a7d6e0_Class
 {
@@ -1793,7 +1793,7 @@ class NiTPointerMapA6F : public NiTMapBaseA6F
 class NiObjectA6F
 {
   public:
-    static void* operator new(unsigned int uiSize) throw();
+    static void* operator new(size_t uiSize) throw();
 
     NiObjectA6F() throw();
     virtual ~NiObjectA6F() throw();
@@ -1984,7 +1984,7 @@ struct NodeA616
     NodeA616(EntryA616* entry, NodeA616* next) : m_entry(entry), m_next(next)
     {}
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return ((FUN_00a5e3a0_Helper*)&_g_memoryManager)->FUN_00aa3e40(uiSize);
     }
@@ -2495,7 +2495,7 @@ class FUN_007613f0
     FUN_007613f0() throw();
     ~FUN_007613f0() throw()
     {}
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return ((FUN_00a5e3a0_Helper*)&DAT_011f6238)->FUN_00aa3e40(uiSize);
     }

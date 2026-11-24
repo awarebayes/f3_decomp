@@ -2506,8 +2506,8 @@ void FUN_0063e2f0_shell::FUN_0063e2f0()
 namespace fnv_0063ef20 {
 struct TESObjectDoorController
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 struct ImageSpaceModifierInstanceDOF : public TESObjectDoorController
 {
@@ -3384,8 +3384,8 @@ class NiNode
     int ma0;
     int ma4;
     int ma8;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     NiNode(unsigned short);
     NiNode* FUN_009611e0();
     void FUN_005468d0(bool);
@@ -3466,8 +3466,8 @@ class NiAlphaProperty
 {
   public:
     int m00, m04, m08, m0c, m10, m14, m18;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     NiAlphaProperty();
     void FUN_00439340(int);
     void FUN_00439390(int);

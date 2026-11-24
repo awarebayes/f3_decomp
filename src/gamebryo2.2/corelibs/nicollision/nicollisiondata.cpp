@@ -1021,7 +1021,7 @@ struct GeomObj : NiObjectStub
 struct TriData
 {
     TriData(unsigned short usTriangles, unsigned short* pusTriList, void* pkVertex, void* pkWorldVertex, int iParam);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -1959,7 +1959,7 @@ struct Allocator
 {
     void* __thiscall FUN_00aa3e40(unsigned int bytes);
 };
-void* __cdecl operator new[](unsigned int n)
+void* __cdecl operator new[](size_t n)
 {
     return reinterpret_cast<Allocator&>(DAT_011f6238).FUN_00aa3e40(n);
 }

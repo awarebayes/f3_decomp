@@ -14,13 +14,13 @@ struct A_0089be80 { void* vp; unsigned n; void* p8; int fc; char b10;
     {
         vp = &DAT_00e2bfd0; n = 0x3b; fc = 0; p8 = FUN_0089e810(0xec); FUN_00c00610(p8, 0, n * 4); b10 = 1; vp = &DAT_00e2c090;
     }
-    __forceinline static void* operator new(unsigned s) throw() { return DAT_01090a78.FUN_0086b930(s); } };
+    __forceinline static void* operator new(size_t s) throw() { return DAT_01090a78.FUN_0086b930(s); } };
 struct B_0089be80 { void* vp; unsigned n; void* p8; int fc; char b10;
     __forceinline B_0089be80() throw()
     {
         vp = &DAT_00e2c030; n = 0x25; fc = 0; p8 = FUN_0089e810(0x94); FUN_00c00610(p8, 0, n * 4); b10 = 0; vp = &DAT_00e2c0b0;
     }
-    __forceinline static void* operator new(unsigned s) throw() { return DAT_01090a78.FUN_0086b930(s); } };
+    __forceinline static void* operator new(size_t s) throw() { return DAT_01090a78.FUN_0086b930(s); } };
 struct Base_0089be80 { void* vp; Base_0089be80(); };
 struct C_0089be80 : Base_0089be80 { char pad[0x20]; int f24; A_0089be80* f28; char pad2[4]; B_0089be80* f30; char pad3[0x4c]; char f80[0x18]; C_0089be80(); };
 C_0089be80::C_0089be80()
@@ -83,7 +83,7 @@ struct D_008c73c0 : B_008c73c0
     P_008c73c0 m;
     int tail[1];
     virtual ~D_008c73c0() throw() {}
-    static void operator delete(void*, unsigned);
+    static void operator delete(void*, size_t);
     D_008c73c0();
 };
 D_008c73c0::D_008c73c0() {}

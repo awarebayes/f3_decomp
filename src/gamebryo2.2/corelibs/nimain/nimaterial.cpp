@@ -188,7 +188,7 @@ class NamedA8F9 : public NiRefObjectA8F9
         a8f9::DAT_011f5e34->FUN_00aa0250(m_kName);
     }
 
-    static void operator delete(void* pvMem, unsigned int uiSize)
+    static void operator delete(void* pvMem, size_t uiSize)
     {
         FUN_00aa1460(pvMem, uiSize);
     }

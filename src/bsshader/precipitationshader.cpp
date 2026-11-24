@@ -41,7 +41,7 @@ void __thiscall FUN_00bb0d30_shell::FUN_00bb0d30(int value)
 }
 
 void* __cdecl FUN_00bb0550();
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00bb0a50_shell
 {
     void* __thiscall DestroyIfFlagged(int flags);
@@ -222,7 +222,7 @@ struct SpawnedBase
 struct SpawnedObject : SpawnedBase
 {
     SpawnedObject();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     unsigned int unk04;
     unsigned int unk08;
     unsigned int unk0C;
@@ -436,7 +436,7 @@ struct ConstantMap
     int unk08[0x44 / 4 - 2];
 
     ConstantMap(void* pkRenderer, int iType);
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return FUN_00aa13e0(uiSize);
     }

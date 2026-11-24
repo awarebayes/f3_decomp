@@ -425,7 +425,7 @@ struct FUN_00cb0c10_s
 class FUN_00cf3ea0 : public hkpConstraintInstance
 {
   public:
-    static __forceinline void* operator new(unsigned int uiSize) throw()
+    static __forceinline void* operator new(size_t uiSize) throw()
     {
         void* p = FUN_00c85750()->heap().AllocateMemoryBlock(uiSize);
         ((unsigned short*)p)[2] = (unsigned short)uiSize;

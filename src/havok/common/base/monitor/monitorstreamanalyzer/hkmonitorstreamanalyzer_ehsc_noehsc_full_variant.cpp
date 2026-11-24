@@ -227,7 +227,7 @@ int __cdecl GetTreeWidth(E0C860Node* node, int depth, int indent, bool onlyExpan
     return width;
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -2770,7 +2770,7 @@ struct S00e0d180_Node
 
     int unk54;
 
-    void* operator new(unsigned int size)
+    void* operator new(size_t size)
     {
 
         return reinterpret_cast<FUN_00e0d000Heap&>(FUN_00c85750()->heap()).allocate(size);
@@ -3731,7 +3731,7 @@ void __cdecl FUN_00e0d880(int parentArg, FUN_00e0d000* source)
 }
 
 namespace fnv_00e0d980 {
-inline void* __cdecl operator new(unsigned int, void* where) throw()
+inline void* __cdecl operator new(size_t, void* where) throw()
 {
     return where;
 }
@@ -4236,7 +4236,7 @@ S00e0ee00_Root* __cdecl S00e0ee00_Analyzer::FUN_00e0ee00(int aIndex, S_e0ce00_Bo
 }
 
 namespace fnv_00e0f710 {
-inline void* __cdecl operator new(unsigned int, void* w) throw()
+inline void* __cdecl operator new(size_t, void* w) throw()
 {
     return w;
 }

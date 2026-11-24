@@ -247,7 +247,7 @@ struct FUN_00bc1950_shell : public BoltShader
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct NiD3DShaderConstantMap : BSFadeNode
 {
@@ -666,7 +666,7 @@ extern MemoryManager _g_memoryManager;
 struct IndexU16
 {
     unsigned short value;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -678,7 +678,7 @@ class NiPoint3
 {
   public:
     float x, y, z;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -687,7 +687,7 @@ class NiPoint3
 class FUN_00ba63e0 : public NiObject
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     int unk08;
     int unk0c;
@@ -726,7 +726,7 @@ struct NiBound
 class FUN_00a7b630 : public NiObject
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     int unk08;
     int unk0c;
@@ -758,7 +758,7 @@ class NiAVObject : public NiObject
 class FUN_00a74480 : public NiAVObject
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     int unk08;
     int unk0c;
@@ -832,7 +832,7 @@ class NiProperty : public NiObject
 class FUN_00bc1d40 : public NiProperty
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     int unk20;
     int unk24;

@@ -1771,7 +1771,7 @@ BDE43E0Memory* __cdecl FUN_00c85750();
 class BDE43E0ReferencedObject
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         BDE43E0ReferencedObject* pkObject =
             static_cast<BDE43E0ReferencedObject*>(FUN_00c85750()->heap().AllocateMemoryBlock(uiSize));
@@ -3145,7 +3145,7 @@ int* __cdecl FUN_00dfb560()
     return &DAT_0126ad90;
 }
 
-inline void* operator new(unsigned int, void* pvWhere) throw()
+inline void* operator new(size_t, void* pvWhere) throw()
 {
     return pvWhere;
 }
@@ -6380,7 +6380,7 @@ class DFF2E0Object
   public:
     DFF2E0Object(DFF2E0FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -6422,7 +6422,7 @@ int* __cdecl FUN_00dff3d0()
 }
 
 namespace fnv_00dff3e0 {
-inline void* operator new(unsigned int, void* where) throw()
+inline void* operator new(size_t, void* where) throw()
 {
     return where;
 }
@@ -6605,7 +6605,7 @@ class DFF520Object
   public:
     DFF520Object(DFF520FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -7048,7 +7048,7 @@ struct SpawnedDerived : SpawnedObject
     {}
 };
 
-inline void* operator new(unsigned int, void* where)
+inline void* operator new(size_t, void* where)
 {
     return where;
 }

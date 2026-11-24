@@ -146,7 +146,7 @@ class hkRefObjCC06
     {
         m_sReferenceCount = 1;
     }
-    static void* operator new(unsigned int nbytes) throw()
+    static void* operator new(size_t nbytes) throw()
     {
         hkRefObjCC06* b = static_cast<hkRefObjCC06*>(hkRouterCC06::FUN_00c85750().heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -202,7 +202,7 @@ template <class T> class hkArrayCC07
     T* m_data;
     int m_iElementCount;
     int m_iCapacityState;
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         hkRouterCC07::FUN_00c85750().heap().ReleaseBlock(p, nbytes);
     }
@@ -277,7 +277,7 @@ class hkRefObjD60B
     {
         m_sReferenceCount = 1;
     }
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         hkRefObjD60B* b = static_cast<hkRefObjD60B*>(hkRouterD60B::FUN_00c85750().heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;

@@ -1622,7 +1622,7 @@ class ConstMap : public NiRefObject
     ConstMap(int a, int b);
     virtual void v2(const char* name, unsigned int type, int a, int idx, int cnt, void* d, int sz, int four, void* e,
                     int f);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FUN_00aa13e0(n);
     }

@@ -2188,7 +2188,7 @@ struct ReaderAllocator
 extern ReaderAllocator DAT_011f6238;
 struct ReaderStorage
 {
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return DAT_011f6238.Allocate(size);
     }
@@ -3438,7 +3438,7 @@ MipPixelData* MipImageConverter::FUN_00a7ae60(const char** ppcFileNames, unsigne
     return pkDest;
 }
 
-inline void* __cdecl operator new(unsigned int, void* memory) throw()
+inline void* __cdecl operator new(size_t, void* memory) throw()
 {
     return memory;
 }
@@ -3487,7 +3487,7 @@ extern Format DAT_011aa2e8, DAT_011aa2a0;
 
 struct NiMemObject
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 struct Image : NiMemObject

@@ -272,7 +272,7 @@ extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long*);
 struct ConstantMap
 {
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     static void operator delete(void*);
     ConstantMap(void*, int);
     virtual void ReportDiagnostic();
@@ -854,7 +854,7 @@ extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile lo
 void* __cdecl FUN_00aa13e0(unsigned int size);
 unsigned int __cdecl GetFloatQuadTable();
 
-inline void* operator new[](unsigned int n, Q64_Pool& p)
+inline void* operator new[](size_t n, Q64_Pool& p)
 {
     return p.FUN_00aa3e40(n);
 }
@@ -874,7 +874,7 @@ inline Q64_Pt2* Q64_allocUv(unsigned short n)
 
 struct Q64_Obj
 {
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FUN_00aa13e0(n);
     }
@@ -1287,7 +1287,7 @@ struct FourFloatVector
 struct Particle
 {
     float x, y, z, w, a, b, c, d, e, f, g, h;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return particleMemoryManager.FUN_00aa3e40(size);
     }

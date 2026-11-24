@@ -86,7 +86,7 @@ public:
     virtual ~BSExtraData();
     virtual bool IsNotEqual(const BSExtraData* pkCompare) const;
 
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 
     unsigned char cEtype;
@@ -187,7 +187,7 @@ class BSExtraData
 public:
     virtual ~BSExtraData();
     virtual bool IsNotEqual(const BSExtraData* compare) const;
-    static void* operator new(unsigned int size) { return g_heap411080.Allocate(size); }
+    static void* operator new(size_t size) { return g_heap411080.Allocate(size); }
     static void operator delete(void* memory) { g_heap411080.Free(memory); }
     unsigned char type;
     BSExtraData* next;
@@ -311,7 +311,7 @@ class BSExtraData
 public:
     virtual ~BSExtraData();
     virtual bool IsNotEqual(const BSExtraData* compare) const;
-    static void* operator new(unsigned int size) { return g_heap40b330.Allocate(size); }
+    static void* operator new(size_t size) { return g_heap40b330.Allocate(size); }
     static void operator delete(void* memory) { g_heap40b330.Free(memory); }
     unsigned char type;
     BSExtraData* next;

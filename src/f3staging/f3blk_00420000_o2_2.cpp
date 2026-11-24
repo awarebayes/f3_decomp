@@ -361,7 +361,7 @@ class QueuedFileBase9340
     virtual void Unk1C();
     virtual void Run();
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager9340.Allocate(size);
     }
@@ -576,16 +576,16 @@ struct Guard {
 struct FUN_0059acc0 {
     int value;
     FUN_0059acc0();
-    static void* operator new[](unsigned n) { return heap_x.alloc(n); }
+    static void* operator new[](size_t n) { return heap_x.alloc(n); }
 };
 struct Extra {
     int a, b, c, d;
     Extra(unsigned);
-    static void* operator new(unsigned n) { return heap_x.alloc(n); }
+    static void* operator new(size_t n) { return heap_x.alloc(n); }
 };
 struct Word {
     int a;
-    static void* operator new[](unsigned n) { return heap_x.alloc(n); }
+    static void* operator new[](size_t n) { return heap_x.alloc(n); }
 };
 struct Base { virtual ~Base(); };
 struct Owner : Base {
@@ -870,7 +870,7 @@ struct BatchDestination
     char unk21, unk22, unk23;
     int unk24, unk28, unk2c, unk30;
     BatchDestination():world(0),cell(0),position(DAT_0108ec68),angle(DAT_0108ec68),enabled(false),unk24(0),unk28(0),unk2c(0),unk30(0){}
-static void* operator new(unsigned int n){return DAT_01090a78.FUN_0086b930(n);}
+static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}
 };
 struct BatchPlayer
 {
@@ -1404,7 +1404,7 @@ struct QueueNode {
     QueueNode* next;
     Holder value;
     QueueNode() : next(0), value(0) {}
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         return DAT_01090a78.FUN_0086b930(size);
     }
 };

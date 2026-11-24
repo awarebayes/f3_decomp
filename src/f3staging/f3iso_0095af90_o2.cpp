@@ -68,7 +68,7 @@ public:
     struct TimerCommand : public Command
     {
         // Commands borrow storage from the monitor stream's arena.
-        static __forceinline void* operator new(unsigned int, void* storage) throw()
+        static __forceinline void* operator new(size_t, void* storage) throw()
         {
             return storage;
         }

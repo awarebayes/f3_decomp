@@ -287,7 +287,7 @@ struct S_00de5110_Geometry
 
     S_00de5110_Geometry() throw()
     {}
-    static void* operator new(unsigned int n) throw()
+    static void* operator new(size_t n) throw()
     {
         return FUN_00c85750().heap().AllocateMemoryBlock(n);
     }
@@ -467,7 +467,7 @@ struct S_00a6b7c0_Geometry
     S_00a6b7c0_Array<S_00a6b7c0_Vector4> m_kVertices;
     S_00a6b7c0_Array<S_00a6b7c0_Triangle> m_uiTriangleCount;
 
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         return S_00a6b7c0_ThreadMemory::getInstance().allocateChunk(3, 0x27);
     }

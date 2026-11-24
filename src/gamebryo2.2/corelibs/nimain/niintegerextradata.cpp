@@ -35,7 +35,7 @@ void __thiscall FUN_00a99c70_shell::FUN_00a99c70()
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct NiExtraDataShell : NiExtraData
@@ -57,7 +57,7 @@ NiExtraData* FUN_00a99cd0()
     return 0;
 }
 
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 struct FUN_00a99d00_shell
 {
     void* __thiscall Destroy(unsigned int);

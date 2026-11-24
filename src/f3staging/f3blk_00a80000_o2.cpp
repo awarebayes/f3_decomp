@@ -2918,7 +2918,7 @@ void __cdecl FUN_0089ebb0(void* p);               // NiMemObject operator delete
 class FUN_00a9f1e0 {
 public:
     FUN_00a9f1e0();
-    static void* operator new(unsigned int bytes) { return FUN_0089eb90(bytes); }
+    static void* operator new(size_t bytes) { return FUN_0089eb90(bytes); }
     static void operator delete(void* p) { FUN_0089ebb0(p); }
     int unk00, unk04, unk08, unk0c;
 };
@@ -3804,7 +3804,7 @@ struct FUN_00a81370 {
     unsigned short referenceCount;
     int unk08[6];
     FUN_00a81370() throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         A82e3Heap* heap = (A82e3Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 6);
@@ -3886,7 +3886,7 @@ struct FUN_00aa0b10 {
 struct A9f53Obj : FUN_00aa0b10 {
     A9f53Obj() {}
     virtual ~A9f53Obj();
-    static void* operator new(unsigned int n) { return FUN_0089eb90(n); }
+    static void* operator new(size_t n) { return FUN_0089eb90(n); }
     static void operator delete(void* p) { FUN_0089ebd0(p); }
 };
 FUN_00aa0b10* FUN_00a9f530()
@@ -3904,7 +3904,7 @@ void FUN_0089ebd0(void* p);
 struct FUN_00a9dcf0 {
     int unk00[63];
     FUN_00a9dcf0();
-    static void* operator new(unsigned int n) { return FUN_0089eb90(n); }
+    static void* operator new(size_t n) { return FUN_0089eb90(n); }
     static void operator delete(void* p) { FUN_0089ebd0(p); }
 };
 struct A9ea2Obj {
@@ -3928,7 +3928,7 @@ void FUN_0089ebd0(void* p);
 struct FUN_00a9f1e0 {
     int unk00[4];
     FUN_00a9f1e0();
-    static void* operator new(unsigned int n) { return FUN_0089eb90(n); }
+    static void* operator new(size_t n) { return FUN_0089eb90(n); }
     static void operator delete(void* p) { FUN_0089ebd0(p); }
 };
 struct A9f40Obj {
@@ -6107,7 +6107,7 @@ struct S00a8d1f0_Node {
 
     S00a8d1f0_Node(S00a8d1f0_Node* owner, const char* aName, int value4) throw();
 
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         S00a8d1f0_Pool* pool = (S00a8d1f0_Pool*)FUN_00d9b080(DAT_010f3170);
         void* result = pool->freeList68;
@@ -6444,7 +6444,7 @@ struct Node {
     Node* prev;
     Node* parent;
     Node() : first(0), last(0), next(0), prev(0), parent(0) {}
-    static void* operator new(unsigned int n, int extra)
+    static void* operator new(size_t n, int extra)
     {
         Heap* heap = (Heap*)DAT_00d9b080(DAT_010f3170);
         return heap->FUN_008f6d30(n + extra, 0x17);
@@ -6922,7 +6922,7 @@ bool* FUN_00a8a620(bool* result, PointArray* first, PointArray* second, PlaneArr
 // temporary's address does not escape (0x00a82280 forwards to 0x00929ad0).
 namespace cand_a8f110 {
 
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }
@@ -7731,7 +7731,7 @@ struct FUN_00a8d060 {
     int unk50;
     int unk54;
     FUN_00a8d060(FUN_00a8d060* owner, const char* aName, int value4) throw();
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         Pool* pool = (Pool*)f3m_00a8d1f0::FUN_00d9b080(DAT_010f3170);
         void* result = pool->freeList68;
@@ -8329,7 +8329,7 @@ struct hkMonitorStreamFrameInfo;
 // hkMonitorStreamAnalyzer::Node
 struct FUN_00a8d060
 {
-	__forceinline void* operator new(unsigned int nbytes)	{ return hkThreadMemory::getInstance().allocateChunkConstSize(static_cast<int>(nbytes),HK_MEMORY_CLASS_MONITOR); }
+	__forceinline void* operator new(size_t nbytes)	{ return hkThreadMemory::getInstance().allocateChunkConstSize(static_cast<int>(nbytes),HK_MEMORY_CLASS_MONITOR); }
 	void operator delete(void* p);
 
 	enum NodeType

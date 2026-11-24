@@ -115,7 +115,7 @@ struct NiPoint2
         x = fX;
         y = fY;
     }
-    static void* operator new[](unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new[](size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete[](void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 
@@ -132,7 +132,7 @@ struct NiPoint3
     NiPoint3 operator+(const NiPoint3& pt) const { return NiPoint3(x + pt.x, y + pt.y, z + pt.z); }
     NiPoint3 operator-() const { return NiPoint3(-x, -y, -z); }
     NiPoint3 operator*(float fScalar) const { return NiPoint3(fScalar * x, fScalar * y, fScalar * z); }
-    static void* operator new[](unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new[](size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete[](void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 
@@ -321,8 +321,8 @@ struct NiObject
             return 0;
         return pkObject->DynamicCast(pkRTTI);
     }
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
 };
 
 template <class T> struct NiTArray

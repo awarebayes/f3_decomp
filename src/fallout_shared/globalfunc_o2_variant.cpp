@@ -1910,7 +1910,7 @@ class bhkRefObject
 class TESObjectDoorController
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 };
 
@@ -1957,7 +1957,7 @@ class AllocatedNode
     int unk08;
     int unk0c;
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FUN_00aa13e0(n);
     }
@@ -1983,7 +1983,7 @@ class FUN_00c87010_cls : public FUN_00c86800_Class
 };
 
 // @f3 0x008f8e70 (community match, verified in this file)
-void* operator new(unsigned int);
+void* operator new(size_t);
 void operator delete(void*);
 void* __cdecl FUN_0089eb90(unsigned int);
 #include <windows.h>
@@ -2000,7 +2000,7 @@ public:
     int unk04;
     int unk08;
     int unk0c;
-    static void* operator new(unsigned int n) { return FUN_0089eb90(n); }
+    static void* operator new(size_t n) { return FUN_0089eb90(n); }
     void FUN_008f7c10();
     SpringNodePrivateC10() {
         FUN_008f7c10();
@@ -2271,7 +2271,7 @@ extern MemoryManager7100 g_kMemoryManager7100;
 class __declspec(align(16)) Aligned7100
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         unsigned char* pucMem = (unsigned char*)g_kMemoryManager7100.Allocate(uiSize + 0x10);
         unsigned char ucOffset = (unsigned char)(0x10 - ((unsigned int)pucMem & 0xf));
@@ -2707,7 +2707,7 @@ struct Node6b3c0
     Node6b3c0* m_next;
     Node6b3c0(const RefPtr6b3c0& ptr) : m_ptr(ptr), m_next(0)
     {}
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager6b3c0.Allocate(size);
     }

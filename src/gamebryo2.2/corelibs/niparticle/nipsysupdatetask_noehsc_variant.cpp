@@ -213,7 +213,7 @@ struct C25990Elem
     C25990Elem();
     ~C25990Elem()
     {}
-    static void* operator new[](unsigned int size, unsigned int count)
+    static void* operator new[](size_t size, size_t count)
     {
         if (count == 0)
             return DAT_011f6238.Alloc(4);

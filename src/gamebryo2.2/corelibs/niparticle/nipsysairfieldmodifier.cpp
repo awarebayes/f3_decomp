@@ -42,7 +42,7 @@ struct NiPSysFieldModifier
 };
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct AirTmp : NiPSysFieldModifier
 {
@@ -65,7 +65,7 @@ NiObject* __thiscall NiPSysFieldModifier::Clone(CloningProcess& kCloning)
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 // @fnv 0x00c2f630
@@ -773,7 +773,7 @@ struct Cls_00c2f650
     void UpdateParticleAirFriction(float fTime, NiPSysData* pkData);
 };
 
-inline void* operator new(unsigned int, void* pv)
+inline void* operator new(size_t, void* pv)
 {
     return pv;
 }

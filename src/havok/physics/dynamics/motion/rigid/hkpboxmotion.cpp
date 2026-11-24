@@ -632,7 +632,7 @@ void Motion::FUN_00d1eaf0(const Vec& impulse)
 
 extern "C" __m128 _mm_setr_ps(float, float, float, float);
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

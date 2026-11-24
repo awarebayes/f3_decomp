@@ -67,7 +67,7 @@ class Elem40AL_ba1 {
 public:
     Elem40AL_ba1();
     void FUN_00bc19e0();
-    static void* operator new[](unsigned int size) { return g_heapAL_ba1.FUN_0086b930(size); }
+    static void* operator new[](size_t size) { return g_heapAL_ba1.FUN_0086b930(size); }
     static void operator delete[](void* memory) { g_heapAL_ba1.FUN_0086ba60(memory); }
     int unk00;
     int unk04;
@@ -4007,7 +4007,7 @@ namespace task1386 {
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00c01e8b();
 namespace std {
 class bad_alloc
@@ -5136,7 +5136,7 @@ namespace worker06_2038 {
 struct Heap {void* FUN_0086b930(unsigned);void FUN_0086ba60(void*);};extern Heap DAT_01090a78;
 struct V3 {float x,y,z;};struct Shape {int iType;V3 a,b;};
 struct CollisionList : std::vector<Shape> {
- static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}
+ static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}
  static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}
  void FUN_00ba81b0(const Shape&);
 };
@@ -6529,7 +6529,7 @@ void Mgr::FUN_00bbdd30()
 
 // @f3 0x00ba9c60 (community match, verified in this file)
 struct NewTag_ba9c60 {};
-inline void* operator new[](unsigned int size, NewTag_ba9c60) { return ::operator new(size); }
+inline void* operator new[](size_t size, NewTag_ba9c60) { return ::operator new(size); }
 namespace nba9c60 {
 typedef unsigned short u16;
 struct Strip {
@@ -7707,7 +7707,7 @@ extern MemoryManager DAT_01090a78;
 
 struct Child {
     int unk00; int unk04; int unk08; int unk0c; int unk10; int unk14; int unk18; int unk1c; int unk20; int unk24; int unk28; int unk2c; int unk30; int unk34; int unk38; int unk3c;
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* memory) { DAT_01090a78.FUN_0086ba60(memory); }
     Child();
     void FUN_00bc08b0(int value);
@@ -19024,7 +19024,7 @@ static __declspec(noinline) Text FUN_00bb56f0(const char* fmt, ...) {
 }
 struct TexturePtr {
  const char* ptr;
- static void* operator new[](unsigned size) { return DAT_01090a78.FUN_0086b930(size); }
+ static void* operator new[](size_t size) { return DAT_01090a78.FUN_0086b930(size); }
 };
 struct Leaf { int unk00,unk04,unk08,unk0c,unk10; Text name; int unk30,unk34,unk38,unk3c,unk40,unk44,unk48,unk4c,unk50; };
 struct Frond { Text name; int unk1c,unk20,unk24,unk28; };
@@ -19464,7 +19464,7 @@ struct T44 {
     int unk3C;
     int unk40;
     T44();
-    static void* operator new(unsigned int sz) { return DAT_01090a78.Alloc(sz); }
+    static void* operator new(size_t sz) { return DAT_01090a78.Alloc(sz); }
 };
 
 struct T118 {
@@ -19539,7 +19539,7 @@ struct T118 {
     int unk110;
     int unk114;
     T118(T44* p, int v);
-    static void* operator new(unsigned int sz) { return DAT_01090a78.Alloc(sz); }
+    static void* operator new(size_t sz) { return DAT_01090a78.Alloc(sz); }
 };
 
 struct T110 {
@@ -19612,7 +19612,7 @@ struct T110 {
     int unk108;
     int unk10C;
     T110(T118* p);
-    static void* operator new(unsigned int sz) { return DAT_01090a78.Alloc(sz); }
+    static void* operator new(size_t sz) { return DAT_01090a78.Alloc(sz); }
 };
 
 struct Tb0 {
@@ -19661,7 +19661,7 @@ struct Tb0 {
     int unkA8;
     int unkAC;
     Tb0();
-    static void* operator new(unsigned int sz) { return DAT_01090a78.Alloc(sz); }
+    static void* operator new(size_t sz) { return DAT_01090a78.Alloc(sz); }
 };
 
 struct T30 {
@@ -19678,7 +19678,7 @@ struct T30 {
     int unk28;
     int unk2C;
     T30(T44* p);
-    static void* operator new(unsigned int sz) { return DAT_01090a78.Alloc(sz); }
+    static void* operator new(size_t sz) { return DAT_01090a78.Alloc(sz); }
 };
 
 struct T34 {
@@ -19696,7 +19696,7 @@ struct T34 {
     int unk2C;
     int unk30;
     T34();
-    static void* operator new(unsigned int sz) { return DAT_01090a78.Alloc(sz); }
+    static void* operator new(size_t sz) { return DAT_01090a78.Alloc(sz); }
 };
 
 struct T6c {
@@ -19728,7 +19728,7 @@ struct T6c {
     int unk64;
     int unk68;
     T6c();
-    static void* operator new(unsigned int sz) { return DAT_01090a78.Alloc(sz); }
+    static void* operator new(size_t sz) { return DAT_01090a78.Alloc(sz); }
 };
 
 template<class T> struct NativeAllocator : std::allocator<T> {
@@ -19742,7 +19742,7 @@ template<class T,class U> bool operator==(const NativeAllocator<T>&,const Native
 template<class T,class U> bool operator!=(const NativeAllocator<T>&,const NativeAllocator<U>&) { return false; }
 struct G10 {
     std::vector<CSpeedTreeRT*, NativeAllocator<CSpeedTreeRT*> > trees;
-    static void* operator new(unsigned int sz) { return DAT_01090a78.Alloc(sz); }
+    static void* operator new(size_t sz) { return DAT_01090a78.Alloc(sz); }
 };
 typedef char NativeTreeVectorSize[1];
 
@@ -21503,7 +21503,7 @@ namespace f3m_00ba88b0 {
 namespace f3m_00ba88b0 {
 struct CSpeedTreeRT : W474Tree {
     CSpeedTreeRT(CSpeedTreeRT*);
-    static void* operator new(unsigned size) {
+    static void* operator new(size_t size) {
         return b1713::DAT_01090a78.FUN_0086b930(size);
     }
     static void operator delete(void* memory) {

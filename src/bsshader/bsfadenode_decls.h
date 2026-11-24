@@ -11,7 +11,7 @@ extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile lo
 class NiMemObject
 {
   public:
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 class NiRefObject : public NiMemObject
@@ -87,7 +87,7 @@ class NiFixedString
   public:
     char* m_kHandle;
     NiFixedString(const char* s);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }

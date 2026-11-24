@@ -24,7 +24,7 @@ void __fastcall FUN_00a36890(void*);
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 // @fnv 0x00a409d0
@@ -45,7 +45,7 @@ int* __fastcall InitTimeController(int*);
 extern int DAT_010975fc;
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 // Allocates a 0x40-byte BSFadeNode, initialises it via InitTimeController, sets its vtable to DAT_010975fc and returns it, or returns 0 on allocation failure.
 // @fnv 0x00a411f0
@@ -496,7 +496,7 @@ FUN_00a414c0_class* __thiscall FUN_00a414c0_class::FUN_00a414c0(unsigned char fl
 extern int DAT_010976fc;
 struct A51BF0Base
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct A51BF0
 {
@@ -595,7 +595,7 @@ FUN_00a44f90_class::FUN_00a44f90_class()
 namespace fnv_00a47f20 {
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct FUN_00a47bd0_class
@@ -665,7 +665,7 @@ extern int DAT_0109a1d4;
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct FUN_00a5d3a0_class
@@ -846,7 +846,7 @@ void FUN_00a41410_cls::DispatchByKey(HandlerArg* a1)
 
 struct S_00a42290_Mem
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct FUN_00a5d3a0 : S_00a42290_Mem
 {
@@ -2675,7 +2675,7 @@ struct Result
     int unk28;
     int unk2c;
     int unk30;
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     Result(const char*, int, int) throw();
     void FUN_00a47420(Obj*) throw();
     void AddSeq(void*, Obj*) throw();

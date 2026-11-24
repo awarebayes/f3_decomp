@@ -736,11 +736,11 @@ class NiRefObject
 class NiMemObject_00e93ad0
 {
   public:
-    static void* operator new(unsigned int uiSize) throw()
+    static void* operator new(size_t uiSize) throw()
     {
         return g_memoryManager.Allocate(uiSize);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 
 template <class TVAL> class ShaderMapBase : public NiMemObject_00e93ad0

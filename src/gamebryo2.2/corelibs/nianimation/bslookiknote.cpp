@@ -47,7 +47,7 @@ struct BSLookIKNote
     float m_f0c;
     float m_f10;
     void* m_p14;
-    void* operator new(unsigned int size);
+    void* operator new(size_t size);
     BSLookIKNote();
     void FUN_00a43fa0();
 };
@@ -507,7 +507,7 @@ class A43FF0Object
     A43FF0Object() throw();
     virtual ~A43FF0Object();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     int unk04;

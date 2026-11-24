@@ -557,7 +557,7 @@ struct RenderTaskThread : FUN_007240a0 {
     void (__cdecl* task)();
     RenderTaskThread(void (__cdecl* f)()) {task=f;}
     virtual ~RenderTaskThread();
-    static void* operator new(unsigned n) {return DAT_01090a78.FUN_0086b930(n);}
+    static void* operator new(size_t n) {return DAT_01090a78.FUN_0086b930(n);}
     static void operator delete(void* p) {DAT_01090a78.FUN_0086ba60(p);}
 };
 }

@@ -1729,14 +1729,14 @@ struct S_00dcdd80_RefObj
     void* vtbl;
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         S_00dcdd80_RefObj* b =
             static_cast<S_00dcdd80_RefObj*>(S_00dcdd80_Router::FUN_00c85750().heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return b;
     }
-    static void operator delete(void*, unsigned int)
+    static void operator delete(void*, size_t)
     {}
     void FUN_00c905b0();
 };
@@ -1983,7 +1983,7 @@ struct ObjDCDDF3
     int unk118;
     int unk11C;
     ObjDCDDF3() throw();
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         HeapDCDDF3* heap = (HeapDCDDF3*)TlsGetValue(DAT_010f3170);
         ObjDCDDF3* b = (ObjDCDDF3*)heap->FUN_008f6d30(nbytes, 0xd);
@@ -3616,7 +3616,7 @@ struct FUN_00e05d10_Base
     unsigned short m_usMemSizeAndFlags;
     unsigned short m_sReferenceCount;
 
-    void operator delete(void* p, unsigned int)
+    void operator delete(void* p, size_t)
     {
         FUN_00e05d10_Base* b = static_cast<FUN_00e05d10_Base*>(p);
         FUN_00c85750()->heap().ReleaseBlock(p, b->m_usMemSizeAndFlags);
@@ -8207,7 +8207,7 @@ class DCEEntryInit : public hkReferencedObjectDCE
 {
   public:
     __forceinline DCEEntryInit();
-    static void* operator new(unsigned int, void* storage)
+    static void* operator new(size_t, void* storage)
     {
         return storage;
     }

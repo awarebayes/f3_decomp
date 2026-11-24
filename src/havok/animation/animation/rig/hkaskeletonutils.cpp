@@ -780,7 +780,7 @@ struct Property
     unsigned short size, unk12;
     int unk14, unk18, unk1c;
     __m128 vector;
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         AllocationService* service = reinterpret_cast<AllocationService*>(FUN_00c85750());
         return service->allocator->Allocate(bytes);
@@ -867,7 +867,7 @@ struct ModifierAtom
     int unk1c;
     Vector4 vector;
 
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         ThreadMemory* memory = static_cast<ThreadMemory*>(TlsGetValue(DAT_010f3170));
         void* result = memory->freeList58;

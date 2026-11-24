@@ -11,8 +11,8 @@ class TESObjectREFR;
 class NiMemObject
 {
   public:
-    static void* __cdecl operator new(unsigned int size);
-    static void operator delete(void*, unsigned int);
+    static void* __cdecl operator new(size_t size);
+    static void operator delete(void*, size_t);
 };
 
 class NiAVObject : public NiMemObject

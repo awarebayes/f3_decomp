@@ -333,7 +333,7 @@ struct CloneNode : NiBoundingVolume
     void SetFromPlane(const FUN_00a69940_Member* kABV);
     FUN_00a69940_Member member;
     NiPoint3 point;
-    void* operator new(unsigned int size)
+    void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

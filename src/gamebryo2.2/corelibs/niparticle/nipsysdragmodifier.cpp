@@ -15,7 +15,7 @@ void NiPSysDragModifier::LoadBinary(NiStream& kStream)
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 void* __fastcall FUN_00c2c030(void*);
@@ -56,7 +56,7 @@ struct FUN_00c2c0b0_shell : public NiPSysDragModifier
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct DragCtorStub
 {

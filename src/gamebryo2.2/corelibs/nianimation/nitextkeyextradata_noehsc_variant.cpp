@@ -13,7 +13,7 @@ struct NiExtraData
 };
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 extern void* DAT_0109827c;
 void* __cdecl FUN_00a46b70();
@@ -172,7 +172,7 @@ class NiPSysBaseA46
     NiPSysBaseA46() throw();
     virtual ~NiPSysBaseA46();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     int unk04, unk08;
@@ -220,7 +220,7 @@ struct A46TextKey
     A46TextKey();
     ~A46TextKey()
     {}
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return _g_memoryManager.Allocate(uiSize);
     }
@@ -302,7 +302,7 @@ struct TimedTextEntry
     float m_fTime;
     NiFixedString m_kText;
     TimedTextEntry() throw();
-    static void* operator new[](unsigned int uiSize) throw()
+    static void* operator new[](size_t uiSize) throw()
     {
         return g_allocator.Allocate(uiSize);
     }

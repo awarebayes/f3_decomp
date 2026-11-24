@@ -1049,8 +1049,8 @@ struct CloningProcess
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* __cdecl operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 
 struct FUN_006628c0 : A51BF0Base
@@ -2599,7 +2599,7 @@ struct Obj6b9;
 
 struct FUN_006b91e0 {
     char pad0[0x70];
-    static void* operator new(unsigned int s) { return DAT_01090a78.FUN_0086b930(s); }
+    static void* operator new(size_t s) { return DAT_01090a78.FUN_0086b930(s); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
     FUN_006b91e0(unsigned int a, unsigned int b, unsigned int c);
     ~FUN_006b91e0();

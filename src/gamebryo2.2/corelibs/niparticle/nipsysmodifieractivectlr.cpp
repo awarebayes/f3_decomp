@@ -21,7 +21,7 @@ void* __fastcall FUN_00c32b60(void* pThis)
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct Dummy_00a532d0
@@ -36,7 +36,7 @@ void* __fastcall FUN_00a532d0(void* p, int, bool bValue);
 struct Wrap_00a532d0
 {
     char pad[0x18];
-    static void* __cdecl operator new(unsigned int s)
+    static void* __cdecl operator new(size_t s)
     {
         return BSFadeNode::operator new(s);
     }
@@ -254,7 +254,7 @@ class C29D80Base
     C29D80Base() throw();
     virtual ~C29D80Base();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     int unk04;

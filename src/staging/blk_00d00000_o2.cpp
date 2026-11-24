@@ -688,7 +688,7 @@ void __cdecl FUN_00d1fa10()
 void __stdcall FUN_00d043f0(int)
 {}
 
-inline void* operator new(unsigned int, void* address)
+inline void* operator new(size_t, void* address)
 {
     return address;
 }

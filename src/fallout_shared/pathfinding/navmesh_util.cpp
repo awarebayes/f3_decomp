@@ -2459,11 +2459,11 @@ struct b9_big
 {
     int m_00, m_04, m_08, m_0c, m_10, m_14, m_18, m_1c, m_20, m_24, m_28, m_2c;
     int m_30, m_34, m_38, m_3c, m_40, m_44, m_48, m_4c, m_50, m_54, m_58;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00401000(size);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     b9_big();
     void InitializeFromMeshSource(FUN_006986d0_cls* o);
     void SetField54(FUN_006986d0_cls* o);
@@ -3958,8 +3958,8 @@ struct NavMeshOwner
 };
 struct NavChange
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     virtual ~NavChange();
     unsigned int unk04, state;
     NavObstaclePtr obstacle;

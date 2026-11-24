@@ -1372,7 +1372,7 @@ struct S_00d0d150_CollisionOutput {
     S_00d0d150_ToiInfo m_fTimeOfImpact;
 };
 
-inline void* __cdecl operator new(unsigned int, void* where) throw() { return where; }
+inline void* __cdecl operator new(size_t, void* where) throw() { return where; }
 
 template <typename T>
 struct S_00d0d150_Array {
@@ -4409,7 +4409,7 @@ struct FUN_00d10730 {
     FUN_00d10730();
     virtual ~FUN_00d10730();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         FUN_00d10730* b = static_cast<FUN_00d10730*>(p);
         FUN_00c85750().heap().ReleaseBlock(p, b->m_usMemSizeAndFlags);

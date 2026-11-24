@@ -16,7 +16,7 @@ GlobalObjectO2_00a7b610* __cdecl FUN_00a756c0()
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 void* __fastcall FUN_00a75650(void*);

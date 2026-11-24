@@ -248,7 +248,7 @@ extern float DAT_0104da48;
 extern float DAT_0104e148;
 namespace f3m_009a1000 {
 
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }

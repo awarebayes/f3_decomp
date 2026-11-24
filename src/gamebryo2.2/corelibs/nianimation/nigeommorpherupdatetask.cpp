@@ -405,7 +405,7 @@ struct TaskBlock
         return i >= m_uiCount ? 0 : &m_pkTasks[i];
     }
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return ((FUN_00a5e3a0_Helper*)&g_memoryManager)->FUN_00aa3e40(uiSize);
     }
@@ -456,7 +456,7 @@ struct FUN_00a56e60_Block
         return i >= m_uiCount ? 0 : &m_pkTasks[i];
     }
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return ((FUN_00a5e3a0_Helper*)&g_memoryManager)->FUN_00aa3e40(uiSize);
     }

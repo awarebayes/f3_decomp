@@ -233,7 +233,7 @@ FUN_00e94ab0::FUN_00e94ab0()
 namespace fnv_00e94c00 {
 struct NiMemObject
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 struct FUN_00e94ab0 : NiMemObject
 {
@@ -380,7 +380,7 @@ struct FUN_00e947c0
     int unk4C;
     int unk50;
     FUN_00e947c0() throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.FUN_00aa3e40(n);
     }
@@ -683,7 +683,7 @@ struct S00e94b80_Heap
 {
 };
 static S00e94b80_Heap s00e94b80_heap;
-inline void* operator new(unsigned int n, S00e94b80_Heap) throw()
+inline void* operator new(size_t n, S00e94b80_Heap) throw()
 {
     return FUN_00aa13e0(n);
 }
@@ -721,7 +721,7 @@ struct P03MM
     void* Allocate(unsigned int);
 };
 extern int DAT_01400000;
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

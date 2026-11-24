@@ -2448,7 +2448,7 @@ struct VertexRendererView {
 VertexDevice* device;
  VertexDevice* GetDevice(){return device;}
 };
-class NiMemObject { public: static void* operator new(unsigned); static void operator delete(void*); };
+class NiMemObject { public: static void* operator new(size_t); static void operator delete(void*); };
 class NiD3DVertexShader : public NiMemObject {
 public:
  NiD3DVertexShader(GraphicsRenderer*);

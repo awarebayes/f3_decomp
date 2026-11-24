@@ -8,7 +8,7 @@
 #include <string.h>
 struct Allocator59 { void* FUN_0086b930(unsigned); void FUN_0086ba60(void*); };
 extern Allocator59 DAT_01090a78;
-inline void* __cdecl operator new[](unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+inline void* __cdecl operator new[](size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 inline void __cdecl operator delete[](void* p) { DAT_01090a78.FUN_0086ba60(p); }
 void* __cdecl FUN_0089e810(unsigned);
 void __cdecl FUN_0089e890(void*);
@@ -34,8 +34,8 @@ struct Color59 {
 };
 extern const Point59 DAT_00f725b0;
 struct MemObject59 {
- static void* operator new(unsigned n) { return FUN_0089eb90(n); }
- static void operator delete(void* p,unsigned n);
+ static void* operator new(size_t n) { return FUN_0089eb90(n); }
+ static void operator delete(void* p,size_t n);
 };
 struct Ref59 : MemObject59 {
  virtual void v00();

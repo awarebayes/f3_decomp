@@ -19,7 +19,7 @@ void* __cdecl FUN_00a485b0()
 }
 
 struct BSFadeNode {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 void __fastcall FUN_00a6d220(void*);

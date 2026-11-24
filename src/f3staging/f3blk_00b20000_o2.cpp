@@ -995,7 +995,7 @@ extern unsigned char DAT_00ea0718;
 unsigned int FUN_00b38030();
 struct Heap17 { void* FUN_0086b930(unsigned int); };
 extern Heap17 DAT_01090a78;
-struct Element17 { int a,b,c,d,e,f,g,h; static void* operator new[](unsigned int size) { return DAT_01090a78.FUN_0086b930(size); } };
+struct Element17 { int a,b,c,d,e,f,g,h; static void* operator new[](size_t size) { return DAT_01090a78.FUN_0086b930(size); } };
 struct FUN_00b2afb0 {
     void* vtable;
     unsigned int unk04;
@@ -1106,7 +1106,7 @@ public:
     int unk98;
     int unk9c;
 
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     FUN_00bb0d40();
 };
 
@@ -1245,7 +1245,7 @@ class NiD3DVertexDeclaration : public RefObj_bacd00
 class NiMemObject
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 };
 
@@ -1922,8 +1922,8 @@ struct FUN_0083b6d0 : NiAVObject {
  NiRect<float> viewport;
  float lod;
  FUN_0083b6d0();
- static void* operator new(unsigned int n) {return FUN_0089eb90(n);}
- static void operator delete(void* p,unsigned int n) {FUN_0089ec10(p,n);}
+ static void* operator new(size_t n) {return FUN_0089eb90(n);}
+ static void operator delete(void* p,size_t n) {FUN_0089ec10(p,n);}
  static void* FUN_0089eb90(unsigned int);
  static void FUN_0089ec10(void*,unsigned int);
  bool FUN_0083a590(const NiPoint3&,const NiPoint3&);

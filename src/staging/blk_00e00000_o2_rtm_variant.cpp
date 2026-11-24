@@ -491,7 +491,7 @@ class E00390Object
   public:
     E00390Object(E00390FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -919,7 +919,7 @@ extern int DAT_010ce4bc;
 void* FUN_00e00b30();
 extern int g_unk0126df40;
 void* __cdecl FUN_00e00b50();
-inline void* operator new(unsigned int, void* pvWhere) throw()
+inline void* operator new(size_t, void* pvWhere) throw()
 {
     return pvWhere;
 }
@@ -3511,7 +3511,7 @@ struct VecList113
 float __cdecl FUN_00e13870(int a, int b);
 int __stdcall FUN_00e16e20(int a, int b, float c);
 struct ExportPlacement;
-inline void* operator new(unsigned int, ExportPlacement* address)
+inline void* operator new(size_t, ExportPlacement* address)
 {
     return address;
 }

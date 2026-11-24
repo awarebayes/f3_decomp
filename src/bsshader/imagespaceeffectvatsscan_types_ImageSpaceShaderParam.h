@@ -297,7 +297,7 @@ class ImageSpaceShaderParam : public ImageSpaceEffectParam
     NiTObjectArray<NiPointer<NiTexture> > m_kShaderTextures;                        // +0x58, 16 bytes
     NiTPrimitiveArray_enum_NiTexturingProperty__FilterMode_ m_kTextureFilterModes;  // +0x68, 16 bytes
     NiTMap_unsigned_int_unsigned_int_ m_kRenderStateMap;                            // +0x78, 16 bytes
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

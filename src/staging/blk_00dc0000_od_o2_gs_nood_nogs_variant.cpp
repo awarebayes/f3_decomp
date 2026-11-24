@@ -9,7 +9,7 @@
 
 #include <xmmintrin.h>
 #include <math.h>
-inline void* __cdecl operator new(unsigned int, void* location) throw()
+inline void* __cdecl operator new(size_t, void* location) throw()
 {
     return location;
 }

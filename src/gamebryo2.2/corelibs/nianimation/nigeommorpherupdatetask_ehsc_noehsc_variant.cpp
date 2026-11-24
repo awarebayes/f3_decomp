@@ -234,7 +234,7 @@ struct TaskBlock
         return i >= m_uiCount ? 0 : &m_pkTasks[i];
     }
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return ((FUN_00a5e3a0_Helper*)&g_memoryManager)->FUN_00aa3e40(uiSize);
     }
@@ -277,10 +277,10 @@ struct MorphTaskArr
     MorphTaskArr();
     ~MorphTaskArr();
 
-    static void* operator new[](size_t size, unsigned int count);
+    static void* operator new[](size_t size, size_t count);
 };
 
-inline void* MorphTaskArr::operator new[](size_t size, unsigned int count)
+inline void* MorphTaskArr::operator new[](size_t size, size_t count)
 {
     if (count == 0)
         return DAT_011f6238.FUN_00aa3e40(4);

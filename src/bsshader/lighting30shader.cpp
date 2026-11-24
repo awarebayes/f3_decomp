@@ -1470,7 +1470,7 @@ struct FUN_00b7e330 : Object
     unsigned int unk3c;
     unsigned int unk40;
     FUN_00b7e330(void*, unsigned int);
-    static __forceinline void* operator new(unsigned int size)
+    static __forceinline void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }

@@ -597,7 +597,7 @@ struct Pool_1090a78 { void* FUN_0086b930(unsigned); };
 extern Pool_1090a78 DAT_01090a78;
 extern unsigned DAT_00f7661c;
 
-struct El_00b5b350 { int v; __forceinline static void* operator new[](unsigned n) { return DAT_01090a78.FUN_0086b930(n); } };
+struct El_00b5b350 { int v; __forceinline static void* operator new[](size_t n) { return DAT_01090a78.FUN_0086b930(n); } };
 struct E_00b5b350 { El_00b5b350* p;
     E_00b5b350* FUN_00b5b350(); };
 E_00b5b350* E_00b5b350::FUN_00b5b350()

@@ -262,7 +262,7 @@ void RequestOwner::FUN_00728ef0(PendingRequest* replacement)
 // @f3 0x0072aca0 (community match, verified in this file)
 class SceneRefObject {
 public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     virtual void vr00();
     virtual void DeleteThis();
@@ -4993,7 +4993,7 @@ extern RefHeap DAT_01090a78;
 struct List : Node {
     List() { reference = 0; next = 0; }
     __forceinline ~List() { FUN_006c8220(); }
-    static void* operator new(unsigned int bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new(size_t bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
     static void operator delete(void* object) { DAT_01090a78.FUN_0086ba60(object); }
     void FUN_0061c430(Node* source);
     void FUN_0049fac0(Reference** reference);
@@ -15446,7 +15446,7 @@ struct FUN_006b5c50 {
  unsigned unk64;
  unsigned unk68;
  FUN_006b5c50(Reference*,Shader*,float);
- static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+ static void* operator new(size_t size) { return FUN_0089eb90(size); }
 };
 struct ProcessLists { void FUN_00793f90(FUN_006b5c50*); };
 extern ProcessLists DAT_0107c0a0;
@@ -16259,7 +16259,7 @@ struct F3HitEffectBase {
 struct FUN_006b5c50 : F3HitEffectBase {
     FUN_006b5c50(TESObjectREFR* owner,F3EffectShader* shader,float time);
     virtual bool IsFinished();
-    static void* operator new(unsigned int size) {return FUN_0089eb90(size);}
+    static void* operator new(size_t size) {return FUN_0089eb90(size);}
     unsigned int unk04;
     unsigned int unk08;
     unsigned int unk0c;
@@ -26583,7 +26583,7 @@ struct Object { Table* table;
  int unk324;
  int unk328;
  int unk32C;
- Object(void*,int); static void operator delete(void* p,int) { FUN_00723fe0(p); } static void* operator new(unsigned n,int alignment) throw() { return DAT_00f7b4cc(n,alignment); } };
+ Object(void*,int); static void operator delete(void* p,int) { FUN_00723fe0(p); } static void* operator new(size_t n,int alignment) throw() { return DAT_00f7b4cc(n,alignment); } };
 struct Memory { void* FUN_008f6f60(int,int); };
 void FUN_0092e8f0(Object*);
 struct System { void FUN_0043cc40(); }; extern System* DAT_0106cdcc;
@@ -27255,7 +27255,7 @@ void Owner::FUN_00721e10(bool active,float original) {
 namespace f3m_00730440 {
 namespace lazy044 {
 struct Heap { void* FUN_0086b930(unsigned int); void FUN_0086ba60(void*); }; extern Heap DAT_01090a78;
-struct FUN_00723fa0 { int unk000; int unk004; int unk008; int unk00C; int unk010; int unk014; int unk018; int unk01C; int unk020; int unk024; int unk028; int unk02C; int unk030; int unk034; int unk038; int unk03C; int unk040; int unk044; int unk048; int unk04C; int unk050; int unk054; int unk058; int unk05C; int unk060; int unk064; int unk068; int unk06C; int unk070; int unk074; int unk078; int unk07C; int unk080; int unk084; int unk088; int unk08C; int unk090; int unk094; int unk098; int unk09C; int unk0A0; int unk0A4; int unk0A8; int unk0AC; int unk0B0; int unk0B4; int unk0B8; int unk0BC; int unk0C0; int unk0C4; int unk0C8; int unk0CC; int unk0D0; int unk0D4; int unk0D8; int unk0DC; int unk0E0; int unk0E4; int unk0E8; int unk0EC; int unk0F0; int unk0F4; int unk0F8; int unk0FC; int unk100; int unk104; int unk108; int unk10C; int unk110; int unk114; int unk118; int unk11C; int unk120; int unk124; int unk128; int unk12C; int unk130; int unk134; int unk138; int unk13C; int unk140; int unk144; int unk148; int unk14C; int unk150; int unk154; int unk158; int unk15C; int unk160; int unk164; int unk168; int unk16C; int unk170; int unk174; int unk178; int unk17C; int unk180; int unk184; int unk188; int unk18C; int unk190; int unk194; int unk198; int unk19C; int unk1A0; int unk1A4; int unk1A8; int unk1AC; int unk1B0; int unk1B4; int unk1B8; int unk1BC; int unk1C0; int unk1C4; int unk1C8; int unk1CC; int unk1D0; int unk1D4; int unk1D8; int unk1DC; int unk1E0; int unk1E4; int unk1E8; int unk1EC; int unk1F0; int unk1F4; int unk1F8; int unk1FC; int unk200; int unk204; int unk208; int unk20C; int unk210; int unk214; int unk218; int unk21C; int unk220; int unk224; int unk228; int unk22C; int unk230; int unk234; int unk238; int unk23C; int unk240; int unk244; FUN_00723fa0(); void FUN_00723fc0(int); static void* operator new(unsigned int n){return DAT_01090a78.FUN_0086b930(n);} static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);} };
+struct FUN_00723fa0 { int unk000; int unk004; int unk008; int unk00C; int unk010; int unk014; int unk018; int unk01C; int unk020; int unk024; int unk028; int unk02C; int unk030; int unk034; int unk038; int unk03C; int unk040; int unk044; int unk048; int unk04C; int unk050; int unk054; int unk058; int unk05C; int unk060; int unk064; int unk068; int unk06C; int unk070; int unk074; int unk078; int unk07C; int unk080; int unk084; int unk088; int unk08C; int unk090; int unk094; int unk098; int unk09C; int unk0A0; int unk0A4; int unk0A8; int unk0AC; int unk0B0; int unk0B4; int unk0B8; int unk0BC; int unk0C0; int unk0C4; int unk0C8; int unk0CC; int unk0D0; int unk0D4; int unk0D8; int unk0DC; int unk0E0; int unk0E4; int unk0E8; int unk0EC; int unk0F0; int unk0F4; int unk0F8; int unk0FC; int unk100; int unk104; int unk108; int unk10C; int unk110; int unk114; int unk118; int unk11C; int unk120; int unk124; int unk128; int unk12C; int unk130; int unk134; int unk138; int unk13C; int unk140; int unk144; int unk148; int unk14C; int unk150; int unk154; int unk158; int unk15C; int unk160; int unk164; int unk168; int unk16C; int unk170; int unk174; int unk178; int unk17C; int unk180; int unk184; int unk188; int unk18C; int unk190; int unk194; int unk198; int unk19C; int unk1A0; int unk1A4; int unk1A8; int unk1AC; int unk1B0; int unk1B4; int unk1B8; int unk1BC; int unk1C0; int unk1C4; int unk1C8; int unk1CC; int unk1D0; int unk1D4; int unk1D8; int unk1DC; int unk1E0; int unk1E4; int unk1E8; int unk1EC; int unk1F0; int unk1F4; int unk1F8; int unk1FC; int unk200; int unk204; int unk208; int unk20C; int unk210; int unk214; int unk218; int unk21C; int unk220; int unk224; int unk228; int unk22C; int unk230; int unk234; int unk238; int unk23C; int unk240; int unk244; FUN_00723fa0(); void FUN_00723fc0(int); static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);} static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);} };
 struct Data { int unk000; int unk004; int unk008; int unk00C; int unk010; int unk014; int unk018; int unk01C; int unk020; int unk024; int unk028; int unk02C; int unk030; int unk034; int unk038; int unk03C; int unk040; unsigned int flags; bool Skip(){return (flags>>8)&1;} }; extern Data* DAT_01073eb8[];
 struct Owner { int unk000; int unk004; int unk008; int unk00C; int unk010; int unk014; int unk018; int unk01C; int unk020; int unk024; int unk028; int unk02C; int unk030; int unk034; int unk038; int unk03C; int unk040; int unk044; int unk048; int unk04C; int unk050; int unk054; int unk058; int unk05C; int unk060; int unk064; int unk068; int unk06C; int unk070; int unk074; int unk078; int unk07C; int unk080; int unk084; int unk088; int unk08C; int unk090; int unk094; int unk098; int unk09C; int unk0A0; int unk0A4; int unk0A8; int unk0AC; int unk0B0; int unk0B4; int unk0B8; int unk0BC; int unk0C0; int unk0C4; int unk0C8; int unk0CC; int unk0D0; int unk0D4; int unk0D8; int unk0DC; int unk0E0; int unk0E4; int unk0E8; int unk0EC; int unk0F0; int unk0F4; int unk0F8; int unk0FC; int unk100; int unk104; int unk108; int unk10C; int unk110; int unk114; int unk118; int unk11C; int unk120; int unk124; int unk128; int unk12C; int unk130; int unk134; int unk138; int unk13C; int unk140; int unk144; int unk148; int unk14C; int unk150; int unk154; int unk158; int unk15C; int unk160; int unk164; int unk168; int unk16C; int unk170; int unk174; int unk178; int unk17C; int unk180; int unk184; int unk188; int unk18C; int unk190; int unk194; int unk198; int unk19C; int unk1A0; int unk1A4; int unk1A8; int unk1AC; int unk1B0; int unk1B4; int unk1B8; int unk1BC; int unk1C0; int unk1C4; int unk1C8; int unk1CC; int unk1D0; int unk1D4; int unk1D8; int unk1DC; int unk1E0; int unk1E4; int unk1E8; int unk1EC; int unk1F0; int unk1F4; int unk1F8; int unk1FC; int unk200; int unk204; int unk208; int unk20C; int unk210; int unk214; int unk218; int unk21C; int unk220; int unk224; int unk228; int unk22C; int unk230; int unk234; int unk238; int unk23C; int unk240; int unk244; int unk248; int unk24C; int unk250; int unk254; int unk258; int unk25C; int unk260; int unk264; int unk268; int unk26C; int unk270; int unk274; int unk278; int unk27C; int unk280; int unk284; int unk288; int unk28C; int unk290; int unk294; int unk298; int unk29C; int unk2A0; int unk2A4; int unk2A8; int unk2AC; int unk2B0; int unk2B4; int unk2B8; int unk2BC; int unk2C0; int unk2C4; int unk2C8; int unk2CC; int unk2D0; int unk2D4; int unk2D8; int unk2DC; int unk2E0; int unk2E4; int unk2E8; int unk2EC; int unk2F0; int unk2F4; int unk2F8; int unk2FC; int unk300; int unk304; int unk308; int unk30C; int unk310; int unk314; int unk318; int unk31C; int unk320; int unk324; int unk328; int unk32C; int unk330; int unk334; int unk338; int unk33C; int unk340; int unk344; int unk348; int unk34C; int unk350; int unk354; int unk358; int unk35C; int unk360; int unk364; int unk368; int unk36C; int unk370; int unk374; int unk378; int unk37C; int unk380; int unk384; int unk388; int unk38C; int unk390; int unk394; int unk398; int unk39C; int unk3A0; int unk3A4; int unk3A8; int unk3AC; int unk3B0; int unk3B4; int unk3B8; int unk3BC; int unk3C0; int unk3C4; int unk3C8; int unk3CC; int unk3D0; int unk3D4; int unk3D8; int unk3DC; int unk3E0; int unk3E4; int unk3E8; int unk3EC; int unk3F0; int unk3F4; int unk3F8; int unk3FC; int unk400; int unk404; int unk408; int unk40C; int unk410; int unk414; FUN_00723fa0* unk418; void FUN_00763bc0(void*,int,float); void FUN_00730440(void*,int,float); };
 void Owner::FUN_00730440(void* object,int id,float value) {
@@ -29876,7 +29876,7 @@ extern Flags44* DAT_01073eb8[];
 class FUN_00723fa0
 {
 public:
-    static void* operator new(unsigned int bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new(size_t bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
     int m_000;
     int m_004;
     int m_008;
@@ -31793,8 +31793,8 @@ struct FUN_00837e10 { void** table; int unk04; int unk08; int unk0C; int unk10; 
 struct Controller : FUN_00837e10 {
  float value34; unsigned int value38;
  Controller(){value34=0.0f;table=DAT_00e1425c;value38=0;}
- static void* operator new(unsigned int size){return FUN_0089eb90(size);}
- static void operator delete(void* pointer,unsigned int size){FUN_0089ec10(pointer,size);}
+ static void* operator new(size_t size){return FUN_0089eb90(size);}
+ static void operator delete(void* pointer,size_t size){FUN_0089ec10(pointer,size);}
  void FUN_00837bc0(Controller*,void*);
  Controller* FUN_00727bc0(void*);
 };
@@ -35181,7 +35181,7 @@ struct FUN_00723fa0 {
  Entry entries[73];
  FUN_00723fa0();
  void FUN_00723f20(unsigned,float);
- static void* operator new(unsigned size) { return DAT_01090a78.FUN_0086b930(size); }
+ static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
  static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 struct Actor {
@@ -36738,7 +36738,7 @@ extern Heap DAT_01090a78;
 struct FUN_00723fa0 {
     FUN_00723fa0();
     void FUN_00723fc0(int a);
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
     char pad[0x248];
 };
@@ -38298,7 +38298,7 @@ struct Heap { void* FUN_0086b930(unsigned int size); void FUN_0086ba60(void* p);
 extern Heap DAT_01090a78;
 struct FUN_007c7160 {
     FUN_007c7160(int a, int b);
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
     char pad[0x20];
 };
@@ -40217,7 +40217,7 @@ struct CacheEntry {
 class FUN_00723fa0 {
 public:
     CacheEntry cache[73];
-    static void* operator new(unsigned int bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new(size_t bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
     static void operator delete(void* object) { DAT_01090a78.FUN_0086ba60(object); }
     FUN_00723fa0();
     void FUN_00723fc0(int actorValue);
@@ -43076,7 +43076,7 @@ struct QAnchor {
  int unk14;
  QSink* unk18;
  QAnchor() { unk00 = 0; bound.center = DAT_0108ec68; bound.radius = -3.402823466e+38F; unk14 = -1; unk18 = 0; }
- static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+ static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 struct QOwner {
  int unk00; int unk04; int unk08; int unk0c; int unk10; int unk14; int unk18; int unk1c; int unk20; int unk24; int unk28; int unk2c; int unk30; int unk34; int unk38; int unk3c; int unk40; int unk44; int unk48; int unk4c; int unk50; int unk54; int unk58; int unk5c; int unk60; int unk64; int unk68; int unk6c; int unk70; int unk74; int unk78; int unk7c; int unk80; int unk84; int unk88; int unk8c; int unk90; int unk94; int unk98; int unk9c; int unka0; int unka4; int unka8; int unkac; int unkb0; int unkb4; int unkb8; int unkbc; int unkc0; int unkc4; int unkc8; int unkcc; int unkd0; int unkd4; int unkd8; int unkdc; int unke0; int unke4; int unke8; int unkec; int unkf0; int unkf4; int unkf8; int unkfc; int unk100; int unk104; int unk108; int unk10c; int unk110; int unk114; int unk118; int unk11c; int unk120; int unk124; int unk128; int unk12c; int unk130; int unk134; int unk138; int unk13c; int unk140; int unk144; int unk148; int unk14c; int unk150; int unk154; int unk158; int unk15c; int unk160; int unk164; int unk168; int unk16c; int unk170; int unk174; int unk178; int unk17c; int unk180; int unk184; int unk188; int unk18c; int unk190; int unk194; int unk198; int unk19c; int unk1a0; int unk1a4; int unk1a8; int unk1ac; int unk1b0; int unk1b4; int unk1b8; int unk1bc; int unk1c0; int unk1c4; int unk1c8; int unk1cc; int unk1d0; int unk1d4; int unk1d8; int unk1dc; int unk1e0; int unk1e4; int unk1e8; int unk1ec; int unk1f0; int unk1f4; int unk1f8; int unk1fc; int unk200; int unk204; int unk208; int unk20c; int unk210; int unk214; int unk218; int unk21c; int unk220; int unk224; int unk228; int unk22c; int unk230; int unk234; int unk238; int unk23c; int unk240; int unk244; int unk248; int unk24c; int unk250; int unk254; int unk258; int unk25c; int unk260; int unk264; int unk268; int unk26c; int unk270; int unk274; int unk278; int unk27c; int unk280; int unk284; int unk288; int unk28c; int unk290; int unk294; int unk298; int unk29c; int unk2a0; int unk2a4; int unk2a8; int unk2ac; int unk2b0; int unk2b4; int unk2b8; int unk2bc; int unk2c0; int unk2c4; int unk2c8; int unk2cc; int unk2d0; int unk2d4; int unk2d8; int unk2dc; int unk2e0; int unk2e4; int unk2e8; int unk2ec; int unk2f0; int unk2f4; int unk2f8; int unk2fc; int unk300; int unk304; int unk308; int unk30c; int unk310; int unk314; int unk318; int unk31c; int unk320; int unk324; int unk328; int unk32c; int unk330; int unk334; int unk338; int unk33c; int unk340; int unk344; int unk348; int unk34c; int unk350; int unk354; int unk358; int unk35c; int unk360; int unk364; int unk368; int unk36c; int unk370; int unk374; int unk378; int unk37c; int unk380; int unk384; int unk388; int unk38c; int unk390; int unk394; int unk398; int unk39c; int unk3a0; int unk3a4; int unk3a8; int unk3ac; int unk3b0; int unk3b4; int unk3b8; int unk3bc; int unk3c0; int unk3c4; int unk3c8; int unk3cc; int unk3d0;
@@ -50488,7 +50488,7 @@ struct List
     Item* item;
     List* next;
     List(Item* const& value) : item(value), next(0) {}
-    static void* operator new(unsigned int bytes) throw()
+    static void* operator new(size_t bytes) throw()
     { return DAT_01090a78.FUN_0086b930(bytes); }
     __forceinline void Append(Item* const& value)
     {
@@ -54012,7 +54012,7 @@ public:
     int unk240;
     int unk244;
     FUN_00723fa0();
-    static void* operator new(unsigned int bytes) { return f3m_007305a0::DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new(size_t bytes) { return f3m_007305a0::DAT_01090a78.FUN_0086b930(bytes); }
     static void operator delete(void* p) { f3m_007305a0::DAT_01090a78.FUN_0086ba60(p); }
     void FUN_00723fc0(int index);
 };
@@ -60338,7 +60338,7 @@ struct EntryT {
     int mode;
     void* value;
     EntryT(void* v, int m);
-    static void* operator new(unsigned int bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new(size_t bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
     static void operator delete(void* object);
 };
 
@@ -77384,7 +77384,7 @@ struct T737140ActorI {
 struct T737140Heap { void FUN_0086ba60(void*); };
 struct FUN_005ad690 {
     FUN_005ad690();
-    static void* operator new(unsigned n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
     static void operator delete(void* p) { ((T737140Heap*)&DAT_01090a78)->FUN_0086ba60(p); }
     void FUN_00c24b70();
     int unk00; int unk04; int unk08; int unk0c;
@@ -86177,7 +86177,7 @@ struct Vec { float x,y,z; Vec FUN_004229a0(const Vec&) const; };
 struct List { Task* FUN_0040bdd0(); void FUN_0040be50(int); };
 struct Base { int unk00,unk04,unk08,unk0c,unk10,unk14,unk18,unk1c; Base* FUN_004a7c60(); };
 struct Alloc {void* FUN_0086b930(unsigned);void FUN_0086ba60(void*);};extern Alloc DAT_01090a78;
-struct FUN_006c6550 {FUN_006c6550(Obj*,Base*,int);int unk00,unk04,unk08;static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
+struct FUN_006c6550 {FUN_006c6550(Obj*,Base*,int);int unk00,unk04,unk08;static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
 struct SettingView { int* FUN_004241e0(); }; extern SettingView DAT_00f5eacc,DAT_00f5ead8;
 extern Obj* DAT_0107a104; extern float DAT_01090bac; extern double DAT_00dc0770,DAT_00dc2df0;
 extern "C" float __cdecl FUN_00477b20(const Vec*); extern "C" float __cdecl FUN_004759f0(float,float,float*);
@@ -89529,7 +89529,7 @@ struct FUN_006b2440 {
     void FUN_006b22b0(float value);
 
     ~FUN_006b2440() { FUN_006b21b0(); }
-    static void* operator new(unsigned size) {
+    static void* operator new(size_t size) {
         return DAT_01090a78.FUN_0086b930(size);
     }
     static void operator delete(void* memory) {
@@ -99466,7 +99466,7 @@ struct Item {
     bool b1f;
     int u20;
 
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         return DAT_01090a78.FUN_0086b930(size);
     }
 
@@ -100015,7 +100015,7 @@ struct Entry {
     bool b1f;
     int u20;
 
-    static void* operator new(unsigned int, void* p) { return p; }
+    static void* operator new(size_t, void* p) { return p; }
 
     __forceinline void Init(double f) {
         actor00 = 0;
@@ -100050,7 +100050,7 @@ struct Node {
     Node* next;
     __forceinline Node() : item(0), next(0) {}
     __forceinline Node(Entry* e) : item(e), next(0) {}
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     __forceinline void AddHead(Entry* entry) {
         if (item == 0)
             item = entry;
@@ -100130,8 +100130,8 @@ struct Entry {
     {
         Init(FUN_00db7260);
     }
-    static void* operator new(unsigned bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
-    static void* operator new(unsigned, void* place) { return place; }
+    static void* operator new(size_t bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new(size_t, void* place) { return place; }
     static void operator delete(void* memory) { DAT_01090a78.FUN_0086ba60(memory); }
     void Copy(Entry* p)
     {
@@ -100154,7 +100154,7 @@ struct Node {
     Entry* item;
     Node* next;
     __forceinline Node(Entry* p) : item(p), next(0) {}
-    static void* operator new(unsigned bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new(size_t bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
     void Add(Entry* p)
     {
         if (p)

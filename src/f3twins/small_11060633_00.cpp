@@ -87,7 +87,7 @@ void X_00924360::FUN_00924360(float* a) { A_00924360(a, (float*)this); }
 
 struct B_00acd710 { B_00acd710() throw(); virtual ~B_00acd710() throw(); char pad[0x14]; };
 struct V2_00acd710 { float x, y; V2_00acd710() throw() : x(0.0f), y(0.0f) {} };
-struct N_00acd710 : B_00acd710 { int f18; V2_00acd710 v; virtual ~N_00acd710() throw(); N_00acd710() throw() : f18(0) {} static void* operator new(unsigned) throw(); void FUN_00acd5c0(int) throw(); };
+struct N_00acd710 : B_00acd710 { int f18; V2_00acd710 v; virtual ~N_00acd710() throw(); N_00acd710() throw() : f18(0) {} static void* operator new(size_t) throw(); void FUN_00acd5c0(int) throw(); };
 struct O_00acd710 { char pad[0x18]; int f18; void FUN_00ac5e70(N_00acd710*, int); N_00acd710* FUN_00acd710(int); };
 
 N_00acd710* O_00acd710::FUN_00acd710(int a)

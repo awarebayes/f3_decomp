@@ -14748,7 +14748,7 @@ void __cdecl FUN_00c8c550(){DAT_0106f900.FUN_00491570(DAT_00dc1840,640);FUN_00c0
 }
 
 // @f3 0x00c9d750 (community match, verified in this file)
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 struct FUN_005752c0 {
     void* vtable;
     const char* value;

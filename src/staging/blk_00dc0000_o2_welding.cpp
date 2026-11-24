@@ -189,7 +189,7 @@ struct S_00a64f60r_String
     {
         return m_string.m_data;
     }
-    static void* operator new(unsigned int) throw()
+    static void* operator new(size_t) throw()
     {
         return S_00a64f60r_ThreadMemory::getInstance().allocateChunk(2, 0x16);
     }

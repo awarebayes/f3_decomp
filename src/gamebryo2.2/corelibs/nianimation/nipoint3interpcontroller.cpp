@@ -4,7 +4,7 @@
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct NiPoint3
 {

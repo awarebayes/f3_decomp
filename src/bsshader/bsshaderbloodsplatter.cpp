@@ -352,7 +352,7 @@ extern float DAT_011feda4;
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     static void __cdecl operator delete(void*);
     virtual void v0();
     virtual void DeleteThis();

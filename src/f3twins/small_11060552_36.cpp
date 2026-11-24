@@ -258,7 +258,7 @@ void __stdcall FUN_00ab5ef0(O_00ac5340* o, int v)
 
 void __fastcall FUN_00863b50(void*);
 void __cdecl FUN_0089ec10(void*, unsigned int);
-struct C_00ab7c70 { virtual ~C_00ab7c70(); char p[20 - 4]; static void operator delete(void* q, unsigned int s) { FUN_0089ec10(q, s); } };
+struct C_00ab7c70 { virtual ~C_00ab7c70(); char p[20 - 4]; static void operator delete(void* q, size_t s) { FUN_0089ec10(q, s); } };
 C_00ab7c70::~C_00ab7c70() { FUN_00863b50(this); }
 
 // ---- family f346

@@ -109,7 +109,7 @@ class ImageSpaceShaderParam : public ImageSpaceEffectParam
     ImageSpaceShaderParam();
     void AllocateShaderConstants(int vertexCount, int pixelCount);
     void SetShaderConstantVector4(int index, float x, float y, float z, float w);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
@@ -130,7 +130,7 @@ class ImageSpaceTexture
           m_eTextureFilterMode(NiTexturingProperty::FILTER_NEAREST), m_eClampMode(NiTexturingProperty::CLAMP_S_CLAMP_T)
     {}
     void SetTexture(NiTexture* texture);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

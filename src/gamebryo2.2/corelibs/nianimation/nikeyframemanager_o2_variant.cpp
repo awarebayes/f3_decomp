@@ -141,7 +141,7 @@ struct SequenceData
     OutArray<unsigned int> m_kArr2;
     InArray<char*> m_kArr3;
     SequenceData() throw();
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return _g_memoryManager.Allocate(uiSize);
     }
@@ -343,7 +343,7 @@ struct FUN_00a47bd0 : RefD810
     int unk0c, unk10, unk14, unk18, unk1c, unk20, unk24, unk28;
     RefD810* object;
     unsigned int unk30;
-    static __declspec(nothrow) void* __cdecl operator new(unsigned int);
+    static __declspec(nothrow) void* __cdecl operator new(size_t);
     __declspec(nothrow) FUN_00a47bd0(void*, int, int);
     void AddSeq(void*, RefD810*);
     void SetObject(RefD810* p)

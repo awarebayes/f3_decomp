@@ -95,16 +95,16 @@ public:
     unsigned int unk4c;
     unsigned int unk50;
     unsigned int unk54;
-    static void* operator new(unsigned int n) {
+    static void* operator new(size_t n) {
         return reinterpret_cast<AllocationPool*>(&DAT_011f6238)->FUN_0086b930(n);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 
 class A42D00Interpolator {
 public:
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 
 class ShaderPrimary : public A42D00Interpolator {
@@ -3643,7 +3643,7 @@ struct RenderTaskThread : FUN_007240a0 {
     void (__cdecl* task)();
     RenderTaskThread(void (__cdecl* f)()) {task=f;}
     virtual ~RenderTaskThread();
-    static void* operator new(unsigned n) {return DAT_01090a78.FUN_0086b930(n);}
+    static void* operator new(size_t n) {return DAT_01090a78.FUN_0086b930(n);}
     static void operator delete(void* p) {DAT_01090a78.FUN_0086ba60(p);}
 };
 struct Owner {RenderTaskThread* threads[2];void FUN_00b0cf00(int,unsigned,void (__cdecl*)(),const char*,unsigned);};
@@ -4660,7 +4660,7 @@ void Renderer_af60::FUN_00b10b50(int idx, Cam_af60* cam, bool abUseRadius, float
 // @f3 0x00b00c30 (community match, verified in this file)
 class GraphicsRenderer;
 struct NiMemObject {
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 struct ConstantReference : NiMemObject {
     virtual void UnknownVirtual00();
@@ -4721,7 +4721,7 @@ struct NiD3DShaderConstantMap : ConstantReference {
     virtual ConstantReference* FindConstant(const char*);
     unsigned int unk08, unk0C, unk10, unk14, unk18, unk1C, unk20, unk24;
     unsigned int unk28, unk2C, unk30, unk34, unk38, unk3C, unk40;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     NiD3DShaderConstantMap(GraphicsRenderer*, unsigned int);
 };
 struct ShaderConstants1517 {
@@ -5928,7 +5928,7 @@ struct RenderPlane {
         passCount = 0;
         passes.Reset();
     }
-    static void* operator new(unsigned int size) throw() { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) throw() { return DAT_01090a78.FUN_0086b930(size); }
 };
 
 struct Node {
@@ -6939,7 +6939,7 @@ struct Node {
  unsigned short count;
  Node* head;
  Node(unsigned short value):count(value),head(0) {}
- static void* operator new(unsigned size) throw() {return DAT_01090a78.FUN_0086b930(size);}
+ static void* operator new(size_t size) throw() {return DAT_01090a78.FUN_0086b930(size);}
  static void operator delete(void*);
 };
 struct Owner {
@@ -7276,7 +7276,7 @@ int unk8c;
 int unk90;
 int unk94;
 FUN_00b0fc90(void*,int);
-static void* operator new(unsigned int n) throw() { return FUN_0089eb90(n); }
+static void* operator new(size_t n) throw() { return FUN_0089eb90(n); }
 static void operator delete(void* p) { FUN_0089e890(p); }
 };
 struct List { void FUN_00b0f5d0(Item**); void FUN_00b0f580(Item**); };
@@ -7343,7 +7343,7 @@ struct Node {
  unsigned short value;
  unsigned short unk02;
  Node* next;
- static void* operator new(unsigned size) throw() { return DAT_01090a78.FUN_0086b930(size); }
+ static void* operator new(size_t size) throw() { return DAT_01090a78.FUN_0086b930(size); }
  Node(unsigned short input) : value(input),next(0) {}
  void FUN_00b0eb60(unsigned*);
  void FUN_00b0f470(unsigned,int (__cdecl*)(unsigned short,unsigned short));

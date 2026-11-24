@@ -801,7 +801,7 @@ struct List {
     Arr unk04;
     Arr unk10;
     List() : unk00(0) {}
-    static void* operator new(unsigned int bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new(size_t bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
 };
 }
 using namespace f3m_008fd5b0;
@@ -1088,8 +1088,8 @@ extern "C" __declspec(dllimport) void __stdcall LeaveCriticalSection(_RTL_CRITIC
 
 class NiMemObject {
 public:
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int size);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t size);
 };
 
 class S_00c87c30_Base : public NiMemObject {
@@ -3144,7 +3144,7 @@ unsigned int Array::FUN_008e31a0() {
 namespace f3m_008e8880 {
 namespace n8e8880 {
 struct Obj {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     Obj(int a, int b, float c);
     char pad[0x14];
@@ -4256,7 +4256,7 @@ extern __declspec(thread) int DAT_0117c298;
 namespace f3m_008fa6c0 {
 namespace task0734 {
 void* __cdecl FUN_0089eb90(unsigned int);
-struct AllocatedObject { static void* operator new(unsigned int size) { return FUN_0089eb90(size); } };
+struct AllocatedObject { static void* operator new(size_t size) { return FUN_0089eb90(size); } };
 void* __fastcall FUN_008f3130(void*);
 struct MyType : AllocatedObject {
 unsigned int unk00;
@@ -5370,9 +5370,9 @@ struct FUN_008f6a50 {
 
     FUN_008f6a50(void* manager, int count);
 
-    static void* operator new(unsigned int size, unsigned int align) { return DAT_00f7b4cc(size, align); }
+    static void* operator new(size_t size, size_t align) { return DAT_00f7b4cc(size, align); }
     static void operator delete(void* p) { DAT_00f7b4d0(p); }
-    static void operator delete(void* p, unsigned int) { DAT_00f7b4d0(p); }
+    static void operator delete(void* p, size_t) { DAT_00f7b4d0(p); }
 };
 
 void FUN_008f24c0()
@@ -5692,13 +5692,13 @@ struct RefObject {
     unsigned short memSizeAndFlags;
     short referenceCount;
 
-    static __forceinline void* operator new(unsigned int size) {
+    static __forceinline void* operator new(size_t size) {
         Heap* heap = static_cast<Heap*>(TlsGetValue(DAT_010f3170));
         RefObject* p = static_cast<RefObject*>(heap->FUN_008f6d30(size, size));
         p->memSizeAndFlags = (unsigned short)size;
         return p;
     }
-    static __forceinline void operator delete(void* p, unsigned int size) {
+    static __forceinline void operator delete(void* p, size_t size) {
         Heap* heap = static_cast<Heap*>(TlsGetValue(DAT_010f3170));
         heap->FUN_008f6d90(p, size, size);
     }
@@ -11506,7 +11506,7 @@ namespace f3m_008f94a0 {
 namespace Make8f94a0 {
 void* FUN_0089eb90(unsigned);extern char DAT_00dfcd64;
 struct FUN_008d9f90 {void* table;int unk04,unk08,unk0c,unk10;FUN_008d9f90();};
-struct Product:FUN_008d9f90 {Product(){table=&DAT_00dfcd64;}static void* operator new(unsigned n){return FUN_0089eb90(n);}static void operator delete(void*);};
+struct Product:FUN_008d9f90 {Product(){table=&DAT_00dfcd64;}static void* operator new(size_t n){return FUN_0089eb90(n);}static void operator delete(void*);};
 struct Object {void FUN_008da090(Product*,int);Product* FUN_008f94a0(int);};
 Product* Object::FUN_008f94a0(int value){Product* p=new Product;FUN_008da090(p,value);return p;}
 }
@@ -11714,7 +11714,7 @@ struct FUN_00a75730_cls {
     int unk34, unk38, unk3c, unk40;
     int rev;
     int unk48;
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     static void operator delete(void* ptr) { FUN_0089ecc0(ptr); }
     FUN_00a75730_cls();
 };
@@ -12415,7 +12415,7 @@ struct SourceMesh8f77 {
 
 struct Normals8f77 { void FUN_00830d30(bool flag); };
 
-struct Alloc8f77 { static void* operator new(unsigned int size) { return FUN_0089eb90(size); } };
+struct Alloc8f77 { static void* operator new(size_t size) { return FUN_0089eb90(size); } };
 
 extern const char* DAT_00e207a8;
 extern long (__stdcall *DAT_00d9b064)(long*);
@@ -12497,7 +12497,7 @@ void Builder8f77::FUN_008f7730(Itf8f77* receiver, SourceMesh8f77* mesh, const ch
 
 }
 
-void* __cdecl operator new[](unsigned int size)
+void* __cdecl operator new[](size_t size)
 {
     return f3m_008f7730::DAT_01090a78.FUN_0086b930(size);
 }
@@ -13746,7 +13746,7 @@ struct FUN_008e9900 {
  unsigned int unk9c;
  unsigned int unka0;
  FUN_008e9900(int);
- static __forceinline void* operator new(unsigned int) throw() {
+ static __forceinline void* operator new(size_t) throw() {
   Heap* heap=(Heap*)DAT_00d9b080(DAT_010f3170);
   FUN_008e9900* p=heap->head;
   if(p) { --heap->count;heap->head=p->next; return p; }
@@ -15286,7 +15286,7 @@ struct Holder30 {                                // 0x30 bytes, this->p2a4->p1c
     V4 m1;
     V4 m2;
     __forceinline Holder30() : data(0) {}
-    static void* operator new(unsigned int n) { return FUN_008dba50(n); }
+    static void* operator new(size_t n) { return FUN_008dba50(n); }
 };
 
 struct Pair8 { void* a; void* b; };
@@ -15313,7 +15313,7 @@ struct Q54 {                                     // 0x38 bytes, pool 5
     }
     void FUN_00955070();
     void FUN_00955810();
-    static void* operator new(unsigned int size) { return PoolTake(5, 0xe); }
+    static void* operator new(size_t size) { return PoolTake(5, 0xe); }
     static void  operator delete(void* p) { if (p) PoolGive(p, 5, 0xe); }
 };
 
@@ -15485,7 +15485,7 @@ struct __declspec(align(16)) Vec {
 };
 struct Transform {
     Vec a,b,c;
-    static void* operator new[](unsigned int size) { return CurrentPool()->FUN_008f6f60(size,9); }
+    static void* operator new[](size_t size) { return CurrentPool()->FUN_008f6f60(size,9); }
 };
 template<class T> struct Array {
     T* data;
@@ -15512,7 +15512,7 @@ template<class T> struct Array {
 struct Bone {
     const char* name;
     unsigned char locked;
-    static void* operator new(unsigned int) { return CurrentPool()->Allocate(1,0x3b); }
+    static void* operator new(size_t) { return CurrentPool()->Allocate(1,0x3b); }
 };
 struct Skeleton {
     const char* name;
@@ -15525,7 +15525,7 @@ struct Skeleton {
     void* extra;
     int numExtra;
     __forceinline Skeleton() : name(0),parents(0),numParents(0),bones(0),numBones(0),transforms(0),numTransforms(0),extra(0),numExtra(0) {}
-    static void* operator new(unsigned int) { return CurrentPool()->Allocate(4,0x3b); }
+    static void* operator new(size_t) { return CurrentPool()->Allocate(4,0x3b); }
 };
 struct Pose {
     const Skeleton* skeleton;
@@ -15541,8 +15541,8 @@ struct Pose {
         flags.SetSize(n);
         extra.SetSize(skeleton->numExtra);
     }
-    static void* operator new(unsigned int) { return CurrentPool()->Allocate(5,0xe); }
-    static void operator delete(void* p,unsigned int size) { CurrentPool()->FUN_008f6d90(p,size,0xe); }
+    static void* operator new(size_t) { return CurrentPool()->Allocate(5,0xe); }
+    static void operator delete(void* p,size_t size) { CurrentPool()->FUN_008f6d90(p,size,0xe); }
     void FUN_00955070();
 };
 struct BoneRecord {
@@ -15944,7 +15944,7 @@ struct Prop {
     int m_revision;
     unsigned unk048;
     Prop();
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     static void operator delete(void* p) { FUN_0086ba60(p); }
 };
 
@@ -15994,7 +15994,7 @@ struct Node {
     void FUN_008245d0(const void* name);
     void FUN_004236f0(Prop* prop);
     void FUN_008268a0();
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     static void operator delete(void* p) { FUN_0086ba60(p); }
 };
 
@@ -16492,7 +16492,7 @@ struct FUN_008e8a50 {
     unsigned char active, unk015, unk016, unk017;
     FUN_008e8a50(FUN_004f64e0* settings);
     static void operator delete(void* object);
-    static void* operator new(unsigned int bytes) { return FUN_0089eb90(bytes); }
+    static void* operator new(size_t bytes) { return FUN_0089eb90(bytes); }
 };
 struct FlagState {
     unsigned int unk00;
@@ -17140,7 +17140,7 @@ struct PoseController {
     PoseController(unsigned int pelvis, unsigned int head, unsigned int arm, const Direction* direction);
     void FUN_00960bd0(const BoneMatrix* transforms, unsigned int options, float step);
     static void operator delete(void* address);
-    __forceinline static void* operator new(unsigned int size) throw()
+    __forceinline static void* operator new(size_t size) throw()
     {
         return ThreadArena()->AllocateChunk(size, 0xe);
     }
@@ -19872,21 +19872,21 @@ extern HavokHeap DAT_01090a78;
 struct FUN_0091da10 : ShapeRef
 {
     FUN_0091da10(NiPoint3 const&, NiPoint3 const&, float);
-    static void* operator new(unsigned int n) {return FUN_0089eb90(n);}
-    static void operator delete(void* p,unsigned n) { FUN_0089ec10(p,n); }
+    static void* operator new(size_t n) {return FUN_0089eb90(n);}
+    static void operator delete(void* p,size_t n) { FUN_0089ec10(p,n); }
 };
 
 struct FUN_008e9020 : ShapeRef
 {
     FUN_008e9020(CompoundInfo const&);
-    static void* operator new(unsigned int n) {return FUN_0089eb90(n);}
-    static void operator delete(void* p,unsigned n) { FUN_0089ec10(p,n); }
+    static void* operator new(size_t n) {return FUN_0089eb90(n);}
+    static void operator delete(void* p,size_t n) { FUN_0089ec10(p,n); }
 };
 
 struct FUN_00970f60 {
     int vtable; unsigned short size, refs; int unk08,unk0c;float radius;int unk14,unk18,unk1c;
     FUN_00970f60(float);
-    static void* operator new(unsigned int n) { TLSHeap* mem=(TLSHeap*)TlsGetValue(DAT_010f3170); FUN_00970f60* p=(FUN_00970f60*)mem->FUN_008f6d30(n,0x27); p->size=(unsigned short)n;return p; }
+    static void* operator new(size_t n) { TLSHeap* mem=(TLSHeap*)TlsGetValue(DAT_010f3170); FUN_00970f60* p=(FUN_00970f60*)mem->FUN_008f6d30(n,0x27); p->size=(unsigned short)n;return p; }
     static void operator delete(void* p) { FUN_00951b90(p); }
 };
 struct __declspec(align(16)) Vector4 {float x,y,z,w;};
@@ -19902,7 +19902,7 @@ struct FUN_008e8d70 : ShapeRef {
     int unk14,unk18,unk1c,unk20,unk24,unk28,unk2c,unk30,unk34,unk38,unk3c;
     float offx,offy,offz,offw;int unk50,unk54,unk58,unk5c,unk60,unk64,unk68,unk6c;
     FUN_008e8d70(FUN_008e8d70Cinfo const&);
-    static void* operator new(unsigned n) {unsigned char* p=(unsigned char*)DAT_01090a78.FUN_0086b930(n+16);unsigned char off=16-((unsigned)p&15);p+=off;p[-1]=off;return p;}
+    static void* operator new(size_t n) {unsigned char* p=(unsigned char*)DAT_01090a78.FUN_0086b930(n+16);unsigned char off=16-((unsigned)p&15);p+=off;p[-1]=off;return p;}
     static void operator delete(void* p) { FUN_008d36a0(p); }
 };
 struct __declspec(align(16)) FUN_008e8e90Cinfo {
@@ -19915,7 +19915,7 @@ struct __declspec(align(16)) FUN_008e8e90Cinfo {
 struct FUN_008e8e90 : ShapeRef {
     int unk14,unk18,unk1c;
     FUN_008e8e90(FUN_008e8e90Cinfo const&, void*);
-    static void* operator new(unsigned n) {unsigned char* p=(unsigned char*)DAT_01090a78.FUN_0086b930(n+16);unsigned char off=16-((unsigned)p&15);p+=off;p[-1]=off;return p;}
+    static void* operator new(size_t n) {unsigned char* p=(unsigned char*)DAT_01090a78.FUN_0086b930(n+16);unsigned char off=16-((unsigned)p&15);p+=off;p[-1]=off;return p;}
     static void operator delete(void* p) { FUN_008d36a0(p); }
 };
 extern ShapePointer DAT_010f2ea0;
@@ -22705,7 +22705,7 @@ struct CollisionEntry
     EntryPointer object;
     NiPoint3 position, normal, velocity;
     CollisionEntry();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return DAT_01090a78.FUN_0086b930(size);
     }
@@ -23389,7 +23389,7 @@ extern "C" __declspec(dllimport) void* __stdcall TlsGetValue(unsigned long);
 
 struct PoolObj : RefObj {
     static void operator delete(void* p);
-    static void* operator new(unsigned int sz) {
+    static void* operator new(size_t sz) {
         Alloc* a = (Alloc*)TlsGetValue(DAT_010f3170);
         void* p = a->FUN_008f6d30(sz, 0x34);
         *(unsigned short*)((char*)p + 4) = (unsigned short)sz;

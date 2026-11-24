@@ -1198,7 +1198,7 @@ struct ParentCell
 struct FUN_00aa5160
 {
     FUN_00aa5160(int count);
-    static void* operator new(unsigned int size) throw();
+    static void* operator new(size_t size) throw();
     static void operator delete(void* p);
     int unk00, unk04, unk08, unk0c, unk10, unk14, unk18, unk1c, unk20, unk24;
 };
@@ -1288,7 +1288,7 @@ struct OpacityEntry
     float opacity;
 };
 
-void* FUN_00aa5160::operator new(unsigned int size) throw() { return g_memoryManager.Allocate(size); }
+void* FUN_00aa5160::operator new(size_t size) throw() { return g_memoryManager.Allocate(size); }
 
 TESForm* __cdecl FUN_00455190(unsigned int formID);
 void __cdecl FUN_00454a40(unsigned int* formID, ModFile* file);
@@ -1850,8 +1850,8 @@ struct Accumulator : RefObject {
     BSRenderedTexture* waterFogTarget;
     int renderMode;
     unsigned char otherPassState[0x280 - 0x1a0];
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Accumulator(int, unsigned int, unsigned int);
 };
 

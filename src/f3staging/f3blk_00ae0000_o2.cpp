@@ -1559,7 +1559,7 @@ public:
     void IncRefCount() { PTR_00d9b068(&m_uiRefCount); }
     long DecRefCount() { return PTR_00d9b064(&m_uiRefCount); }
     LightEx();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     void FUN_00ae17d0(void* key);
     void FUN_00b20030(bool flag);
     void FUN_00b1dde0(float f, int i);
@@ -1984,7 +1984,7 @@ void* __cdecl FUN_0089eb90(unsigned int);
 class BSFaceGenMorphData
 {
   public:
-    static void* operator new(unsigned int auiSize) { return FUN_0089eb90(auiSize); }
+    static void* operator new(size_t auiSize) { return FUN_0089eb90(auiSize); }
 };
 
 struct FUN_00e76700_desc
@@ -4043,7 +4043,7 @@ struct ShadowLightAE2
 
 struct ShadowRenderTargetAE2 : NiRefObject
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     ShadowRenderTargetAE2(int arg);
     int unk008; int unk00c; int unk010; int unk014; int unk018; int unk01c;
     int unk020; int unk024; int unk028; int unk02c; int unk030; int unk034; int unk038; int unk03c;
@@ -4396,7 +4396,7 @@ struct FUN_00b21da0{virtual void v0();virtual void DeleteThis();volatile long re
 
 int unk8;int unkc;int unk10;int unk14;int unk18;int unk1c;int unk20;int unk24;int unk28;int unk2c;int unk30;int unk34;int unk38;int unk3c;int unk40;int unk44;int unk48;int unk4c;int unk50;int unk54;int unk58;int unk5c;int unk60;int unk64;int unk68;int unk6c;int unk70;int unk74;int unk78;int unk7c;int unk80;int unk84;int unk88;int unk8c;int unk90;int unk94;int unk98;int unk9c;int unka0;int unka4;int unka8;int unkac;int unkb0;int unkb4;int unkb8;int unkbc;int unkc0;int unkc4;int unkc8;int unkcc;int unkd0;int unkd4;int unkd8;int unkdc;int unke0;int unke4;int unke8;int unkec;int unkf0;int unkf4;int unkf8;bool flagFC;
 
-int unk100;int unk104;int unk108;int unk10c;int unk110;int unk114;int unk118;int unk11c;int unk120;int unk124;int unk128;int unk12c;int unk130;int unk134;int unk138;int unk13c;int unk140;int unk144;int unk148;int unk14c;int unk150;int unk154;int unk158;int unk15c;int unk160;int unk164;int unk168;int unk16c;int unk170;int unk174;int unk178;int unk17c;int unk180;int unk184;int unk188;int unk18c;int unk190;int unk194;int unk198;int unk19c;int unk1a0;int unk1a4;int unk1a8;int unk1ac;int unk1b0;int unk1b4;int unk1b8;int unk1bc;int unk1c0;int unk1c4;int unk1c8;int unk1cc;int unk1d0;int unk1d4;int unk1d8;int unk1dc;int unk1e0;int unk1e4;int unk1e8;int unk1ec;int unk1f0;int unk1f4;int unk1f8;int unk1fc;int unk200;int unk204;int unk208;int unk20c;int unk210;int unk214;int unk218;int unk21c;int unk220;int unk224;int unk228;int unk22c;int unk230;int unk234;int unk238;int unk23c;unsigned value240;void SetValue(unsigned value){value240=value;}int unk244,unk248,unk24c;FUN_00b21da0();void FUN_00b20120(Light*);static void* operator new(unsigned n)throw(){return FUN_0089eb90(n);}static void operator delete(void* p){FUN_0089ebd0(p);}};
+int unk100;int unk104;int unk108;int unk10c;int unk110;int unk114;int unk118;int unk11c;int unk120;int unk124;int unk128;int unk12c;int unk130;int unk134;int unk138;int unk13c;int unk140;int unk144;int unk148;int unk14c;int unk150;int unk154;int unk158;int unk15c;int unk160;int unk164;int unk168;int unk16c;int unk170;int unk174;int unk178;int unk17c;int unk180;int unk184;int unk188;int unk18c;int unk190;int unk194;int unk198;int unk19c;int unk1a0;int unk1a4;int unk1a8;int unk1ac;int unk1b0;int unk1b4;int unk1b8;int unk1bc;int unk1c0;int unk1c4;int unk1c8;int unk1cc;int unk1d0;int unk1d4;int unk1d8;int unk1dc;int unk1e0;int unk1e4;int unk1e8;int unk1ec;int unk1f0;int unk1f4;int unk1f8;int unk1fc;int unk200;int unk204;int unk208;int unk20c;int unk210;int unk214;int unk218;int unk21c;int unk220;int unk224;int unk228;int unk22c;int unk230;int unk234;int unk238;int unk23c;unsigned value240;void SetValue(unsigned value){value240=value;}int unk244,unk248,unk24c;FUN_00b21da0();void FUN_00b20120(Light*);static void* operator new(size_t n)throw(){return FUN_0089eb90(n);}static void operator delete(void* p){FUN_0089ebd0(p);}};
 
 struct Node{
 
@@ -6066,14 +6066,14 @@ struct Color {
 struct Data170 {
     int unk00;
     Data170();
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 struct Pass98 {
     int unk04, unk08, unk0c, unk10, unk14, unk18, unk1c, unk20, unk24, unk28, unk2c, unk30, unk34, unk38, unk3c, unk40, unk44, unk48, unk4c, unk50, unk54, unk58, unk5c, unk60, unk64, unk68, unk6c, unk70, unk74, unk78, unk7c, unk80, unk84, unk88, unk8c, unk90, unk94;
     Pass98(int a, void* b);
     virtual void Destroy(int);
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     static void operator delete(void* p);
 };
 struct ShaderPass {

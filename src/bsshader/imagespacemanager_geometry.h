@@ -20,7 +20,7 @@ class NiScreenElementsData : public NiObject
 {
   public:
     char padding[0x70 - 8];
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     static void operator delete(void*);
     NiScreenElementsData(bool, bool, unsigned short, int, int, int, int, int, int);
     bool FUN_00a87ae0(int, int, int);
@@ -41,7 +41,7 @@ class NiScreenElements : public NiAVObject
     char padding[0xb8 - 8];
     NiScreenElementsData* data;
     char tail[8];
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     static void operator delete(void*);
     NiScreenElements(NiScreenElementsData*);
     NiScreenElementsData* GetData()

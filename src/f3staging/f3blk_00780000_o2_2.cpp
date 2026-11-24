@@ -633,8 +633,8 @@ struct FUN_004e9520 {
     void* native;
     int unk0c, unk10;
     FUN_004e9520(float radius, bool flag);
-    static void* operator new(unsigned int n) { return FUN_0089eb90(n); }
-    static void operator delete(void* p, unsigned int bytes);   // sized form, as the unwind funclet of the new-expression calls it
+    static void* operator new(size_t n) { return FUN_0089eb90(n); }
+    static void operator delete(void* p, size_t bytes);   // sized form, as the unwind funclet of the new-expression calls it
 };
 struct BallRef {
     FUN_004e9520* ptr;

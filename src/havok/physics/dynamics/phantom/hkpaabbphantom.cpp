@@ -841,7 +841,7 @@ class hkpWorldObjectCF2D
 class FUN_00cf2cb0 : public hkpWorldObjectCF2D
 {
   public:
-    static __forceinline void* operator new(unsigned int uiSize) throw()
+    static __forceinline void* operator new(size_t uiSize) throw()
     {
         hkpWorldObjectCF2D* p = (hkpWorldObjectCF2D*)FUN_00c85750().heap().AllocateMemoryBlock(uiSize);
         p->m_usMemSizeAndFlags = (hkUint16)uiSize;

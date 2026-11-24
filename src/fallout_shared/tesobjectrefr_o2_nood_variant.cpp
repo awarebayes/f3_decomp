@@ -231,7 +231,7 @@ struct TlsScope
 };
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     unsigned int unk00;
 };
@@ -961,7 +961,7 @@ struct F9_Obj
     int unk16C;
     F9_Obj(int a, const F9_Mat* m, int b);
     void FUN_00c905b0();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         F9_Alloc& h = FUN_00c85750()->heap();
         void* p = h.alloc((int)n);
@@ -1803,7 +1803,7 @@ struct C9FA20_Data
     __m128 m_20;
     __m128 m_30;
 
-    static __forceinline void* operator new(unsigned int size)
+    static __forceinline void* operator new(size_t size)
     {
         unsigned char* p = static_cast<unsigned char*>(DAT_011f6238.FUN_00aa3e40(size + 0x10));
         unsigned char offset = (unsigned char)(0x10 - ((unsigned int)p & 0xf));

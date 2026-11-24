@@ -238,7 +238,7 @@ struct FUN_006c8220 {
  TESForm* m_item; FUN_006c8220* m_pkNext;
  FUN_006c8220():m_item(0),m_pkNext(0){}
  FUN_006c8220(TESForm*const& item):m_item(item),m_pkNext(0){}
- static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+ static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
  __declspec(noinline) ~FUN_006c8220() { RemoveAll(); }
  void RemoveAll() {
   while (m_pkNext) {

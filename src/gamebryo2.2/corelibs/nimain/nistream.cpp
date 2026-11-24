@@ -296,7 +296,7 @@ class hkMemorySystemC68
 class hkFreeListMemorySystemC68 : public hkMemorySystemC68
 {
   public:
-    void* operator new(unsigned int, void* pvWhere)
+    void* operator new(size_t, void* pvWhere)
     {
         return pvWhere;
     }
@@ -323,14 +323,14 @@ void __cdecl HavokErrorReportC68(const char* pcMessage, void* pvObject);
 class hkReferencedObjectC68
 {
   public:
-    void* operator new(unsigned int uiBytes)
+    void* operator new(size_t uiBytes)
     {
         hkReferencedObjectC68* b =
             static_cast<hkReferencedObjectC68*>(GetMemoryRouterC68()->heap().AllocateMemoryBlock(uiBytes));
         b->m_usMemSizeAndFlags = static_cast<unsigned short>(uiBytes);
         return b;
     }
-    void operator delete(void* p, unsigned int)
+    void operator delete(void* p, size_t)
     {
         hkReferencedObjectC68* b = static_cast<hkReferencedObjectC68*>(p);
         GetMemoryRouterC68()->heap().ReleaseBlock(p, b->m_usMemSizeAndFlags);
@@ -394,7 +394,7 @@ extern MemoryManagerC68 g_kMemoryManagerC68;
 class bhkSingletonC68
 {
   public:
-    void* operator new(unsigned int uiSize)
+    void* operator new(size_t uiSize)
     {
         return g_kMemoryManagerC68.Allocate(uiSize);
     }
@@ -802,7 +802,7 @@ struct FUN_008d3500 {
     unsigned int unk9f4, unk9f8, unk9fc, unka00, unka04, unka08, unka0c, unka10;
     unsigned int unka14, unka18, unka1c, unka20, unka24;
     FUN_008d3500();
-    static void* operator new(unsigned int size) { return DAT_00f7b4cc(size,16); }
+    static void* operator new(size_t size) { return DAT_00f7b4cc(size,16); }
     static void operator delete(void* p) { DAT_00f7b4d0(p); }
 };
 struct FUN_008f6a50 {
@@ -834,7 +834,7 @@ struct FUN_008f6a50 {
     unsigned int unk320, unk324, unk328, unk32c;
     FUN_008f6a50(FUN_008d3500*,int);
     void FUN_008f67e0();
-    static void* operator new(unsigned int size) { return DAT_00f7b4cc(size,16); }
+    static void* operator new(size_t size) { return DAT_00f7b4cc(size,16); }
     static void operator delete(void* p) { DAT_00f7b4d0(p); }
 };
 extern "C" void __cdecl FUN_006d4010(const char*,void*);
@@ -867,7 +867,7 @@ struct PhysicsListenerOld : FUN_00943410 {
         phantomVtable=&DAT_00e321a0;
         worldVtable=&DAT_00e32194;
     }
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         ThreadMemoryOld* memory=static_cast<ThreadMemoryOld*>(DAT_00d9b080(DAT_010f3170));
         FUN_00943410* block=static_cast<FUN_00943410*>(memory->FUN_008f6d30(size,39));
         block->memorySize=static_cast<unsigned short>(size);
@@ -1317,7 +1317,7 @@ void CreateOrReleaseRef(const char* apPath, int p2, S_00a48070_Ref** ppRef, void
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 void __fastcall _Call_a5d3a0(void*);
 extern int DAT_010984ec;
@@ -3585,7 +3585,7 @@ struct FUN_00a647f0_shell : public NiStream
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct NiTPrimitiveArray_ImageSpaceTexture___
 {
@@ -5851,7 +5851,7 @@ extern A660A0Heap g_memoryManager;
 class A660A0Object
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }

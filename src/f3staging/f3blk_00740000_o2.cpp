@@ -7626,7 +7626,7 @@ class Array748cc0
 {
   public:
     Array748cc0();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     virtual void v000();
     Item748cc0* data;
     int count;
@@ -12149,7 +12149,7 @@ extern Heap_752160 DAT_01090a78;
 struct Obj_752160 {
     int u0, u4, a8, ac;
     Obj_752160() : a8(0), ac(0) {}
-    static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 Obj_752160* __cdecl FUN_00752160() { return new Obj_752160; }
 }
@@ -14625,7 +14625,7 @@ struct HitData {
     char data[0x64];
     HitData();
     void FUN_007c2870();
-    static void* operator new(unsigned int n) throw() { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) throw() { return DAT_01090a78.FUN_0086b930(n); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 struct Process { char pad[0x240]; HitData* hit; void FUN_007563d0(); };
@@ -14665,7 +14665,7 @@ int unk54;
 int unk58;
 int unk5c;
 int unk60;
-FUN_007c3280();void FUN_007c28f0(FUN_007c3280*);static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
+FUN_007c3280();void FUN_007c28f0(FUN_007c3280*);static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
 struct Process {
 int unk000;
 int unk004;
@@ -16693,7 +16693,7 @@ struct QTask {
  int unk04;
  volatile long refCount;
  int unk0C; int unk10; int unk14; int unk18; int unk1C; int unk20; int unk24; int unk28; int unk2C; int unk30; int unk34; int unk38; int unk3C;
- static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+ static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
  static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
  QTask(QOwner*, QArg*, int);
 };
@@ -24814,16 +24814,16 @@ extern Heap DAT_01090a78;
 struct Reference {
     void* object;
     Reference();
-    static void* operator new[](unsigned n){return DAT_01090a78.FUN_0086b930(n);}
+    static void* operator new[](size_t n){return DAT_01090a78.FUN_0086b930(n);}
 };
 struct Coordinate {
     float value;
-    static void* operator new[](unsigned n){return DAT_01090a78.FUN_0086b930(n);}
+    static void* operator new[](size_t n){return DAT_01090a78.FUN_0086b930(n);}
 };
 struct IndexMap {
     int unk00,unk04,unk08,unk0C;
     IndexMap(unsigned);
-    static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}
+    static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}
 };
 extern const int DAT_00e15cb4;
 struct InterfacedClass {virtual ~InterfacedClass();};
@@ -32265,7 +32265,7 @@ struct PR_Ref { int unk00;
     PR_Proc* unk60; };
 struct PR_Obj {
     PR_Obj(PR_Ref* r, PR_Y* y, float f);
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     virtual ~PR_Obj();
     virtual void pad1();
     virtual void pad2();
@@ -36718,7 +36718,7 @@ void LowProcess::FUN_0074a680(Actor* actor)
 namespace f3m_0075ce10 {
 namespace task2063 {
 struct Heap {void* FUN_0086b930(unsigned);void FUN_0086ba60(void*);};extern Heap DAT_01090a78;
-struct Alloc {static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void*p){DAT_01090a78.FUN_0086ba60(p);}};
+struct Alloc {static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void*p){DAT_01090a78.FUN_0086ba60(p);}};
 struct ObjB913 {
 unsigned int unk000;
 unsigned int unk004;
@@ -47355,13 +47355,13 @@ struct FUN_00600eb0:RefObj {
  int unka4;
  int unka8;
  int unkac;
- FUN_00600eb0();void FUN_00600aa0(Actor*);static void* operator new(unsigned n){return FUN_0089eb90(n);}static void operator delete(void* p){FUN_0089ec80(p);}
+ FUN_00600eb0();void FUN_00600aa0(Actor*);static void* operator new(size_t n){return FUN_0089eb90(n);}static void operator delete(void* p){FUN_0089ec80(p);}
 };
 struct FUN_007434e0 {
  virtual void V0();virtual void Start(FUN_00607340*);virtual void V8();virtual void Vc();virtual bool Ready(FUN_00607340*);
  int unk04,unk08,unk0c,unk10,unk14;volatile long refs;
  FUN_007434e0() throw();void IncRef(){InterlockedIncrement(&refs);}void DecRef(){if(InterlockedDecrement(&refs)==0)V0();}
- static void* operator new(unsigned n){return FUN_0089eb90(n);}static void operator delete(void* p){FUN_0089ec80(p);}
+ static void* operator new(size_t n){return FUN_0089eb90(n);}static void operator delete(void* p){FUN_0089ec80(p);}
 };
 struct RequestPtr {
  FUN_00600eb0* p;operator FUN_00600eb0*()const{return p;}FUN_00600eb0* operator->()const{return p;}RequestPtr(const RequestPtr& o):p(o.p){if(p)p->IncRef();}~RequestPtr(){if(p)p->DecRef();}
@@ -51154,7 +51154,7 @@ struct DataList {
     DetectionData* m_item;
     DataList* m_pkNext;
     DataList(DetectionData*& item) : m_item(item), m_pkNext(0) {}
-    static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
     DetectionData*& GetItem() { return m_item; }
     DataList* GetNext() { return m_pkNext; }
     void AddTail(DetectionData*& item)
@@ -63896,7 +63896,7 @@ extern GameMemoryManager DAT_01090a78;
 
 struct ListNode
 {
-    void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
     ListNode(TESForm* item) : item(item), next(0) {}
 
@@ -64396,7 +64396,7 @@ inline TlsGuard::TlsGuard(int value) { saved = tlsLocals.unk298; tlsLocals.unk29
 inline TlsGuard::~TlsGuard() { tlsLocals.unk298 = saved; }
 
 struct Allocated {
-    static void* operator new(unsigned int bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new(size_t bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
     static void operator delete(void* memory) { DAT_01090a78.FUN_0086ba60(memory); }
 };
 
@@ -65863,7 +65863,7 @@ extern Heap DAT_01090a78;
 struct FUN_00749c90 {
     int a,b; char c,d; int e,f,g,h;
     __declspec(noinline) FUN_00749c90() { a=0;b=0;c=0;d=0;h=-1;e=0;f=0x7fffffff;g=0; }
-    static __forceinline void* operator new(unsigned n) { return DAT_01090a78.FUN_0086b930(n); }
+    static __forceinline void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
     static __forceinline void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 
@@ -66054,7 +66054,7 @@ void __cdecl FUN_0074ed80();
 struct ListNode74 {
     FUN_00749c90* item; ListNode74* next;
     ListNode74(FUN_00749c90* value) : item(value), next(0) {}
-    static __forceinline void* operator new(unsigned n) { return DAT_01090a78.FUN_0086b930(n); }
+    static __forceinline void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 struct List74 {
     FUN_00749c90* item; ListNode74* next;
@@ -67805,7 +67805,7 @@ struct Node {
     Rec* item;
     Node* next;
     Node(Rec* p) { item = p; next = 0; }
-    static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 struct List : Node { void FUN_006c8220(); void Append(Rec** value){Node* last=this;while(last->next)last=last->next;if(last->item)last->next=new Node(*value);else last->item=*value;} };
@@ -71445,7 +71445,7 @@ struct FUN_0072b070 {
     char unk11;
     char unk12;
     char unk13;
-    static void* operator new(unsigned n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 struct ItemList { void FUN_0049fac0(FUN_0072b070* const& item); };
 struct Owner {
@@ -72903,7 +72903,7 @@ struct Entry;
 struct Finder { ListA* FUN_004b01e0(void* key); };
 struct Out : Node {
     Out(){item=0;next=0;} void FUN_0049fac0(void** v);
-    static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 struct Arg1 { char pad[0x1c]; struct Holder* unk1c; };
 struct Holder { char pad[0x88]; Node unk88; };
@@ -78613,7 +78613,7 @@ struct Node {
  Node():item(0),next(0){}
  Node(Ref*& r):item(r),next(0){}
  ~Node(){FUN_006c8220();}
- static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}
+ static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}
  static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}
  void FUN_006c8220();
  __forceinline void AddTail(Ref*& r){Node* p=this;while(p->next)p=p->next;if(p->item)p->next=new Node(r);else p->item=r;}
@@ -80749,7 +80749,7 @@ public:
 
 struct NiAlloc_745d10
 {
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     static void operator delete(void* memory) { FUN_0089ebc0(memory); }
 };
 
@@ -80824,7 +80824,7 @@ public:
     unsigned int unk04;
     void* shape;
 
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     static void operator delete(void* memory) { FUN_0089ebc0(memory); }
 };
 
@@ -84079,7 +84079,7 @@ struct Node {
     Node* next;
     Node() : item(0), next(0) {}
     Node(void* const& value) : item(value), next(0) {}
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 
@@ -87732,7 +87732,7 @@ struct RecordX {
     float time;
     RefX* ref;
     RecordX() : duration(DAT_00e1506c), arg(0), ref(0), time(0.0f) {}
-    static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 
 struct ListX {
@@ -87740,7 +87740,7 @@ struct ListX {
     ListX* next;
     ListX() : first(0), next(0) {}
     ListX(RecordX* const& item) : first(item), next(0) {}
-    static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
     void FUN_0049fac0(RecordX* const& item);
 };
 
@@ -88400,7 +88400,7 @@ struct FUN_00474fe0 {
     int count;
     long refs;
     FUN_00474fe0(void* m, int n);
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 struct ModelPtr {
@@ -90674,7 +90674,7 @@ extern Heap DAT_01090a78;
 template<class T> struct Queue {
  T item; Queue* next;
  Queue(T const& v):item(v),next(0){}
- static void* operator new(unsigned int n){return DAT_01090a78.FUN_0086b930(n);}
+ static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}
  __declspec(noinline) void FUN_0049fac0(T const& value){
   if(!value) return;
   if(item){Queue* node=new Queue(item);node->next=next;next=node;}
@@ -92729,7 +92729,7 @@ inline TlsGuard::TlsGuard(int value) { saved = tlsLocals.unk298; tlsLocals.unk29
 inline TlsGuard::~TlsGuard() { tlsLocals.unk298 = saved; }
 
 struct Allocated {
-    static void* operator new(unsigned int bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
+    static void* operator new(size_t bytes) { return DAT_01090a78.FUN_0086b930(bytes); }
     static void operator delete(void* memory) { DAT_01090a78.FUN_0086ba60(memory); }
 };
 
@@ -93785,7 +93785,7 @@ template<class T> struct ListNodeT {
     T* item;
     ListNodeT* next;
 
-    static void* operator new(unsigned int size) throw() {
+    static void* operator new(size_t size) throw() {
         return DAT_01090a78.FUN_0086b930(size);
     }
     ListNodeT() : item(0), next(0) {}
@@ -93806,7 +93806,7 @@ template<class T> struct ListNodeT {
 struct Reference; typedef ListNodeT<Reference> ListNode;
 
 struct Record {
- static void* operator new(unsigned n) throw(){return DAT_01090a78.FUN_0086b930(n);}
+ static void* operator new(size_t n) throw(){return DAT_01090a78.FUN_0086b930(n);}
  Record(){unk00=0;unk04=0;unk08=0;flag0C=0;flag0D=0;flag0E=0;flag0F=0;flag10=0;flag11=0;reference14=0;}
 
     unsigned int unk00;
@@ -94783,7 +94783,7 @@ struct PackageList {
   ~PackageList() { FUN_006c8220(); }
   void FUN_006c8220();
   bool IsEmpty() { return next == 0 && item == 0; }
-  static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+  static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
   static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 
@@ -95724,7 +95724,7 @@ struct Task {
 struct AlarmTask : Task {
  AlarmTask(Actor* actor, Package* package, Holder* holder, int kind);
  int field90,field94,field98;
- static void* operator new(unsigned int n);
+ static void* operator new(size_t n);
  static void operator delete(void* p);
 };
 struct Actor {
@@ -96062,12 +96062,12 @@ struct Player : Actor {};
 struct SmallNode {Actor* actor;Faction* faction;unsigned char field08,flag09;SmallNode* FUN_0072b070();};
 struct Heap {void* FUN_0086b930(unsigned int); void FUN_0086ba60(void*);};
 extern int DAT_01090a78;
-inline void* AlarmTask::operator new(unsigned int n){return ((Heap*)&DAT_01090a78)->FUN_0086b930(n);}
+inline void* AlarmTask::operator new(size_t n){return ((Heap*)&DAT_01090a78)->FUN_0086b930(n);}
 inline void AlarmTask::operator delete(void* p){((Heap*)&DAT_01090a78)->FUN_0086ba60(p);}
 template<class T> struct Queue {
  T item; Queue* next;
  Queue(T const& v):item(v),next(0){}
- static void* operator new(unsigned int n){return ((Heap*)&DAT_01090a78)->FUN_0086b930(n);}
+ static void* operator new(size_t n){return ((Heap*)&DAT_01090a78)->FUN_0086b930(n);}
  static void operator delete(void* p){((Heap*)&DAT_01090a78)->FUN_0086ba60(p);}
  __declspec(noinline) void FUN_0049fac0(T const& value){
   if(!value) return;
@@ -97388,7 +97388,7 @@ struct FUN_00749c90 {
   ExtraDataList* extraList;
   int inventory;
   FUN_00749c90();
-  static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+  static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
 };
 FUN_00749c90::FUN_00749c90() {
   ref = 0;
@@ -97915,7 +97915,7 @@ struct SoundEntry {
         unk1D = 0;
         unk20 = -100;
     }
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* memory) { DAT_01090a78.FUN_0086ba60(memory); }
 };
 
@@ -97923,7 +97923,7 @@ struct SoundEntryList {
     SoundEntry* item;
     SoundEntryList* next;
     SoundEntryList(SoundEntry* data) : item(data), next(0) {}
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* memory) { DAT_01090a78.FUN_0086ba60(memory); }
     void FUN_006c8220();
     SoundEntry** GetItem() { return &item; }

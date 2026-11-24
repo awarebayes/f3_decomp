@@ -55,7 +55,7 @@ extern int DAT_01097d34;
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     void* m_ppVirtualMethodTable;
     int m_auiShapeKeys;
     int m_flags;

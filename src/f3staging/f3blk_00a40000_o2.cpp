@@ -690,7 +690,7 @@ struct ContactPoints {
     virtual ~ContactPoints() throw();
     unsigned short m_memSizeAndFlags;
     short m_referenceCount;
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         ThreadMemory* mem = (ThreadMemory*)TlsGetValue(DAT_010f3170);
         ContactPoints* p = (ContactPoints*)mem->FUN_008f6d30(size, 0xd);
         p->m_memSizeAndFlags = (unsigned short)size;
@@ -2199,7 +2199,7 @@ template <class T> struct Array {
     }
 };
 struct Pooled {
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         ThreadMemory* memory = (ThreadMemory*)TlsGetValue(DAT_010f3170);
         void* p = memory->FUN_008f6d30(size, 0x15);
@@ -2661,7 +2661,7 @@ struct FUN_00a84f70 {
     unsigned short referenceCount;
     int unk08[5];
     FUN_00a84f70(int a, int b, int c) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         A4a31Heap* heap = (A4a31Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x1a);
@@ -3055,7 +3055,7 @@ struct FUN_00a80240 {
     unsigned short referenceCount;
     int unk08[17];
     FUN_00a80240() throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         A4733Heap* heap = (A4733Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x15);
@@ -6187,7 +6187,7 @@ struct RefObject {
 };
 
 struct Registry : RefObject {
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Memory* m = (Memory*)::TlsGetValue(DAT_010f3170);
         RefObject* o = (RefObject*)m->FUN_008f6d30(size, 0x15);
@@ -6329,7 +6329,7 @@ public:
     virtual ~Pooled();
     unsigned short memSizeAndFlags;
     short referenceCount;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         ThreadMemory* memory = (ThreadMemory*)FUN_00d9b080(DAT_010f3170);
         void* p = memory->FUN_008f6d30(size, 0x15);

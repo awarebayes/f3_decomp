@@ -30,7 +30,7 @@ struct FUN_008fb470
 
     FUN_008fb470(int first, int second, int resourceId,
                  ResourceInfo* info, int finalArgument);
-    static __forceinline void* operator new(unsigned int size)
+    static __forceinline void* operator new(size_t size)
     {
         return FUN_0089eb90(size);
     }

@@ -63,7 +63,7 @@ void FUN_00a75790_shell::FUN_00a75790(NiStream* pkStream)
 class BSFadeNode
 {
   public:
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 void* __fastcall FUN_00a75650(void* pThis);
@@ -151,7 +151,7 @@ class BA75730Cloning;
 class BA75730Object
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     void CopyMembersStream(BA75730Object* pkDest, BA75730Cloning& kCloning);
 };

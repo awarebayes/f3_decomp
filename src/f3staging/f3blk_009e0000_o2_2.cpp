@@ -172,7 +172,7 @@ struct __declspec(align(16)) hkVector4
         w = d;
     }
     __forceinline void setZero4() { x = y = z = w = 0.0f; }
-    static void* operator new[](unsigned int nbytes);
+    static void* operator new[](size_t nbytes);
     static void operator delete[](void* p);
     __forceinline float dot3(const hkVector4& v) const { return x * v.x + y * v.y + z * v.z; }
 };
@@ -255,7 +255,7 @@ struct hkThreadMemory
     }
 };
 
-__forceinline void* hkVector4::operator new[](unsigned int nbytes)
+__forceinline void* hkVector4::operator new[](size_t nbytes)
 {
     return hkThreadMemory::getInstance().allocate((int)nbytes, 9);
 }

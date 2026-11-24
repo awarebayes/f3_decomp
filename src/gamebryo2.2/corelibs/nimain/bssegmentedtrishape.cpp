@@ -264,7 +264,7 @@ struct EntryPod70
     int unk0c;
     int unk10;
 
-    static void* operator new[](unsigned int aSize)
+    static void* operator new[](size_t aSize)
     {
         return DAT_011f6238.FUN_00aa3e40(aSize);
     }
@@ -509,7 +509,7 @@ struct S_a873b0_Alloc
 extern S_a873b0_Alloc DAT_011f6238;
 struct S_a873b0_E : Entry
 {
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return DAT_011f6238.FUN_00aa3e40(n);
     }

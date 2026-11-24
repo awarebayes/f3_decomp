@@ -301,7 +301,7 @@ struct hkMemoryRouterE054
 };
 void __cdecl FUN_00c908c0(hkAllocatorE054& kAlloc, void* apvArray, int aiNumElements, int iSizeElem) throw();
 
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }

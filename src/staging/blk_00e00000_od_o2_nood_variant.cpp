@@ -99,7 +99,7 @@ struct hkFinishMemberE01710
     hkFinishMemberE01710(FinishingFlag flag);
 };
 
-inline void* operator new(unsigned int, void* pvWhere) throw()
+inline void* operator new(size_t, void* pvWhere) throw()
 {
     return pvWhere;
 }

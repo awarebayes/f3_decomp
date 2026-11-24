@@ -991,7 +991,7 @@ struct RTEntry
     bool m_bIsCubeMap;
     int m_iMultiSample;
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return DAT_011f6238.Allocate(uiSize);
     }
@@ -1140,7 +1140,7 @@ struct RTEntry1875 {
     int m_iUsage;
     unsigned int m_uiValue1;
     bool m_bIsCubeMap;
-    static void* operator new(unsigned int n) { extern HeapManager1875 DAT_01090a78; return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { extern HeapManager1875 DAT_01090a78; return DAT_01090a78.FUN_0086b930(n); }
 };
 struct RTNode1875 { RTNode1875* m_pkNext; RTNode1875* m_pkPrev; RTEntry1875* m_element; };
 struct RTAllocator1875 {

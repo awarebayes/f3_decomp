@@ -2574,7 +2574,7 @@ Derived::Derived()
 }  // namespace fnv_00b8bfd0
 
 void* __cdecl FUN_00aa13e0(unsigned int size);
-inline void* __cdecl operator new(unsigned int size)
+inline void* __cdecl operator new(size_t size)
 {
     return FUN_00aa13e0(size);
 }

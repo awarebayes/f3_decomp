@@ -12,7 +12,7 @@ void NiPSysCylinderEmitter::LoadBinary(NiStream& stream)
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     void __thiscall FUN_00c31af0();
 };
 

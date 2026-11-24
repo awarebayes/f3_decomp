@@ -249,7 +249,7 @@ class PrjHelper
 {
   public:
     PrjHelper(PrjMid* owner);
-    static void* operator new(unsigned int size) { return g_prjHeap.Allocate(size); }
+    static void* operator new(size_t size) { return g_prjHeap.Allocate(size); }
     static void operator delete(void* ptr) { g_prjHeap.Free(ptr); }
     int unk00[9];
 };
@@ -2075,7 +2075,7 @@ class ExplosionEffect
 public:
     ExplosionEffect(Explosion* explosion);
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return ExplosionAllocation::DAT_01090a78.FUN_0086b930(size);
     }
@@ -2203,20 +2203,20 @@ struct Extra78 : ExtraPrefix {
 PathingCoverLocation unk14;
 int unk68,unk6C; unsigned char unk70,unk71,unk72,unk73,unk74,unk75;
 Extra78() :  unk68(0),unk6C(-1),unk70(0),unk71(0),unk72(0),unk73(0),unk74(0),unk75(0) {}
-static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 static void operator delete(void*);
 void FUN_007acab0(Reader*);
 };
 struct Extra20 { Point unk00; int unk0C,unk10,unk14;float unk18;int unk1C;
 Extra20() { unk00=DAT_0108ec68;unk0C=0;unk10=0;unk14=-1;unk18=0;unk1C=0; }
-static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 struct Extra20B { unsigned char unk00,unk01;int unk04; Point unk08;int unk14;volatile float unk18,unk1C;
 Extra20B():unk00(0),unk01(0),unk04(0),unk08(DAT_0108ec68),unk14(0),unk18(0),unk1C(0) {}
-static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 struct Extra8 { int unk00; TESBoundObject* unk04; Extra8():unk00(0),unk04(0){}
-static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 struct Array { virtual void vf0(); virtual void* Alloc(unsigned int);virtual void Free(void*);void** data;unsigned int size,capacity;
 void FUN_00799ae0(unsigned int,unsigned int);
@@ -2536,7 +2536,7 @@ struct FUN_006019c0 {
     FUN_006019c0();
     ~FUN_006019c0();
     int FUN_007433b0();
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
 };
 void* __stdcall FUN_007a4620(int p1, int p2, int p3, FUN_006019c0* container)
 {
@@ -3636,7 +3636,7 @@ void OwnX::FUN_007a0ce0()
 namespace f3m_007a8b50 {
 namespace batch14_08 {
 struct Heap {void* FUN_0086b930(unsigned);void FUN_0086ba60(void*);};extern Heap DAT_01090a78;
-struct Allocated {static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
+struct Allocated {static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
 struct FUN_0079c5f0:Allocated {unsigned unk000;unsigned unk004;unsigned unk008;unsigned unk00c;unsigned unk010;unsigned unk014;unsigned unk018;FUN_0079c5f0();};struct FUN_007b7250:Allocated {unsigned unk000;unsigned unk004;unsigned unk008;unsigned unk00c;unsigned unk010;unsigned unk014;FUN_007b7250();};struct FUN_007b5d20:Allocated {unsigned unk000;unsigned unk004;unsigned unk008;unsigned unk00c;FUN_007b5d20();};
 void* __cdecl FUN_0089e810(unsigned);extern unsigned DAT_00e1a9f4,DAT_00e1aa9c;struct Table:Allocated {unsigned* vtable;unsigned count;void* data;unsigned used;Table(){vtable=&DAT_00e1a9f4;count=37;used=0;data=FUN_0089e810(148);memset(data,0,count*4);vtable=&DAT_00e1aa9c;}};
 struct Owner {unsigned unk000;unsigned unk004;unsigned unk008;unsigned unk00c;Table* table;FUN_007b7250* b;FUN_0079c5f0* a;FUN_007b5d20* c;void FUN_007a8b50();};void Owner::FUN_007a8b50(){a=new FUN_0079c5f0;b=new FUN_007b7250;c=new FUN_007b5d20;table=new Table;}
@@ -3821,7 +3821,7 @@ void __stdcall FUN_007a6d20(Obj7a6d20* o, int unused)
 
 // @f3 0x007ad430 (community match, verified in this file)
 namespace f3m_007ad430 {
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 struct Elem7ad430 { int unk00; float value; Elem7ad430() { value = 0.0f; } };
 void __stdcall FUN_007ad430(Elem7ad430* p, unsigned int n)
 {
@@ -7074,7 +7074,7 @@ struct Group { void FUN_007a3db0(void*); };
 struct Controller {
     char data[0x188];
     Controller(void*,Group*,void*);
-    static void* operator new(unsigned int n) throw() { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) throw() { return DAT_01090a78.FUN_0086b930(n); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 struct Manager {
@@ -8390,7 +8390,7 @@ float Owner389b::FUN_007a0910(Checker389* p)
 namespace f3m_007a9480 {
 struct Elem7a {
     void* p;
-    static void* operator new[](unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new[](size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 
 struct FUN_007a9480_cls {
@@ -9200,7 +9200,7 @@ int unk448;
 int unk44C;
 int unk450;
 int unk454;
-int unk458; FUN_0073a860(); static void* operator new(unsigned int n){return DAT_01090a78.FUN_0086b930(n);} static void operator delete(void* p){ DAT_01090a78.Free(p); } };
+int unk458; FUN_0073a860(); static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);} static void operator delete(void* p){ DAT_01090a78.Free(p); } };
 struct Obj7;
 struct Target7;
 struct TargetVtable7 {
@@ -10036,7 +10036,7 @@ struct Result {
 struct Aux {
     Aux();
     ~Aux() { unk14 = &DAT_00dc4dc0; }
-    static void* operator new(unsigned n) throw() { return DAT_01090a78.Allocate(n); }
+    static void* operator new(size_t n) throw() { return DAT_01090a78.Allocate(n); }
     static void operator delete(void* p) { DAT_01090a78.Free(p); }
     void Copy(Aux*);
     void GetRotation(Vec3*);
@@ -10463,7 +10463,7 @@ struct FUN_007aa140 {
     int size;
     int cap;
     virtual ~FUN_007aa140();
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     static void operator delete(void* p) { n7aa140::DAT_01090a78.FUN_0086ba60(p); }
 };
 FUN_007aa140::~FUN_007aa140()
@@ -11168,7 +11168,7 @@ struct Pair_007bb870 {
     int a;
     int b;
     Pair_007bb870(int x, int y) : a(x), b(y) {}
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return DAT_01090a78.FUN_0086b930(size);
     }
@@ -14552,7 +14552,7 @@ Vector second;};struct Owner{void FUN_0079f9a0(Bounds*,int);float FUN_007a2c00(V
 
 // @f3 0x007b67d0 (community match, verified in this file)
 namespace f3m_007b67d0 {
-namespace Deserialize419{struct Stream{unsigned int FUN_006e08a0();void FUN_006e06d0(void**);void FUN_006e0750(void*,int);};struct Heap{void*FUN_0086b930(unsigned int);void FUN_0086ba60(void*);};extern Heap DAT_01090a78;struct Value{float value;void FUN_007b76a0(Stream*);};struct FUN_007b60d0{void*key;float first;Value second,third;float fourth;volatile unsigned int unk14;unsigned int unk18,unk1c,unk20,unk24,unk28;volatile float last;FUN_007b60d0(){key=0;first=0;second.value=0;third.value=0;fourth=0;unk14=0;last=0;}~FUN_007b60d0();static void*operator new(unsigned int size){return DAT_01090a78.FUN_0086b930(size);}static void operator delete(void*p){DAT_01090a78.FUN_0086ba60(p);}};struct Owner{void FUN_00880f70(void*,FUN_007b60d0*);void FUN_007b67d0(Stream*);};void Owner::FUN_007b67d0(Stream*stream){unsigned int size=stream->FUN_006e08a0();if(size>0){unsigned int left=size;do{FUN_007b60d0*node=new FUN_007b60d0;void*key;stream->FUN_006e06d0(&key);node->key=key;stream->FUN_006e0750(&node->first,4);node->second.FUN_007b76a0(stream);node->third.FUN_007b76a0(stream);stream->FUN_006e0750(&node->fourth,4);if(key)FUN_00880f70(key,node);else delete node;}while(--left);}}}
+namespace Deserialize419{struct Stream{unsigned int FUN_006e08a0();void FUN_006e06d0(void**);void FUN_006e0750(void*,int);};struct Heap{void*FUN_0086b930(unsigned int);void FUN_0086ba60(void*);};extern Heap DAT_01090a78;struct Value{float value;void FUN_007b76a0(Stream*);};struct FUN_007b60d0{void*key;float first;Value second,third;float fourth;volatile unsigned int unk14;unsigned int unk18,unk1c,unk20,unk24,unk28;volatile float last;FUN_007b60d0(){key=0;first=0;second.value=0;third.value=0;fourth=0;unk14=0;last=0;}~FUN_007b60d0();static void*operator new(size_t size){return DAT_01090a78.FUN_0086b930(size);}static void operator delete(void*p){DAT_01090a78.FUN_0086ba60(p);}};struct Owner{void FUN_00880f70(void*,FUN_007b60d0*);void FUN_007b67d0(Stream*);};void Owner::FUN_007b67d0(Stream*stream){unsigned int size=stream->FUN_006e08a0();if(size>0){unsigned int left=size;do{FUN_007b60d0*node=new FUN_007b60d0;void*key;stream->FUN_006e06d0(&key);node->key=key;stream->FUN_006e0750(&node->first,4);node->second.FUN_007b76a0(stream);node->third.FUN_007b76a0(stream);stream->FUN_006e0750(&node->fourth,4);if(key)FUN_00880f70(key,node);else delete node;}while(--left);}}}
 
 
 }   // namespace f3m_007b67d0
@@ -17198,7 +17198,7 @@ struct Parent5b0 {
 };
 
 struct Owned5b0 {
-    static void* operator new(unsigned int a_uiSize) { return DAT_01090a78.FUN_0086b930(a_uiSize); }
+    static void* operator new(size_t a_uiSize) { return DAT_01090a78.FUN_0086b930(a_uiSize); }
     static void operator delete(void* a_pMemory);
 };
 
@@ -18320,7 +18320,7 @@ struct Record {
         time = 0.0f;
     }
 
-    static void* operator new(unsigned int, void* location) { return location; }
+    static void* operator new(size_t, void* location) { return location; }
 };
 }
 
@@ -18420,7 +18420,7 @@ struct FUN_007a19a0 {
     int id;
     unsigned unk004; unsigned unk008; unsigned unk00C; unsigned unk010; unsigned unk014; unsigned unk018; unsigned unk01C; unsigned unk020; unsigned unk024; unsigned unk028; unsigned unk02C; unsigned unk030; unsigned unk034; unsigned unk038; unsigned unk03C; unsigned unk040; unsigned unk044; unsigned unk048; unsigned unk04C; unsigned unk050; unsigned unk054; unsigned unk058; unsigned unk05C; unsigned unk060; unsigned unk064; unsigned unk068; unsigned unk06C; unsigned unk070; unsigned unk074; unsigned unk078; unsigned unk07C; unsigned unk080; unsigned unk084; unsigned unk088; unsigned unk08C; unsigned unk090; unsigned unk094; unsigned unk098; unsigned unk09C; unsigned unk0A0; unsigned unk0A4; unsigned unk0A8; unsigned unk0AC; unsigned unk0B0; unsigned unk0B4; unsigned unk0B8; unsigned unk0BC; unsigned unk0C0; unsigned unk0C4; unsigned unk0C8; unsigned unk0CC; unsigned unk0D0; unsigned unk0D4; unsigned unk0D8; unsigned unk0DC; unsigned unk0E0; unsigned unk0E4; unsigned unk0E8; unsigned unk0EC; unsigned unk0F0; unsigned unk0F4; unsigned unk0F8; unsigned unk0FC; unsigned unk100; unsigned unk104; unsigned unk108; unsigned unk10C; unsigned unk110; unsigned unk114; unsigned unk118; unsigned unk11C; unsigned unk120; unsigned unk124; unsigned unk128; unsigned unk12C; unsigned unk130; unsigned unk134; unsigned unk138; unsigned unk13C; unsigned unk140; unsigned unk144; unsigned unk148; unsigned unk14C; unsigned unk150; unsigned unk154; unsigned unk158;
     FUN_007a19a0(int);
-    static void* operator new(unsigned size){return DAT_01090a78.FUN_0086b930(size);}
+    static void* operator new(size_t size){return DAT_01090a78.FUN_0086b930(size);}
     static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}
 };
 struct Owner {
@@ -18451,7 +18451,7 @@ struct FUN_007a19a0 {
     char pad[0x154];
     void FUN_007a33a0(Buffer* buf);
     FUN_007a19a0(int a);
-    static void* operator new(unsigned int size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* p);
 };
 struct ListA { void FUN_007a7290(unsigned int id, int a, int b); };
@@ -18552,7 +18552,7 @@ struct Request {
     Location location;
     float rangeA,rangeB;
     Request():kind(0),flags(0),state(0),location(),rangeA(0.0f),rangeB(0.0f) {}
-    static void* operator new(unsigned size) throw(){return DAT_01090a78.FUN_0086b930(size);}
+    static void* operator new(size_t size) throw(){return DAT_01090a78.FUN_0086b930(size);}
 };
 struct Owner {
     unsigned unk00; unsigned unk04; unsigned unk08; unsigned unk0C; unsigned unk10; unsigned unk14; unsigned unk18; unsigned unk1C; unsigned unk20; unsigned unk24; unsigned unk28; unsigned unk2C; unsigned unk30; unsigned unk34; unsigned unk38; unsigned unk3C; unsigned unk40; unsigned unk44; unsigned unk48; unsigned unk4C; unsigned unk50; unsigned unk54; unsigned unk58; unsigned unk5C; unsigned unk60; unsigned unk64; unsigned unk68; unsigned unk6C; unsigned unk70; unsigned unk74; unsigned unk78; unsigned unk7C; unsigned unk80; unsigned unk84; unsigned unk88; unsigned unk8C; unsigned unk90; unsigned unk94; unsigned unk98; unsigned unk9C; unsigned unkA0; unsigned unkA4; unsigned unkA8; unsigned unkAC; unsigned unkB0; unsigned unkB4; unsigned unkB8;
@@ -18586,7 +18586,7 @@ struct Request {
     Location location;
     float rangeA,rangeB;
     Request():kind(0),flags(0),target(0),location(),rangeA(0.0f),rangeB(0.0f) {}
-    static void* operator new(unsigned size) throw(){return DAT_01090a78.FUN_0086b930(size);}
+    static void* operator new(size_t size) throw(){return DAT_01090a78.FUN_0086b930(size);}
 };
 union ReferenceOrRange {Reference* reference;float rounded;};
 struct Owner {
@@ -20814,7 +20814,7 @@ virtual void* v3f0();
 void* FUN_004e8810(); float FUN_006f9ec0(); };
 struct FUN_0082ea60 : PrjRefCounted {
  FUN_0082ea60(unsigned int);
- static void* operator new(unsigned int size) {return FUN_0089eb90(size);}
+ static void* operator new(size_t size) {return FUN_0089eb90(size);}
 virtual void v008();
 virtual void v00c();
 virtual void v010();
@@ -20942,7 +20942,7 @@ int unk54;
 PointDbg70 position; };
 struct FUN_00600750 : PrjRefCounted {
  FUN_00600750(PointDbg70,float);
- static void* operator new(unsigned int size) {return FUN_0089eb90(size);}
+ static void* operator new(size_t size) {return FUN_0089eb90(size);}
  PrjRefCounted* FUN_00600070();
 int unk08;
 int unk0c;
@@ -20988,7 +20988,7 @@ extern void* DAT_00db7534[];
 struct PropertyDbg70 : FUN_00824e90 {
  unsigned short flags;unsigned char unk1a;
  __forceinline PropertyDbg70() {unk00=DAT_00db7534;flags=236;unk1a=0;}
- static void* operator new(unsigned int size) {return FUN_0089eb90(size);}
+ static void* operator new(size_t size) {return FUN_0089eb90(size);}
 };
 struct EntryDbg70 {ActorDbg70* object;int unk04,unk08,unk0c;PointDbg70* key;};
 struct RecordDbg70 {PointDbg70 pos;void* cell;int unk10,unk14,unk18;void FUN_0079e380(ColorDbg70*);};
@@ -21539,7 +21539,7 @@ struct Controller {
     Group* group;
     char rest[0x188 - 0x84];
     Controller(void* owner, Group* group, void* extra);
-    static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
 };
 struct Owner {
@@ -21948,7 +21948,7 @@ struct Context
 };
 struct Object
 {
-    static void* operator new(unsigned size) { return DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* p) { DAT_01090a78.FUN_0086ba60(p); }
     Object(Actor*, Context*, int);
     virtual void Slot0();
@@ -23557,7 +23557,7 @@ struct Shape
     float interval;
     unsigned int unk4c, unk50;
     Shape();
-    static void* operator new(unsigned int auiSize) { return FUN_00aa13e0(auiSize); }
+    static void* operator new(size_t auiSize) { return FUN_00aa13e0(auiSize); }
     static void operator delete(void*) {}
     void IncRefCount() { ::InterlockedIncrement(&m_uiRefCount); }
     void DecRefCount()
@@ -27500,7 +27500,7 @@ Group* Manager::FUN_007a7e30(Actor* actor)
 
 // @f3 0x007b5f40 (community match, verified in this file)
 namespace f3m_007b5f40 {
-namespace Append415{extern __declspec(thread) int DAT_0117c298;struct Tag{int previous;Tag(){previous=DAT_0117c298;DAT_0117c298=43;}~Tag(){DAT_0117c298=previous;}};struct Heap{void*FUN_0086b930(unsigned int);void FUN_0086ba60(void*);};extern Heap DAT_01090a78;extern int DAT_00e12a7c;struct Array;extern void*(__thiscall*DAT_00e12a80)(Array*,unsigned int);struct Array{void*vtable;void**data;unsigned int count,capacity,unk10;Array(unsigned int size){vtable=&DAT_00e12a7c;data=0;count=0;capacity=0;data=(void**)DAT_00e12a80(this,size);capacity=size;unk10=0;}static void*operator new(unsigned int size){return DAT_01090a78.FUN_0086b930(size);}static void operator delete(void*p){DAT_01090a78.FUN_0086ba60(p);}unsigned int FUN_005e5350();};struct Owner {
+namespace Append415{extern __declspec(thread) int DAT_0117c298;struct Tag{int previous;Tag(){previous=DAT_0117c298;DAT_0117c298=43;}~Tag(){DAT_0117c298=previous;}};struct Heap{void*FUN_0086b930(unsigned int);void FUN_0086ba60(void*);};extern Heap DAT_01090a78;extern int DAT_00e12a7c;struct Array;extern void*(__thiscall*DAT_00e12a80)(Array*,unsigned int);struct Array{void*vtable;void**data;unsigned int count,capacity,unk10;Array(unsigned int size){vtable=&DAT_00e12a7c;data=0;count=0;capacity=0;data=(void**)DAT_00e12a80(this,size);capacity=size;unk10=0;}static void*operator new(size_t size){return DAT_01090a78.FUN_0086b930(size);}static void operator delete(void*p){DAT_01090a78.FUN_0086ba60(p);}unsigned int FUN_005e5350();};struct Owner {
     struct Entry {
         Entry* next;
         void* key;
@@ -27559,8 +27559,8 @@ extern F3U32 DAT_00f79e58;         // collision filter group counter
 class NiMemObject
 {
   public:
-    static void* operator new(unsigned int size);
-    static void operator delete(void* object, unsigned int size);
+    static void* operator new(size_t size);
+    static void operator delete(void* object, size_t size);
 };
 
 // The form that owns the name used to look the blast up.
@@ -29280,9 +29280,9 @@ struct ArrayB {unsigned table;void* data;unsigned count,cap,extra;void FUN_007aa
 struct Manager {virtual void m0();virtual void m1();virtual void m2();virtual bool IsThread(unsigned);};Manager* FUN_00bce1f0();
 struct RetV { unsigned v; RetV(const RetV& o) : v(o.v) {} RetV() {} };
 struct Input {unsigned unk000;unsigned unk004;unsigned unk008;unsigned unk00c;unsigned unk010;unsigned unk014;unsigned unk018;unsigned unk01c;unsigned unk020;unsigned unk024;unsigned unk028;unsigned unk02c;unsigned unk030;unsigned unk034;unsigned unk038;unsigned unk03c;unsigned unk040;unsigned unk044;unsigned unk048;unsigned unk04c;unsigned unk050;unsigned unk054;unsigned unk058;unsigned unk05c;unsigned unk060;unsigned unk064;unsigned unk068;unsigned unk06c;unsigned unk070;unsigned unk074;unsigned unk078;unsigned unk07c;unsigned unk080;unsigned unk084;unsigned unk088;unsigned unk08c;unsigned unk090;unsigned unk094;unsigned unk098;unsigned unk09c;unsigned unk0a0;unsigned unk0a4;unsigned unk0a8;unsigned unk0ac;unsigned unk0b0;unsigned unk0b4;unsigned unk0b8;unsigned unk0bc;unsigned unk0c0;unsigned unk0c4;unsigned unk0c8;unsigned unk0cc;unsigned unk0d0;unsigned unk0d4;unsigned unk0d8;unsigned count;unsigned FUN_007a9b80();};
-struct FUN_007a9a60 {unsigned unk000;unsigned unk004;unsigned unk008;unsigned unk00c;unsigned unk010;unsigned unk014;FUN_007a9a60(unsigned,unsigned,ArrayA*,ArrayB*,void*);static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
+struct FUN_007a9a60 {unsigned unk000;unsigned unk004;unsigned unk008;unsigned unk00c;unsigned unk010;unsigned unk014;FUN_007a9a60(unsigned,unsigned,ArrayA*,ArrayB*,void*);static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
 struct Node {float cost,weight;Input* input;};struct NodeQueue {unsigned unknown;void FUN_007aa190(Node*);};
-struct Owner;struct FUN_007ab140 {unsigned unk000;unsigned unk004;unsigned unk008;unsigned unk00c;unsigned unk010;unsigned unk014;unsigned unk018;unsigned unk01c;unsigned unk020;unsigned unk024;unsigned unk028;unsigned unk02c;unsigned unk030;unsigned unk034;unsigned unk038;FUN_007ab140(Owner*,FUN_007a9a60*,ArrayA*);static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
+struct Owner;struct FUN_007ab140 {unsigned unk000;unsigned unk004;unsigned unk008;unsigned unk00c;unsigned unk010;unsigned unk014;unsigned unk018;unsigned unk01c;unsigned unk020;unsigned unk024;unsigned unk028;unsigned unk02c;unsigned unk030;unsigned unk034;unsigned unk038;FUN_007ab140(Owner*,FUN_007a9a60*,ArrayA*);static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
 struct Owner {unsigned unk000;unsigned unk004;unsigned unk008;unsigned unk00c;unsigned unk010;unsigned unk014;unsigned unk018;unsigned unk01c;unsigned unk020;unsigned unk024;unsigned unk028;unsigned unk02c;unsigned unk030;unsigned unk034;unsigned unk038;unsigned unk03c;unsigned unk040;unsigned unk044;unsigned unk048;unsigned unk04c;unsigned unk050;unsigned unk054;unsigned unk058;unsigned unk05c;unsigned unk060;unsigned unk064;unsigned unk068;unsigned unk06c;unsigned unk070;unsigned unk074;unsigned unk078;unsigned unk07c;unsigned unk080;unsigned unk084;unsigned unk088;unsigned unk08c;unsigned unk090;unsigned unk094;unsigned unk098;unsigned unk09c;unsigned unk0a0;unsigned unk0a4;unsigned unk0a8;unsigned unk0ac;unsigned unk0b0;unsigned unk0b4;unsigned unk0b8;unsigned unk0bc;unsigned unk0c0;unsigned unk0c4;unsigned unk0c8;unsigned unk0cc;unsigned unk0d0;unsigned unk0d4;unsigned unk0d8;unsigned unk0dc;unsigned unk0e0;unsigned unk0e4;unsigned unk0e8;unsigned unk0ec;unsigned unk0f0;unsigned unk0f4;unsigned unk0f8;unsigned unk0fc;unsigned unk100;unsigned unk104;unsigned unk108;unsigned unk10c;unsigned unk110;unsigned unk114;unsigned unk118;unsigned unk11c;unsigned unk120;unsigned unk124;unsigned unk128;unsigned unk12c;unsigned unk130;unsigned unk134;unsigned unk138;unsigned unk13c;unsigned unk140;unsigned unk144;unsigned unk148;unsigned unk14c;unsigned unk150;unsigned unk154;unsigned unk158;unsigned unk15c;unsigned unk160;unsigned unk164;unsigned unk168;unsigned unk16c;unsigned unk170;unsigned unk174;unsigned unk178;unsigned unk17c;unsigned unk180;unsigned unk184;unsigned unk188;unsigned unk18c;unsigned unk190;unsigned unk194;unsigned unk198;unsigned unk19c;unsigned unk1a0;unsigned unk1a4;unsigned unk1a8;unsigned unk1ac;unsigned unk1b0;unsigned unk1b4;unsigned unk1b8;unsigned unk1bc;unsigned unk1c0;unsigned unk1c4;unsigned unk1c8;unsigned unk1cc;unsigned unk1d0;unsigned unk1d4;unsigned unk1d8;unsigned unk1dc;unsigned unk1e0;unsigned unk1e4;unsigned unk1e8;unsigned unk1ec;unsigned unk1f0;unsigned unk1f4;unsigned unk1f8;unsigned unk1fc;unsigned unk200;unsigned unk204;unsigned unk208;unsigned unk20c;unsigned unk210;unsigned unk214;unsigned unk218;unsigned unk21c;unsigned unk220;unsigned unk224;unsigned unk228;unsigned unk22c;unsigned unk230;unsigned unk234;unsigned unk238;unsigned unk23c;unsigned unk240;unsigned unk244;unsigned unk248;unsigned unk24c;unsigned unk250;unsigned unk254;unsigned unk258;unsigned unk25c;unsigned unk260;unsigned unk264;unsigned unk268;unsigned unk26c;unsigned unk270;unsigned unk274;unsigned unk278;unsigned unk27c;unsigned unk280;unsigned unk284;unsigned unk288;unsigned unk28c;unsigned unk290;unsigned unk294;unsigned unk298;unsigned unk29c;unsigned unk2a0;unsigned unk2a4;unsigned unk2a8;unsigned unk2ac;unsigned unk2b0;unsigned unk2b4;unsigned unk2b8;unsigned unk2bc;unsigned unk2c0;unsigned unk2c4;unsigned unk2c8;unsigned unk2cc;unsigned unk2d0;unsigned unk2d4;unsigned unk2d8;unsigned unk2dc;unsigned unk2e0;unsigned unk2e4;unsigned unk2e8;unsigned unk2ec;unsigned unk2f0;unsigned unk2f4;unsigned unk2f8;unsigned unk2fc;unsigned unk300;unsigned unk304;unsigned unk308;unsigned unk30c;unsigned unk310;unsigned unk314;unsigned unk318;unsigned unk31c;unsigned unk320;unsigned unk324;unsigned unk328;unsigned unk32c;unsigned unk330;unsigned unk334;unsigned unk338;unsigned unk33c;unsigned unk340;unsigned unk344;unsigned unk348;unsigned unk34c;unsigned unk350;unsigned unk354;unsigned unk358;unsigned unk35c;unsigned unk360;unsigned unk364;unsigned unk368;unsigned unk36c;unsigned unk370;unsigned unk374;unsigned unk378;unsigned unk37c;unsigned unk380;unsigned unk384;unsigned unk388;unsigned unk38c;unsigned unk390;unsigned unk394;unsigned unk398;unsigned unk39c;unsigned unk3a0;unsigned unk3a4;unsigned unk3a8;unsigned unk3ac;unsigned unk3b0;unsigned unk3b4;unsigned unk3b8;unsigned unk3bc;unsigned unk3c0;unsigned unk3c4;unsigned unk3c8;unsigned unk3cc;unsigned unk3d0;unsigned unk3d4;unsigned unk3d8;unsigned unk3dc;unsigned unk3e0;unsigned unk3e4;unsigned unk3e8;unsigned unk3ec;unsigned unk3f0;unsigned unk3f4;unsigned unk3f8;unsigned unk3fc;unsigned unk400;unsigned unk404;unsigned unk408;unsigned unk40c;unsigned unk410;unsigned unk414;unsigned unk418;unsigned unk41c;unsigned unk420;unsigned unk424;unsigned unk428;unsigned unk42c;unsigned unk430;unsigned unk434;unsigned unk438;unsigned unk43c;unsigned unk440;unsigned unk444;unsigned unk448;unsigned unk44c;unsigned unk450;unsigned unk454;unsigned unk458;unsigned unk45c;unsigned unk460;unsigned unk464;unsigned unk468;unsigned unk46c;unsigned unk470;unsigned unk474;unsigned unk478;unsigned unk47c;unsigned unk480;unsigned unk484;unsigned unk488;unsigned unk48c;unsigned unk490;unsigned unk494;unsigned unk498;unsigned unk49c;unsigned unk4a0;unsigned unk4a4;unsigned unk4a8;unsigned unk4ac;unsigned unk4b0;unsigned unk4b4;unsigned unk4b8;unsigned unk4bc;unsigned unk4c0;unsigned unk4c4;unsigned unk4c8;unsigned unk4cc;unsigned unk4d0;unsigned unk4d4;unsigned unk4d8;unsigned unk4dc;unsigned unk4e0;unsigned unk4e4;unsigned unk4e8;unsigned unk4ec;unsigned unk4f0;unsigned unk4f4;unsigned unk4f8;unsigned unk4fc;unsigned unk500;unsigned unk504;unsigned unk508;unsigned unk50c;unsigned unk510;unsigned unk514;unsigned unk518;unsigned unk51c;unsigned unk520;unsigned unk524;unsigned unk528;unsigned unk52c;unsigned unk530;unsigned unk534;unsigned unk538;unsigned unk53c;unsigned unk540;unsigned unk544;unsigned unk548;unsigned unk54c;unsigned unk550;unsigned unk554;unsigned unk558;unsigned unk55c;unsigned unk560;unsigned unk564;unsigned unk568;unsigned unk56c;unsigned unk570;unsigned unk574;unsigned unk578;unsigned unk57c;unsigned unk580;unsigned unk584;unsigned unk588;unsigned unk58c;unsigned unk590;unsigned unk594;unsigned unk598;unsigned unk59c;unsigned unk5a0;unsigned unk5a4;unsigned unk5a8;unsigned unk5ac;unsigned unk5b0;unsigned unk5b4;unsigned unk5b8;unsigned unk5bc;unsigned unk5c0;unsigned unk5c4;unsigned unk5c8;unsigned unk5cc;unsigned unk5d0;unsigned unk5d4;unsigned unk5d8;unsigned unk5dc;unsigned unk5e0;unsigned unk5e4;unsigned unk5e8;unsigned unk5ec;unsigned unk5f0;unsigned unk5f4;unsigned unk5f8;unsigned unk5fc;unsigned unk600;unsigned unk604;unsigned unk608;unsigned unk60c;unsigned unk610;unsigned unk614;unsigned unk618;unsigned unk61c;unsigned unk620;unsigned unk624;unsigned unk628;unsigned unk62c;unsigned unk630;unsigned unk634;unsigned unk638;unsigned unk63c;unsigned unk640;unsigned unk644;unsigned unk648;unsigned unk64c;unsigned unk650;unsigned unk654;unsigned unk658;unsigned unk65c;unsigned unk660;unsigned unk664;unsigned unk668;unsigned unk66c;unsigned unk670;unsigned unk674;unsigned unk678;unsigned unk67c;unsigned unk680;unsigned unk684;unsigned unk688;unsigned unk68c;unsigned unk690;unsigned unk694;unsigned unk698;unsigned unk69c;unsigned unk6a0;unsigned unk6a4;unsigned unk6a8;unsigned unk6ac;unsigned unk6b0;unsigned unk6b4;unsigned unk6b8;unsigned unk6bc;unsigned unk6c0;unsigned unk6c4;unsigned unk6c8;unsigned unk6cc;unsigned unk6d0;unsigned unk6d4;unsigned unk6d8;unsigned unk6dc;unsigned unk6e0;unsigned unk6e4;unsigned unk6e8;unsigned unk6ec;unsigned unk6f0;unsigned unk6f4;unsigned unk6f8;unsigned unk6fc;unsigned unk700;unsigned unk704;unsigned unk708;unsigned unk70c;unsigned unk710;unsigned unk714;unsigned unk718;unsigned unk71c;unsigned unk720;unsigned unk724;unsigned unk728;unsigned unk72c;unsigned unk730;unsigned unk734;unsigned unk738;unsigned unk73c;unsigned unk740;unsigned unk744;unsigned unk748;unsigned unk74c;unsigned unk750;unsigned unk754;unsigned unk758;unsigned unk75c;unsigned unk760;unsigned unk764;unsigned unk768;unsigned unk76c;unsigned unk770;unsigned unk774;unsigned unk778;unsigned unk77c;unsigned unk780;unsigned unk784;unsigned unk788;unsigned unk78c;unsigned unk790;unsigned unk794;unsigned unk798;unsigned unk79c;unsigned unk7a0;unsigned unk7a4;unsigned unk7a8;unsigned unk7ac;unsigned unk7b0;unsigned unk7b4;unsigned unk7b8;unsigned unk7bc;unsigned unk7c0;unsigned unk7c4;unsigned unk7c8;unsigned unk7cc;unsigned unk7d0;unsigned unk7d4;unsigned unk7d8;unsigned unk7dc;unsigned unk7e0;unsigned unk7e4;unsigned unk7e8;unsigned unk7ec;unsigned unk7f0;unsigned unk7f4;unsigned unk7f8;unsigned unk7fc;unsigned unk800;unsigned unk804;unsigned unk808;unsigned unk80c;unsigned unk810;unsigned unk814;unsigned unk818;unsigned unk81c;unsigned unk820;unsigned unk824;unsigned unk828;unsigned unk82c;unsigned unk830;unsigned unk834;unsigned unk838;unsigned unk83c;unsigned unk840;unsigned unk844;unsigned unk848;unsigned unk84c;unsigned unk850;unsigned unk854;unsigned unk858;unsigned unk85c;unsigned unk860;unsigned unk864;unsigned unk868;unsigned unk86c;unsigned unk870;unsigned unk874;unsigned unk878;unsigned unk87c;unsigned unk880;unsigned unk884;unsigned unk888;unsigned unk88c;unsigned unk890;unsigned unk894;unsigned unk898;unsigned unk89c;unsigned unk8a0;unsigned unk8a4;unsigned unk8a8;unsigned unk8ac;unsigned unk8b0;unsigned unk8b4;unsigned unk8b8;unsigned unk8bc;unsigned unk8c0;unsigned unk8c4;unsigned unk8c8;unsigned unk8cc;unsigned unk8d0;unsigned unk8d4;unsigned unk8d8;unsigned unk8dc;unsigned unk8e0;unsigned unk8e4;unsigned unk8e8;unsigned unk8ec;unsigned unk8f0;unsigned unk8f4;unsigned unk8f8;unsigned unk8fc;unsigned unk900;unsigned unk904;unsigned unk908;unsigned unk90c;unsigned unk910;unsigned unk914;unsigned unk918;unsigned unk91c;unsigned unk920;unsigned unk924;unsigned unk928;unsigned unk92c;unsigned unk930;unsigned unk934;unsigned unk938;unsigned unk93c;unsigned unk940;unsigned unk944;unsigned unk948;unsigned unk94c;unsigned unk950;unsigned unk954;unsigned unk958;unsigned unk95c;unsigned unk960;unsigned unk964;unsigned unk968;unsigned unk96c;unsigned unk970;unsigned unk974;unsigned unk978;unsigned unk97c;unsigned unk980;unsigned unk984;unsigned unk988;unsigned unk98c;unsigned unk990;unsigned unk994;unsigned unk998;unsigned unk99c;unsigned unk9a0;unsigned unk9a4;unsigned unk9a8;unsigned unk9ac;unsigned unk9b0;unsigned unk9b4;unsigned unk9b8;unsigned unk9bc;unsigned unk9c0;unsigned unk9c4;unsigned unk9c8;unsigned unk9cc;unsigned unk9d0;unsigned unk9d4;unsigned unk9d8;unsigned unk9dc;unsigned unk9e0;unsigned unk9e4;unsigned unk9e8;unsigned unk9ec;unsigned unk9f0;unsigned unk9f4;unsigned unk9f8;unsigned unk9fc;unsigned unka00;unsigned unka04;unsigned unka08;unsigned unka0c;unsigned unka10;unsigned unka14;unsigned unka18;unsigned unka1c;unsigned unka20;unsigned unka24;unsigned unka28;unsigned unka2c;unsigned unka30;unsigned unka34;unsigned unka38;unsigned unka3c;unsigned unka40;unsigned unka44;unsigned unka48;unsigned unka4c;unsigned unka50;unsigned unka54;unsigned unka58;unsigned unka5c;unsigned unka60;unsigned unka64;unsigned unka68;unsigned unka6c;unsigned unka70;unsigned unka74;unsigned unka78;unsigned unka7c;unsigned unka80;unsigned unka84;unsigned unka88;unsigned unka8c;unsigned unka90;unsigned unka94;unsigned unka98;unsigned unka9c;unsigned unkaa0;unsigned unkaa4;unsigned unkaa8;unsigned unkaac;unsigned unkab0;unsigned unkab4;unsigned unkab8;unsigned unkabc;unsigned unkac0;unsigned unkac4;unsigned unkac8;unsigned unkacc;unsigned unkad0;unsigned unkad4;unsigned unkad8;unsigned unkadc;unsigned unkae0;unsigned unkae4;unsigned unkae8;unsigned unkaec;unsigned unkaf0;unsigned unkaf4;unsigned unkaf8;unsigned unkafc;unsigned unkb00;unsigned unkb04;unsigned unkb08;unsigned unkb0c;unsigned unkb10;unsigned unkb14;unsigned unkb18;unsigned unkb1c;unsigned unkb20;unsigned unkb24;unsigned unkb28;unsigned unkb2c;unsigned unkb30;unsigned unkb34;unsigned unkb38;unsigned unkb3c;unsigned unkb40;unsigned unkb44;unsigned unkb48;unsigned unkb4c;unsigned unkb50;unsigned unkb54;unsigned unkb58;unsigned unkb5c;unsigned unkb60;unsigned unkb64;unsigned unkb68;unsigned unkb6c;unsigned unkb70;unsigned unkb74;unsigned unkb78;unsigned unkb7c;unsigned unkb80;unsigned unkb84;unsigned unkb88;unsigned unkb8c;unsigned unkb90;unsigned unkb94;unsigned unkb98;unsigned unkb9c;unsigned unkba0;unsigned unkba4;unsigned unkba8;unsigned unkbac;unsigned unkbb0;unsigned unkbb4;unsigned unkbb8;unsigned unkbbc;unsigned unkbc0;unsigned unkbc4;unsigned unkbc8;unsigned unkbcc;unsigned unkbd0;unsigned unkbd4;unsigned unkbd8;unsigned unkbdc;unsigned unkbe0;unsigned unkbe4;unsigned unkbe8;unsigned unkbec;unsigned unkbf0;unsigned unkbf4;unsigned unkbf8;unsigned unkbfc;unsigned unkc00;unsigned unkc04;unsigned unkc08;unsigned unkc0c;unsigned unkc10;unsigned unkc14;unsigned unkc18;unsigned unkc1c;unsigned unkc20;unsigned unkc24;unsigned unkc28;unsigned unkc2c;unsigned unkc30;unsigned unkc34;unsigned unkc38;unsigned unkc3c;unsigned unkc40;unsigned unkc44;unsigned unkc48;unsigned unkc4c;unsigned unkc50;unsigned unkc54;unsigned unkc58;unsigned unkc5c;unsigned unkc60;unsigned unkc64;unsigned unkc68;unsigned unkc6c;unsigned unkc70;unsigned unkc74;unsigned unkc78;unsigned unkc7c;unsigned unkc80;unsigned unkc84;unsigned unkc88;unsigned unkc8c;unsigned unkc90;unsigned unkc94;unsigned unkc98;unsigned unkc9c;unsigned unkca0;unsigned unkca4;unsigned unkca8;unsigned unkcac;unsigned unkcb0;unsigned unkcb4;unsigned unkcb8;unsigned unkcbc;unsigned unkcc0;unsigned unkcc4;unsigned unkcc8;unsigned unkccc;unsigned unkcd0;unsigned unkcd4;unsigned unkcd8;unsigned unkcdc;unsigned unkce0;unsigned unkce4;unsigned unkce8;unsigned unkcec;unsigned unkcf0;unsigned unkcf4;unsigned unkcf8;unsigned unkcfc;unsigned unkd00;unsigned unkd04;unsigned unkd08;unsigned unkd0c;unsigned unkd10;unsigned unkd14;unsigned unkd18;unsigned unkd1c;unsigned unkd20;unsigned unkd24;unsigned unkd28;unsigned unkd2c;unsigned unkd30;unsigned unkd34;unsigned unkd38;unsigned unkd3c;unsigned unkd40;unsigned unkd44;unsigned unkd48;unsigned unkd4c;unsigned unkd50;unsigned unkd54;unsigned unkd58;unsigned unkd5c;unsigned unkd60;unsigned unkd64;unsigned unkd68;unsigned unkd6c;unsigned unkd70;unsigned unkd74;unsigned unkd78;unsigned unkd7c;unsigned unkd80;unsigned unkd84;unsigned unkd88;unsigned unkd8c;unsigned unkd90;unsigned unkd94;unsigned unkd98;unsigned unkd9c;unsigned unkda0;unsigned unkda4;unsigned unkda8;unsigned unkdac;unsigned unkdb0;unsigned unkdb4;unsigned unkdb8;unsigned unkdbc;unsigned unkdc0;unsigned unkdc4;unsigned unkdc8;unsigned unkdcc;unsigned unkdd0;unsigned unkdd4;unsigned unkdd8;unsigned unkddc;unsigned unkde0;unsigned unkde4;unsigned unkde8;unsigned unkdec;unsigned unkdf0;unsigned unkdf4;unsigned unkdf8;unsigned unkdfc;unsigned unke00;unsigned unke04;unsigned unke08;unsigned unke0c;unsigned unke10;unsigned unke14;unsigned unke18;unsigned unke1c;unsigned unke20;unsigned unke24;unsigned unke28;unsigned unke2c;unsigned unke30;unsigned unke34;unsigned unke38;unsigned unke3c;unsigned unke40;unsigned unke44;unsigned unke48;unsigned unke4c;unsigned unke50;unsigned unke54;unsigned unke58;unsigned unke5c;unsigned unke60;unsigned unke64;unsigned unke68;unsigned unke6c;unsigned unke70;unsigned unke74;unsigned unke78;unsigned unke7c;unsigned unke80;unsigned unke84;unsigned unke88;unsigned unke8c;unsigned unke90;unsigned unke94;unsigned unke98;unsigned unke9c;unsigned unkea0;unsigned unkea4;unsigned unkea8;unsigned unkeac;unsigned unkeb0;unsigned unkeb4;unsigned unkeb8;unsigned unkebc;unsigned unkec0;unsigned unkec4;unsigned unkec8;unsigned unkecc;unsigned unked0;unsigned unked4;unsigned unked8;unsigned unkedc;unsigned unkee0;unsigned unkee4;unsigned unkee8;unsigned unkeec;unsigned unkef0;unsigned unkef4;unsigned unkef8;unsigned unkefc;unsigned unkf00;unsigned unkf04;unsigned unkf08;unsigned unkf0c;unsigned unkf10;unsigned unkf14;unsigned unkf18;unsigned unkf1c;unsigned unkf20;unsigned unkf24;unsigned unkf28;unsigned unkf2c;unsigned unkf30;unsigned unkf34;unsigned unkf38;unsigned unkf3c;unsigned unkf40;unsigned unkf44;unsigned unkf48;unsigned unkf4c;unsigned unkf50;unsigned unkf54;unsigned unkf58;unsigned unkf5c;unsigned unkf60;unsigned unkf64;unsigned unkf68;unsigned unkf6c;unsigned unkf70;unsigned unkf74;unsigned unkf78;unsigned unkf7c;unsigned unkf80;unsigned unkf84;unsigned unkf88;unsigned unkf8c;unsigned unkf90;unsigned unkf94;unsigned unkf98;unsigned unkf9c;unsigned unkfa0;unsigned unkfa4;unsigned unkfa8;unsigned unkfac;unsigned unkfb0;unsigned unkfb4;unsigned unkfb8;unsigned unkfbc;unsigned unkfc0;unsigned unkfc4;unsigned unkfc8;unsigned unkfcc;unsigned unkfd0;unsigned unkfd4;unsigned unkfd8;unsigned unkfdc;unsigned unkfe0;unsigned unkfe4;unsigned unkfe8;unsigned unkfec;unsigned unkff0;unsigned unkff4;unsigned unkff8;unsigned unkffc;unsigned unk1000;unsigned unk1004;unsigned unk1008;unsigned unk100c;unsigned unk1010;unsigned unk1014;unsigned unk1018;unsigned unk101c;unsigned unk1020;unsigned unk1024;unsigned unk1028;unsigned unk102c;unsigned unk1030;unsigned unk1034;unsigned unk1038;unsigned unk103c;unsigned unk1040;unsigned unk1044;unsigned unk1048;unsigned unk104c;unsigned unk1050;unsigned unk1054;unsigned unk1058;unsigned unk105c;unsigned unk1060;unsigned unk1064;unsigned unk1068;unsigned unk106c;unsigned unk1070;unsigned unk1074;unsigned unk1078;unsigned unk107c;unsigned unk1080;unsigned unk1084;unsigned unk1088;unsigned unk108c;unsigned unk1090;unsigned unk1094;unsigned unk1098;unsigned unk109c;unsigned unk10a0;unsigned unk10a4;unsigned unk10a8;unsigned unk10ac;unsigned unk10b0;unsigned unk10b4;unsigned unk10b8;unsigned unk10bc;unsigned unk10c0;unsigned unk10c4;unsigned unk10c8;unsigned unk10cc;unsigned unk10d0;unsigned unk10d4;unsigned unk10d8;unsigned unk10dc;unsigned unk10e0;unsigned unk10e4;unsigned unk10e8;unsigned unk10ec;unsigned unk10f0;unsigned unk10f4;unsigned unk10f8;unsigned unk10fc;unsigned unk1100;unsigned unk1104;unsigned unk1108;unsigned unk110c;unsigned unk1110;unsigned unk1114;unsigned unk1118;unsigned unk111c;unsigned unk1120;unsigned unk1124;unsigned unk1128;unsigned unk112c;unsigned unk1130;unsigned unk1134;unsigned unk1138;unsigned unk113c;unsigned unk1140;unsigned unk1144;unsigned unk1148;unsigned unk114c;unsigned unk1150;unsigned unk1154;unsigned unk1158;unsigned unk115c;unsigned unk1160;unsigned unk1164;unsigned unk1168;unsigned unk116c;unsigned unk1170;unsigned unk1174;unsigned unk1178;unsigned unk117c;unsigned unk1180;unsigned unk1184;unsigned unk1188;unsigned unk118c;unsigned unk1190;unsigned unk1194;unsigned unk1198;unsigned unk119c;unsigned unk11a0;unsigned unk11a4;unsigned unk11a8;unsigned unk11ac;unsigned unk11b0;unsigned unk11b4;unsigned unk11b8;unsigned unk11bc;unsigned unk11c0;unsigned unk11c4;unsigned unk11c8;unsigned unk11cc;unsigned unk11d0;unsigned unk11d4;unsigned unk11d8;unsigned unk11dc;unsigned unk11e0;unsigned unk11e4;unsigned unk11e8;unsigned unk11ec;unsigned unk11f0;unsigned unk11f4;unsigned unk11f8;unsigned unk11fc;unsigned unk1200;unsigned unk1204;unsigned unk1208;unsigned unk120c;unsigned unk1210;unsigned unk1214;unsigned unk1218;unsigned unk121c;unsigned unk1220;unsigned unk1224;unsigned unk1228;unsigned unk122c;unsigned unk1230;unsigned unk1234;unsigned unk1238;unsigned unk123c;unsigned unk1240;unsigned unk1244;unsigned unk1248;unsigned unk124c;unsigned unk1250;unsigned unk1254;unsigned unk1258;unsigned unk125c;unsigned unk1260;unsigned unk1264;unsigned unk1268;unsigned unk126c;unsigned unk1270;unsigned unk1274;unsigned unk1278;unsigned unk127c;unsigned unk1280;unsigned unk1284;unsigned unk1288;unsigned unk128c;unsigned unk1290;unsigned unk1294;unsigned unk1298;unsigned unk129c;unsigned unk12a0;unsigned unk12a4;unsigned unk12a8;unsigned unk12ac;unsigned unk12b0;unsigned unk12b4;unsigned unk12b8;unsigned unk12bc;unsigned unk12c0;unsigned unk12c4;unsigned unk12c8;unsigned unk12cc;unsigned unk12d0;unsigned unk12d4;unsigned unk12d8;unsigned unk12dc;unsigned unk12e0;unsigned unk12e4;unsigned unk12e8;unsigned unk12ec;unsigned unk12f0;unsigned unk12f4;unsigned unk12f8;unsigned unk12fc;unsigned unk1300;unsigned unk1304;unsigned unk1308;unsigned unk130c;unsigned unk1310;unsigned unk1314;unsigned unk1318;unsigned unk131c;unsigned unk1320;unsigned unk1324;unsigned unk1328;unsigned unk132c;unsigned unk1330;unsigned unk1334;unsigned unk1338;unsigned unk133c;unsigned unk1340;unsigned unk1344;unsigned unk1348;unsigned unk134c;unsigned unk1350;unsigned unk1354;unsigned unk1358;unsigned unk135c;unsigned unk1360;unsigned unk1364;unsigned unk1368;unsigned unk136c;unsigned unk1370;unsigned unk1374;unsigned unk1378;unsigned unk137c;unsigned unk1380;unsigned unk1384;unsigned unk1388;unsigned unk138c;unsigned unk1390;unsigned unk1394;unsigned unk1398;unsigned unk139c;unsigned unk13a0;unsigned unk13a4;unsigned unk13a8;unsigned unk13ac;unsigned unk13b0;unsigned unk13b4;unsigned unk13b8;unsigned unk13bc;unsigned unk13c0;unsigned unk13c4;unsigned unk13c8;unsigned unk13cc;unsigned unk13d0;unsigned unk13d4;unsigned unk13d8;unsigned unk13dc;unsigned unk13e0;unsigned unk13e4;unsigned unk13e8;unsigned unk13ec;unsigned unk13f0;unsigned unk13f4;unsigned unk13f8;unsigned unk13fc;unsigned unk1400;unsigned unk1404;unsigned unk1408;unsigned unk140c;unsigned unk1410;unsigned unk1414;unsigned unk1418;unsigned unk141c;unsigned unk1420;unsigned unk1424;unsigned unk1428;unsigned unk142c;unsigned unk1430;unsigned unk1434;unsigned unk1438;unsigned unk143c;unsigned unk1440;unsigned unk1444;unsigned unk1448;unsigned unk144c;unsigned unk1450;unsigned unk1454;unsigned unk1458;unsigned unk145c;unsigned unk1460;unsigned unk1464;unsigned unk1468;unsigned unk146c;unsigned unk1470;unsigned unk1474;unsigned unk1478;unsigned unk147c;unsigned unk1480;unsigned unk1484;unsigned unk1488;unsigned unk148c;unsigned unk1490;unsigned unk1494;unsigned unk1498;unsigned unk149c;unsigned unk14a0;unsigned unk14a4;unsigned unk14a8;unsigned unk14ac;unsigned unk14b0;unsigned unk14b4;unsigned unk14b8;unsigned unk14bc;unsigned unk14c0;unsigned unk14c4;unsigned unk14c8;unsigned unk14cc;unsigned unk14d0;unsigned unk14d4;unsigned unk14d8;unsigned unk14dc;unsigned unk14e0;unsigned unk14e4;unsigned unk14e8;unsigned unk14ec;unsigned unk14f0;unsigned unk14f4;unsigned unk14f8;unsigned unk14fc;unsigned unk1500;unsigned unk1504;unsigned unk1508;unsigned unk150c;unsigned unk1510;unsigned unk1514;unsigned unk1518;unsigned unk151c;unsigned unk1520;unsigned unk1524;unsigned unk1528;unsigned unk152c;unsigned unk1530;unsigned unk1534;unsigned unk1538;unsigned unk153c;unsigned unk1540;unsigned unk1544;unsigned unk1548;unsigned unk154c;unsigned unk1550;unsigned unk1554;unsigned unk1558;unsigned unk155c;unsigned unk1560;unsigned unk1564;unsigned unk1568;unsigned unk156c;unsigned unk1570;unsigned unk1574;unsigned unk1578;unsigned unk157c;unsigned unk1580;unsigned unk1584;unsigned unk1588;unsigned unk158c;unsigned unk1590;unsigned unk1594;unsigned unk1598;unsigned unk159c;unsigned unk15a0;unsigned unk15a4;unsigned unk15a8;unsigned unk15ac;unsigned unk15b0;unsigned unk15b4;unsigned unk15b8;unsigned unk15bc;unsigned unk15c0;unsigned unk15c4;unsigned unk15c8;unsigned unk15cc;unsigned unk15d0;unsigned unk15d4;unsigned unk15d8;unsigned unk15dc;unsigned unk15e0;unsigned unk15e4;unsigned unk15e8;unsigned unk15ec;unsigned unk15f0;unsigned unk15f4;unsigned unk15f8;unsigned unk15fc;unsigned unk1600;unsigned unk1604;unsigned unk1608;unsigned unk160c;unsigned unk1610;unsigned unk1614;unsigned unk1618;unsigned unk161c;unsigned unk1620;unsigned unk1624;unsigned unk1628;unsigned unk162c;unsigned unk1630;unsigned unk1634;unsigned unk1638;unsigned unk163c;unsigned unk1640;unsigned unk1644;unsigned unk1648;unsigned unk164c;unsigned unk1650;unsigned unk1654;unsigned unk1658;unsigned unk165c;unsigned unk1660;unsigned unk1664;unsigned unk1668;unsigned unk166c;unsigned unk1670;unsigned unk1674;unsigned unk1678;unsigned unk167c;unsigned unk1680;unsigned unk1684;unsigned unk1688;unsigned unk168c;unsigned unk1690;unsigned unk1694;unsigned unk1698;unsigned unk169c;unsigned unk16a0;unsigned unk16a4;unsigned unk16a8;unsigned unk16ac;unsigned unk16b0;unsigned unk16b4;unsigned unk16b8;unsigned unk16bc;unsigned unk16c0;unsigned unk16c4;unsigned unk16c8;unsigned unk16cc;unsigned unk16d0;unsigned unk16d4;unsigned unk16d8;unsigned unk16dc;unsigned unk16e0;unsigned unk16e4;unsigned unk16e8;unsigned unk16ec;unsigned unk16f0;unsigned unk16f4;unsigned unk16f8;unsigned unk16fc;unsigned unk1700;unsigned unk1704;unsigned unk1708;unsigned unk170c;unsigned unk1710;unsigned unk1714;unsigned unk1718;unsigned unk171c;unsigned unk1720;unsigned unk1724;unsigned unk1728;unsigned unk172c;unsigned unk1730;unsigned unk1734;unsigned unk1738;unsigned unk173c;unsigned unk1740;unsigned unk1744;unsigned unk1748;unsigned unk174c;unsigned unk1750;unsigned unk1754;unsigned unk1758;unsigned unk175c;unsigned unk1760;unsigned unk1764;unsigned unk1768;unsigned unk176c;unsigned unk1770;unsigned unk1774;unsigned unk1778;unsigned unk177c;unsigned unk1780;unsigned unk1784;unsigned unk1788;unsigned unk178c;unsigned unk1790;unsigned unk1794;unsigned unk1798;unsigned unk179c;unsigned unk17a0;unsigned unk17a4;unsigned unk17a8;unsigned unk17ac;unsigned unk17b0;unsigned unk17b4;unsigned unk17b8;unsigned unk17bc;unsigned unk17c0;unsigned unk17c4;unsigned unk17c8;unsigned unk17cc;unsigned unk17d0;unsigned unk17d4;unsigned unk17d8;unsigned unk17dc;unsigned unk17e0;unsigned unk17e4;unsigned unk17e8;unsigned unk17ec;unsigned unk17f0;unsigned unk17f4;unsigned unk17f8;unsigned unk17fc;unsigned unk1800;unsigned unk1804;unsigned unk1808;unsigned unk180c;unsigned unk1810;unsigned unk1814;unsigned unk1818;unsigned unk181c;unsigned unk1820;unsigned unk1824;unsigned unk1828;unsigned unk182c;unsigned unk1830;unsigned unk1834;unsigned unk1838;unsigned unk183c;unsigned unk1840;unsigned unk1844;unsigned unk1848;unsigned unk184c;unsigned unk1850;unsigned unk1854;unsigned unk1858;unsigned unk185c;unsigned unk1860;unsigned unk1864;unsigned unk1868;unsigned unk186c;unsigned unk1870;unsigned unk1874;unsigned unk1878;unsigned unk187c;unsigned unk1880;unsigned unk1884;unsigned unk1888;unsigned unk188c;unsigned unk1890;unsigned unk1894;unsigned unk1898;unsigned unk189c;unsigned unk18a0;unsigned unk18a4;unsigned unk18a8;unsigned unk18ac;unsigned unk18b0;unsigned unk18b4;unsigned unk18b8;unsigned unk18bc;unsigned unk18c0;unsigned unk18c4;unsigned unk18c8;unsigned unk18cc;unsigned unk18d0;unsigned unk18d4;unsigned unk18d8;unsigned unk18dc;unsigned unk18e0;unsigned unk18e4;unsigned unk18e8;unsigned unk18ec;unsigned unk18f0;unsigned unk18f4;unsigned unk18f8;unsigned unk18fc;unsigned unk1900;unsigned unk1904;unsigned unk1908;unsigned unk190c;unsigned unk1910;unsigned unk1914;unsigned unk1918;unsigned unk191c;unsigned unk1920;unsigned unk1924;unsigned unk1928;unsigned unk192c;unsigned unk1930;unsigned unk1934;unsigned unk1938;unsigned unk193c;unsigned unk1940;unsigned unk1944;unsigned unk1948;unsigned unk194c;unsigned unk1950;unsigned unk1954;unsigned unk1958;unsigned unk195c;unsigned unk1960;unsigned unk1964;unsigned unk1968;unsigned unk196c;unsigned unk1970;unsigned unk1974;unsigned unk1978;unsigned unk197c;unsigned unk1980;unsigned unk1984;unsigned unk1988;unsigned unk198c;unsigned unk1990;unsigned unk1994;unsigned unk1998;unsigned unk199c;unsigned unk19a0;unsigned unk19a4;unsigned unk19a8;unsigned unk19ac;unsigned unk19b0;unsigned unk19b4;unsigned unk19b8;unsigned unk19bc;unsigned unk19c0;unsigned unk19c4;unsigned unk19c8;unsigned unk19cc;unsigned unk19d0;unsigned unk19d4;unsigned unk19d8;unsigned unk19dc;unsigned unk19e0;unsigned unk19e4;unsigned unk19e8;unsigned unk19ec;unsigned unk19f0;unsigned unk19f4;unsigned unk19f8;unsigned unk19fc;unsigned unk1a00;unsigned unk1a04;unsigned unk1a08;unsigned unk1a0c;unsigned unk1a10;unsigned unk1a14;unsigned unk1a18;unsigned unk1a1c;unsigned unk1a20;unsigned unk1a24;unsigned unk1a28;unsigned unk1a2c;unsigned unk1a30;unsigned unk1a34;unsigned unk1a38;unsigned unk1a3c;unsigned unk1a40;unsigned unk1a44;unsigned unk1a48;unsigned unk1a4c;unsigned unk1a50;unsigned unk1a54;unsigned unk1a58;unsigned unk1a5c;unsigned unk1a60;unsigned unk1a64;unsigned unk1a68;unsigned unk1a6c;unsigned unk1a70;unsigned unk1a74;unsigned unk1a78;unsigned unk1a7c;unsigned unk1a80;unsigned unk1a84;unsigned unk1a88;unsigned unk1a8c;unsigned unk1a90;unsigned unk1a94;unsigned unk1a98;unsigned unk1a9c;unsigned unk1aa0;unsigned unk1aa4;unsigned unk1aa8;unsigned unk1aac;unsigned unk1ab0;unsigned unk1ab4;unsigned unk1ab8;unsigned unk1abc;unsigned unk1ac0;unsigned unk1ac4;unsigned unk1ac8;unsigned unk1acc;unsigned unk1ad0;unsigned unk1ad4;unsigned unk1ad8;unsigned unk1adc;unsigned unk1ae0;unsigned unk1ae4;unsigned unk1ae8;unsigned unk1aec;unsigned unk1af0;unsigned unk1af4;unsigned unk1af8;unsigned unk1afc;unsigned unk1b00;unsigned unk1b04;unsigned unk1b08;unsigned unk1b0c;unsigned unk1b10;unsigned unk1b14;unsigned unk1b18;unsigned unk1b1c;unsigned unk1b20;unsigned unk1b24;unsigned unk1b28;unsigned unk1b2c;unsigned unk1b30;unsigned unk1b34;unsigned unk1b38;unsigned unk1b3c;unsigned unk1b40;unsigned unk1b44;unsigned unk1b48;unsigned unk1b4c;unsigned unk1b50;unsigned unk1b54;unsigned unk1b58;unsigned unk1b5c;unsigned unk1b60;unsigned unk1b64;unsigned unk1b68;unsigned unk1b6c;unsigned unk1b70;unsigned unk1b74;unsigned unk1b78;unsigned unk1b7c;unsigned unk1b80;unsigned unk1b84;unsigned unk1b88;unsigned unk1b8c;unsigned unk1b90;unsigned unk1b94;unsigned unk1b98;unsigned unk1b9c;unsigned unk1ba0;unsigned unk1ba4;unsigned unk1ba8;unsigned unk1bac;unsigned unk1bb0;unsigned unk1bb4;unsigned unk1bb8;unsigned unk1bbc;unsigned unk1bc0;unsigned unk1bc4;unsigned unk1bc8;unsigned unk1bcc;unsigned unk1bd0;unsigned unk1bd4;unsigned unk1bd8;unsigned unk1bdc;unsigned unk1be0;unsigned unk1be4;unsigned unk1be8;unsigned unk1bec;unsigned unk1bf0;unsigned unk1bf4;unsigned unk1bf8;unsigned unk1bfc;unsigned unk1c00;unsigned unk1c04;unsigned unk1c08;unsigned unk1c0c;unsigned unk1c10;unsigned unk1c14;unsigned unk1c18;unsigned unk1c1c;unsigned unk1c20;unsigned unk1c24;unsigned unk1c28;unsigned unk1c2c;unsigned unk1c30;unsigned unk1c34;unsigned unk1c38;unsigned unk1c3c;unsigned unk1c40;unsigned unk1c44;unsigned unk1c48;unsigned unk1c4c;unsigned unk1c50;unsigned unk1c54;unsigned unk1c58;unsigned unk1c5c;unsigned unk1c60;unsigned unk1c64;unsigned unk1c68;unsigned unk1c6c;unsigned unk1c70;unsigned unk1c74;unsigned unk1c78;unsigned unk1c7c;unsigned unk1c80;unsigned unk1c84;unsigned unk1c88;unsigned unk1c8c;unsigned unk1c90;unsigned unk1c94;unsigned unk1c98;unsigned unk1c9c;unsigned unk1ca0;unsigned unk1ca4;unsigned unk1ca8;unsigned unk1cac;unsigned unk1cb0;unsigned unk1cb4;unsigned unk1cb8;unsigned unk1cbc;unsigned unk1cc0;unsigned unk1cc4;unsigned unk1cc8;unsigned unk1ccc;unsigned unk1cd0;unsigned unk1cd4;unsigned unk1cd8;unsigned unk1cdc;unsigned unk1ce0;unsigned unk1ce4;unsigned unk1ce8;unsigned unk1cec;unsigned unk1cf0;unsigned unk1cf4;unsigned unk1cf8;unsigned unk1cfc;unsigned unk1d00;unsigned unk1d04;unsigned unk1d08;unsigned unk1d0c;unsigned unk1d10;unsigned unk1d14;unsigned unk1d18;unsigned unk1d1c;unsigned unk1d20;unsigned unk1d24;unsigned unk1d28;unsigned unk1d2c;unsigned unk1d30;unsigned unk1d34;unsigned unk1d38;unsigned unk1d3c;unsigned unk1d40;unsigned unk1d44;unsigned unk1d48;unsigned unk1d4c;unsigned unk1d50;unsigned unk1d54;unsigned unk1d58;unsigned unk1d5c;unsigned unk1d60;unsigned unk1d64;unsigned unk1d68;unsigned unk1d6c;unsigned unk1d70;unsigned unk1d74;unsigned unk1d78;unsigned unk1d7c;unsigned unk1d80;unsigned unk1d84;unsigned unk1d88;unsigned unk1d8c;unsigned unk1d90;unsigned unk1d94;unsigned unk1d98;unsigned unk1d9c;unsigned unk1da0;unsigned unk1da4;unsigned unk1da8;unsigned unk1dac;unsigned unk1db0;unsigned unk1db4;unsigned unk1db8;unsigned unk1dbc;unsigned unk1dc0;unsigned unk1dc4;unsigned unk1dc8;unsigned unk1dcc;unsigned unk1dd0;unsigned unk1dd4;unsigned unk1dd8;unsigned unk1ddc;unsigned unk1de0;unsigned unk1de4;unsigned unk1de8;unsigned unk1dec;unsigned unk1df0;unsigned unk1df4;unsigned unk1df8;unsigned unk1dfc;unsigned unk1e00;unsigned unk1e04;unsigned unk1e08;unsigned unk1e0c;unsigned unk1e10;unsigned unk1e14;unsigned unk1e18;unsigned unk1e1c;unsigned unk1e20;unsigned unk1e24;unsigned unk1e28;unsigned unk1e2c;unsigned unk1e30;unsigned unk1e34;unsigned unk1e38;unsigned unk1e3c;unsigned unk1e40;unsigned unk1e44;unsigned unk1e48;unsigned unk1e4c;unsigned unk1e50;unsigned unk1e54;unsigned unk1e58;unsigned unk1e5c;unsigned unk1e60;unsigned unk1e64;unsigned unk1e68;unsigned unk1e6c;unsigned unk1e70;unsigned unk1e74;unsigned unk1e78;unsigned unk1e7c;unsigned unk1e80;unsigned unk1e84;unsigned unk1e88;unsigned unk1e8c;unsigned unk1e90;unsigned unk1e94;unsigned unk1e98;unsigned unk1e9c;unsigned unk1ea0;unsigned unk1ea4;unsigned unk1ea8;unsigned unk1eac;unsigned unk1eb0;unsigned unk1eb4;unsigned unk1eb8;unsigned unk1ebc;unsigned unk1ec0;unsigned unk1ec4;unsigned unk1ec8;unsigned unk1ecc;unsigned unk1ed0;unsigned unk1ed4;unsigned unk1ed8;unsigned unk1edc;unsigned unk1ee0;unsigned unk1ee4;unsigned unk1ee8;unsigned unk1eec;unsigned unk1ef0;unsigned unk1ef4;unsigned unk1ef8;unsigned unk1efc;unsigned unk1f00;unsigned unk1f04;unsigned unk1f08;unsigned unk1f0c;unsigned unk1f10;unsigned unk1f14;unsigned unk1f18;unsigned unk1f1c;unsigned unk1f20;unsigned unk1f24;unsigned unk1f28;unsigned unk1f2c;unsigned unk1f30;unsigned unk1f34;unsigned unk1f38;unsigned unk1f3c;unsigned unk1f40;unsigned unk1f44;unsigned unk1f48;unsigned unk1f4c;unsigned unk1f50;unsigned unk1f54;unsigned unk1f58;unsigned unk1f5c;unsigned unk1f60;unsigned unk1f64;unsigned unk1f68;unsigned unk1f6c;unsigned unk1f70;unsigned unk1f74;unsigned unk1f78;unsigned unk1f7c;unsigned unk1f80;unsigned unk1f84;unsigned unk1f88;unsigned unk1f8c;unsigned unk1f90;unsigned unk1f94;unsigned unk1f98;unsigned unk1f9c;unsigned unk1fa0;unsigned unk1fa4;unsigned unk1fa8;unsigned unk1fac;unsigned unk1fb0;unsigned unk1fb4;unsigned unk1fb8;unsigned unk1fbc;unsigned unk1fc0;unsigned unk1fc4;unsigned unk1fc8;unsigned unk1fcc;unsigned unk1fd0;unsigned unk1fd4;unsigned unk1fd8;unsigned unk1fdc;unsigned unk1fe0;unsigned unk1fe4;unsigned unk1fe8;unsigned unk1fec;unsigned unk1ff0;NodeQueue nodes;unsigned unk1ff8;unsigned unk1ffc;unsigned unk2000;unsigned unk2004;unsigned unk2008;unsigned unk200c;unsigned unk2010;unsigned unk2014;unsigned unk2018;unsigned unk201c;unsigned unk2020;unsigned unk2024;unsigned unk2028;unsigned unk202c;unsigned unk2030;unsigned unk2034;unsigned unk2038;unsigned unk203c;unsigned unk2040;unsigned unk2044;unsigned unk2048;unsigned unk204c;Node* last;bool thread;char u2055,u2056,u2057;unsigned u2058,u205c;void FUN_005cc3c0() throw();int FUN_005dbc20(unsigned,float,Node**);__declspec(noinline) Node* FUN_005dbef0(unsigned,Input* const&,float);void* FUN_007aa400();void FUN_005dc150(void*,ArrayA*,ArrayB*);FUN_007a9a60* FUN_007ab1d0(unsigned,unsigned,Input*,bool);};
 __declspec(noinline) Node* Owner::FUN_005dbef0(unsigned hash,Input* const& value,float weight){Node* node;switch(FUN_005dbc20(hash,0.0f,&node)){case 0:node->weight=weight;node->input=value;nodes.FUN_007aa190(node);last=node;return node;case 1:return node;default:return 0;}}
 FUN_007a9a60* Owner::FUN_007ab1d0(unsigned a,unsigned b,Input* input,bool start){Input* source=input;if(!source->count)return 0;FUN_005cc3c0();FUN_005dbef0(source->FUN_007a9b80(),input,0.0f);ArrayA first;ArrayB second;Manager* mgr=FUN_00bce1f0();unsigned threadId=GetCurrentThreadId();thread=mgr->IsThread(threadId);void* current=FUN_007aa400();if(current)FUN_005dc150(current,&first,&second);FUN_007a9a60* result=0;if(second.count>0)result=new FUN_007a9a60(a,b,&first,&second,&u205c);if(start)new FUN_007ab140(this,result,&first);FUN_005cc3c0();return result;}
@@ -30084,7 +30084,7 @@ struct FUN_005f14e0 {
     RouteNode7B node;
     void* resultA;void* resultB;int unk70;int unk74;
     FUN_005f14e0();
-    static void* operator new(unsigned int n){return N7B::DAT_01090a78.FUN_0086b930(n);}
+    static void* operator new(size_t n){return N7B::DAT_01090a78.FUN_0086b930(n);}
     static void operator delete(void* p){N7B::DAT_01090a78.FUN_0086ba60(p);}
 };
 struct RouteManager7B {void FUN_0079c690(void*,FUN_005f14e0*);};
@@ -30237,7 +30237,7 @@ extern "C" void* __cdecl FUN_0089eb90(unsigned int size);
 extern "C" void __cdecl FUN_0086ba60_free(void* p);
 
 struct MemObject {
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     static void operator delete(void* p) { FUN_0086ba60_free(p); }
 };
 
@@ -34838,7 +34838,7 @@ struct S007a33a0_Elem14 {
     int unk0C;
     int unk10;
     S007a33a0_Elem14() { unk00 = DAT_0108ec68; unk0C = 0; unk10 = 0; }
-    static void* operator new(unsigned int n) { return DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return DAT_01090a78.FUN_0086b930(n); }
 };
 
 struct S007a33a0_Arr138 {
@@ -35044,7 +35044,7 @@ class FUN_005feff0 : public PrjRefCounted {
 public:
     FUN_005feff0();
     void FUN_005ff330(Reader* r);
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     static void operator delete(void* p) { FUN_0089ec30(p); }
     int unk08;
     int unk0C;
@@ -35553,7 +35553,7 @@ extern unsigned char DAT_00f6fc7c;
 extern float DAT_00e1a600;
 struct ClusterGroup {
  ClusterSphere sphere;int references;
- static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}
+ static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}
  ClusterGroup(){sphere.pos=DAT_0108ec68;sphere.unk0c=0;references=0;}
  __forceinline void Set(const ClusterSphere& s){sphere.pos=s.pos;sphere.unk0c=s.unk0c;}
 };
@@ -37466,7 +37466,7 @@ struct Entry {
  unsigned unk14,unk18,unk1c,unk20,unk24,unk28,unk2c;
  void SetDeadline(float value) { deadline=TimeValue(value); }
  Entry(Projectile*,float,float,float,float) throw();
- static void* operator new(unsigned size) { return DAT_01090a78.FUN_0086b930(size); }
+ static void* operator new(size_t size) { return DAT_01090a78.FUN_0086b930(size); }
 };
 struct Lock { void FUN_0086cc50(); void FUN_0086cde0(); };
 struct Owner {
@@ -37644,7 +37644,7 @@ struct Heap {void* FUN_0086b930(unsigned);};
 extern Heap DAT_01090a78;
 struct Entry {
  void* value;unsigned char first,second,third;unsigned link,other;
- static void* operator new(unsigned size){return DAT_01090a78.FUN_0086b930(size);}
+ static void* operator new(size_t size){return DAT_01090a78.FUN_0086b930(size);}
  Entry(){link=0;other=0;value=0;first=0;second=0;third=0;}
 };
 struct Link {Entry* item;Link* next;};
@@ -38846,7 +38846,7 @@ void* __cdecl FUN_0089e810(unsigned int size);
 template <class T> class DFALL {};
 template <class TAlloc, class K, class V> class NiTMapBase {
 public:
-    static void* operator new(unsigned int size) { return f3m_007a9000::DAT_01090a78.FUN_0086b930(size); }
+    static void* operator new(size_t size) { return f3m_007a9000::DAT_01090a78.FUN_0086b930(size); }
     static void operator delete(void* p) { f3m_007a9000::DAT_01090a78.FUN_0086ba60(p); }
     NiTMapBase(unsigned int hashSize = 37) {
         m_uiHashSize = hashSize;
@@ -42157,8 +42157,8 @@ class PathingAvoidNodeArray : public BSSimpleArray<PathingAvoidNode, 1024>, publ
 public:
  __forceinline PathingAvoidNodeArray() {}
  virtual ~PathingAvoidNodeArray() {}
- static void* operator new(unsigned int size);
- static void operator delete(void*, unsigned int);
+ static void* operator new(size_t size);
+ static void operator delete(void*, size_t);
 };
 namespace z7a4730 {
 struct Entry { Ref* ref; char pad[0x64]; };
@@ -42403,8 +42403,8 @@ class PathingAvoidNodeArray : public BSSimpleArray<PathingAvoidNode, 1024>, publ
 public:
     PathingAvoidNodeArray() {}
     virtual ~PathingAvoidNodeArray();
-    static void* operator new(unsigned int size) throw() { return FUN_0089eb90(size); }
-    static void operator delete(void* memory, unsigned int size) { FUN_0089ec10(memory, size); }
+    static void* operator new(size_t size) throw() { return FUN_0089eb90(size); }
+    static void operator delete(void* memory, size_t size) { FUN_0089ec10(memory, size); }
 };
 
 struct PathingCandidate
@@ -43669,7 +43669,7 @@ struct ElemList : Array, RefObject {
         unsigned int index = Add();
         data[index] = value;
     }
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     static void operator delete(void* p);
 };
 

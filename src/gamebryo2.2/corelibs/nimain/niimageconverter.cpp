@@ -28,7 +28,7 @@ struct Sub80
 };
 struct BSFadeNode
 {
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
 };
 struct NiImageConverter2 : NiRefObject2
 {
@@ -39,7 +39,7 @@ struct NiImageConverter2 : NiRefObject2
     {
         s.FUN_00a8ae50();
     }
-    void* operator new(unsigned int n)
+    void* operator new(size_t n)
     {
         return BSFadeNode::operator new(n);
     }
@@ -347,7 +347,7 @@ struct FUN_00a76c10_shell : public NiImageConverter
 void* _memmove(void* dst, const void* src, unsigned int size);
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 struct PixelFormatOps
 {
@@ -359,7 +359,7 @@ struct NiPalette
     char data[0x24];
     NiPalette(const NiPalette& other);
     void FUN_00a8b190(const NiPalette& other);
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -601,7 +601,7 @@ struct FUN_00a76bb0 : NiRefObject
 {
     char m_data[0x778];
     virtual ~FUN_00a76bb0();
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 // Frees and clears DAT_011f4a78, then calls FUN_00a8ada0 on the subobject at offset 0x80.
 // @fnv 0x00a76bb0

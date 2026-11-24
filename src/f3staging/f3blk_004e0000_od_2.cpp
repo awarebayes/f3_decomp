@@ -14,8 +14,8 @@ extern const float DAT_00dcd894,DAT_00dcd898,DAT_00dcd89c,DAT_00dcd8a0;
 
 extern "C" unsigned long _tls_index;
 struct HeapE { void* FUN_0086b930(unsigned); }; extern HeapE DAT_01090a78;
-inline void* operator new(unsigned,void* p){return p;}
-struct AllocE { static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);} static void operator delete(void*); static void* operator new(unsigned,void* p){return p;} static void operator delete(void*,void*); };
+inline void* operator new(size_t,void* p){return p;}
+struct AllocE { static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);} static void operator delete(void*); static void* operator new(size_t,void* p){return p;} static void operator delete(void*,void*); };
 struct TlsE {
 int unk000;
 int unk004;
@@ -361,7 +361,7 @@ int unkd0;
 int unkd4;
 int unkd8;
 int unkdc;
-static void* operator new(unsigned n){void* raw=DAT_01090a78.FUN_0086b930(n);unsigned char align=16-((unsigned)raw&15);raw=(char*)raw+align;((unsigned char*)raw)[-1]=align;return raw;} static void operator delete(void*);
+static void* operator new(size_t n){void* raw=DAT_01090a78.FUN_0086b930(n);unsigned char align=16-((unsigned)raw&15);raw=(char*)raw+align;((unsigned char*)raw)[-1]=align;return raw;} static void operator delete(void*);
 TargetE* safeGet(){if(this)return get();return 0;}
 FUN_00908b80(FUN_008d3a60&);
 void FUN_004d9280(void*); void FUN_004d9310(void*); void FUN_004d9370(void*); void FUN_008d9060(VecE*); void FUN_008d69e0(int);

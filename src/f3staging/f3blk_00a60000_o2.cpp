@@ -122,7 +122,7 @@ struct Grid {
     Array<Vector4> verts;
     Array<Cell> tris;
 
-    static void* operator new(unsigned int) throw()
+    static void* operator new(size_t) throw()
     {
         MemCtx* ctx = (MemCtx*)DAT_00fdf044(DAT_010f3170);
         void* n = ctx->head;
@@ -2722,7 +2722,7 @@ struct ListenerArray {
 struct ListenerLists {
     ListenerArray first;
     ListenerArray second;
-    static void* operator new(unsigned int) throw()
+    static void* operator new(size_t) throw()
     {
         ThreadMemory* mem = FUN_00d9b080(DAT_010f3170);
         void* p = mem->freeList;
@@ -2871,7 +2871,7 @@ struct F00a63780Base0 { void* vtable; unsigned short memSizeAndFlags; unsigned s
 struct F00a63780Base8 { int unk[10]; };
 struct FUN_00a63380 : F00a63780Base0, F00a63780Base8 {
     FUN_00a63380(void* arg) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         F00a63780Heap* heap = (F00a63780Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x35);
@@ -5064,7 +5064,7 @@ struct Node {
     Node* next;
     Node* prev;
     void FUN_00908a00();
-    static void* operator new(unsigned int) throw()
+    static void* operator new(size_t) throw()
     {
         MemCtx* ctx = (MemCtx*)TlsGetValue(DAT_010f3170);
         void* n = ctx->head;

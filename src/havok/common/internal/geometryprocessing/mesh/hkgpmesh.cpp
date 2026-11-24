@@ -200,7 +200,7 @@ struct Options {unsigned int unk00,unk04; unsigned char flag08,flag09,flag0a,fla
 struct FUN_00d76ca0 {__declspec(nothrow) virtual ~FUN_00d76ca0(); unsigned short memorySize,referenceCount; int unk08,unk0c,unk10;
  __declspec(nothrow) FUN_00d76ca0();
  static void* allocate(Allocator& heap,unsigned int bytes) { void* memory=heap.allocate(bytes); ((FUN_00d76ca0*)memory)->memorySize=(unsigned short)bytes; return memory;}
- static void* operator new(unsigned int bytes) {return allocate(FUN_00c85750().getHeap(),bytes);}
+ static void* operator new(size_t bytes) {return allocate(FUN_00c85750().getHeap(),bytes);}
  __declspec(nothrow) void FUN_00d771c0(FourFloatVector*,int,const Options&);
  __declspec(nothrow) int FUN_00d74e10();
 };
@@ -3168,7 +3168,7 @@ struct E24850Node {
     E24850Node* m_next;
     E24850Node* m_pSecondNode;
 
-    static void* operator new(unsigned int, void* p) { return p; }
+    static void* operator new(size_t, void* p) { return p; }
     E24850Node(void* data);
 };
 
@@ -5589,7 +5589,7 @@ struct HullFloodTriangle {
     int unk2c;
     int m_vis;
 };
-inline void* operator new(unsigned int, void* storage) { return storage; }
+inline void* operator new(size_t, void* storage) { return storage; }
 struct HullFloodEdge {
     HullFloodTriangle* m_node;
     int m_k;
@@ -7856,7 +7856,7 @@ struct FUN_00e21e30 {
 // Empty virtual destructor of the FUN_00e21e30 class.
 // @fnv 0x00e21e30
     virtual ~FUN_00e21e30() {}
-    void operator delete(void* p, unsigned int nbytes) {
+    void operator delete(void* p, size_t nbytes) {
         S_00e21e30_Router::FUN_00c85750().heap().ReleaseBlock(p, static_cast<int>(nbytes));
     }
 };
@@ -7925,7 +7925,7 @@ struct FUN_00e22db0 {
 // Empty virtual destructor for the FUN_00e22db0 class.
 // @fnv 0x00e22db0
     virtual ~FUN_00e22db0() {}
-    static void operator delete(void* p, unsigned int size)
+    static void operator delete(void* p, size_t size)
     {
         S_00e22db0_Service* sv = fnvc_adapt::FUN_00c85750();
         sv->unk10->release(p, 0x60);
@@ -9280,7 +9280,7 @@ struct S_00e248b0_Arr {
     int m_iElementCount;
     int m_cap;
     S_00e248b0_Arr() : m_data(0), m_iElementCount(0), m_cap(0x80000000) {}
-    static void* operator new(unsigned int size) { return S_00e248b0_heap(FUN_00c85750())->AllocateMemoryBlock(size); }
+    static void* operator new(size_t size) { return S_00e248b0_heap(FUN_00c85750())->AllocateMemoryBlock(size); }
 };
 
 static __forceinline S_00e248b0_Arr* BoundaryCore(S_00e248b0_Edge& cur, S_00e248b0_Edge start) { S_00e248b0_Arr* arr=0;
@@ -10061,7 +10061,7 @@ struct E17Array
     void FUN_00e22640(E17Mem* heap, const T* data, int n);
     void append(const T* data, int n) { FUN_00e22640(&e17Heap(), data, n); }
 
-    static void* operator new(unsigned int size) { return e17Heap().allocate(size); }
+    static void* operator new(size_t size) { return e17Heap().allocate(size); }
     static void operator delete(void* p) { e17Heap().deallocate(p, sizeof(E17Array)); }
 };
 
@@ -10337,7 +10337,7 @@ struct PartsMap {
     int FUN_00cb1870(Allocator*,unsigned long,unsigned long);
     void ProcessArgument(Allocator*);
     void FUN_00a29680();
-    static void* operator new(unsigned n,Allocator* heap){return heap->allocate(n);}
+    static void* operator new(size_t n,Allocator* heap){return heap->allocate(n);}
     __forceinline void reserve(int n){EnsureCapacity(&FUN_00c85750().getHeap(),n);}
     __forceinline unsigned long lookup(unsigned long k)const{return LookupHashEntry(k,0);}
     __forceinline void insert(unsigned long k,unsigned long v){FUN_00cb1870(&FUN_00c85750().getHeap(),k,v);}
@@ -12266,7 +12266,7 @@ void FUN_00e12890_cls::FUN_00e12890(FUN_00e12890_List* apList, int flag) {
 }  // namespace fnv_00e12890
 
 namespace fnv_00e15830 {
-inline void* __cdecl operator new(unsigned int, void* where) throw() { return where; }
+inline void* __cdecl operator new(size_t, void* where) throw() { return where; }
 
 struct S_00e15830_Heap {
     virtual void v00() throw();
@@ -13067,7 +13067,7 @@ edgesOut.AddBack(*b);
 }
 
 namespace fnv_00e1a7a0 {
-inline void* __cdecl operator new(unsigned int, void* where) throw() { return where; }
+inline void* __cdecl operator new(size_t, void* where) throw() { return where; }
 
 struct S_00e1a7a0_Heap {
     virtual void v00() throw();
@@ -15266,7 +15266,7 @@ void* FUN_00e235d0_cls::FUN_00e235d0()
 }  // namespace fnv_00e235d0
 
 namespace fnv_00e237b0 {
-inline void* __cdecl operator new(unsigned int, void* where) { return where; }
+inline void* __cdecl operator new(size_t, void* where) { return where; }
 struct FUN_00e237b0_Input {
     void* unk00; void* unk04; void* unk08; void* unk0c;
     void* unk10; void* unk14; void* unk18; void* unk1c; void* entry;
@@ -17529,7 +17529,7 @@ struct Pair {
     int a; int b;
     Pair() {}
     Pair(int aa,int bb) : a(aa),b(bb) {}
-    static void *operator new(unsigned int,void *p) throw() {return p;}
+    static void *operator new(size_t,void *p) throw() {return p;}
 };
 struct EdgeSelection { Pair first,second; };
 struct PairArrRaw {

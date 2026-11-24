@@ -8,7 +8,7 @@
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     void FUN_00c1b5c0(void);
 };
 
@@ -36,7 +36,7 @@ struct NiPSysPositionModifier
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 extern "C" void* DAT_010bea54;
@@ -59,7 +59,7 @@ NiPSysPositionModifier* FUN_00c28b20()
 namespace fnv_00c29d00 {
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 void* __fastcall FUN_00c32b60(void* self);
@@ -82,7 +82,7 @@ void* __cdecl FUN_00c29d00()
 namespace fnv_00c2a050 {
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct FUN_00c32d80
@@ -111,7 +111,7 @@ namespace fnv_00c2a870 {
 struct BSFadeNode
 {
     void* __thiscall FUN_00c32d80();
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 extern int DAT_010bf1ac;
@@ -141,7 +141,7 @@ struct FUN_00c32d80
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     void* m_vf;
 };
 
@@ -166,7 +166,7 @@ extern int DAT_010bf554;
 struct BSFadeNode
 {
     void* vtbl;
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 
 struct FUN_00c32d80
@@ -198,7 +198,7 @@ struct FUN_00c32d80
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 extern "C" void* DAT_010bf954;
@@ -222,7 +222,7 @@ void* __cdecl FUN_00c2b620()
 namespace fnv_00c2b720 {
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     void* m_vftable;
 };
 
@@ -254,7 +254,7 @@ struct FUN_00c32d80
 };
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 extern const void* DAT_010bfb54;
 
@@ -275,7 +275,7 @@ FUN_00c32d80* __cdecl FUN_00c2b870()
 namespace fnv_00c30600 {
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     void* m_vftable;
 };
 
@@ -486,7 +486,7 @@ NiPSysPositionModifier* FUN_00c2e4c0()
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct FUN_00c31ff0_ctor_helper
@@ -649,7 +649,7 @@ struct Host
 {
     void FUN_00c312a0();
     Host* DestroyIfRequested(bool bFree);
-    static void __cdecl operator delete(void*, unsigned int);
+    static void __cdecl operator delete(void*, size_t);
 };
 // Calls FUN_00c312a0, then deletes this (size 0x40) when bFree is set, and returns this.
 // @fnv 0x00c2a090
@@ -822,7 +822,7 @@ class C29E50Base
     C29E50Base() throw();
     virtual ~C29E50Base();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     int unk04;
@@ -881,7 +881,7 @@ ParticleFactoryObject* CreateParticleFactoryObject()
 
 extern int DAT_010befbc;
 
-void* operator new(unsigned int, void* memory)
+void* operator new(size_t, void* memory)
 {
     return memory;
 }
@@ -958,7 +958,7 @@ class NiPSysModifierC2D
     NiPSysModifierC2D() throw();
     virtual ~NiPSysModifierC2D();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     int unk04;
@@ -1066,7 +1066,7 @@ FUN_00c31440_cls* FUN_00c31440_cls::AssignString(char** src)
 extern int DAT_010bf754;
 struct PSysFactoryObject : FUN_00c32d80
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     PSysFactoryObject() throw()
     {
         m_vtbl = &DAT_010bf754;
@@ -1104,7 +1104,7 @@ FUN_00c2b970_Class* FUN_00c2b970_Class::FUN_00c2b970()
 extern int DAT_010bf854;
 struct PSysFactoryObjectB52 : FUN_00c32d80
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     PSysFactoryObjectB52() throw()
     {
         m_vtbl = &DAT_010bf854;

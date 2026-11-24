@@ -2242,7 +2242,7 @@ int FUN_009a3910_cls::FUN_009a3910()
     return (this->m_0c > 0x400) ? (int)(this->m_0c + 0x400) : (int)(this->m_0c << 1);
 }
 
-void* __cdecl operator new(unsigned int count, void* place);
+void* __cdecl operator new(size_t count, void* place);
 void __cdecl operator delete(void* ptr, void* place);
 struct FUN_009a3d90
 {
@@ -4690,7 +4690,7 @@ bool __thiscall FUN_009bec50_Class::FUN_009bec50(float value)
     return false;
 }
 
-void* __cdecl operator new(unsigned int uiSize, void* pvMem);
+void* __cdecl operator new(size_t uiSize, void* pvMem);
 void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct E9A3A80Entry
@@ -5308,7 +5308,7 @@ class PathingAvoidNodeArray
     unsigned int capacity;
     void* allocatorVtable;
     unsigned int allocatorState;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     PathingAvoidNodeArray();
     unsigned int AppendNode(const AvoidanceEntry&);
 };
@@ -5887,7 +5887,7 @@ TargetQueue* __stdcall FUN_004537b0(TargetRef*);
 bool __cdecl FUN_008c7aa0();
 extern TargetRef* DAT_011dea3c;
 void __cdecl FUN_005e58f0(int, TargetRef*, ...);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Creates a new projectile reference from a form, source and parent, scales it, attaches extra data, links it to the parent and updates or queues it.
 // @fnv 0x009ac9c0

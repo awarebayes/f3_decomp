@@ -1079,7 +1079,7 @@ FUN_00c9d190::FUN_00c9d190(int flag)
     m_vtbl = &DAT_010c6d54;
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -2392,7 +2392,7 @@ template <class T> class hkSmallArrayC9C6
 
 struct ListenersC9C6
 {
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         return fnvc_adapt::FUN_00c85750().heap().AllocateMemoryBlock(nbytes);
     }
@@ -3931,7 +3931,7 @@ class FUN_00c9d340
 {
   public:
     ~FUN_00c9d340() throw();
-    static void operator delete(void* p, unsigned int uiNumBytes)
+    static void operator delete(void* p, size_t uiNumBytes)
     {
         FUN_00c85750()->heap().ReleaseBlock(p, uiNumBytes);
     }

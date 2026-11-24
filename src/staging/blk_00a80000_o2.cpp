@@ -51,7 +51,7 @@ int __cdecl FUN_00a81b80(const unsigned short* ausLeft, const unsigned short* au
 struct FUN_00a744a0 { void Init(); };
 struct BSFadeNode {
     void* vtbl;
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 extern const void* DAT_0109e984;
 // Allocates a 0xc4-byte BSFadeNode, runs Init on it, sets its vtbl to DAT_0109e984 and returns it, or returns 0 on allocation failure.
@@ -249,7 +249,7 @@ void FUN_00a964a0_Class::FUN_00a964a0(void* apValue) {
 
 namespace fnv_00a982d0 {
 struct BSFadeNode {
-    void* operator new(unsigned int);
+    void* operator new(size_t);
     void* __thiscall FUN_00a981d0();
 };
 
@@ -837,7 +837,7 @@ struct FUN_00a5a390_shell {
     void DestroyFogProperty();
     FUN_00a5a390_shell* FUN_00a950f0(bool bDel);
 };
-void __cdecl operator delete(void* p, unsigned int);
+void __cdecl operator delete(void* p, size_t);
 // Calls DestroyFogProperty, then deletes this with size 0x1c if bDel is set, and returns this.
 // @fnv 0x00a950f0
 FUN_00a5a390_shell* FUN_00a5a390_shell::FUN_00a950f0(bool bDel)
@@ -1698,7 +1698,7 @@ struct S_00a8f2c0_Obj {
     int unk08;
     int unk0c;
     S_00a8f2c0_Sub sub;
-    static void* operator new(unsigned int n) { return BSFadeNode::operator new(n); }
+    static void* operator new(size_t n) { return BSFadeNode::operator new(n); }
     S_00a8f2c0_Obj() throw() {
         FUN_00a5d3a0();
         vft = (void*)&DAT_0109f4dc;
@@ -1750,7 +1750,7 @@ struct S_a91120_Blk {
     unsigned char* unk00;
     unsigned int unk04;
     S_a91120_Blk* unk08;
-    static void* operator new(unsigned int size) { return DAT_011f6238.FUN_00aa3e40(size); }
+    static void* operator new(size_t size) { return DAT_011f6238.FUN_00aa3e40(size); }
     S_a91120_Blk(unsigned int n) throw() {
         unk04 = n;
         unk08 = 0;
@@ -2347,7 +2347,7 @@ void __cdecl FUN_00a81a80()
 
 class BA87920Base {
 public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     BA87920Base() throw();
     virtual ~BA87920Base();
@@ -2723,7 +2723,7 @@ class RendererDataA9F : public NiRefObjectA9F {
 
 class Ni2DBufferA9F : public NiRefObjectA9F {
 public:
-    static void* operator new(unsigned int uiSize) throw();
+    static void* operator new(size_t uiSize) throw();
 
     Ni2DBufferA9F() throw();
     virtual ~Ni2DBufferA9F() throw();
@@ -3015,7 +3015,7 @@ struct FUN_00a5e3a0_Helper { void* FUN_00aa3e40(unsigned int); };
 struct PixelRow4 {
     unsigned char rgba[4];
     PixelRow4() {}
-    static void* operator new[](unsigned int size) {
+    static void* operator new[](size_t size) {
         return ((FUN_00a5e3a0_Helper*)&DAT_011f6238)->FUN_00aa3e40(size);
     }
 };

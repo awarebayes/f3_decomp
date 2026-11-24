@@ -941,7 +941,7 @@ class FUN_00e46e80
     FUN_00e46e80() throw();
     void FUN_00e45460(void* world) throw();
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return hkRouterE46F::FUN_00c85750().heap().AllocateMemoryBlock(n);
     }

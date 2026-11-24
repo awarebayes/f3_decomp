@@ -4312,7 +4312,7 @@ public:
     int unk00;
     unsigned short unk04;
     Obj_996fd0(int a, int b, int c) throw();
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         Pool_996fd0* pool = (Pool_996fd0*)DAT_00d9b080(DAT_010f3170);
         Hdr_996fd0* p = (Hdr_996fd0*)pool->FUN_008f6d30(0xe0, 0x21);
         p->unk04 = 0xe0;
@@ -4535,7 +4535,7 @@ public:
 };
 }
 struct FUN_0099ef50 : n99ef50::Base {
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     static void operator delete(void* p) {
         FUN_0099ef50* o = static_cast<FUN_0099ef50*>(p);
         n99ef50::Heap* h = n99ef50::FUN_00d9b080(DAT_010f3170);
@@ -7021,7 +7021,7 @@ struct hkpPhysicsSystem {
     unsigned int userData;
     bool active;
 
-    static void* operator new(unsigned int n) {
+    static void* operator new(size_t n) {
         Heap* h = (Heap*)TlsGetValue(DAT_010f3170);
         void* p = h->FUN_008f6d30(n, 0x2f);
         ((hkpPhysicsSystem*)p)->memSize = (unsigned short)n;
@@ -10784,7 +10784,7 @@ struct Body {
     __forceinline void setShape(void* s,unsigned k) { shape=s; key=k; }
     __forceinline Body() {}
     __forceinline Body(const Body* p,const Transform* t) { parent=p; motion=t; }
-    void* operator new(unsigned,void* p) throw() { return p; }
+    void* operator new(size_t,void* p) throw() { return p; }
 };
 struct Quality { int u0,u4,u8,uc,continuous; };
 struct Input {
@@ -13553,7 +13553,7 @@ unk14=b.unk14;
 unk18=b.unk18;
 unk1c=b.unk1c;
  }
- static void* operator new(unsigned int);
+ static void* operator new(size_t);
  static void operator delete(void*);
 };
 static inline void memCpy4(void* dst, const void* src, int numWords)
@@ -13656,7 +13656,7 @@ struct Pool9830 {
  }
 };
 inline Pool9830* GetPool9830() { return (Pool9830*)FUN_00d9b080(DAT_010f3170); }
-__forceinline void* Blob9830::operator new(unsigned int) { return GetPool9830()->AllocBlob(); }
+__forceinline void* Blob9830::operator new(size_t) { return GetPool9830()->AllocBlob(); }
 struct Queue9830 {
  Array9830 main; Counter9830* counter;
  Array9830 secondary; int unk1c;

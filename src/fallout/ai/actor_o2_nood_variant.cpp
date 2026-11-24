@@ -639,7 +639,7 @@ struct CachedScene : RefBase {
     }
     virtual void Reserved();
     virtual void Destroy();
-    __forceinline static void* operator new(unsigned int n) { return FUN_00aa13e0(n); }
+    __forceinline static void* operator new(size_t n) { return FUN_00aa13e0(n); }
     static void operator delete(void*);
 };
 struct SceneRef {
@@ -752,7 +752,7 @@ struct FUN_00ce4a20 {
     int reserved60, reserved64, reserved68, reserved6c;
     int reserved70, reserved74, reserved78, reserved7c;
     FUN_00ce4a20(PoseBuffer* p);
-    __forceinline static void* operator new(unsigned int n) { FUN_00ce4a20* p = (FUN_00ce4a20*)GetRouter()->AllocatorInstance().Allocate(n); p->allocationSize = (unsigned short)n; return p; }
+    __forceinline static void* operator new(size_t n) { FUN_00ce4a20* p = (FUN_00ce4a20*)GetRouter()->AllocatorInstance().Allocate(n); p->allocationSize = (unsigned short)n; return p; }
     static void operator delete(void*);
 };
 typedef FUN_00ce4a20 PoseSource;
@@ -811,7 +811,7 @@ struct FUN_00cdb400 {
     int reserved20, VirtualFunction24, VirtualFunction28, reserved2c, reserved30, reserved34, reserved38, reserved3c;
     int reserved40, reserved44;
     FUN_00cdb400(void* p);
-    __forceinline static void* operator new(unsigned int n) { return GetRouter()->AllocatorInstance().Allocate(n); }
+    __forceinline static void* operator new(size_t n) { return GetRouter()->AllocatorInstance().Allocate(n); }
     static void operator delete(void*);
 };
 typedef FUN_00cdb400 SkinState;
@@ -1257,7 +1257,7 @@ struct ShareDataStorage : ShareDataBaseStorage {
         vtable = DAT_00e32a2c;
         skeleton = 0; animation = 0; ragdollToAnimation = 0; animationToRagdoll = 0; flags = 0;
     }
-    static void* operator new(unsigned int n) { return FUN_00aa13e0(n); }
+    static void* operator new(size_t n) { return FUN_00aa13e0(n); }
     static void operator delete(void*);
 };
 struct ShareDataMap {
@@ -1280,7 +1280,7 @@ struct FUN_0095b330 {
     int reserved20, reserved24, reserved28, reserved2c, reserved30, reserved34, reserved38, reserved3c;
     int reserved40, reserved44;
     FUN_0095b330(void*);
-    __forceinline static void* operator new(unsigned int) { return RagdollSetup::ThreadMemory::GetInstance()->AllocateBlock(); }
+    __forceinline static void* operator new(size_t) { return RagdollSetup::ThreadMemory::GetInstance()->AllocateBlock(); }
     static void operator delete(void*);
 };
 struct FUN_00963a00 {
@@ -1288,7 +1288,7 @@ struct FUN_00963a00 {
     int reserved8, reservedc, reserved10, reserved14, reserved18, reserved1c;
     int reserved20, reserved24, reserved28, reserved2c, reserved30, reserved34;
     FUN_00963a00(RagdollSetup::MapperData*);
-    __forceinline static void* operator new(unsigned int size) {
+    __forceinline static void* operator new(size_t size) {
         FUN_00963a00* p = (FUN_00963a00*)RagdollSetup::ThreadMemory::GetInstance()->FUN_008f6d30(size, 0x3b);
         p->allocationSize = (unsigned short)size;
         return p;
@@ -2008,7 +2008,7 @@ void Controller::FUN_00c7b6a0(bool enable) {
     active=enable;
 }
 
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 inline void operator delete(void*,void*) {}
 extern "C" __m128 _mm_setr_ps(float, float, float, float);
 struct Heap { virtual void Unused(); virtual void* Allocate(unsigned); };
@@ -2074,7 +2074,7 @@ struct LocalFrameRecord { void* frame; int bone; };
 struct SourceBuffer : SourceBase {
     SmallMember member;
     DynamicArray<short> points; DynamicArray<Entry> indices; DynamicArray<Transform> vertices; DynamicArray<SmallMember> transforms; DynamicArray<LocalFrameRecord> extra;
-    static __forceinline void* operator new(unsigned n) { SourceBuffer* p=(SourceBuffer*)AllocateBuffer(n); p->size=(unsigned short)n; return p; }
+    static __forceinline void* operator new(size_t n) { SourceBuffer* p=(SourceBuffer*)AllocateBuffer(n); p->size=(unsigned short)n; return p; }
     static void operator delete(void*);
     __forceinline SourceBuffer() {}
 };
@@ -2088,7 +2088,7 @@ struct CloneBuffer {
     DynamicArray<Transform> positions,normals; DynamicArray<int> triangles;
     PoseSync91 enabled,modified; unsigned short flags;
     DynamicArray<float> remap;
-    static __forceinline void* operator new(unsigned n) { return AllocateBuffer(n); }
+    static __forceinline void* operator new(size_t n) { return AllocateBuffer(n); }
     static void operator delete(void*);
     __forceinline CloneBuffer(SourceBuffer* p):original(p),enabled(0),modified(0) {
         int count=original->indices.count;
@@ -2105,7 +2105,7 @@ struct __declspec(align(16)) Vec4 { __m128 value; __forceinline Vec4& operator=(
 struct Root {
     SourceBuffer* src; __forceinline void SetSource(SourceBuffer* p) { src=p; } int unk04,unk08,unk0c;
     Vec4 a,b;
-    static __forceinline void* operator new(unsigned n) { return FUN_00c74ea0(n); }
+    static __forceinline void* operator new(size_t n) { return FUN_00c74ea0(n); }
     __forceinline Root():src(0) {}
 };
 struct Owner { int unk00,unk04,unk08,unk0c,unk10,unk14,unk18; Root* root; __forceinline void SetRoot(Root* p) { root=p; } };
@@ -4362,7 +4362,7 @@ struct hkaBone {
     hkStringPtr m_name;
     hkBool m_bLockTranslation;
     hkaBone() { m_bLockTranslation = false; }
-    void* operator new(unsigned int, void* p) { return p; }
+    void* operator new(size_t, void* p) { return p; }
     void operator delete(void*, void*) {}
 };
 
@@ -4371,13 +4371,13 @@ struct hkReferencedObject {
     short m_sReferenceCount;
     __forceinline hkReferencedObject() { m_sReferenceCount = 1; }
     virtual ~hkReferencedObject() {}
-    void* operator new(unsigned int n)
+    void* operator new(size_t n)
     {
         hkReferencedObject* b = static_cast<hkReferencedObject*>(HeapAllocator()->AllocateMemoryBlock(n));
         b->m_usMemSizeAndFlags = static_cast<short>(n);
         return b;
     }
-    void operator delete(void* p, unsigned int n) { HeapAllocator()->ReleaseBlock(p, n); }
+    void operator delete(void* p, size_t n) { HeapAllocator()->ReleaseBlock(p, n); }
 };
 
 struct hkaSkeleton : hkReferencedObject {
@@ -4400,8 +4400,8 @@ struct SkeletonPoseData {
     hkBool m_bPoseInitialized;
     HkArray<float> m_kPoseData;
 
-    void* operator new(unsigned int n) { return HeapAllocator()->AllocateMemoryBlock(n); }
-    void operator delete(void* p, unsigned int n) { HeapAllocator()->ReleaseBlock(p, n); }
+    void* operator new(size_t n) { return HeapAllocator()->AllocateMemoryBlock(n); }
+    void operator delete(void* p, size_t n) { HeapAllocator()->ReleaseBlock(p, n); }
 
     __forceinline SkeletonPoseData(const hkaSkeleton* skeleton) : m_pSkeleton(skeleton), m_bPoseFlag(false), m_bPoseInitialized(false)
     {

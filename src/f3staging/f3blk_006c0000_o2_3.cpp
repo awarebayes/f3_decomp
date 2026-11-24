@@ -41,7 +41,7 @@ extern int DAT_f460fc;
 
 class FUN_007bc0b0 {
 public:
-    static void* operator new(unsigned int auiSize);
+    static void* operator new(size_t auiSize);
     FUN_007bc0b0();
     virtual void vf00();
     virtual void vf01();
@@ -182,7 +182,7 @@ public:
     int unkF8;
 };
 
-inline void* FUN_007bc0b0::operator new(unsigned int auiSize)
+inline void* FUN_007bc0b0::operator new(size_t auiSize)
 {
     return g_allocator006d32f0.FUN_0086b930(auiSize);
 }

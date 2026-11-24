@@ -21,7 +21,7 @@ struct MemoryManager
     void Deallocate(void*);
 };
 extern MemoryManager _g_memoryManager;
-void operator delete(void*, unsigned int);
+void operator delete(void*, size_t);
 struct NiPoint3;
 struct NiPoint2;
 struct RgbaColor;

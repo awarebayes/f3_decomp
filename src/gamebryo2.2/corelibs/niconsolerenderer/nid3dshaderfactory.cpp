@@ -539,7 +539,7 @@ bool __stdcall IsDefaultShader(class NiShader* pkShader)
     return false;
 }
 
-void __cdecl operator delete(void* p, unsigned int);
+void __cdecl operator delete(void* p, size_t);
 
 void __cdecl FUN_00e92dc0();
 

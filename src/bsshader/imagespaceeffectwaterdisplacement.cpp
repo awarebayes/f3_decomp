@@ -23,8 +23,8 @@ struct NiPoint4
 
 struct NiMemObject
 {
-    void* operator new(unsigned int size);
-    void operator delete(void* p, unsigned int size);
+    void* operator new(size_t size);
+    void operator delete(void* p, size_t size);
 };
 
 struct RenderTargetGroup
@@ -932,7 +932,7 @@ extern MemoryManager DAT_011f6238;
 class MemObj
 {
   public:
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return DAT_011f6238.Allocate(size);
     }

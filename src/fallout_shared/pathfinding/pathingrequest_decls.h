@@ -55,8 +55,8 @@ class PathingAvoidNodeArray
     void FUN_006e3960();
     void FUN_006e39d0();
 
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     void SetSize(unsigned int, bool);
     PathingAvoidanceNode* FUN_006a1400(unsigned int);
 };

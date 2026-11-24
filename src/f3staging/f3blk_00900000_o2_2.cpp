@@ -136,7 +136,7 @@ struct Motion {
     UFloat8 maxLinear;
     UFloat8 maxAngular;
     void FUN_008f8400(int c);
-    static void* operator new(unsigned int, void* p) { return p; }
+    static void* operator new(size_t, void* p) { return p; }
 };
 struct FixedMotion : Motion {
     FixedMotion(const Vec4& pos, const Vec4& rot);

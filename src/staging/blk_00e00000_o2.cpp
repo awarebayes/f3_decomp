@@ -1563,7 +1563,7 @@ class E00390Object
   public:
     E00390Object(E00390FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -2305,7 +2305,7 @@ void* __cdecl FUN_00e00b50()
     return &g_unk0126df40;
 }
 
-inline void* operator new(unsigned int, void* pvWhere) throw()
+inline void* operator new(size_t, void* pvWhere) throw()
 {
     return pvWhere;
 }
@@ -7834,7 +7834,7 @@ int __stdcall FUN_00e16e20(int a, int b, float afThreshold)
 }
 
 struct ExportPlacement;
-inline void* operator new(unsigned int, ExportPlacement* address)
+inline void* operator new(size_t, ExportPlacement* address)
 {
     return address;
 }

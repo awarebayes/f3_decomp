@@ -564,7 +564,7 @@ class FUN_00cf6da0
   public:
     FUN_00cf6da0(int iCapacity) throw();
 
-    static void* operator new(unsigned int uiSize) throw()
+    static void* operator new(size_t uiSize) throw()
     {
         return FUN_00c85750().heap().AllocateMemoryBlock(uiSize);
     }
@@ -933,7 +933,7 @@ struct __declspec(novtable) RefObject
     unsigned short m_refs;
     RefObject() : m_refs(1)
     {}
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         RefObject* p = (RefObject*)FUN_00c85750().heap().Alloc(size);
         p->m_iElementCount = (unsigned short)size;

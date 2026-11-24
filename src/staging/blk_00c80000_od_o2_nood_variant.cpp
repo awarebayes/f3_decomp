@@ -1804,7 +1804,7 @@ struct FUN_00c88380
     void* object;
     int unk0c;
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FUN_00aa13e0(n);
     }
@@ -2096,7 +2096,7 @@ struct FUN_008fa290
     int references;
     void* object;
     int unk0c;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FUN_0089eb90(n);
     }
@@ -2458,11 +2458,11 @@ struct PhysicsMotion
 {
     void ApplyImpulse(float duration, const hkVector4& velocity);
 };
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
-inline void* operator new[](unsigned int, void* p)
+inline void* operator new[](size_t, void* p)
 {
     return p;
 }

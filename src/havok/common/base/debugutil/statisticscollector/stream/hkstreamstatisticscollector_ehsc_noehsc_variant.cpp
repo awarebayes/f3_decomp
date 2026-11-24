@@ -247,7 +247,7 @@ class ObjDDF9
         ClearItems();
     }
     void ClearItems() throw();
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         hkRouterDDF9::FUN_00c85750().heap().ReleaseBlock(p, nbytes);
     }
@@ -348,7 +348,7 @@ struct FUN_00ddeff0
     int unk4;
     FUN_00ddeff0();
     virtual ~FUN_00ddeff0();
-    void operator delete(void* p, unsigned int nbytes)
+    void operator delete(void* p, size_t nbytes)
     {
         if (p)
             S_00ddeff0_Router::FUN_00c85750()->heap().ReleaseBlock(p, nbytes);
@@ -476,7 +476,7 @@ struct FUN_00a8d060 {
     const char* name;
     int unk50, unk54;
     FUN_00a8d060(FUN_00a8d060* parent, const char* label, int type);
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 typedef FUN_00a8d060 Node;
 struct NodeOps { void FUN_00a8d0f0(); };
@@ -520,7 +520,7 @@ static __forceinline void* NodeAlloc()
     }
     return mem->FUN_008f6800(6, 0x1b);
 }
-inline void* FUN_00a8d060::operator new(unsigned int)
+inline void* FUN_00a8d060::operator new(size_t)
 {
     return NodeAlloc();
 }

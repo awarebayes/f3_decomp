@@ -409,7 +409,7 @@ extern "C" D67880MemoryRouter& __cdecl FUN_00c85750();
 
 class D67880ReferencedObject {
 public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         D67880ReferencedObject* b = static_cast<D67880ReferencedObject*>(FUN_00c85750().heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -765,7 +765,7 @@ struct FUN_00d67930 {
     short m_sReferenceCount;
 
     FUN_00d67930();
-    static void operator delete(void* p, unsigned int)
+    static void operator delete(void* p, size_t)
     {
         FUN_00d67930* b = static_cast<FUN_00d67930*>(p);
         FUN_00c85750().heap().ReleaseBlock(p, b->m_usMemSizeAndFlags);

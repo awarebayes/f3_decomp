@@ -853,7 +853,7 @@ struct NiStreamL_a41940
 struct NiPoint3_a41940
 {
     float x, y, z;
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }

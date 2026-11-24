@@ -120,7 +120,7 @@ struct S_A
     }
     void FUN_00b6f0b0();
     void FUN_00b6e450(unsigned int v);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.Alloc(n);
     }
@@ -334,7 +334,7 @@ struct S_B
         DAT_011f6238.Free(this);
     }
     void FUN_00b97690();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.Alloc(n);
     }
@@ -579,7 +579,7 @@ public:
         FUN_00b1db20();
         DAT_01090a78.FUN_0086ba60(this);
     }
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_01090a78.FUN_0086b930(n);
     }
@@ -634,7 +634,7 @@ public:
         FUN_00af1dd0();
         DAT_01090a78.FUN_0086ba60(this);
     }
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_01090a78.FUN_0086b930(n);
     }
@@ -1050,7 +1050,7 @@ struct MemoryManager
     void* Allocate(unsigned int);
 };
 
-inline void* operator new[](unsigned int n)
+inline void* operator new[](size_t n)
 {
     MemoryManager* manager = ((MemoryManager*)&DAT_011f6238);
     void* result = manager->Allocate(n);
@@ -1062,7 +1062,7 @@ struct NiPoint3
     NiPoint3()
     {}
     float x, y, z;
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return ((MemoryManager*)&DAT_011f6238)->Allocate(n);
     }
@@ -1073,7 +1073,7 @@ struct NiPoint2
     NiPoint2()
     {}
     float x, y;
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return ((MemoryManager*)&DAT_011f6238)->Allocate(n);
     }
@@ -1085,7 +1085,7 @@ struct RgbaColor
     RgbaColor(float red = 0.0f, float green = 0.0f, float blue = 0.0f, float alpha = 0.0f)
         : r(red), g(green), b(blue), a(alpha)
     {}
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return ((MemoryManager*)&DAT_011f6238)->Allocate(n);
     }
@@ -1321,7 +1321,7 @@ struct NiProperty : NiObject
 
     NiProperty();
 
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 struct ShaderProperty : NiProperty
@@ -1501,7 +1501,7 @@ struct Resource : NiRefObject
 
     virtual void v00();
 
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 struct CacheEntry
@@ -2361,7 +2361,7 @@ struct UnsignedShortBuffer : NiRefObject
                         NiGeometryData__DataFlags, unsigned short, unsigned short, unsigned short*, unsigned short*,
                         unsigned short, unsigned short);
 
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 struct ShapeData
@@ -2376,10 +2376,10 @@ struct ShapeData
         : data(v, p, n, c, t, u, f, tri, ix, count, z)
     {}
 
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
-inline void* operator new(unsigned int n)
+inline void* operator new(size_t n)
 {
     return Resource::operator new(n);
 }
@@ -2430,34 +2430,34 @@ struct LodResource : LodResourceHeader {
     bool node;
     unsigned char unk31;
     unsigned short step;
-    static void* operator new(unsigned int n) { return Resource::operator new(n); }
+    static void* operator new(size_t n) { return Resource::operator new(n); }
 };
 extern const char DAT_00e8fef4[] = "DISTANT LOD ERROR : could not load DistantLOD nif %s";
 extern MemoryManager DAT_01090a78;
 struct CopyPoint3 {
     CopyPoint3() {}
     float x,y,z;
-    static void* operator new[](unsigned int n) { return DAT_01090a78.Allocate(n); }
+    static void* operator new[](size_t n) { return DAT_01090a78.Allocate(n); }
 };
 struct CopyPoint2 {
     CopyPoint2() {}
     float x,y;
-    static void* operator new[](unsigned int n) { return DAT_01090a78.Allocate(n); }
+    static void* operator new[](size_t n) { return DAT_01090a78.Allocate(n); }
 };
 struct FUN_0046c350 {
     float r,g,b,a;
     FUN_0046c350();
-    static void* operator new[](unsigned int n) { return DAT_01090a78.Allocate(n); }
+    static void* operator new[](size_t n) { return DAT_01090a78.Allocate(n); }
 };
 struct InstanceNumber {
     float value;
-    static void* operator new[](unsigned int n) {
+    static void* operator new[](size_t n) {
         MemoryManager* manager=&DAT_01090a78; void* result=manager->Allocate(n); return result;
     }
 };
 struct MeshIndex {
     unsigned short value;
-    static void* operator new[](unsigned int n) {
+    static void* operator new[](size_t n) {
         MemoryManager* manager=&DAT_01090a78; void* result=manager->Allocate(n); return result;
     }
 };

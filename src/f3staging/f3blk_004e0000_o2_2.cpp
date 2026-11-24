@@ -300,7 +300,7 @@ extern Allocator* (__stdcall* DAT_00d9b080)(DWORD);
 struct Allocator { void* FUN_008f6d30(unsigned,int); void FUN_008f6d90(void*,unsigned,int); };
 struct HkBase {
  void* vtable; unsigned short size,refs; int unk08,kind;
- static void* operator new(unsigned n) { Allocator* a=(Allocator*)TlsGetValue(DAT_010f3170); HkBase* p=(HkBase*)a->FUN_008f6d30(n,39); p->size=(unsigned short)n; return p; }
+ static void* operator new(size_t n) { Allocator* a=(Allocator*)TlsGetValue(DAT_010f3170); HkBase* p=(HkBase*)a->FUN_008f6d30(n,39); p->size=(unsigned short)n; return p; }
  static void operator delete(void* p) { ((Allocator*)TlsGetValue(DAT_010f3170))->FUN_008f6d90(p,((HkBase*)p)->size,39); }
 };
 struct FUN_00916750 : HkBase { float radius,unk14,unk18,unk1c; Vec4 extents; FUN_00916750(const Vec4&,float); };
@@ -352,7 +352,7 @@ struct FUN_00900d70 {
  ~FUN_00900d70() { if(!(capacity & 0x80000000)) { int n=capacity&0x3fffffff; Allocator* a=(Allocator*)TlsGetValue(DAT_010f3170); a->FUN_008f6d90(data,n*8,23); } }
 };
 void* FUN_0089eb90(unsigned);
-struct NiAlloc { static void* operator new(unsigned n) { return FUN_0089eb90(n); } static void operator delete(void*); };
+struct NiAlloc { static void* operator new(size_t n) { return FUN_0089eb90(n); } static void operator delete(void*); };
 struct FUN_004f06c0 : NiAlloc { 
  virtual void v00();
  virtual void v04();

@@ -650,7 +650,7 @@ struct NiColor
 };
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 struct NiDirectionalLight : public BSFadeNode
@@ -1918,7 +1918,7 @@ template <class T> struct RefPtr
 struct ShadowRenderTarget : RefObj
 {
     ShadowRenderTarget(int a);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int unk08;
     int unk0c;
@@ -3474,7 +3474,7 @@ struct Fixed
 };
 struct Alloc
 {
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 struct Light : Ref, Alloc
@@ -4050,7 +4050,7 @@ struct hkReferencedObject
 {
     virtual ~hkReferencedObject();
     unsigned short bytes, refs;
-    static __forceinline void* operator new(unsigned int amount)
+    static __forceinline void* operator new(size_t amount)
     {
         void* result = FUN_00c85750().heap().allocate(amount);
         ((hkReferencedObject*)result)->bytes = (unsigned short)amount;
@@ -7108,11 +7108,11 @@ class SSLight : public NiObject
     int unk248;
     int unk24C;
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return AllocObject(uiSize);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     SSLight();
     void SetLight(NiLightObj* pkLight);
 };
@@ -7311,7 +7311,7 @@ struct LightEx : public NiRefObject
 {
     char body[0x250 - 8];
     LightEx();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }
@@ -7384,7 +7384,7 @@ extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volati
 class S00b5cd00_Light
 {
   public:
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }
@@ -7967,7 +7967,7 @@ extern "C" void _ReadWriteBarrier();
 extern "C" void _ReadBarrier();
 extern "C" void _WriteBarrier();
 
-void* operator new(unsigned int, void* p)
+void* operator new(size_t, void* p)
 {
     return p;
 }

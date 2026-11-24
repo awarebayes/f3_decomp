@@ -785,7 +785,7 @@ namespace sead090 {
 class Node
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     Node() throw();
 
@@ -2419,7 +2419,7 @@ struct Point139
     {}
     Point139(float _x, float _y, float _z) : x(_x), y(_y), z(_z)
     {}
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return ((Alloc139&)DAT_011f6238).FUN_00aa3e40(n);
     }

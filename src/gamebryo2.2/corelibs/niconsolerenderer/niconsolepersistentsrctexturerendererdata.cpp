@@ -51,7 +51,7 @@ struct NiD3DShaderProgramCreator;
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct NiD3DShaderProgramFactory
@@ -66,7 +66,7 @@ struct CreatorHLSL
 {
     int vtbl;
     int field4;
-    static void* operator new(unsigned int sz)
+    static void* operator new(size_t sz)
     {
         return BSFadeNode::operator new(sz);
     }
@@ -313,7 +313,7 @@ struct BooleanKey
     int _4;
     ~BooleanKey();
     void LoadBinary(NiStream&);
-    void* operator new[](unsigned int s)
+    void* operator new[](size_t s)
     {
         return g_memoryManager.Allocate(s);
     }
@@ -940,7 +940,7 @@ void FUN_00e91190_Holder::SetFlag(bool b)
 namespace fnv_00e916d0 {
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     void FUN_00a981d0();
 };
 extern int DAT_010f099c;
@@ -1471,7 +1471,7 @@ struct ScriptX
 };
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct FUN_00e8a260 : BSFadeNode
 {
@@ -2049,7 +2049,7 @@ struct TexRecord
     unsigned char m_70;
 };
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -3741,7 +3741,7 @@ struct Renderer_e91590 : RendererBase
         m_b1114 = false;
         memcpy(&m_kCreateDesc, desc, sizeof(CreateDesc));
     }
-    static void* operator new(unsigned int sz)
+    static void* operator new(size_t sz)
     {
         return BSFadeNode::operator new(sz);
     }

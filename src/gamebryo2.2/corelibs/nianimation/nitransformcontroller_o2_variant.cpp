@@ -116,7 +116,7 @@ struct NiAVObject
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 
 struct S00a36100
@@ -417,7 +417,7 @@ extern "C" void* __cdecl FUN_00aa13e0(unsigned int size);
 class NiTransformInitA
 {
   public:
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return FUN_00aa13e0(size);
     }
@@ -427,7 +427,7 @@ class NiTransformInitA
 class NiTransformInitB
 {
   public:
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return FUN_00aa13e0(size);
     }

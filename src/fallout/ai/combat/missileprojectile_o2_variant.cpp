@@ -255,7 +255,7 @@ class OwnerBase_t
     unsigned int m_04;
     unsigned int m_08;
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return FUN_00aa13e0(size);
     }
@@ -511,7 +511,7 @@ struct S_cbde40_Obj
     int unk08;
     int unk0c;
     int unk10;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.FUN_00aa3e40(n);
     }

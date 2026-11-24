@@ -441,7 +441,7 @@ bool __thiscall FUN_0075ab20_shell::IsTileTraitEnabled()
     return m_pTile && reinterpret_cast<FUN_00a01230_shell*>(m_pTile)->IsTraitNonZero(trait);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct M788
 {

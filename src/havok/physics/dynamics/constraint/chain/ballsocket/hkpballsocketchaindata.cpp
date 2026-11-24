@@ -458,7 +458,7 @@ struct hkpBallSocketChainDataConstraintInfo
 struct ChainPlacement
 {
 };
-inline void* operator new(unsigned int, ChainPlacement* pointer)
+inline void* operator new(size_t, ChainPlacement* pointer)
 {
     return pointer;
 }

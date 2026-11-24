@@ -1043,7 +1043,7 @@ struct OwnerBase
     unsigned int m_04;
     unsigned int m_08;
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return FUN_00aa13e0(size);
     }
@@ -1606,7 +1606,7 @@ struct bhkRefObjectBase
     int refCount;
     int unk08;
     bhkRefObjectBase();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
 };
 
@@ -2638,7 +2638,7 @@ struct FUN_00ca8c90
     FUN_00ca8c90(void* settings);
     void FUN_00ca8420(int motion, int activate, int extra);
     void FUN_00c905b0();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         FUN_00ca8c90* p = (FUN_00ca8c90*)FUN_00c85750()->AllocateBody(size);
         p->allocationSize = (unsigned short)size;
@@ -2935,7 +2935,7 @@ struct FUN_00ca8c90
     FUN_00ca8c90(void* settings);
     void FUN_00ca8420(int motion,int activate,int extra); void FUN_0090cbf0(int motion,int activate,int extra);
     void FUN_00c905b0(); void FUN_009316f0();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
 };
 struct BuildSettings;
@@ -3006,7 +3006,7 @@ struct BodyBuild
     }
     void ConfigureBody(BuildSettings* settings);
 };
-void* FUN_00ca8c90::operator new(unsigned int size) {
+void* FUN_00ca8c90::operator new(size_t size) {
  Arena_8feed0* arena=static_cast<Arena_8feed0*>(TlsGetValue(DAT_010f3170));
  FUN_00ca8c90* object=static_cast<FUN_00ca8c90*>(arena->FUN_008f6d30(size,0x2d));
  object->allocationSize=static_cast<unsigned short>(size); return object;

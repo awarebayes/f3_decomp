@@ -91,7 +91,7 @@ bool FUN_00c20a60_shell::FUN_00c20a60(NiObject* object)
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct NiPSysPositionModifier
 {
@@ -113,7 +113,7 @@ extern int DAT_010bdaec;
 extern int DAT_011a946c;
 extern int DAT_011a9470;
 extern int DAT_011a9474;
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -665,7 +665,7 @@ struct C20980_Modifier : C20980_Base
     unsigned char m_34;
     unsigned char m_35;
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }

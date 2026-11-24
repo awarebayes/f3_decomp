@@ -92,7 +92,7 @@ void __stdcall FUN_00c28520(StrArr* pkStrings)
 
 struct NiMemObject
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 void __fastcall FUN_00a6d220(void* object);
 extern float DAT_01015f5c;

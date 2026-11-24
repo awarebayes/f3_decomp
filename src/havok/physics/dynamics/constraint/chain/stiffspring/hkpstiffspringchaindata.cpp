@@ -328,7 +328,7 @@ void __cdecl FUN_00dcf720(const hk1dLinearBilateralConstraintInfo& info, const S
                           SolverSchemaHeader* schema, hkReal rhs) throw();
 void __cdecl FUN_00dd1180(int numConstraints, hkReal tau, hkReal damping, hkReal cfm, int* offsets, hkUint32 base,
                           SolverSchemaHeader* schema, const SixteenWordFloatRecord& in, QueryResultSchema& out) throw();
-__forceinline void* __cdecl operator new(unsigned int, void* p) throw()
+__forceinline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }

@@ -385,13 +385,13 @@ struct hkpSphereShapeq
     int unk18;
     int unk1C;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         hkpSphereShapeq* p = (hkpSphereShapeq*)FUN_00c85750()->heap().allocateChunk(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
 
     hkpSphereShapeq(float radius) throw();
     void FUN_00c905b0();

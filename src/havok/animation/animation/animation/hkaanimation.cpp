@@ -93,7 +93,7 @@ extern "C" hkMemoryRouterE2F& __cdecl FUN_00c85750() throw();
 
 void __cdecl FUN_00c908c0(hkMemoryAllocatorE2F& kAlloc, void* pArray, int iNumElements, int iSizeElem);
 
-inline void* operator new(unsigned int, void* pvWhere)
+inline void* operator new(size_t, void* pvWhere)
 {
     return pvWhere;
 }

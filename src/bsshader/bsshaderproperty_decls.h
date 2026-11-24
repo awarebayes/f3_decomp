@@ -14,7 +14,7 @@ class ShadowSceneLight;
 struct BSShaderPropertyLightSlot
 {
     ShadowSceneLight* light;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
@@ -55,7 +55,7 @@ class BSShaderProperty::ShaderPassEntry
     {
         m_pShaderGeometry = value;
     }
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

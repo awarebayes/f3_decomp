@@ -480,7 +480,7 @@ public:
 
     HeldObject(unsigned int value, HavokTransform* converted);
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         HeldObject* memory = (HeldObject*)ThreadMemory::getInstance().allocateChunk(size, 0x27);
         memory->memorySize = (unsigned short)size;

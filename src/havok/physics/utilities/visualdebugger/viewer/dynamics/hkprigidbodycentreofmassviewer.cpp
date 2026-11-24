@@ -142,7 +142,7 @@ extern "C" D6A140MemoryRouter& __cdecl FUN_00c85750();
 class D6A140ReferencedObject
 {
   public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         D6A140ReferencedObject* b =
             static_cast<D6A140ReferencedObject*>(FUN_00c85750().heap().AllocateMemoryBlock(nbytes));

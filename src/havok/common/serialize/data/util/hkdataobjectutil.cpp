@@ -153,7 +153,7 @@ struct S_00dc3ce0_Entry
     {}
 };
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -2542,7 +2542,7 @@ struct DWC_MemberInfo
     DWC_MemberInfo() throw() : m_name(0), m_type(0), m_tuple(0), m_class(0), m_valuePtr(0)
     {}
 };
-inline void* operator new(unsigned int, DWC_MemberInfo* p) throw()
+inline void* operator new(size_t, DWC_MemberInfo* p) throw()
 {
     return p;
 }
@@ -3244,7 +3244,7 @@ struct S_00dc4710_Ref
     short m_iElementCount;
     short m_iObjectReferenceCount;
     void removeReference() throw();  // FUN_00c905b0
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         void* p = ((S_00dc4710_Router*)FUN_00c85750())->heap().AllocateMemoryBlock(n);
         ((S_00dc4710_Ref*)p)->m_iElementCount = (short)n;

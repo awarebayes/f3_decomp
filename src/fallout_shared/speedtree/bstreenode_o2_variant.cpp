@@ -363,7 +363,7 @@ struct BSFadeNode
 {
     void* vf;
     char pad[16];
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     BSFadeNode()
     {
         FUN_00c6b910(this);
@@ -379,7 +379,7 @@ BSFadeNode* FUN_00c87fc0()
 namespace fnv_00cb7640 {
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 void* __fastcall FUN_00c6b910(void*);
 extern int DAT_01066acc;
@@ -836,7 +836,7 @@ extern int DAT_012683dc;
 
 struct S_00cb79d0_Base
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     S_00cb79d0_Base();
     virtual void v00();
@@ -1613,7 +1613,7 @@ struct S_00caaf40_Obj
     int unk08;
     int unk0c;
     int unk10;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     S_00caaf40_Obj();
 };
 
@@ -2051,7 +2051,7 @@ struct FUN_00d22590
     int unk3C;
     FUN_00d22590(int a, int b, float c);
     void FUN_00c905b0();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         FUN_00d22590* p = (FUN_00d22590*)FUN_00c85750()->Alloc(size);
         p->unk04 = (short)size;
@@ -2557,7 +2557,7 @@ struct SpawnedFade
     void* vf;
     char pad[16];
 
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     SpawnedFade()
     {
         FUN_00c6b910(this);
@@ -3104,7 +3104,7 @@ struct SpawnedNode
     void Finish();
     static void operator delete(void* p) throw()
     {}
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         SpawnHolder* h = (SpawnHolder*)FUN_00c85750();
         void* p = h->m_alloc->Alloc(size);
@@ -5040,7 +5040,7 @@ struct SpawnedObject
         m_vtbl = (void*)DAT_01066d44;
         DAT_012681b0++;
     }
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         return FUN_00aa13e0(size);
     }
@@ -5129,7 +5129,7 @@ struct S_00cb8270_Array
     int unk08;
     unsigned int unk0C;
 
-    void* operator new(unsigned int sz)
+    void* operator new(size_t sz)
     {
         return DAT_011f6238.FUN_00aa3e40(sz);
     }

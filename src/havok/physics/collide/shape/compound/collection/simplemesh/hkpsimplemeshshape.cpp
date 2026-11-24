@@ -196,7 +196,7 @@ union __declspec(intrin_type) __declspec(align(16)) __m128
 
 extern "C" __m128 _mm_setzero_ps();
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

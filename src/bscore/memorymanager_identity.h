@@ -53,7 +53,7 @@ class ExtraHealth : public BSExtraData
 {
   public:
     float fHealthPercent;
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* pointer);
     ExtraHealth(float health);
 };

@@ -94,7 +94,7 @@ void FUN_00a3ccb0_Cls::FUN_00a3ccb0(void* keys, unsigned int numKeys, int type)
 namespace fnv_00a3cd00 {
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 void __fastcall _Call_a5d3a0(void* object);

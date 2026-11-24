@@ -9,7 +9,7 @@ struct NiProperty
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     NiProperty* pProperty;
     int a;
     int b;
@@ -750,7 +750,7 @@ struct NiShadeProperty : NiProperty
     int m_iShaderType;
     NiObject* FUN_00a81480(CloningProcess&);
 };
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

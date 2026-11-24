@@ -239,7 +239,7 @@ unsigned short __stdcall GetInterpControllerIndex(const char* pcControllerID)
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct S1
 {
@@ -748,7 +748,7 @@ struct CChildA : CBaseA
         m10 = 0;
         m14 = 0;
     }
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     void M(unsigned int a, unsigned int b, unsigned int c);
 };
 
@@ -1439,7 +1439,7 @@ class CloningProcessC1C5;
 class TESObjectDoorController
 {
   public:
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
 };
 
 class FUN_00c31260
@@ -1469,7 +1469,7 @@ class NiPSysEmitterCtlrC1C5 : public FUN_00c31260
     {}
     virtual ~NiPSysEmitterCtlrC1C5() throw();
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return TESObjectDoorController::operator new(n);
     }

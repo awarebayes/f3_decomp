@@ -208,7 +208,7 @@ class hkDisplayGeometryE494 : public hkReferencedObjectE494
 };
 
 #include <xmmintrin.h>
-inline void* __cdecl operator new(unsigned int, void* pvWhere) throw()
+inline void* __cdecl operator new(size_t, void* pvWhere) throw()
 {
     return pvWhere;
 }

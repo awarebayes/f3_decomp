@@ -154,7 +154,7 @@ struct hkpEntityD66D;
 struct FUN_00cbb560
 {
     char m_acUnk00[0x60];
-    static __forceinline void* operator new(unsigned int uiSize)
+    static __forceinline void* operator new(size_t uiSize)
     {
         void* p = FUN_00c85750()->heap().AllocateMemoryBlock(uiSize);
         ((unsigned short*)p)[2] = (unsigned short)uiSize;

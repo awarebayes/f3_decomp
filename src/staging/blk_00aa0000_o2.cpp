@@ -1146,7 +1146,7 @@ extern StringHandleAllocatorAA0 DAT_011f6238;
 class FixedStringAA0
 {
   public:
-    static void* operator new(unsigned int uiSize) throw()
+    static void* operator new(size_t uiSize) throw()
     {
         return DAT_011f6238.FUN_00aa3e40(uiSize);
     }

@@ -12,7 +12,7 @@ const void* __cdecl FUN_00a994c0()
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct NiSwitchNode
@@ -59,7 +59,7 @@ bool __thiscall NiLODNode::FUN_00a992e0(NiStream* stream)
 }
 
 namespace fnv_00a99670 {
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct NiLODNode : public NiSwitchNode
 {
     void __thiscall FUN_00a99470();
@@ -602,7 +602,7 @@ struct CloneLODNode : FUN_00a94360_Base
         *reinterpret_cast<int*>(reinterpret_cast<char*>(this) + 0xcc) = 0;
     }
 };
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

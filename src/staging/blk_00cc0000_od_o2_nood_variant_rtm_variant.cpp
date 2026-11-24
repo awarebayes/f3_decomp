@@ -63,13 +63,13 @@ struct TransformObj
     int unk98;
     int unk9C;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         TransformObj* p = (TransformObj*)FUN_00c85750()->heap().allocateChunk(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
 
     TransformObj();
 };
@@ -362,7 +362,7 @@ struct FUN_00d4f2a0 {
 
     FUN_00d4f2a0();
     static void operator delete(void* p) throw() {}
-    static __forceinline void* operator new(unsigned int size) throw() {
+    static __forceinline void* operator new(size_t size) throw() {
         SpawnHolder* h = (SpawnHolder*)FUN_00c85750();
         void* p = h->m_pAllocator->Alloc(size);
         ((FUN_00d4f2a0*)p)->m_iElementCount = (unsigned short)size;
@@ -480,12 +480,12 @@ struct EntityObj {
     int unk48, unk4C;
     float unk50, unk54, unk58;
     char unk5C, unk5D;
-    static void* operator new(unsigned int nbytes) {
+    static void* operator new(size_t nbytes) {
         EntityObj* p=(EntityObj*)FUN_00c85750()->heap().allocateChunk(nbytes);
         p->m_usMemSizeAndFlags=(unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
     EntityObj(int a,int b,int c);
     void SetPivots(const hkVector4& position,const hkVector4& rotation);
     void removeReference();
@@ -877,13 +877,13 @@ struct ShapeObj
     int unk38;
     int unk3C;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         ShapeObj* p = (ShapeObj*)FUN_00c85750()->heap().allocateChunk(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
 
     ShapeObj(int iType, const ShapeVector& kVec, float fA, float fB);
     void FUN_00c905b0();
@@ -948,7 +948,7 @@ struct S00cc4610_Out {
     float m_34;
     int unk38; int unk3C;
     S00cc4610_Out(int a, int b, int c);
-    void* operator new(unsigned int n) {
+    void* operator new(size_t n) {
         hkMemoryAllocator& a = FUN_00c85750()->heap();
         void* p = a.allocateChunk(n);
         ((S00cc4610_Out*)p)->m_iElementCount = (unsigned short)n;
@@ -1430,7 +1430,7 @@ int unk9c;
 int unka0;
 int unka4;
 int unka8;
-ConvexShapeNode(unsigned short); static void* operator new(unsigned int); void SetParentObject(const struct Name&); };
+ConvexShapeNode(unsigned short); static void* operator new(size_t); void SetParentObject(const struct Name&); };
 extern char* emptyString;
 struct Name { char* value; static char* InternString(const char*); Name(const char* s):value(InternString(s)){} ~Name(){if(value!=emptyString) InterlockedDecrement(reinterpret_cast<volatile long*>(value)-2);} };
 struct Target {
@@ -1649,7 +1649,7 @@ struct S00cc2530_FUN_00d4ce10 {
 
  S00cc2530_FUN_00d4ce10(int, const __m128*,int);
  void removeReference();
- static void* operator new(unsigned int n) {
+ static void* operator new(size_t n) {
   void* p=Memory306::FUN_00c85750()->GetAllocator()->Allocate(n);
   static_cast<S00cc2530_FUN_00d4ce10*>(p)->memorySize=(unsigned short)n;
   return p;
@@ -1746,7 +1746,7 @@ struct Shape : RefCountedObject {
     volatile unsigned int flags;
     unsigned int combinedFlags;
     unsigned char kind;
-    static void* operator new(unsigned int bytes) {
+    static void* operator new(size_t bytes) {
         hkMemoryRouterStub* router = FUN_00c85750();
         Shape* result = static_cast<Shape*>(router->heap().allocateChunk(bytes));
         result->size = (unsigned short)bytes;
@@ -1770,7 +1770,7 @@ struct FUN_00cc9d00 : RefCountedObject {
     __m128 dimensions;
     unsigned int unk20, unk24, unk28, unk2c, unk30, unk34, unk38, unk3c, unk40, unk44, unk48, unk4c;
     FUN_00cc9d00(ObjectType* type, Shape* shape, SourceGeometry* geometry);
-    static void* operator new(unsigned int bytes) {
+    static void* operator new(size_t bytes) {
         hkMemoryRouterStub* router = FUN_00c85750();
         FUN_00cc9d00* result = static_cast<FUN_00cc9d00*>(router->heap().allocateChunk(bytes));
         result->size = (unsigned short)bytes;
@@ -2105,13 +2105,13 @@ struct hkReferencedObject
 
     __forceinline hkReferencedObject() { m_sReferenceCount = 1; }
 
-    __forceinline static void* operator new(unsigned int nbytes)
+    __forceinline static void* operator new(size_t nbytes)
     {
         hkReferencedObject* p = (hkReferencedObject*)FUN_00c85750()->heap().allocateChunk(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
 
     void FUN_00c905b0();
 };
@@ -2234,11 +2234,11 @@ using ::MemoryManager;
 using ::_g_memoryManager;
 struct ExtendedMeshFloat {
     float value;
-    static void* operator new[](unsigned size) { return _g_memoryManager.Allocate(size); }
+    static void* operator new[](size_t size) { return _g_memoryManager.Allocate(size); }
 };
 struct ExtendedMeshIndex {
     unsigned short value;
-    static void* operator new[](unsigned size) { return _g_memoryManager.Allocate(size); }
+    static void* operator new[](size_t size) { return _g_memoryManager.Allocate(size); }
 };
 struct Vec3 { float x,y,z; };
 struct Triangle { unsigned short a,b,c,unk06; };
@@ -2280,7 +2280,7 @@ struct ExtendedMeshInput {
 
 };
 struct MeshPart {
-    static void* operator new[](unsigned size) { return _g_memoryManager.Allocate(size); }
+    static void* operator new[](size_t size) { return _g_memoryManager.Allocate(size); }
 
     unsigned vertexCount;
 
@@ -2313,7 +2313,7 @@ struct Mesh : FUN_00a5d3a0 {
 
     MeshPart* parts;
 
-    static void* operator new(unsigned n) { return FUN_00aa13e0(n); }
+    static void* operator new(size_t n) { return FUN_00aa13e0(n); }
 
     Mesh() : count(0), parts(0) {}
 
@@ -2849,7 +2849,7 @@ struct FUN_00d4fe80 : ConstraintReference513 {
         result->memorySize=(unsigned short)size;
         return result;
     }
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         return allocate(FUN_00c85750()->heap(),size);
     }
     static void operator delete(void* p) { ((BlockAllocator*)FUN_00c85750()->m_pThreadAllocator)->release(p,((FUN_00d4fe80*)p)->memorySize); }
@@ -2928,7 +2928,7 @@ struct S_0094b1a0_Clone : S_0094b1a0_Ref
     unsigned char unkC6, unkC7;
     float minimum, maximum;
     S_0094b1a0_Clone();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         S_0094b1a0_Clone* result = static_cast<S_0094b1a0_Clone*>(S_0094b1a0_ThreadMemory::getInstance().allocateChunk(size, 0x2c));
         result->memorySize = (unsigned short)size;

@@ -559,7 +559,7 @@ struct PendingNode
         m_08 = 0;
         m_0c = 0x80000000u;
     }
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         AllocHolder* holder = (AllocHolder*)FUN_00c85750();
         SpawnAlloc* alloc = holder->m_pAllocator;
@@ -596,7 +596,7 @@ struct FUN_00d64650_cls
 extern "C" void* DAT_010f3170;
 extern "C" void* (__stdcall* DAT_00d9b080)(void*);
 struct PoolD64650 { int unk00,unk04,unk08,unk0c,unk10,unk14,unk18,unk1c,unk20,unk24,unk28,unk2c,unk30,unk34,unk38,unk3c,unk40,unk44; void* free48; int count4c; void* FUN_008f6800(int sizeClass, int type); };
-inline void* operator new(unsigned int, PoolD64650* pool) throw()
+inline void* operator new(size_t, PoolD64650* pool) throw()
 {
     void* r = pool->free48;
     if (r) { --pool->count4c; pool->free48 = *(void**)r; return r; }
@@ -1223,7 +1223,7 @@ struct S_00d66220_RefObject
     short m_sReferenceCount;
 
     virtual ~S_00d66220_RefObject();
-    static void operator delete(void* p, unsigned int)
+    static void operator delete(void* p, size_t)
     {
         S_00d66220_RefObject* o = static_cast<S_00d66220_RefObject*>(p);
         FUN_00c85750()->heap()->ReleaseBlock(p, o->m_usMemSizeAndFlags);
@@ -1828,7 +1828,7 @@ struct S_00d65970_Router
 
 struct S_00d65970_Item;
 
-inline void* __cdecl operator new(unsigned int, void* where) throw()
+inline void* __cdecl operator new(size_t, void* where) throw()
 {
     return where;
 }

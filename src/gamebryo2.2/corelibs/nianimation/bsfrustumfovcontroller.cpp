@@ -17,7 +17,7 @@ struct NiFloatInterpController
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 extern int DAT_0109780c;
@@ -160,7 +160,7 @@ class A42D00Interpolator
   public:
     A42D00Interpolator(void* pkData) throw();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     virtual void vfn00();
@@ -475,7 +475,7 @@ class ObjA42E : public FUN_00a57640
     {}
     virtual ~ObjA42E() throw();
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return BSFadeNode::operator new(n);
     }

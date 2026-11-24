@@ -574,7 +574,7 @@ struct TreadInterpolator : FUN_008a8490
     unsigned short unk40;
     unsigned short unk42;
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return FUN_0089eb90(size);
     }
@@ -697,7 +697,7 @@ public:
     Vec3_9700 point;
     float unk58;
 
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     static void operator delete(void* p);
     __forceinline Obj_9700() throw()
         : unk18(0), unk1C(0), color(DAT_01092a08), point(FUN_00f7933c)
@@ -851,7 +851,7 @@ public:
 class NiMemObject
 {
 public:
-    static void* operator new(unsigned int uSize);
+    static void* operator new(size_t uSize);
 };
 
 class NiKeyBasedInterpolator : public NiMemObject
@@ -992,7 +992,7 @@ struct FUN_00a414f0_NiTPrimitiveArray
 {
     int unk00, unk04, unk08, unk0c;
     FUN_00a414f0_NiTPrimitiveArray() throw();
-    static void* operator new(unsigned int n) throw() { return DAT_011f6238.FUN_00aa3e40(n); }
+    static void* operator new(size_t n) throw() { return DAT_011f6238.FUN_00aa3e40(n); }
 };
 struct Base106
 {

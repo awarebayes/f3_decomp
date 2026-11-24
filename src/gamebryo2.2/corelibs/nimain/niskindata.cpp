@@ -71,7 +71,7 @@ struct _Call_a5d3a0
 };
 struct BSFadeNode : _Call_a5d3a0
 {
-    void* operator new(unsigned int size);
+    void* operator new(size_t size);
 };
 extern int DAT_0109e574;
 // @fnv 0x00a84d30
@@ -182,7 +182,7 @@ struct S_00a84e70_Elem
     int unk00;
     int unk04;
     int unk08;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return DAT_011f6238.FUN_00aa3e40(size);
     }
@@ -733,7 +733,7 @@ struct SkinLoadWeight
     float weight;
     SkinLoadWeight() : vertex(0)
     {}
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return DAT_011f6238.FUN_00aa3e40(size);
     }
@@ -745,7 +745,7 @@ struct ResetFields
     SkinLoadWeight* weights;
     unsigned short vertices;
     ResetFields() throw();
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return DAT_011f6238.FUN_00aa3e40(size);
     }

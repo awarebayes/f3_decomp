@@ -13,7 +13,7 @@ struct Heap5a9b40 { void* FUN_0086b930(unsigned int bytes); void FUN_0086ba60(vo
 namespace n5a9b40 { extern Heap5a9b40 DAT_01090a78; }
 struct Base5a9b40 {
     void FUN_005a85f0(int type);
-    static void* operator new(unsigned int n) { return n5a9b40::DAT_01090a78.FUN_0086b930(n); }
+    static void* operator new(size_t n) { return n5a9b40::DAT_01090a78.FUN_0086b930(n); }
     static void operator delete(void* p) { n5a9b40::DAT_01090a78.FUN_0086ba60(p); }
 };
 struct FUN_007eae60 : Base5a9b40 { char pad[0xd0]; FUN_007eae60(); };

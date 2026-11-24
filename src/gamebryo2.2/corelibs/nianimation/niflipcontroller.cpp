@@ -29,7 +29,7 @@ const void* __cdecl FUN_00a4f5d0()
 
 struct BSFadeNode
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct NiFlipController
@@ -218,7 +218,7 @@ bool ProxyFlip::FUN_00a4f350(NiStream& kStream)
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct NiObject
@@ -834,8 +834,8 @@ extern MemoryManager DAT_011f6238;
 
 struct NiMemObject
 {
-    static void* operator new(unsigned int size);
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t size);
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -927,7 +927,7 @@ struct KeyPair
     ~KeyPair();
 };
 
-void* operator new[](unsigned int size)
+void* operator new[](size_t size)
 {
     return DAT_011f6238.Allocate(size);
 }

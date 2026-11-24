@@ -298,7 +298,7 @@ template <class T> struct BSSimpleList
     void FUN_006c8220();
     ~BSSimpleList() { FUN_006c8220(); }
     void FUN_00421610(const T& apItem);
-    static void* operator new(unsigned int size) { return GetHeap()->FUN_0086b930(size); }
+    static void* operator new(size_t size) { return GetHeap()->FUN_0086b930(size); }
     static void operator delete(void* memory) { GetHeap()->FUN_0086ba60(memory); }
 };
 

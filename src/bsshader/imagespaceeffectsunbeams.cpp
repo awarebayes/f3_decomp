@@ -51,7 +51,7 @@ struct Node_cls
     Node_cls();
     void FUN_00b8ab10(int a1, int a2);
     void FUN_00b8a790(int a1, float f0, float f1, float f2, float f3);
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return DAT_011f6238.FUN_00aa3e40(size);
     }

@@ -142,7 +142,7 @@ static void FUN_00d409d0(void** vals, void** slots);
 void** volatile g_d409d0_vals;
 void** volatile g_d409d0_slots;
 void d409d0_probe_caller(void);
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }

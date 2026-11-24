@@ -14,7 +14,7 @@ extern "C" void __fastcall __security_check_cookie(unsigned int);
 class NiMemObject
 {
   public:
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 class NiRenderer

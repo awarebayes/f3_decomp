@@ -435,7 +435,7 @@ struct SceneElem
     unsigned int unk18;
 
     SceneElem() throw();
-    static void* operator new[](unsigned int size) throw()
+    static void* operator new[](size_t size) throw()
     {
         return DAT_011f6238.Alloc(size);
     }
@@ -564,7 +564,7 @@ Obj_a73e20* __cdecl FUN_00a73e20()
 struct Impl00a8a680
 {
     Impl00a8a680(int a1, int a2, int a3, int a4, int a5, int a6, int a7) throw();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     int unk00;
     int unk04;
     int unk08;
@@ -810,7 +810,7 @@ struct LBMemoryManager
 
 extern LBMemoryManager g_kLBMemoryManager;
 
-inline void* __cdecl operator new[](unsigned int auiSize)
+inline void* __cdecl operator new[](size_t auiSize)
 {
     return g_kLBMemoryManager.Allocate(auiSize);
 }

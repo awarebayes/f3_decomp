@@ -326,7 +326,7 @@ struct FUN_00dd5de0
     FUN_00dd5de0();
     virtual ~FUN_00dd5de0();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         FUN_00dd5de0* b = static_cast<FUN_00dd5de0*>(p);
         fnvc_adapt::FUN_00c85750().heap().ReleaseBlock(p, b->m_usMemSizeAndFlags);

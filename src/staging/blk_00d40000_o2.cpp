@@ -466,7 +466,7 @@ struct D42800CdBody
 class D42800ReferencedObject
 {
   public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         D42800ReferencedObject* b =
             static_cast<D42800ReferencedObject*>(FUN_00c85750().heap().AllocateMemoryBlock(nbytes));
@@ -675,7 +675,7 @@ extern "C" D442C0MemoryRouter& __cdecl FUN_00c85750();
 class D442C0ReferencedObject
 {
   public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         D442C0ReferencedObject* b =
             static_cast<D442C0ReferencedObject*>(FUN_00c85750().heap().AllocateMemoryBlock(nbytes));
@@ -1279,7 +1279,7 @@ class D4BF10Object
   public:
     D4BF10Object(D4BF10FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -1768,7 +1768,7 @@ class SpawnedObject
     unsigned int unk4C;
     unsigned int unk50;
     unsigned int unk54;
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     SpawnedObject();
 };
 
@@ -1782,7 +1782,7 @@ class FUN_00d50140_cls
     int EnsureSpawnedObject();
 };
 
-void* SpawnedObject::operator new(unsigned int size)
+void* SpawnedObject::operator new(size_t size)
 {
     FUN_00d50140_holder* h = FUN_00c85750();
     void* p = h->m_10->Alloc(size);
@@ -1814,7 +1814,7 @@ struct DataBase
 {
     DataBase();
     virtual ~DataBase();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FUN_00aa13e0(size);
     }
@@ -3524,7 +3524,7 @@ void __cdecl FUN_00d570d0(int* aiDest, const int* aiSrc)
 struct PlaceTag
 {
 };
-inline void* operator new(unsigned int, void* p, PlaceTag)
+inline void* operator new(size_t, void* p, PlaceTag)
 {
     __assume(p != 0);
     return p;
@@ -5388,7 +5388,7 @@ class FUN_00d50c90
     void* data4c;
     int size50, flags54;
     FUN_00d50c90();
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         FUN_00d50c90* p = (FUN_00d50c90*)hkRouterD539::FUN_00c85750().heap().AllocateMemoryBlock(bytes);
         p->sizeAndFlags = (unsigned short)bytes;
@@ -5489,7 +5489,7 @@ D502D0_RefData* D502D0_Owner::EnsureReference(bool* created)
     return m_pData;
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -5763,7 +5763,7 @@ struct FUN_00dd0530
         size = (unsigned short)n;
         return this;
     }
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         AllocHolder* h = FUN_00c85750();
         return ((FUN_00dd0530*)((ObjAllocator*)h->m_pAllocator)->Alloc(n))->SetSizeAndGrow(n);
@@ -6626,7 +6626,7 @@ template <class T> class hkArrayD47F
         _clearAndDeallocate(hkRouterD47F::FUN_00c85750().heap());
     }
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         hkRouterD47F::FUN_00c85750().heap().ReleaseBlock(p, nbytes);
     }

@@ -111,7 +111,7 @@ struct hkGeometry
     hkArray<hkVector4> m_kVertices;
     hkArray<hkVector4> m_uiTriangleCount;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         return FUN_00c85750()->heap().AllocateMemoryBlock(nbytes);
     }
@@ -130,7 +130,7 @@ struct hkReferencedObject
     unsigned short m_usMemSizeAndFlags;
     unsigned short m_sReferenceCount;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         hkReferencedObject* b = static_cast<hkReferencedObject*>(FUN_00c85750()->heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = static_cast<unsigned short>(nbytes);

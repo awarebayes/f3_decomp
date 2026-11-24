@@ -818,7 +818,7 @@ struct Obj52 : NiMemObject
 {
     void FUN_00a3cc80();
     void* FUN_0052cf90(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 // Calls FUN_00a3cc80, deletes this with size 0x18 when flags has bit 0 set, and returns this.
 // @fnv 0x0052cf90
@@ -835,7 +835,7 @@ struct Obj52 : NiMemObject
 {
     void FUN_00a3cc80();
     void* FUN_0052d130(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 // Calls FUN_00a3cc80, then deletes this with size 0x18 when flags has bit 0 set, and returns this.
 // @fnv 0x0052d130

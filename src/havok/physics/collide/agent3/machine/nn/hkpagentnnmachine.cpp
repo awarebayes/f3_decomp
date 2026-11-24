@@ -1566,7 +1566,7 @@ class PairBody
         parent = p;
         motion = t;
     }
-    static void* operator new(unsigned, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }

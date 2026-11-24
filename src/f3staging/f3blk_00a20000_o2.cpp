@@ -710,7 +710,7 @@ struct Socket {
     int unk00[8];
     unsigned int m_socket;
     Socket* FUN_00a28d60(unsigned int s) throw();
-    static void* operator new(unsigned int size) {
+    static void* operator new(size_t size) {
         void* p = Mem()->FUN_008f6d30(size, 0x15);
         ((unsigned short*)p)[2] = (unsigned short)size;
         return p;
@@ -2314,7 +2314,7 @@ namespace f3m_00a35760 {
 extern void* (__stdcall* DAT_00d9b080)(unsigned long);   // TlsGetValue
 struct ThreadMemory { void* FUN_008f6d30(int size, int tag) throw(); };
 struct Pooled {
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         ThreadMemory* memory = (ThreadMemory*)DAT_00d9b080(DAT_010f3170);
         void* p = memory->FUN_008f6d30(size, 0x1f);
@@ -2622,7 +2622,7 @@ struct A25e5Base {
     unsigned short memSizeAndFlags;
     unsigned short referenceCount;
     A25e5Base() throw() { referenceCount = 1; }
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         A25e5Heap* heap = (A25e5Heap*)DAT_00d9b080(DAT_010f3170);
         void* p = heap->FUN_008f6d30(n, 0x15);
@@ -3913,12 +3913,12 @@ struct State {
     char unk10;
     FUN_0094eda0 items[3];
     __forceinline State() {}
-    static void* operator new(unsigned int) { return PoolAlloc(6, 4); }
+    static void* operator new(size_t) { return PoolAlloc(6, 4); }
     static void operator delete(void* p);
 };
 struct FUN_009b4a10 {
     FUN_009b4a10(int a, int b) throw();
-    static void* operator new(unsigned int) { return PoolAlloc(1, 1); }
+    static void* operator new(size_t) { return PoolAlloc(1, 1); }
     static void operator delete(void* p);
 };
 struct CritSec {
@@ -6736,7 +6736,7 @@ struct TlsHeap
 
 struct JobHeader
 {
-    __forceinline void* operator new(unsigned int nbytes) throw()
+    __forceinline void* operator new(size_t nbytes) throw()
     {
         return TlsHeap::getInstance().allocateChunkConstSize(0x80, 0x2c);
     }
@@ -6793,7 +6793,7 @@ struct DynamicsPacket : PacketBase
 struct BroadPacket : DynamicsPacket
 {
     unsigned short numIslands;   // 0x10
-    __forceinline void* operator new(unsigned int, void* p) { return p; }
+    __forceinline void* operator new(size_t, void* p) { return p; }
     __forceinline BroadPacket(const DynamicsPacket& src, JobHeader* hdr) : DynamicsPacket(0xc, src)
     {
         header = hdr;

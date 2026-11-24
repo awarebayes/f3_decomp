@@ -193,7 +193,7 @@ void __fastcall FUN_00ba9230(void** self, int)
 
 struct BSFadeNode
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct FUN_00ba8e50 : BSFadeNode
 {
@@ -527,7 +527,7 @@ extern MemoryManager _g_memoryManager;
 struct Elem_bacd00
 {
     float f[4];
-    static void* operator new[](unsigned int s)
+    static void* operator new[](size_t s)
     {
         return _g_memoryManager.Allocate(s);
     }
@@ -1009,7 +1009,7 @@ struct AllocationScope
 struct ShaderVariableMap : RefObj_bacd00
 {
     ShaderVariableMap(void* context, int mode);
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         return FUN_00aa13e0(0x44);
     }

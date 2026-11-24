@@ -659,8 +659,8 @@ struct __declspec(align(16)) Vector4 {
 };
 struct HeapObject {
     static void* FUN_0089eb90(unsigned int);
-    static void* operator new(unsigned int bytes) {return FUN_0089eb90(bytes);}
-    static void operator delete(void*,unsigned int);
+    static void* operator new(size_t bytes) {return FUN_0089eb90(bytes);}
+    static void operator delete(void*,size_t);
 };
 struct Allocator {void FUN_008f6d90(void*,unsigned int,int);};
 template<class T> struct Array {

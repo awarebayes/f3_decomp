@@ -115,7 +115,7 @@ void __cdecl FUN_00824200() { delete f3m_00824200::DAT_0108ec74; f3m_00824200::D
 namespace f3m_00829af0 {
 void* __cdecl FUN_0089eb90(unsigned int n) throw();
 struct B00829af0 { virtual ~B00829af0(); virtual void v4(); int pad[5]; B00829af0() throw(); };
-struct D00829af0 : B00829af0 { unsigned short value; virtual ~D00829af0(); static void* operator new(unsigned int n) throw() { return FUN_0089eb90(n); } D00829af0() throw(); };
+struct D00829af0 : B00829af0 { unsigned short value; virtual ~D00829af0(); static void* operator new(size_t n) throw() { return FUN_0089eb90(n); } D00829af0() throw(); };
 D00829af0::D00829af0() throw() { value = 8; }
 D00829af0* __cdecl FUN_00829af0() { return new D00829af0(); }
 }   // namespace f3m_00829af0
@@ -295,7 +295,7 @@ struct HeapEA0 {
  void FUN_0086ba60(void*);
 };
 extern HeapEA0 DAT_01090a78;
-struct AllocEA0 {  static void* operator new[](unsigned int n){return DAT_01090a78.FUN_0086b930(n);} };
+struct AllocEA0 {  static void* operator new[](size_t n){return DAT_01090a78.FUN_0086b930(n);} };
 struct Point3EA0 : AllocEA0 { Point3EA0() {}
  float x,y,z;
 };
@@ -1552,7 +1552,7 @@ namespace f3m_00836650 {
 void* __cdecl FUN_0089eb90(unsigned int size);
 struct Item {
     Item() throw();
-    static void* operator new(unsigned int size) { return FUN_0089eb90(size); }
+    static void* operator new(size_t size) { return FUN_0089eb90(size); }
     int unk00; int unk04; int unk08; int unk0c; int unk10; int unk14; int unk18; int unk1c; int unk20; int unk24; int unk28; int unk2c;
 };
 struct Obj {

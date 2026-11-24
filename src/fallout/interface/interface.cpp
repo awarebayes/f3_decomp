@@ -3805,8 +3805,8 @@ class B706130Tile
 class B706130Pick
 {
   public:
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pvMem, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pvMem, size_t);
 
     B706130Pick();
 
@@ -6748,8 +6748,8 @@ struct ObjD4
     int unk0c8;
     int unk0cc;
     int unk0d0;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     ObjD4(unsigned short, void*, void*, void*, void*, int, int, unsigned int, void*, int, int, int, int);
 };
 struct ObjB0
@@ -6798,8 +6798,8 @@ struct ObjB0
     int unk0a4;
     int unk0a8;
     int unk0ac;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     ObjB0(bool);
     void FUN_00bb7a10(unsigned int);
     void FUN_008cc6d0(int);
@@ -6815,8 +6815,8 @@ struct Obj1C
     int unk010;
     int unk014;
     int unk018;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Obj1C();
     void FUN_00439340(int);
     void FUN_00439390(int);

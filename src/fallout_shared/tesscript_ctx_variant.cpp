@@ -21,12 +21,12 @@ unsigned GetChunkSize(){return chunkSize;}bool IsEndianConversionRequired(){retu
 void Read(void* p,unsigned n){FUN_00447d60(p,n);}void Read(void* p){FUN_00448800(p);}
 };
 struct Name{char* text;unsigned short len,cap;void FUN_004019c0(const char*,unsigned);};
-struct FUN_005413d0{int unk000;int unk004;int unk008;int unk00c;int unk010;int unk014;Name name;FUN_005413d0();void FUN_00541380(File*);static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
-struct Reference{Name name;void* pForm;unsigned m_uiFormID;Reference(){name.text=0;name.len=0;name.cap=0;pForm=0;m_uiFormID=0;}static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
+struct FUN_005413d0{int unk000;int unk004;int unk008;int unk00c;int unk010;int unk014;Name name;FUN_005413d0();void FUN_00541380(File*);static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
+struct Reference{Name name;void* pForm;unsigned m_uiFormID;Reference(){name.text=0;name.len=0;name.cap=0;pForm=0;m_uiFormID=0;}static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}static void operator delete(void* p){DAT_01090a78.FUN_0086ba60(p);}};
 template<class T>struct List{
  T item;List* next;
  List(const T& value):item(value),next(0){}
- static void* operator new(unsigned n){return DAT_01090a78.FUN_0086b930(n);}
+ static void* operator new(size_t n){return DAT_01090a78.FUN_0086b930(n);}
  __declspec(noinline) void FUN_0061c430(T const& value){
   if(!value)return;
   List* tail=this;
