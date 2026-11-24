@@ -1761,7 +1761,6 @@ int __stdcall EvaluateNode(HkNodeE980* node)
     return 0;
 }
 
-typedef unsigned int size_t;
 struct __declspec(nothrow) IHeap
 {
     virtual void v00();

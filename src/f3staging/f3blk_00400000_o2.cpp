@@ -4695,7 +4695,6 @@ public:
 };
 extern BSSpinLock6b0 g_extraListLock6b0;
 
-typedef unsigned int size_t;
 
 struct Heap4106b0 {
     void* Allocate(size_t size);

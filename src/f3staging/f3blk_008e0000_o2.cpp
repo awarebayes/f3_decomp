@@ -1595,7 +1595,6 @@ bool __cdecl FUN_008f3510(SceneObject* object)
 // @f3 0x008f33c0 (community match, verified in this file)
 extern int DAT_010f2edc;
 namespace f3m_008f33c0 {
-typedef unsigned int size_t;
 
 struct NiMemObject {
     static void* operator new(size_t size);

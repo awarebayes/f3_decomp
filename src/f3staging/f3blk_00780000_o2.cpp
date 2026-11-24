@@ -141,7 +141,6 @@ void FUN_007998a0_Object::FUN_007998a0() {
 }
 
 // @f3 0x00795960 (community match, verified in this file)
-typedef unsigned int size_t;
 struct FactoryHeap {void* FUN_0086b930(unsigned int);};
 void* operator new(size_t size){return ((FactoryHeap*)&DAT_01090a78)->FUN_0086b930(size);}
 void operator delete(void* p){DAT_01090a78.FUN_0086ba60((int)p);}

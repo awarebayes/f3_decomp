@@ -1546,7 +1546,7 @@ typedef unsigned short	hkUint16;
 typedef unsigned int	hkUint32;
 typedef unsigned long hkUlong;
 typedef __int64 hkInt64;
-typedef unsigned int hk_size_t;
+typedef size_t hk_size_t;
 typedef hkUint16 hkObjectIndex;
 template <typename TYPE>
 __forceinline TYPE* __cdecl hkAddByteOffset( TYPE* base, hkUlong offset )

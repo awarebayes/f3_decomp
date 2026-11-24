@@ -24175,7 +24175,7 @@ namespace f3m_00902620 {
 typedef unsigned long hkUlong;
 typedef unsigned short hkUint16;
 typedef short hkInt16;
-typedef unsigned int hk_size_t;
+typedef size_t hk_size_t;
 
 enum HK_MEMORY_CLASS
 {

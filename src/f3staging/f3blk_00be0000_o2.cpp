@@ -5493,7 +5493,6 @@ void* __cdecl operator new(size_t);void* __cdecl operator new[](size_t);void __c
 namespace task1237 {
 struct Heap {void* FUN_0086b930(unsigned);void FUN_0086ba60(void*);};extern Heap DAT_01090a78;
 int _strcpy_s(char*,unsigned,const char*);int _strcat_s(char*,unsigned,const char*);
-typedef unsigned int size_t;
 extern "C" int __cdecl strcmp(const char*, const char*);
 extern "C" size_t __cdecl strlen(const char*);
 extern "C" char* __cdecl strrchr(const char*, int);

@@ -1456,7 +1456,6 @@ void BufferAA::FUN_00aa87c0(SourceAA* src,float threshold)
 extern "C" char DAT_01090a78;
 namespace f3m_00aac380 {
 // Reconstruction of 0x00c4e1e0
-typedef unsigned int size_t;
 extern "C" void* memmove(void*, const void*, size_t);
 void* __cdecl NiMalloc(unsigned int);
 
